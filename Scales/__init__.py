@@ -46,7 +46,7 @@ class Group(BaseGroup):
     pass
 
 
-
+# custom function to automatically make likert type fields with 5 options
 def make_likert5(label):
         return models.IntegerField(
             choices=[1,2,3,4,5],
@@ -76,5 +76,7 @@ class CCConcern(Page):
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
+    
+
 
 page_sequence = [CCConcern]

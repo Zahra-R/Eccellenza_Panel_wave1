@@ -20,7 +20,7 @@ class Lexicon:
     ccc10Label = "Climate change and its consequences are being exaggerated in the media."
     ccc11Label = "Climate change is a racket."
     ccc12Label = "As long as meteorologists are not even able to accurately forecast weather, climate cannot be reliably predicted either."
-    ccc13Label = "There are larger problems than climate protection.."
+    ccc13Label = "There are larger problems than climate protection."
     ccc14Label = "I do not feel threatened by climate change."
     ccc15Label = "The impacts of climate change are unpredictable; thus, my climate-friendly behavior is futile."
     ccc16Label = "Climate protection needlessly impedes economic growth."
