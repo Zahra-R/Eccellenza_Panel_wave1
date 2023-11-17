@@ -12,27 +12,29 @@
 
 <table>
     <tr>
-        <td> {{ Lexicon.crt1Label }}</td>
-        <td> <input type="text" name="crt1" id="id_crt1"/> </td>
+        <td>{{ Lexicon.crt1Label }}</td>
+        <td><input type="text" name="crt1" id="id_crt1"/></td>
+        <td>{% formfield_errors 'crt1' %}</td>
     </tr>
 
     <tr>
-        <td> {{ Lexicon.crt2Label }}</td>
-        <td> <input type="text"  name="crt2" id="id_crt2" /> </td>
+        <td>{{ Lexicon.crt2Label }}</td>
+        <td><input type="text" name="crt2" id="id_crt2" /></td>
+        <td>{% formfield_errors 'crt2' %}</td>
     </tr>
 
     <tr>
-        <td> {{ Lexicon.crt3Label }}</td>
-        <td> <input type="text" name="crt3" id="id_crt3"/> </td>
+        <td>{{ Lexicon.crt3Label }}</td>
+        <td><input type="text" name="crt3" id="id_crt3"/></td>
+        <td>{% formfield_errors 'crt3' %}</td>
     </tr>
 
     <tr>
-        <td> {{ Lexicon.crt4Label }}</td>
-        <td> <input type="text" name="crt4" id="id_crt4"/> </td>
+        <td>{{ Lexicon.crt4Label }}</td>
+        <td><input type="text" name="crt4" id="id_crt4"/></td>
+        <td> {% formfield_errors 'crt4' %} </td>
     </tr>
-
 </table>
-
 
 <div class="next-btn radiotable">  
     <div style="float: right; padding-top: 2vh;">
