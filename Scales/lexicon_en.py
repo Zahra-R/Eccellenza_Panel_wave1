@@ -145,3 +145,42 @@ class Lexicon:
     ecom_title = "Hand on heart!"
     ecom_header = "Directly asking: How much effort did you put into completing this task? Did you simply click through the options or did you think about your answers? </br></br><i>Please answer honestly, this will not affect your compensation or your ability to complete the study. We need to know this to analyze the data properly.</i>"
     ecom1Label = "You can use my answers for your analysis."
+
+    ### Demographics
+    demographics_title = "Personal data"
+    demographics_header = "Please enter the following information about yourself."
+
+    age_label = "How old are you?"
+    gender_label = "What gender do you identify as?"
+    female = "Female"
+    male = "Male"
+    diverse = "Diverse"
+    other = "Other"
+
+    income_label = "What is your yearly income?"
+    income_less_than_A = "Less than $25,000"
+    income_A_to_B = "$25,000 - $50,000"
+    income_B_to_C = "$50,001 - $75,000"
+    income_C_to_D = "$75,001 - $100,000"
+    income_more_than_D = "More than $100,000"
+    prefer_not_to_say = "Prefer not to say"
+
+    education_label = "What is your highest level of education?"
+    high_school = "High School"
+    some_college = "Some College"
+    bachelors_degree = "Bachelor's Degree"
+    masters_degree = "Master's Degree"
+    doctoral_degree = "Doctoral Degree"
+
+    residential_area_label = "What describes your residential area best?"
+    metropolitan_area = "Metropolitan Area"
+    suburban = "Suburban Area"
+    rural = "Rural Area"
+
+    zip_code_label = "Zip Code (voluntarily)"
+    
+    party_affiliation_label = "Which party would you be most likely to vote for?"
+    republicans = "Republicans"
+    democrats = "Democrats"
+    independent_party = "Independent Party"
+    other_party = "Other"

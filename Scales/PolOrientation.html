@@ -10,23 +10,27 @@
 
 {% block content %}
 
-<p> {{ Lexicon.po_header }}</p>
+<p>{{ Lexicon.po_header }}</p>
 
 <table class="radiotable">
-    <tr> <th></th> <th    class="radio-column">  {{ Lexicon.strongly_liberal }}</th> <th class="radio-column" > {{ Lexicon.somewhat_liberal }} </th class="radio-column"> <th class="radio-column"> {{ Lexicon.moderate }} </th> <th class="radio-column" > {{ Lexicon.somewhat_conservative }} </th class="radio-column"> <th    class="radio-column"> {{ Lexicon.strongly_conservative }} </th> </tr>
+    <tr>
+        <th></th>
+        <th class="radio-column">{{ Lexicon.strongly_liberal }}</th>
+        <th class="radio-column">{{ Lexicon.somewhat_liberal }}</th>
+        <th class="radio-column">{{ Lexicon.moderate }}</th>
+        <th class="radio-column">{{ Lexicon.somewhat_conservative }}</th>
+        <th class="radio-column">{{ Lexicon.strongly_conservative }}</th>
+    </tr>
 
-
-   
-    {{ for field in form }}
+    {% for field in form %}
         <tr>
             <th style="font-weight:normal;">{{ field.label }}</th>
-            {{ for choice in field }}
+            {% for choice in field %}
                 <td>{{ choice }}</td>
-            {{ endfor }}
+            {% endfor %}
         </tr>
-    {{ endfor }}
+    {% endfor %}
 </table>
-
 
 <div class="next-btn radiotable">  
     <div style="float: right; padding-top: 2vh;">

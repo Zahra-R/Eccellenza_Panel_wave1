@@ -1,5 +1,3 @@
-### things so solve: All scales - check display of anchors
-
 import random
 
 from otree.api import *
@@ -185,6 +183,55 @@ class Player(BasePlayer):
     # Effort put into completing task
     ecom1 = make_no_yes(Lexicon.ecom1Label)
 
+    ### Demographics
+    age = models.IntegerField(
+        label=Lexicon.age_label,
+        min=18,
+    )
+
+    gender = models.StringField(
+    label=Lexicon.gender_label,
+    choices=[Lexicon.female, Lexicon.male, Lexicon.diverse, Lexicon.other],
+    )
+
+    income = models.StringField(
+        label=Lexicon.income_label,
+        choices=[
+            Lexicon.income_less_than_A,
+            Lexicon.income_A_to_B,
+            Lexicon.income_B_to_C,
+            Lexicon.income_C_to_D,
+            Lexicon.income_more_than_D,
+            Lexicon.prefer_not_to_say,
+        ],
+    )
+
+    education = models.StringField(
+        label=Lexicon.education_label,
+        choices=[
+            Lexicon.high_school,
+            Lexicon.some_college,
+            Lexicon.bachelors_degree,
+            Lexicon.masters_degree,
+            Lexicon.doctoral_degree,
+        ],
+    )
+
+    residential_area = models.StringField(
+        label=Lexicon.residential_area_label,
+        choices=[Lexicon.metropolitan_area, Lexicon.suburban, Lexicon.rural],
+    )
+
+    zip_code = models.StringField(
+        label=Lexicon.zip_code_label,
+        blank=True,
+    )
+
+    party_affiliation = models.StringField(
+        label=Lexicon.party_affiliation_label,
+        choices=[Lexicon.republicans, Lexicon.democrats, Lexicon.independent_party, Lexicon.other_party],
+    )
+
 
 class CCConcern(Page):
     form_model = 'player'
@@ -276,5 +323,13 @@ class EffCompletion(Page):
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
+    
+class Demographics(Page):
+    form_model = 'player'
+    form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code', 'party_affiliation']
 
-page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion]
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
+
+page_sequence = [Demographics, CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion]
