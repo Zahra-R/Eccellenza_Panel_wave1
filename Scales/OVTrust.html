@@ -1,0 +1,39 @@
+
+{% block styles %}
+    <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
+    <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    {{ Lexicon.ovt_title }}
+{% endblock %}
+
+{% block content %}
+
+<p> {{ Lexicon.ovt_header }}</p>
+
+<table class="radiotable">
+    <tr> <th></th> <th    class="radio-column">  {{ Lexicon.completely_false }}</th> <th class="radio-column" > </th class="radio-column"> <th class="radio-column"> </th> <th class="radio-column"> </th> <th class="radio-column"> </th> <th class="radio-column"> </th> <th class="radio-column"> </th> <th class="radio-column"> </th> <th class="radio-column"> </th> <th></th> <th    class="radio-column"> {{ Lexicon.completely_true }} </th> </tr>
+
+
+   
+    {{ for field in form }}
+        <tr>
+            <th style="font-weight:normal;">{{ field.label }}</th>
+            {{ for choice in field }}
+                <td>{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+    {{ endfor }}
+</table>
+
+
+<div class="next-btn radiotable">  
+    <div style="float: right; padding-top: 2vh;">
+         {% next_button %}
+        
+    </div>
+</div> 
+{% endblock %}
+
+

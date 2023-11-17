@@ -1,0 +1,43 @@
+{% block styles %}
+<link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
+<link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    {{ Lexicon.crt_header }}
+{% endblock %}
+
+{% block content %}
+
+
+<table>
+    <tr>
+        <td> {{ Lexicon.crt1Label }}</td>
+        <td> <input name="crt1" id="id_crt1" onchange="checkNext()" /> </td>
+    </tr>
+
+    <tr>
+        <td> {{ Lexicon.crt2Label }}</td>
+        <td> <input name="crt2" id="id_crt2" onchange="checkNext()" /> </td>
+    </tr>
+
+    <tr>
+        <td> {{ Lexicon.crt3Label }}</td>
+        <td> <input name="crt3" id="id_crt3" onchange="checkNext()" /> </td>
+    </tr>
+
+    <tr>
+        <td> {{ Lexicon.crt4Label }}</td>
+        <td> <input name="crt4" id="id_crt4" onchange="checkNext()" /> </td>
+    </tr>
+
+</table>
+
+
+<div class="next-btn radiotable">  
+    <div style="float: right; padding-top: 2vh;">
+            {% next_button %}
+        
+    </div>
+</div> 
+{% endblock %}
