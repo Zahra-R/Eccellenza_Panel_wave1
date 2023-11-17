@@ -54,6 +54,14 @@ def make_likert5(label):
             widget=widgets.RadioSelect,
             )
 
+# custom function to automatically make 4 option fields
+def make_options4(label):
+        return models.IntegerField(
+            choices=[1,2,3,4],
+            label=label,
+            widget=widgets.RadioSelect,
+            )
+
 
 class Player(BasePlayer):
     ### Climate Change Concern Scale by Tobler et al. 2012
@@ -68,6 +76,33 @@ class Player(BasePlayer):
     ccc14 = make_likert5(Lexicon.ccc14Label)
     ccc15 = make_likert5(Lexicon.ccc15Label)
     ccc16 = make_likert5(Lexicon.ccc16Label)
+
+    ### Climate Change Emotions Scale based on Knauf 2022 and Truelove 2012
+    cce1 = make_likert5(Lexicon.cce1Label) ## Anger
+    cce2 = make_likert5(Lexicon.cce2Label) ## Fear/Worry
+    cce3 = make_likert5(Lexicon.cce3Label) ## Sadness
+    cce4 = make_likert5(Lexicon.cce4Label) ## Joy
+    cce5 = make_likert5(Lexicon.cce5Label) ## Curiosity
+    cce6 = make_likert5(Lexicon.cce6Label) ## Hope
+
+    ### Injunctive /descriptive norms for global warming generally (Goldberg et al, 2021)
+    gwn1 = make_likert5(Lexicon.gwn1Label) ## injunctive
+    gwn2 = make_likert5(Lexicon.gwn2Label) ## descriptive
+
+    ### Climate Change Knowledge by van der Linden 2015
+    cck1  = make_options4(Lexicon.cck1Label)
+    cck2  = make_options4(Lexicon.cck2Label)
+    cck3  = make_options4(Lexicon.cck3Label)
+    cck4  = make_options4(Lexicon.cck4Label)
+    cck5  = make_options4(Lexicon.cck5Label)
+    cck6  = make_options4(Lexicon.cck6Label)
+    cck7  = make_options4(Lexicon.cck7Label)
+    cck8  = make_options4(Lexicon.cck8Label)
+    cck9  = make_options4(Lexicon.cck9Label)
+    cck10 = make_options4(Lexicon.cck10Label)
+    cck11 = make_options4(Lexicon.cck11Label)
+    cck12 = make_options4(Lexicon.cck12Label)
+    cck13 = make_options4(Lexicon.cck13Label)
    
 
 class CCConcern(Page):
@@ -77,6 +112,26 @@ class CCConcern(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     
+class CCEmotion(Page):
+    form_model = 'player'
+    form_fields= ['cce1', 'cce2', 'cce3', 'cce4', 'cce5', 'cce6']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
+    
+class GWNorms(Page):
+    form_model = 'player'
+    form_fields= ['gwn1', 'gwn2']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
+    
+class CCKnowledge(Page):
+    form_model = 'player'
+    form_fields= ['cck1', 'cck2', 'cck3', 'cck4',  'cck5', 'cck6', 'cck7', 'cck8', 'cck9', 'cck10', 'cck11', 'cck12', 'cck13']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
 
 
-page_sequence = [CCConcern]
+page_sequence = [CCKnowledge, CCConcern, CCEmotion]

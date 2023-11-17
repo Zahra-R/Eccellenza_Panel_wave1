@@ -1,0 +1,37 @@
+
+{% block styles %}
+    <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
+    <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    {{ Lexicon.gwn_title }}
+{% endblock %}
+
+{% block content %}
+
+<p> {{ Lexicon.gwn_header }}</p>
+
+<table class="radiotable">
+    <tr> <th></th> <th    class="radio-column">  {{ Lexicon.no_effort }}</th> <th class="radio-column" > </th class="radio-column"> <th class="radio-column"> </th> <th></th> <th    class="radio-column"> {{ Lexicon.great_deal_of_effort }} </th> </tr>
+
+
+   
+    <tr>
+        <th style="font-weight:normal;">{{ Lexicon.gwn1Label }}</th>
+        {{ for choice in field }}
+            <td>{{ choice }}</td>
+        {{ endfor }}
+    </tr>
+</table>
+
+
+<div class="next-btn radiotable">  
+    <div style="float: right; padding-top: 2vh;">
+         {% next_button %}
+        
+    </div>
+</div> 
+{% endblock %}
+
+
