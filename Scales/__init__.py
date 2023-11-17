@@ -1,4 +1,4 @@
-### things so solve: Norms - Two different anchors on one page. All scales - center anchors over respective choices?
+### things so solve: All scales - check display of anchors
 
 import random
 
@@ -277,4 +277,4 @@ class EffCompletion(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
 
-page_sequence = [CCConcern, CCEmotion, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion]
+page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion]

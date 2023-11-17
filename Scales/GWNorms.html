@@ -13,15 +13,39 @@
 <p> {{ Lexicon.gwn_header }}</p>
 
 <table class="radiotable">
-    <tr> <th></th> <th    class="radio-column">  {{ Lexicon.no_effort }}</th> <th class="radio-column" > </th class="radio-column"> <th class="radio-column"> </th> <th></th> <th    class="radio-column"> {{ Lexicon.great_deal_of_effort }} </th> </tr>
+    <tr>
+        <th></th>
+        <th class="radio-column">{{ Lexicon.no_effort }}</th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column">{{ Lexicon.very_much }}</th>
+    </tr>
 
-
-   
     <tr>
         <th style="font-weight:normal;">{{ Lexicon.gwn1Label }}</th>
-        {{ for choice in field }}
+        {% for choice in form.gwn1 %}
             <td>{{ choice }}</td>
-        {{ endfor }}
+        {% endfor %}
+    </tr>
+</table>
+</br>
+</br>
+<table class="radiotable">
+    <tr>
+        <th></th>
+        <th class="radio-column">{{ Lexicon.not_at_all_important }}</th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column">{{ Lexicon.extremely_important }}</th>
+    </tr>
+
+    <tr>
+        <th style="font-weight:normal;">{{ Lexicon.gwn2Label }}</th>
+        {% for choice in form.gwn2 %}
+            <td>{{ choice }}</td>
+        {% endfor %}
     </tr>
 </table>
 
