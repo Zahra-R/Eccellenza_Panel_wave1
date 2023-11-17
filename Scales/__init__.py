@@ -177,10 +177,10 @@ class Player(BasePlayer):
     ovt1 = make_likert10(Lexicon.ovt1Label)
 
     # Cognitive Reflection Task Thomson & Oppenheimer 2016
-    crt1 = make_likert7(Lexicon.pit1Label)
-    crt2 = make_likert7(Lexicon.pit2Label)
-    crt3 = make_likert7(Lexicon.pit3Label)
-    crt4 = make_likert7(Lexicon.pit4Label)
+    crt1 = models.StringField(label=Lexicon.crt1Label)
+    crt2 = models.StringField(label=Lexicon.crt2Label)
+    crt3 = models.StringField(label=Lexicon.crt3Label)
+    crt4 = models.StringField(label=Lexicon.crt4Label)
 
     # Effort put into completing task
     ecom1 = make_no_yes(Lexicon.ecom1Label)

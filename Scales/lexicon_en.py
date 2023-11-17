@@ -79,8 +79,6 @@ class Lexicon:
     cck12Label = "Frequency of hot days and nights" 
     cck13Label = "Global fresh water supply"
 
-
-# not yet inserted in de lexicon from here
     # (Dis)trust in Climate Science Sarathchandra & Haltinner
     cst_title = "Opinion on Climate Science"
     cst_header = "How much do you agree with the following statements?"
