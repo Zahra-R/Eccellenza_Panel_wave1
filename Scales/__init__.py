@@ -91,7 +91,61 @@ def make_likert10(label):
             widget=widgets.RadioSelect,
             )
 
+# functions to generate education and party choices based on language
+def get_education_choices(language_code):
+    education_choices = []
 
+    if language_code == 'de':
+        education_choices = [    
+            Lexicon.no_formal_education,
+            Lexicon.elementary_school,
+            Lexicon.secondary_school,
+            Lexicon.higher_secondary_school,
+            Lexicon.vocational_training,
+            Lexicon.high_school,
+            Lexicon.college_degree,
+            Lexicon.master_degree,
+            Lexicon.doctoral_degree,
+            Lexicon.prefer_not_to_say_education
+        ]
+    elif language_code == 'zh_hans':
+        education_choices = [
+            # Add choices for Chinese language if needed
+        ]
+    else:
+        education_choices = [
+            Lexicon.high_school,
+            Lexicon.some_college,
+            Lexicon.bachelors_degree,
+            Lexicon.masters_degree,
+            Lexicon.doctoral_degree,
+        ]
+    return education_choices
+
+def get_party_choices(language_code):
+    party_choices = []
+    if language_code == 'de':
+        party_choices = [    
+            Lexicon.cdcsu,
+            Lexicon.spd,
+            Lexicon.gruene,
+            Lexicon.fdp,
+            Lexicon.linke,
+            Lexicon.afd,
+            Lexicon.other_party
+        ]
+    elif language_code == 'zh_hans':
+        party_choices = [
+            # Add choices for Chinese language if needed
+        ]
+    else:
+        party_choices = [
+            Lexicon.republicans, 
+            Lexicon.democrats, 
+            Lexicon.independent_party, 
+            Lexicon.other_party
+        ]
+    return party_choices
 
 class Player(BasePlayer):
     ### Climate Change Concern Scale by Tobler et al. 2012
@@ -208,13 +262,7 @@ class Player(BasePlayer):
 
     education = models.StringField(
         label=Lexicon.education_label,
-        choices=[
-            Lexicon.high_school,
-            Lexicon.some_college,
-            Lexicon.bachelors_degree,
-            Lexicon.masters_degree,
-            Lexicon.doctoral_degree,
-        ],
+        choices=get_education_choices(LANGUAGE_CODE),
     )
 
     residential_area = models.StringField(
@@ -229,7 +277,7 @@ class Player(BasePlayer):
 
     party_affiliation = models.StringField(
         label=Lexicon.party_affiliation_label,
-        choices=[Lexicon.republicans, Lexicon.democrats, Lexicon.independent_party, Lexicon.other_party],
+        choices=get_party_choices(LANGUAGE_CODE),
     )
 
 
@@ -332,4 +380,4 @@ class Demographics(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
 
-page_sequence = [Demographics, CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion]
+page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
