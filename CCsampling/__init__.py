@@ -3,6 +3,7 @@ import random
 from otree.api import *
 import numpy as np
 import json
+from settings import LANGUAGE_CODE
 
 
 author = 'Zahra Rahmani'
@@ -14,7 +15,14 @@ class C(BaseConstants):
     NAME_IN_URL = 'SAMPLING'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 4
-
+    if LANGUAGE_CODE == 'de':
+        misinfofile = open('CCsampling/ClimateMisinfo.json')
+        infofile = open('CCsampling/ClimateInfo.json')
+    else:
+        misinfofile = open('CCsampling/ClimateMisinfo.json')
+        infofile = open('CCsampling/ClimateInfo.json')
+    misinfo = json.load(misinfofile)['CCMisinfo']
+    info = json.load(infofile)['CCInfo']
 
 class Subsession(BaseSubsession):
     pass
@@ -97,14 +105,10 @@ class sampling(Page):
     @staticmethod
     def vars_for_template(player: Player):
         round_number = player.round_number
-        misinfofile = open('CCsampling/ClimateMisinfo.json')
-        infofile = open('CCsampling/ClimateInfo.json')
-        misinfo = json.load(misinfofile)['CCMisinfo']
-        info = json.load(infofile)['CCInfo']
-        MisinfoText = misinfo[player.participant.randomMisinfoArray[round_number-1]]['finalStatement']
-        InfoText = info[player.participant.randomInfoArray[round_number-1]]['finalStatement']
-        player.InfohasDebrief = True if "correctedStatement" in info[player.participant.randomInfoArray[round_number-1]] else False
-        print("hello mislieading info", info[player.participant.randomInfoArray[round_number-1]])
+        MisinfoText = C.misinfo[player.participant.randomMisinfoArray[round_number-1]]['finalStatement']
+        InfoText = C.info[player.participant.randomInfoArray[round_number-1]]['finalStatement']
+        player.InfohasDebrief = True if "correctedStatement" in C.info[player.participant.randomInfoArray[round_number-1]] else False
+        print("hello mislieading info", C.info[player.participant.randomInfoArray[round_number-1]])
         # these are tweetids, we are not submitting them. We only submit the index of the statement in the json file (internal statementID)
         #MisinfoID = misinfo[player.participant.randomMisinfoArray[round_number-1]]['tweetid']
         #InfoID = info[player.participant.randomInfoArray[round_number-1]]['tweetid']
@@ -155,9 +159,7 @@ class boxrating(Page):
 
 
 
-    
-
-class Conclude2(Page):
+class Conclude(Page):
     form_model = 'player'
     form_fields = ['click_consequences', 'click_debunk', 'click_ipcc', 'click_mechanism']
     @staticmethod
@@ -198,5 +200,5 @@ class Conclude2(Page):
         return (player.round_number  == C.NUM_ROUNDS)
 
 page_sequence = [
-    sampling, boxrating, Conclude2
+    sampling, boxrating, Conclude
 ]
