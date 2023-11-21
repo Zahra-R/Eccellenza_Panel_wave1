@@ -86,7 +86,7 @@ def make_likert9(label):
 
 def make_likert10(label):
         return models.IntegerField(
-            choices=[0,1,2,3,4,5,6,7,8,9,10],
+            choices=[1,2,3,4,5,6,7,8,9,10],
             label=label,
             widget=widgets.RadioSelect,
             )
@@ -380,4 +380,7 @@ class Demographics(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
 
-page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
+# for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
+page_sequence = [WVValues, OVTrust, IBValues, CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, PolOrientation, PITrust, CRTask, EffCompletion, Demographics]
+# copy pf page_sequence with original order of scales 
+# page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
