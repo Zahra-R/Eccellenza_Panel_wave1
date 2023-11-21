@@ -11,7 +11,7 @@ class Lexicon:
     very_much = "sehr stark"
     no_effort = "keinen Aufwand"
     great_deal_of_effort = "grossen Aufwand"
-    not_important = "nnicht wichtig"
+    not_important = "nicht wichtig"
     not_at_all_important = "überhaupt nicht wichtig"
     extremely_important = "extrem wichtig"
     likely_increase = "Zunahme ist wahrscheinlich"
