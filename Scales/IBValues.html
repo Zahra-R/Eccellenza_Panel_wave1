@@ -15,7 +15,7 @@
 <style>  
     table.radiotable th, table.radiotable td {
         padding: 12px;
-        text-align: center;
+        text-align: center; /* Center-align the entire table */
         max-width: none; /* No max-width for the entire table */
     }
     /* Left-align the first column */
@@ -62,7 +62,7 @@
     // Get all table rows
     var rows = document.querySelectorAll('.radiotable tr');
 
-    // Initialize min width for the entire table (excluding the first and second columns)
+    // Initialize min width
     var minTableWidth = 0;
 
     // Iterate over each row
@@ -81,7 +81,7 @@
             // Find the length of the longest word
             var maxLength = Math.max(...words.map(word => word.length));
 
-            // Update the min width for the entire table
+            // Update the min width
             minTableWidth = Math.max(minTableWidth, maxLength);
         });
     });

@@ -97,7 +97,7 @@ class Lexicon:
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
     wvv_title = "Wie sehen Sie die Welt?"
     wvv_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    wvv1Label = "Unsere Gesellschaft wäre besser dran, wenn der Reichtums gleichmäßiger verteilt wäre."
+    wvv1Label = "Unsere Gesellschaft wäre besser dran, wenn der Reichtum gleichmäßiger verteilt wäre."
     wvv2Label = "Viele Probleme in unserer Gesellschaft resultieren aus dem Verschwinden des traditionellen Familienbildes, in der der Mann arbeitet und die Frau zu Hause bleibt."
     wvv3Label = "Diskriminierung von Minderheiten ist in unserem Land immer noch ein sehr ernstes Problem."
     wvv4Label = "Die Regierung mischt sich viel zu sehr in unseren Alltag ein."
