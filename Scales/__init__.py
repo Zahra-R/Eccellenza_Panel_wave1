@@ -381,6 +381,6 @@ class Demographics(Page):
         return dict(Lexicon=Lexicon, **which_language)
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
-page_sequence = [CCConcern, WVValues, OVTrust, IBValues, CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, PolOrientation, PITrust, CRTask, EffCompletion, Demographics]
+page_sequence = [IBValues, CCConcern, WVValues, OVTrust, CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, PolOrientation, PITrust, CRTask, EffCompletion, Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]

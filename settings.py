@@ -3,8 +3,15 @@ from os import environ
 SESSION_CONFIGS = [
      dict(
          name='first_draft_Panel_scales_only',
-  #       app_sequence=['survey','task'],
+  #      app_sequence=['survey','task'],
          app_sequence=['Intro', 'Scales'],
+
+         num_demo_participants=10,
+     ),
+    dict(
+         name='first_draft_Panel_scales_pure',
+  #      app_sequence=['survey','task'],
+         app_sequence=['Scales'],
 
          num_demo_participants=10,
      ),
