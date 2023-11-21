@@ -1,0 +1,157 @@
+
+{% block styles %}
+    <link href="{{ static 'global/css/SamplingPilotgeneral.css'}}" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" >
+{% endblock %}
+
+{% block title %}
+    Please take some time to read through this page.
+{% endblock %}
+
+{% block content %}
+
+
+
+<div >
+ <p> All of the 15 statements you just in this study were posted publicly on social media. 
+     However, some of the statements contained misleading or even false information about climate change. 
+</p> 
+
+<p>
+    Please remember that, regardless of the posts you have read, <b>more than 97% of climate scientists agree that climate change is real</b> and it is caused by human greenhouse gas emissions.  The IPCC report, the most comprehensive body of climate change evidence with authors from all over the world, concludes that “It is unequivocal that human influence has warmed the atmosphere, ocean and land. 
+    Widespread and rapid changes in the atmosphere, ocean, cryosphere and biosphere have already occurred." The report <b>strongly urges to implement adequate actions to avoid dire consequences on global living conditions.</b> On the other hand, some people and institutions have vested interests to avoid climate action. Fossil fuel companies, for instance, have invested billions of dollars in communication that opposes climate action.
+</p>
+    
+<p> This is why there is a lot of contradicting and, unfortunately, sometimes false or misleading information out there. Some of the information contradicts the best scientific evidence, some might be imprecise, exaggerated or biased.
+    
+    If you want to know which of the statements that you read during this study were inaccurate, you can find them in the table below. By <i>"inaccurate"</i> we mean statements that are misleading, distorted or contradicting scientific evidence. The table provides correcting statements that contain facts based on scientific publications or official sources (e.g. the International Energy Agency, IEA).
+
+    While most inaccurate statements were from Box {{if player.participant.reverseBoxes == False}} A{{else}} B{{endif}}, Box {{if player.participant.reverseBoxes == False}} B {{else}} A{{endif}} also contained some inaccurate statements. Find them with correcting responses below. 
+</p>
+
+<p>
+    <a id="debunk" href="https://skepticalscience.com/argument.php" target="_blank" rel="noopener noreferrer">You can read more about climate myths and how they can be debunked here.</a>
+</p>
+
+<p> <a id="mechanism" href="https://www.youtube.com/watch?v=sTvqIijqvTg" target="_blank" rel="noopener noreferrer"> Not only is the data clear that fossil fuel emissions cause the global temperature to increase, the physical mechanisms of the greenhouse gas effect are well understood. </a> </p>
+<p>
+   <a id="consequences" href="https://www.un.org/en/climatechange/what-is-climate-change" target="_blank" rel="noopener noreferrer">You can read more about climate change and its consequences here.  </a> 
+</p>
+    <a id="ipcc" href="https://www.ipcc.ch/report/ar6/syr/resources/spm-headline-statements/" target="_blank" rel="noopener noreferrer"> Here, you can find the latest IPCC report. </a>
+    
+    
+ </p>   
+
+
+ <table id="debriefTable" class="stripe hover row-border">
+ </table>
+  
+</div>
+
+
+<div class="next-btn">  
+    <div style="float: right; padding-top: 5vh;">
+         {% next_button %} 
+    </div>
+</div> 
+
+
+
+<input type="hidden" name="click_consequences" id="click_consequences" value="False" />
+<input type="hidden" name="click_debunk" id="click_debunk" value="False" />
+<input type="hidden" name="click_ipcc" id="click_ipcc"  value="False"/>
+<input type="hidden" name="click_mechanism" id="click_mechanism" value="False" />
+
+{{ formfield_errors 'click_consequences' }}
+{{ formfield_errors 'click_debunk' }}
+{{ formfield_errors 'click_ipcc' }}
+{{ formfield_errors 'click_mechanism' }}  
+
+{% endblock %}
+
+{% block scripts %}
+
+<script src="https://code.jquery.com/jquery-3.7.0.js"> </script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" > </script>
+
+
+<script>
+
+    var seenM = '{{seenM}}'
+    seenM = eval(seenM)
+    var seenMstatements = "{{seenMstatements}}"
+    seenMstatements = eval(seenMstatements)
+
+    var seenMcorrections = "{{seenMcorrections}}"
+    seenMcorrections = eval(seenMcorrections)
+    
+
+
+fillTable = function(){
+    for (let i = 0; i < seenMstatements.length; i++){ 
+        thisseenM = seenMstatements[i]
+        thisseenM = thisseenM.replaceAll("´", "'")
+        thiscorrectedM = seenMcorrections[i]
+        thiscorrectedM = thiscorrectedM.replaceAll("´", "'")
+        var mytable = document.getElementById("debriefTable");
+
+        // Create an empty <tr> element and add it to the 1st position of the table:
+        var row = mytable.insertRow(-1);
+
+        // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+
+        // Add some text to the new cells:
+        cell1.innerHTML = thisseenM;
+        cell2.innerHTML = thiscorrectedM;
+
+        
+    }
+    
+}
+
+$(document).ready(function() {
+
+    setTimeout(function () {
+        $('#debriefTable').DataTable({
+            "columns": [
+                { "data": "Misleading", title:"Inaccurate Statement", width:"45%"},
+                { "data": "Corrected" , title:"Response in Line with Scientific Evidence", width:"55%"},
+
+            ], 
+            "lengthMenu": [ [2, 5, 10, -1], [2, 5, 10, "All"] ],
+            "pageLength": -1
+        });
+
+    }, 1000)
+
+    $('a').click(function() {
+        console.log($(this))
+        console.log(`${String("click_" + $(this).attr("id"))}`)
+        forminputs[`${String("click_" + $(this).attr("id"))}`].value = "True"
+   
+    })
+    //...
+
+
+} );
+
+
+
+
+
+window.onload = function () {
+
+    fillTable()
+
+
+}
+
+
+</script>
+
+
+{% endblock %}
+
+

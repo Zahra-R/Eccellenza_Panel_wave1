@@ -2,12 +2,17 @@ from os import environ
 
 SESSION_CONFIGS = [
      dict(
-         name='first_draft_Panel',
+         name='first_draft_Panel_scales_only',
   #       app_sequence=['survey','task'],
          app_sequence=['Intro', 'Scales'],
 
          num_demo_participants=10,
      ),
+       dict(
+        name='first_draft_Panel_withSampling',
+        app_sequence=['Intro','CCsampling_intro', 'CCsampling', 'Scales'],
+        num_demo_participants=5,
+    )
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
@@ -19,7 +24,17 @@ SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00, participation_fee=0.00, doc=""
 )
 
-PARTICIPANT_FIELDS = ['task_rounds']
+PARTICIPANT_FIELDS = [
+
+     #CC SAMPLING FIELDS
+    'randomInfoArray',
+    'randomMisinfoArray', 
+    'reverseBoxes',
+    'seenMisinfo',
+    'seenMislInfo',
+    'telling_box_label'
+    
+    ]
 SESSION_FIELDS = []
 
 # ISO-639 code
