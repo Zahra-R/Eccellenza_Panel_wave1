@@ -9,21 +9,21 @@
 
 {% block content %}
 <body>
-    <h2 id="caption1"> Your attitude on climate change</h2>
-    <h4 id="caption2"> Please move the slider to reflect your attitude.  </h4>
+    <h2 id="caption1">{{Lexicon.ccconcern_title}}</h2>
+    <h4 id="caption2">{{Lexicon.ccconcern_instruction}}</h4>
 
 <div id="choice">
    
     <div class="slidecontainer" style="margin-top:10vh;">
-        <p> How concerned are you about climate change?</p>
+        {{Lexicon.ccconcern_question}}
         <table style="width:100%">
             <tr>
-                <td class="rangelabel" style="width:20%"> not at all  </td>
+                <td class="rangelabel" style="width:20%"> {{Lexicon.not_at_all}} </td>
                 <td style="width:60%">
                     <input style="width:100%" type="range" min="-100" max="100" value="0" step="1" class="slider untouched"
                         id="range_ccconcern" name="range_ccconcern" >
                 </td>
-                <td class="rangelabel" style="width:20%"> very much  </td>
+                <td class="rangelabel" style="width:20%"> {{Lexicon.very_much}}  </td>
             </tr>
         </table>
     </div>
