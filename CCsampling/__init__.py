@@ -11,16 +11,29 @@ doc = """
 Sampling Paradigma
 """
 
+if LANGUAGE_CODE == 'de':
+    from .lexicon_de import Lexicon
+elif LANGUAGE_CODE == 'zh_hans':
+    from .lexicon_zh_hans import Lexicon
+else:
+    from .lexicon_en import Lexicon
+
+# this is the dict you should pass to each page in vars_for_template,
+# enabling you to do if-statements like {{ if de }} Nein {{ else }} No {{ endif }}
+which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
+which_language[LANGUAGE_CODE[:2]] = True
+
+
 class C(BaseConstants):
     NAME_IN_URL = 'SAMPLING'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 4
     if LANGUAGE_CODE == 'de':
-        misinfofile = open('CCsampling/ClimateMisinfo.json')
-        infofile = open('CCsampling/ClimateInfo.json')
+        misinfofile = open('CCsampling/ClimateMisinfo_de.json')
+        infofile = open('CCsampling/ClimateInfo_de.json')
     else:
-        misinfofile = open('CCsampling/ClimateMisinfo.json')
-        infofile = open('CCsampling/ClimateInfo.json')
+        misinfofile = open('CCsampling/ClimateMisinfo_en.json')
+        infofile = open('CCsampling/ClimateInfo_en.json')
     misinfo = json.load(misinfofile)['CCMisinfo']
     info = json.load(infofile)['CCInfo']
 
@@ -119,8 +132,10 @@ class sampling(Page):
             'reverseBoxes': player.participant.reverseBoxes,
             'MisinfoText': MisinfoText,
             'InfoText': InfoText, 
-            'tellingBoxNames': player.participant.telling_box_label
-        }
+            'tellingBoxNames': player.participant.telling_box_label,
+            'Lexicon': Lexicon,
+            'which_language': which_language,
+        } 
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
         if(player.boxChoice == "m"):
@@ -144,6 +159,8 @@ class boxrating(Page):
     def vars_for_template(player: Player):
         return {
             'round_number': player.round_number,
+            'Lexicon': Lexicon,
+            'which_language': which_language,
         }
     @staticmethod
     def is_displayed(player: Player):
@@ -167,10 +184,16 @@ class Conclude(Page):
         import string
         seenM = player.participant.seenMisinfo
         seenMlI = player.participant.seenMislInfo
-        misinfofile = open('CCsampling/ClimateMisinfo.json')
-        infofile = open('CCsampling/ClimateInfo.json')
+        
+        if LANGUAGE_CODE == 'de':
+            misinfofile = open('CCsampling/ClimateMisinfo_de.json')
+            infofile = open('CCsampling/ClimateInfo_de.json')
+        else:
+            misinfofile = open('CCsampling/ClimateMisinfo_en.json')
+            infofile = open('CCsampling/ClimateInfo_en.json')
         misinfo = json.load(misinfofile)['CCMisinfo']
         info = json.load(infofile)['CCInfo']
+
         seenMstatements = []
         seenMcorrections = []
         for x in seenM:
@@ -186,18 +209,22 @@ class Conclude(Page):
             statementstring =statementstring.replace("'", "´")
             seenMstatements.append(statementstring)
             correctedstring = info[x]['correctedStatement']
-            correctedstring = correctedstring.replace("'", "´")
+            if correctedstring is not None:
+                correctedstring = correctedstring.replace("'", "´")
             seenMcorrections.append(correctedstring)
             
         return {
             'seenM': seenM,
             'seenMlI': seenMlI,
             'seenMstatements': seenMstatements,
-            'seenMcorrections': seenMcorrections
+            'seenMcorrections': seenMcorrections,
+            'Lexicon': Lexicon,
+            'which_language': which_language,
         }
     @staticmethod
     def is_displayed(player: Player):
         return (player.round_number  == C.NUM_ROUNDS)
+    
 
 page_sequence = [
     sampling, boxrating, Conclude

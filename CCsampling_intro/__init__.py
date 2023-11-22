@@ -19,7 +19,7 @@ elif LANGUAGE_CODE == 'zh_hans':
 else:
     from .lexicon_en import Lexicon
 
-    
+
 # this is the dict you should pass to each page in vars_for_template,
 # enabling you to do if-statements like {{ if de }} Nein {{ else }} No {{ endif }}
 which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
@@ -71,13 +71,15 @@ class Player(BasePlayer):
     
 class Introduction(Page):
     form_model = 'player'
-    
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
 
 
 class beforeTask(Page):
     form_model='player'
     form_fields = ['range_ccconcern']
-
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
 
 page_sequence = [
     Introduction,

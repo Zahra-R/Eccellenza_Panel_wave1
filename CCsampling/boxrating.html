@@ -1,5 +1,5 @@
 {% block title %}
-Plase tell us what you think about the boxes: 
+{{Lexicon.box_rating_instruction}} 
 {% endblock %}
 
 
@@ -24,38 +24,41 @@ label{
 <div style="padding-top:2vh; text-align: center; padding-left:1vw;">
       <table style="text-align: center; margin-left: auto; margin-right:auto">
          <tr>
-            <td colspan="11"> <label for="id_boxlikingInfo">How much do you like Box <span
-                  style="font-size: larger;"> A</span>?</label>
+            {{Lexicon.box_rating_liking_A}}
             </td>
          </tr>
          <tr>
-            <td> not at all &nbsp;</td>
+            <td> {{Lexicon.not_at_all}} &nbsp;</td>
             {{ for choice in form.boxlikingInfo }}
                <td> {{ choice }} </td>
             {{ endfor }}
-            <td> &nbsp; very much </td>
+            <td> &nbsp; {{Lexicon.very_much}} </td>
          </tr>
       
-         <tr> <td colspan="11"> <label  for="id_boxrecommendationInfo">Would you follow Box <span
-                  style="font-size: larger;"> A</span> if it were its own social media channel?</label> </td>
+         <tr> 
+            <td colspan="11"> 
+               {{Lexicon.box_rating_would_follow_A}}
+            </td>
          </tr>
          <tr>
-            <td> very unlikely &nbsp;</td>
+            <td> {{Lexicon.very_unlikely}} &nbsp;</td>
              {{ for choice in form.boxrecommendationInfo }}
                 <td> {{ choice }} </td>
              {{ endfor }}
-             <td> &nbsp; very likely </td>
+             <td> &nbsp; {{Lexicon.very_likely}} </td>
          </tr>
          {{if round_number == C.NUM_ROUNDS}}
          <tr >
-           <td colspan="11"> <label for="id_boxpoliticsInfo"> What do you think is the political orientation of Box <span style="font-size: larger;"> A</span>? </label>  </td>
+            <td colspan="11"> 
+            {{Lexicon.box_rating_polOrientation_A}}
+            </td>
          </tr>
          <tr>
-            <td> very liberal &nbsp;</td>
+            <td> {{Lexicon.very_liberal}} &nbsp;</td>
             {{ for choice in form.boxpoliticsInfo }}
                <td> {{ choice }} </td>
             {{ endfor }}
-            <td> &nbsp; very conservative </td>
+            <td> &nbsp; {{Lexicon.very_conservative}} </td>
          </tr>
          {{endif}}
       
@@ -74,38 +77,41 @@ label{
    <div style="padding-top:2vh; text-align: center; padding-left:1vw;">
       <table style="text-align: center; margin-left: auto; margin-right:auto">
          <tr>
-            <td colspan="11"> <label for="id_boxlikingMisinfo">How much do you like Box <span
-                  style="font-size: larger;"> B</span>?</label>
+            {{Lexicon.box_rating_liking_A}}
             </td>
          </tr>
          <tr>
-            <td> not at all &nbsp;</td>
-            {{ for choice in form.boxlikingMisinfo }}
+            <td> {{Lexicon.not_at_all}} &nbsp;</td>
+            {{ for choice in form.boxlikingInfo }}
                <td> {{ choice }} </td>
             {{ endfor }}
-            <td> &nbsp; very much </td>
+            <td> &nbsp; {{Lexicon.very_much}} </td>
          </tr>
       
-         <tr> <td colspan="11"> <label  for="id_boxrecommendationMisinfo">Would you follow Box <span
-                  style="font-size: larger;"> B</span> if it were its own social media channel?</label> </td>
+         <tr> 
+            <td colspan="11"> 
+               {{Lexicon.box_rating_would_follow_A}}
+            </td>
          </tr>
          <tr>
-            <td> very unlikely &nbsp;</td>
-             {{ for choice in form.boxrecommendationMisinfo }}
+            <td> {{Lexicon.very_unlikely}} &nbsp;</td>
+             {{ for choice in form.boxrecommendationInfo }}
                 <td> {{ choice }} </td>
              {{ endfor }}
-             <td> &nbsp; very likely </td>
+             <td> &nbsp; {{Lexicon.very_likely}} </td>
          </tr>
          {{if round_number == C.NUM_ROUNDS}}
          <tr >
-           <td colspan="11"> <label for="id_boxpoliticsMisinfo"> What do you think is the political orientation of Box <span style="font-size: larger;"> B</span>? </label>  </td>
+            <td colspan="11"> 
+            {{Lexicon.box_rating_polOrientation_A}}
+            </td>
          </tr>
          <tr>
-            <td> very liberal &nbsp;</td>
-            {{ for choice in form.boxpoliticsMisinfo }}
+            <td> {{Lexicon.very_liberal}} &nbsp;</td>
+            {{ for choice in form.boxpoliticsInfo }}
                <td> {{ choice }} </td>
             {{ endfor }}
-            <td> &nbsp; very conservative </td>
+            <td> &nbsp; {{Lexicon.very_conservative}} </td>
          </tr>
          {{endif}}
       
@@ -114,7 +120,7 @@ label{
 
 
 <div style="max-width: 750px;">
-   <button id="nextst"  style=" margin-top: 4vh;" class="otree-btn-next btn btn-primary">Next</button>
+   <button id="nextst"  style=" margin-top: 4vh;" class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
 
 </div>
 

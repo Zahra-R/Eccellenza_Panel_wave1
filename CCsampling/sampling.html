@@ -10,10 +10,10 @@
 {% block content %}
 <body>
 
-    <h2 id="caption1"> Please choose a box</h2>
-    <h4 id="caption2"> From which box do you want to read the next statement? </h4>
+    <h2 id="caption1"> {{Lexicon.please_choose_box}} </h2>
+    <h4 id="caption2"> {{Lexicon.next_statement_which_box}} </h4>
     <p style="text-align: left; font-size: 0.9rem;">
-        Round {{round_number}} out of {{C.NUM_ROUNDS}}
+        {{Lexicon.round}} {{round_number}} {{Lexicon.out_of}} {{C.NUM_ROUNDS}}
      </p>
 <div id="choice">
     <table style=" width:100%" class="table" id="choicetable">
@@ -23,9 +23,9 @@
 
             <tr style="border-color: white;">
                 <td style="text-align: center;"><button  type="button"  id="abtn" value="i" onclick="statement.showRoundText(boxname = this.id, infoType = this.value)"
-                    class="choiceButton" disabled> <span> Box A </span></button></td>
+                    class="choiceButton" disabled> {{Lexicon.box_a}} </button></td>
                 <td style="text-align: center;"><button type="button"  id="bbtn" value="m" onclick="statement.showRoundText(boxname =this.id, infoType = this.value)"
-                    class="  choiceButton" disabled><span> Box B</span> </button></td>
+                    class="  choiceButton" disabled> {{Lexicon.box_b}} </button></td>
             </tr>
         </tbody>
     </table> </div>
@@ -35,36 +35,36 @@
 <div id="rate_statement" style="display:none; opacity:0;">
 
     <div class="slidecontainer">
-        <p> How much do you agree with this statement?</p>
+        {{Lexicon.statement_agreement}}
         <table style="width:100%">
             <tr>
-                <td  class="rangelabel"  style="width:20%"> not at all  </td>
+                <td  class="rangelabel"  style="width:20%"> {{Lexicon.not_at_all}}  </td>
                 <td style="width:60%">
                     <input style="width:100%" type="range" min="-100" max="100" value="0" step="1" class="slider untouched"
                         id="range_agree" name="range_agree" >
                 </td>
-                <td class="rangelabel" style="width:20%"> very much  </td>
+                <td class="rangelabel" style="width:20%"> {{Lexicon.very_much}}  </td>
             </tr>
         </table>
     </div>
 
     <div class="slidecontainer">
-        <p> How concerned are you about climate change?</p>
+        {{Lexicon.ccconcern_question}}
         <table style="width:100%">
             <tr>
-                <td class="rangelabel" style="width:20%"> not at all  </td>
+                <td class="rangelabel" style="width:20%"> {{Lexicon.not_at_all}}  </td>
                 <td style="width:60%">
                     <input style="width:100%" type="range" min="-100" max="100" value="0" step="1" class="slider untouched"
                         id="range_ccconcern" name="range_ccconcern" >
                 </td>
-                <td class="rangelabel" style="width:20%"> very much  </td>
+                <td class="rangelabel" style="width:20%"> {{Lexicon.very_much}}  </td>
             </tr>
         </table>
     </div>
 </div>
 
 
-    <button class="btn" style="display:block; margin-left:auto; margin-right:auto;" type="button" id="nextst" onclick="nextRound(triggernext)" disabled>Next</button>
+    <button class="btn" style="display:block; margin-left:auto; margin-right:auto;" type="button" id="nextst" onclick="nextRound(triggernext)" disabled>{{Lexicon.next}}</button>
 
     <input type="hidden" name="boxChoice" id="boxChoice" />
     <button type="hidden" style="display:none;"  name="mynextbtn" id="mynextbtn"> </button>
@@ -138,19 +138,26 @@ function onSliderChange(event) {
 $(document).ready(function () {
     //// danger remove next line
     document.getElementById("nextst").disabled = false;
+
+    var boxALabel, boxBLabel;
+
     if (reverse == "True") {
-        $('#abtn')[0].value = "m"
-        $('#bbtn')[0].value = "i"
-        if (tellingLabel == "True") {
-            $('#abtn span').html("BOX A: Anti&nbsp;Climate Action")
-            $('#bbtn span').html("BOX B: Pro&nbsp;Climate Action")
-        }
+        $('#abtn')[0].value = "m";
+        $('#bbtn')[0].value = "i";
+
+        boxALabel = "{{ Lexicon.box_a_anti_climate_action }}";
+        boxBLabel = "{{ Lexicon.box_b_pro_climate_action }}";
     } else {
-        if (tellingLabel == "True") {
-            $('#bbtn span').html("BOX B: Anti&nbsp;Climate Action")
-            $('#abtn span').html("BOX A: Pro&nbsp;Climate Action")
-        }
+        boxALabel = "{{ Lexicon.box_a_pro_climate_action }}";
+        boxBLabel = "{{ Lexicon.box_b_anti_climate_action }}";
     }
+
+    if (tellingLabel == "True") {
+        $('#abtn span').html(boxALabel);
+        $('#bbtn span').html(boxBLabel);
+    }
+
+
 
 
     $('#range_agree').on('input', onSliderChange )
@@ -158,7 +165,7 @@ $(document).ready(function () {
    
 
     
-})
+});
 
 
 

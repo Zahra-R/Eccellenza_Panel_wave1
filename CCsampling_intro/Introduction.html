@@ -1,12 +1,12 @@
-{% block title %}
-{{Lexicon.studyInformation}}
-{% endblock %}
+
 
 {% block styles %}
 <link href="{{ static 'global/css/SamplingPilotgeneral.css'}}" rel="stylesheet">
 {% endblock %}
 
-
+{% block title %}
+    {{ Lexicon.studyInformation }}
+{% endblock %}
 
 {% block content %}
 
@@ -24,7 +24,9 @@
 
 {{endif}}
 
-{{Lexicon.instructionUnconditional}}
+{{Lexicon.instructionUnconditional1}}
+{{C.GAME_ROUNDS}}
+{{Lexicon.instructionUnconditional2}}
 
    
 </body>
