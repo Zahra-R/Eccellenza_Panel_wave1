@@ -1,5 +1,5 @@
 {% block title %}
-Information about this study
+{{Lexicon.information_title}}
 {% endblock %}
 
 {% block styles %}
@@ -15,14 +15,11 @@ Information about this study
     <table>
         <tr>
             <td> <input name="dataScience" id="id_dataScience" type="checkbox" class="larger" onchange="checkNext()" /> </td>
-            <td> The use of the data for scientific purposes, and the publication of
-                the results of the study in scientific journals or books, given that the data will be anonymous and that no
-                information about my identity will be disclosed.</td>
+            <td> {{Lexicon.data_consent1}}</td>
         </tr>
         <tr>
             <td><input name="dataTeach" id="id_dataTeach" type="checkbox" class="larger" onchange="checkNext()" /> </td>
-            <td> The use of the data for teaching purposes (courses and lectures for
-                students and professionals subject to professional confidentiality).</td>
+            <td> {{Lexicon.data_consent2}}</td>
         </tr>
     </table>
 
