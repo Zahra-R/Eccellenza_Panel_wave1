@@ -18,10 +18,10 @@ class Lexicon:
     statement_agreement = "<p> Wie sehr stimmen Sie dieser Aussage zu?</p>"
     ccconcern_question = "<p> Wie besorgt sind Sie über den Klimawandel?</p>"
     sampling_instruction = "Bitte lesen Sie die Aussage und beantworten Sie die Fragen."
-    box_a_anti_climate_action = "KASTEN A: Gegen&nbsp;Klimaschutzmaßnahmen"
-    box_a_pro_climate_action = "KASTEN A: Für&nbsp;Klimaschutzmaßnahmen"
-    box_b_anti_climate_action = "KASTEN B: Gegen&nbsp;Klimaschutzmaßnahmen"
-    box_b_pro_climate_action = "KASTEN B: Für&nbsp;Klimaschutzmaßnahmen"
+    box_a_anti_climate_action = "KASTEN A: Gegen&nbsp;Klimaschutz"
+    box_a_pro_climate_action = "KASTEN A: Für&nbsp;Klimaschutz"
+    box_b_anti_climate_action = "KASTEN B: Gegen&nbsp;Klimaschutz"
+    box_b_pro_climate_action = "KASTEN B: Für&nbsp;Klimaschutz"
 
     # boxrating
     box_rating_instruction = "Bitte teilen Sie uns mit, was Sie von den Kästen halten:"
