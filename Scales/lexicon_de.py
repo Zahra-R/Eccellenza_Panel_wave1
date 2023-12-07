@@ -7,7 +7,7 @@ class Lexicon:
     stop = "Stopp"
     yes = "Ja"
     your_decision = "Ihre Entscheidung"
-    not_at_all = "überhaupt nicht"
+    not_at_all = "gar nicht"
     very_much = "sehr stark"
     no_effort = "keinen Aufwand"
     great_deal_of_effort = "grossen Aufwand"
