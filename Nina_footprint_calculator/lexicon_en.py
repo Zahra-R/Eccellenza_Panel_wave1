@@ -9,7 +9,7 @@ class Lexicon:
     regional_3_quarter = 'About three quarters'
     regional_more_than = 'the largest part is regional'
 
-    electricity_label = '<b>This question is about your electricity supply. What does your electricity supply look like?</b>'
+    electricity_label = 'This question is about your electricity supply. What does your electricity supply look like?'
     electricity_D = 'I have green electricity entirely '
     electricity_C = 'I partly have green electricity (mixed)' 
     electricity_B = ' I have a conventional (fossil) supply'

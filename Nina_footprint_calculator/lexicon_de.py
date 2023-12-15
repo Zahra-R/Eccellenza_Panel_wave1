@@ -10,7 +10,7 @@ class Lexicon:
     regional_3_quarter = 'Etwa drei Viertel'
     regional_more_than = 'Der größte Teil stammt aus der Region'
 
-    electricity_label = '<b>Diese Frage bezieht sich auf Ihre Elektrizitätsversorgung. Wie sieht Ihre Stromversorgung aus?</b>'
+    electricity_label = 'Diese Frage bezieht sich auf Ihre Elektrizitätsversorgung. Wie sieht Ihre Stromversorgung aus?'
     electricity_D = 'Ich habe ausschließlich grüne Energie'
     electricity_C = 'Ich habe teilweise grüne Energie (gemischt)' 
     electricity_B = 'Ich habe ausschließlich konventionelle (fossile) Energie'

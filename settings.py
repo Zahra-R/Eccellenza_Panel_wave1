@@ -46,7 +46,7 @@ PARTICIPANT_FIELDS = [
     'reverseBoxes',
     'seenMisinfo',
     'seenMislInfo',
-    'telling_box_label'
+    'telling_box_label',
 
     ## carbon footprint task
     'task_rounds'
