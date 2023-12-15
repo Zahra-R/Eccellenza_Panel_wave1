@@ -1,5 +1,7 @@
 class Lexicon:
 
+    title = ' Behavior '
+    intro_a = ' In this next part, we are collecting information about some of your actual behavior. <br>Please answer as accurately as possible. Thank you in advance!'
     regional_label = ' What percentage of your food is regional (from within your country or region, not imported) ? '
     regional_less_than = 'Less than a quarter'
     regional_quarter= 'About a quarter' 
