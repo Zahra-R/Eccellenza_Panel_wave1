@@ -234,9 +234,7 @@ class Player(BasePlayer):
     crt3 = models.StringField(label=Lexicon.crt3Label)
     crt4 = models.StringField(label=Lexicon.crt4Label)
 
-    # Effort put into completing task
-    ecom1 = make_no_yes(Lexicon.ecom1Label)
-
+  
     ### Demographics
     age = models.IntegerField(
         label=Lexicon.age_label,
@@ -365,12 +363,6 @@ class CRTask(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     
-class EffCompletion(Page):
-    form_model = 'player'
-    form_fields= ['ecom1']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
     
 class Demographics(Page):
     form_model = 'player'
@@ -381,6 +373,8 @@ class Demographics(Page):
         return dict(Lexicon=Lexicon, **which_language)
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
-page_sequence = [IBValues, CCConcern, WVValues, OVTrust, CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, PolOrientation, PITrust, CRTask, EffCompletion, Demographics]
+page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, CCKnowledge, CSTrust, PEfficacy, PolOrientation, PITrust, 
+                 #CRTask, OVTrust, GWNorms, 
+                 Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]

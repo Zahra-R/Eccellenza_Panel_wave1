@@ -19,7 +19,14 @@ SESSION_CONFIGS = [
         name='first_draft_Panel_withSampling',
         app_sequence=['Intro','CCsampling_intro', 'CCsampling', 'Scales'],
         num_demo_participants=5,
-    )
+    ),
+        dict(
+         name='first_draft_NinasPart',
+         #app_sequence=[ 'Nina_survey', 'Nina_carbontask', 'Nina_footprint_calculator', 'Nina_questionnaire'],
+         app_sequence= ['Nina_instructions','Nina_footprint_calculator',  'Nina_carbontask'],
+         num_demo_participants=10,
+     )
+
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
@@ -39,7 +46,11 @@ PARTICIPANT_FIELDS = [
     'reverseBoxes',
     'seenMisinfo',
     'seenMislInfo',
-    'telling_box_label'
+    'telling_box_label',
+
+    ## carbon footprint task
+    'task_rounds'
+
     
     ]
 SESSION_FIELDS = []
