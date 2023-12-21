@@ -25,6 +25,11 @@ SESSION_CONFIGS = [
          #app_sequence=[ 'Nina_survey', 'Nina_carbontask', 'Nina_footprint_calculator', 'Nina_questionnaire'],
          app_sequence= ['Nina_instructions','Nina_footprint_calculator',  'Nina_carbontask'],
          num_demo_participants=10,
+     ),
+        dict(
+         name='first_draft_JessisPart',
+         app_sequence= ['Intro','Jessi_Instructions',  'Jessi_carbonTax', 'Scales'],
+         num_demo_participants=10,
      )
 
 ]
@@ -49,15 +54,17 @@ PARTICIPANT_FIELDS = [
     'telling_box_label',
 
     ## carbon footprint task
-    'task_rounds'
+    'task_rounds',
 
+    # carbonTaxTask
+    'task_rounds_J'
     
     ]
 SESSION_FIELDS = []
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
-LANGUAGE_CODE = 'de'
+LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'USD'

@@ -1,0 +1,77 @@
+
+{
+    "PolicyTable": [
+        [
+            "<b>General/ton</b>", 
+            "<b>$60</b>",
+            "<b> Dividend to citizens</b>",
+            "<b>in 1 year</b>"
+        ],
+        [
+            "<b>Meat & Dairy/ton</b>", 
+            "<b>$120</b>", 
+            "<b>Dividend to citizens</b>",
+            "<b>in 1 year</b>"
+        ],
+        [
+            "<b>Energy/ton</b>", 
+            "<b>$120</b>", 
+            "<b>Dividend to citizens</b>",
+            "<b>in 1 year</b>"
+        ],
+        [
+            "<b>General/ton</b>", 
+            "<b>$60</b>", 
+            "<b>Investment in Carbon Dioxide Removal</b>",
+            "<b>in 1 year</b>"
+        ],
+        [
+            "<b>Energy/ton</b>", 
+            "<b>$60</b>",
+            "<b>Investment in Carbon Dioxide Removal</b>",
+            "<b>in 1 year</b>"
+        ],
+        [
+            "<b>Meat & Dairy/ton</b>", 
+            "<b>$120</b>",
+            "<b>Investment in Carbon Dioxide Removal</b>",
+            "<b>in 1 year</b>"
+        ],
+        [
+            "<b>Meat & Dairy/ton</b>", 
+            "<b>$60</b>",
+            "<b>Dividend to citizens</b>",
+            "<b>in 7 years</b>"
+        ],
+        [
+            "<b>Energy/ton</b>", 
+            "<b>$60</b>",
+            "<b>Dividend to citizens</b>",
+            "<b>in 7 years</b>"
+        ],
+        [
+            "<b>General/ton</b>", 
+            "<b>$120</b>",
+            "<b>Dividend to citizens</b>",
+            "<b>in 7 years</b>"
+        ],
+        [
+            "<b>Meat & Dairy/ton</b>", 
+            "<b>$60</b>",
+            "<b>Investment in Carbon Dioxide Removal</b>",
+            "<b>in 7 years</b>"
+        ],
+        [
+            "<b>General/ton</b>", 
+            "<b>$120</b>", 
+            "<b>Investment in Carbon Dioxide Removal</b>",
+            "<b>in 7 years</b>"
+        ],
+        [
+            "<b>Energy/ton</b>", 
+            "<b>$120</b>",
+            "<b>Investment in Carbon Dioxide Removal</b>",
+            "<b>in 7 years</b"
+        ]
+    ]
+}
