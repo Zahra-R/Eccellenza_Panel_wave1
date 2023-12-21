@@ -49,14 +49,42 @@
     <tr> <th></th>  <th    class="radio-column"> {{Lexicon.very_negative}} </th>  <th class="radio-column" > 2  </th> <th class="radio-column"> 3 </th> <th class="radio-column"  > 4  </th> <th class="radio-column"> 5 </th> <th class="radio-column"> 6 </th>  <th class="radio-column"> {{Lexicon.very_positive}} </th>    </tr>
 
 
-    {{ for field in form }}
+    
+    {{if player.Association1 != ""}}
         <tr>
-            <th style="font-weight:normal;">{{ field.label }}</th>
-            {{ for choice in field }}
+            <th style="font-weight:normal;">{{ player.Association1}}</th>
+            {{ for choice in form.AssociationRating1 }}
                 <td>{{ choice }}</td>
             {{ endfor }}
         </tr>
-    {{ endfor }}
+    {{endif}}
+
+    {{if player.Association2 != ""}}
+    <tr>
+        <th style="font-weight:normal;">{{ player.Association2}}</th>
+        {{ for choice in form.AssociationRating2 }}
+            <td>{{ choice }}</td>
+        {{ endfor }}
+    </tr>
+    {{endif}}
+
+    {{if player.Association3 != ""}}
+    <tr>
+        <th style="font-weight:normal;">{{ player.Association3 }}</th>
+        {{ for choice in form.AssociationRating3 }}
+            <td>{{ choice }}</td>
+        {{ endfor }}
+    </tr>
+    {{endif}}
+
+    {{if player.Association4 != ""}}
+    <tr>
+        <th style="font-weight:normal;">{{ player.Association4 }}</th>
+        {{ for choice in form.AssociationRating4 }}
+            <td>{{ choice }}</td>
+        {{ endfor }}
+    </tr>
+    {{endif}}
 </table>
 
 
@@ -68,3 +96,8 @@
 
 
 {% endblock %}
+
+{{ formfield_errors 'AssociationRating1' }}
+{{ formfield_errors 'AssociationRating2' }}
+{{ formfield_errors 'AssociationRating3' }}
+{{ formfield_errors 'AssociationRating4' }}
