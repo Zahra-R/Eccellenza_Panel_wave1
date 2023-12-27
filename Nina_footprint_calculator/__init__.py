@@ -68,23 +68,7 @@ class Player(BasePlayer):
         ],
     )
     
-    footprint_food_dairy = models.StringField(
-        label = Lexicon.food_dairy_label,
-        choices=[ 
-            Lexicon.food_dairy_less_than_A ,Lexicon.food_dairy_A_to_B,
-            Lexicon.food_dairy_B_to_C ,Lexicon.food_dairy_C_to_D ,
-            Lexicon.food_dairy_D_to_E ,Lexicon.food_dairy_more_than_E,
-        ],
-    )
 
-    footprint_food_meat = models.StringField(
-        label = Lexicon.food_meat_label,
-        choices=[ 
-            Lexicon.food_meat_less_than_A ,Lexicon.food_meat_A_to_B,
-            Lexicon.food_meat_B_to_C ,Lexicon.food_meat_C_to_D ,
-            Lexicon.food_meat_D_to_E ,Lexicon.food_meat_more_than_E,
-        ],
-    )
     
     footprint_flying_short = models.IntegerField(
         label= Lexicon.flying_short_label,
