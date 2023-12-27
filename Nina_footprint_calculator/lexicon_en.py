@@ -15,6 +15,22 @@ class Lexicon:
     electricity_B = ' I have a conventional (fossil) supply'
     electricity_A = 'I don,t know'
 
+    food_overall_text = ' In the last month, how many times did you eat the following food items...'
+    food_overall_label1 = 'Rind'
+    food_overall_label2 = 'Lamm, Schaf oder Hammelfleisch'
+    food_overall_label3 = 'Schweinefleisch'
+    food_overall_label4 = 'Geflügel (z.B. Huhn)'
+    food_overall_label5 = 'Fisch'
+    food_overall_label6 = 'Milchprodukte (z. B. Milch oder Käse)'
+
+    food_overall_A = 'Never'
+    food_overall_B = 'Once a month'
+    food_overall_C= '2-3 times per month'
+    food_overall_D = 'Once a week'
+    food_overall_E = '2-3 times per week'
+    food_overall_F = '4-6 times per week'
+    food_overall_G = 'Once a day'
+    food_overall_H = '2 or more times per day'
 
     food_dairy_label = 'How often do you consume milk and dairy products such as joghurt, cheese, butter, or cream?'
     food_dairy_less_than_A = 'less than once per week or never '

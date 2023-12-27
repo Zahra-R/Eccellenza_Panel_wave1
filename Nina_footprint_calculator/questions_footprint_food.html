@@ -1,0 +1,45 @@
+{% block styles %}
+    <link href="{{ static 'global/css/Carbontask.css'}}" rel="stylesheet">
+{% endblock %}
+
+{{ block title }} {{Lexicon.title}} {{ endblock }}
+{{ block content }}
+
+{{Lexicon.intro_a}}
+<br>
+<br>
+
+{{ Lexicon.food_overall_text}}
+<br>
+<style>  
+    table.radiotable th, table.radiotable td {
+        padding: 12px;
+        text-align: center;
+        max-width: none; /* No max-width for the entire table */
+    }
+    /* Left-align the first column */
+    table.radiotable th:first-child, table.radiotable td:first-child {
+        text-align: left;
+    }
+    /* Alternating row colors */
+    table.radiotable tr:nth-child(even) {
+        background-color: #c0e3e0;
+    }
+</style>
+<br>
+<table class="radiotable">
+    <tr> <th></th> <th    class="radio-column">  {{ Lexicon.food_overall_A }} </th> <th class="radio-column" > {{ Lexicon.food_overall_B }} </th>  <th class="radio-column">  {{ Lexicon.food_overall_C }}</th> <th    class="radio-column">  {{ Lexicon.food_overall_D }} </th> <th    class="radio-column">  {{ Lexicon.food_overall_E }} </th> <th    class="radio-column">  {{ Lexicon.food_overall_F }} </th> <th    class="radio-column">  {{ Lexicon.food_overall_G }} </th>  <th    class="radio-column">  {{ Lexicon.food_overall_H }} </th> <th></th></tr>
+
+   
+    {{ for field in form }}
+    <tr>
+        <th style="font-weight:normal;">{{ field.label }}</th>
+        {{ for choice in field }}
+            <td>{{ choice }}</td>
+        {{ endfor }}
+    </tr>
+    {{ endfor }}
+</table>
+
+{{ next_button }}
+{{ endblock }}

@@ -16,6 +16,22 @@ class Lexicon:
     electricity_B = 'Ich habe ausschließlich konventionelle (fossile) Energie'
     electricity_A = 'Ich weiß es nicht'
 
+    food_overall_text = 'Wie oft konsumieren Sie im letzten Monat die folgenden Lebensmittel...'
+    food_overall_label1 = 'Rind'
+    food_overall_label2 = 'Lamm, Schaf oder Hammelfleisch'
+    food_overall_label3 = 'Schweinefleisch'
+    food_overall_label4 = 'Geflügel (z.B. Huhn)'
+    food_overall_label5 = 'Fisch'
+    food_overall_label6 = 'Milchprodukte (z. B. Milch oder Käse)'
+
+    food_overall_A = 'Nie'
+    food_overall_B = 'Einmal im Monat'
+    food_overall_C= '2-3 Mal pro Monat'
+    food_overall_D = 'Einmal in der Woche'
+    food_overall_E = '2-3 Mal pro Woche'
+    food_overall_F = '4-6 Mal pro Woche'
+    food_overall_G = 'Einmal täglich'
+    food_overall_H = '2 oder mehr Mal täglich'
 
     food_dairy_label = '<b>Wie oft konsumieren Sie Milchprodukte wie Joghurt, Käse, Butter oder Sahne?</b>'
     food_dairy_less_than_A = 'Weniger als einmal pro Woche oder nie'

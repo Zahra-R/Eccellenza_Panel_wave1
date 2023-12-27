@@ -23,7 +23,7 @@ SESSION_CONFIGS = [
         dict(
          name='first_draft_NinasPart',
          #app_sequence=[ 'Nina_survey', 'Nina_carbontask', 'Nina_footprint_calculator', 'Nina_questionnaire'],
-         app_sequence= ['Nina_instructions','Nina_footprint_calculator',  'Nina_carbontask'],
+         app_sequence= ['Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask'],
          num_demo_participants=10,
      )
 
