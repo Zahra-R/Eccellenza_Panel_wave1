@@ -1,0 +1,77 @@
+
+{
+    "PolicyTable": [
+        [
+            "<b>Allgemein/Tonne</b>", 
+            "<b>60€</b>",
+            "<b>Auszahlung an Bürger</b>",
+            "<b>in 1 Jahr</b>"
+        ],
+        [
+            "<b>Fleisch & Milchprodukte/Tonne</b>", 
+            "<b>120€</b>", 
+            "<b>Auszahlung an Bürger</b>",
+            "<b>in 1 Jahr</b>"
+        ],
+        [
+            "<b>Energie/Tonne</b>", 
+            "<b>120€</b>", 
+            "<b>Auszahlung an Bürger</b>",
+            "<b>in 1 Jahr</b>"
+        ],
+        [
+            "<b>Allgemein/Tonne</b>", 
+            "<b>60€</b>", 
+            "<b>Investition in Carbon Dioxide Removal</b>",
+            "<b>in 1 Jahr</b>"
+        ],
+        [
+            "<b>Energie/Tonne</b>", 
+            "<b>60€</b>",
+            "<b>Investition in Carbon Dioxide Removal</b>",
+            "<b>in 1 Jahr</b>"
+        ],
+        [
+            "<b>Fleisch & Milchprodukte/Tonne</b>", 
+            "<b>120€</b>",
+            "<b>Investition in Carbon Dioxide Removal</b>",
+            "<b>in 1 Jahr</b>"
+        ],
+        [
+            "<b>Fleisch & Milchprodukte/Tonne</b>", 
+            "<b>60€</b>",
+            "<b>Auszahlung an Bürger</b>",
+            "<b>in 7 Jahren</b>"
+        ],
+        [
+            "<b>Energie/Tonne</b>", 
+            "<b>60€</b>",
+            "<b>Auszahlung an Bürger</b>",
+            "<b>in 7 Jahren</b>"
+        ],
+        [
+            "<b>Allgemein/Tonne</b>", 
+            "<b>120€</b>",
+            "<b>Auszahlung an Bürger/b>",
+            "<b>in 7 Jahren</b>"
+        ],
+        [
+            "<b>Fleisch & Milchprodukte/Tonne</b>", 
+            "<b>60€</b>",
+            "<b>Investition in Carbon Dioxide Removal</b>",
+            "<b>in 7 Jahren</b>"
+        ],
+        [
+            "<b>Allgemein/Tonne</b>", 
+            "<b>120€</b>", 
+            "<b>Investition in Carbon Dioxide Removal</b>",
+            "<b>in 7 Jahren</b>"
+        ],
+        [
+            "<b>Energie/Tonne</b>", 
+            "<b>120€</b>",
+            "<b>Investition in Carbon Dioxide Removal</b>",
+            "<b>in 7 Jahren</b"
+        ]
+    ]
+}

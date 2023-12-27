@@ -25,6 +25,11 @@ SESSION_CONFIGS = [
          #app_sequence=[ 'Nina_survey', 'Nina_carbontask', 'Nina_footprint_calculator', 'Nina_questionnaire'],
          app_sequence= ['Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask'],
          num_demo_participants=10,
+     ),
+        dict(
+         name='first_draft_JessisPart',
+         app_sequence= ['Intro','Jessi_Instructions',  'Jessi_carbonTax', 'Scales'],
+         num_demo_participants=10,
      )
 
 ]
@@ -49,8 +54,10 @@ PARTICIPANT_FIELDS = [
     'telling_box_label',
 
     ## carbon footprint task
-    'task_rounds'
+    'task_rounds',
 
+    # carbonTaxTask
+    'task_rounds_J'
     
     ]
 SESSION_FIELDS = []

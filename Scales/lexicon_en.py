@@ -141,10 +141,7 @@ class Lexicon:
     crt3Label = "Emily's father has three daughters. The first two are named April and May. What is the third daughter's name?"
     crt4Label = "How many cubic feet of dirt are there in a hole that is 3' deep x 3' wide x 3' long?)."
     
-    # Trust in official version of events from Eurobarometer / Lantian et al 2016  
-    ecom_title = "Hand on heart!"
-    ecom_header = "Directly asking: How much effort did you put into completing this task? Did you simply click through the options or did you think about your answers? </br></br><i>Please answer honestly, this will not affect your compensation or your ability to complete the study. We need to know this to analyze the data properly.</i>"
-    ecom1Label = "You can use my answers for your analysis."
+
 
     ### Demographics
     demographics_title = "Personal data"

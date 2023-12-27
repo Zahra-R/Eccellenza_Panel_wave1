@@ -139,11 +139,6 @@ class Lexicon:
     crt3Label = "Der Vater von Emily hat drei Töchter. Die ersten beiden heißen Jana und Janina. Wie heißt die dritte Tochter?"
     crt4Label = "Wie viele Kubikmeter Erde befinden sich in einem Loch, das 3 Meter tief, 3 Meter breit und 3 Meter lang ist?"
 
-    # Trust in official version of events from Eurobarometer / Lantian et al 2016
-    ecom_title = "Hand aufs Herz!"
-    ecom_header = "Direkte Frage: Wie viel Mühe haben Sie darauf verwendet, diese Aufgabe zu erledigen? Haben Sie einfach durch die Optionen geklickt oder haben Sie über Ihre Antworten nachgedacht? </br></br><i>Bitte antworten Sie ehrlich, dies wird sich nicht auf Ihre Entschädigung oder Ihre Fähigkeit zur Studienteilnahme auswirken. Wir müssen dies wissen, um die Daten ordnungsgemäß analysieren zu können.</i>"
-    ecom1Label = "Sie können meine Antworten für Ihre Analyse verwenden."
-
     ### Demographics
     demographics_title = "Persönliche Daten"
     demographics_header = "Bitte geben Sie die folgenden Informationen über sich ein."
