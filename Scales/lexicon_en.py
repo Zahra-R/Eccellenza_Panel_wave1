@@ -140,6 +140,70 @@ class Lexicon:
     crt2Label = "A farmer had 15 sheep and all but 8 died. How many are left?"
     crt3Label = "Emily's father has three daughters. The first two are named April and May. What is the third daughter's name?"
     crt4Label = "How many cubic feet of dirt are there in a hole that is 3' deep x 3' wide x 3' long?)."
+
+    # Knowledge Question from Allianz Climate Literacy Report
+    know_dontknow = "I don't know."
+
+    know_1qu = "What is the COP?" ## This is maybe too easy given that the whole study is about CC???
+    know_1a = "UN initiative for distributing funds to reduce the impact of climate change on poverty."
+    know_1b = "An annual formal meeting to discuss climate change and establish mitigation actions"
+    know_1c = "An EU initiative against organized and war crimes" ## a potent Greenhouse Gas 
+    
+    know_2qu = "What does Net-Zero mean?"
+    know_2a = "Monetary strategy of increasing interest rate to fight inflation."
+    know_2b = "No greenhouse gas emission by a specific date, typically 2050"
+    know_2c = "Carbon emission neutrality, stabilization of greenhouse gas concentrations in the atmosphere"
+    
+    know_3qu = "The Intergovernmental Panel on Climate Change (IPCC) plays an important role in global climate policy. Which one?"
+    know_3a = "Providing objective scientific information relevant to understanding climate change"
+    know_3b = "Deciding on global climate policies, particularly setting the global carbon prize"
+    know_3c = "Host of the UN climate justice court which arbitrates climate disputes between states"
+    
+    know_4qu = "What is the carbon market?"
+    know_4a = "The supply channel of the EU backed gas-buying cartel that aims to supply affordable natural gas to EU countries struggling to get supply because of the war in Ukraine."
+    know_4b = "A trading system through which emitters may buy or sell units of greenhouse-gas emission allowances to meet national restrictions on total emissions."
+    know_4c = "An online marketplace where you can buy recycled carbon fiber and carbon black."
+    
+
+    ## I suggest a modification of tis question:
+    "How long does CO2 stay in the atmosphere"
+    # a) 10 years
+    # b) up to 1000 years
+    # c) more than 5000 years 
+    know_5qu = "Rising temperatures pose no existential threat. Even if the rise exceeds 3°C, humans and nature can adapt. Do you agree with this statement?"
+    know_5a = "yes, change is the only constant - this applies to climate as well."
+    know_5b = "no, even at a temperature rise of more than 1.5°C irreparable damages loom, with unforeseen economic and social consequences."
+
+    
+    ## I suggest a modification of this question
+    know_6qu = "Climate change cannot be stopped. Average temperatures will continue to increase in the near future. The only thing we can possible do is to limit the increase to 1.5°C."
+    # Which of the following describes the greenhouse gas effect?
+    know_6a = "Deforestation and plastic pollution cause a collapse of many ecosystems. The increasing loss of biodiversity and the loss of flora and fauna in the wild is called the greenhouse gas effect."
+    know_6b = "Greenhouse gasses cause air pollution. They lead to more fine particulars and more fine dust which in turn decreases the ventilation. Without the circulation of fresh air, the earth gets increasingly warmer. "
+    know_6c = "Excess greenhouse gases accumulate in the atmosphere. Because of their molecular structure, the infrared radiation from the earth is reflected and is re-radiated to the earth. This way, heat is trapped."
+    
+
+    know_7qu = "If the world manages to stabilize CO2-emissions levels, damaging consequences of climate change can be avoided."
+    know_7a = "Yes, key is to break the past trend of continuous increases of annual emissions"
+    know_7b = "No, we must reduce annual emissions drastically below zero, thus actively extracting and storing CO2 from the atmosphere."
+    know_7c = ""
+    
+
+    know_8qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" ### double check if still true in 2024!!!!
+    know_8a = "6 years"
+    know_8b = "11 years"
+    know_8c = "24 years"
+    
+
+    know_9qu = "Which country/region causes the highest absolute CO2-emissions per year?"
+    know_9a = "China"
+    know_9b = "USA"
+    know_9c = "India"
+
+    know_10qu = "Which of the four countries causes the highest per-capita CO2-emissions per year?"
+    know_10a = "China"
+    know_10b = "USA"
+    know_10c = "EU"
     
 
 
