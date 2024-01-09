@@ -27,7 +27,7 @@ which_language[LANGUAGE_CODE[:2]] = True
 class C(BaseConstants):
     NAME_IN_URL = 'SAMPLING'
     PLAYERS_PER_GROUP = None
-    NUM_ROUNDS = 4
+    NUM_ROUNDS = 5
     if LANGUAGE_CODE == 'de':
         misinfofile = open('CCsampling/ClimateMisinfo_de.json')
         infofile = open('CCsampling/ClimateInfo_de.json')

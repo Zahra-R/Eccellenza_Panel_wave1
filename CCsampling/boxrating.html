@@ -24,7 +24,7 @@ label{
 <div style="padding-top:2vh; text-align: center; padding-left:1vw;">
       <table style="text-align: center; margin-left: auto; margin-right:auto">
          <tr>
-            {{Lexicon.box_rating_liking_A}}
+            <label for="id_boxlikingInfo"> {{Lexicon.box_rating_liking_A}} </label>
             </td>
          </tr>
          <tr>
@@ -37,20 +37,22 @@ label{
       
          <tr> 
             <td colspan="11"> 
-               {{Lexicon.box_rating_would_follow_A}}
+               <label for="id_boxrecommendationInfo">  {{Lexicon.box_rating_would_follow_A}} </label>
             </td>
          </tr>
+
          <tr>
             <td> {{Lexicon.very_unlikely}} &nbsp;</td>
-             {{ for choice in form.boxrecommendationInfo }}
+              {{ for choice in form.boxrecommendationInfo }}
                 <td> {{ choice }} </td>
              {{ endfor }}
              <td> &nbsp; {{Lexicon.very_likely}} </td>
          </tr>
+
          {{if round_number == C.NUM_ROUNDS}}
          <tr >
             <td colspan="11"> 
-            {{Lexicon.box_rating_polOrientation_A}}
+               <label for="id_boxpoliticsInfo"> {{Lexicon.box_rating_polOrientation_A}} </label>
             </td>
          </tr>
          <tr>
@@ -77,12 +79,12 @@ label{
    <div style="padding-top:2vh; text-align: center; padding-left:1vw;">
       <table style="text-align: center; margin-left: auto; margin-right:auto">
          <tr>
-            {{Lexicon.box_rating_liking_A}}
+            <label for="id_boxlikingMisinfo"> {{Lexicon.box_rating_liking_B}} </label>
             </td>
          </tr>
          <tr>
             <td> {{Lexicon.not_at_all}} &nbsp;</td>
-            {{ for choice in form.boxlikingInfo }}
+            {{ for choice in form.boxlikingMisinfo }}
                <td> {{ choice }} </td>
             {{ endfor }}
             <td> &nbsp; {{Lexicon.very_much}} </td>
@@ -90,12 +92,12 @@ label{
       
          <tr> 
             <td colspan="11"> 
-               {{Lexicon.box_rating_would_follow_A}}
+              <label for="id_boxrecommendationMisinfo">  {{Lexicon.box_rating_would_follow_B}} </label>
             </td>
          </tr>
          <tr>
             <td> {{Lexicon.very_unlikely}} &nbsp;</td>
-             {{ for choice in form.boxrecommendationInfo }}
+             {{ for choice in form.boxrecommendationMisinfo }}
                 <td> {{ choice }} </td>
              {{ endfor }}
              <td> &nbsp; {{Lexicon.very_likely}} </td>
@@ -103,12 +105,12 @@ label{
          {{if round_number == C.NUM_ROUNDS}}
          <tr >
             <td colspan="11"> 
-            {{Lexicon.box_rating_polOrientation_A}}
+               <label for="id_boxpoliticsMisinfo"> {{Lexicon.box_rating_polOrientation_B}} </label>
             </td>
          </tr>
          <tr>
             <td> {{Lexicon.very_liberal}} &nbsp;</td>
-            {{ for choice in form.boxpoliticsInfo }}
+            {{ for choice in form.boxpoliticsMisinfo }}
                <td> {{ choice }} </td>
             {{ endfor }}
             <td> &nbsp; {{Lexicon.very_conservative}} </td>

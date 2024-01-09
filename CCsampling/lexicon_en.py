@@ -12,11 +12,11 @@ class Lexicon:
     next_statement_which_box = "From which box do you want to read the next statement?"
     round = "Round"
     box = "Box"
-    box_a = "<span> Box A </span>"
-    box_b = "<span> Box B</span>"
+    box_a = "Box A"
+    box_b = "Box B"
     out_of = "out of"
-    statement_agreement = "<p> How much do you agree with this statement?</p>"
-    ccconcern_question = "<p> How concerned are you about climate change?</p>"
+    statement_agreement = " How much do you agree with this statement?"
+    ccconcern_question = "How concerned are you about climate change?"
     sampling_instruction = "Plase read the statement and answer the questions."
     box_a_anti_climate_action = "BOX A: Anti&nbsp;Climate Action"
     box_a_pro_climate_action = "BOX A: Pro&nbsp;Climate Action"
@@ -25,12 +25,12 @@ class Lexicon:
     
     # boxrating
     box_rating_instruction = "Plase tell us what you think about the boxes: "
-    box_rating_liking_A = '<label for="id_boxlikingInfo">How much do you like Box <span style="font-size: larger;"> A</span>?</label>'
-    box_rating_liking_B = '<label for="id_boxlikingInfo">How much do you like Box <span style="font-size: larger;"> B</span>?</label>'
-    box_rating_would_follow_A = '<label  for="id_boxrecommendationInfo">Would you follow Box <span style="font-size: larger;"> A</span> if it were its own social media channel?</label>'
-    box_rating_would_follow_B = '<label  for="id_boxrecommendationInfo">Would you follow Box <span style="font-size: larger;"> B</span> if it were its own social media channel?</label>'
-    box_rating_polOrientation_A = '<label for="id_boxpoliticsInfo"> What do you think is the political orientation of Box <span style="font-size: larger;"> A</span>? </label>'
-    box_rating_polOrientation_B = '<label for="id_boxpoliticsInfo"> What do you think is the political orientation of Box <span style="font-size: larger;"> B</span>? </label>'
+    box_rating_liking_A = 'How much do you like Box <span style="font-size: larger;"> A</span>?'
+    box_rating_liking_B = 'How much do you like Box <span style="font-size: larger;"> B</span>?'
+    box_rating_would_follow_A = 'Would you follow Box <span style="font-size: larger;"> A</span> if it were its own social media channel?'
+    box_rating_would_follow_B = 'Would you follow Box <span style="font-size: larger;"> B</span> if it were its own social media channel?'
+    box_rating_polOrientation_A = 'What do you think is the political orientation of Box <span style="font-size: larger;"> A</span>? '
+    box_rating_polOrientation_B = 'What do you think is the political orientation of Box <span style="font-size: larger;"> B</span>? '
 
     # conclude
     conclude_title = "Please take some time to read through this page."

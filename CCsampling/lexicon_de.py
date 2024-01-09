@@ -13,10 +13,10 @@ class Lexicon:
     round = "Runde"
     out_of = "von"
     box = "Kasten"
-    box_a = "<span> Kasten A </span>"
-    box_b = "<span> Kasten B</span>"
-    statement_agreement = "<p> Wie sehr stimmen Sie dieser Aussage zu?</p>"
-    ccconcern_question = "<p> Wie besorgt sind Sie über den Klimawandel?</p>"
+    box_a = " Kasten A"
+    box_b = "Kasten B"
+    statement_agreement = "Wie sehr stimmen Sie dieser Aussage zu?"
+    ccconcern_question = "Wie besorgt sind Sie über den Klimawandel?"
     sampling_instruction = "Bitte lesen Sie die Aussage und beantworten Sie die Fragen."
     box_a_anti_climate_action = "KASTEN A: Gegen&nbsp;Klimaschutz"
     box_a_pro_climate_action = "KASTEN A: Für&nbsp;Klimaschutz"
@@ -25,12 +25,12 @@ class Lexicon:
 
     # boxrating
     box_rating_instruction = "Bitte teilen Sie uns mit, was Sie von den Kästen halten:"
-    box_rating_liking_A = '<label for="id_boxlikingInfo">Wie sehr mögen Sie Kasten <span style="font-size: larger;">A</span>?</label>'
-    box_rating_liking_B = '<label for="id_boxlikingInfo">Wie sehr mögen Sie Kasten <span style="font-size: larger;">B</span>?</label>'
-    box_rating_would_follow_A = '<label  for="id_boxrecommendationInfo">Würden Sie Kasten <span style="font-size: larger;">A</span> folgen, wenn es ein eigener Social-Media-Kanal wäre?</label>'
-    box_rating_would_follow_B = '<label  for="id_boxrecommendationInfo">Würden Sie Kasten <span style="font-size: larger;">B</span> folgen, wenn es ein eigener Social-Media-Kanal wäre?</label>'
-    box_rating_polOrientation_A = '<label for="id_boxpoliticsInfo">Was glauben Sie, welche politische Ausrichtung hat Kasten <span style="font-size: larger;">A</span>?</label>'
-    box_rating_polOrientation_B = '<label for="id_boxpoliticsInfo">Was glauben Sie, welche politische Ausrichtung hat Kasten <span style="font-size: larger;">B</span>?</label>'
+    box_rating_liking_A = 'Wie sehr mögen Sie Kasten <span style="font-size: larger;">A</span>?'
+    box_rating_liking_B = 'Wie sehr mögen Sie Kasten <span style="font-size: larger;">B</span>?'
+    box_rating_would_follow_A = 'Würden Sie Kasten <span style="font-size: larger;">A</span> folgen, wenn es ein eigener Social-Media-Kanal wäre?'
+    box_rating_would_follow_B = 'Würden Sie Kasten <span style="font-size: larger;">B</span> folgen, wenn es ein eigener Social-Media-Kanal wäre?'
+    box_rating_polOrientation_A = 'Was glauben Sie, welche politische Ausrichtung hat Kasten <span style="font-size: larger;">A</span>?'
+    box_rating_polOrientation_B = 'Was glauben Sie, welche politische Ausrichtung hat Kasten <span style="font-size: larger;">B</span>?'
 
     # conclude
     conclude_title = "Bitte nehmen Sie sich Zeit, um diese Seite zu lesen."

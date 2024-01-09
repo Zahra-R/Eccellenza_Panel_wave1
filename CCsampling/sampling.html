@@ -23,9 +23,9 @@
 
             <tr style="border-color: white;">
                 <td style="text-align: center;"><button  type="button"  id="abtn" value="i" onclick="statement.showRoundText(boxname = this.id, infoType = this.value)"
-                    class="choiceButton" disabled> {{Lexicon.box_a}} </button></td>
+                    class="choiceButton" disabled> <span> {{Lexicon.box_a}}  </span> </button></td>
                 <td style="text-align: center;"><button type="button"  id="bbtn" value="m" onclick="statement.showRoundText(boxname =this.id, infoType = this.value)"
-                    class="  choiceButton" disabled> {{Lexicon.box_b}} </button></td>
+                    class="  choiceButton" disabled> <span> {{Lexicon.box_b}}  </span> </button></td>
             </tr>
         </tbody>
     </table> </div>
@@ -35,7 +35,7 @@
 <div id="rate_statement" style="display:none; opacity:0;">
 
     <div class="slidecontainer">
-        {{Lexicon.statement_agreement}}
+       <p> {{Lexicon.statement_agreement}} </p> 
         <table style="width:100%">
             <tr>
                 <td  class="rangelabel"  style="width:20%"> {{Lexicon.not_at_all}}  </td>
@@ -49,7 +49,7 @@
     </div>
 
     <div class="slidecontainer">
-        {{Lexicon.ccconcern_question}}
+       <p>{{Lexicon.ccconcern_question}} </p> 
         <table style="width:100%">
             <tr>
                 <td class="rangelabel" style="width:20%"> {{Lexicon.not_at_all}}  </td>
@@ -148,8 +148,8 @@ $(document).ready(function () {
         boxALabel = "{{ Lexicon.box_a_anti_climate_action }}";
         boxBLabel = "{{ Lexicon.box_b_pro_climate_action }}";
     } else {
-        boxALabel = "{{ Lexicon.box_a_pro_climate_action }}";
-        boxBLabel = "{{ Lexicon.box_b_anti_climate_action }}";
+        boxALabel = "<span>   {{ Lexicon.box_a_pro_climate_action }}  </span> ";
+        boxBLabel = "<span>   {{ Lexicon.box_b_anti_climate_action }}  </span>  ";
     }
 
     if (tellingLabel == "True") {
