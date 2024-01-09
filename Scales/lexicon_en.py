@@ -166,7 +166,7 @@ class Lexicon:
     
 
     ## I suggest a modification of tis question:
-    "How long does CO2 stay in the atmosphere"
+    # "How long does CO2 stay in the atmosphere"
     # a) 10 years
     # b) up to 1000 years
     # c) more than 5000 years 
