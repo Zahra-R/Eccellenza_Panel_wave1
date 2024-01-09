@@ -61,20 +61,13 @@ class Player(BasePlayer):
 
 
 # PAGES
-
-
 class instructions_intro(Page):
     form_model = 'player'
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
 
 class task_example(Page):
-    form_model = 'player'
-    def vars_for_template(player: Player):
-        example_pic = C.example_pic
-        return {
-            'example_pic ': example_pic
-        }      
+    form_model = 'player'  
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
