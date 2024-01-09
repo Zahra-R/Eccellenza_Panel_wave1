@@ -30,10 +30,33 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
     pass
 
+ # functions to generate education and party choices based on language
+def make_options8(label):
+        return models.StringField(
+            choices=[    
+            Lexicon.food_overall_A,
+            Lexicon.food_overall_B,
+            Lexicon.food_overall_C,
+            Lexicon.food_overall_D,
+            Lexicon.food_overall_E,
+            Lexicon.food_overall_F,
+            Lexicon.food_overall_G,
+            Lexicon.food_overall_H],
+            label=label,
+            widget=widgets.RadioSelect,
+            )
+
+    
 class Player(BasePlayer):
 
-      
-    # questionnaire
+
+    footprint_food_overall1 = make_options8(Lexicon.food_overall_label1)
+    footprint_food_overall2 = make_options8(Lexicon.food_overall_label2)
+    footprint_food_overall3 = make_options8(Lexicon.food_overall_label3)
+    footprint_food_overall4 = make_options8(Lexicon.food_overall_label4)
+    footprint_food_overall5 = make_options8(Lexicon.food_overall_label5)
+
+
     footprint_regional = models.StringField(
         label = Lexicon.regional_label,
         choices=[
@@ -45,23 +68,8 @@ class Player(BasePlayer):
         ],
     )
     
-    footprint_food_dairy = models.StringField(
-        label = Lexicon.food_dairy_label,
-        choices=[ 
-            Lexicon.food_dairy_less_than_A ,Lexicon.food_dairy_A_to_B,
-            Lexicon.food_dairy_B_to_C ,Lexicon.food_dairy_C_to_D ,
-            Lexicon.food_dairy_D_to_E ,Lexicon.food_dairy_more_than_E,
-        ],
-    )
 
-    footprint_food_meat = models.StringField(
-        label = Lexicon.food_meat_label,
-        choices=[ 
-            Lexicon.food_meat_less_than_A ,Lexicon.food_meat_A_to_B,
-            Lexicon.food_meat_B_to_C ,Lexicon.food_meat_C_to_D ,
-            Lexicon.food_meat_D_to_E ,Lexicon.food_meat_more_than_E,
-        ],
-    )
+    
     footprint_flying_short = models.IntegerField(
         label= Lexicon.flying_short_label,
         min=0, max= 300
@@ -120,7 +128,18 @@ class Player(BasePlayer):
 class questions_footprint_1(Page):
     form_model = 'player'
     form_fields = [ 'footprint_commute_car' ,'footprint_commute_car_type', 'footprint_commute_pt', 
-                   'footprint_food_dairy', 'footprint_food_meat', 'footprint_regional'
+                    'footprint_regional'
+                #  , 'footprint_food_dairy', 'footprint_food_meat'
+                  ]
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
+    
+class questions_footprint_food(Page):
+    form_model = 'player'
+    form_fields = [ 'footprint_food_overall1' ,'footprint_food_overall2', 'footprint_food_overall3', 
+                   'footprint_food_overall4',  'footprint_food_overall5'
+              
                   ]
     @staticmethod
     def vars_for_template(player: Player):
@@ -137,7 +156,7 @@ class questions_footprint_2(Page):
 
 # Page sequence
 page_sequence = [
-    questions_footprint_1, questions_footprint_2
+    questions_footprint_food, questions_footprint_1, questions_footprint_2
     
 ]
 

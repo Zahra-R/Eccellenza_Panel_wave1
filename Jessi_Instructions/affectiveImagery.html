@@ -56,3 +56,17 @@
 </div> 
 
 {% endblock %}
+{{ formfield_errors 'Association2' }}
+{{ formfield_errors 'Association3' }}
+{{ formfield_errors 'Association4' }}
+
+
+{% block scripts %}
+<script>
+
+forminputs[1].required = false
+
+</script>
+
+
+{% endblock %}

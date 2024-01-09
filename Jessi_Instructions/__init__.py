@@ -35,11 +35,10 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     # FUNCTIONS
     def make_field_association(label):
-        return models.StringField(
-        label=label
-    )
+        return models.StringField(label=label, blank=True )
+    
     #Affective Imagery text fields
-    Association1 = make_field_association(Lexicon.Association1)
+    Association1 = models.StringField(label=Lexicon.Association1 )
     Association2 = make_field_association(Lexicon.Association2)
     Association3 = make_field_association(Lexicon.Association3)
     Association4 = make_field_association(Lexicon.Association4)
@@ -50,6 +49,7 @@ class Player(BasePlayer):
                  ['5', '5'], ['6', '6'] , ['7', 'Very positive (7)']],
         label=label,
         widget=widgets.RadioSelectHorizontal, 
+        blank = True
     )
     #Affective Imagery Rating fields
     AssociationRating1 = make_field_associationRating('Here should be the association')
@@ -89,7 +89,14 @@ class ratingAffectiveImagery (Page):
     form_model = 'player'
     form_fields = ['AssociationRating1', 'AssociationRating2', 'AssociationRating3', 'AssociationRating4']
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        return{
+            'Lexicon': Lexicon,
+            'which_language': which_language,
+            'ass1': player.Association1,
+            'ass2': player.Association2,
+            'ass3': player.Association3,
+            'ass4': player.Association4,   
+        } 
 
 class slider(Page):
     form_model = 'player'
