@@ -50,19 +50,21 @@ class Lexicon:
     cce_title = "Attitudes about Climate Change"
     cce_header = "When I think of Climate Change I feel..."
     cce1Label = "Anger"
-    cce2Label = "Fear/Worry"
+    cce2Label = "Fear"
     cce3Label = "Sadness"
     cce4Label = "Joy"
     cce5Label = "Curiosity"
     cce6Label = "Hope"
 
     ### Injunctive / descriptive norms for global warming Goldberg et al
+    ##OUT
     gwn_title = "Attitudes about Climate Change"
     gwn_header = "What stance do people around you have towards climate change?"
     gwn1Label = "How much of an effort do your family and friends make to reduce global warming?"
     gwn2Label = "How important is it to your family and friends that you take action to reduce global warming?"
 
     ### Climate Change Impact / Consequence Knowledge van der Linden 
+    ##OUT see different items below
     cck_title = "Climate Change Knowledge"
     cck_header = "Please indicate whether each of the following is likely to increase, decrease or not change at all as a result of climate change."
     cck1Label = "Global sea level"
@@ -80,6 +82,7 @@ class Lexicon:
     cck13Label = "Global fresh water supply"
 
     # (Dis)trust in Climate Science Sarathchandra & Haltinner
+    ##OUT
     cst_title = "Opinion on Climate Science"
     cst_header = "How much do you agree with the following statements?"
     cst1Label = "Climate scientists do not have enough data to know that human-caused climate change is happening."
@@ -90,6 +93,7 @@ class Lexicon:
     cst6Label = "Climate scientists can’t be trusted."
 
     # Personal efficacy Leiserowitz et al, 2010
+    #nina rechecks source and items
     pe_title = "Attitudes about Climate Change"
     pe_header = "How much do you agree with the following statements?"
     pe1Label = "The actions of a single individual won't make any difference in climate change."
@@ -97,6 +101,7 @@ class Lexicon:
     pe3Label = "Individual actions will influence others to behave in ways that mitigate the effects of global warming."
     
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
+    ## TBD kevin tam
     wvv_title = "How do you see the world?"
     wvv_header = "How much do you agree with the following statements?"
     wvv1Label = "Our society would be better off if the distribution of wealth was more equal."
@@ -129,11 +134,13 @@ class Lexicon:
     pit4Label = "The media"
 
     # Trust in official version of events from Eurobarometer / Lantian et al 2016  
+    ##OUT
     ovt_title = "Trust in the 'offical version' of events"
     ovt_header = "Some political and social events are debated (for example 09/11 attacks, the death of Lady Diana, the assassination of John F. Kennedy). It is suggested that the 'official version' of these events could be an attempt to hide the truth to the public. This 'official version' could mask the fact that these events have been planned and secretly prepared by a covert alliance of powerful individuals or organizations (for example secret services or government). </br> What do you think? </br></br> To answer, please indicate to what extent the sentence below represents how you think about this:"
     ovt1Label = "I think that the official version of the events given by the authorities very often hides the truth."
 
     # Cognitive Reflection Task Version 2 Thomson, & Oppenheimer, 2016 
+    ##OUT
     crt_title = ""
     crt_header = "Please solve the following problems:"
     crt1Label = "If you're running a race and you pass the person in second place, what place are you in?"
