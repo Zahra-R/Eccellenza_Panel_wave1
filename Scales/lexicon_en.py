@@ -191,6 +191,7 @@ class Lexicon:
     
 
     know_7qu = "If the world manages to stabilize CO2-emissions levels, damaging consequences of climate change can be avoided."
+    # I propose to change it to "Yes, it is enough to break the past trend of continuous increases of annual emissions"
     know_7a = "Yes, key is to break the past trend of continuous increases of annual emissions"
     know_7b = "No, we must reduce annual emissions drastically below zero, thus actively extracting and storing CO2 from the atmosphere."
     know_7c = ""
