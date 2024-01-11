@@ -92,6 +92,26 @@ class Lexicon:
     pit2Label = "Regionale oder lokale Behörden"
     pit3Label = "Justiz und Rechtssystem"
     pit4Label = "Die Medien"
+
+     # Knowledge Question from Allianz Climate Literacy Report
+    cck_title = 'Was wissen Sie über den Klimawandel?'
+    cck_header = 'Bitte beantworten Sie alle Fragen nach bestem Wissen und Gewissen, ohne nachzuschlagen oder nach Informationen zu suchen. Sie können die Option "Ich weiß es nicht" wählen, wenn Sie unsicher sind oder nicht wissen'
+    know_dontknow = "I don't know."
+
+    know_1qu = "Was ist die COP?" 
+    know_1a = "Eine UN Initiative zur Verteilung von Geldern um den Einfluss des Klimawandels auf die Armut zu reduzieren."
+    know_1b = "Ein jährliches formales Treffen zur Diskussion des Klimawandel und zur Etablierung von Maßnahmen zur Minderung."
+    know_1c = "Eine EU-Initiative gegen organisierte und Kriegsverbrechen." 
+
+    know_2qu = "Was bedeutet Netto-Null?"
+    know_2a = "Monetäre Strategie zur Erhöhung des Zinssatzes um gegen die Inflation zu kämpfen."
+    know_2b = "Keine Treibhausgasemmissionen bis zu einem bestimmten Datum, in der Regel 2050."
+    know_2c = "Kohlenstoffemissionsneutralität, Stabilisierung der Treibhausgaskonzentrationen in der Atmosphäre."
+
+    know_3qu = "Das 'Intergovernmental Panel on Climate Change' (IPCC) spielt eine wichtige Rolle in der globalen Klimapolitik. Welche ist das?"
+    know_3a = "Die Bereitstellung von objektiver, wissenschaftlicher Information die relevant sind um den Klimawandel zu verstehen."
+    know_3b = "Entscheidungen über die globale Klimapolitik, insbesondere das Festlegen des globalen CO2-Preises."
+    know_3c = "Gastgeber des UN Klimagerechtigkeitsgerichts welches bei klimatischen Streitfälle zwischen Staaten vermittelt."
   
     ### Demographics
     demographics_title = "Persönliche Daten"

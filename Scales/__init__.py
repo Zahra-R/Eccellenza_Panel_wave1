@@ -199,6 +199,29 @@ class Player(BasePlayer):
     pit3 = make_likert7(Lexicon.pit3Label)
     pit4 = make_likert7(Lexicon.pit4Label)
 
+    # new knowledge questions Allianz
+    cknow1 = models.StringField(
+        label = Lexicon.know_1qu,
+        choices=[
+            Lexicon.know_1a, Lexicon.know_1b,
+            Lexicon.know_1c, Lexicon.know_dontknow,
+        ],
+    )
+    cknow2 = models.StringField(
+        label = Lexicon.know_2qu,
+        choices=[
+            Lexicon.know_2a, Lexicon.know_2b,
+            Lexicon.know_2c, Lexicon.know_dontknow,
+        ],
+    )
+    cknow3 = models.StringField(
+        label = Lexicon.know_3qu,
+        choices=[
+            Lexicon.know_3a, Lexicon.know_3b,
+            Lexicon.know_3c, Lexicon.know_dontknow,
+        ],
+    )
+
   
   
     ### Demographics
@@ -262,7 +285,7 @@ class CCEmotion(Page):
     
 class CCKnowledge(Page):
     form_model = 'player'
-    form_fields= []
+    form_fields= ['cknow1', 'cknow2', 'cknow3']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)

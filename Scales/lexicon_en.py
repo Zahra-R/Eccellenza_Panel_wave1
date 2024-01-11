@@ -100,22 +100,24 @@ class Lexicon:
 
 
     # Knowledge Question from Allianz Climate Literacy Report
+    cck_title = 'What do you know about climate change?'
+    cck_header = 'Please answer all these questions to the best of your knowledge, without looking up any information. You may choose the "I do not know" option if you are unsure or do not know'
     know_dontknow = "I don't know."
 
     know_1qu = "What is the COP?" ## This is maybe too easy given that the whole study is about CC???
     know_1a = "UN initiative for distributing funds to reduce the impact of climate change on poverty."
-    know_1b = "An annual formal meeting to discuss climate change and establish mitigation actions"
-    know_1c = "An EU initiative against organized and war crimes" ## a potent Greenhouse Gas 
+    know_1b = "An annual formal meeting to discuss climate change and establish mitigation actions."
+    know_1c = "An EU initiative against organized and war crimes." 
     
     know_2qu = "What does Net-Zero mean?"
     know_2a = "Monetary strategy of increasing interest rate to fight inflation."
-    know_2b = "No greenhouse gas emission by a specific date, typically 2050"
-    know_2c = "Carbon emission neutrality, stabilization of greenhouse gas concentrations in the atmosphere"
+    know_2b = "No greenhouse gas emission by a specific date, typically 2050."
+    know_2c = "Carbon emission neutrality, stabilization of greenhouse gas concentrations in the atmosphere."
     
     know_3qu = "The Intergovernmental Panel on Climate Change (IPCC) plays an important role in global climate policy. Which one?"
-    know_3a = "Providing objective scientific information relevant to understanding climate change"
-    know_3b = "Deciding on global climate policies, particularly setting the global carbon prize"
-    know_3c = "Host of the UN climate justice court which arbitrates climate disputes between states"
+    know_3a = "Providing objective scientific information relevant to understanding climate change."
+    know_3b = "Deciding on global climate policies, particularly setting the global carbon price."
+    know_3c = "Host of the UN climate justice court which arbitrates climate disputes between states."
     
     know_4qu = "What is the carbon market?"
     know_4a = "The supply channel of the EU backed gas-buying cartel that aims to supply affordable natural gas to EU countries struggling to get supply because of the war in Ukraine."
