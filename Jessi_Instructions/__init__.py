@@ -21,10 +21,10 @@ class C(BaseConstants):
     
 
     if LANGUAGE_CODE == 'de':
-        example_pic = '/static/global/images/task_designCT_de.png'
+        example_CT = '/static/global/images/task_designCT_de.png'
     else:
-        example_pic = '/static/global/images/task_designCT_en.png'
-    example_pic = example_pic
+        example_CT = '/static/global/images/task_designCT_en.png'
+    example_CT = example_CT
 
 class Subsession(BaseSubsession):
     pass

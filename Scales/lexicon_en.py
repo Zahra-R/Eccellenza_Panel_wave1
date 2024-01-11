@@ -128,7 +128,7 @@ class Lexicon:
 
    # Importance of biospheric values van der Linden, 2015   
     ibv_title = "Guiding principles in enviromental issues"
-    ibv_header = "How important are the following values important to you as guiding principles of your life?"
+    ibv_header = "How important are the following values to you as guiding principles of your life?"
     ibv1Label = "Respecting the Earth (harmony with other species)"
     ibv2Label = "Protecting the Environment (preserving nature)"
     ibv3Label = "Preventing Pollution (protecting natural resources)"
