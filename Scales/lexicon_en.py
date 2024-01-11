@@ -126,13 +126,11 @@ class Lexicon:
     
 
     ## I suggest a modification of tis question:
-    # "How long does CO2 stay in the atmosphere"
-    # a) 10 years
-    # b) up to 1000 years
-    # c) more than 5000 years 
-    know_5qu = "Rising temperatures pose no existential threat. Even if the rise exceeds 3°C, humans and nature can adapt. Do you agree with this statement?"
-    know_5a = "yes, change is the only constant - this applies to climate as well."
-    know_5b = "no, even at a temperature rise of more than 1.5°C irreparable damages loom, with unforeseen economic and social consequences."
+    #Rising temperatures pose no existential threat. Even if the rise exceeds 3°C, humans and nature can adapt. Do you agree with this statement?"
+    know_5qu = "How long does CO2 stay in the atmosphere?"
+    know_5a = "10 years"
+    know_5b = "up to 1000 years"
+    know_5c = "more than 5000 years"
 
     
     ## I suggest a modification of this question
@@ -142,12 +140,6 @@ class Lexicon:
     know_6b = "Greenhouse gasses cause air pollution. They lead to more fine particulars and more fine dust which in turn decreases the ventilation. Without the circulation of fresh air, the earth gets increasingly warmer. "
     know_6c = "Excess greenhouse gases accumulate in the atmosphere. Because of their molecular structure, the infrared radiation from the earth is reflected and is re-radiated to the earth. This way, heat is trapped."
     
-
-    know_7qu = "If the world manages to stabilize CO2-emissions levels, damaging consequences of climate change can be avoided."
-    # I propose to change it to "Yes, it is enough to break the past trend of continuous increases of annual emissions"
-    know_7a = "Yes, key is to break the past trend of continuous increases of annual emissions"
-    know_7b = "No, we must reduce annual emissions drastically below zero, thus actively extracting and storing CO2 from the atmosphere."
-    know_7c = ""
     
 
     know_8qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" # this will be 2029 (Stand 2023)

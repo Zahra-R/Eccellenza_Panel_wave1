@@ -230,6 +230,13 @@ class Player(BasePlayer):
     )
 
 
+    cknow5 = models.StringField(
+        label = Lexicon.know_5qu,
+        choices=[
+            Lexicon.know_5a, Lexicon.know_5b,
+            Lexicon.know_5c, Lexicon.know_dontknow,
+        ],
+    )
     cknow6 = models.StringField(
         label = Lexicon.know_6qu,
         choices=[
@@ -237,8 +244,6 @@ class Player(BasePlayer):
             Lexicon.know_6c, Lexicon.know_dontknow,
         ],
     )
-
-
 
     cknow8 = models.StringField(
         label = Lexicon.know_8qu,
@@ -325,7 +330,7 @@ class CCEmotion(Page):
     
 class CCKnowledge(Page):
     form_model = 'player'
-    form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4',  'cknow6','cknow8','cknow9', 'cknow10']
+    form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow8','cknow9', 'cknow10']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
@@ -379,7 +384,7 @@ class Demographics(Page):
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
 page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, PEfficacy, PolOrientation, PITrust, 
-                 #CCKnowledge # need to add new items to innit!
+                 CCKnowledge ,
                  Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
