@@ -28,7 +28,8 @@ SESSION_CONFIGS = [
      ),
         dict(
          name='first_draft_JessisPart',
-         app_sequence= ['Intro','Jessi_Instructions',  'Jessi_carbonTax', 'Scales'],
+         app_sequence= ['Intro', 'Jessi_Instructions',  'Jessi_carbonTax', 'Scales'],
+         #app_sequence= ['Scales'],
          num_demo_participants=10,
      )
 

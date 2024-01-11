@@ -13,12 +13,12 @@ class Lexicon:
     next = 'Weiter'
 
     #Consent Text
-    consent_p1 ='Sie wurden eingeladen, an einer Forschungsstudie teilzunehmen, um verschiedene Aussagen zu lesen und zu bewerten. Diese Studie wird unter der Leitung von Prof. Ulf J.J. Hahnel, Fakultät für Psychologie, Universität Basel, Schweiz, und Zahra Rahmani Azad, Fakultät für Psychologie, Universität Basel, durchgeführt.'
+    consent_p1 ='Vielen Dank für Ihr Interesse, an dieser Studie teilzunehmen. <br> Diese Studie wird unter der Leitung von Prof. Ulf J.J. Hahnel, Fakultät für Psychologie, Universität Basel, Schweiz, und Jessica Helm, Fakultät für Psychologie, Universität Basel, durchgeführt.'
     consent_p2 = 'Wenn Sie an dieser Studie teilnehmen möchten, werden Sie gebeten, Folgendes zu tun:'
 
     consent_bullet1 = 'Einen Satz von Online-Fragebögen auszufüllen. Möglicherweise werden Sie gebeten, zu bewerten, wie gut bestimmte Aussagen oder Persönlichkeitsmerkmale auf Sie zutreffen.'
-    consent_bullet2= 'Sie werden auch gebeten, einige demografische Informationen anzugeben, darunter Ihr Alter, Geschlecht, politische Parteilichkeit und Einkommen.'
-    consent_bullet3 = 'Sie treffen mehrere Entscheidungen zwischen zwei Optionen.'
+    consent_bullet2= 'Sie werden auch gebeten, einige demografische Informationen anzugeben, darunter Ihr Alter, Geschlecht, politische Orientierung und Einkommen.'
+    consent_bullet3 = 'Sie werden verschiedene politische Maßnahmen lesen und darüber abstimmen.'
     
     
     ## Achtung hier richtige dauer
@@ -27,18 +27,18 @@ class Lexicon:
 
     ## Achtung hier richtige vergütung und währung und marktforschungsinstitut
     risks = 'Risiken und Vorteile:'
-    consent_p4 = 'Es sind keine bekannten Risiken im Zusammenhang mit Ihrer Teilnahme an dieser Forschung bekannt, die über die des täglichen Lebens hinausgehen. Sie werden über Prolific für die Teilnahme an dieser Studie incentiviert. Ihre Teilnahme kann dazu beitragen, offene Forschungsfragen in der Verhaltens- und Umweltpsychologie besser zu verstehen. Ihre Vergütung beträgt £1,50 (was etwa USD $1,83 entspricht).'
+    consent_p4 = 'Es sind keine bekannten Risiken im Zusammenhang mit Ihrer Teilnahme an dieser Forschung bekannt, die über die des täglichen Lebens hinausgehen. Sie werden über das Marktforschungsinstitut für die Teilnahme an dieser Studie kompensiert. Ihre Teilnahme kann dazu beitragen, offene Forschungsfragen in der Verhaltens- und Umweltpsychologie besser zu verstehen.'
 
     privacy = 'Datenschutz:'
-    consent_p5 = 'Die Vertraulichkeit Ihrer Daten wird streng durch die Zuweisung von Codenummern an jeden Teilnehmer gewährleistet, sodass die Daten niemals direkt mit der individuellen Identität verknüpft werden. Niemand, einschließlich der Forscher dieser Studie, wird in der Lage sein, Ihre Identität offenzulegen. Die Daten werden in anonymisierter Form auf Open-Science-Plattformen verfügbar gemacht, um es anderen Forschern zu ermöglichen, die Daten für ihre Forschungszwecke zu nutzen. Alle sensiblen Informationen, die potenziell zur Offenlegung Ihrer Identität verwendet werden könnten, werden aus dem Datensatz entfernt, bevor die Daten veröffentlicht werden. Wir, die Forscher des Projekts, werden auch niemals die Identität eines der Teilnehmer kennen, es sei denn, Sie offenbaren sie uns, indem Sie uns per E-Mail kontaktieren.'
+    consent_p5 = 'Die Vertraulichkeit Ihrer Daten wird streng durch die Zuweisung von Codenummern an jeden Teilnehmer gewährleistet, sodass die Daten niemals direkt mit der individuellen Identität verknüpft werden. Niemand, einschließlich der Forschenden dieser Studie, wird in der Lage sein, Ihre Identität offenzulegen. Die Daten werden in anonymisierter Form auf Open-Science-Plattformen verfügbar gemacht. Alle sensiblen Informationen, die potenziell zur Offenlegung Ihrer Identität verwendet werden könnten, werden aus dem Datensatz entfernt, bevor die Daten veröffentlicht werden. Wir, die Forschenden des Projekts, werden auch niemals die Identität eines der Teilnehmer kennen, es sei denn, Sie offenbaren sie uns, indem Sie uns per E-Mail kontaktieren.'
 
-    consent_p6 = 'Die Teilnahme an dieser Studie ist freiwillig. Sie können jederzeit ohne Nachteile ablehnen oder sich zurückziehen.'
+    consent_p6 = 'Die Teilnahme an dieser Studie ist freiwillig. Sie können die Teilnahme jederzeit ohne Nachteile ablehnen oder abbrechen.'
 
-    consent_p7 = 'Sie erhalten nur eine Zahlung für die Teilnahme, wenn Sie die Studie bis zum Ende abschließen.'
+    consent_p7 = 'Sie erhalten nur eine Kompensation für die Teilnahme, wenn Sie die Studie bis zum Ende abschließen.'
 
 
     ### achtung achtung, hier prolific
-    consent_p8 = 'Wenn Ihnen etwas an der Studie oder Ihrer Teilnahme unklar ist, wenn Sie Fragen haben oder ein forschungsbezogenes Problem melden möchten, verwenden Sie bitte das Nachrichtentool in Prolific oder senden Sie eine E-Mail an zahra.rahmani@unibas.ch.'
+    consent_p8 = 'Wenn Ihnen etwas an der Studie oder Ihrer Teilnahme unklar ist, wenn Sie Fragen haben oder ein forschungsbezogenes Problem melden möchten, senden Sie eine E-Mail an jessica.helm@unibas.ch'
 
     consent_p9 = 'Indem Sie auf "Weiter" klicken, erklären Sie Ihr Einverständnis zur Teilnahme an dieser Studie und geben an, dass Sie '
 

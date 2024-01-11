@@ -109,7 +109,7 @@ class Lexicon:
     ibv_header = "Wie wichtig sind Ihnen die folgenden Werte als generelle Leitprinzipien in Ihrem Leben?"
     ibv1Label = "Respektieren der Erde (Harmonie mit anderen Arten)"
     ibv2Label = "Schützen der Umwelt (die Natur erhalten)"
-    ibv3Label = "Verhindern von Umweltverschmutzung (natürlichen Ressourcen schützen)"
+    ibv3Label = "Verhindern von Umweltverschmutzung (natürliche Ressourcen schützen)"
     ibv4Label = "Einheit mit der Natur (sich in die Natür einfügen)"
 
     # Political Orientation Pennycook et al 2020
