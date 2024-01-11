@@ -225,9 +225,7 @@ class Player(BasePlayer):
     pit3 = make_likert7(Lexicon.pit3Label)
     pit4 = make_likert7(Lexicon.pit4Label)
 
-    # Trust in official version of events from Eurobarometer / Lantian et al 2016  
-    ovt1 = make_likert10(Lexicon.ovt1Label)
-
+  
   
     ### Demographics
     age = models.IntegerField(
@@ -343,13 +341,7 @@ class PITrust(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     
-class OVTrust(Page):
-    form_model = 'player'
-    form_fields= ['ovt1']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
-    
+
 
     
 class Demographics(Page):
@@ -362,7 +354,7 @@ class Demographics(Page):
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
 page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, CCKnowledge, CSTrust, PEfficacy, PolOrientation, PITrust, 
-                 #, OVTrust, GWNorms, 
+                 #, GWNorms, 
                  Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]

@@ -92,13 +92,6 @@ class Lexicon:
     cst5Label = "There is no scientific consensus that human-caused climate change is happening."
     cst6Label = "Climate scientists can’t be trusted."
     
-    # Trust in official version of events from Eurobarometer / Lantian et al 2016  
-    ##OUT
-    ovt_title = "Trust in the 'offical version' of events"
-    ovt_header = "Some political and social events are debated (for example 09/11 attacks, the death of Lady Diana, the assassination of John F. Kennedy). It is suggested that the 'official version' of these events could be an attempt to hide the truth to the public. This 'official version' could mask the fact that these events have been planned and secretly prepared by a covert alliance of powerful individuals or organizations (for example secret services or government). </br> What do you think? </br></br> To answer, please indicate to what extent the sentence below represents how you think about this:"
-    ovt1Label = "I think that the official version of the events given by the authorities very often hides the truth."
-
-    
     # Personal efficacy Leiserowitz et al, 2010
     #Only item 1
     pe_title = "Attitudes about Climate Change"

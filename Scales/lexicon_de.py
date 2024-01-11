@@ -125,12 +125,6 @@ class Lexicon:
     pit2Label = "Regionale oder lokale Behörden"
     pit3Label = "Justiz und Rechtssystem"
     pit4Label = "Die Medien"
-
-    # Trust in official version of events from Eurobarometer / Lantian et al 2016
-    ovt_title = "Vertrauen in die 'offizielle Version' von Ereignissen"
-    ovt_header = "Einige politische und soziale Ereignisse werden diskutiert (zum Beispiel die Anschläge vom 11. September, der Tod von Lady Diana, die Ermordung von John F. Kennedy). Manche sagen, dass die 'offizielle Version' dieser Ereignisse ein Versuch sein könnte, die Wahrheit vor der Öffentlichkeit zu verbergen. Diese 'offizielle Version' könnte verbergen, dass diese Ereignisse von einer heimlichen Allianz mächtiger Einzelpersonen oder Organisationen geplant und heimlich vorbereitet wurden (zum Beispiel von Geheimdiensten oder Regierungen).</br> Was denken Sie? </br></br> Um zu antworten, geben Sie bitte an, inwieweit der folgende Satz Ihre Meinung dazu widerspiegelt:"
-    ovt1Label = "Ich denke, dass die offizielle Version der Ereignisse, die von den Behörden angegeben wird, sehr oft die Wahrheit ist."
-
   
     ### Demographics
     demographics_title = "Persönliche Daten"
