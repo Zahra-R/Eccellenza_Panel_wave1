@@ -71,16 +71,6 @@ class Lexicon:
     cck12Label = "Häufigkeit von heißen Tagen und Nächten"
     cck13Label = "Weltweiter Süßwasservorrat"
 
-    # (Dis)trust in Climate Science Sarathchandra & Haltinner is out
-    cst_title = "Meinung zu Klimawissenschaft"
-    cst_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    cst1Label = "Klimawissenschaftler haben nicht genug Daten, um zu wissen, dass der vom Menschen verursachte Klimawandel existiert."
-    cst2Label = "Klimawissenschaftler sind nicht offen bei ihrer Forschung."
-    cst3Label = "Klimawissenschaftler ignorieren diejenigen, die anderer Meinung sind."
-    cst4Label = "Wissenschaftliche Zeitschriften veröffentlichen nur Artikel, die zu dem Schluss kommen, dass der Klimawandel existiert."
-    cst5Label = "Es gibt keinen wissenschaftlichen Konsens darüber, dass der vom Menschen verursachte Klimawandel existiert."
-    cst6Label = "Der Klimawissenschaft kann man nicht trauen."
-
     # Personal efficacy Leiserowitz et al, 2010
     pe_title = "Einstellungen zum Klimawandel"
     pe_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"

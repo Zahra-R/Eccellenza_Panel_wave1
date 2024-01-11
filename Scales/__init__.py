@@ -184,13 +184,6 @@ class Player(BasePlayer):
     cck12 = make_options4(Lexicon.cck12Label)
     cck13 = make_options4(Lexicon.cck13Label)
    
-    # (Dis)trust in climate science scale Sarathchandra & Haltinner, 2021
-    cst1 = make_likert5(Lexicon.cst1Label)
-    cst2 = make_likert5(Lexicon.cst2Label)
-    cst3 = make_likert5(Lexicon.cst3Label)
-    cst4 = make_likert5(Lexicon.cst4Label)
-    cst5 = make_likert5(Lexicon.cst5Label)
-    cst6 = make_likert5(Lexicon.cst6Label)
 
     # Personal efficacy Leiserowitz et al, 2010
     pe1 = make_likert7(Lexicon.pe1Label)
@@ -289,12 +282,6 @@ class CCKnowledge(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     
-class CSTrust(Page):
-    form_model = 'player'
-    form_fields= ['cst1', 'cst2', 'cst3', 'cst4', 'cst5', 'cst6']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
 
 class PEfficacy(Page):
     form_model = 'player'
@@ -343,7 +330,7 @@ class Demographics(Page):
         return dict(Lexicon=Lexicon, **which_language)
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
-page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, CCKnowledge, CSTrust, PEfficacy, PolOrientation, PITrust, 
+page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, CCKnowledge, PEfficacy, PolOrientation, PITrust, 
                  Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]

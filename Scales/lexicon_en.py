@@ -74,17 +74,6 @@ class Lexicon:
     cck11Label = "The hole in the ozone layer" 
     cck12Label = "Frequency of hot days and nights" 
     cck13Label = "Global fresh water supply"
-
-    # (Dis)trust in Climate Science Sarathchandra & Haltinner
-    ##OUT
-    cst_title = "Opinion on Climate Science"
-    cst_header = "How much do you agree with the following statements?"
-    cst1Label = "Climate scientists do not have enough data to know that human-caused climate change is happening."
-    cst2Label = "Climate scientists are not open about their research."
-    cst3Label = "Climate scientists ignore those who disagree with them."
-    cst4Label = "Scientific journals only publish papers that conclude climate change is happening."
-    cst5Label = "There is no scientific consensus that human-caused climate change is happening."
-    cst6Label = "Climate scientists can’t be trusted."
     
     # Personal efficacy Leiserowitz et al, 2010
     #Only item 1
