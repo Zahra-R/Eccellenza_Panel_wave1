@@ -56,13 +56,7 @@ class Lexicon:
     cce5Label = "Curiosity"
     cce6Label = "Hope"
 
-    ### Injunctive / descriptive norms for global warming Goldberg et al
-    ##OUT
-    gwn_title = "Attitudes about Climate Change"
-    gwn_header = "What stance do people around you have towards climate change?"
-    gwn1Label = "How much of an effort do your family and friends make to reduce global warming?"
-    gwn2Label = "How important is it to your family and friends that you take action to reduce global warming?"
-
+    
     ### Climate Change Impact / Consequence Knowledge van der Linden 
     ##OUT see different items below
     cck_title = "Climate Change Knowledge"

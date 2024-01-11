@@ -54,12 +54,6 @@ class Lexicon:
     cce5Label = "Neugier"
     cce6Label = "Hoffnung"
 
-    ### Injunctive / descriptive norms for global warming Goldberg et al
-    gwn_title = "Einstellungen zum Klimawandel"
-    gwn_header = "Welche Einstellung hat Ihr Umfeld zum Klimawandel?" #"What stance do people around you have towards climate change?"
-    gwn1Label = "Wie viel Aufwand betreibt Ihre Familie und Ihre Freunde, um die Erderwärmung zu reduzieren?" #"How much of an effort do your family and friends make to reduce global warming?"
-    gwn2Label = "Wie wichtig ist es für Ihre Familie und Ihre Freunde, dass Sie tätig werden, um die Erdwerärmung zu reduzieren?" #"How important is it to your family and friends that you take action to reduce global warming?"
-
     ### Climate Change Impact / Consequence Knowledge van der Linden is out different items
     cck_title = "Wissen über den Klimawandel"
     cck_header = "Bitte geben Sie an, ob die folgenden Größen voraussichtlich aufgrund des Klimawandels größer, kleiner oder gleich bleiben werden."

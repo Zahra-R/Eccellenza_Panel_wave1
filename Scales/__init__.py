@@ -169,10 +169,6 @@ class Player(BasePlayer):
     cce5 = make_likert5(Lexicon.cce5Label) ## Curiosity
     cce6 = make_likert5(Lexicon.cce6Label) ## Hope
 
-    ### Injunctive /descriptive norms for global warming generally (Goldberg et al, 2021)
-    gwn1 = make_likert5(Lexicon.gwn1Label) ## injunctive
-    gwn2 = make_likert5(Lexicon.gwn2Label) ## descriptive
-
     ### Climate Change Knowledge by van der Linden 2015
     cck1  = make_options4(Lexicon.cck1Label)
     cck2  = make_options4(Lexicon.cck2Label)
@@ -285,12 +281,6 @@ class CCEmotion(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     
-class GWNorms(Page):
-    form_model = 'player'
-    form_fields= ['gwn1', 'gwn2']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
     
 class CCKnowledge(Page):
     form_model = 'player'
@@ -354,7 +344,6 @@ class Demographics(Page):
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
 page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, CCKnowledge, CSTrust, PEfficacy, PolOrientation, PITrust, 
-                 #, GWNorms, 
                  Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
