@@ -150,21 +150,23 @@ class Lexicon:
     know_7c = ""
     
 
-    know_8qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" ### double check if still true in 2024!!!!
-    know_8a = "6 years"
-    know_8b = "11 years"
-    know_8c = "24 years"
+    know_8qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" # this will be 2029 (Stand 2023)
+    know_8a = "5 years"
+    know_8b = "10 years"
+    know_8c = "23 years"
     
 
     know_9qu = "Which country/region causes the highest absolute CO2-emissions per year?"
     know_9a = "China"
     know_9b = "USA"
-    know_9c = "India"
+    know_9c = "EU"
+    know_9d = "India"
 
-    know_10qu = "Which of the four countries causes the highest per-capita CO2-emissions per year?"
+    know_10qu = "Which of the four countries/regions causes the highest per-capita CO2-emissions per year?"
     know_10a = "China"
     know_10b = "USA"
     know_10c = "EU"
+    know_10d = "India"
     
 
 

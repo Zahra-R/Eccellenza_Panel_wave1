@@ -118,6 +118,25 @@ class Lexicon:
     know_4b = "Ein Handelssystem durch das Emittenten (Ausstoßer) Einheiten von Treibhausgasemissionszertifikaten kaufen oder verkaufen können um nationale Restriktionen bezüglich der totalen Emissionen zu erfüllen"
     know_4c = "Ein online Marktplatz wo man recyceltes Kohlenstofffasern und Kohlenstoff schwarz kaufen kann."
     
+    
+    know_8qu = "Wenn wir in dem jetzigen Tempo weitermachen, nach wie vielen Jahren werden wir unser CO2 Budget verbraucht haben, um den Temperaturanstieg auf 1,5 °C zu begrenzen?" # is 2029 apparently
+    know_8a = "5 Jahren"
+    know_8b = "10 Jahren"
+    know_8c = "23 Jahren"
+    
+
+    know_9qu = "Welches Land/Region verursacht absolut die höchsten CO2-Emissionen pro Jahr?"
+    know_9a = "China"
+    know_9b = "USA"
+    know_9c = "EU"
+    know_9d = "Indien"
+
+    know_10qu = "Welches der 4 Länder/Regionen verursacht die höchsten pro Kopf CO2 Emissionen pro Jahr?"
+    know_10a = "China"
+    know_10b = "USA"
+    know_10c = "EU"
+    know_10d = "Indien"
+
     ### Demographics
     demographics_title = "Persönliche Daten"
     demographics_header = "Bitte geben Sie die folgenden Informationen über sich ein."
