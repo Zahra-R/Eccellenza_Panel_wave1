@@ -228,6 +228,18 @@ class Player(BasePlayer):
             Lexicon.know_4c, Lexicon.know_dontknow,
         ],
     )
+
+
+    cknow6 = models.StringField(
+        label = Lexicon.know_6qu,
+        choices=[
+            Lexicon.know_6a, Lexicon.know_6b,
+            Lexicon.know_6c, Lexicon.know_dontknow,
+        ],
+    )
+
+
+
     cknow8 = models.StringField(
         label = Lexicon.know_8qu,
         choices=[
@@ -313,7 +325,7 @@ class CCEmotion(Page):
     
 class CCKnowledge(Page):
     form_model = 'player'
-    form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow8','cknow9', 'cknow10']
+    form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4',  'cknow6','cknow8','cknow9', 'cknow10']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
