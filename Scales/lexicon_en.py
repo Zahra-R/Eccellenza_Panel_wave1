@@ -80,8 +80,7 @@ class Lexicon:
     pe_title = "Attitudes about Climate Change"
     pe_header = "How much do you agree with the following statements?"
     pe1Label = "The actions of a single individual won't make any difference in climate change."
-    pe2Label = "Individuals are able to influence global warming and climate change outcomes."
-    pe3Label = "Individual actions will influence others to behave in ways that mitigate the effects of global warming."
+  
     
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
     ## TBD kevin tam

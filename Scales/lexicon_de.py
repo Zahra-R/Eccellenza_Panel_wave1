@@ -75,8 +75,7 @@ class Lexicon:
     pe_title = "Einstellungen zum Klimawandel"
     pe_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
     pe1Label = "Die Handlungen eines einzelnen Individuums werden keinen Unterschied beim Klimawandel machen."
-    pe2Label = "Einzelne Personen können den Klimawandel und seine Auswirkungen beeinflussen."
-    pe3Label = "Die Handlungen Einzelner beeinflussen andere dazu, sich so zu verhalten, dass die Auswirkungen der globalen Erwärmung gemildert werden."
+  
 
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
     wvv_title = "Wie sehen Sie die Welt?"
