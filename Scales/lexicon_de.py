@@ -54,23 +54,7 @@ class Lexicon:
     cce5Label = "Neugier"
     cce6Label = "Hoffnung"
 
-    ### Climate Change Impact / Consequence Knowledge van der Linden is out different items
-    cck_title = "Wissen über den Klimawandel"
-    cck_header = "Bitte geben Sie an, ob die folgenden Größen voraussichtlich aufgrund des Klimawandels größer, kleiner oder gleich bleiben werden."
-    cck1Label = "Weltweiter Meeresspiegel"
-    cck2Label = "Saurer Regen"
-    cck3Label = "Schmelzen von Gletschern und Polarkappen"
-    cck4Label = "Gebiete auf der Welt, die Dürre erleben"
-    cck5Label = "Weltweite Ausbreitung von Infektionskrankheiten"
-    cck6Label = "Luftverschmutzung"
-    cck7Label = "Weltweite Durchschnittstemperatur"
-    cck8Label = "Extreme Wetterereignisse (z. B. Überschwemmungen, Hurrikane usw.)"
-    cck9Label = "Weltweite Artenvielfalt (d. h. Vielfalt von Pflanzen und Tieren)"
-    cck10Label = "Vulkanische Eruptionen"
-    cck11Label = "Das Loch in der Ozonschicht"
-    cck12Label = "Häufigkeit von heißen Tagen und Nächten"
-    cck13Label = "Weltweiter Süßwasservorrat"
-
+    
     # Personal efficacy Leiserowitz et al, 2010
     pe_title = "Einstellungen zum Klimawandel"
     pe_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"

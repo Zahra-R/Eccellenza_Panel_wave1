@@ -56,24 +56,7 @@ class Lexicon:
     cce5Label = "Curiosity"
     cce6Label = "Hope"
 
-    
-    ### Climate Change Impact / Consequence Knowledge van der Linden 
-    ##OUT see different items below
-    cck_title = "Climate Change Knowledge"
-    cck_header = "Please indicate whether each of the following is likely to increase, decrease or not change at all as a result of climate change."
-    cck1Label = "Global sea level"
-    cck2Label = "Acid rain"
-    cck3Label = "Melting of glaciers and polar ice caps"
-    cck4Label = "Areas in the world experiencing drought" 
-    cck5Label = "Global spread of infectious disease"
-    cck6Label = "Air pollution" 
-    cck7Label = "Global average temperature" 
-    cck8Label = "Extreme weather events (e.g., flooding, hurricanes, etc.)" 
-    cck9Label = "Global biodiversity (i.e., variety of plants and animals)"
-    cck10Label = "Volcanic eruptions" 
-    cck11Label = "The hole in the ozone layer" 
-    cck12Label = "Frequency of hot days and nights" 
-    cck13Label = "Global fresh water supply"
+
     
     # Personal efficacy Leiserowitz et al, 2010
     #Only item 1
