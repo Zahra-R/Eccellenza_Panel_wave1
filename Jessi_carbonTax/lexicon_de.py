@@ -12,7 +12,7 @@ class Lexicon:
    helpButton = "Hilfe"
    helpSector = "Sektor"
    helpSectorText = "Der Sektor der besteuert werden würde: <b>Allgemein/Tonne</b>, <b>Fleisch- und Milchprodukte/Tonne</b> oder <b>Energie/Tonne</b>"
-   helpTiming = "Zeitpunkt der Umsetzung"
+   helpTiming = "Inkrafttreten"
    helpTimingText = "Beginn der Besteuerung: <b>in 1 Jahr</b> oder in <b>7 Jahren</b>"
    helpPrice = "Preis"
    helpPriceText = "Der Preis, der für jede ausgestoßene Tonne CO<sub>2</sub> erhoben wird: <b>60€</b> oder <b>120€</b>"

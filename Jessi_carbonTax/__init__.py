@@ -35,7 +35,7 @@ class C(BaseConstants):
 
     def get_attributes():
         if LANGUAGE_CODE == 'de':
-            return ["Sektor", "Preis", "Einnahmenverwendung", "Zeitplan"]
+            return ["Sektor", "Preis", "Einnahmenverwendung", "Inkrafttreten"]
         else:
             return ["Sector", "Price", "Revenue mechanism", "Implementation timing"]
 
@@ -67,7 +67,7 @@ def creating_session(subsession: Subsession):
             round_numbers = list(range(0, C.NUM_ROUNDS))
             random.shuffle(round_numbers)
             p.participant.task_rounds_J = round_numbers
-
+                
 # for this all to work, need to add 'task_rounds' as PARTICIPANT_FIELDS in settings.py!!
 # PAGES
 
@@ -82,6 +82,8 @@ class task_page00(Page):
         task_in_round = player.participant.task_rounds_J[player.round_number - 2]
         player.vignetteNumber = task_in_round
         my_vignette_table = C.PolicyTable[task_in_round]
+        
+        
         # this determines which order within vignette
         random_attribute_order = list(range(0,4))
         random.shuffle(random_attribute_order)
