@@ -228,12 +228,6 @@ class Player(BasePlayer):
     # Trust in official version of events from Eurobarometer / Lantian et al 2016  
     ovt1 = make_likert10(Lexicon.ovt1Label)
 
-    # Cognitive Reflection Task Thomson & Oppenheimer 2016
-    crt1 = models.StringField(label=Lexicon.crt1Label)
-    crt2 = models.StringField(label=Lexicon.crt2Label)
-    crt3 = models.StringField(label=Lexicon.crt3Label)
-    crt4 = models.StringField(label=Lexicon.crt4Label)
-
   
     ### Demographics
     age = models.IntegerField(
@@ -356,13 +350,7 @@ class OVTrust(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     
-class CRTask(Page):
-    form_model = 'player'
-    form_fields= ['crt1', 'crt2', 'crt3', 'crt4']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
-    
+
     
 class Demographics(Page):
     form_model = 'player'
@@ -374,7 +362,7 @@ class Demographics(Page):
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
 page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, CCKnowledge, CSTrust, PEfficacy, PolOrientation, PITrust, 
-                 #CRTask, OVTrust, GWNorms, 
+                 #, OVTrust, GWNorms, 
                  Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
