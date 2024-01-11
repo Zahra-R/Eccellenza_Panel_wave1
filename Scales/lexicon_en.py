@@ -98,15 +98,7 @@ class Lexicon:
     ovt_header = "Some political and social events are debated (for example 09/11 attacks, the death of Lady Diana, the assassination of John F. Kennedy). It is suggested that the 'official version' of these events could be an attempt to hide the truth to the public. This 'official version' could mask the fact that these events have been planned and secretly prepared by a covert alliance of powerful individuals or organizations (for example secret services or government). </br> What do you think? </br></br> To answer, please indicate to what extent the sentence below represents how you think about this:"
     ovt1Label = "I think that the official version of the events given by the authorities very often hides the truth."
 
-    # Cognitive Reflection Task Version 2 Thomson, & Oppenheimer, 2016 
-    ##OUT
-    crt_title = ""
-    crt_header = "Please solve the following problems:"
-    crt1Label = "If you're running a race and you pass the person in second place, what place are you in?"
-    crt2Label = "A farmer had 15 sheep and all but 8 died. How many are left?"
-    crt3Label = "Emily's father has three daughters. The first two are named April and May. What is the third daughter's name?"
-    crt4Label = "How many cubic feet of dirt are there in a hole that is 3' deep x 3' wide x 3' long?)."
-
+    
     # Personal efficacy Leiserowitz et al, 2010
     #Only item 1
     pe_title = "Attitudes about Climate Change"

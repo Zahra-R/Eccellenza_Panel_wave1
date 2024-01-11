@@ -131,14 +131,7 @@ class Lexicon:
     ovt_header = "Einige politische und soziale Ereignisse werden diskutiert (zum Beispiel die Anschläge vom 11. September, der Tod von Lady Diana, die Ermordung von John F. Kennedy). Manche sagen, dass die 'offizielle Version' dieser Ereignisse ein Versuch sein könnte, die Wahrheit vor der Öffentlichkeit zu verbergen. Diese 'offizielle Version' könnte verbergen, dass diese Ereignisse von einer heimlichen Allianz mächtiger Einzelpersonen oder Organisationen geplant und heimlich vorbereitet wurden (zum Beispiel von Geheimdiensten oder Regierungen).</br> Was denken Sie? </br></br> Um zu antworten, geben Sie bitte an, inwieweit der folgende Satz Ihre Meinung dazu widerspiegelt:"
     ovt1Label = "Ich denke, dass die offizielle Version der Ereignisse, die von den Behörden angegeben wird, sehr oft die Wahrheit ist."
 
-    # Cognitive Reflection Task Version 2 Thomson, & Oppenheimer, 2016
-    crt_title = ""
-    crt_header = "Bitte lösen Sie die folgenden Aufgaben:"
-    crt1Label = "Wenn Sie bei einem Rennen die Person auf dem zweiten Platz überholen, auf welchem Platz befinden Sie sich dann?"
-    crt2Label = "Ein Bauer hat 15 Schafe und alle bis auf 8 sterben. Wie viele sind übrig?"
-    crt3Label = "Der Vater von Emily hat drei Töchter. Die ersten beiden heißen Jana und Janina. Wie heißt die dritte Tochter?"
-    crt4Label = "Wie viele Kubikmeter Erde befinden sich in einem Loch, das 3 Meter tief, 3 Meter breit und 3 Meter lang ist?"
-
+  
     ### Demographics
     demographics_title = "Persönliche Daten"
     demographics_header = "Bitte geben Sie die folgenden Informationen über sich ein."
