@@ -221,6 +221,13 @@ class Player(BasePlayer):
             Lexicon.know_3c, Lexicon.know_dontknow,
         ],
     )
+    cknow4 = models.StringField(
+        label = Lexicon.know_3qu,
+        choices=[
+            Lexicon.know_4a, Lexicon.know_4b,
+            Lexicon.know_4c, Lexicon.know_dontknow,
+        ],
+    )
 
   
   

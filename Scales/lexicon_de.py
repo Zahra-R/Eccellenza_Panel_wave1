@@ -112,7 +112,12 @@ class Lexicon:
     know_3a = "Die Bereitstellung von objektiver, wissenschaftlicher Information die relevant sind um den Klimawandel zu verstehen."
     know_3b = "Entscheidungen über die globale Klimapolitik, insbesondere das Festlegen des globalen CO2-Preises."
     know_3c = "Gastgeber des UN Klimagerechtigkeitsgerichts welches bei klimatischen Streitfälle zwischen Staaten vermittelt."
-  
+   
+    know_4qu = "Was ist der Kohlenstoffmarkt??"
+    know_4a = "Die Versorgungsweg des von der EU unterstützten gaskaufenden Kartells, das zum Ziel hat, EU Länder,die wegen des Kriegs in der Ukraine Versorgungsprobleme haben, mit bezahlbarem, natürlichem Gas zu versorgen."
+    know_4b = "Ein Handelssystem durch das Emittenten (Ausstoßer) Einheiten von Treibhausgasemissionszertifikaten kaufen oder verkaufen können um nationale Restriktionen bezüglich der totalen Emissionen zu erfüllen"
+    know_4c = "Ein online Marktplatz wo man recyceltes Kohlenstofffasern und Kohlenstoff schwarz kaufen kann."
+    
     ### Demographics
     demographics_title = "Persönliche Daten"
     demographics_header = "Bitte geben Sie die folgenden Informationen über sich ein."
