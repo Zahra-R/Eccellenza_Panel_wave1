@@ -43,7 +43,7 @@ class Lexicon:
     commute_pt_D_to_E = '225 - 370 miles'
     commute_pt_more_than_E = 'more than 370 miles'
 
-    commute_car_label = 'How many kilometers do you <b> annually </b> drive in a  <b> car </b> or on a motorcycle (outside of work times, both driving and as a passenger)?'
+    commute_car_label = 'How many kilometers do you <b> annually drive in a car </b> or on a motorcycle (outside of work times, both driving and as a passenger)?'
     commute_car_never = 'I never use a car or motorcycle'
     commute_car_less_than_A = '1 - 1,244 miles'
     commute_car_A_to_B= '1,245 - 4,659 miles'
@@ -59,9 +59,9 @@ class Lexicon:
     commute_car_type_B = 'Electric (conventional energy) '
     commute_car_type_A = 'Electric (green energy)'
 
-    flying_short_label = 'How many short-distance flights (<3 hours) did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from Paris to London and back this counts as 2 flights. </i> '
-    flying_mid_label ='How many mid-distance flights (3-6 hours) did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from New York to San Francisco and back this counts as 2 flights. </i> '
-    flying_long_label = 'How many mid-distance flights (>6 hours) did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from London to New York and back this counts as 2 flights. </i> '
+    flying_short_label = 'How many <b>short-distance flights (<3 hours)</b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from Paris to London and back this counts as 2 flights. </i> '
+    flying_mid_label ='How many <b>mid-distance flights (3-6 hours) </b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from New York to San Francisco and back this counts as 2 flights. </i> '
+    flying_long_label = 'How many <b>long-distance flights (>6 hours) </b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from London to New York and back this counts as 2 flights. </i> '
 
  
 
