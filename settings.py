@@ -2,9 +2,30 @@ from os import environ
 
 SESSION_CONFIGS = [
      dict(
-         name='first_draft_Panel_scales_only',
+         name='Intro_Redirection',
   #      app_sequence=['survey','task'],
-         app_sequence=['Intro', 'Scales'],
+         app_sequence=['Intro'],
+
+         num_demo_participants=10,
+     ),
+     dict(
+         name='Order_Nina_Jessi_Zahra',
+  #      app_sequence=['survey','task'],
+         app_sequence=['Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask', 'Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling',],
+
+         num_demo_participants=10,
+     ),
+      dict(
+         name='Order_Jessi_Zahra_Nina',
+  #      app_sequence=['survey','task'],
+         app_sequence=['Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling','Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask'],
+
+         num_demo_participants=10,
+     ),
+      dict(
+         name='Order_Zahra_Nina_Jessi',
+  #      app_sequence=['survey','task'],
+         app_sequence=['CCsampling_intro', 'CCsampling','Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask', 'Jessi_Instructions',  'Jessi_carbonTax'],
 
          num_demo_participants=10,
      ),
@@ -45,6 +66,9 @@ SESSION_CONFIG_DEFAULTS = dict(
 )
 
 PARTICIPANT_FIELDS = [
+
+    ## Overall Structure
+    'order_tasks',
 
      #CC SAMPLING FIELDS
     'randomInfoArray',

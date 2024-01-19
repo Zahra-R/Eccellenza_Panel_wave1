@@ -27,7 +27,7 @@ which_language[LANGUAGE_CODE[:2]] = True
 class C(BaseConstants):
     NAME_IN_URL = 'SAMPLING'
     PLAYERS_PER_GROUP = None
-    NUM_ROUNDS = 5
+    NUM_ROUNDS = 50
     if LANGUAGE_CODE == 'de':
         misinfofile = open('CCsampling/ClimateMisinfo_de.json')
         infofile = open('CCsampling/ClimateInfo_de.json')
@@ -164,7 +164,7 @@ class boxrating(Page):
         }
     @staticmethod
     def is_displayed(player: Player):
-        return (player.round_number % 5 == 0)
+        return (player.round_number % 500 == 0)
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
         print('in before next page function', player.boxlikingInfo, player.boxlikingMisinfo, player.boxrecommendationInfo, player.boxrecommendationMisinfo )

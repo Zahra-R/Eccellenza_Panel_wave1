@@ -34,9 +34,17 @@
 
 </div>
 
-<button style="float: right; margin-top: 2vh;" class="otree-btn-next btn btn-primary" disabled id="consent-next"> {{Lexicon.next}}</button>
+
+
+<a style="color: white; text-decoration: none;" href={{stringOrder}}>
+<button style="float: right; margin-top: 2vh;" type="button" class="btn btn-primary" disabled id="consent-next"> 
+{{Lexicon.next}}  </button> </a>
   
-   
+    <!-- <form style="float: right; margin-top: 2vh;" type="action" action={{stringOrder}} class="btn btn-primary" disabled id="consent-next"> 
+        <input type="submit" value={{Lexicon.next}}  /> </form>   -->
+
+
+
 
 
 <input type="hidden" name="mobileDevice" id="mobileDevice" />
