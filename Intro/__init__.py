@@ -82,7 +82,24 @@ class Consent(Page):
             'Lexicon': Lexicon,
             'which_language': which_language
         }
+    @staticmethod
+    def is_displayed(player:Player):
+        return (player.session.config['consent_form'] =="redirect")
+    
+
+class Consent_Standalone(Page):
+    form_model = 'player'
+    form_fields = ['dataScience', 'dataTeach', 'mobileDevice']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return {
+            'Lexicon': Lexicon,
+            'which_language': which_language
+        }
+    @staticmethod
+    def is_displayed(player:Player):
+        return (player.session.config['consent_form'] =="standalone")
 
 
 
-page_sequence = [Consent]
+page_sequence = [Consent, Consent_Standalone]

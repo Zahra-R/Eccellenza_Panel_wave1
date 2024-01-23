@@ -5,7 +5,7 @@ SESSION_CONFIGS = [
          name='Intro_Redirection',
   #      app_sequence=['survey','task'],
          app_sequence=['Intro'],
-
+         consent_form="redirect",
          num_demo_participants=10,
      ),
      dict(
@@ -40,6 +40,7 @@ SESSION_CONFIGS = [
         name='first_draft_Panel_withSampling',
         app_sequence=['Intro','CCsampling_intro', 'CCsampling', 'Scales'],
         num_demo_participants=5,
+        consent_form="standalone"
     ),
         dict(
          name='first_draft_NinasPart',
@@ -50,7 +51,7 @@ SESSION_CONFIGS = [
         dict(
          name='first_draft_JessisPart',
          app_sequence= ['Intro', 'Jessi_Instructions',  'Jessi_carbonTax', 'Scales'],
-         #app_sequence= ['Scales'],
+         consent_form = "standalone",
          num_demo_participants=10,
      )
 
