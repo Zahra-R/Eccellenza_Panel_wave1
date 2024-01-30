@@ -164,7 +164,7 @@ class boxrating(Page):
         }
     @staticmethod
     def is_displayed(player: Player):
-        return (player.round_number % 500 == 0)
+        return (player.round_number % 5 == 0)
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
         print('in before next page function', player.boxlikingInfo, player.boxlikingMisinfo, player.boxrecommendationInfo, player.boxrecommendationMisinfo )
