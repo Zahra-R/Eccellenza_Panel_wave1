@@ -26,7 +26,7 @@ SESSION_CONFIGS = [
          name='Order_Zahra_Nina_Jessi',
   #      app_sequence=['survey','task'],
          app_sequence=['CCsampling_intro', 'CCsampling','Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask', 'Jessi_Instructions',  'Jessi_carbonTax'],
-
+         language = "de",
          num_demo_participants=10,
      ),
     dict(
