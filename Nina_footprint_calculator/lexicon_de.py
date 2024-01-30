@@ -77,6 +77,6 @@ class Lexicon:
     commute_car_type_A = 'Elektrisch (grüne Energie)'   
     
 
-    flying_short_label = 'Wie viele <b>Kurzstreckenflüge (<3 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge. Wenn Sie also von Paris nach London und zurück geflogen sind, zählt das als 2 Flüge. </i> '
-    flying_mid_label ='Wie viele <b>Mittelstreckenflüge (3-6 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge. Wenn Sie also von New York nach San Francisco und zurück geflogen sind, zählt das als 2 Flüge. </i> '
-    flying_long_label = 'Wie viele <b>Langstreckenflüge  (>6 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge.  Wenn Sie also von London nach New York und zurück geflogen sind, zählt das als 2 Flüge. </i> '
+    flying_short_label = 'Wie viele <b>Kurzstreckenflüge (<3 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge. Wenn Sie also von Frankfurt nach London und zurück geflogen sind, zählt das als 2 Flüge. </i> '
+    flying_mid_label ='Wie viele <b>Mittelstreckenflüge (3-6 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge. Wenn Sie also von Frankfurt nach Antalya und zurück geflogen sind, zählt das als 2 Flüge. </i> '
+    flying_long_label = 'Wie viele <b>Langstreckenflüge  (>6 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge.  Wenn Sie also von München nach New York und zurück geflogen sind, zählt das als 2 Flüge. </i> '
