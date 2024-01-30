@@ -33,7 +33,7 @@ class C(BaseConstants):
     PLAYERS_PER_GROUP = None
     ROUNDS_PER_CONDITION = 1
     NUM_ROUNDS = 1
-    GAME_ROUNDS = 50
+    GAME_ROUNDS = 10
 
 class Subsession(BaseSubsession):
     pass
