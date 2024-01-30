@@ -376,15 +376,26 @@ class PITrust(Page):
     
 class Demographics(Page):
     form_model = 'player'
-    form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code', 'party_affiliation']
+    form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code']
 
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
 
+class transition (Page): 
+    form_model = 'player'
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
+
+class goodbye (Page): 
+    form_model = 'player'
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
+
+
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
-page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, PEfficacy, PolOrientation, PITrust, 
-                 CCKnowledge ,
-                 Demographics]
+#page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
+page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]

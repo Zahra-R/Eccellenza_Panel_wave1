@@ -159,11 +159,11 @@ class Lexicon:
     other = "Andere"
 
     income_label = "Was ist Ihr jährliches Einkommen?"
-    income_less_than_A = "Weniger als 25.000 $"
-    income_A_to_B = "25.000 $ - 50.000 $"
-    income_B_to_C = "50.001 $ - 75.000 $"
-    income_C_to_D = "75.001 $ - 100.000 $"
-    income_more_than_D = "Mehr als 100.000 $"
+    income_less_than_A = "Weniger als 25.000 €"
+    income_A_to_B = "25.000 € - 50.000 €"
+    income_B_to_C = "50.001 € - 75.000 €"
+    income_C_to_D = "75.001 € - 100.000 €"
+    income_more_than_D = "Mehr als 100.000 €"
     prefer_not_to_say = "Keine Angabe"
 
     education_label = "Was ist Ihr höchster Bildungsabschluss?"
@@ -193,3 +193,9 @@ class Lexicon:
     linke = "Die Linke"
     afd = "Alternative für Deutschland (AfD)"
     other_party = "Andere"
+
+    # Transition page
+    Transition_text = "Danke für Ihre bisherige Teilnahme an unserer Studie! <br> Sie haben hiermit die Entscheidungsaufgabe abgeschlossen. Im Folgenden biten wir Sie einige Fragen zu Ihren Einstellungen und Wahrnehmungen beantworten. "
+    
+    # goodbye page 
+    goodbye_text = "Vielen Dank für die Teilnahme an unserer Studie! <br> Sie sind nun am Ende der Studie angelangt und werden nun automatisch weitergeleitet um Ihre Aufwandsentschädigung zu erhalten."

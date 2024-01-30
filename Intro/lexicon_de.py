@@ -17,7 +17,7 @@ class Lexicon:
     consent_p2 = 'Wenn Sie an dieser Studie teilnehmen möchten, werden Sie gebeten, Folgendes zu tun:'
 
     consent_bullet1 = 'Einen Satz von Online-Fragebögen auszufüllen. Möglicherweise werden Sie gebeten, zu bewerten, wie gut bestimmte Aussagen oder Persönlichkeitsmerkmale auf Sie zutreffen.'
-    consent_bullet2= 'Sie werden auch gebeten, einige demografische Informationen anzugeben, darunter Ihr Alter, Geschlecht, politische Orientierung und Einkommen.'
+    consent_bullet2= 'Sie werden auch gebeten, einige demografische Informationen anzugeben, darunter zum Beispiel Ihr Alter, Geschlecht und Einkommen.'
     consent_bullet3 = 'Sie werden verschiedene politische Maßnahmen lesen und darüber abstimmen.'
     
     
@@ -38,7 +38,7 @@ class Lexicon:
 
 
     ### achtung achtung, hier prolific
-    consent_p8 = 'Wenn Ihnen etwas an der Studie oder Ihrer Teilnahme unklar ist, wenn Sie Fragen haben oder ein forschungsbezogenes Problem melden möchten, senden Sie eine E-Mail an jessica.helm@unibas.ch'
+    consent_p8 = 'Wenn Ihnen etwas an der Studie oder Ihrer Teilnahme unklar ist, wenn Sie Fragen haben oder ein forschungsbezogenes Problem melden möchten, senden Sie eine E-Mail an Jessica Helm unter: jessica.helm@unibas.ch'
 
     consent_p9 = 'Indem Sie auf "Weiter" klicken, erklären Sie Ihr Einverständnis zur Teilnahme an dieser Studie und geben an, dass Sie '
 

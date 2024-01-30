@@ -18,7 +18,7 @@ class Lexicon:
     consent_p1 ='Thank you for your interest in taking part in this study. <br> This study will be supervised by MSc Jessica Helm and Prof. Ulf J.J. Hahnel, Faculty of Psychology, University of Basel, Switzerland.'
     consent_p2 = ' If you agree to participate in this study, you will be asked to do the following:'
 
-    consent_bullet1 = 'Report some demographic information, including your age, gender, political partisanship, and income.'
+    consent_bullet1 = 'Report some demographic information, including for example your age, gender and income.'
     consent_bullet2= 'Complete a set of questionnaires. You will be asked about your attitudes and perspectives on different topics.'
     consent_bullet3 = 'You will read several policies and vote on them.'
     

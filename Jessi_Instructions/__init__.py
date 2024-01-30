@@ -95,6 +95,7 @@ class slider(Page):
     form_model = 'player'
     form_fields = ['range_party']
 
+
 # Page sequence
 page_sequence = [ 
     affectiveImagery,

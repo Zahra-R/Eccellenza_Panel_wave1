@@ -114,8 +114,10 @@ class inter_trial(Page):
             'which_language': which_language,
         }
 
+
+
 # Page sequence
 page_sequence = [
     task_page00,
-    inter_trial 
+    inter_trial
     ]
