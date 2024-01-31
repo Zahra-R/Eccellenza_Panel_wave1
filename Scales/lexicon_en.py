@@ -200,3 +200,9 @@ class Lexicon:
     democrats = "Democrats"
     independent_party = "Independent Party"
     other_party = "Other"
+
+    # Transition page
+    Transition_text = "Thank you for your participation so far! <br> You have now completed the policy task and will continue to answer some questions about your attitudes and perceptions. "
+    
+    # goodbye page 
+    goodbye_text = "Thank you for your participation in our study! <br> You are now at the end of the study and will be redirected for compensation."

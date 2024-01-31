@@ -42,10 +42,8 @@ class C(BaseConstants):
 class Subsession(BaseSubsession):
     pass
 
-
 class Group(BaseGroup):
     pass
-
 
 
 class Player(BasePlayer):
@@ -53,6 +51,13 @@ class Player(BasePlayer):
     dataScience = models.BooleanField(initial=False)
     dataTeach = models.BooleanField(initial=False)
     mobileDevice= models.BooleanField(initial=False, blank=True)
+
+def creating_session(subsession:Subsession):
+    import itertools
+    order_tasks = itertools.cycle([1,2,3])
+    for player in subsession.get_players():
+        if subsession.round_number == 1: 
+            player.participant.order_tasks = next(order_tasks)
    
    
 
@@ -62,8 +67,39 @@ class Consent(Page):
     form_fields = ['dataScience', 'dataTeach', 'mobileDevice']
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        if(player.participant.order_tasks == 1):
+            #insert session link for Order_Nina_Jessi_Zahra
+            stringOrder = "http://localhost:8888/join/popevapa"
+        elif(player.participant.order_tasks == 2):
+            #insert session link for Order_Jessi_Zahra_Zahra
+            stringOrder = "http://localhost:8888/join/mapedugo"
+        else:
+            #insert session link for Order_Jessi_Zahra_Nina
+            stringOrder = "http://localhost:8888/join/didubahe"
+
+        return {
+            'stringOrder': stringOrder,
+            'Lexicon': Lexicon,
+            'which_language': which_language
+        }
+    @staticmethod
+    def is_displayed(player:Player):
+        return (player.session.config['consent_form'] =="redirect")
+    
+
+class Consent_Standalone(Page):
+    form_model = 'player'
+    form_fields = ['dataScience', 'dataTeach', 'mobileDevice']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return {
+            'Lexicon': Lexicon,
+            'which_language': which_language
+        }
+    @staticmethod
+    def is_displayed(player:Player):
+        return (player.session.config['consent_form'] =="standalone")
 
 
 
-page_sequence = [Consent]
+page_sequence = [Consent, Consent_Standalone]

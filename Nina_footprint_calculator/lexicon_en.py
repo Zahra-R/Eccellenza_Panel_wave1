@@ -59,9 +59,12 @@ class Lexicon:
     commute_car_type_B = 'Electric (conventional energy) '
     commute_car_type_A = 'Electric (green energy)'
 
-    flying_short_label = 'How many <b>short-distance flights (<3 hours)</b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from Paris to London and back this counts as 2 flights. </i> '
+    flying_short_label = 'How many <b>short-distance flights (<3 hours)</b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from San Francisco to Los Angeles and back this counts as 2 flights. </i> '
+    # for chinese version example:  from Shanghai to Beijing and back
     flying_mid_label ='How many <b>mid-distance flights (3-6 hours) </b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from New York to San Francisco and back this counts as 2 flights. </i> '
-    flying_long_label = 'How many <b>long-distance flights (>6 hours) </b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from London to New York and back this counts as 2 flights. </i> '
+    #for chinese version example:  from Guangzhou to Beijing and back
+    flying_long_label = 'How many <b>long-distance flights (>6 hours) </b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from Miami to London and back this counts as 2 flights. </i> '
+    # for  chinese version example: from Beijing to Jakarta (Indonesia) and back
 
  
 
