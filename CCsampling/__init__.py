@@ -11,31 +11,15 @@ doc = """
 Sampling Paradigma
 """
 
-if LANGUAGE_CODE == 'de':
-    from .lexicon_de import Lexicon
-elif LANGUAGE_CODE == 'zh_hans':
-    from .lexicon_zh_hans import Lexicon
-else:
-    from .lexicon_en import Lexicon
 
 # this is the dict you should pass to each page in vars_for_template,
 # enabling you to do if-statements like {{ if de }} Nein {{ else }} No {{ endif }}
-which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
-which_language[LANGUAGE_CODE[:2]] = True
 
 
 class C(BaseConstants):
     NAME_IN_URL = 'SAMPLING'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 10
-    if LANGUAGE_CODE == 'de':
-        misinfofile = open('CCsampling/ClimateMisinfo_de.json')
-        infofile = open('CCsampling/ClimateInfo_de.json')
-    else:
-        misinfofile = open('CCsampling/ClimateMisinfo_en.json')
-        infofile = open('CCsampling/ClimateInfo_en.json')
-    misinfo = json.load(misinfofile)['CCMisinfo']
-    info = json.load(infofile)['CCInfo']
 
 class Subsession(BaseSubsession):
     pass
@@ -70,6 +54,37 @@ class Player(BasePlayer):
 
 
 def creating_session(subsession:Subsession):
+    if subsession.session.config['language'] == 'de':
+        from .lexicon_de import Lexicon
+        # load misinfo 
+        misinfo_file_path = "CCsampling/ClimateMisinfo_de.json"
+        with open(misinfo_file_path, 'r') as j:
+            misinfofile = json.loads(j.read())
+        
+        # load info 
+        info_file_path = "CCsampling/ClimateInfo_de.json"
+        with open(info_file_path, 'r') as j:
+            infofile = json.loads(j.read())
+
+    elif subsession.session.config['language'] == 'zh_hans':
+        from .lexicon_zh_hans import Lexicon
+    else:
+        from .lexicon_en import Lexicon
+        # load misinfo 
+        misinfo_file_path = "CCsampling/ClimateMisinfo_en.json"
+        with open(misinfo_file_path, 'r') as j:
+            misinfofile = json.loads(j.read())
+            
+        # load info 
+        info_file_path = "CCsampling/ClimateInfo_en.json"
+        with open(info_file_path, 'r') as j:
+            infofile = json.loads(j.read())
+        
+        
+    infofile= infofile['CCInfo']
+    misinfofile= misinfofile['CCMisinfo']
+    subsession.session.myLexicon = Lexicon
+
     import itertools
     reverse_display = itertools.cycle([True, False])
     for player in subsession.get_players():
@@ -79,8 +94,8 @@ def creating_session(subsession:Subsession):
             player.participant.reverseBoxes = next(reverse_display)
             player.participant.seenMisinfo = []
             player.participant.seenMislInfo = []
-
-
+            player.participant.misinfo =  misinfofile
+            player.participant.info =  infofile
 
 
 
@@ -118,10 +133,9 @@ class sampling(Page):
     @staticmethod
     def vars_for_template(player: Player):
         round_number = player.round_number
-        MisinfoText = C.misinfo[player.participant.randomMisinfoArray[round_number-1]]['finalStatement']
-        InfoText = C.info[player.participant.randomInfoArray[round_number-1]]['finalStatement']
-        player.InfohasDebrief = True if "correctedStatement" in C.info[player.participant.randomInfoArray[round_number-1]] else False
-        print("hello mislieading info", C.info[player.participant.randomInfoArray[round_number-1]])
+        MisinfoText = player.participant.misinfo[player.participant.randomMisinfoArray[round_number-1]]['finalStatement']
+        InfoText = player.participant.info[player.participant.randomInfoArray[round_number-1]]['finalStatement']
+        player.InfohasDebrief = True if "correctedStatement" in player.participant.info[player.participant.randomInfoArray[round_number-1]] else False
         # these are tweetids, we are not submitting them. We only submit the index of the statement in the json file (internal statementID)
         #MisinfoID = misinfo[player.participant.randomMisinfoArray[round_number-1]]['tweetid']
         #InfoID = info[player.participant.randomInfoArray[round_number-1]]['tweetid']
@@ -133,8 +147,7 @@ class sampling(Page):
             'MisinfoText': MisinfoText,
             'InfoText': InfoText, 
             'tellingBoxNames': player.participant.telling_box_label,
-            'Lexicon': Lexicon,
-            'which_language': which_language,
+            'Lexicon': player.session.myLexicon
         } 
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
@@ -159,12 +172,11 @@ class boxrating(Page):
     def vars_for_template(player: Player):
         return {
             'round_number': player.round_number,
-            'Lexicon': Lexicon,
-            'which_language': which_language,
+            'Lexicon': player.session.myLexicon
         }
     @staticmethod
     def is_displayed(player: Player):
-        return (player.round_number % 5 == 0)
+        return (player.round_number % 500 == 0)
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
         print('in before next page function', player.boxlikingInfo, player.boxlikingMisinfo, player.boxrecommendationInfo, player.boxrecommendationMisinfo )
@@ -218,8 +230,7 @@ class Conclude(Page):
             'seenMlI': seenMlI,
             'seenMstatements': seenMstatements,
             'seenMcorrections': seenMcorrections,
-            'Lexicon': Lexicon,
-            'which_language': which_language,
+            'Lexicon': player.session.myLexicon
         }
     @staticmethod
     def is_displayed(player: Player):

@@ -23,10 +23,17 @@ SESSION_CONFIGS = [
          num_demo_participants=10,
      ),
       dict(
-         name='Order_Zahra_Nina_Jessi',
+         name='Order_Zahra_Nina_Jessi_de',
   #      app_sequence=['survey','task'],
          app_sequence=['CCsampling_intro', 'CCsampling','Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask', 'Jessi_Instructions',  'Jessi_carbonTax'],
          language = "de",
+         num_demo_participants=10,
+     ),
+     dict(
+         name='Order_Zahra_Nina_Jessi_en',
+  #      app_sequence=['survey','task'],
+         app_sequence=['CCsampling_intro', 'CCsampling','Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask', 'Jessi_Instructions',  'Jessi_carbonTax'],
+         language = "en",
          num_demo_participants=10,
      ),
     dict(
@@ -78,6 +85,8 @@ PARTICIPANT_FIELDS = [
     'seenMisinfo',
     'seenMislInfo',
     'telling_box_label',
+    'info',
+    'misinfo',
 
     ## carbon footprint task
     'task_rounds',
@@ -86,7 +95,9 @@ PARTICIPANT_FIELDS = [
     'task_rounds_J'
     
     ]
-SESSION_FIELDS = []
+SESSION_FIELDS = [
+    'myLexicon'
+]
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
