@@ -11,21 +11,21 @@ SESSION_CONFIGS = [
      dict(
          name='Order_Nina_Jessi_Zahra',
   #      app_sequence=['survey','task'],
-         app_sequence=['Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask', 'Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling',],
+         app_sequence=[ 'Nina_instructions', 'Nina_carbontask','Nina_footprint_calculator',  'Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling'],
 
          num_demo_participants=10,
      ),
       dict(
          name='Order_Jessi_Zahra_Nina',
   #      app_sequence=['survey','task'],
-         app_sequence=['Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling','Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask'],
+         app_sequence=['Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling', 'Nina_instructions', 'Nina_carbontask','Nina_footprint_calculator' ],
 
          num_demo_participants=10,
      ),
       dict(
          name='Order_Zahra_Nina_Jessi',
   #      app_sequence=['survey','task'],
-         app_sequence=['CCsampling_intro', 'CCsampling','Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask', 'Jessi_Instructions',  'Jessi_carbonTax'],
+         app_sequence=['CCsampling_intro', 'CCsampling', 'Nina_instructions', 'Nina_carbontask','Nina_footprint_calculator', 'Jessi_Instructions',  'Jessi_carbonTax'],
          language = "de",
          num_demo_participants=10,
      ),
@@ -45,7 +45,7 @@ SESSION_CONFIGS = [
         dict(
          name='first_draft_NinasPart',
          #app_sequence=[ 'Nina_survey', 'Nina_carbontask', 'Nina_footprint_calculator', 'Nina_questionnaire'],
-         app_sequence= ['Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask'],
+         app_sequence= ['Nina_instructions', 'Nina_carbontask', 'Nina_footprint_calculator'],
          num_demo_participants=10,
      ),
         dict(
@@ -90,7 +90,7 @@ SESSION_FIELDS = []
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
-LANGUAGE_CODE = 'de'
+LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'USD'
