@@ -423,4 +423,4 @@ class goodbye (Page):
 #page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotionNew, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
-page_sequence = [CCEmotionNew, transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
+page_sequence = [ transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
