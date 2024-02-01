@@ -5,13 +5,12 @@
 {% endblock %}
 
 {% block title %}
-    {{ Lexicon.ccc_title }}
+    {{ Lexicon.Additional_title }}
 {% endblock %}
 
 {% block content %}
-<br>
-<p> {{ Lexicon.ccc_header }}</p>
 
+<p> {{ Lexicon.Difficult_header }}</p>
 <style>  
     table.radiotable th, table.radiotable td {
         padding: 12px;
@@ -28,8 +27,17 @@
     }
 </style>
 <table class="radiotable">
-    <tr> <th></th> <th    class="radio-column">  {{ Lexicon.not_at_all }}</th> <th class="radio-column" > </th class="radio-column"> <th class="radio-column"> </th> <th></th> <th    class="radio-column"> {{ Lexicon.very_much }} </th> </tr>
-
+    <tr>
+        <th></th>
+        <th class="radio-column">  {{ Lexicon.difficult_A }}</th>
+        <th class="radio-column" > {{ Lexicon.difficult_B }} </th class="radio-column">
+        <th class="radio-column">  {{ Lexicon.difficult_C }}</th> 
+        <th class="radio-column">  {{ Lexicon.difficult_D }}</th>
+        <th class="radio-column">  {{ Lexicon.difficult_E}}</th>
+        <th class="radio-column">  {{ Lexicon.difficult_F}}</th>
+        
+        <th class="radio-column"> {{ Lexicon.difficult_G }} </th> 
+    </tr>
 
    
     {{ for field in form }}

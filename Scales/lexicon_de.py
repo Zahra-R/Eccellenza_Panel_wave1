@@ -105,13 +105,14 @@ class Lexicon:
     po1Label = "Bei sozialen Themen bin ich..."
     po2Label = "Bei wirtschaftlichen Themen bin ich..."
 
-    # Trust in political institutions from Eurobarometer / Lantian et al 2016
-    pit_title = "Wie stark ist Ihr Vertrauen in öffentliche Institutionen?"
-    pit_header = "Wie viel Vertrauen haben Sie jeweils in in die folgenden Insitutionen?"
-    pit1Label = "Die Regierung"
-    pit2Label = "Regionale oder lokale Behörden"
-    pit3Label = "Justiz und Rechtssystem"
-    pit4Label = "Die Medien"
+    # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
+    pit_title = "Vertrauen im Bezug auf den Klimawandel"
+    pit_header = "Wie sehr vertrauen Sie diesen Akteuren beim Klimawandel?"
+    pit1Label = "der deutschen Regierung"
+    pit2Label = "deutschen Wissenschaftlern"
+    pit3Label = "ausländischen Regierungen"
+    pit4Label = "ausländischen Wissenschaftlern"
+    pit5Label = "Dem Zwischenstaatliche Sachverständigenrat für Klimaänderungen (Intergovernmental Panel on Climate Change, IPCC)"
 
      # Knowledge Question from Allianz Climate Literacy Report
     cck_title = 'Was wissen Sie über den Klimawandel?'
@@ -219,3 +220,45 @@ class Lexicon:
     
     # goodbye page 
     goodbye_text = "Vielen Dank für die Teilnahme an unserer Studie! <br> Sie sind nun am Ende der Studie angelangt und werden nun automatisch weitergeleitet um Ihre Aufwandsentschädigung zu erhalten."
+
+     ## for pre-test Jessi only, Ninas items
+
+    Additional_title=  'Ein paar zusätzliche Fragen'
+    Additional_intro=	'Zuletzt möchten wir Ihnen einige zusätzliche Fragen stellen.'
+	
+    familiar_header	= 'Bitte geben Sie für jede dieser Handlugen an wie vertraut Sie damit sind:'
+    familiar_label1= 'Den eigenen Stromvertrag wählen können, oder zu einem umweltfreundlicheren Vertrag wechslen'
+    familiar_label2	= 'Eine vegetarische Ernährung haben (d.h kein Fleisch und kein Fisch essen'
+    familiar_label3	= 'Mit dem Fahrrad zur Arbeit pendeln'
+    familiar_label4	= 'Kauf und Konsum von importierten Lebensmitteln (d.g. aus anderen Ländern)'
+    familiar_label5	= 'Kauf und Konsum von regionalen Lebensmitteln (aus Ihrer Region/Ihrem Land)'
+    familiar_label6	= 'Recycling (z.B. Papier, Glas oder Metalle)'
+    familiar_label7 = 	'mit dem Zug in den Urlaub verreisen	'
+    familiar_label8 = 	'mit dem Bus in den Urlaub verreisen	'
+    familiar_label9	= 'mit dem Flugzeug in den Urlaub verreisen	'
+    familiar_A =	'sehr unvertraut '	
+    familiar_B	= 'unvertraut'
+    familiar_C ='etwas unvertraut '	
+    familiar_D=	'weder unvertraut noch vertraut	'
+    familiar_E	= 'etwas vertraut'	
+    familiar_F	= 'vertraut' 	
+    familiar_G	= 'sehr vertraut'
+		
+    Difficult_header = '	Bitte geben Sie an, wie einfach oder schwierig es für eine durchschnittliche Person in Ihrem Land wäre, die folgenden Handlungen auszuführen:'
+    difficult_label1 = 	'Den eigenen Stromvertrag wählen, oder zu einem umweltfreundlicheren Vertrag wechslen'	
+    difficult_label2 = 	'Eine vegetarische Ernährung haben (d.h kein Fleisch und kein Fisch essen'	
+    difficult_label3 = 	'Mit dem Fahrrad zur Arbeit pendeln'	
+    difficult_label4 = 	'importierte Lebensmittel (d.g. aus anderen Ländern) kaufen und konsumieren	'
+    difficult_label5 = 'regionale Lebensmittel (aus Ihrer Region/Ihrem Land) kaufen und konsumieren'	
+    difficult_label6 = 	'Recycling (z.B. Papier, Glas oder Metalle)	'
+    difficult_label7 = 	'mit dem Zug in den Urlaub verreisen	'
+    difficult_label8 = 'mit dem Bus in den Urlaub verreisen	'
+    difficult_label9 = 	'mit dem Flugzeug in den Urlaub verreisen'	
+		
+    difficult_A	= 'sehr schwierg'	
+    difficult_B	= 'schwierg'	
+    difficult_C	= 'etwas schwierg'	
+    difficult_D	= 'weder schwierg noch einfach'	
+    difficult_E	= 'etwas einfach'	
+    difficult_F	= 'einfach'	
+    difficult_G	= 'sehr einfach'	

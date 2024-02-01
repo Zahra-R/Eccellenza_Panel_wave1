@@ -210,11 +210,12 @@ class Player(BasePlayer):
     po1 = make_likert5(Lexicon.po1Label)
     po2 = make_likert5(Lexicon.po2Label)
 
-    # Trust in political institutions from Eurobarometer / Lantian et al 2016  
+    # Trust in institutions in terms of cc Based on (Pan et al., 2023)
     pit1 = make_likert7(Lexicon.pit1Label)
     pit2 = make_likert7(Lexicon.pit2Label)
     pit3 = make_likert7(Lexicon.pit3Label)
     pit4 = make_likert7(Lexicon.pit4Label)
+    pit5 = make_likert7(Lexicon.pit5Label)
 
     # new knowledge questions Allianz
     cknow1 = models.StringField(
@@ -283,6 +284,28 @@ class Player(BasePlayer):
             Lexicon.know_10c, Lexicon.know_10d, Lexicon.know_dontknow,
         ],
     )
+
+    ## Familiar  only pretest Jessi. Ninas quesitons
+    fam1 = make_likert7(Lexicon.familiar_label1) 
+    fam2 = make_likert7(Lexicon.familiar_label2)
+    fam3 = make_likert7(Lexicon.familiar_label3)
+    fam4 = make_likert7(Lexicon.familiar_label4)
+    fam5 = make_likert7(Lexicon.familiar_label5) 
+    fam6 = make_likert7(Lexicon.familiar_label6)
+    fam7 = make_likert7(Lexicon.familiar_label7)
+    fam8 = make_likert7(Lexicon.familiar_label8)
+    fam9 = make_likert7(Lexicon.familiar_label9)
+
+    ## Difficult only pretest Jessi. Ninas quesitons
+    diff1 = make_likert7(Lexicon.difficult_label1) 
+    diff2 = make_likert7(Lexicon.difficult_label2)
+    diff3 = make_likert7(Lexicon.difficult_label3)
+    diff4 = make_likert7(Lexicon.difficult_label4)
+    diff5 = make_likert7(Lexicon.difficult_label5) 
+    diff6 = make_likert7(Lexicon.difficult_label6)
+    diff7 = make_likert7(Lexicon.difficult_label7)
+    diff8 = make_likert7(Lexicon.difficult_label8)
+    diff9 = make_likert7(Lexicon.difficult_label9)
 
   
   
@@ -391,7 +414,7 @@ class PolOrientation(Page):
     
 class PITrust(Page):
     form_model = 'player'
-    form_fields= ['pit1', 'pit2', 'pit3', 'pit4']
+    form_fields= ['pit1', 'pit2', 'pit3', 'pit4', 'pit5']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
@@ -417,10 +440,24 @@ class goodbye (Page):
     form_model = 'player'
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
+    
+class Familiar (Page): 
+    form_model = 'player'
+    form_fields = ['fam1', 'fam2', 'fam3', 'fam4', 'fam5', 'fam6', 'fam7', 'fam8', 'fam9' ]
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
+    
+class Difficult (Page): 
+    form_model = 'player'
+    form_fields = ['diff1', 'diff2', 'diff3', 'diff4', 'diff5', 'diff6', 'diff7', 'diff8', 'diff9' ]
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
+    
+
 
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
 #page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotionNew, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
-page_sequence = [ transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
+page_sequence = [ transition, CCConcern, IBValues, CCEmotion, Familiar, Difficult,  Demographics, goodbye]
