@@ -84,12 +84,12 @@ class Lexicon:
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
     wvv_title = "Wie sehen Sie die Welt?"
     wvv_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    wvv1Label = "Unsere Gesellschaft wäre besser dran, wenn der Reichtum gleichmäßiger verteilt wäre."
-    wvv2Label = "Viele Probleme in unserer Gesellschaft resultieren aus dem Verschwinden des traditionellen Familienbildes, in der der Mann arbeitet und die Frau zu Hause bleibt."
-    wvv3Label = "Diskriminierung von Minderheiten ist in unserem Land immer noch ein sehr ernstes Problem."
-    wvv4Label = "Die Regierung mischt sich viel zu sehr in unseren Alltag ein."
-    wvv5Label = "Ich finde, dass erfolgreiche Geschäftsleute das Recht haben, ihren Reichtum so auszukosten, wie sie es für richtig halten."
-    wvv6Label = "Zu viele Menschen erwarten, dass die Gesellschaft Dinge für sie tut, die sie selbst tun sollten."
+    wvv1Label = "Unserer Gesellschaft würde es besser gehen wenn die Verteilung von Reichtum gerechter wäre."
+    wvv2Label = "Viele Probleme in unsere Gesellschaft stammen von dem Rückgang der tradtionellen Familie, wo der Mann arbeitet und die Frau zuhause bleibt."
+    wvv3Label = "Diskriminierung von Minderheiten ist immernoch ein sehr ernstet Problem in unserem Land."
+    wvv4Label = "Die Regierung mischt sich viel zu viel in unser alltägliches Leben ein."
+    wvv5Label = "Ich finde dass Menschen, die im Geschäftsleben erfolgreich sind, das Recht haben, ihren Reichtum so zu genießen, wie sie es für richtig halten."
+    wvv6Label = "Zu viele Menschen erwarten dass die Gesellschaft Dinge für sie macht, die sie für sich selbst machen sollten."
 
     # Importance of biospheric values van der Linden, 2015
     ibv_title = "Wichtige Prinzipien in Umweltfragen"
