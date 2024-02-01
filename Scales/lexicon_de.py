@@ -44,7 +44,7 @@ class Lexicon:
     ccc15Label = "Die Folgen des Klimawandels sind unvorhersehbar, deswegen ist mein klimafreundliches Verhalten vergeblich."
     ccc16Label = "Klimaschutz behindert unnötigerweise das Wirtschaftswachstum."
 
-    #Climate Change Emotion Knauf/Truelove
+    #Climate Change Emotion only for Jessis pretest
     cce_title =  "Einstellungen zum Klimawandel"
     cce_header = "Wenn ich an den Klimawandel denke, dann fühle ich..."
     cce1Label = "Wut"
@@ -53,6 +53,26 @@ class Lexicon:
     cce4Label = "Freude"
     cce5Label = "Neugier"
     cce6Label = "Hoffnung"
+
+    #new emotions
+     # new emotions
+    #Climate Change Emotion
+
+    cceA1Label = "wütend"
+    cceA2Label = "zornig"
+    cceA3Label = "gereizt"
+    cceF1Label = "furchtsam"
+    cceF2Label = "verängstigt"
+    cceF3Label = "erschrocken"
+    cceS1Label = "traurig"
+    cceS2Label = "betrübt"
+    cceS3Label = "unglücklich"
+    cceH1Label = "hoffnungsvoll"
+    cceH2Label = "optimistisch"
+    cceH3Label = "zuversichtlich"
+    cceG1Label = "schuldig"
+    cceG2Label = "bedauernd"
+    cceG3Label = "reuevoll"
 
     
     # Personal efficacy Leiserowitz et al, 2010

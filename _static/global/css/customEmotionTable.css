@@ -1,0 +1,59 @@
+.att-box{
+    border-style: dashed;
+    padding: 0px 15px 5px 15px;
+    /* background-color: lightpink; */
+    border-width: medium ;
+    margin-top: 30px;
+}
+
+
+input.larger {
+  width: 3vw;
+  height: 3vw;
+
+  max-width: 15px;
+  max-height: 15px;
+
+  min-width: 5px;
+  min-height: 5px;
+}
+
+
+
+
+input[type='range']::-webkit-slider-thumb {
+    width: 15px;
+    -webkit-appearance: none;
+    height: 20px;
+    cursor: pointer;
+    background: bisque; 
+    border-radius: 50%;
+  }
+
+table.radiotable th, table.radiotable td {
+  padding: 5px;
+  text-align: center; /* Center-align the entire table */
+  max-width: none; /* No max-width for the entire table */
+  width: 30px;
+}
+
+/* Left-align the first column */
+table.radiotable th:first-child,
+table.radiotable td:first-child {
+  text-align: left;
+
+}
+
+
+/* Alternating row colors every three rows */
+table.radiotable tr:nth-child(6n+2),
+table.radiotable tr:nth-child(6n+3),
+table.radiotable tr:nth-child(6n+4) {
+  background-color: #c0e3e0; /* Color for the first three rows */
+}
+
+table.radiotable tr:nth-child(6n+5),
+table.radiotable tr:nth-child(6n+6),
+table.radiotable tr:nth-child(6n+7) {
+  background-color: #dfdfdf/* Your alternate color */; /* Color for the next three rows */
+} 

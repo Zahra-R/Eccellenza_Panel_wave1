@@ -46,7 +46,7 @@ class Lexicon:
     ccc16Label = "Climate protection needlessly impedes economic growth."
 
 
-    #Climate Change Emotion Knauf/Truelove
+    #Climate Change Emotion only for jessi pre-test 
     cce_title = "Attitudes about Climate Change"
     cce_header = "When I think of Climate Change I feel..."
     cce1Label = "Anger"
@@ -57,7 +57,25 @@ class Lexicon:
     cce6Label = "Hope"
 
 
-    
+    # new emotions
+    #Climate Change Emotion
+
+    cceA1Label = "angry"
+    cceA2Label = "mad"
+    cceA3Label = "irritated"
+    cceF1Label = "fearful"
+    cceF2Label = "afraid"
+    cceF3Label = "scared"
+    cceS1Label = "sad"
+    cceS2Label = "sorrowful"
+    cceS3Label = "unhappy"
+    cceH1Label = "hopeful"
+    cceH2Label = "optimistic"
+    cceH3Label = "upbeat"
+    cceG1Label = "guilty"
+    cceG2Label = "regretful"
+    cceG3Label = "remorseful"
+
     # Personal efficacy Leiserowitz et al, 2010
     #Only item 1
     pe_title = "Attitudes about Climate Change"
