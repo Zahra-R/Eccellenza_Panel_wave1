@@ -2,76 +2,76 @@
 {
     "PolicyTable": [
         [
-            "<b>In general on all emissions</b>", 
-            "<b>234￥/ton</b>",
-            "<b> Dividend to citizens</b>",
-            "<b>in 1 year</b>"
+            "<b>一般对所有排放</b>", 
+            "<b>234元/吨</b>",
+            "<b>向公民发放红利</b>",
+            "<b>1 年内</b>"
         ],
         [
-            "<b>Meat & Dairy</b>", 
-            "<b>467￥/ton</b>", 
-            "<b>Dividend to citizens</b>",
-            "<b>in 1 year</b>"
+            "<b>肉类和乳制品</b>", 
+            "<b>467元/吨</b>", 
+            "<b>向公民发放红利</b>",
+            "<b>1 年内</b>"
         ],
         [
-            "<b>Energy generation</b>", 
-            "<b>467￥/ton</b>", 
-            "<b>Dividend to citizens</b>",
-            "<b>in 1 year</b>"
+            "<b>能源生产</b>", 
+            "<b>467元/吨</b>", 
+            "<b>向公民发放红利</b>",
+            "<b>1 年内</b>"
         ],
         [
-            "<b>In general on all emissions</b>", 
-            "<b>234￥/ton</b>", 
-            "<b>Investment in Carbon Dioxide Removal</b>",
-            "<b>in 1 year</b>"
+            "<b>一般对所有排放</b>", 
+            "<b>234元/吨</b>", 
+            "<b>投资于二氧化碳去除</b>",
+            "<b>1 年内</b>"
         ],
         [
-            "<b>Energy generation</b>", 
-            "<b>234￥/ton</b>",
-            "<b>Investment in Carbon Dioxide Removal</b>",
-            "<b>in 1 year</b>"
+            "<b>能源生产</b>", 
+            "<b>234元/吨</b>",
+            "<b>投资于二氧化碳去除</b>",
+            "<b>1 年内</b>"
         ],
         [
-            "<b>Meat & Dairy</b>", 
-            "<b>467￥/ton</b>",
-            "<b>Investment in Carbon Dioxide Removal</b>",
-            "<b>in 1 year</b>"
+            "<b>肉类和乳制品</b>", 
+            "<b>467元/吨</b>",
+            "<b>投资于二氧化碳去除</b>",
+            "<b>1 年内</b>"
         ],
         [
-            "<b>Meat & Dairy</b>", 
-            "<b>234￥/ton</b>",
-            "<b>Dividend to citizens</b>",
-            "<b>in 7 years</b>"
+            "<b>肉类和乳制品</b>", 
+            "<b>234元/吨</b>",
+            "<b>向公民发放红利</b>",
+            "<b>7 年内</b>"
         ],
         [
-            "<b>Energy generation</b>", 
-            "<b>234￥/ton</b>",
-            "<b>Dividend to citizens</b>",
-            "<b>in 7 years</b>"
+            "<b>能源生产</b>", 
+            "<b>234元/吨</b>",
+            "<b>向公民发放红利</b>",
+            "<b>7 年内</b>"
         ],
         [
-            "<b>In general on all emissions</b>", 
-            "<b>467￥/ton</b>",
-            "<b>Dividend to citizens</b>",
-            "<b>in 7 years</b>"
+            "<b>一般对所有排放</b>", 
+            "<b>467元/吨</b>",
+            "<b>向公民发放红利</b>",
+            "<b>7 年内</b>"
         ],
         [
-            "<b>Meat & Dairy</b>", 
-            "<b>234￥/ton</b>",
-            "<b>Investment in Carbon Dioxide Removal</b>",
-            "<b>in 7 years</b>"
+            "<b>肉类和乳制品</b>",
+            "<b>234元/吨</b>",
+            "<b>投资于二氧化碳去除</b>",
+            "<b>7 年内</b>"
         ],
         [
-            "<b>In general on all emissions</b>", 
-            "<b>467￥/ton</b>", 
-            "<b>Investment in Carbon Dioxide Removal</b>",
-            "<b>in 7 years</b>"
+            "<b>一般对所有排放</b>", 
+            "<b>467元/吨</b>",
+            "<b>投资于二氧化碳去除</b>",
+            "<b>7 年内</b>"
         ],
         [
-            "<b>Energy generation</b>", 
-            "<b>467￥/ton</b>",
-            "<b>Investment in Carbon Dioxide Removal</b>",
-            "<b>in 7 years</b"
+            "<b>能源生产</b>", 
+            "<b>467元/吨</b>",
+            "<b>投资于二氧化碳去除</b>",
+            "<b>7 年内</b"
         ]
     ]
 }
