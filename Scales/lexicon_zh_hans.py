@@ -76,12 +76,12 @@ class Lexicon:
     wvv6Label = "Too many people expect society to do things for them that they should be doing for themselves."
 
    # Importance of biospheric values van der Linden, 2015   
-    ibv_title = "Guiding principles in enviromental issues"
-    ibv_header = "How important are the following values to you as guiding principles of your life?"
-    ibv1Label = "Respecting the Earth (harmony with other species)"
-    ibv2Label = "Protecting the Environment (preserving nature)"
-    ibv3Label = "Preventing Pollution (protecting natural resources)"
-    ibv4Label = "Unity with Nature (fitting into nature)"
+    ibv_title = "环境问题的指导原则"
+    ibv_header = "以下价值作为你生活的指导原则对你来说有多重要？"
+    ibv1Label = "尊重地球（与其他物种和谐相处"
+    ibv2Label = "保护环境（保全自然"
+    ibv3Label = "防止污染（保护自然资源"
+    ibv4Label = "与自然合一（融入自然"
 
     # Political Orientation Pennycook et al 2020
     po_title = "Political Orientation"
