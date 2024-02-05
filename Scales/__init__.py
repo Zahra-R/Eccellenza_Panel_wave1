@@ -254,7 +254,7 @@ class Player(BasePlayer):
 
 
     # Personal efficacy Leiserowitz et al, 2010
-    pe1 = make_likert7(Lexicon.pe1Label)
+   # pe1 = make_likert7(Lexicon.pe1Label)
   
 
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
@@ -442,12 +442,7 @@ class CCKnowledge(Page):
         return dict(Lexicon=Lexicon, **which_language)
     
 
-class PEfficacy(Page):
-    form_model = 'player'
-    form_fields= ['pe1' ]
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+
     
 class WVValues(Page):
     form_model = 'player'
