@@ -110,7 +110,13 @@ def get_education_choices(language_code):
         ]
     elif language_code == 'zh_hans':
         education_choices = [
-            # Add choices for Chinese language if needed
+            Lexicon.education_label, 
+            Lexicon.high_school,
+            Lexicon.vocational_education,
+            Lexicon.some_college, 
+            Lexicon.bachelors_degree,
+            Lexicon.masters_degree,
+            Lexicon.doctoral_degree
         ]
     else:
         education_choices = [
@@ -146,6 +152,65 @@ def get_party_choices(language_code):
             Lexicon.other_party
         ]
     return party_choices
+
+def get_gender_choices(language_code):
+    gender_choices = []
+    if language_code == 'de':
+        party_choices = [    
+            Lexicon.female,
+            Lexicon.male,
+            Lexicon.diverse, 
+            Lexicon.other
+        ]
+    elif language_code == 'zh_hans':
+        gender_choices = [
+            Lexicon.female,
+            Lexicon.male,
+            Lexicon.other
+        ]
+    else:
+        gender_choices = [
+            Lexicon.female,
+            Lexicon.male,
+            Lexicon.diverse, 
+            Lexicon.other
+        ]
+    return gender_choices
+
+def get_income_choices(language_code):
+    income_choices = []
+    if language_code == 'de':
+        income_choices = [    
+            Lexicon.income_label,
+            Lexicon.income_less_than_A,
+            Lexicon.income_A_to_B,
+            Lexicon.income_B_to_C,
+            Lexicon.income_C_to_D,
+            Lexicon.income_more_than_D,
+            Lexicon.prefer_not_to_say
+        ]
+    elif language_code == 'zh_hans':
+        income_choices = [
+            Lexicon.income_label,
+            Lexicon.income_less_than_A,
+            Lexicon.income_A_to_B,
+            Lexicon.income_B_to_C,
+            Lexicon.income_C_to_D,
+            Lexicon.income_D_to_E,
+            Lexicon.income_more_than_E,
+            Lexicon.prefer_not_to_say
+        ]
+    else:
+        income_choices = [
+            Lexicon.income_label,
+            Lexicon.income_less_than_A,
+            Lexicon.income_A_to_B,
+            Lexicon.income_B_to_C,
+            Lexicon.income_C_to_D,
+            Lexicon.income_more_than_D,
+            Lexicon.prefer_not_to_say
+        ]
+    return income_choices
 
 class Player(BasePlayer):
     ### Climate Change Concern Scale by Tobler et al. 2012
@@ -317,19 +382,12 @@ class Player(BasePlayer):
 
     gender = models.StringField(
     label=Lexicon.gender_label,
-    choices=[Lexicon.female, Lexicon.male, Lexicon.diverse, Lexicon.other],
+    choices=get_gender_choices(LANGUAGE_CODE),
     )
 
     income = models.StringField(
         label=Lexicon.income_label,
-        choices=[
-            Lexicon.income_less_than_A,
-            Lexicon.income_A_to_B,
-            Lexicon.income_B_to_C,
-            Lexicon.income_C_to_D,
-            Lexicon.income_more_than_D,
-            Lexicon.prefer_not_to_say,
-        ],
+        choices=get_income_choices(LANGUAGE_CODE),
     )
 
     education = models.StringField(

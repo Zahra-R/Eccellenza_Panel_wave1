@@ -29,6 +29,8 @@ class C(BaseConstants):
     NUM_ROUNDS = 12
     if LANGUAGE_CODE == 'de':
         POLICY_COMBINATIONS_TABLE = open('Jessi_carbonTax/Policy_Combinations_Table_de.json')
+    elif LANGUAGE_CODE == 'zh_hans':
+        POLICY_COMBINATIONS_TABLE = open('Jessi_carbonTax/Policy_Combinations_Table_zh_hans.json')
     else:
         POLICY_COMBINATIONS_TABLE = open('Jessi_carbonTax/Policy_Combinations_Table_en.json')
     PolicyTable = json.load(POLICY_COMBINATIONS_TABLE)['PolicyTable']
@@ -36,6 +38,8 @@ class C(BaseConstants):
     def get_attributes():
         if LANGUAGE_CODE == 'de':
             return ["Sektor", "Preis", "Einnahmenverwendung", "Inkrafttreten"]
+        elif LANGUAGE_CODE == 'zh_hans':
+            return["行业", "价格", "收入机制", "实施时间"]
         else:
             return ["Sector", "Price", "Revenue mechanism", "Implementation timing"]
 
