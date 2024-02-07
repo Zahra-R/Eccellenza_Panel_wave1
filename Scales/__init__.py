@@ -1,8 +1,8 @@
 import random
 
 from otree.api import *
-
 from settings import LANGUAGE_CODE
+
 
 doc = """
 How to translate an app to multiple languages (e.g. English and German).
@@ -18,36 +18,36 @@ When you change the LANGUAGE_CODE in settings.py, the language will automaticall
 Note: this technique does not require .po files, which are a more complex technique.    
 """
 
-if LANGUAGE_CODE == 'de':
-    from .lexicon_de import Lexicon
-elif LANGUAGE_CODE == 'zh_hans':
-    from .lexicon_zh_hans import Lexicon
-else:
-    from .lexicon_en import Lexicon
-
-
-# this is the dict you should pass to each page in vars_for_template,
-# enabling you to do if-statements like {{ if de }} Nein {{ else }} No {{ endif }}
-which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
-which_language[LANGUAGE_CODE[:2]] = True
-
 
 class C(BaseConstants):
     NAME_IN_URL = 'panel_study'
     NUM_ROUNDS = 1
     PLAYERS_PER_GROUP = None
 
-
 class Subsession(BaseSubsession):
     pass
-
 
 class Group(BaseGroup):
     pass
 
+def creating_session(subsession:Subsession):
+    if subsession.session.config['language'] == 'de':
+        from .lexicon_de import Lexicon        
+
+    elif subsession.session.config['language'] == 'zh_hans':
+        from .lexicon_zh_hans import Lexicon
+    else:
+        from .lexicon_en import Lexicon  
+    subsession.session.myLexicon = Lexicon
+
 
 # custom function to automatically make likert type fields with 5 options
 # custom function to automatically make 4 option fields
+    
+def make_fieldlabel(nameofScale, numberItems, player, lexicon):
+     for i in range(1, numberItems+ 1):
+        i = 10
+
 def make_options4(label):
         return models.IntegerField(
             choices=[1,2,3,4],
@@ -92,7 +92,7 @@ def make_likert10(label):
             )
 
 # functions to generate education and party choices based on language
-def get_education_choices(language_code):
+def get_education_choices(language_code, Lexicon):
     education_choices = []
 
     if language_code == 'de':
@@ -122,7 +122,7 @@ def get_education_choices(language_code):
         ]
     return education_choices
 
-def get_party_choices(language_code):
+def get_party_choices(language_code, Lexicon):
     party_choices = []
     if language_code == 'de':
         party_choices = [    
@@ -148,6 +148,7 @@ def get_party_choices(language_code):
     return party_choices
 
 class Player(BasePlayer):
+    Lexicon = BasePlayer.session.myLexicon
     ### Climate Change Concern Scale by Tobler et al. 2012
     ccc1 = make_likert5(Lexicon.ccc1Label) ## concern 4 items
     ccc2 = make_likert5(Lexicon.ccc2Label)
@@ -200,75 +201,16 @@ class Player(BasePlayer):
     pit4 = make_likert7(Lexicon.pit4Label)
 
     # new knowledge questions Allianz
-    cknow1 = models.StringField(
-        label = Lexicon.know_1qu,
-        choices=[
-            Lexicon.know_1a, Lexicon.know_1b,
-            Lexicon.know_1c, Lexicon.know_dontknow,
-        ],
-    )
-    cknow2 = models.StringField(
-        label = Lexicon.know_2qu,
-        choices=[
-            Lexicon.know_2a, Lexicon.know_2b,
-            Lexicon.know_2c, Lexicon.know_dontknow,
-        ],
-    )
-    cknow3 = models.StringField(
-        label = Lexicon.know_3qu,
-        choices=[
-            Lexicon.know_3a, Lexicon.know_3b,
-            Lexicon.know_3c, Lexicon.know_dontknow,
-        ],
-    )
-    cknow4 = models.StringField(
-        label = Lexicon.know_4qu,
-        choices=[
-            Lexicon.know_4a, Lexicon.know_4b,
-            Lexicon.know_4c, Lexicon.know_dontknow,
-        ],
-    )
+    cknow1 = models.StringField(label = Lexicon.know_1qu, choices=[ Lexicon.know_1a, Lexicon.know_1b, Lexicon.know_1c, Lexicon.know_dontknow,         ],     )     
+    cknow2 = models.StringField(         label = Lexicon.know_2qu,         choices=[ Lexicon.know_2a, Lexicon.know_2b, Lexicon.know_2c, Lexicon.know_dontknow,         ],     )     
+    cknow3 = models.StringField(         label = Lexicon.know_3qu,         choices=[ Lexicon.know_3a, Lexicon.know_3b, Lexicon.know_3c, Lexicon.know_dontknow,         ],     )
+    cknow4 = models.StringField(         label = Lexicon.know_4qu,         choices=[ Lexicon.know_4a, Lexicon.know_4b, Lexicon.know_4c, Lexicon.know_dontknow,         ],     )  
+    cknow5 = models.StringField(         label = Lexicon.know_5qu,         choices=[ Lexicon.know_5a, Lexicon.know_5b, Lexicon.know_5c, Lexicon.know_dontknow,         ],     )     
+    cknow6 = models.StringField(         label = Lexicon.know_6qu,         choices=[ Lexicon.know_6a, Lexicon.know_6b, Lexicon.know_6c, Lexicon.know_dontknow,         ],     ) 
+    cknow8 = models.StringField(         label = Lexicon.know_8qu,         choices=[ Lexicon.know_8a, Lexicon.know_8b, Lexicon.know_8c, Lexicon.know_dontknow,         ],     )     
+    cknow9 = models.StringField(         label = Lexicon.know_3qu,         choices=[ Lexicon.know_9a, Lexicon.know_9b, Lexicon.know_9c, Lexicon.know_9d , Lexicon.know_dontknow,         ],     )     
+    cknow10 = models.StringField(        label = Lexicon.know_10qu,        choices=[ Lexicon.know_10a, Lexicon.know_10b, Lexicon.know_10c, Lexicon.know_10d, Lexicon.know_dontknow,         ],     )
 
-
-    cknow5 = models.StringField(
-        label = Lexicon.know_5qu,
-        choices=[
-            Lexicon.know_5a, Lexicon.know_5b,
-            Lexicon.know_5c, Lexicon.know_dontknow,
-        ],
-    )
-    cknow6 = models.StringField(
-        label = Lexicon.know_6qu,
-        choices=[
-            Lexicon.know_6a, Lexicon.know_6b,
-            Lexicon.know_6c, Lexicon.know_dontknow,
-        ],
-    )
-
-    cknow8 = models.StringField(
-        label = Lexicon.know_8qu,
-        choices=[
-            Lexicon.know_8a, Lexicon.know_8b,
-            Lexicon.know_8c, Lexicon.know_dontknow,
-        ],
-    )
-    cknow9 = models.StringField(
-        label = Lexicon.know_3qu,
-        choices=[
-            Lexicon.know_9a, Lexicon.know_9b,
-            Lexicon.know_9c, Lexicon.know_9d , Lexicon.know_dontknow,
-        ],
-    )
-    cknow10 = models.StringField(
-        label = Lexicon.know_10qu,
-        choices=[
-            Lexicon.know_10a, Lexicon.know_10b,
-            Lexicon.know_10c, Lexicon.know_10d, Lexicon.know_dontknow,
-        ],
-    )
-
-  
-  
     ### Demographics
     age = models.IntegerField(
         label=Lexicon.age_label,
@@ -277,8 +219,7 @@ class Player(BasePlayer):
 
     gender = models.StringField(
     label=Lexicon.gender_label,
-    choices=[Lexicon.female, Lexicon.male, Lexicon.diverse, Lexicon.other],
-    )
+    choices=[Lexicon.female, Lexicon.male, Lexicon.diverse, Lexicon.other],)
 
     income = models.StringField(
         label=Lexicon.income_label,
@@ -294,7 +235,7 @@ class Player(BasePlayer):
 
     education = models.StringField(
         label=Lexicon.education_label,
-        choices=get_education_choices(LANGUAGE_CODE),
+        choices=get_education_choices(LANGUAGE_CODE, Lexicon),
     )
 
     residential_area = models.StringField(
@@ -309,23 +250,26 @@ class Player(BasePlayer):
 
     party_affiliation = models.StringField(
         label=Lexicon.party_affiliation_label,
-        choices=get_party_choices(LANGUAGE_CODE),
+        choices=get_party_choices(LANGUAGE_CODE, Lexicon),
     )
 
 
 class CCConcern(Page):
     form_model = 'player'
     form_fields= ['ccc1', 'ccc2', 'ccc3', 'ccc4',  'ccc10', 'ccc11', 'ccc12', 'ccc13', 'ccc14', 'ccc15', 'ccc16'  ]
+    print(form_fields[0])
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        #player.formfields.ccc1.label="test"
+        return dict(Lexicon=player.session.myLexicon)
     
 class CCEmotion(Page):
     form_model = 'player'
     form_fields= ['cce1', 'cce2', 'cce3', 'cce4', 'cce5', 'cce6']
+  
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        return dict(Lexicon=player.session.myLexicon)
     
     
 class CCKnowledge(Page):
@@ -333,7 +277,7 @@ class CCKnowledge(Page):
     form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow8','cknow9', 'cknow10']
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        return dict(Lexicon=player.session.myLexicon)
     
 
 class PEfficacy(Page):
@@ -341,57 +285,54 @@ class PEfficacy(Page):
     form_fields= ['pe1' ]
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        return dict(Lexicon=player.session.myLexicon)
     
 class WVValues(Page):
     form_model = 'player'
     form_fields= ['wvv1', 'wvv2', 'wvv3', 'wvv4', 'wvv5', 'wvv6']
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        return dict(Lexicon=player.session.myLexicon)
 
 class IBValues(Page):
     form_model = 'player'
     form_fields= ['ibv1', 'ibv2', 'ibv3', 'ibv4']
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        return dict(Lexicon=player.session.myLexicon)
     
 class PolOrientation(Page):
     form_model = 'player'
     form_fields= ['po1', 'po2']
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        return dict(Lexicon=player.session.myLexicon)
     
 class PITrust(Page):
     form_model = 'player'
     form_fields= ['pit1', 'pit2', 'pit3', 'pit4']
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
-    
-
-
-    
+        return dict(Lexicon=player.session.myLexicon)
+        
 class Demographics(Page):
     form_model = 'player'
     form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code']
 
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        return dict(Lexicon=player.session.myLexicon)
 
 class transition (Page): 
     form_model = 'player'
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        return dict(Lexicon=player.session.myLexicon)
 
 class goodbye (Page): 
     form_model = 'player'
     def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+        return dict(Lexicon=player.session.myLexicon)
 
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 

@@ -12,14 +12,14 @@ SESSION_CONFIGS = [
          name='Order_Nina_Jessi_Zahra',
   #      app_sequence=['survey','task'],
          app_sequence=['Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask', 'Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling',],
-
+         language = "de",
          num_demo_participants=10,
      ),
       dict(
          name='Order_Jessi_Zahra_Nina',
   #      app_sequence=['survey','task'],
          app_sequence=['Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling','Nina_footprint_calculator', 'Nina_instructions', 'Nina_carbontask'],
-
+         language = "de",
          num_demo_participants=10,
      ),
       dict(
@@ -40,6 +40,7 @@ SESSION_CONFIGS = [
          name='first_draft_Panel_scales_pure',
   #      app_sequence=['survey','task'],
          app_sequence=['Scales'],
+         language="de",
 
          num_demo_participants=10,
      ),
@@ -77,6 +78,7 @@ PARTICIPANT_FIELDS = [
 
     ## Overall Structure
     'order_tasks',
+    'pLangCode',
 
      #CC SAMPLING FIELDS
     'randomInfoArray',
@@ -85,8 +87,6 @@ PARTICIPANT_FIELDS = [
     'seenMisinfo',
     'seenMislInfo',
     'telling_box_label',
-    'info',
-    'misinfo',
 
     ## carbon footprint task
     'task_rounds',
@@ -96,7 +96,8 @@ PARTICIPANT_FIELDS = [
     
     ]
 SESSION_FIELDS = [
-    'myLexicon'
+    'myLexicon',
+    'myLangCode'
 ]
 
 # ISO-639 code

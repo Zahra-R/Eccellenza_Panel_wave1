@@ -20,6 +20,26 @@ class C(BaseConstants):
     NAME_IN_URL = 'SAMPLING'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 10
+    ### German Tweets
+    misinfo_path_de = "CCsampling/ClimateMisinfo_de.json"
+    with open(misinfo_path_de, 'r') as j:
+        misinfofile_de = json.loads(j.read())
+    info_path_de = "CCsampling/ClimateInfo_de.json"
+    with open(info_path_de, 'r') as j:
+        infofile_de = json.loads(j.read())
+    ### English Tweets
+    misinfo_path_en = "CCsampling/ClimateMisinfo_en.json"
+    with open(misinfo_path_en, 'r') as j:
+        misinfofile_en = json.loads(j.read())    
+    info_path_en = "CCsampling/ClimateInfo_en.json"
+    with open(info_path_en, 'r') as j:
+        infofile_en = json.loads(j.read())
+
+    ## all tweets
+    infofile_de= infofile_de['CCInfo']
+    misinfofile_de= misinfofile_de['CCMisinfo']
+    infofile_en= infofile_en['CCInfo']
+    misinfofile_en= misinfofile_en['CCMisinfo']
 
 class Subsession(BaseSubsession):
     pass
@@ -45,7 +65,6 @@ class Player(BasePlayer):
     reverseBoxes = models.BooleanField()
     tellingBoxLabels = models.BooleanField()
 
-
     click_debunk = models.BooleanField()
     click_mechanism = models.BooleanField()
     click_ipcc = models.BooleanField()
@@ -54,35 +73,14 @@ class Player(BasePlayer):
 
 
 def creating_session(subsession:Subsession):
+
     if subsession.session.config['language'] == 'de':
-        from .lexicon_de import Lexicon
-        # load misinfo 
-        misinfo_file_path = "CCsampling/ClimateMisinfo_de.json"
-        with open(misinfo_file_path, 'r') as j:
-            misinfofile = json.loads(j.read())
-        
-        # load info 
-        info_file_path = "CCsampling/ClimateInfo_de.json"
-        with open(info_file_path, 'r') as j:
-            infofile = json.loads(j.read())
+        from .lexicon_de import Lexicon        
 
     elif subsession.session.config['language'] == 'zh_hans':
         from .lexicon_zh_hans import Lexicon
     else:
-        from .lexicon_en import Lexicon
-        # load misinfo 
-        misinfo_file_path = "CCsampling/ClimateMisinfo_en.json"
-        with open(misinfo_file_path, 'r') as j:
-            misinfofile = json.loads(j.read())
-            
-        # load info 
-        info_file_path = "CCsampling/ClimateInfo_en.json"
-        with open(info_file_path, 'r') as j:
-            infofile = json.loads(j.read())
-        
-        
-    infofile= infofile['CCInfo']
-    misinfofile= misinfofile['CCMisinfo']
+        from .lexicon_en import Lexicon  
     subsession.session.myLexicon = Lexicon
 
     import itertools
@@ -94,8 +92,8 @@ def creating_session(subsession:Subsession):
             player.participant.reverseBoxes = next(reverse_display)
             player.participant.seenMisinfo = []
             player.participant.seenMislInfo = []
-            player.participant.misinfo =  misinfofile
-            player.participant.info =  infofile
+            player.session.misinfo =  misinfofile
+            player.session.info =  infofile
 
 
 
@@ -132,10 +130,18 @@ class sampling(Page):
     form_fields = ['boxChoice','statementText', 'statementID', 'range_ccconcern', 'range_agree']
     @staticmethod
     def vars_for_template(player: Player):
+        print("hello in sampling class")
+        print(player.participant.label)
         round_number = player.round_number
-        MisinfoText = player.participant.misinfo[player.participant.randomMisinfoArray[round_number-1]]['finalStatement']
-        InfoText = player.participant.info[player.participant.randomInfoArray[round_number-1]]['finalStatement']
-        player.InfohasDebrief = True if "correctedStatement" in player.participant.info[player.participant.randomInfoArray[round_number-1]] else False
+        if player.session.config['language'] == "de":
+            misinfofile = C.misinfofile_de
+            infofile = C.infofile_de
+        elif player.session.config['language'] == "en":
+            misinfofile = C.misinfofile_de
+            infofile = C.infofile_de
+        MisinfoText = misinfofile[player.participant.randomMisinfoArray[round_number-1]]['finalStatement']
+        InfoText = infofile[player.participant.randomInfoArray[round_number-1]]['finalStatement']
+        player.InfohasDebrief = True if "correctedStatement" in  infofile[player.participant.randomInfoArray[round_number-1]] else False
         # these are tweetids, we are not submitting them. We only submit the index of the statement in the json file (internal statementID)
         #MisinfoID = misinfo[player.participant.randomMisinfoArray[round_number-1]]['tweetid']
         #InfoID = info[player.participant.randomInfoArray[round_number-1]]['tweetid']

@@ -52,7 +52,20 @@ class Player(BasePlayer):
     dataTeach = models.BooleanField(initial=False)
     mobileDevice= models.BooleanField(initial=False, blank=True)
 
+
+
+
 def creating_session(subsession:Subsession):
+    if subsession.session.config['language'] == 'de':
+        from .lexicon_de import Lexicon
+        subsession.session.myLangCode = "_de"
+    elif subsession.session.config['language'] == 'zh_hans':
+        from .lexicon_zh_hans import Lexicon
+        subsession.session.myLangCode = "_ch"
+    else:
+        from .lexicon_en import Lexicon
+        subsession.session.myLangCode = "_en"
+
     import itertools
     order_tasks = itertools.cycle([1,2,3])
     for player in subsession.get_players():
@@ -67,15 +80,43 @@ class Consent(Page):
     form_fields = ['dataScience', 'dataTeach', 'mobileDevice']
     @staticmethod
     def vars_for_template(player: Player):
-        if(player.participant.order_tasks == 1):
-            #insert session link for Order_Nina_Jessi_Zahra
-            stringOrder = "http://localhost:8888/join/popevapa"
-        elif(player.participant.order_tasks == 2):
-            #insert session link for Order_Jessi_Zahra_Zahra
-            stringOrder = "http://localhost:8888/join/mapedugo"
-        else:
-            #insert session link for Order_Jessi_Zahra_Nina
-            stringOrder = "http://localhost:8888/join/didubahe"
+
+         #insert session links for German
+        if(player.session.config['language']=="de"):   
+            if(player.participant.order_tasks == 1):
+                #insert session link for Order_Nina_Jessi_Zahra
+                stringOrder = "http://localhost:8888/join/mirutebu?participant_label=" + player.participant.label + player.session.myLangCode
+            elif(player.participant.order_tasks == 2):
+                #insert session link for Order_Jessi_Zahra_Zahra
+                stringOrder = "http://localhost:8888/join/mapedugo?participant_label=" + player.participant.label +  player.session.myLangCode
+            else:
+                #insert session link for Order_Jessi_Zahra_Nina
+                stringOrder = "http://localhost:8888/join/didubahe?participant_label=" + player.participant.label + player.session.myLangCode
+
+        #insert session links for English
+        if(player.session.config['language']=="en"):   
+            if(player.participant.order_tasks == 1):
+                #insert session link for Order_Nina_Jessi_Zahra
+                stringOrder = "http://localhost:8888/join/mirutebu?participant_label=" + player.participant.label + player.session.myLangCode
+            elif(player.participant.order_tasks == 2):
+                #insert session link for Order_Jessi_Zahra_Zahra
+                stringOrder = "http://localhost:8888/join/mapedugo?participant_label=" + player.participant.label +  player.session.myLangCode
+            else:
+                #insert session link for Order_Jessi_Zahra_Nina
+                stringOrder = "http://localhost:8888/join/didubahe?participant_label=" + player.participant.label + player.session.myLangCode
+
+        
+         #insert session links for Chinese
+        if(player.session.config['language']=="zh_hans"):   
+            if(player.participant.order_tasks == 1):
+                #insert session link for Order_Nina_Jessi_Zahra
+                stringOrder = "http://localhost:8888/join/mirutebu?participant_label=" + player.participant.label + player.session.myLangCode
+            elif(player.participant.order_tasks == 2):
+                #insert session link for Order_Jessi_Zahra_Zahra
+                stringOrder = "http://localhost:8888/join/mapedugo?participant_label=" + player.participant.label +  player.session.myLangCode
+            else:
+                #insert session link for Order_Jessi_Zahra_Nina
+                stringOrder = "http://localhost:8888/join/didubahe?participant_label=" + player.participant.label + player.session.myLangCode
 
         return {
             'stringOrder': stringOrder,
