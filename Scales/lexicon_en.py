@@ -46,17 +46,6 @@ class Lexicon:
     ccc16Label = "Climate protection needlessly impedes economic growth."
 
 
-    #Climate Change Emotion only for jessi pre-test 
-    cce_title = "Attitudes about Climate Change"
-    cce_header = "When I think of Climate Change I feel..."
-    cce1Label = "Anger"
-    cce2Label = "Fear"
-    cce3Label = "Sadness"
-    cce4Label = "Joy"
-    cce5Label = "Curiosity"
-    cce6Label = "Hope"
-
-
     # new emotions
     #Climate Change Emotion
 
@@ -227,44 +216,3 @@ class Lexicon:
     goodbye_text = "Thank you for your participation in our study! <br> You are now at the end of the study and will be redirected for compensation."
 
 
-    ## for pre-test Jessi only, Ninas items
-
-    Additional_title=  'Some additional questions'
-    Additional_intro=	'Lastly we would like to ask you some additional questions.'
-	
-    familiar_header	= 'For each of these actions please indicate how familiar you are with them:'
-    familiar_label1= 'choosing your own electricity contract or switching to a different more renewable contract'
-    familiar_label2	= 'following a vegetarian diet (i.e eating no meat including fish)'
-    familiar_label3	= 'commuting to work by bike'
-    familiar_label4	= 'buying and consuming imported foods (i.e. from other countries)'
-    familiar_label5	= 'buying and consuming regional foods (from your area / country)'
-    familiar_label6	= 'recycling (i.e. paper, glass, or metals)'
-    familiar_label7	= 'traveling by train to go on vacations'
-    familiar_label8	= 'traveling by bus to go on vacations'
-    familiar_label9	= 'Traveling by plane to go on vacations'
-    familiar_A	= 'very unfamiliar'
-    familiar_B	= 'unfamiliar'
-    familiar_C	= 'somewhat unfamiliar'
-    familiar_D	= 'neither unfamiliar nor familiar'
-    familiar_E	= 'somewhat familiar'
-    familiar_F	= 'familiar'
-    familiar_G	= 'very familiar'
-	
-    Difficult_header = 'Please indicate how easy or difficult it would be for an average person in your country to perform the following actions'
-    difficult_label1 = 'choose or switch their electricity contract (e.g., to have a higher share of electricity from renewable sources)'
-    difficult_label2 = 'follow a vegetarian diet (i.e. not to eat meat or fish)'
-    difficult_label3 ='commute to work by bike'
-    difficult_label4 = 'buy and consume imported foods (i.e. from other countries)'
-    difficult_label5 = 'buy and consume mostly regional foods (from your area / country)'
-    difficult_label6 = 'recycle (i.e. paper, glass, or metals)'
-    difficult_label7 = 'take the train to go on vacations'
-    difficult_label8 = 'take the bus to go on vacations'
-    difficult_label9 = 'take the plane to go on vacations'
-	
-    difficult_A = 'very difficult'
-    difficult_B = 'difficult'
-    difficult_C = 'somewhat difficult'
-    difficult_D = 'neither difficult nor easy'
-    difficult_E	= 'somewhat easy'
-    difficult_F	= 'easy'
-    difficult_G	= 'very easy'
