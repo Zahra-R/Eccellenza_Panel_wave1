@@ -234,36 +234,7 @@ class Player(BasePlayer):
     cce5 = make_likert5(Lexicon.cce5Label) ## Curiosity
     cce6 = make_likert5(Lexicon.cce6Label) ## Hope
 
-    # new emotions
-    cceA1 = make_likert10(Lexicon.cceA1Label) ## Anger
-    cceA2 = make_likert10(Lexicon.cceA2Label) ## Anger
-    cceA3 = make_likert10(Lexicon.cceA3Label) ## Anger
-    cceF1 = make_likert10(Lexicon.cceF1Label) ## Fear/Worry
-    cceF2 = make_likert10(Lexicon.cceF2Label) ## Fear/Worry
-    cceF3 = make_likert10(Lexicon.cceF3Label) ## Fear/Worry
-    cceS1 = make_likert10(Lexicon.cceS1Label) ## Sadness
-    cceS2 = make_likert10(Lexicon.cceS2Label) ## Sadness
-    cceS3 = make_likert10(Lexicon.cceS3Label) ## Sadness
-    cceH1 = make_likert10(Lexicon.cceH1Label) ## Hope
-    cceH2 = make_likert10(Lexicon.cceH2Label) ## Hope
-    cceH3 = make_likert10(Lexicon.cceH3Label) ## Hope
-    cceG1 = make_likert10(Lexicon.cceG1Label) ## guilt
-    cceG2 = make_likert10(Lexicon.cceG2Label) ## guilt
-    cceG3 = make_likert10(Lexicon.cceG3Label) ## guilt
-    
-
-
-    # Personal efficacy Leiserowitz et al, 2010
-   # pe1 = make_likert7(Lexicon.pe1Label)
-  
-
-    # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
-    wvv1 = make_likert7(Lexicon.wvv1Label)
-    wvv2 = make_likert7(Lexicon.wvv2Label)
-    wvv3 = make_likert7(Lexicon.wvv3Label)
-    wvv4 = make_likert7(Lexicon.wvv4Label)
-    wvv5 = make_likert7(Lexicon.wvv5Label)
-    wvv6 = make_likert7(Lexicon.wvv6Label)
+   
 
     # Importance of biospheric values van der Linden, 2015  
     ibv1 = make_likert9(Lexicon.ibv1Label)
@@ -427,13 +398,6 @@ class CCEmotion(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     
-class CCEmotionNew(Page):
-    form_model = 'player'
-    form_fields= ['cceA1', 'cceA2', 'cceA3', 'cceF1', 'cceF2', 'cceF3',
-                  'cceS1', 'cceS2', 'cceS3', 'cceH1', 'cceH2', 'cceH3' , 'cceG1', 'cceG2', 'cceG3']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
     
     
 class CCKnowledge(Page):
@@ -444,14 +408,6 @@ class CCKnowledge(Page):
         return dict(Lexicon=Lexicon, **which_language)
     
 
-
-    
-class WVValues(Page):
-    form_model = 'player'
-    form_fields= ['wvv1', 'wvv2', 'wvv3', 'wvv4', 'wvv5', 'wvv6']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
 
 class IBValues(Page):
     form_model = 'player'

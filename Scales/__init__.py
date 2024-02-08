@@ -226,13 +226,6 @@ class Player(BasePlayer):
     ccc15 = make_likert5(Lexicon.ccc15Label)
     ccc16 = make_likert5(Lexicon.ccc16Label)
 
-    ### Climate Change Emotions Scale only for jessi pretest
-    cce1 = make_likert5(Lexicon.cce1Label) ## Anger
-    cce2 = make_likert5(Lexicon.cce2Label) ## Fear/Worry
-    cce3 = make_likert5(Lexicon.cce3Label) ## Sadness
-    cce4 = make_likert5(Lexicon.cce4Label) ## Joy
-    cce5 = make_likert5(Lexicon.cce5Label) ## Curiosity
-    cce6 = make_likert5(Lexicon.cce6Label) ## Hope
 
     # new emotions
     cceA1 = make_likert10(Lexicon.cceA1Label) ## Anger
@@ -350,27 +343,7 @@ class Player(BasePlayer):
         ],
     )
 
-    ## Familiar  only pretest Jessi. Ninas quesitons
-    fam1 = make_likert7(Lexicon.familiar_label1) 
-    fam2 = make_likert7(Lexicon.familiar_label2)
-    fam3 = make_likert7(Lexicon.familiar_label3)
-    fam4 = make_likert7(Lexicon.familiar_label4)
-    fam5 = make_likert7(Lexicon.familiar_label5) 
-    fam6 = make_likert7(Lexicon.familiar_label6)
-    fam7 = make_likert7(Lexicon.familiar_label7)
-    fam8 = make_likert7(Lexicon.familiar_label8)
-    fam9 = make_likert7(Lexicon.familiar_label9)
 
-    ## Difficult only pretest Jessi. Ninas quesitons
-    diff1 = make_likert7(Lexicon.difficult_label1) 
-    diff2 = make_likert7(Lexicon.difficult_label2)
-    diff3 = make_likert7(Lexicon.difficult_label3)
-    diff4 = make_likert7(Lexicon.difficult_label4)
-    diff5 = make_likert7(Lexicon.difficult_label5) 
-    diff6 = make_likert7(Lexicon.difficult_label6)
-    diff7 = make_likert7(Lexicon.difficult_label7)
-    diff8 = make_likert7(Lexicon.difficult_label8)
-    diff9 = make_likert7(Lexicon.difficult_label9)
 
   
   
@@ -418,13 +391,7 @@ class CCConcern(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     
-class CCEmotion(Page):
-    form_model = 'player'
-    form_fields= ['cce1', 'cce2', 'cce3', 'cce4', 'cce5', 'cce6']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
-    
+
 class CCEmotionNew(Page):
     form_model = 'player'
     form_fields= ['cceA1', 'cceA2', 'cceA3', 'cceF1', 'cceF2', 'cceF3',
@@ -494,17 +461,7 @@ class goodbye (Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     
-class Familiar (Page): 
-    form_model = 'player'
-    form_fields = ['fam1', 'fam2', 'fam3', 'fam4', 'fam5', 'fam6', 'fam7', 'fam8', 'fam9' ]
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
-    
-class Difficult (Page): 
-    form_model = 'player'
-    form_fields = ['diff1', 'diff2', 'diff3', 'diff4', 'diff5', 'diff6', 'diff7', 'diff8', 'diff9' ]
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+
     
 
 
@@ -512,5 +469,5 @@ class Difficult (Page):
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
 #page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
 # copy pf page_sequence with original order of scales 
-# page_sequence = [CCConcern, CCEmotionNew, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
-page_sequence = [ transition, CCConcern, IBValues, CCEmotion, Familiar, Difficult,  Demographics, goodbye]
+page_sequence = [CCConcern, CCEmotionNew, CCKnowledge, WVValues, IBValues, PolOrientation, PITrust, Demographics]
+#page_sequence = [ transition, CCConcern, IBValues, CCEmotion, Familiar, Difficult,  Demographics, goodbye]
