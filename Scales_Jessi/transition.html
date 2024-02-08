@@ -1,31 +1,22 @@
-
 {% block styles %}
     <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
     <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
 {% endblock %}
 
-{% block title %}
-    {{ Lexicon.cck_title }}
-{% endblock %}
+{{ block title }} 
+{{ endblock }}
 
-{% block content %}
-<br>
-<p> {{ Lexicon.cck_header }}</p>
+{{ block content }}
 
-<br>
-<br>
-{{ formfields }}
+<div style="text-align: center; font-size: 32px;">
+    {{Lexicon.Transition_text}}
+ </div>
 
-
-<div class="next-btn radiotable">  
+ <div class="next-btn radiotable">  
     <div style="float: right; padding-top: 2vh;">
          {% next_button %}
         
     </div>
 </div> 
-{% endblock %}
 
-
-{% block scripts %}
-  
 {% endblock %}
