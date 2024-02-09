@@ -197,6 +197,71 @@ def cknow2_choices(player):
 ]
 #endregion
 
+def cknow3_choices(player):
+    Lexicon = player.session.myLexicon
+    return [
+    ['a_true', Lexicon.know_3a],
+    ['b_false',  Lexicon.know_3b],
+    ['c_false', Lexicon.know_3c],
+    ['dk',  Lexicon.dont_know],
+]
+
+def cknow4_choices(player):
+    Lexicon = player.session.myLexicon
+    return [
+    ['a_false', Lexicon.know_4a],
+    ['b_true',  Lexicon.know_4b],
+    ['c_false', Lexicon.know_4c],
+    ['dk',  Lexicon.dont_know],
+]
+
+def cknow5_choices(player):
+    Lexicon = player.session.myLexicon
+    return [
+    ['a_false', Lexicon.know_5a],
+    ['b_true',  Lexicon.know_5b],
+    ['c_false', Lexicon.know_5c],
+    ['dk',  Lexicon.dont_know],
+]
+
+def cknow6_choices(player):
+    Lexicon = player.session.myLexicon
+    return [
+    ['a_false', Lexicon.know_6a],
+    ['b_false',  Lexicon.know_6b],
+    ['c_true', Lexicon.know_6c],
+    ['dk',  Lexicon.dont_know],
+]
+
+def cknow8_choices(player):
+    Lexicon = player.session.myLexicon
+    return [
+    ['a_true', Lexicon.know_8a],
+    ['b_false',  Lexicon.know_8b],
+    ['c_false', Lexicon.know_8c],
+    ['dk',  Lexicon.dont_know],
+]
+
+def cknow9_choices(player):
+    Lexicon = player.session.myLexicon
+    return [
+    ['a_true', Lexicon.know_9a],
+    ['b_false',  Lexicon.know_9b],
+    ['c_false', Lexicon.know_9c],
+    ['d_false',  Lexicon.know_9d],
+    ['dk',  Lexicon.dont_know],
+]
+
+def cknow10_choices(player):
+    Lexicon = player.session.myLexicon
+    return [
+    ['a_false', Lexicon.know_10a],
+    ['b_true',  Lexicon.know_10b],
+    ['c_false', Lexicon.know_10c],
+    ['d_false',  Lexicon.know_10d],
+    ['dk',  Lexicon.dont_know],
+]
+
 class Player(BasePlayer):
     ### Climate Change Concern Scale by Tobler et al. 2012
   
@@ -225,8 +290,8 @@ class Player(BasePlayer):
     cknow5 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)     
     cknow6 = models.StringField(choices=["a_false", "b_false", "c_true", "dk"], widget=widgets.RadioSelect,) 
     cknow8 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"], widget=widgets.RadioSelect,)     
-    cknow9 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"], widget=widgets.RadioSelect,)     
-    cknow10 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)
+    cknow9 = models.StringField(choices=["a_true", "b_false", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)     
+    cknow10 = models.StringField(choices=["a_false", "b_true", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)
 
     ### Demographics
     age = models.IntegerField(min=18,max = 99)
