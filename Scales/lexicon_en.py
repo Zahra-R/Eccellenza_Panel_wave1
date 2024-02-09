@@ -115,7 +115,7 @@ class Lexicon:
     know_1qu = "What is the COP?" ## This is maybe too easy given that the whole study is about CC???
     know_1a = "UN initiative for distributing funds to reduce the impact of climate change on poverty."
     know_1b = "An annual formal meeting to discuss climate change and establish mitigation actions."
-    know_1c = "An EU initiative against organized and war crimes." 
+    know_1c = "An EU initiative for multinational cooperation against organized crime." 
     
     know_2qu = "What does Net-Zero mean?"
     know_2a = "Monetary strategy of increasing interest rate to fight inflation."

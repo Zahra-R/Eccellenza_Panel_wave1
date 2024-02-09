@@ -174,6 +174,29 @@ def get_income_choices(language_code, session):
             Lexicon.prefer_not_to_say
         ]
     return income_choices
+
+
+
+def cknow1_choices(player):
+    Lexicon = player.session.myLexicon
+    return [
+    ['a_false', Lexicon.know_1a],
+    ['b_true',  Lexicon.know_1b],
+    ['c_false', Lexicon.know_1c],
+    ['dk',  Lexicon.dont_know],
+]
+
+
+def cknow2_choices(player):
+    Lexicon = player.session.myLexicon
+    return [
+    ['a_false', Lexicon.know_2a],
+    ['b_false',  Lexicon.know_2b],
+    ['c_true', Lexicon.know_2c],
+    ['dk',  Lexicon.dont_know],
+]
+
+
 class Player(BasePlayer):
     ### Climate Change Concern Scale by Tobler et al. 2012
   
@@ -181,12 +204,12 @@ class Player(BasePlayer):
     emoAng1 = make_likert10() ## Anger
     emoAng2 = make_likert10() ## Anger
     emoAng3 = make_likert10() ## Anger
-    emoFear1 = make_likert10() ## Fear/Worry
-    emoFear2 = make_likert10() ## Fear/Worry
-    emoFear3 = make_likert10() ## Fear/Worry
     emoSad1 = make_likert10() ## Sadness
     emoSad2 = make_likert10() ## Sadness
     emoSad3 = make_likert10() ## Sadness
+    emoFear1 = make_likert10() ## Fear/Worry
+    emoFear2 = make_likert10() ## Fear/Worry
+    emoFear3 = make_likert10() ## Fear/Worry
     emoHope1 = make_likert10() ## Hope
     emoHope2 = make_likert10() ## Hope
     emoHope3 = make_likert10() ## Hope
@@ -195,15 +218,15 @@ class Player(BasePlayer):
     emoGuilt3 = make_likert10() ## guilt
 
     # new knowledge questions Allianz
-    cknow1 = models.StringField( choices=["a_false", "b_true", "c_false", "dk"])
-    cknow2 = models.StringField(choices=["a_false", "b_false", "c_true", "dk"])
-    cknow3 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"])
-    cknow4 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"])  
-    cknow5 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"])     
-    cknow6 = models.StringField(choices=["a_false", "b_false", "c_true", "dk"]) 
-    cknow8 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"])     
-    cknow9 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"])     
-    cknow10 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"]  )
+    cknow1 = models.StringField( choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect)
+    cknow2 = models.StringField(choices=["a_false", "b_false", "c_true", "dk"], widget=widgets.RadioSelect)
+    cknow3 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"], widget=widgets.RadioSelect,)
+    cknow4 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)  
+    cknow5 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)     
+    cknow6 = models.StringField(choices=["a_false", "b_false", "c_true", "dk"], widget=widgets.RadioSelect,) 
+    cknow8 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"], widget=widgets.RadioSelect,)     
+    cknow9 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"], widget=widgets.RadioSelect,)     
+    cknow10 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)
 
     ### Demographics
     age = models.IntegerField(min=18,max = 99)
@@ -225,7 +248,7 @@ class CCConcern(Page):
     
 class CCEmotion(Page):
     form_model = 'player'
-    form_fields= ['emoAng1', 'emoAng2', 'emoAng3', 'emoFear1', 'emoFear2', 'emoFear3', 'emoHope1', 'emoHope2', 'emoHope3', 'emoGuilt1', 'emoGuilt2', 'emoGuilt3']
+    form_fields= ['emoAng1', 'emoAng2', 'emoAng3', 'emoSad1','emoSad2', 'emoSad3', 'emoFear1', 'emoFear2', 'emoFear3', 'emoHope1', 'emoHope2', 'emoHope3', 'emoGuilt1', 'emoGuilt2', 'emoGuilt3']
     @staticmethod
     def vars_for_template(player: Player):
         return{
@@ -235,8 +258,8 @@ class CCEmotion(Page):
     def js_vars(player):
         Lexicon = player.session.myLexicon
         return dict(
-        form_fields = ["emoAng1", "emoAng2", "emoAng3", "emoFear1", "emoFear2", "emoFear3", "emoHope1", "emoHope2", "emoHope3", "emoGuilt1" ],
-        form_field_labels = [Lexicon.emoAng1Label, Lexicon.emoAng2Label , Lexicon.emoAng3Label , Lexicon.emoFear1Label , Lexicon.emoFear2Label , Lexicon.emoFear3Label, Lexicon.emoHope1Label , Lexicon.emoHope2Label , Lexicon.emoHope3Label , Lexicon.emoGuilt1Label]
+        form_fields = ['emoAng1', 'emoAng2', 'emoAng3', 'emoSad1','emoSad2', 'emoSad3', 'emoFear1', 'emoFear2', 'emoFear3', 'emoHope1', 'emoHope2', 'emoHope3', 'emoGuilt1', 'emoGuilt2', 'emoGuilt3'],
+        form_field_labels = [Lexicon.emoAng1Label, Lexicon.emoAng2Label , Lexicon.emoAng3Label, Lexicon.emoSad1Label,Lexicon.emoSad2Label, Lexicon.emoSad3Label,  Lexicon.emoFear1Label , Lexicon.emoFear2Label , Lexicon.emoFear3Label, Lexicon.emoHope1Label , Lexicon.emoHope2Label , Lexicon.emoHope3Label , Lexicon.emoGuilt1Label, Lexicon.emoGuilt2Label, Lexicon.emoGuilt3Label]
     )
     
     
@@ -246,6 +269,13 @@ class CCKnowledge(Page):
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.myLexicon)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.myLexicon
+        return dict(
+        form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow8','cknow9', 'cknow10'],
+        form_field_labels = [Lexicon.know_1qu, Lexicon.know_2qu, Lexicon.know_3qu, Lexicon.know_4qu, Lexicon.know_5qu, Lexicon.know_6qu,  Lexicon.know_8qu, Lexicon.know_9qu, Lexicon.know_10qu]
+    )
     
 
 class PEfficacy(Page):

@@ -14,7 +14,22 @@
 
 <br>
 <br>
-{{ formfields }}
+
+
+
+
+{{ for field in form }}
+    {{formfield_errors field.name}}
+    <div class="row" id={{field.id}} name={{field.name}}> Hier kommt die Frage hin  </div>
+    {{ for choice in field }}
+        <div class= "row">
+        
+            <div class="column" style="width: inherit;">{{ choice }}</div>
+            <div class="column" style="width: inherit; max-width:80%"> {{choice.label}}</div>
+    
+        </div>
+    {{ endfor }}
+{{ endfor }}
 
 
 <div class="next-btn radiotable">  
@@ -32,5 +47,18 @@
         document.addEventListener("DOMContentLoaded", function() {
             setWidthForTableColumns1();
         });
+
+
+        $(document).ready(function () {
+        for (let i = 0; i < js_vars.form_fields.length; i++) {   
+            prop= js_vars.form_fields[i] + 'Label'
+            label = js_vars.form_field_labels[i]
+            id = 'id_' + js_vars.form_fields[i]
+            $('#' + id).html(label)
+        }
+
+
+    })
+
     </script>
 {% endblock %}
