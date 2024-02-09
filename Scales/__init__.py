@@ -43,58 +43,19 @@ def creating_session(subsession:Subsession):
 
 # custom function to automatically make likert type fields with 5 options
 # custom function to automatically make 4 option fields
-    
-def make_fieldlabel(nameofScale, numberItems, player, lexicon):
-     for i in range(1, numberItems+ 1):
-        i = 10
-
-def make_options4(label):
-        return models.IntegerField(
-            choices=[1,2,3,4],
-            label=label,
+def make_likert7():
+    return models.IntegerField(
+        choices=[1,2,3,4,5,6,7],
             widget=widgets.RadioSelect,
-            )
+    )
 
-def make_no_yes(label):
-        return models.IntegerField(
-            choices=[0,1],
-            label=label,
-            widget=widgets.RadioSelect,
-            )
-
-def make_likert5(label):
-        return models.IntegerField(
-            choices=[1,2,3,4,5],
-            label=label,
-            widget=widgets.RadioSelect,
-            )
-
-def make_likert7(label):
-        return models.IntegerField(
-            choices=[1,2,3,4,5,6,7],
-            label=label,
-            widget=widgets.RadioSelect,
-            )
-
-# 9-point likert scale with scaling for biospheric values
-def make_likert9(label):
-        return models.IntegerField(
-            choices=[-1,0,1,2,3,4,5,6,7],
-            label=label,
-            widget=widgets.RadioSelect,
-            )
-
-def make_likert10(label):
+def make_likert10():
         return models.IntegerField(
             choices=[1,2,3,4,5,6,7,8,9,10],
-            label=label,
             widget=widgets.RadioSelect,
-            )
-
-# functions to generate education and party choices based on language
-def get_education_choices(language_code, Lexicon):
+        )
+def get_education_choices(language_code):
     education_choices = []
-
     if language_code == 'de':
         education_choices = [    
             Lexicon.no_formal_education,
@@ -110,7 +71,13 @@ def get_education_choices(language_code, Lexicon):
         ]
     elif language_code == 'zh_hans':
         education_choices = [
-            # Add choices for Chinese language if needed
+            Lexicon.education_label, 
+            Lexicon.high_school,
+            Lexicon.vocational_education,
+            Lexicon.some_college, 
+            Lexicon.bachelors_degree,
+            Lexicon.masters_degree,
+            Lexicon.doctoral_degree
         ]
     else:
         education_choices = [
@@ -122,7 +89,8 @@ def get_education_choices(language_code, Lexicon):
         ]
     return education_choices
 
-def get_party_choices(language_code, Lexicon):
+
+def get_party_choices(language_code):
     party_choices = []
     if language_code == 'de':
         party_choices = [    
@@ -147,111 +115,103 @@ def get_party_choices(language_code, Lexicon):
         ]
     return party_choices
 
-class Player(BasePlayer):
-    Lexicon = BasePlayer.session.myLexicon
-    ### Climate Change Concern Scale by Tobler et al. 2012
-    ccc1 = make_likert5(Lexicon.ccc1Label) ## concern 4 items
-    ccc2 = make_likert5(Lexicon.ccc2Label)
-    ccc3 = make_likert5(Lexicon.ccc3Label)
-    ccc4 = make_likert5(Lexicon.ccc4Label)
-    ccc10 = make_likert5(Lexicon.ccc10Label) ## skepticism 7 items
-    ccc11 = make_likert5(Lexicon.ccc11Label)
-    ccc12 = make_likert5(Lexicon.ccc12Label)
-    ccc13 = make_likert5(Lexicon.ccc13Label)
-    ccc14 = make_likert5(Lexicon.ccc14Label)
-    ccc15 = make_likert5(Lexicon.ccc15Label)
-    ccc16 = make_likert5(Lexicon.ccc16Label)
+def get_gender_choices(language_code):
+    gender_choices = []
+    if language_code == 'de':
+        party_choices = [    
+            Lexicon.female,
+            Lexicon.male,
+            Lexicon.diverse, 
+            Lexicon.other
+        ]
+    elif language_code == 'zh_hans':
+        gender_choices = [
+            Lexicon.female,
+            Lexicon.male,
+            Lexicon.other
+        ]
+    else:
+        gender_choices = [
+            Lexicon.female,
+            Lexicon.male,
+            Lexicon.diverse, 
+            Lexicon.other
+        ]
+    return gender_choices
 
-    ### Climate Change Emotions Scale based on Knauf 2022 and Truelove 2012
-    cce1 = make_likert5(Lexicon.cce1Label) ## Anger
-    cce2 = make_likert5(Lexicon.cce2Label) ## Fear/Worry
-    cce3 = make_likert5(Lexicon.cce3Label) ## Sadness
-    cce4 = make_likert5(Lexicon.cce4Label) ## Joy
-    cce5 = make_likert5(Lexicon.cce5Label) ## Curiosity
-    cce6 = make_likert5(Lexicon.cce6Label) ## Hope
-
-
-
-    # Personal efficacy Leiserowitz et al, 2010
-    pe1 = make_likert7(Lexicon.pe1Label)
-  
-
-    # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
-    wvv1 = make_likert7(Lexicon.wvv1Label)
-    wvv2 = make_likert7(Lexicon.wvv2Label)
-    wvv3 = make_likert7(Lexicon.wvv3Label)
-    wvv4 = make_likert7(Lexicon.wvv4Label)
-    wvv5 = make_likert7(Lexicon.wvv5Label)
-    wvv6 = make_likert7(Lexicon.wvv6Label)
-
-    # Importance of biospheric values van der Linden, 2015  
-    ibv1 = make_likert9(Lexicon.ibv1Label)
-    ibv2 = make_likert9(Lexicon.ibv2Label)
-    ibv3 = make_likert9(Lexicon.ibv3Label)
-    ibv4 = make_likert9(Lexicon.ibv4Label)
-
-    # Political Orientation Pennycook et al 2020
-    po1 = make_likert5(Lexicon.po1Label)
-    po2 = make_likert5(Lexicon.po2Label)
-
-    # Trust in political institutions from Eurobarometer / Lantian et al 2016  
-    pit1 = make_likert7(Lexicon.pit1Label)
-    pit2 = make_likert7(Lexicon.pit2Label)
-    pit3 = make_likert7(Lexicon.pit3Label)
-    pit4 = make_likert7(Lexicon.pit4Label)
-
-    # new knowledge questions Allianz
-    cknow1 = models.StringField(label = Lexicon.know_1qu, choices=[ Lexicon.know_1a, Lexicon.know_1b, Lexicon.know_1c, Lexicon.know_dontknow,         ],     )     
-    cknow2 = models.StringField(         label = Lexicon.know_2qu,         choices=[ Lexicon.know_2a, Lexicon.know_2b, Lexicon.know_2c, Lexicon.know_dontknow,         ],     )     
-    cknow3 = models.StringField(         label = Lexicon.know_3qu,         choices=[ Lexicon.know_3a, Lexicon.know_3b, Lexicon.know_3c, Lexicon.know_dontknow,         ],     )
-    cknow4 = models.StringField(         label = Lexicon.know_4qu,         choices=[ Lexicon.know_4a, Lexicon.know_4b, Lexicon.know_4c, Lexicon.know_dontknow,         ],     )  
-    cknow5 = models.StringField(         label = Lexicon.know_5qu,         choices=[ Lexicon.know_5a, Lexicon.know_5b, Lexicon.know_5c, Lexicon.know_dontknow,         ],     )     
-    cknow6 = models.StringField(         label = Lexicon.know_6qu,         choices=[ Lexicon.know_6a, Lexicon.know_6b, Lexicon.know_6c, Lexicon.know_dontknow,         ],     ) 
-    cknow8 = models.StringField(         label = Lexicon.know_8qu,         choices=[ Lexicon.know_8a, Lexicon.know_8b, Lexicon.know_8c, Lexicon.know_dontknow,         ],     )     
-    cknow9 = models.StringField(         label = Lexicon.know_3qu,         choices=[ Lexicon.know_9a, Lexicon.know_9b, Lexicon.know_9c, Lexicon.know_9d , Lexicon.know_dontknow,         ],     )     
-    cknow10 = models.StringField(        label = Lexicon.know_10qu,        choices=[ Lexicon.know_10a, Lexicon.know_10b, Lexicon.know_10c, Lexicon.know_10d, Lexicon.know_dontknow,         ],     )
-
-    ### Demographics
-    age = models.IntegerField(
-        label=Lexicon.age_label,
-        min=18,
-    )
-
-    gender = models.StringField(
-    label=Lexicon.gender_label,
-    choices=[Lexicon.female, Lexicon.male, Lexicon.diverse, Lexicon.other],)
-
-    income = models.StringField(
-        label=Lexicon.income_label,
-        choices=[
+def get_income_choices(language_code, session):
+    income_choices = []
+    Lexicon = session.myLexicon
+    if language_code == 'de':
+        income_choices = [    
+            Lexicon.income_label,
             Lexicon.income_less_than_A,
             Lexicon.income_A_to_B,
             Lexicon.income_B_to_C,
             Lexicon.income_C_to_D,
             Lexicon.income_more_than_D,
-            Lexicon.prefer_not_to_say,
-        ],
-    )
+            Lexicon.prefer_not_to_say
+        ]
+    elif language_code == 'zh_hans':
+        income_choices = [
+            Lexicon.income_label,
+            Lexicon.income_less_than_A,
+            Lexicon.income_A_to_B,
+            Lexicon.income_B_to_C,
+            Lexicon.income_C_to_D,
+            Lexicon.income_D_to_E,
+            Lexicon.income_more_than_E,
+            Lexicon.prefer_not_to_say
+        ]
+    else:
+        income_choices = [
+            Lexicon.income_label,
+            Lexicon.income_less_than_A,
+            Lexicon.income_A_to_B,
+            Lexicon.income_B_to_C,
+            Lexicon.income_C_to_D,
+            Lexicon.income_more_than_D,
+            Lexicon.prefer_not_to_say
+        ]
+    return income_choices
+class Player(BasePlayer):
+    ### Climate Change Concern Scale by Tobler et al. 2012
+  
+    ### Climate Change Emotions Scale based on Knauf 2022 and Truelove 2012
+    emoAng1 = make_likert10() ## Anger
+    emoAng2 = make_likert10() ## Anger
+    emoAng3 = make_likert10() ## Anger
+    emoFear1 = make_likert10() ## Fear/Worry
+    emoFear2 = make_likert10() ## Fear/Worry
+    emoFear3 = make_likert10() ## Fear/Worry
+    emoSad1 = make_likert10() ## Sadness
+    emoSad2 = make_likert10() ## Sadness
+    emoSad3 = make_likert10() ## Sadness
+    emoHope1 = make_likert10() ## Hope
+    emoHope2 = make_likert10() ## Hope
+    emoHope3 = make_likert10() ## Hope
+    emoGuilt1 = make_likert10() ## guilt
+    emoGuilt2 = make_likert10() ## guilt
+    emoGuilt3 = make_likert10() ## guilt
 
-    education = models.StringField(
-        label=Lexicon.education_label,
-        choices=get_education_choices(LANGUAGE_CODE, Lexicon),
-    )
+    # new knowledge questions Allianz
+    cknow1 = models.StringField( choices=["a_false", "b_true", "c_false", "dk"])
+    cknow2 = models.StringField(choices=["a_false", "b_false", "c_true", "dk"])
+    cknow3 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"])
+    cknow4 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"])  
+    cknow5 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"])     
+    cknow6 = models.StringField(choices=["a_false", "b_false", "c_true", "dk"]) 
+    cknow8 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"])     
+    cknow9 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"])     
+    cknow10 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"]  )
 
-    residential_area = models.StringField(
-        label=Lexicon.residential_area_label,
-        choices=[Lexicon.metropolitan_area, Lexicon.suburban, Lexicon.rural],
-    )
-
-    zip_code = models.StringField(
-        label=Lexicon.zip_code_label,
-        blank=True,
-    )
-
-    party_affiliation = models.StringField(
-        label=Lexicon.party_affiliation_label,
-        choices=get_party_choices(LANGUAGE_CODE, Lexicon),
-    )
+    ### Demographics
+    age = models.IntegerField(min=18,max = 99)
+    income = models.StringField(    )
+    #education = models.StringField(choices=get_education_choices(LANGUAGE_CODE, Lexicon) )
+    #residential_area = models.StringField(choices=[Lexicon.metropolitan_area, Lexicon.suburban, Lexicon.rural] )
+    #zip_code = models.StringField( blank=True)
+    #party_affiliation = models.StringField(choices=get_party_choices(LANGUAGE_CODE, Lexicon) )
 
 
 class CCConcern(Page):
@@ -265,11 +225,19 @@ class CCConcern(Page):
     
 class CCEmotion(Page):
     form_model = 'player'
-    form_fields= ['cce1', 'cce2', 'cce3', 'cce4', 'cce5', 'cce6']
-  
+    form_fields= ['emoAng1', 'emoAng2', 'emoAng3', 'emoFear1', 'emoFear2', 'emoFear3', 'emoHope1', 'emoHope2', 'emoHope3', 'emoGuilt1', 'emoGuilt2', 'emoGuilt3']
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.myLexicon)
+        return{
+            'Lexicon': player.session.myLexicon
+        } 
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.myLexicon
+        return dict(
+        form_fields = ["emoAng1", "emoAng2", "emoAng3", "emoFear1", "emoFear2", "emoFear3", "emoHope1", "emoHope2", "emoHope3", "emoGuilt1" ],
+        form_field_labels = [Lexicon.emoAng1Label, Lexicon.emoAng2Label , Lexicon.emoAng3Label , Lexicon.emoFear1Label , Lexicon.emoFear2Label , Lexicon.emoFear3Label, Lexicon.emoHope1Label , Lexicon.emoHope2Label , Lexicon.emoHope3Label , Lexicon.emoGuilt1Label]
+    )
     
     
 class CCKnowledge(Page):
@@ -339,4 +307,5 @@ class goodbye (Page):
 #page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
-page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
+#page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
+page_sequence = [CCEmotion, CCKnowledge]

@@ -49,13 +49,21 @@ class Lexicon:
     #Climate Change Emotion Knauf/Truelove
     cce_title = "Attitudes about Climate Change"
     cce_header = "When I think of Climate Change I feel..."
-    cce1Label = "Anger"
-    cce2Label = "Fear"
-    cce3Label = "Sadness"
-    cce4Label = "Joy"
-    cce5Label = "Curiosity"
-    cce6Label = "Hope"
-
+    emoAng1Label = "angry"
+    emoAng2Label = "mad"
+    emoAng3Label = "irritated"
+    emoFear1Label = "fearful"
+    emoFear2Label = "afraid"
+    emoFear3Label = "scared"
+    cceS1Label = "sad"
+    cceS2Label = "sorrowful"
+    cceS3Label = "unhappy"
+    emoHope1Label = "hopeful"
+    emoHope2Label = "optimistic"
+    emoHope3Label = "upbeat"
+    emoGuilt1Label = "guilty"
+    emoGuilt2Label = "regretful"
+    emoGuilt3Label = "remorseful"
 
     
     # Personal efficacy Leiserowitz et al, 2010

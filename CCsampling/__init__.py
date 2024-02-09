@@ -82,6 +82,7 @@ def creating_session(subsession:Subsession):
     else:
         from .lexicon_en import Lexicon  
     subsession.session.myLexicon = Lexicon
+    subsession.session.myLangCode = subsession.session.config['language'] 
 
     import itertools
     reverse_display = itertools.cycle([True, False])
@@ -115,7 +116,6 @@ def allocateBoxNames(player: Player):
         player.boxrecommendationMisinfo = recomA
     print('in make choice again')
 
-
 def saveParticipantVarsToPlayer(player: Player): 
     player.reverseBoxes = player.participant.reverseBoxes
     player.tellingBoxLabels = player.participant.telling_box_label
@@ -130,8 +130,6 @@ class sampling(Page):
     form_fields = ['boxChoice','statementText', 'statementID', 'range_ccconcern', 'range_agree']
     @staticmethod
     def vars_for_template(player: Player):
-        print("hello in sampling class")
-        print(player.participant.label)
         round_number = player.round_number
         if player.session.config['language'] == "de":
             misinfofile = C.misinfofile_de
@@ -164,8 +162,6 @@ class sampling(Page):
                player.participant.seenMislInfo.append(player.participant.randomInfoArray[player.round_number-1]) 
 
 
-
-
 class boxrating(Page):
     form_model = 'player'
     @staticmethod
@@ -189,9 +185,6 @@ class boxrating(Page):
         allocateBoxNames(player)
         if (player.round_number % C.NUM_ROUNDS == 0):
             saveParticipantVarsToPlayer(player)
-
-
-
 
 
 class Conclude(Page):
