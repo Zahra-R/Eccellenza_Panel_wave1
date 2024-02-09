@@ -52,7 +52,7 @@ class Lexicon:
     emoAng3Label = "gereizt"
     emoSad1Label = "furchtsam"
     emoSad2Label = "verängstigt"
-    emoSad3Label = "erschrocken" # panisch? ängstlich? bang? Ich finde erschrocken irgendwie komisch? und furchtsam passt vll auch nicht so zu cc?
+    emoSad3Label = "erschrocken" # panisch? ängstlich? bang? resigniert? verzweifelt? Ich finde erschrocken irgendwie komisch? und furchtsam passt vll auch nicht so zu cc?
     emoFear1Label = "traurig"
     emoFear2Label = "betrübt"
     emoFear3Label = "unglücklich"

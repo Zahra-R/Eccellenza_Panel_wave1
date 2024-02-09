@@ -30,6 +30,14 @@ class Lexicon:
     completely_true = "Completely True"
 
 
+    ## New 3 cause items from Valkengoed
+    ## to be inserted here
+    ##3 concern items as emotions. 
+    ## suggestion: worry, concerned, apprehensive (alternatives: upset or distressed)
+    ## german: besorgt, bekümmert, beunruhigt.
+    
+
+
     #Climate Change Concern Tobler
     ccc_title = "Attitudes about Climate Change"
     ccc_header = "How much do you agree with the following statements?"

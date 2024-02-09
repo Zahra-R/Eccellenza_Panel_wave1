@@ -176,7 +176,7 @@ def get_income_choices(language_code, session):
     return income_choices
 
 
-
+#region
 def cknow1_choices(player):
     Lexicon = player.session.myLexicon
     return [
@@ -195,7 +195,7 @@ def cknow2_choices(player):
     ['c_true', Lexicon.know_2c],
     ['dk',  Lexicon.dont_know],
 ]
-
+#endregion
 
 class Player(BasePlayer):
     ### Climate Change Concern Scale by Tobler et al. 2012
