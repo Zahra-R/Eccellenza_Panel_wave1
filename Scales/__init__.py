@@ -195,7 +195,7 @@ def cknow2_choices(player):
     ['c_true', Lexicon.know_2c],
     ['dk',  Lexicon.dont_know],
 ]
-#endregion
+
 
 def cknow3_choices(player):
     Lexicon = player.session.myLexicon
@@ -261,6 +261,8 @@ def cknow10_choices(player):
     ['d_false',  Lexicon.know_10d],
     ['dk',  Lexicon.dont_know],
 ]
+
+#endregion
 
 class Player(BasePlayer):
     ### Climate Change Concern Scale by Tobler et al. 2012
