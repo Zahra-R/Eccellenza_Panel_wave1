@@ -295,6 +295,14 @@ class Player(BasePlayer):
     cknow9 = models.StringField(choices=["a_true", "b_false", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)     
     cknow10 = models.StringField(choices=["a_false", "b_true", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)
 
+    # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
+    hie1 = make_likert10()
+    hie2 = make_likert10()
+    hie3 = make_likert10()
+    ind1 = make_likert10()
+    ind2 = make_likert10()
+    ind3 = make_likert10()
+
     ### Demographics
     age = models.IntegerField(min=18,max = 99)
     income = models.StringField(    )
@@ -354,10 +362,17 @@ class PEfficacy(Page):
     
 class WVValues(Page):
     form_model = 'player'
-    form_fields= ['wvv1', 'wvv2', 'wvv3', 'wvv4', 'wvv5', 'wvv6']
+    form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.myLexicon)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.myLexicon
+        return dict(
+        form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3'],
+        form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label]
+    )
 
 class IBValues(Page):
     form_model = 'player'
@@ -405,4 +420,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [CCEmotion, CCKnowledge]
+page_sequence = [CCKnowledge, WVValues, CCEmotion]

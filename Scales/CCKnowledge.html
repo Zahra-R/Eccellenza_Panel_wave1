@@ -2,6 +2,20 @@
 {% block styles %}
     <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
     <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
+
+    <style>
+        .question{
+            font-weight: bold;
+            padding: 20px 0;
+            font-size: large;
+        }
+
+        .answer{
+            padding-top: 7px;
+        }
+        
+    
+    </style>
 {% endblock %}
 
 {% block title %}
@@ -20,12 +34,12 @@
 
 {{ for field in form }}
     {{formfield_errors field.name}}
-    <div class="row" id={{field.id}} name={{field.name}}> Hier kommt die Frage hin  </div>
+    <div class="row question" id={{field.id}} name={{field.name}}> Hier kommt die Frage hin  </div>
     {{ for choice in field }}
         <div class= "row">
         
             <div class="column" style="width: inherit;">{{ choice }}</div>
-            <div class="column" style="width: inherit; max-width:80%"> {{choice.label}}</div>
+            <div class="column answer" style="width: inherit; max-width:80%"> {{choice.label}}</div>
     
         </div>
     {{ endfor }}

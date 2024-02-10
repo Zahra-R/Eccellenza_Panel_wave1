@@ -32,9 +32,34 @@ class Lexicon:
 
     ## New 3 cause items from Valkengoed
     ## to be inserted here
+    # causes
+#     Human activities are a major cause of climate change.
+# 2. Climate change is mostly caused by human activity.
+# 3. The main causes of climate change are human activities.
+    # consequences final call whether to include still to be made
+
+# Overall, climate change will bring more negative than positive consequences to the world.
+# 2. Climate change will bring about serious negative consequences.
+# 3. The consequences of climate change will be very serious.
+    
+    # I think climate change is one of the greatest global risks. 
+    # The downsides of climate action are much lower than of the consequences of inaction and delay. 
+    # A climate-friendly transformation would have many positive side effects, besides adressing the risks of climate change. 
+
+
+
     ##3 concern items as emotions. 
     ## suggestion: worry, concerned, apprehensive (alternatives: upset or distressed)
     ## german: besorgt, bekümmert, beunruhigt.
+
+    ##belief in solutions
+    # It is possible to meet energy demands with renewable and sustainable energy alone. 
+    # Transforming to a sustainable and climate-friendly society would reduce our national standards of living. 
+    # Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible.
+
+    # I think High-Income countries have a greater responsibilty to reduce greenhouse gas emissions than Low and middle-income countries. 
+    # I would rather prepare to live with climate change than fight climate change. 
+    # Industry has to change for the climate, not individuals. 
     
 
 
@@ -85,12 +110,12 @@ class Lexicon:
     ## TBD kevin tam
     wvv_title = "How do you see the world?"
     wvv_header = "How much do you agree with the following statements?"
-    wvv1Label = "Our society would be better off if the distribution of wealth was more equal."
-    wvv2Label = "A lot of problems in our society come from the decline in the traditional family, where the man works and the woman stays home."
-    wvv3Label = "Discrimination against minorities is still a very serious problem in our country."
-    wvv4Label = "The government interferes far too much in our everyday lives."
-    wvv5Label = "I feel that people who are successful in business have a right to enjoy their wealth as they see fit."
-    wvv6Label = "Too many people expect society to do things for them that they should be doing for themselves."
+    hie1Label = "Our society would be better off if the distribution of wealth was more equal."
+    hie2Label = "A lot of problems in our society come from the decline in the traditional family, where the man works and the woman stays home."
+    hie3Label = "Discrimination against minorities is still a very serious problem in our country."
+    ind1Label = "The government interferes far too much in our everyday lives."
+    ind2Label = "I feel that people who are successful in business have a right to enjoy their wealth as they see fit."
+    ind3Label = "Too many people expect society to do things for them that they should be doing for themselves."
 
    # Importance of biospheric values van der Linden, 2015   
     ibv_title = "Guiding principles in enviromental issues"

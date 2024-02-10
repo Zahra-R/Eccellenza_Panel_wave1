@@ -73,12 +73,12 @@ class Lexicon:
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
     wvv_title = "Wie sehen Sie die Welt?"
     wvv_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    wvv1Label = "Unsere Gesellschaft wäre besser dran, wenn der Reichtum gleichmäßiger verteilt wäre."
-    wvv2Label = "Viele Probleme in unserer Gesellschaft resultieren aus dem Verschwinden des traditionellen Familienbildes, in der der Mann arbeitet und die Frau zu Hause bleibt."
-    wvv3Label = "Diskriminierung von Minderheiten ist in unserem Land immer noch ein sehr ernstes Problem."
-    wvv4Label = "Die Regierung mischt sich viel zu sehr in unseren Alltag ein."
-    wvv5Label = "Ich finde, dass erfolgreiche Geschäftsleute das Recht haben, ihren Reichtum so auszukosten, wie sie es für richtig halten."
-    wvv6Label = "Zu viele Menschen erwarten, dass die Gesellschaft Dinge für sie tut, die sie selbst tun sollten."
+    hie1Label = "Unsere Gesellschaft wäre besser dran, wenn der Reichtum gleichmäßiger verteilt wäre."
+    hie2Label = "Viele Probleme in unserer Gesellschaft resultieren aus dem Verschwinden des traditionellen Familienbildes, in der der Mann arbeitet und die Frau zu Hause bleibt."
+    hie3Label = "Diskriminierung von Minderheiten ist in unserem Land immer noch ein sehr ernstes Problem."
+    ind1Label = "Die Regierung mischt sich viel zu sehr in unseren Alltag ein."
+    ind2Label = "Ich finde, dass erfolgreiche Geschäftsleute das Recht haben, ihren Reichtum so auszukosten, wie sie es für richtig halten."
+    ind3Label = "Zu viele Menschen erwarten, dass die Gesellschaft Dinge für sie tut, die sie selbst tun sollten."
 
     # Importance of biospheric values van der Linden, 2015
     ibv_title = "Wichtige Prinzipien in Umweltfragen"
@@ -118,14 +118,14 @@ class Lexicon:
     know_2c = "Kohlenstoffemissionsneutralität, Stabilisierung der Treibhausgaskonzentrationen in der Atmosphäre."
 
     know_3qu = "Das 'Intergovernmental Panel on Climate Change' (IPCC) spielt eine wichtige Rolle in der globalen Klimapolitik. Welche ist das?"
-    know_3a = "Die Bereitstellung von objektiver, wissenschaftlicher Information die relevant sind um den Klimawandel zu verstehen."
-    know_3b = "Entscheidungen über die globale Klimapolitik, insbesondere das Festlegen des globalen CO2-Preises."
-    know_3c = "Gastgeber des UN Klimagerechtigkeitsgerichts welches bei klimatischen Streitfälle zwischen Staaten vermittelt."
+    know_3a = "Es fasst objektive und wissenschaftliche Erkenntnisse über den Klimawandel zusammen."
+    know_3b = "Es fällt Entscheidungen über die globale Klimapolitik, insbesondere legt es den globalen CO2-Preis fest."
+    know_3c = "Es ist Gastgeber des UN Klimagerechtigkeitsgerichts, welches bei klimatischen Streitfälle zwischen Staaten vermittelt."
    
     know_4qu = "Was ist der Kohlenstoffmarkt??"
     know_4a = "Die Versorgungsweg des von der EU unterstützten gaskaufenden Kartells, das zum Ziel hat, EU Länder,die wegen des Kriegs in der Ukraine Versorgungsprobleme haben, mit bezahlbarem, natürlichem Gas zu versorgen."
     know_4b = "Ein Handelssystem durch das Emittenten (Ausstoßer) Einheiten von Treibhausgasemissionszertifikaten kaufen oder verkaufen können um nationale Restriktionen bezüglich der totalen Emissionen zu erfüllen"
-    know_4c = "Ein online Marktplatz wo man recyceltes Kohlenstofffasern und Kohlenstoff schwarz kaufen kann."
+    know_4c = "Ein online Marktplatz, an dem man recycelte Kohlenstofffasern und Kohlenstoffprodukte kaufen kann."
     
     know_5qu = "Wie lange bleibt CO2 in der Atmosphäre?"
     know_5a = "10 Jahre"
@@ -144,7 +144,7 @@ class Lexicon:
     know_8c = "23 Jahren"
     
 
-    know_9qu = "Welches Land/Region verursacht absolut die höchsten CO2-Emissionen pro Jahr?"
+    know_9qu = "Welches Land oder Region verursacht absolut gesehen die höchsten CO2-Emissionen pro Jahr?"
     know_9a = "China"
     know_9b = "USA"
     know_9c = "EU"
