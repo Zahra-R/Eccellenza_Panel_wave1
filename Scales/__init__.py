@@ -78,6 +78,13 @@ def get_education_choices(language_code):
             Lexicon.bachelors_degree,
             Lexicon.masters_degree,
             Lexicon.doctoral_degree
+            Lexicon.education_label, 
+            Lexicon.high_school,
+            Lexicon.vocational_education,
+            Lexicon.some_college, 
+            Lexicon.bachelors_degree,
+            Lexicon.masters_degree,
+            Lexicon.doctoral_degree
         ]
     else:
         education_choices = [
@@ -321,7 +328,8 @@ class CCConcern(Page):
         #player.formfields.ccc1.label="test"
         return dict(Lexicon=player.session.myLexicon)
     
-class CCEmotion(Page):
+
+class CCEmotionNew(Page):
     form_model = 'player'
     form_fields= ['emoAng1', 'emoAng2', 'emoAng3', 'emoSad1','emoSad2', 'emoSad3', 'emoFear1', 'emoFear2', 'emoFear3', 'emoHope1', 'emoHope2', 'emoHope3', 'emoGuilt1', 'emoGuilt2', 'emoGuilt3']
     @staticmethod
@@ -390,7 +398,7 @@ class PolOrientation(Page):
     
 class PITrust(Page):
     form_model = 'player'
-    form_fields= ['pit1', 'pit2', 'pit3', 'pit4']
+    form_fields= ['pit1', 'pit2', 'pit3', 'pit4', 'pit5']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.myLexicon)
@@ -416,7 +424,7 @@ class goodbye (Page):
 
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
-#page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotion, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
+#page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]

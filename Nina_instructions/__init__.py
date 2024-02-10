@@ -47,6 +47,13 @@ class Player(BasePlayer):
 
 # for this all to work, need to add 'task_rounds' as PARTICIPANT_FIELDS in settings.py!!
 # PAGES
+class transition(Page):
+    form_model = 'player'
+
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
+    
 class instructions(Page):
     form_model = 'player'
 
@@ -62,6 +69,6 @@ class task_example(Page):
         return dict(Lexicon=Lexicon, **which_language)    
 
 # Page sequence
-page_sequence = [
-  instructions, task_example,  
-    ]
+page_sequence = [ transition,
+                  instructions, 
+                  task_example]

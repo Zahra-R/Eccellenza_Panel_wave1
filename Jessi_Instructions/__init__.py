@@ -22,6 +22,8 @@ class C(BaseConstants):
 
     if LANGUAGE_CODE == 'de':
         example_CT = '/static/global/images/task_designCT_de.png'
+    elif LANGUAGE_CODE == 'zh_hans':
+        example_CT = '/static/global/images/task_designCT_zh_hans.png'
     else:
         example_CT = '/static/global/images/task_designCT_en.png'
     example_CT = example_CT

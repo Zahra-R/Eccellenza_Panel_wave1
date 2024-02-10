@@ -1,17 +1,8 @@
 class Lexicon:
-    next = "Next"
+    next = "Weiter"
     small = "small (1)"
     large = "large (10)"
 
-    # transition
-    transition_title = 'Welcome to the next block of the study'
-
-    transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
-    # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
-    transitions_b =' This is block number'
-    transitions_c = 'out of 4 blocks. Thank you again, for taking the time to answer all questions. <br> Once you are ready, please proceed.'
-
-    
 
     # instructions
     instructions_title = "Instructions on the next task"
@@ -26,5 +17,9 @@ class Lexicon:
     example_pc = ' <i>That is, in the example above, the person follow a vegetarian diet, does not recycle, eats regional and imported food,subscribed to a mixed electricity supply, commutes every weekday to work by bus, and takes the train to go on vacation.</i>  <br> '
     example_pd = 'Next, you will estimate the carbon footprint of <b>16</b> persons with different lifestyles. <br> Please look at each individual carbon footprint carefully and take some time to provide your estimation. <br> The order in which the 6 behaviors are presented will change across the 16 examples you will see.'
     example_pic = '/static/global/images/example_en.png '
-
-   
+    # task_page
+     
+    title = 'Please rate these carbon footprints'
+    BEHAVIORTYPES =  '["Diet", "Electricity", "Recycling", "Food", "Commute", "Vacation"]'
+    instruction_task ='<b> Think about a person with the lifestyle below. How large do you think the carbon footprint of this person is? </b>'
+    task_info = 'Please note that a small footprint refers to a person that has a lifestyle that is accompanied by little greenhouse gas emissions (for a person in the United States) and a large footprint to a person that has a lifestyle that is accompanied by a lot of greenhouse gas emissions. <br> Please make your rating from 1– small carbon footprint to 10– large carbon footprint based on the 6 behaviors presented'

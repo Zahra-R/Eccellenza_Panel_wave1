@@ -5,30 +5,15 @@
 {% endblock %}
 
 {% block title %}
-    {{ Lexicon.ccc_title }}
+    {{ Lexicon.pit_title }}
 {% endblock %}
 
 {% block content %}
-<br>
-<p> {{ Lexicon.ccc_header }}</p>
 
-<style>  
-    table.radiotable th, table.radiotable td {
-        padding: 12px;
-        text-align: center;
-        max-width: none; /* No max-width for the entire table */
-    }
-    /* Left-align the first column */
-    table.radiotable th:first-child, table.radiotable td:first-child {
-        text-align: left;
-    }
-    /* Alternating row colors */
-    table.radiotable tr:nth-child(even) {
-        background-color: #c0e3e0;
-    }
-</style>
+<p> {{ Lexicon.pit_header }}</p>
+
 <table class="radiotable">
-    <tr> <th></th> <th    class="radio-column">  {{ Lexicon.not_at_all }}</th> <th class="radio-column" > </th class="radio-column"> <th class="radio-column"> </th> <th></th> <th    class="radio-column"> {{ Lexicon.very_much }} </th> </tr>
+    <tr> <th></th> <th    class="radio-column">  {{ Lexicon.no_trust_at_all }}</th> <th class="radio-column" > </th class="radio-column"> <th class="radio-column"> </th> <th class="radio-column"> </th> <th class="radio-column"> </th> <th class="radio-column"></th> <th    class="radio-column"> {{ Lexicon.full_trust }} </th> </tr>
 
 
    
@@ -49,7 +34,6 @@
         
     </div>
 </div> 
-
 {% endblock %}
 
 {% block scripts %}

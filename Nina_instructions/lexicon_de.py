@@ -1,5 +1,12 @@
 class Lexicon:
     next = "Weiter"
+
+     # transition
+    transition_title = 'Willkommen beim nächsten Block der Studie'
+    transitions_a = 'Vielen Dank für Ihre bisherigen Antworten. Wenn Sie eine kurze Pause benötigen, bevor Sie mit der Studie fortfahren, wäre jetzt ein guter Zeitpunkt. <br> Sobald Sie auf den weiter-Knopf auf dieser Seite klicken, bitten wir Sie, diesen Block in einem Rutsch auszufüllen.'
+    # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
+    transitions_b ='Dies ist Block Nummer '
+    transitions_c = ' von insgesamt 4 Blöcken. Vielen Dank, dass Sie sich die Zeit genommen haben, alle Fragen zu beantworten. Wenn Sie bereit sind, fahren Sie bitte fort.'
    
 
     # instructions

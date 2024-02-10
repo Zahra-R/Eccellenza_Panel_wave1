@@ -30,39 +30,6 @@ class Lexicon:
     completely_true = "Completely True"
 
 
-    ## New 3 cause items from Valkengoed
-    ## to be inserted here
-    # causes
-#     Human activities are a major cause of climate change.
-# 2. Climate change is mostly caused by human activity.
-# 3. The main causes of climate change are human activities.
-    # consequences final call whether to include still to be made
-
-# Overall, climate change will bring more negative than positive consequences to the world.
-# 2. Climate change will bring about serious negative consequences.
-# 3. The consequences of climate change will be very serious.
-    
-    # I think climate change is one of the greatest global risks. 
-    # The downsides of climate action are much lower than of the consequences of inaction and delay. 
-    # A climate-friendly transformation would have many positive side effects, besides adressing the risks of climate change. 
-
-
-
-    ##3 concern items as emotions. 
-    ## suggestion: worry, concerned, apprehensive (alternatives: upset or distressed)
-    ## german: besorgt, bekümmert, beunruhigt.
-
-    ##belief in solutions
-    # It is possible to meet energy demands with renewable and sustainable energy alone. 
-    # Transforming to a sustainable and climate-friendly society would reduce our national standards of living. 
-    # Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible.
-
-    # I think High-Income countries have a greater responsibilty to reduce greenhouse gas emissions than Low and middle-income countries. 
-    # I would rather prepare to live with climate change than fight climate change. 
-    # Industry has to change for the climate, not individuals. 
-    
-
-
     #Climate Change Concern Tobler
     ccc_title = "Attitudes about Climate Change"
     ccc_header = "How much do you agree with the following statements?"
@@ -79,26 +46,36 @@ class Lexicon:
     ccc16Label = "Climate protection needlessly impedes economic growth."
 
 
-    #Climate Change Emotion Knauf/Truelove
+    #Climate Change Emotion only for jessi pre-test 
     cce_title = "Attitudes about Climate Change"
     cce_header = "When I think of Climate Change I feel..."
-    emoAng1Label = "angry"
-    emoAng2Label = "mad"
-    emoAng3Label = "irritated"
-    emoFear1Label = "fearful"
-    emoFear2Label = "afraid"
-    emoFear3Label = "scared"
-    emoSad1Label = "sad"
-    emoSad2Label = "sorrowful"
-    emoSad3Label = "unhappy"
-    emoHope1Label = "hopeful"
-    emoHope2Label = "optimistic"
-    emoHope3Label = "upbeat"
-    emoGuilt1Label = "guilty"
-    emoGuilt2Label = "regretful"
-    emoGuilt3Label = "remorseful"
+    cce1Label = "Anger"
+    cce2Label = "Fear"
+    cce3Label = "Sadness"
+    cce4Label = "Joy"
+    cce5Label = "Curiosity"
+    cce6Label = "Hope"
 
-    
+
+    # new emotions
+    #Climate Change Emotion
+
+    cceA1Label = "angry"
+    cceA2Label = "mad"
+    cceA3Label = "irritated"
+    cceF1Label = "fearful"
+    cceF2Label = "afraid"
+    cceF3Label = "scared"
+    cceS1Label = "sad"
+    cceS2Label = "sorrowful"
+    cceS3Label = "unhappy"
+    cceH1Label = "hopeful"
+    cceH2Label = "optimistic"
+    cceH3Label = "upbeat"
+    cceG1Label = "guilty"
+    cceG2Label = "regretful"
+    cceG3Label = "remorseful"
+
     # Personal efficacy Leiserowitz et al, 2010
     #Only item 1
     pe_title = "Attitudes about Climate Change"
@@ -110,12 +87,12 @@ class Lexicon:
     ## TBD kevin tam
     wvv_title = "How do you see the world?"
     wvv_header = "How much do you agree with the following statements?"
-    hie1Label = "Our society would be better off if the distribution of wealth was more equal."
-    hie2Label = "A lot of problems in our society come from the decline in the traditional family, where the man works and the woman stays home."
-    hie3Label = "Discrimination against minorities is still a very serious problem in our country."
-    ind1Label = "The government interferes far too much in our everyday lives."
-    ind2Label = "I feel that people who are successful in business have a right to enjoy their wealth as they see fit."
-    ind3Label = "Too many people expect society to do things for them that they should be doing for themselves."
+    wvv1Label = "Our society would be better off if the distribution of wealth was more equal."
+    wvv2Label = "A lot of problems in our society come from the decline in the traditional family, where the man works and the woman stays home."
+    wvv3Label = "Discrimination against minorities is still a very serious problem in our country."
+    wvv4Label = "The government interferes far too much in our everyday lives."
+    wvv5Label = "I feel that people who are successful in business have a right to enjoy their wealth as they see fit."
+    wvv6Label = "Too many people expect society to do things for them that they should be doing for themselves."
 
    # Importance of biospheric values van der Linden, 2015   
     ibv_title = "Guiding principles in enviromental issues"
@@ -149,7 +126,7 @@ class Lexicon:
     know_1qu = "What is the COP?" ## This is maybe too easy given that the whole study is about CC???
     know_1a = "UN initiative for distributing funds to reduce the impact of climate change on poverty."
     know_1b = "An annual formal meeting to discuss climate change and establish mitigation actions."
-    know_1c = "An EU initiative for multinational cooperation against organized crime." 
+    know_1c = "An EU initiative against organized and war crimes." 
     
     know_2qu = "What does Net-Zero mean?"
     know_2a = "Monetary strategy of increasing interest rate to fight inflation."
@@ -250,3 +227,44 @@ class Lexicon:
     goodbye_text = "Thank you for your participation in our study! <br> You are now at the end of the study and will be redirected for compensation."
 
 
+    ## for pre-test Jessi only, Ninas items
+
+    Additional_title=  'Some additional questions'
+    Additional_intro=	'Lastly we would like to ask you some additional questions.'
+	
+    familiar_header	= 'For each of these actions please indicate how familiar you are with them:'
+    familiar_label1= 'choosing your own electricity contract or switching to a different more renewable contract'
+    familiar_label2	= 'following a vegetarian diet (i.e eating no meat including fish)'
+    familiar_label3	= 'commuting to work by bike'
+    familiar_label4	= 'buying and consuming imported foods (i.e. from other countries)'
+    familiar_label5	= 'buying and consuming regional foods (from your area / country)'
+    familiar_label6	= 'recycling (i.e. paper, glass, or metals)'
+    familiar_label7	= 'traveling by train to go on vacations'
+    familiar_label8	= 'traveling by bus to go on vacations'
+    familiar_label9	= 'Traveling by plane to go on vacations'
+    familiar_A	= 'very unfamiliar'
+    familiar_B	= 'unfamiliar'
+    familiar_C	= 'somewhat unfamiliar'
+    familiar_D	= 'neither unfamiliar nor familiar'
+    familiar_E	= 'somewhat familiar'
+    familiar_F	= 'familiar'
+    familiar_G	= 'very familiar'
+	
+    Difficult_header = 'Please indicate how easy or difficult it would be for an average person in your country to perform the following actions'
+    difficult_label1 = 'choose or switch their electricity contract (e.g., to have a higher share of electricity from renewable sources)'
+    difficult_label2 = 'follow a vegetarian diet (i.e. not to eat meat or fish)'
+    difficult_label3 ='commute to work by bike'
+    difficult_label4 = 'buy and consume imported foods (i.e. from other countries)'
+    difficult_label5 = 'buy and consume mostly regional foods (from your area / country)'
+    difficult_label6 = 'recycle (i.e. paper, glass, or metals)'
+    difficult_label7 = 'take the train to go on vacations'
+    difficult_label8 = 'take the bus to go on vacations'
+    difficult_label9 = 'take the plane to go on vacations'
+	
+    difficult_A = 'very difficult'
+    difficult_B = 'difficult'
+    difficult_C = 'somewhat difficult'
+    difficult_D = 'neither difficult nor easy'
+    difficult_E	= 'somewhat easy'
+    difficult_F	= 'easy'
+    difficult_G	= 'very easy'
