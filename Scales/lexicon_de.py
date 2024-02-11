@@ -1,5 +1,6 @@
 class Lexicon:
     instructions = "Instruktionen"
+    next = "Weiter"
     no = "Nein"
     results = "Ergebnis"
     round_number = "Runde"
@@ -123,8 +124,8 @@ class Lexicon:
     know_3b = "Es fällt Entscheidungen über die globale Klimapolitik, insbesondere legt es den globalen CO2-Preis fest."
     know_3c = "Es ist Gastgeber des UN Klimagerechtigkeitsgerichts, welches bei klimatischen Streitfälle zwischen Staaten vermittelt."
    
-    know_4qu = "Was ist der Kohlenstoffmarkt??"
-    know_4a = "Die Versorgungsweg des von der EU unterstützten gaskaufenden Kartells, das zum Ziel hat, EU Länder,die wegen des Kriegs in der Ukraine Versorgungsprobleme haben, mit bezahlbarem, natürlichem Gas zu versorgen."
+    know_4qu = "Was ist der Kohlenstoffmarkt?"
+    know_4a = "Die Versorgungsweg des von der EU unterstützten gaskaufenden Kartells, das zum Ziel hat, EU Länder, die wegen des Kriegs in der Ukraine Versorgungsprobleme haben, mit bezahlbarem, natürlichem Gas zu versorgen."
     know_4b = "Ein Handelssystem durch das Emittenten (Ausstoßer) Einheiten von Treibhausgasemissionszertifikaten kaufen oder verkaufen können um nationale Restriktionen bezüglich der totalen Emissionen zu erfüllen"
     know_4c = "Ein online Marktplatz, an dem man recycelte Kohlenstofffasern und Kohlenstoffprodukte kaufen kann."
     
@@ -193,7 +194,7 @@ class Lexicon:
     suburban = "Kleinstadt"
     rural = "Ländliche Gegend"
 
-    zip_code_label = "PLZ (freiwillig)"
+    zip_code_label = "Was ist Ihre PLZ? (Angabe ist freiwillig)"
 
     party_affiliation_label = "Welcher Partei würden Sie am ehesten Ihre Stimme geben?"
     cdcsu = "CDU/CSU"

@@ -56,9 +56,10 @@ def make_likert10():
         )
 
 
-def get_education_choices(player):
+#region Choices for demographics
+def education_choices(player):
     Lexicon = player.session.scalesLexi
-    language_code = player.session.myLangCode
+    language_code =  player.session.config['language']
     education_choices = []
     if language_code == 'de':
         education_choices = [    
@@ -101,11 +102,10 @@ def get_education_choices(player):
         ]
     return education_choices
 
-
-
-""" 
-def get_party_choices(language_code):
+def get_party_choices(player):
     party_choices = []
+    Lexicon = player.session.scalesLexi
+    language_code =  player.session.config['language']
     if language_code == 'de':
         party_choices = [    
             Lexicon.cdcsu,
@@ -128,37 +128,30 @@ def get_party_choices(language_code):
             Lexicon.other_party
         ]
     return party_choices
- """
 
-""" 
-def get_gender_choices(language_code):
+def gender_choices(player):
     gender_choices = []
-    if language_code == 'de':
-        party_choices = [    
-            Lexicon.female,
-            Lexicon.male,
-            Lexicon.diverse, 
-            Lexicon.other
-        ]
-    elif language_code == 'zh_hans':
+    Lexicon = player.session.scalesLexi
+    language_code = player.session.config['language']
+    if language_code == 'zh_hans':
         gender_choices = [
-            Lexicon.female,
-            Lexicon.male,
-            Lexicon.other
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["other", Lexicon.other]
         ]
     else:
         gender_choices = [
-            Lexicon.female,
-            Lexicon.male,
-            Lexicon.diverse, 
-            Lexicon.other
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["diverse", Lexicon.diverse], 
+            ["other", Lexicon.other]
         ]
     return gender_choices
- """
-""" 
-def get_income_choices(language_code, session):
+
+def income_choices(player):
     income_choices = []
-    Lexicon = session.scalesLexi
+    Lexicon = player.session.scalesLexi
+    language_code = player.session.config['language']
     if language_code == 'de':
         income_choices = [    
             Lexicon.income_label,
@@ -191,9 +184,15 @@ def get_income_choices(language_code, session):
             Lexicon.prefer_not_to_say
         ]
     return income_choices
- """
 
-#region
+
+def residential_area_choices(player): # ready and checked
+    Lexicon = player.session.scalesLexi
+    return  [["metropolitan", Lexicon.metropolitan_area], ["suburb", Lexicon.suburban], ["rural", Lexicon.rural]]
+
+#endregion
+
+#region Knowledge Choices
 def cknow1_choices(player):
     Lexicon = player.session.scalesLexi
     return [
@@ -203,7 +202,6 @@ def cknow1_choices(player):
     ['dk',  Lexicon.dont_know],
 ]
 
-
 def cknow2_choices(player):
     Lexicon = player.session.scalesLexi
     return [
@@ -212,7 +210,6 @@ def cknow2_choices(player):
     ['c_true', Lexicon.know_2c],
     ['dk',  Lexicon.dont_know],
 ]
-
 
 def cknow3_choices(player):
     Lexicon = player.session.scalesLexi
@@ -322,10 +319,11 @@ class Player(BasePlayer):
 
     ### Demographics
     age = models.IntegerField(min=18,max = 99)
-    income = models.StringField(    )
-    #education = models.StringField(choices=get_education_choices(LANGUAGE_CODE, Lexicon) )
-    #residential_area = models.StringField(choices=[Lexicon.metropolitan_area, Lexicon.suburban, Lexicon.rural] )
-    #zip_code = models.StringField( blank=True)
+    income = models.StringField()
+    education = models.StringField()
+    gender = models.StringField()
+    residential_area = models.StringField()
+    zip_code = models.StringField(blank=True)
     #party_affiliation = models.StringField(choices=get_party_choices(LANGUAGE_CODE, Lexicon) )
 
 
@@ -354,7 +352,6 @@ class CCEmotion(Page):
         form_fields = ['emoAng1', 'emoAng2', 'emoAng3', 'emoSad1','emoSad2', 'emoSad3', 'emoFear1', 'emoFear2', 'emoFear3', 'emoHope1', 'emoHope2', 'emoHope3', 'emoGuilt1', 'emoGuilt2', 'emoGuilt3'],
         form_field_labels = [Lexicon.emoAng1Label, Lexicon.emoAng2Label , Lexicon.emoAng3Label, Lexicon.emoSad1Label,Lexicon.emoSad2Label, Lexicon.emoSad3Label,  Lexicon.emoFear1Label , Lexicon.emoFear2Label , Lexicon.emoFear3Label, Lexicon.emoHope1Label , Lexicon.emoHope2Label , Lexicon.emoHope3Label , Lexicon.emoGuilt1Label, Lexicon.emoGuilt2Label, Lexicon.emoGuilt3Label]
     )
-    
     
 class CCKnowledge(Page):
     form_model = 'player'
@@ -419,7 +416,16 @@ class Demographics(Page):
 
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
+        return{
+            'Lexicon': player.session.scalesLexi
+        } 
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code'],
+        form_field_labels = [Lexicon.age_label, Lexicon.gender_label , Lexicon.income_label, Lexicon.education_label, Lexicon.residential_area_label, Lexicon.zip_code_label]
+    )
 
 class transition (Page): 
     form_model = 'player'
@@ -438,4 +444,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [CCKnowledge, WVValues, CCEmotion]
+page_sequence = [Demographics, CCKnowledge, WVValues, CCEmotion]

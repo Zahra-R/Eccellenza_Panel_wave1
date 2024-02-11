@@ -1,4 +1,6 @@
 class Lexicon:
+    
+    next = "下一个"
     #Scale anchors 
     strongly_liberal = "非常开明"
     somewhat_liberal = "有点开明"

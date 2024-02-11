@@ -75,7 +75,7 @@ class Player(BasePlayer):
 def creating_session(subsession:Subsession):
 
     if subsession.session.config['language'] == 'de':
-        from .lexicon_de import Lexicon        
+        from .lexicon_de import Lexicon       
 
     elif subsession.session.config['language'] == 'zh_hans':
         from .lexicon_zh_hans import Lexicon
@@ -93,8 +93,6 @@ def creating_session(subsession:Subsession):
             player.participant.reverseBoxes = next(reverse_display)
             player.participant.seenMisinfo = []
             player.participant.seenMislInfo = []
-            player.session.misinfo =  misinfofile
-            player.session.info =  infofile
 
 
 
@@ -135,8 +133,8 @@ class sampling(Page):
             misinfofile = C.misinfofile_de
             infofile = C.infofile_de
         elif player.session.config['language'] == "en":
-            misinfofile = C.misinfofile_de
-            infofile = C.infofile_de
+            misinfofile = C.misinfofile_en
+            infofile = C.infofile_en
         MisinfoText = misinfofile[player.participant.randomMisinfoArray[round_number-1]]['finalStatement']
         InfoText = infofile[player.participant.randomInfoArray[round_number-1]]['finalStatement']
         player.InfohasDebrief = True if "correctedStatement" in  infofile[player.participant.randomInfoArray[round_number-1]] else False

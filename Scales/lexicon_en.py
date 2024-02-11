@@ -1,5 +1,6 @@
 class Lexicon:
     instructions = "Instructions"
+    next = "Next"
     no = "No"
     results = 'Results'
     round_number = "Round no."
@@ -43,7 +44,7 @@ class Lexicon:
 # 3. The consequences of climate change will be very serious.
     
     # I think climate change is one of the greatest global risks. 
-    # The downsides of climate action are much lower than of the consequences of inaction and delay. 
+    # There are much less downsides to climate action than to the consequences of inaction and delay. 
     # A climate-friendly transformation would have many positive side effects, besides adressing the risks of climate change. 
 
 
@@ -235,7 +236,7 @@ class Lexicon:
     suburban = "Suburban Area"
     rural = "Rural Area"
 
-    zip_code_label = "Zip Code (voluntarily)"
+    zip_code_label = "What is your Zip Code? (Answering this question is optional.)"
     
     party_affiliation_label = "Which party would you be most likely to vote for?"
     republicans = "Republicans"
