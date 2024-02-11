@@ -62,9 +62,10 @@ SESSION_CONFIGS = [
          num_demo_participants=10,
      ),
         dict(
-         name='first_draft_NinasPart',
+         name='NinasPart_de',
          #app_sequence=[ 'Nina_survey', 'Nina_carbontask', 'Nina_footprint_calculator', 'Nina_questionnaire'],
-         app_sequence= ['Nina_instructions', 'Nina_carbontask', 'Nina_footprint_calculator'],
+        app_sequence= ['Nina_instructions', 'Nina_carbontask', 'Nina_footprint_calculator'],
+        language = "de",
          num_demo_participants=10,
      ),
         dict(

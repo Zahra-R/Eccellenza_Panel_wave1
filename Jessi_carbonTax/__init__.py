@@ -25,7 +25,6 @@ which_language[LANGUAGE_CODE[:2]] = True
 class C(BaseConstants):
     NAME_IN_URL = 'carbon_taxtask'
     PLAYERS_PER_GROUP = None
-    payment_per_correct_answer = .1
     NUM_ROUNDS = 12
     if LANGUAGE_CODE == 'de':
         POLICY_COMBINATIONS_TABLE = open('Jessi_carbonTax/Policy_Combinations_Table_de.json')

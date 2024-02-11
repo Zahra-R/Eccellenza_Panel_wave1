@@ -16,7 +16,6 @@ which_language[LANGUAGE_CODE[:2]] = True
 class C(BaseConstants):
     NAME_IN_URL = 'instructions_carbonTaxtask'
     PLAYERS_PER_GROUP = None
-    payment_per_correct_answer = .1
     NUM_ROUNDS = 1
     
 

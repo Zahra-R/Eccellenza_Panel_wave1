@@ -116,8 +116,8 @@
 </div>
 
 <div >
-    <button id="nextst" style=" margin-top: 4vh;" disabled class="otree-btn-next btn btn-primary">Next</button>
-
+    <button id="nextst" style=" margin-top: 4vh;" disabled class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
+ 
 </div>
 {% endblock %}
 
@@ -127,15 +127,10 @@
 <meta charset="UTF-8">
 <script>
     var LANGUAGE_CODE = LANGUAGE_CODE
-
-
     var currentBehaviors = "{{current_footprint_table}}"
     currentBehaviors = eval(currentBehaviors)
-
     var currentImages = "{{current_footprint_table_images}}"
     currentImages = eval(currentImages)
-
-
     var behaviorTypes = "{{behaviorTYPES}}"
     behaviorTypes = eval(behaviorTypes)
     var random_behavior_order = '{{random_behavior_order}}'

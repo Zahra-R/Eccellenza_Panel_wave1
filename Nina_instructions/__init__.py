@@ -18,18 +18,7 @@ which_language[LANGUAGE_CODE[:2]] = True
 class C(BaseConstants):
     NAME_IN_URL = 'instructions_task'
     PLAYERS_PER_GROUP = None
-    payment_per_correct_answer = .1
     NUM_ROUNDS = 1
-    
-
-    if LANGUAGE_CODE == 'de':
-        example_pic = '/static/global/images/example_de.png'
-    else:
-        example_pic = '/static/global/images/example_en.png'
-    example_pic = example_pic
-
-
-
 
 class Subsession(BaseSubsession):
     pass
