@@ -41,7 +41,7 @@ def creating_session(subsession:Subsession):
         from .lexicon_zh_hans import Lexicon
     else:
         from .lexicon_en import Lexicon  
-    subsession.session.myLexicon = Lexicon
+    subsession.session.samplingIntroLexi = Lexicon
 
     import itertools
     box_labels = itertools.cycle([True, True, False, False])
@@ -71,14 +71,14 @@ class Player(BasePlayer):
 class Introduction(Page):
     form_model = 'player'
     def vars_for_template(player: Player):
-        return dict(Lexicon = player.session.myLexicon)
+        return dict(Lexicon = player.session.samplingIntroLexi)
 
 
 class beforeTask(Page):
     form_model='player'
     form_fields = ['range_ccconcern']
     def vars_for_template(player: Player):
-        return dict(Lexicon = player.session.myLexicon)
+        return dict(Lexicon = player.session.samplingIntroLexi)
 
 page_sequence = [
     Introduction,

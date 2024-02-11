@@ -45,8 +45,8 @@ class Lexicon:
     ccc16Label = "Klimaschutz behindert unnötigerweise das Wirtschaftswachstum."
 
     #Climate Change Emotion Knauf/Truelove
-    cce_title = "Attitudes about Climate Change"
-    cce_header = "When I think of Climate Change I feel..."
+    cce_title = "Reaktionen auf den Klimawandel"
+    cce_header = "Wenn ich an den Klimawandel denke, fühle ich mich..."
     emoAng1Label = "wütend"
     emoAng2Label = "zornig"
     emoAng3Label = "gereizt"

@@ -6,6 +6,7 @@ SESSION_CONFIGS = [
   #      app_sequence=['survey','task'],
          app_sequence=['Intro'],
          consent_form="redirect",
+         language = "de",
          num_demo_participants=10,
      ),
      dict(
@@ -40,16 +41,10 @@ SESSION_CONFIGS = [
          name='first_draft_Panel_scales_pure',
   #      app_sequence=['survey','task'],
          app_sequence=['Scales'],
-         language="de",
+         language = "de",
 
          num_demo_participants=10,
      ),
-       dict(
-        name='first_draft_Panel_withSampling',
-        app_sequence=['Intro','CCsampling_intro', 'CCsampling', 'Scales'],
-        num_demo_participants=5,
-        consent_form="standalone"
-    ),
         dict(
          name='first_draft_NinasPart',
          #app_sequence=[ 'Nina_survey', 'Nina_carbontask', 'Nina_footprint_calculator', 'Nina_questionnaire'],
@@ -57,9 +52,10 @@ SESSION_CONFIGS = [
          num_demo_participants=10,
      ),
         dict(
-         name='first_draft_JessisPart',
-         app_sequence= ['Intro', 'Jessi_Instructions', 'Jessi_carbonTax', 'Scales'],
+         name='Pretest_Jessi_de',
+         app_sequence= ['Intro', 'Jessi_Instructions', 'Jessi_carbonTax', 'CCsampling_intro'],
          consent_form = "standalone",
+         language = "de",
          num_demo_participants=10,
      )
 
@@ -96,7 +92,16 @@ PARTICIPANT_FIELDS = [
     
     ]
 SESSION_FIELDS = [
-    'myLexicon',
+    'introLexi',
+    'samplingLexi',
+    'samplingIntroLexi',
+    'cabonTaxLexi',
+    'taxIntroLexi',
+    'carbonTaskLexi',
+    'taskIntroLexi',
+    'footprintLexi',
+    'scalesLexi',
+
     'myLangCode'
 ]
 

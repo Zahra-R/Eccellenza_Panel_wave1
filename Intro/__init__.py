@@ -18,7 +18,7 @@ When you change the LANGUAGE_CODE in settings.py, the language will automaticall
 Note: this technique does not require .po files, which are a more complex technique.    
 """
 
-
+""" 
 if LANGUAGE_CODE == 'de':
     from .lexicon_de import Lexicon
 elif LANGUAGE_CODE == 'zh_hans':
@@ -31,7 +31,7 @@ else:
 # enabling you to do if-statements like {{ if de }} Nein {{ else }} No {{ endif }}
 which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
 which_language[LANGUAGE_CODE[:2]] = True
-
+ """
 
 class C(BaseConstants):
     NAME_IN_URL = 'intro'
@@ -65,6 +65,9 @@ def creating_session(subsession:Subsession):
     else:
         from .lexicon_en import Lexicon
         subsession.session.myLangCode = "_en"
+    subsession.session.introLexi = Lexicon
+    print(Lexicon)
+    print(subsession.session)
 
     import itertools
     order_tasks = itertools.cycle([1,2,3])
@@ -120,8 +123,7 @@ class Consent(Page):
 
         return {
             'stringOrder': stringOrder,
-            'Lexicon': Lexicon,
-            'which_language': which_language
+            'Lexicon': player.session.introLexi
         }
     @staticmethod
     def is_displayed(player:Player):
@@ -133,10 +135,13 @@ class Consent_Standalone(Page):
     form_fields = ['dataScience', 'dataTeach', 'mobileDevice']
     @staticmethod
     def vars_for_template(player: Player):
-        return {
-            'Lexicon': Lexicon,
-            'which_language': which_language
-        }
+       print("helll22")
+       print(player.session)
+       print("is this the wrong lexicon?")
+       print(player.session.introLexi)
+       return{
+            'Lexicon': player.session.introLexi
+        } 
     @staticmethod
     def is_displayed(player:Player):
         return (player.session.config['consent_form'] =="standalone")

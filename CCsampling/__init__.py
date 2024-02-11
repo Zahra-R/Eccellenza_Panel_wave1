@@ -81,7 +81,7 @@ def creating_session(subsession:Subsession):
         from .lexicon_zh_hans import Lexicon
     else:
         from .lexicon_en import Lexicon  
-    subsession.session.myLexicon = Lexicon
+    subsession.session.samplingLexi = Lexicon
     subsession.session.myLangCode = subsession.session.config['language'] 
 
     import itertools
@@ -151,7 +151,7 @@ class sampling(Page):
             'MisinfoText': MisinfoText,
             'InfoText': InfoText, 
             'tellingBoxNames': player.participant.telling_box_label,
-            'Lexicon': player.session.myLexicon
+            'Lexicon': player.session.samplingLexi
         } 
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
@@ -174,7 +174,7 @@ class boxrating(Page):
     def vars_for_template(player: Player):
         return {
             'round_number': player.round_number,
-            'Lexicon': player.session.myLexicon
+            'Lexicon': player.session.samplingLexi
         }
     @staticmethod
     def is_displayed(player: Player):
@@ -229,7 +229,7 @@ class Conclude(Page):
             'seenMlI': seenMlI,
             'seenMstatements': seenMstatements,
             'seenMcorrections': seenMcorrections,
-            'Lexicon': player.session.myLexicon
+            'Lexicon': player.session.samplingLexi
         }
     @staticmethod
     def is_displayed(player: Player):
