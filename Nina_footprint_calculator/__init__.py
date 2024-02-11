@@ -68,8 +68,6 @@ class Player(BasePlayer):
         ],
     )
     
-
-    
     footprint_flying_short = models.IntegerField(
         label= Lexicon.flying_short_label,
         min=0, max= 300

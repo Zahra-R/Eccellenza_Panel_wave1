@@ -118,6 +118,7 @@ SESSION_FIELDS = [
     'taskIntroLexi',
     'footprintLexi',
     'scalesLexi',
+    'debriefLexi',
 
     'myLangCode'
 ]

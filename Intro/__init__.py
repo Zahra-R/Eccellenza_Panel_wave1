@@ -53,8 +53,6 @@ class Player(BasePlayer):
     mobileDevice= models.BooleanField(initial=False, blank=True)
 
 
-
-
 def creating_session(subsession:Subsession):
     if subsession.session.config['language'] == 'de':
         from .lexicon_de import Lexicon
@@ -66,8 +64,6 @@ def creating_session(subsession:Subsession):
         from .lexicon_en import Lexicon
         subsession.session.myLangCode = "_en"
     subsession.session.introLexi = Lexicon
-    print(Lexicon)
-    print(subsession.session)
 
     import itertools
     order_tasks = itertools.cycle([1,2,3])
@@ -76,8 +72,6 @@ def creating_session(subsession:Subsession):
             player.participant.order_tasks = next(order_tasks)
    
    
-
-
 class Consent(Page):
     form_model = 'player'
     form_fields = ['dataScience', 'dataTeach', 'mobileDevice']
@@ -137,10 +131,6 @@ class Consent_Standalone(Page):
     form_fields = ['dataScience', 'dataTeach', 'mobileDevice']
     @staticmethod
     def vars_for_template(player: Player):
-       print("helll22")
-       print(player.session)
-       print("is this the wrong lexicon?")
-       print(player.session.introLexi)
        return{
             'Lexicon': player.session.introLexi
         } 

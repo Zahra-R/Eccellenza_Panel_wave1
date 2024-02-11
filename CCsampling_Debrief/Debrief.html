@@ -1,0 +1,139 @@
+
+{% block styles %}
+    <link href="{{ static 'global/css/SamplingPilotgeneral.css'}}" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" >
+{% endblock %}
+
+{% block title %}
+    {{Lexicon.conclude_title}}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div >
+<p> {{Lexicon.debrief1}} 
+{{if player.participant.reverseBoxes == False}} A{{else}} B{{endif}}
+{{Lexicon.debrief2}}
+{{if player.participant.reverseBoxes == False}} B {{else}} A{{endif}}
+{{Lexicon.debrief3}}
+</p>
+
+{{Lexicon.debrief_link1}}
+{{Lexicon.debrief_link2}}
+{{Lexicon.debrief_link3}}
+{{Lexicon.debrief_link4}}
+
+ <table id="debriefTable" class="stripe hover row-border">
+ </table>
+  
+</div>
+
+
+<div class="next-btn">  
+    <div style="float: right; padding-top: 5vh;">
+         {% next_button %} 
+    </div>
+</div> 
+
+
+
+<input type="hidden" name="click_consequences" id="click_consequences" value="False" />
+<input type="hidden" name="click_debunk" id="click_debunk" value="False" />
+<input type="hidden" name="click_ipcc" id="click_ipcc"  value="False"/>
+<input type="hidden" name="click_mechanism" id="click_mechanism" value="False" />
+
+{{ formfield_errors 'click_consequences' }}
+{{ formfield_errors 'click_debunk' }}
+{{ formfield_errors 'click_ipcc' }}
+{{ formfield_errors 'click_mechanism' }}  
+
+{% endblock %}
+
+{% block scripts %}
+
+<script src="https://code.jquery.com/jquery-3.7.0.js"> </script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" > </script>
+
+
+<script>
+
+    var seenM = '{{seenM}}'
+    seenM = eval(seenM)
+    var seenMstatements = "{{seenMstatements}}"
+    seenMstatements = eval(seenMstatements)
+
+    var seenMcorrections = "{{seenMcorrections}}"
+    seenMcorrections = eval(seenMcorrections)
+    
+
+
+fillTable = function(){
+    for (let i = 0; i < seenMstatements.length; i++){ 
+        thisseenM = seenMstatements[i]
+        thisseenM = thisseenM.replaceAll("´", "'")
+        thiscorrectedM = seenMcorrections[i]
+        thiscorrectedM = thiscorrectedM.replaceAll("´", "'")
+        var mytable = document.getElementById("debriefTable");
+
+        // Create an empty <tr> element and add it to the 1st position of the table:
+        var row = mytable.insertRow(-1);
+
+        // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+
+        // Add some text to the new cells:
+        cell1.innerHTML = thisseenM;
+        cell2.innerHTML = thiscorrectedM;
+
+        
+    }
+    
+}
+
+$(document).ready(function() {
+
+    setTimeout(function () {
+        $('#debriefTable').DataTable({
+            "columns": [
+                { "data": "Misleading", title:"Inaccurate Statement", width:"45%"},
+                { "data": "Corrected" , title:"Response in Line with Scientific Evidence", width:"55%"},
+
+            ], 
+            "lengthMenu": [ [2, 5, 10, -1], [2, 5, 10, "All"] ],
+            "pageLength": -1
+        });
+
+    }, 1000)
+
+    $('a').click(function() {
+        console.log($(this))
+        console.log(`${String("click_" + $(this).attr("id"))}`)
+        forminputs[`${String("click_" + $(this).attr("id"))}`].value = "True"
+   
+    })
+    //...
+
+
+} );
+
+
+
+
+
+window.onload = function () {
+
+    fillTable()
+
+
+}
+
+
+</script>
+
+
+{% endblock %}
+
+

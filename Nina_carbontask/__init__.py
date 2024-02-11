@@ -42,9 +42,6 @@ def creating_session(subsession:Subsession):
     else:
         from .lexicon_en import Lexicon  
     subsession.session.carbonTaskLexi = Lexicon
-    print(Lexicon)
-    print("hello")
-    print(subsession.session.carbonTaskLexi)
     subsession.session.myLangCode = subsession.session.config['language']
     if subsession.round_number == 1:
         for p in subsession.get_players():
