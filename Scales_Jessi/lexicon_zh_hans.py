@@ -186,6 +186,13 @@ class Lexicon:
     masters_degree = "硕士学位"
     doctoral_degree = "博士学位"
 
+    no_formal = "keine formelle Bildung"
+    obligatory = "obligatorische Schule"
+    high_school = "Sekundarstufe: Abitur / Berufsbildung / Allgemein "
+    degree = "höhere Berufsbildung: Hochschulabschluss / Bachelor / Master"
+    doctoral_degree = "Promotion (PhD) oder höher"
+    prefer_not_to_say_education = "Keine Angabe"
+
     residential_area_label = "什么最能描述您的居住区？"
     metropolitan_area = "大都市区"
     suburban = "郊区"

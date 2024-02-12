@@ -18,19 +18,6 @@ When you change the LANGUAGE_CODE in settings.py, the language will automaticall
 Note: this technique does not require .po files, which are a more complex technique.    
 """
 
-if LANGUAGE_CODE == 'de':
-    from .lexicon_de import Lexicon
-elif LANGUAGE_CODE == 'zh_hans':
-    from .lexicon_zh_hans import Lexicon
-else:
-    from .lexicon_en import Lexicon
-
-
-# this is the dict you should pass to each page in vars_for_template,
-# enabling you to do if-statements like {{ if de }} Nein {{ else }} No {{ endif }}
-which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
-which_language[LANGUAGE_CODE[:2]] = True
-
 
 class C(BaseConstants):
     NAME_IN_URL = 'panel_study'
@@ -45,6 +32,15 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
     pass
 
+def creating_session(subsession:Subsession):
+    if subsession.session.config['language'] == 'de':
+        from .lexicon_de import Lexicon        
+
+    elif subsession.session.config['language'] == 'zh_hans':
+        from .lexicon_zh_hans import Lexicon
+    else:
+        from .lexicon_en import Lexicon  
+    subsession.session.scalesJessiLexi = Lexicon
 
 # custom function to automatically make likert type fields with 5 options
 # custom function to automatically make 4 option fields
@@ -91,45 +87,47 @@ def make_likert10(label):
             widget=widgets.RadioSelect,
             )
 
-# functions to generate education and party choices based on language
-def get_education_choices(language_code):
-    education_choices = []
+#region Choices for demographics
 
+def education_choices(player):
+    Lexicon = player.session.scalesJessiLexi
+    language_code =  player.session.config['language']
+    education_choices = []
     if language_code == 'de':
         education_choices = [    
-            Lexicon.no_formal_education,
-            Lexicon.elementary_school,
-            Lexicon.secondary_school,
-            Lexicon.higher_secondary_school,
-            Lexicon.vocational_training,
+            Lexicon.no_formal,
+            Lexicon.obligatory,
             Lexicon.high_school,
-            Lexicon.college_degree,
-            Lexicon.master_degree,
+            Lexicon.degree,
             Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education
+            Lexicon.prefer_not_to_say_education,
         ]
+
     elif language_code == 'zh_hans':
-        education_choices = [
-            Lexicon.education_label, 
+        education_choices = [ 
+            Lexicon.no_formal,
+            Lexicon.obligatory,
             Lexicon.high_school,
-            Lexicon.vocational_education,
-            Lexicon.some_college, 
-            Lexicon.bachelors_degree,
-            Lexicon.masters_degree,
-            Lexicon.doctoral_degree
-        ]
+            Lexicon.degree,
+            Lexicon.doctoral_degree,
+            Lexicon.prefer_not_to_say_education,
+            ]
+   
     else:
         education_choices = [
+            Lexicon.no_formal,
+            Lexicon.obligatory,
             Lexicon.high_school,
-            Lexicon.some_college,
-            Lexicon.bachelors_degree,
-            Lexicon.masters_degree,
+            Lexicon.degree,
             Lexicon.doctoral_degree,
+            Lexicon.prefer_not_to_say_education,
         ]
     return education_choices
 
-def get_party_choices(language_code):
+def get_party_choices(player):
     party_choices = []
+    Lexicon = player.session.scalesJessiLexi
+    language_code =  player.session.config['language']
     if language_code == 'de':
         party_choices = [    
             Lexicon.cdcsu,
@@ -153,32 +151,29 @@ def get_party_choices(language_code):
         ]
     return party_choices
 
-def get_gender_choices(language_code):
+def gender_choices(player):
     gender_choices = []
-    if language_code == 'de':
-        party_choices = [    
-            Lexicon.female,
-            Lexicon.male,
-            Lexicon.diverse, 
-            Lexicon.other
-        ]
-    elif language_code == 'zh_hans':
+    Lexicon = player.session.scalesJessiLexi
+    language_code = player.session.config['language']
+    if language_code == 'zh_hans':
         gender_choices = [
-            Lexicon.female,
-            Lexicon.male,
-            Lexicon.other
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["other", Lexicon.other]
         ]
     else:
         gender_choices = [
-            Lexicon.female,
-            Lexicon.male,
-            Lexicon.diverse, 
-            Lexicon.other
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["diverse", Lexicon.diverse], 
+            ["other", Lexicon.other]
         ]
     return gender_choices
 
-def get_income_choices(language_code):
+def income_choices(player):
     income_choices = []
+    Lexicon = player.session.scalesJessiLexi
+    language_code = player.session.config['language']
     if language_code == 'de':
         income_choices = [    
             Lexicon.income_label,
@@ -211,6 +206,13 @@ def get_income_choices(language_code):
             Lexicon.prefer_not_to_say
         ]
     return income_choices
+
+
+def residential_area_choices(player): # ready and checked
+    Lexicon = player.session.scalesJessiLexi
+    return  [["metropolitan", Lexicon.metropolitan_area], ["suburb", Lexicon.suburban], ["rural", Lexicon.rural]]
+
+#endregion
 
 class Player(BasePlayer):
     ### Climate Change Concern Scale by Tobler et al. 2012

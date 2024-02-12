@@ -201,11 +201,12 @@ class Lexicon:
     prefer_not_to_say = "Prefer not to say"
 
     education_label = "What is your highest level of education?"
-    high_school = "High School"
-    some_college = "Some College"
-    bachelors_degree = "Bachelor's Degree"
-    masters_degree = "Master's Degree"
-    doctoral_degree = "Doctoral Degree"
+    no_formal = "No formal education"
+    obligatory = "Compulsory education"
+    high_school = "Secondary education /High School / Vocational training"
+    degree = "Tertiary education: Bachelor's Degree / Master's Degree"
+    doctoral_degree = "Doctoral Degree or higher"
+    prefer_not_to_say_education = "Prefer not to say"
 
     residential_area_label = "What describes your residential area best?"
     metropolitan_area = "Metropolitan Area"

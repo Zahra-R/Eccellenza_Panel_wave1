@@ -54,51 +54,47 @@ def make_likert10():
             choices=[1,2,3,4,5,6,7,8,9,10],
             widget=widgets.RadioSelect,
         )
+def make_likert9():
+        return models.IntegerField(
+            choices=[-1,0,1,2,3,4,5,6,7],
+            widget=widgets.RadioSelect,
+        )
 
 
 #region Choices for demographics
+# Nina: added gender german at beginning
 def education_choices(player):
     Lexicon = player.session.scalesLexi
     language_code =  player.session.config['language']
     education_choices = []
     if language_code == 'de':
         education_choices = [    
-            Lexicon.no_formal_education,
-            Lexicon.elementary_school,
-            Lexicon.secondary_school,
-            Lexicon.higher_secondary_school,
-            Lexicon.vocational_training,
+            Lexicon.no_formal,
+            Lexicon.obligatory,
             Lexicon.high_school,
-            Lexicon.college_degree,
-            Lexicon.master_degree,
+            Lexicon.degree,
             Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education
+            Lexicon.prefer_not_to_say_education,
         ]
 
     elif language_code == 'zh_hans':
         education_choices = [ 
-            Lexicon.education_label, 
+            Lexicon.no_formal,
+            Lexicon.obligatory,
             Lexicon.high_school,
-            Lexicon.vocational_education,
-            Lexicon.some_college, 
-            Lexicon.bachelors_degree,
-            Lexicon.masters_degree,
+            Lexicon.degree,
             Lexicon.doctoral_degree,
-            Lexicon.education_label, 
-            Lexicon.high_school,
-            Lexicon.vocational_education,
-            Lexicon.some_college, 
-            Lexicon.bachelors_degree,
-            Lexicon.masters_degree,
-            Lexicon.doctoral_degree ]
+            Lexicon.prefer_not_to_say_education,
+            ]
    
     else:
         education_choices = [
+            Lexicon.no_formal,
+            Lexicon.obligatory,
             Lexicon.high_school,
-            Lexicon.some_college,
-            Lexicon.bachelors_degree,
-            Lexicon.masters_degree,
+            Lexicon.degree,
             Lexicon.doctoral_degree,
+            Lexicon.prefer_not_to_say_education,
         ]
     return education_choices
 
@@ -133,7 +129,14 @@ def gender_choices(player):
     gender_choices = []
     Lexicon = player.session.scalesLexi
     language_code = player.session.config['language']
-    if language_code == 'zh_hans':
+    if language_code == 'de':
+        gender_choices = [
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["diverse", Lexicon.diverse], 
+            ["other", Lexicon.other]
+        ]
+    elif language_code == 'zh_hans':
         gender_choices = [
             ["female", Lexicon.female],
             ["male", Lexicon.male],
@@ -317,6 +320,12 @@ class Player(BasePlayer):
     ind2 = make_likert10()
     ind3 = make_likert10()
 
+    ### IB Values
+    ibv1 = make_likert9()
+    ibv2 = make_likert9()
+    ibv3 = make_likert9()
+    ibv4 = make_likert9()
+
     ### Demographics
     age = models.IntegerField(min=18,max = 99)
     income = models.StringField()
@@ -395,6 +404,13 @@ class IBValues(Page):
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields= ['ibv1', 'ibv2', 'ibv3', 'ibv4'],
+        form_field_labels = [Lexicon.ibv1Label, Lexicon.ibv2Label , Lexicon.ibv3Label, Lexicon.ibv4Label]
+    )
     
 class PolOrientation(Page):
     form_model = 'player'
@@ -444,4 +460,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [Demographics, CCKnowledge, WVValues, CCEmotion]
+page_sequence = [Demographics, CCKnowledge, WVValues, CCEmotion, IBValues]
