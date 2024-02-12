@@ -10,14 +10,10 @@ class Lexicon:
     your_decision = "Your decision"
     not_at_all = "not at all"
     very_much = "very much"
-    no_effort = "no effort"
-    great_deal_of_effort = "a great deal of effort"
-    not_important = "not important"
-    not_at_all_important = "not at all important"
-    extremely_important = "extremely important"
-    likely_increase = "Likely to Increase"
-    no_change = "No Change"
-    likely_decrease = "Likely to Decrease"
+    
+    completely_agree = "completely agree"
+    completely_disagree = "completely disagree"
+    
     dont_know = "Don't know"
     opposed_to_values = "opposed to my values"
     strongly_liberal = "Strongly Liberal"
@@ -104,13 +100,13 @@ class Lexicon:
     emoConcern3Label = "upset"
 
     ### beliefs taken from  Valkengoed
-    belief_title = "How do you see the world?"
+    belief_title = "What do you believe?"
     belief_header = "How much do you agree with the following statements?"
     belief1Label = "Human activities are a major cause of climate change."
     belief2Label = "Climate change is mostly caused by human activity."
     belief3Label = "The main causes of climate change are human activities."
 
-    beliefConsens_header = "Which percentage of climate scientists agree that climate change is real and caused by human activity?"
+    beliefConsensLabel = "Which percentage of climate scientists agree that climate change is real and caused by human activity?"
 
 
 

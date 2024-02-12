@@ -58,6 +58,17 @@ class Lexicon:
     emoConcern2Label = "concerned"
     emoConcern3Label = "upset"
 
+     ### beliefs taken from  Valkengoed
+    belief_title = "What do you believe?"
+    belief_header = "How much do you agree with the following statements?"
+    belief1Label = "Human activities are a major cause of climate change."
+    belief2Label = "Climate change is mostly caused by human activity."
+    belief3Label = "The main causes of climate change are human activities."
+
+    beliefConsensLabel = "Which percentage of climate scientists agree that climate change is real and caused by human activity?"
+
+
+
     
     
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  

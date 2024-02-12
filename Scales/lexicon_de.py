@@ -10,14 +10,9 @@ class Lexicon:
     your_decision = "Ihre Entscheidung"
     not_at_all = "gar nicht"
     very_much = "sehr stark"
-    no_effort = "keinen Aufwand"
-    great_deal_of_effort = "grossen Aufwand"
-    not_important = "nicht wichtig"
-    not_at_all_important = "überhaupt nicht wichtig"
-    extremely_important = "extrem wichtig"
-    likely_increase = "Zunahme ist wahrscheinlich"
-    no_change = "Keine Veränderung"
-    likely_decrease = "Abnahme ist wahrscheinlich"
+    
+    completely_agree = "stimme absolut zu"
+    completely_disagree = "stimme überhaupt nicht zu"
     dont_know = "Weiss nicht"
     opposed_to_values = "meinen Werten entgegengesetzt"
     strongly_liberal = "stark liberal"
@@ -68,7 +63,16 @@ class Lexicon:
     emoConcern3Label = "beunruhigt"
 
 
-    
+     ### beliefs taken from  Valkengoed
+    belief_title = "Was glauben Sie?"
+    belief_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
+    belief1Label = "Menschliche Aktivitäten sind eine Hauptursache des Klimawandels."
+    belief2Label = "Der Klimawandel wird überwiegend durch menschliche Aktivität verursacht."
+    belief3Label = "Die Hauptursachen des Klimawandels sind menschliche Verhalten."
+
+    beliefConsensLabel = "Wie viel Prozent der Klimawissenschaftler sind sich einig, dass der Klimawandel echt, und menschenverursacht ist?"
+
+
 
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
     wvv_title = "Wie sehen Sie die Welt?"

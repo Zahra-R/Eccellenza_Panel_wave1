@@ -342,6 +342,13 @@ class Player(BasePlayer):
     po1 = make_likert10()
     po2 = make_likert10()
 
+    ### Belief
+    belief1 = make_likert10()
+    belief2 = make_likert10()
+    belief3 = make_likert10()
+
+    beliefConsensus = models.IntegerField(min=0,max = 100)
+
     ## behaviors
 
 
@@ -373,6 +380,20 @@ class CCConcern(Page):
         #player.formfields.ccc1.label="test"
         return dict(Lexicon=player.session.scalesLexi)
     
+
+class Belief(Page):
+    form_model = 'player'
+    form_fields= ['belief1', 'belief2', 'belief3', 'beliefConsensus']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields= ['belief1', 'belief2', 'belief3', 'beliefConsensus'],
+        form_field_labels = [Lexicon.belief1Label, Lexicon.belief2Label, Lexicon.belief3Label, Lexicon.beliefConsensLabel]
+    )
 
 class CCEmotion(Page):
     form_model = 'player'
@@ -511,4 +532,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [BehaviorsFood, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
+page_sequence = [Belief, BehaviorsFood, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
