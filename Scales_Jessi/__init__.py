@@ -294,10 +294,10 @@ class Player(BasePlayer):
         choices=get_income_choices(LANGUAGE_CODE),
     )
 
-    # education = models.StringField(
-    #     label=Lexicon.education_label,
-    #     choices=get_education_choices(LANGUAGE_CODE),
-    # )
+    education = models.StringField(
+         label=Lexicon.education_label,
+         choices=get_education_choices(LANGUAGE_CODE),
+     )
 
     residential_area = models.StringField(
         label=Lexicon.residential_area_label,
@@ -350,8 +350,8 @@ class PolOrientation(Page):
     
 class Demographics(Page):
     form_model = 'player'
-    #form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code']
-    form_fields = ['age', 'gender', 'income', 'residential_area', 'zip_code']
+    form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code']
+    #form_fields = ['age', 'gender', 'income', 'residential_area', 'zip_code']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
