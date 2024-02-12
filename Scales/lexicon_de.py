@@ -51,18 +51,22 @@ class Lexicon:
     emoAng1Label = "wütend"
     emoAng2Label = "zornig"
     emoAng3Label = "gereizt"
-    emoSad1Label = "furchtsam"
-    emoSad2Label = "verängstigt"
-    emoSad3Label = "erschrocken" # panisch? ängstlich? bang? resigniert? verzweifelt? Ich finde erschrocken irgendwie komisch? und furchtsam passt vll auch nicht so zu cc?
-    emoFear1Label = "traurig"
-    emoFear2Label = "betrübt"
-    emoFear3Label = "unglücklich"
+    emoFear1Label  = "furchtsam"
+    emoFear2Label = "ängstlich"
+    emoFear3Label = "panisch" 
+    emoSad1Label = "traurig"
+    emoSad2Label = "betrübt"
+    emoSad3Label = "unglücklich"
     emoHope1Label = "hoffnungsvoll"
     emoHope2Label = "optimistisch"
     emoHope3Label = "zuversichtlich"
     emoGuilt1Label = "schuldig"
     emoGuilt2Label = "bedauernd"
     emoGuilt3Label = "reuevoll"
+    emoConcern1Label = "besorgt"
+    emoConcern2Label = "verweifelt"
+    emoConcern3Label = "beunruhigt"
+
 
     
 
@@ -152,6 +156,91 @@ class Lexicon:
     know_10b = "USA"
     know_10c = "EU"
     know_10d = "Indien"
+
+    #### behaviors
+    behaviors_title = ' Verhalten '
+    intro_a = 'In diesem nächsten Abschnitt sammeln wir Informationen zu einigen Ihrer tatsächlichen Verhaltensweisen. <br>Bitte antworten Sie so genau wie möglich. Vielen Dank im Voraus!'
+    
+    regional_label = 'Welcher Prozentsatz Ihrer Lebensmittel stammt aus der Region (aus Ihrem Land oder Ihrer Region, nicht importiert)?'
+    regional_less_than = 'Weniger als ein Viertel'
+    regional_quarter= 'Etwa ein Viertel'
+    regional_half = 'Etwa die Hälfte'
+    regional_3_quarter = 'Etwa drei Viertel'
+    regional_more_than = 'Der größte Teil stammt aus der Region'
+
+    electricity_label = 'Diese Frage bezieht sich auf Ihre Elektrizitätsversorgung. Wie sieht Ihre Stromversorgung aus?'
+    electricity_D = 'Ich habe ausschließlich grüne Energie'
+    electricity_C = 'Ich habe teilweise grüne Energie (gemischt)' 
+    electricity_B = 'Ich habe ausschließlich konventionelle (fossile) Energie'
+    electricity_A = 'Ich weiß es nicht'
+
+    food_overall_text = 'Wie oft konsumieren Sie im letzten Monat die folgenden Lebensmittel...'
+    food_overall_label1 = 'Rind'
+    food_overall_label2 = 'Lamm, Schaf oder Hammelfleisch'
+    food_overall_label3 = 'Schweinefleisch'
+    food_overall_label4 = 'Geflügel (z.B. Huhn)'
+    food_overall_label5 = 'Fisch'
+    food_overall_label6 = 'Milchprodukte (z. B. Milch oder Käse)'
+
+    food_overall_A = 'Nie'
+    food_overall_B = 'Einmal im Monat'
+    food_overall_C= '2-3 Mal pro Monat'
+    food_overall_D = 'Einmal in der Woche'
+    food_overall_E = '2-3 Mal pro Woche'
+    food_overall_F = '4-6 Mal pro Woche'
+    food_overall_G = 'Einmal täglich'
+    food_overall_H = '2 oder mehr Mal täglich'
+
+    food_dairy_label = 'Wie oft konsumieren Sie Milchprodukte wie Joghurt, Käse, Butter oder Sahne?'
+    food_dairy_less_than_A = 'Weniger als einmal pro Woche oder nie'
+    food_dairy_A_to_B = '1-3 Mal pro Woche'
+    food_dairy_B_to_C = '4-6 Mal pro Woche'
+    food_dairy_C_to_D= '1-2 Mal täglich'
+    food_dairy_D_to_E = '2-4 Mal täglich'
+    food_dairy_more_than_E = 'Mehr als vier Mal täglich'
+
+    food_meat_label = 'Wie oft essen Sie Mahlzeiten mit Fleisch oder Fisch (z.B. Spaghetti Bolognese, Lachsrolle usw.)?'
+    food_meat_less_than_A = 'Weniger als einmal pro Woche oder nie'
+    food_meat_A_to_B= '1-3 Mal pro Woche'
+    food_meat_B_to_C = '4-6 Mal pro Woche'
+    food_meat_C_to_D = 'Einmal täglich'
+    food_meat_D_to_E = '2-3 Mal täglich'
+    food_meat_more_than_E = 'Mehr als drei Mal täglich'
+
+    commute_pt_label = 'Wie viele Kilometer legen Sie <b> wöchentlich mit öffentlichen Verkehrsmitteln </b> (Zug, Bus, usw.) oder mit einem E-Bike zurück? Bitte berücksichtigen Sie alle privaten Fahrten einschließlich des Arbeitswegs, jedoch ohne Dienstreisen.'
+
+    commute_pt_never = 'Ich nehme nie öffentliche Verkehrsmittel'
+    commute_pt_less_than_A = '1 - 60 km'
+    commute_pt_A_to_B= '60 - 80 km'
+    commute_pt_B_to_C = '80 -239 km'
+    commute_pt_C_to_D = '240 - 359 km'
+    commute_pt_D_to_E = '360 - 600 km'
+    commute_pt_more_than_E = 'Mehr als 600 km'
+
+
+    commute_car_label = 'Wie viele Kilometer fahren Sie <b> jährlich mit dem Auto </b> oder einem Motorrad (ausserhalb der Arbeit, sowohl als Fahrer als auch als Beifahrer)? '
+    commute_car_never = 'Ich benutze kein Auto oder Motorrad'
+    commute_car_less_than_A = '1 - 2,000 km'
+    commute_car_A_to_B= '2,000 - 7,499 km'
+    commute_car_B_to_C = '7,500 - 12,499 km'
+    commute_car_C_to_D = '12,500 - 30,000 km'
+    commute_car_more_than_D = 'Mehr als 30,000 km'
+
+    commute_car_type_label = 'Mit welcher Art von Kraftstoff wird Ihr Auto betrieben?'
+    commute_car_type_none = 'Ich habe kein Auto'
+    commute_car_type_E = 'Benzin/Diesel/Hybrid'
+    commute_car_type_D = 'Erdgas'
+    commute_car_type_C = 'Biogas'
+    commute_car_type_B = 'Elektrisch (konventionelle Energie)'
+    commute_car_type_A = 'Elektrisch (grüne Energie)'   
+    
+
+    flying_short_label = 'Wie viele <b>Kurzstreckenflüge (<3 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge. Wenn Sie also von Frankfurt nach London und zurück geflogen sind, zählt das als 2 Flüge. </i> '
+    flying_mid_label ='Wie viele <b>Mittelstreckenflüge (3-6 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge. Wenn Sie also von Frankfurt nach Antalya und zurück geflogen sind, zählt das als 2 Flüge. </i> '
+    flying_long_label = 'Wie viele <b>Langstreckenflüge  (>6 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge.  Wenn Sie also von München nach New York und zurück geflogen sind, zählt das als 2 Flüge. </i> '
+
+
+
 
     ### Demographics
     demographics_title = "Persönliche Daten"

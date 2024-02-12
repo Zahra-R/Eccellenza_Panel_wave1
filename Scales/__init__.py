@@ -59,7 +59,11 @@ def make_likert9():
             choices=[-1,0,1,2,3,4,5,6,7],
             widget=widgets.RadioSelect,
         )
-
+def make_likert8():
+        return models.IntegerField(
+            choices=[1,2,3,4,5,6,7, 8],
+            widget=widgets.RadioSelect,
+        )
 
 #region Choices for demographics
 # Nina: added gender german at beginning
@@ -291,15 +295,18 @@ class Player(BasePlayer):
     emoSad1 = make_likert10() ## Sadness
     emoSad2 = make_likert10() ## Sadness
     emoSad3 = make_likert10() ## Sadness
-    emoFear1 = make_likert10() ## Fear/Worry
-    emoFear2 = make_likert10() ## Fear/Worry
-    emoFear3 = make_likert10() ## Fear/Worry
+    emoFear1 = make_likert10() ## Fear/
+    emoFear2 = make_likert10() ## Fear
+    emoFear3 = make_likert10() ## Fear
     emoHope1 = make_likert10() ## Hope
     emoHope2 = make_likert10() ## Hope
     emoHope3 = make_likert10() ## Hope
     emoGuilt1 = make_likert10() ## guilt
     emoGuilt2 = make_likert10() ## guilt
     emoGuilt3 = make_likert10() ## guilt
+    emoConcern1 = make_likert10() ## concern
+    emoConcern2 = make_likert10() ## concern
+    emoConcern3 = make_likert10() ## concern
 
     # new knowledge questions Allianz
     cknow1 = models.StringField( choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect)
@@ -335,6 +342,18 @@ class Player(BasePlayer):
     po1 = make_likert10()
     po2 = make_likert10()
 
+    ## behaviors
+
+
+    footprint_food_overall1 =  make_likert8()
+    footprint_food_overall2 =  make_likert8()
+    footprint_food_overall3 =  make_likert8()
+    footprint_food_overall4 =  make_likert8()
+    footprint_food_overall5 =  make_likert8()
+
+
+
+
     ### Demographics
     age = models.IntegerField(min=18,max = 99)
     income = models.StringField()
@@ -357,7 +376,7 @@ class CCConcern(Page):
 
 class CCEmotion(Page):
     form_model = 'player'
-    form_fields= ['emoAng1', 'emoAng2', 'emoAng3', 'emoSad1','emoSad2', 'emoSad3', 'emoFear1', 'emoFear2', 'emoFear3', 'emoHope1', 'emoHope2', 'emoHope3', 'emoGuilt1', 'emoGuilt2', 'emoGuilt3']
+    form_fields= ['emoAng1', 'emoAng2', 'emoAng3', 'emoSad1','emoSad2', 'emoSad3', 'emoFear1', 'emoFear2', 'emoFear3', 'emoHope1', 'emoHope2', 'emoHope3', 'emoGuilt1', 'emoGuilt2', 'emoGuilt3', 'emoConcern1', 'emoConcern2', 'emoConcern3']
     @staticmethod
     def vars_for_template(player: Player):
         return{
@@ -367,8 +386,10 @@ class CCEmotion(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields = ['emoAng1', 'emoAng2', 'emoAng3', 'emoSad1','emoSad2', 'emoSad3', 'emoFear1', 'emoFear2', 'emoFear3', 'emoHope1', 'emoHope2', 'emoHope3', 'emoGuilt1', 'emoGuilt2', 'emoGuilt3'],
-        form_field_labels = [Lexicon.emoAng1Label, Lexicon.emoAng2Label , Lexicon.emoAng3Label, Lexicon.emoSad1Label,Lexicon.emoSad2Label, Lexicon.emoSad3Label,  Lexicon.emoFear1Label , Lexicon.emoFear2Label , Lexicon.emoFear3Label, Lexicon.emoHope1Label , Lexicon.emoHope2Label , Lexicon.emoHope3Label , Lexicon.emoGuilt1Label, Lexicon.emoGuilt2Label, Lexicon.emoGuilt3Label]
+        form_fields = ['emoAng1', 'emoAng2', 'emoAng3', 'emoSad1','emoSad2', 'emoSad3', 'emoFear1', 'emoFear2', 'emoFear3',
+                        'emoHope1', 'emoHope2', 'emoHope3', 'emoGuilt1', 'emoGuilt2', 'emoGuilt3', 'emoConcern1', 'emoConcern2', 'emoConcern3'],
+        form_field_labels = [Lexicon.emoAng1Label, Lexicon.emoAng2Label , Lexicon.emoAng3Label, Lexicon.emoSad1Label,Lexicon.emoSad2Label, Lexicon.emoSad3Label,  Lexicon.emoFear1Label , Lexicon.emoFear2Label , Lexicon.emoFear3Label,
+                            Lexicon.emoHope1Label , Lexicon.emoHope2Label , Lexicon.emoHope3Label , Lexicon.emoGuilt1Label, Lexicon.emoGuilt2Label, Lexicon.emoGuilt3Label, Lexicon.emoConcern1Label, Lexicon.emoConcern2Label, Lexicon.emoConcern3Label]
     )
     
 class CCKnowledge(Page):
@@ -385,6 +406,19 @@ class CCKnowledge(Page):
         form_field_labels = [Lexicon.know_1qu, Lexicon.know_2qu, Lexicon.know_3qu, Lexicon.know_4qu, Lexicon.know_5qu, Lexicon.know_6qu,  Lexicon.know_8qu, Lexicon.know_9qu, Lexicon.know_10qu]
     )
     
+class BehaviorsFood(Page):
+    form_model = 'player'
+    form_fields= ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields=  ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5'], 
+        form_field_labels = [Lexicon.food_overall_label1, Lexicon.food_overall_label2, Lexicon.food_overall_label3, Lexicon.food_overall_label4, Lexicon.food_overall_label5]
+    )
     
 class WVValues(Page):
     form_model = 'player'
@@ -477,4 +511,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [Demographics, PolOrientation, PITrust, CCKnowledge, WVValues, CCEmotion, IBValues]
+page_sequence = [BehaviorsFood, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
