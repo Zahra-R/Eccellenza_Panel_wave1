@@ -56,7 +56,7 @@ class Lexicon:
     emoGuilt3Label = "remorseful"
     emoConcern1Label = "worried"
     emoConcern2Label = "concerned"
-    emoConcern3Label = "distressed"
+    emoConcern3Label = "upset"
 
     
     

@@ -101,7 +101,7 @@ class Lexicon:
     
     emoConcern1Label = "worried"
     emoConcern2Label = "concerned"
-    emoConcern3Label = "distressed"
+    emoConcern3Label = "upset"
 
     ### beliefs taken from  Valkengoed
     belief_title = "How do you see the world?"
