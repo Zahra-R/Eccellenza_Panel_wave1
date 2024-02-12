@@ -92,31 +92,25 @@ def make_likert10(label):
 #region Choices for demographics
 
 # functions to generate education and party choices based on language
-""" def get_education_choices(language_code):
+def get_education_choices(language_code):
     education_choices = []
 
     if language_code == 'de':
         education_choices = [    
             #Lexicon.no_formal_education,
-            Lexicon.elementary_school,
-            Lexicon.secondary_school,
-            Lexicon.higher_secondary_school,
-            Lexicon.vocational_training,
             Lexicon.high_school,
-            Lexicon.college_degree,
-            Lexicon.master_degree,
+            Lexicon.some_college,
+            Lexicon.bachelors_degree,
+            Lexicon.masters_degree,
             Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education
         ]
     elif LANGUAGE_CODE == 'zh-hans':
         education_choices = [
-            Lexicon.education_label, 
             Lexicon.high_school,
-            Lexicon.vocational_education,
-            Lexicon.some_college, 
+            Lexicon.some_college,
             Lexicon.bachelors_degree,
             Lexicon.masters_degree,
-            Lexicon.doctoral_degree
+            Lexicon.doctoral_degree,
         ]
     else:
         education_choices = [
@@ -127,7 +121,7 @@ def make_likert10(label):
             Lexicon.doctoral_degree,
         ]
     return education_choices
-"""
+
 
 def get_party_choices(language_code):
     party_choices = []
