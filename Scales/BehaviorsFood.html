@@ -12,12 +12,14 @@
 <br>
 {{ Lexicon.intro_a}}
 <br>
-
+<br>
+<br>
 <p> {{ Lexicon.food_overall_text }}</p>
+
 
 <table class="radiotable">
     <tr>
-        <th></th>
+
         <th class="radio-column"> {{ Lexicon.food_overall_A }} </th>
         <th class="radio-column"> {{ Lexicon.food_overall_B }} </th>
         <th class="radio-column">{{ Lexicon.food_overall_C }} </th>
@@ -29,7 +31,7 @@
     </tr>
 
     {% for field in form %}
-        {% if field.name == 'footprint_food_overall1' or field.name == 'footprint_food_overall2' or field.name == 'footprint_food_overall3' or field.name == 'footprint_food_overall4' or field.name == 'footprint_food_overall5' or   %}
+        {% if field.name == 'footprint_food_overall1' or field.name == 'footprint_food_overall2' or field.name == 'footprint_food_overall3' or field.name == 'footprint_food_overall4' or field.name == 'footprint_food_overall5'    %}
         {{formfield_errors field.name}}
 
         <tr>
@@ -43,9 +45,11 @@
 </table>
 <br>
 
+<label>{{ Lexicon.regional_label }}</label>
+<br>
 <table class="radiotable">
     <tr>
-        <th></th>
+
         <th class="radio-column"> {{ Lexicon.regional_less_than }} </th>
         <th class="radio-column"> {{ Lexicon.regional_quarter }} </th>
         <th class="radio-column">{{ Lexicon.regional_half }} </th>
@@ -67,10 +71,11 @@
 {{ endfor }}
 </table>
 <br>
-
+<label>{{ Lexicon.electricity_label }}</label>
+<br>
 <table class="radiotable">
     <tr>
-        <th></th>
+
         <th class="radio-column"> {{ Lexicon.electricity_D }} </th>
         <th class="radio-column"> {{ Lexicon.electricity_C }} </th>
         <th class="radio-column">{{ Lexicon.electricity_B }} </th>
