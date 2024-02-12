@@ -64,7 +64,7 @@ class Lexicon:
     emoGuilt2Label = "bedauernd"
     emoGuilt3Label = "reuevoll"
     emoConcern1Label = "besorgt"
-    emoConcern2Label = "verweifelt"
+    emoConcern2Label = "sorgenvoll"
     emoConcern3Label = "beunruhigt"
 
 
