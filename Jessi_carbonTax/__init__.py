@@ -1,6 +1,6 @@
 import random
 import json
-
+from os import environ
 from otree.api import *
 LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
 #from settings import LANGUAGE_CODE
