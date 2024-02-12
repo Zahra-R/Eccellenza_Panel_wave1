@@ -1,6 +1,5 @@
 class Lexicon:
     instructions = "Instruktionen"
-    next = "Weiter"
     no = "Nein"
     results = "Ergebnis"
     round_number = "Runde"
@@ -45,24 +44,35 @@ class Lexicon:
     ccc15Label = "Die Folgen des Klimawandels sind unvorhersehbar, deswegen ist mein klimafreundliches Verhalten vergeblich."
     ccc16Label = "Klimaschutz behindert unnötigerweise das Wirtschaftswachstum."
 
-    #Climate Change Emotion Knauf/Truelove
-    cce_title = "Reaktionen auf den Klimawandel"
-    cce_header = "Wenn ich an den Klimawandel denke, fühle ich mich..."
-    emoAng1Label = "wütend"
-    emoAng2Label = "zornig"
-    emoAng3Label = "gereizt"
-    emoSad1Label = "furchtsam"
-    emoSad2Label = "verängstigt"
-    emoSad3Label = "erschrocken" # panisch? ängstlich? bang? resigniert? verzweifelt? Ich finde erschrocken irgendwie komisch? und furchtsam passt vll auch nicht so zu cc?
-    emoFear1Label = "traurig"
-    emoFear2Label = "betrübt"
-    emoFear3Label = "unglücklich"
-    emoHope1Label = "hoffnungsvoll"
-    emoHope2Label = "optimistisch"
-    emoHope3Label = "zuversichtlich"
-    emoGuilt1Label = "schuldig"
-    emoGuilt2Label = "bedauernd"
-    emoGuilt3Label = "reuevoll"
+    #Climate Change Emotion only for Jessis pretest
+    cce_title =  "Einstellungen zum Klimawandel"
+    cce_header = "Wenn ich an den Klimawandel denke, dann fühle ich..."
+    cce1Label = "Wut"
+    cce2Label = "Angst"
+    cce3Label = "Traurigkeit"
+    cce4Label = "Freude"
+    cce5Label = "Neugier"
+    cce6Label = "Hoffnung"
+
+    #new emotions
+     # new emotions
+    #Climate Change Emotion
+
+    cceA1Label = "wütend"
+    cceA2Label = "zornig"
+    cceA3Label = "gereizt"
+    cceF1Label = "furchtsam"
+    cceF2Label = "verängstigt"
+    cceF3Label = "erschrocken"
+    cceS1Label = "traurig"
+    cceS2Label = "betrübt"
+    cceS3Label = "unglücklich"
+    cceH1Label = "hoffnungsvoll"
+    cceH2Label = "optimistisch"
+    cceH3Label = "zuversichtlich"
+    cceG1Label = "schuldig"
+    cceG2Label = "bedauernd"
+    cceG3Label = "reuevoll"
 
     
     # Personal efficacy Leiserowitz et al, 2010
@@ -74,12 +84,12 @@ class Lexicon:
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
     wvv_title = "Wie sehen Sie die Welt?"
     wvv_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    hie1Label = "Unsere Gesellschaft wäre besser dran, wenn der Reichtum gleichmäßiger verteilt wäre."
-    hie2Label = "Viele Probleme in unserer Gesellschaft resultieren aus dem Verschwinden des traditionellen Familienbildes, in der der Mann arbeitet und die Frau zu Hause bleibt."
-    hie3Label = "Diskriminierung von Minderheiten ist in unserem Land immer noch ein sehr ernstes Problem."
-    ind1Label = "Die Regierung mischt sich viel zu sehr in unseren Alltag ein."
-    ind2Label = "Ich finde, dass erfolgreiche Geschäftsleute das Recht haben, ihren Reichtum so auszukosten, wie sie es für richtig halten."
-    ind3Label = "Zu viele Menschen erwarten, dass die Gesellschaft Dinge für sie tut, die sie selbst tun sollten."
+    wvv1Label = "Unserer Gesellschaft würde es besser gehen wenn die Verteilung von Reichtum gerechter wäre."
+    wvv2Label = "Viele Probleme in unsere Gesellschaft stammen von dem Rückgang der tradtionellen Familie, wo der Mann arbeitet und die Frau zuhause bleibt."
+    wvv3Label = "Diskriminierung von Minderheiten ist immernoch ein sehr ernstet Problem in unserem Land."
+    wvv4Label = "Die Regierung mischt sich viel zu viel in unser alltägliches Leben ein."
+    wvv5Label = "Ich finde dass Menschen, die im Geschäftsleben erfolgreich sind, das Recht haben, ihren Reichtum so zu genießen, wie sie es für richtig halten."
+    wvv6Label = "Zu viele Menschen erwarten dass die Gesellschaft Dinge für sie macht, die sie für sich selbst machen sollten."
 
     # Importance of biospheric values van der Linden, 2015
     ibv_title = "Wichtige Prinzipien in Umweltfragen"
@@ -99,10 +109,10 @@ class Lexicon:
     pit_title = "Vertrauen im Bezug auf den Klimawandel"
     pit_header = "Wie sehr vertrauen Sie diesen Akteuren beim Klimawandel?"
     pit1Label = "der deutschen Regierung"
-   # pit2Label = "deutschen Wissenschaftlern"
-    pit2Label = "ausländischen Regierungen"
-   # pit4Label = "ausländischen Wissenschaftlern"
-   # pit5Label = "Dem Zwischenstaatliche Sachverständigenrat für Klimaänderungen (Intergovernmental Panel on Climate Change, IPCC)"
+    pit2Label = "deutschen Wissenschaftlern"
+    pit3Label = "ausländischen Regierungen"
+    pit4Label = "ausländischen Wissenschaftlern"
+    pit5Label = "Dem Zwischenstaatliche Sachverständigenrat für Klimaänderungen (Intergovernmental Panel on Climate Change, IPCC)"
 
      # Knowledge Question from Allianz Climate Literacy Report
     cck_title = 'Was wissen Sie über den Klimawandel?'
@@ -112,7 +122,7 @@ class Lexicon:
     know_1qu = "Was ist die COP?" 
     know_1a = "Eine UN Initiative zur Verteilung von Geldern um den Einfluss des Klimawandels auf die Armut zu reduzieren."
     know_1b = "Ein jährliches formales Treffen zur Diskussion des Klimawandel und zur Etablierung von Maßnahmen zur Minderung."
-    know_1c = "Eine EU-Initiative für multinationale Zusammenarbeit gegen organisierte Verbrechen." 
+    know_1c = "Eine EU-Initiative gegen organisierte und Kriegsverbrechen." 
 
     know_2qu = "Was bedeutet Netto-Null?"
     know_2a = "Monetäre Strategie zur Erhöhung des Zinssatzes um gegen die Inflation zu kämpfen."
@@ -120,14 +130,14 @@ class Lexicon:
     know_2c = "Kohlenstoffemissionsneutralität, Stabilisierung der Treibhausgaskonzentrationen in der Atmosphäre."
 
     know_3qu = "Das 'Intergovernmental Panel on Climate Change' (IPCC) spielt eine wichtige Rolle in der globalen Klimapolitik. Welche ist das?"
-    know_3a = "Es fasst objektive und wissenschaftliche Erkenntnisse über den Klimawandel zusammen."
-    know_3b = "Es fällt Entscheidungen über die globale Klimapolitik, insbesondere legt es den globalen CO2-Preis fest."
-    know_3c = "Es ist Gastgeber des UN Klimagerechtigkeitsgerichts, welches bei klimatischen Streitfälle zwischen Staaten vermittelt."
+    know_3a = "Die Bereitstellung von objektiver, wissenschaftlicher Information die relevant sind um den Klimawandel zu verstehen."
+    know_3b = "Entscheidungen über die globale Klimapolitik, insbesondere das Festlegen des globalen CO2-Preises."
+    know_3c = "Gastgeber des UN Klimagerechtigkeitsgerichts welches bei klimatischen Streitfälle zwischen Staaten vermittelt."
    
     know_4qu = "Was ist der Kohlenstoffmarkt?"
     know_4a = "Die Versorgungsweg des von der EU unterstützten gaskaufenden Kartells, das zum Ziel hat, EU Länder, die wegen des Kriegs in der Ukraine Versorgungsprobleme haben, mit bezahlbarem, natürlichem Gas zu versorgen."
     know_4b = "Ein Handelssystem durch das Emittenten (Ausstoßer) Einheiten von Treibhausgasemissionszertifikaten kaufen oder verkaufen können um nationale Restriktionen bezüglich der totalen Emissionen zu erfüllen"
-    know_4c = "Ein online Marktplatz, an dem man recycelte Kohlenstofffasern und Kohlenstoffprodukte kaufen kann."
+    know_4c = "Ein online Marktplatz wo man recyceltes Kohlenstofffasern und Kohlenstoff schwarz kaufen kann."
     
     know_5qu = "Wie lange bleibt CO2 in der Atmosphäre?"
     know_5a = "10 Jahre"
@@ -146,7 +156,7 @@ class Lexicon:
     know_8c = "23 Jahren"
     
 
-    know_9qu = "Welches Land oder Region verursacht absolut gesehen die höchsten CO2-Emissionen pro Jahr?"
+    know_9qu = "Welches Land/Region verursacht absolut die höchsten CO2-Emissionen pro Jahr?"
     know_9a = "China"
     know_9b = "USA"
     know_9c = "EU"
@@ -199,7 +209,7 @@ class Lexicon:
     suburban = "Kleinstadt"
     rural = "Ländliche Gegend"
 
-    zip_code_label = "Was ist Ihre PLZ? (Angabe ist freiwillig)"
+    zip_code_label = "PLZ (freiwillig)"
 
     party_affiliation_label = "Welcher Partei würden Sie am ehesten Ihre Stimme geben?"
     cdcsu = "CDU/CSU"
@@ -216,3 +226,44 @@ class Lexicon:
     # goodbye page 
     goodbye_text = "Vielen Dank für die Teilnahme an unserer Studie! <br> Sie sind nun am Ende der Studie angelangt und werden nun automatisch weitergeleitet um Ihre Aufwandsentschädigung zu erhalten."
 
+     ## for pre-test Jessi only, Ninas items
+
+    Additional_title=  'Ein paar zusätzliche Fragen'
+    Additional_intro=	'Zuletzt möchten wir Ihnen einige zusätzliche Fragen stellen.'
+	
+    familiar_header	= 'Bitte geben Sie für jede dieser Handlugen an wie vertraut Sie damit sind:'
+    familiar_label1= 'Den eigenen Stromvertrag wählen können, oder zu einem umweltfreundlicheren Vertrag wechslen'
+    familiar_label2	= 'Eine vegetarische Ernährung haben (d.h kein Fleisch und kein Fisch essen'
+    familiar_label3	= 'Mit dem Fahrrad zur Arbeit pendeln'
+    familiar_label4	= 'Kauf und Konsum von importierten Lebensmitteln (d.g. aus anderen Ländern)'
+    familiar_label5	= 'Kauf und Konsum von regionalen Lebensmitteln (aus Ihrer Region/Ihrem Land)'
+    familiar_label6	= 'Recycling (z.B. Papier, Glas oder Metalle)'
+    familiar_label7 = 	'mit dem Zug in den Urlaub verreisen	'
+    familiar_label8 = 	'mit dem Bus in den Urlaub verreisen	'
+    familiar_label9	= 'mit dem Flugzeug in den Urlaub verreisen	'
+    familiar_A =	'sehr unvertraut '	
+    familiar_B	= 'unvertraut'
+    familiar_C ='etwas unvertraut '	
+    familiar_D=	'weder unvertraut noch vertraut	'
+    familiar_E	= 'etwas vertraut'	
+    familiar_F	= 'vertraut' 	
+    familiar_G	= 'sehr vertraut'
+		
+    Difficult_header = '	Bitte geben Sie an, wie einfach oder schwierig es für eine durchschnittliche Person in Ihrem Land wäre, die folgenden Handlungen auszuführen:'
+    difficult_label1 = 	'Den eigenen Stromvertrag wählen, oder zu einem umweltfreundlicheren Vertrag wechslen'	
+    difficult_label2 = 	'Eine vegetarische Ernährung haben (d.h kein Fleisch und kein Fisch essen'	
+    difficult_label3 = 	'Mit dem Fahrrad zur Arbeit pendeln'	
+    difficult_label4 = 	'importierte Lebensmittel (d.g. aus anderen Ländern) kaufen und konsumieren	'
+    difficult_label5 = 'regionale Lebensmittel (aus Ihrer Region/Ihrem Land) kaufen und konsumieren'	
+    difficult_label6 = 	'Recycling (z.B. Papier, Glas oder Metalle)	'
+    difficult_label7 = 	'mit dem Zug in den Urlaub verreisen	'
+    difficult_label8 = 'mit dem Bus in den Urlaub verreisen	'
+    difficult_label9 = 	'mit dem Flugzeug in den Urlaub verreisen'	
+		
+    difficult_A	= 'sehr schwierg'	
+    difficult_B	= 'schwierg'	
+    difficult_C	= 'etwas schwierg'	
+    difficult_D	= 'weder schwierg noch einfach'	
+    difficult_E	= 'etwas einfach'	
+    difficult_F	= 'einfach'	
+    difficult_G	= 'sehr einfach'	
