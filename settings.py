@@ -72,7 +72,7 @@ SESSION_CONFIGS = [
          name='Pretest_Jessi_de',
          app_sequence= [ 'Intro', 'Jessi_Instructions', 'Jessi_carbonTax', 'CCsampling_intro', 'Scales_Jessi'],
          consent_form = "standalone",
-         #language = "de",
+         language = "de",
          num_demo_participants=10,
      )
 
