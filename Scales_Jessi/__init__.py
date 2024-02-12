@@ -152,7 +152,7 @@ def get_party_choices(language_code):
 def get_gender_choices(language_code):
     gender_choices = []
     if language_code == 'de':
-        party_choices = [    
+        gender_choices = [    
             Lexicon.female,
             Lexicon.male,
             Lexicon.diverse, 
