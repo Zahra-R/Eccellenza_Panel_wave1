@@ -92,7 +92,7 @@ def make_likert10(label):
 #region Choices for demographics
 
 # functions to generate education and party choices based on language
-def get_education_choices(language_code):
+""" def get_education_choices(language_code):
     education_choices = []
 
     if language_code == 'de':
@@ -127,6 +127,7 @@ def get_education_choices(language_code):
             Lexicon.doctoral_degree,
         ]
     return education_choices
+"""
 
 def get_party_choices(language_code):
     party_choices = []
@@ -152,6 +153,7 @@ def get_party_choices(language_code):
             Lexicon.other_party
         ]
     return party_choices
+
 
 def get_gender_choices(language_code):
     gender_choices = []
