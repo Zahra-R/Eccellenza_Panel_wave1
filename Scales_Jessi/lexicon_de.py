@@ -114,59 +114,7 @@ class Lexicon:
     pit4Label = "ausländischen Wissenschaftlern"
     pit5Label = "Dem Zwischenstaatliche Sachverständigenrat für Klimaänderungen (Intergovernmental Panel on Climate Change, IPCC)"
 
-     # Knowledge Question from Allianz Climate Literacy Report
-    cck_title = 'Was wissen Sie über den Klimawandel?'
-    cck_header = 'Bitte beantworten Sie alle Fragen nach bestem Wissen und Gewissen, ohne nachzuschlagen oder nach Informationen zu suchen. Sie können die Option "Ich weiß es nicht" wählen, wenn Sie unsicher sind oder nicht wissen'
-    know_dontknow = "I don't know."
-
-    know_1qu = "Was ist die COP?" 
-    know_1a = "Eine UN Initiative zur Verteilung von Geldern um den Einfluss des Klimawandels auf die Armut zu reduzieren."
-    know_1b = "Ein jährliches formales Treffen zur Diskussion des Klimawandel und zur Etablierung von Maßnahmen zur Minderung."
-    know_1c = "Eine EU-Initiative gegen organisierte und Kriegsverbrechen." 
-
-    know_2qu = "Was bedeutet Netto-Null?"
-    know_2a = "Monetäre Strategie zur Erhöhung des Zinssatzes um gegen die Inflation zu kämpfen."
-    know_2b = "Keine Treibhausgasemmissionen bis zu einem bestimmten Datum, in der Regel 2050."
-    know_2c = "Kohlenstoffemissionsneutralität, Stabilisierung der Treibhausgaskonzentrationen in der Atmosphäre."
-
-    know_3qu = "Das 'Intergovernmental Panel on Climate Change' (IPCC) spielt eine wichtige Rolle in der globalen Klimapolitik. Welche ist das?"
-    know_3a = "Die Bereitstellung von objektiver, wissenschaftlicher Information die relevant sind um den Klimawandel zu verstehen."
-    know_3b = "Entscheidungen über die globale Klimapolitik, insbesondere das Festlegen des globalen CO2-Preises."
-    know_3c = "Gastgeber des UN Klimagerechtigkeitsgerichts welches bei klimatischen Streitfälle zwischen Staaten vermittelt."
    
-    know_4qu = "Was ist der Kohlenstoffmarkt?"
-    know_4a = "Die Versorgungsweg des von der EU unterstützten gaskaufenden Kartells, das zum Ziel hat, EU Länder, die wegen des Kriegs in der Ukraine Versorgungsprobleme haben, mit bezahlbarem, natürlichem Gas zu versorgen."
-    know_4b = "Ein Handelssystem durch das Emittenten (Ausstoßer) Einheiten von Treibhausgasemissionszertifikaten kaufen oder verkaufen können um nationale Restriktionen bezüglich der totalen Emissionen zu erfüllen"
-    know_4c = "Ein online Marktplatz wo man recyceltes Kohlenstofffasern und Kohlenstoff schwarz kaufen kann."
-    
-    know_5qu = "Wie lange bleibt CO2 in der Atmosphäre?"
-    know_5a = "10 Jahre"
-    know_5b = "bis zu 1000 Jahre"
-    know_5c = "mehr als 5000 Jahre"
-
-    know_6qu = "Welche der folgenden Optionen beschreibt am besten den Treibhausgaseffekt?"
-    know_6a = "Waldrodung und Plastikverschmutzung verursachen den Zusammenbruch von vielen Ökosystemen. Der zunehmende Verlust von Biodiversität und der Verlust von Flora und Fauna in der Wildniss wird Treibhausgaseffekt genannt."
-    know_6b = "Treibhausgase verursachen Luftverschmutzung. Sie führen zu mehr feinen Teilchen und feinerem Staub welcher wiederum die Ventilation verringert. Ohne die Zirkulation von frischer Luft, wird die Erde so immer wärmer. "
-    know_6c = "Überschüssige Treibhausgase sammeln sich in der Atmosphäre. Aufgrund ihrer molekularen Struktur, wird die infrarot Strahlung der Erde reflektiert und zur Erde zurückgestrahlt. Auf diese Weise wird Hitze eingeschlossen."
-    
-
-    know_8qu = "Wenn wir in dem jetzigen Tempo weitermachen, nach wie vielen Jahren werden wir unser CO2 Budget verbraucht haben, um den Temperaturanstieg auf 1,5 °C zu begrenzen?" # is 2029 apparently
-    know_8a = "5 Jahren"
-    know_8b = "10 Jahren"
-    know_8c = "23 Jahren"
-    
-
-    know_9qu = "Welches Land/Region verursacht absolut die höchsten CO2-Emissionen pro Jahr?"
-    know_9a = "China"
-    know_9b = "USA"
-    know_9c = "EU"
-    know_9d = "Indien"
-
-    know_10qu = "Welches der 4 Länder/Regionen verursacht die höchsten pro Kopf CO2 Emissionen pro Jahr?"
-    know_10a = "China"
-    know_10b = "USA"
-    know_10c = "EU"
-    know_10d = "Indien"
 
     ### Demographics
     demographics_title = "Persönliche Daten"

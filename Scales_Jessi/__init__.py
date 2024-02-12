@@ -255,75 +255,7 @@ class Player(BasePlayer):
     pit4 = make_likert7(Lexicon.pit4Label)
     pit5 = make_likert7(Lexicon.pit5Label)
 
-    # new knowledge questions Allianz
-    cknow1 = models.StringField(
-        label = Lexicon.know_1qu,
-        choices=[
-            Lexicon.know_1a, Lexicon.know_1b,
-            Lexicon.know_1c, Lexicon.know_dontknow,
-        ], 
-        widget=widgets.RadioSelect,
-    )
-    cknow2 = models.StringField(
-        label = Lexicon.know_2qu,
-        choices=[
-            Lexicon.know_2a, Lexicon.know_2b,
-            Lexicon.know_2c, Lexicon.know_dontknow,
-        ],
-        widget=widgets.RadioSelect,
-    )
-    cknow3 = models.StringField(
-        label = Lexicon.know_3qu,
-        choices=[
-            Lexicon.know_3a, Lexicon.know_3b,
-            Lexicon.know_3c, Lexicon.know_dontknow,
-        ],
-    )
-    cknow4 = models.StringField(
-        label = Lexicon.know_4qu,
-        choices=[
-            Lexicon.know_4a, Lexicon.know_4b,
-            Lexicon.know_4c, Lexicon.know_dontknow,
-        ],
-    )
-
-
-    cknow5 = models.StringField(
-        label = Lexicon.know_5qu,
-        choices=[
-            Lexicon.know_5a, Lexicon.know_5b,
-            Lexicon.know_5c, Lexicon.know_dontknow,
-        ],
-    )
-    cknow6 = models.StringField(
-        label = Lexicon.know_6qu,
-        choices=[
-            Lexicon.know_6a, Lexicon.know_6b,
-            Lexicon.know_6c, Lexicon.know_dontknow,
-        ],
-    )
-
-    cknow8 = models.StringField(
-        label = Lexicon.know_8qu,
-        choices=[
-            Lexicon.know_8a, Lexicon.know_8b,
-            Lexicon.know_8c, Lexicon.know_dontknow,
-        ],
-    )
-    cknow9 = models.StringField(
-        label = Lexicon.know_3qu,
-        choices=[
-            Lexicon.know_9a, Lexicon.know_9b,
-            Lexicon.know_9c, Lexicon.know_9d , Lexicon.know_dontknow,
-        ],
-    )
-    cknow10 = models.StringField(
-        label = Lexicon.know_10qu,
-        choices=[
-            Lexicon.know_10a, Lexicon.know_10b,
-            Lexicon.know_10c, Lexicon.know_10d, Lexicon.know_dontknow,
-        ],
-    )
+    
 
     ## Familiar  only pretest Jessi. Ninas quesitons
     fam1 = make_likert7(Lexicon.familiar_label1) 
@@ -401,14 +333,6 @@ class CCEmotion(Page):
         return dict(Lexicon=Lexicon, **which_language)
     
     
-    
-class CCKnowledge(Page):
-    form_model = 'player'
-    form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow8','cknow9', 'cknow10']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
-    
 
 
 class IBValues(Page):
@@ -425,14 +349,6 @@ class PolOrientation(Page):
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     
-class PITrust(Page):
-    form_model = 'player'
-    form_fields= ['pit1', 'pit2', 'pit3', 'pit4', 'pit5']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
-    
-
 
     
 class Demographics(Page):

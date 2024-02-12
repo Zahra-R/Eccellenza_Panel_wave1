@@ -272,9 +272,11 @@ def cknow6_choices(player):
 def cknow8_choices(player):
     Lexicon = player.session.scalesLexi
     return [
-    ['a_true', Lexicon.know_8a],
+    ['a_false', Lexicon.know_8a],
     ['b_false',  Lexicon.know_8b],
-    ['c_false', Lexicon.know_8c],
+    ['c_true', Lexicon.know_8c],
+    ['d_false', Lexicon.know_8d],
+
     ['dk',  Lexicon.dont_know],
 ]
 
@@ -330,7 +332,7 @@ class Player(BasePlayer):
     cknow4 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)  
     cknow5 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)     
     cknow6 = models.StringField(choices=["a_false", "b_false", "c_true", "dk"], widget=widgets.RadioSelect,) 
-    cknow8 = models.StringField(choices=["a_true", "b_false", "c_false", "dk"], widget=widgets.RadioSelect,)     
+    cknow8 = models.StringField(choices=["a_false", "b_false", "c_true","d_false", "dk"], widget=widgets.RadioSelect,)     
     cknow9 = models.StringField(choices=["a_true", "b_false", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)     
     cknow10 = models.StringField(choices=["a_false", "b_true", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)
 

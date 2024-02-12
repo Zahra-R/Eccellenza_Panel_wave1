@@ -118,67 +118,8 @@ class Lexicon:
     pit5Label = "the Intergovernmental Panel on Climate Change (IPCC)"
 
 
-    # Knowledge Question from Allianz Climate Literacy Report
-    cck_title = 'What do you know about climate change?'
-    cck_header = 'Please answer all these questions to the best of your knowledge, without looking up any information. You may choose the "I do not know" option if you are unsure or do not know'
-    know_dontknow = "I don't know."
+   
 
-    know_1qu = "What is the COP?" ## This is maybe too easy given that the whole study is about CC???
-    know_1a = "UN initiative for distributing funds to reduce the impact of climate change on poverty."
-    know_1b = "An annual formal meeting to discuss climate change and establish mitigation actions."
-    know_1c = "An EU initiative against organized and war crimes." 
-    
-    know_2qu = "What does Net-Zero mean?"
-    know_2a = "Monetary strategy of increasing interest rate to fight inflation."
-    know_2b = "No greenhouse gas emission by a specific date, typically 2050."
-    know_2c = "Carbon emission neutrality, stabilization of greenhouse gas concentrations in the atmosphere."
-    
-    know_3qu = "The Intergovernmental Panel on Climate Change (IPCC) plays an important role in global climate policy. Which one?"
-    know_3a = "Providing objective scientific information relevant to understanding climate change."
-    know_3b = "Deciding on global climate policies, particularly setting the global carbon price."
-    know_3c = "Host of the UN climate justice court which arbitrates climate disputes between states."
-    
-    know_4qu = "What is the carbon market?"
-    know_4a = "The supply channel of the EU backed gas-buying cartel that aims to supply affordable natural gas to EU countries struggling to get supply because of the war in Ukraine."
-    know_4b = "A trading system through which emitters may buy or sell units of greenhouse-gas emission allowances to meet national restrictions on total emissions."
-    know_4c = "An online marketplace where you can buy recycled carbon fiber and carbon black."
-    
-
-    ## I suggest a modification of tis question:
-    #Rising temperatures pose no existential threat. Even if the rise exceeds 3°C, humans and nature can adapt. Do you agree with this statement?"
-    know_5qu = "How long does CO2 stay in the atmosphere?"
-    know_5a = "10 years"
-    know_5b = "up to 1000 years"
-    know_5c = "more than 5000 years"
-
-    
-    ## I suggest a modification of this question
-    know_6qu = "Which of the following options describes the greenhouse gas effect"
-    # old was Climate change cannot be stopped. Average temperatures will continue to increase in the near future. The only thing we can possible do is to limit the increase to 1.5°C."
-    know_6a = "Deforestation and plastic pollution cause a collapse of many ecosystems. The increasing loss of biodiversity and the loss of flora and fauna in the wild is called the greenhouse gas effect."
-    know_6b = "Greenhouse gasses cause air pollution. They lead to more fine particulars and more fine dust which in turn decreases the ventilation. Without the circulation of fresh air, the earth gets increasingly warmer. "
-    know_6c = "Excess greenhouse gases accumulate in the atmosphere. Because of their molecular structure, the infrared radiation from the earth is reflected and is re-radiated to the earth. This way, heat is trapped."
-    
-    
-
-    know_8qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" # this will be 2029 (Stand 2023)
-    know_8a = "5 years"
-    know_8b = "10 years"
-    know_8c = "23 years"
-    
-
-    know_9qu = "Which country/region causes the highest absolute CO2-emissions per year?"
-    know_9a = "China"
-    know_9b = "USA"
-    know_9c = "EU"
-    know_9d = "India"
-
-    know_10qu = "Which of the four countries/regions causes the highest per-capita CO2-emissions per year?"
-    know_10a = "China"
-    know_10b = "USA"
-    know_10c = "EU"
-    know_10d = "India"
-    
 
 
     ### Demographics

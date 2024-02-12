@@ -143,10 +143,11 @@ class Lexicon:
     know_6c = "Überschüssige Treibhausgase sammeln sich in der Atmosphäre. Aufgrund ihrer molekularen Struktur, wird die infrarot Strahlung der Erde reflektiert und zur Erde zurückgestrahlt. Auf diese Weise wird Hitze eingeschlossen."
     
 
-    know_8qu = "Wenn wir in dem jetzigen Tempo weitermachen, nach wie vielen Jahren werden wir unser CO2 Budget verbraucht haben, um den Temperaturanstieg auf 1,5 °C zu begrenzen?" # is 2029 apparently
-    know_8a = "5 Jahren"
-    know_8b = "10 Jahren"
-    know_8c = "23 Jahren"
+    know_8qu = "Wenn wir in dem jetzigen Tempo weitermachen, nach wie vielen Jahren werden wir unser CO2 Budget verbraucht haben, um den Temperaturanstieg auf 1,5 °C zu begrenzen?" # is Sep 2026 
+    know_8a = "Weniger als 1 Jahr"
+    know_8b = "1-2 Jahre"
+    know_8c = "2-4 Jahre"
+    know_8d = "Mehr als 4 Jahre"
     
 
     know_9qu = "Welches Land oder Region verursacht absolut gesehen die höchsten CO2-Emissionen pro Jahr?"

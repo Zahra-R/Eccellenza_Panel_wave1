@@ -149,9 +149,10 @@ class Lexicon:
     
 
     know_8qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" # this will be 2029 (Stand 2023)
-    know_8a = "5 years"
-    know_8b = "10 years"
-    know_8c = "23 years"
+    know_8a = "less than 1 year"
+    know_8b = "1-2 years"
+    know_8c = "2-4 years"
+    know_8d = "More than 4 years"
     
 
     know_9qu = "Which country/region causes the highest absolute CO2-emissions per year?"
