@@ -2,7 +2,8 @@ import random
 
 from otree.api import *
 
-from settings import LANGUAGE_CODE
+#from settings import LANGUAGE_CODE
+LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
 
 doc = """
 How to translate an app to multiple languages (e.g. English and German).
@@ -18,7 +19,7 @@ When you change the LANGUAGE_CODE in settings.py, the language will automaticall
 Note: this technique does not require .po files, which are a more complex technique.    
 """
 
-""" 
+
 if LANGUAGE_CODE == 'de':
     from .lexicon_de import Lexicon
 elif LANGUAGE_CODE == 'zh_hans':
@@ -29,9 +30,9 @@ else:
 
 # this is the dict you should pass to each page in vars_for_template,
 # enabling you to do if-statements like {{ if de }} Nein {{ else }} No {{ endif }}
-which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
-which_language[LANGUAGE_CODE[:2]] = True
- """
+#which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
+#which_language[LANGUAGE_CODE[:2]] = True
+
 
 class C(BaseConstants):
     NAME_IN_URL = 'intro'
@@ -54,6 +55,7 @@ class Player(BasePlayer):
 
 
 def creating_session(subsession:Subsession):
+    """ 
     if subsession.session.config['language'] == 'de':
         from .lexicon_de import Lexicon
         subsession.session.myLangCode = "_de"
@@ -63,8 +65,8 @@ def creating_session(subsession:Subsession):
     else:
         from .lexicon_en import Lexicon
         subsession.session.myLangCode = "_en"
-    subsession.session.introLexi = Lexicon
-
+    subsession.session.introLexi = Lexicon 
+    """
     import itertools
     order_tasks = itertools.cycle([1,2,3])
     for player in subsession.get_players():
@@ -132,7 +134,8 @@ class Consent_Standalone(Page):
     @staticmethod
     def vars_for_template(player: Player):
        return{
-            'Lexicon': player.session.introLexi
+            #Lexicon': player.session.introLexi
+             'Lexicon': Lexicon
         } 
     @staticmethod
     def is_displayed(player:Player):

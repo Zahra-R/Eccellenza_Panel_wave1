@@ -1,6 +1,7 @@
 from otree.api import *
 
-from settings import LANGUAGE_CODE
+#from settings import LANGUAGE_CODE
+LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
 
 if LANGUAGE_CODE == 'de':
     from .lexicon_de import Lexicon

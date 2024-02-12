@@ -2,7 +2,8 @@ import random
 
 from otree.api import *
 
-from settings import LANGUAGE_CODE
+#from settings import LANGUAGE_CODE
+LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
 
 doc = """
 How to translate an app to multiple languages (e.g. English and German).

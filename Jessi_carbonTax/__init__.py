@@ -2,7 +2,8 @@ import random
 import json
 
 from otree.api import *
-from settings import LANGUAGE_CODE
+LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
+#from settings import LANGUAGE_CODE
 
 
 author = 'Zahra Rahmani'
