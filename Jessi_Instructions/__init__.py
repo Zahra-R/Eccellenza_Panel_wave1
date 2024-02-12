@@ -5,7 +5,7 @@ LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
 
 if LANGUAGE_CODE == 'de':
     from .lexicon_de import Lexicon
-elif LANGUAGE_CODE == 'zh_hans':
+elif LANGUAGE_CODE == 'zh-hans':
     from .lexicon_zh_hans import Lexicon
 else:
     from .lexicon_en import Lexicon
@@ -22,7 +22,7 @@ class C(BaseConstants):
 
     if LANGUAGE_CODE == 'de':
         example_CT = '/static/global/images/task_designCT_de.png'
-    elif LANGUAGE_CODE == 'zh_hans':
+    elif LANGUAGE_CODE == 'zh-hans':
         example_CT = '/static/global/images/task_designCT_zh_hans.png'
     else:
         example_CT = '/static/global/images/task_designCT_en.png'

@@ -6,7 +6,7 @@ from settings import LANGUAGE_CODE
 
 if LANGUAGE_CODE == 'de':
     from .lexicon_de import Lexicon
-elif LANGUAGE_CODE == 'zh_hans':
+elif LANGUAGE_CODE == 'zh-hans':
     from .lexicon_zh_hans import Lexicon
 else:
     from .lexicon_en import Lexicon

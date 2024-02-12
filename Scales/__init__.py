@@ -96,7 +96,7 @@ def education_choices(player):
             Lexicon.prefer_not_to_say_education,
         ]
 
-    elif language_code == 'zh_hans':
+    elif LANGUAGE_CODE == 'zh-hans':
         education_choices = [ 
             Lexicon.no_formal,
             Lexicon.obligatory,
@@ -131,7 +131,7 @@ def get_party_choices(player):
             Lexicon.afd,
             Lexicon.other_party
         ]
-    elif language_code == 'zh_hans':
+    elif LANGUAGE_CODE == 'zh-hans':
         party_choices = [
             # Add choices for Chinese language if needed
         ]
@@ -155,7 +155,7 @@ def gender_choices(player):
             ["diverse", Lexicon.diverse], 
             ["other", Lexicon.other]
         ]
-    elif language_code == 'zh_hans':
+    elif LANGUAGE_CODE == 'zh-hans':
         gender_choices = [
             ["female", Lexicon.female],
             ["male", Lexicon.male],
@@ -184,7 +184,7 @@ def income_choices(player):
             Lexicon.income_more_than_D,
             Lexicon.prefer_not_to_say
         ]
-    elif language_code == 'zh_hans':
+    elif LANGUAGE_CODE == 'zh-hans':
         income_choices = [
             Lexicon.income_label,
             Lexicon.income_less_than_A,

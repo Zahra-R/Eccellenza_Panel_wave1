@@ -21,7 +21,7 @@ Note: this technique does not require .po files, which are a more complex techni
 
 if LANGUAGE_CODE == 'de':
     from .lexicon_de import Lexicon
-elif LANGUAGE_CODE == 'zh_hans':
+elif LANGUAGE_CODE == 'zh-hans':
     from .lexicon_zh_hans import Lexicon
 else:
     from .lexicon_en import Lexicon
@@ -108,7 +108,7 @@ def make_likert10(label):
             Lexicon.doctoral_degree,
             Lexicon.prefer_not_to_say_education
         ]
-    elif language_code == 'zh_hans':
+    elif LANGUAGE_CODE == 'zh-hans':
         education_choices = [
             Lexicon.education_label, 
             Lexicon.high_school,
@@ -141,7 +141,7 @@ def get_party_choices(language_code):
             Lexicon.afd,
             Lexicon.other_party
         ]
-    elif language_code == 'zh_hans':
+    elif LANGUAGE_CODE == 'zh-hans':
         party_choices = [
             # Add choices for Chinese language if needed
         ]
@@ -164,7 +164,7 @@ def get_gender_choices(language_code):
             Lexicon.diverse, 
             Lexicon.other
         ]
-    elif language_code == 'zh_hans':
+    elif LANGUAGE_CODE == 'zh-hans':
         gender_choices = [
             Lexicon.female,
             Lexicon.male,
@@ -191,7 +191,7 @@ def get_income_choices(language_code):
             Lexicon.income_more_than_D,
             Lexicon.prefer_not_to_say
         ]
-    elif language_code == 'zh_hans':
+    elif LANGUAGE_CODE == 'zh-hans':
         income_choices = [
             Lexicon.income_label,
             Lexicon.income_less_than_A,
