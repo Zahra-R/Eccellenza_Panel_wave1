@@ -100,12 +100,6 @@ class Lexicon:
     emoGuilt3Label = "remorseful"
 
     
-    # Personal efficacy Leiserowitz et al, 2010
-    #Only item 1
-    pe_title = "Attitudes about Climate Change"
-    pe_header = "How much do you agree with the following statements?"
-    pe1Label = "The actions of a single individual won't make any difference in climate change."
-  
     
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
     ## TBD kevin tam

@@ -327,9 +327,13 @@ class Player(BasePlayer):
     ibv4 = make_likert9()
 
     ## trust in own and foreign governments
-     ### IB Values
+    
     pit1 = make_likert10()
     pit2 = make_likert10()
+
+    ## political orientation
+    po1 = make_likert10()
+    po2 = make_likert10()
 
     ### Demographics
     age = models.IntegerField(min=18,max = 99)
@@ -381,13 +385,6 @@ class CCKnowledge(Page):
         form_field_labels = [Lexicon.know_1qu, Lexicon.know_2qu, Lexicon.know_3qu, Lexicon.know_4qu, Lexicon.know_5qu, Lexicon.know_6qu,  Lexicon.know_8qu, Lexicon.know_9qu, Lexicon.know_10qu]
     )
     
-
-class PEfficacy(Page):
-    form_model = 'player'
-    form_fields= ['pe1' ]
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
     
 class WVValues(Page):
     form_model = 'player'
@@ -423,6 +420,14 @@ class PolOrientation(Page):
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields= ['po1', 'po2'],
+        form_field_labels = [Lexicon.po1Label, Lexicon.po2Label ]
+    )
+    
     
 class PITrust(Page):
     form_model = 'player'
@@ -472,4 +477,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [Demographics,PITrust, CCKnowledge, WVValues, CCEmotion, IBValues]
+page_sequence = [Demographics, PolOrientation, PITrust, CCKnowledge, WVValues, CCEmotion, IBValues]

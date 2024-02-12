@@ -65,11 +65,6 @@ class Lexicon:
     emoGuilt3Label = "reuevoll"
 
     
-    # Personal efficacy Leiserowitz et al, 2010
-    pe_title = "Einstellungen zum Klimawandel"
-    pe_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    pe1Label = "Die Handlungen eines einzelnen Individuums werden keinen Unterschied beim Klimawandel machen."
-  
 
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
     wvv_title = "Wie sehen Sie die Welt?"
