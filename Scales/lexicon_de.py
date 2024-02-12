@@ -25,8 +25,8 @@ class Lexicon:
     moderate = "moderat"
     somewhat_conservative = "eher konservativ"
     strongly_conservative = "stark konservativ"
-    no_trust_at_all = "überhaupt kein Vertrauen"
-    full_trust = "volles Vertrauen"
+    no_trust_at_all = "absolutes Misstrauen"
+    full_trust = "absolutes Vertrauen"
     completely_false = "komplett falsch"
     completely_true = "komplett richtig"
 
