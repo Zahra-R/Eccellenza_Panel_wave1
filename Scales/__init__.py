@@ -428,6 +428,9 @@ class PITrust(Page):
     form_model = 'player'
     form_fields= ['pit1', 'pit2']
     @staticmethod
+
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
@@ -469,4 +472,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [Demographics, CCKnowledge, WVValues, CCEmotion, IBValues, PITrust]
+page_sequence = [Demographics,PITrust, CCKnowledge, WVValues, CCEmotion, IBValues]

@@ -15,6 +15,9 @@ class Lexicon:
     not_at_all = "一点也不"
     very_much = "非常"
 
+    no_trust_at_all = "Totally distrust"
+    full_trust = "Totally trust"
+
     #Climate Change Concern Tobler
     ccc_title = "对气候变化的态度"
     ccc_header = "您对以下说法的同意程度如何？"
