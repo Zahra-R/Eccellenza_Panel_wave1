@@ -300,7 +300,7 @@ class Lexicon:
     other_party = "Andere"
 
     # Transition page
-    Transition_text = "Danke für Ihre bisherige Teilnahme an unserer Studie! <br> Sie haben hiermit die Entscheidungsaufgabe abgeschlossen. Im Folgenden biten wir Sie einige Fragen zu Ihren Einstellungen und Wahrnehmungen beantworten. "
+    Transition_text = "Danke für Ihre bisherige Teilnahme an unserer Studie! <br> Sie haben hiermit die Entscheidungsaufgabe abgeschlossen. Im Folgenden bitten wir Sie einige Fragen zu Ihren Einstellungen und Wahrnehmungen beantworten. "
     
     # goodbye page 
     goodbye_text = "Vielen Dank für die Teilnahme an unserer Studie! <br> Sie sind nun am Ende der Studie angelangt und werden nun automatisch weitergeleitet um Ihre Aufwandsentschädigung zu erhalten."
