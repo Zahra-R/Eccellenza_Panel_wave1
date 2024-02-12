@@ -69,6 +69,16 @@ def make_likert6():
             choices=[1,2,3,4,5,6],
             widget=widgets.RadioSelect,
         )
+def make_likert5():
+        return models.IntegerField(
+            choices=[1,2,3,4,5],
+            widget=widgets.RadioSelect,
+        )
+def make_likert4():
+        return models.IntegerField(
+            choices=[1,2,3,4],
+            widget=widgets.RadioSelect,
+        )
 
 #region Choices for demographics
 # Nina: added gender german at beginning
@@ -371,9 +381,8 @@ class Player(BasePlayer):
     footprint_commute_car_type=  make_likert6()
     footprint_commute_pt =  make_likert6()
 
-    
-     
-
+    footprint_regional =  make_likert5()
+    footprint_electricity =  make_likert4()
 
 
 
@@ -446,7 +455,7 @@ class CCKnowledge(Page):
     
 class BehaviorsFood(Page):
     form_model = 'player'
-    form_fields= ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5']
+    form_fields= ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5', 'footprint_regional', 'footprint_electricity']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
@@ -454,8 +463,8 @@ class BehaviorsFood(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields=  ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5'], 
-        form_field_labels = [Lexicon.food_overall_label1, Lexicon.food_overall_label2, Lexicon.food_overall_label3, Lexicon.food_overall_label4, Lexicon.food_overall_label5]
+        form_fields=  ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5', 'footprint_regional', 'footprint_electricity'], 
+        form_field_labels = [Lexicon.food_overall_label1, Lexicon.food_overall_label2, Lexicon.food_overall_label3, Lexicon.food_overall_label4, Lexicon.food_overall_label5 , Lexicon.regional_label, Lexicon.electricity_label ]
     )
 class BehaviorsTransport(Page):
     form_model = 'player'
@@ -562,4 +571,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [BehaviorsTransport, Belief, BehaviorsFood, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
+page_sequence = [BehaviorsFood, BehaviorsTransport, Belief, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]

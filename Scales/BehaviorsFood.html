@@ -28,18 +28,69 @@
         <th class="radio-column"> {{ Lexicon.food_overall_H }} </th>
     </tr>
 
+    {% for field in form %}
+        {% if field.name == 'footprint_food_overall1' or field.name == 'footprint_food_overall2' or field.name == 'footprint_food_overall3' or field.name == 'footprint_food_overall4' or field.name == 'footprint_food_overall5' or   %}
+        {{formfield_errors field.name}}
 
+        <tr>
+            {{ for choice in field }}
+            <td>{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+    {% endif %}
 
-    {{ for field in form }}
-    {{formfield_errors field.name}}
-    <tr>
-        <th style="font-weight:normal;" id={{field.id}} name={{field.name}}>  </th>
-        {{ for choice in field }}
-        <td>{{ choice }}</td>
-        {{ endfor }}
-    </tr>
-    {{ endfor }}
+{{ endfor }}
 </table>
+<br>
+
+<table class="radiotable">
+    <tr>
+        <th></th>
+        <th class="radio-column"> {{ Lexicon.regional_less_than }} </th>
+        <th class="radio-column"> {{ Lexicon.regional_quarter }} </th>
+        <th class="radio-column">{{ Lexicon.regional_half }} </th>
+        <th class="radio-column"> {{ Lexicon.regional_3_quarter }} </th>
+        <th class="radio-column"> {{ Lexicon.regional_more_than }} </th>
+    </tr>
+
+    {% for field in form %}
+        {% if field.name == 'footprint_regional'    %}
+        {{formfield_errors field.name}}
+
+        <tr>
+            {{ for choice in field }}
+            <td>{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+    {% endif %}
+
+{{ endfor }}
+</table>
+<br>
+
+<table class="radiotable">
+    <tr>
+        <th></th>
+        <th class="radio-column"> {{ Lexicon.electricity_D }} </th>
+        <th class="radio-column"> {{ Lexicon.electricity_C }} </th>
+        <th class="radio-column">{{ Lexicon.electricity_B }} </th>
+        <th class="radio-column"> {{ Lexicon.electricity_A }} </th>
+    </tr>
+
+    {% for field in form %}
+        {% if field.name == 'footprint_electricity'    %}
+        {{formfield_errors field.name}}
+
+        <tr>
+            {{ for choice in field }}
+            <td>{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+    {% endif %}
+
+{{ endfor }}
+</table>
+<br>
 
 
 <div class="next-btn radiotable">
