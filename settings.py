@@ -72,7 +72,7 @@ SESSION_CONFIGS = [
          name='Pretest_Jessi_de',
          app_sequence= [ 'Intro', 'Jessi_Instructions', 'Jessi_carbonTax', 'CCsampling_intro', 'Scales_Jessi'],
          consent_form = "standalone",
-         language = "de",
+         #language = "de",
          num_demo_participants=10,
      )
 
@@ -125,7 +125,7 @@ SESSION_FIELDS = [
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
-LANGUAGE_CODE = 'zh_hans'
+#LANGUAGE_CODE = 'zh_hans'
 
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'USD'
