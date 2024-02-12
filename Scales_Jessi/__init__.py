@@ -97,7 +97,7 @@ def get_education_choices(language_code):
 
     if language_code == 'de':
         education_choices = [    
-            Lexicon.no_formal_education,
+            #Lexicon.no_formal_education,
             Lexicon.elementary_school,
             Lexicon.secondary_school,
             Lexicon.higher_secondary_school,
