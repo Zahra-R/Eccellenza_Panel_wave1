@@ -21,23 +21,19 @@
         <th class="radio-column"></th>
         <th class="radio-column"></th>
         <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
         <th class="radio-column"> {{ Lexicon.very_much }} </th>
     </tr>
 
 
 
     {{ for field in form }}
-    {{formfield_errors field.name}}
     <tr>
-        <th style="font-weight:normal;" id={{field.id}} name={{field.name}}>  </th>
+        <th style="font-weight:normal;">{{ field.label }}</th>
         {{ for choice in field }}
-        <td>{{ choice }}</td>
+            <td>{{ choice }}</td>
         {{ endfor }}
     </tr>
-    {{ endfor }}
+{{ endfor }}
 </table>
 
 

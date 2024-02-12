@@ -30,7 +30,7 @@ which_language[LANGUAGE_CODE[:2]] = True
 
 
 class C(BaseConstants):
-    NAME_IN_URL = 'panel_study'
+    NAME_IN_URL = 'panel_study_sc'
     NUM_ROUNDS = 1
     PLAYERS_PER_GROUP = None
 
@@ -229,12 +229,12 @@ class Player(BasePlayer):
     ccc16 = make_likert5(Lexicon.ccc16Label)
 
     ### Climate Change Emotions Scale only for jessi pretest
-    cce1 = make_likert5(Lexicon.cce1Label) ## Anger
-    cce2 = make_likert5(Lexicon.cce2Label) ## Fear/Worry
-    cce3 = make_likert5(Lexicon.cce3Label) ## Sadness
-    cce4 = make_likert5(Lexicon.cce4Label) ## Joy
-    cce5 = make_likert5(Lexicon.cce5Label) ## Curiosity
-    cce6 = make_likert5(Lexicon.cce6Label) ## Hope
+    cce1 = make_likert7(Lexicon.cce1Label) ## Anger
+    cce2 = make_likert7(Lexicon.cce2Label) ## Fear/Worry
+    cce3 = make_likert7(Lexicon.cce3Label) ## Sadness
+    cce4 = make_likert7(Lexicon.cce4Label) ## Joy
+    cce5 = make_likert7(Lexicon.cce5Label) ## Curiosity
+    cce6 = make_likert7(Lexicon.cce6Label) ## Hope
 
    
 
