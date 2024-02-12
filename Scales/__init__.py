@@ -64,6 +64,11 @@ def make_likert8():
             choices=[1,2,3,4,5,6,7, 8],
             widget=widgets.RadioSelect,
         )
+def make_likert6():
+        return models.IntegerField(
+            choices=[1,2,3,4,5,6],
+            widget=widgets.RadioSelect,
+        )
 
 #region Choices for demographics
 # Nina: added gender german at beginning
@@ -357,6 +362,18 @@ class Player(BasePlayer):
     footprint_food_overall3 =  make_likert8()
     footprint_food_overall4 =  make_likert8()
     footprint_food_overall5 =  make_likert8()
+    # further behavior items
+    footprint_flying_short = models.IntegerField(min=0, max= 300 )
+    footprint_flying_mid = models.IntegerField(min=0, max= 300)
+    footprint_flying_long = models.IntegerField(min=0, max= 300)
+
+    footprint_commute_car =  make_likert6()
+    footprint_commute_car_type=  make_likert6()
+    footprint_commute_pt =  make_likert6()
+
+    
+     
+
 
 
 
@@ -440,7 +457,20 @@ class BehaviorsFood(Page):
         form_fields=  ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5'], 
         form_field_labels = [Lexicon.food_overall_label1, Lexicon.food_overall_label2, Lexicon.food_overall_label3, Lexicon.food_overall_label4, Lexicon.food_overall_label5]
     )
-    
+class BehaviorsTransport(Page):
+    form_model = 'player'
+    form_fields= ['footprint_commute_car', 'footprint_commute_car_type', 'footprint_commute_pt', 'footprint_flying_short', 'footprint_flying_mid', 'footprint_flying_long']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields=  ['footprint_commute_car', 'footprint_commute_car_type', 'footprint_commute_pt', 'footprint_flying_short', 'footprint_flying_mid', 'footprint_flying_long'], 
+        form_field_labels = [Lexicon.commute_car_label, Lexicon.commute_car_type_label, Lexicon.commute_pt_label, Lexicon.flying_short_label, Lexicon.flying_mid_label, Lexicon.flying_short_label ]
+    )
+
 class WVValues(Page):
     form_model = 'player'
     form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3']
@@ -532,4 +562,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [Belief, BehaviorsFood, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
+page_sequence = [BehaviorsTransport, Belief, BehaviorsFood, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
