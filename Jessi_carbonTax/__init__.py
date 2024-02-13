@@ -14,6 +14,7 @@ if LANGUAGE_CODE == 'de':
 elif LANGUAGE_CODE == 'zh-hans':
     from .lexicon_zh_hans import Lexicon
 else:
+    LANGUAGE_CODE = "en"
     from .lexicon_en import Lexicon
 
 # this is the dict you should pass to each page in vars_for_template,
