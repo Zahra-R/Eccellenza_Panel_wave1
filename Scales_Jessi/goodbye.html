@@ -12,8 +12,23 @@
     {{Lexicon.goodbye_text}}
  </div>
 
- <button class="btn btn-primary btn-large reps" style="margin-top:3vh;" type="button" onclick="window.location.href='{{Lexicon.link}}'"> Click here to Finish</button>
 
+ <button class="btn btn-primary btn-large reps" style="margin-top:3vh;" type="button" onclick="redirectToThankYouPage()"> Click here to Finish</button>
 
+ <script>
+     function redirectToThankYouPage() {
+         // Get the participant's label value
+         var participantLabel = "{{ participant.label }}"; // This syntax may vary depending on your templating language
+ 
+         // Get the link from Lexicon
+         var link = "{{ Lexicon.link }}"; // This syntax may vary depending on your templating language
+ 
+         // Construct the URL with the participant's label as a parameter
+         var url = link + "?u=" + participantLabel;
+ 
+         // Redirect to the constructed URL
+         window.location.href = url;
+     }
+ </script>
 
 {% endblock %}
