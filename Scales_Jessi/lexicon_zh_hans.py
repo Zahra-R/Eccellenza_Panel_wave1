@@ -149,6 +149,7 @@ class Lexicon:
     Transition_text = "感谢您迄今为止的参与！<br>您现在已经完成了政策任务，并将继续回答一些有关您的态度和看法的问题。" 
     # goodbye page 
     goodbye_text = "感谢您参与我们的研究！<br>您现在已完成研究，将被重新导引以获取酬金。"  
+    link = 'https://www.innofact-umfrage.de/sample_only/ub3/cn/danke_f.php'
 
     Additional_title = "一些额外的问题"
     Additional_intro = "最后我们想问你一些额外的问题。"

@@ -169,6 +169,7 @@ class Lexicon:
     
     # goodbye page 
     goodbye_text = "Thank you for your participation in our study! <br> You are now at the end of the study and will be redirected for compensation."
+    link = 'https://www.innofact-umfrage.de/sample_only/ub3/us/danke_f.php'
 
 
     ## for pre-test Jessi only, Ninas items
