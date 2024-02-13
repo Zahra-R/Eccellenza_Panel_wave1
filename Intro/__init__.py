@@ -137,7 +137,8 @@ class Consent_Standalone(Page):
        return{
             #Lexicon': player.session.introLexi
              'Lexicon': Lexicon,
-             "u": player.participant.label
+             'u': player.participant.label,
+             'particpantlabel':player.participant.label
 
         } 
     @staticmethod
