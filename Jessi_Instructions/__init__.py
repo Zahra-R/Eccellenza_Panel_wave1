@@ -8,6 +8,7 @@ if LANGUAGE_CODE == 'de':
 elif LANGUAGE_CODE == 'zh-hans':
     from .lexicon_zh_hans import Lexicon
 else:
+    LANGUAGE_CODE = "en"
     from .lexicon_en import Lexicon
 
 which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
