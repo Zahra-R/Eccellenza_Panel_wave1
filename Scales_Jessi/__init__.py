@@ -100,6 +100,7 @@ def get_education_choices(language_code):
         education_choices = [    
             #Lexicon.no_formal_education,
             Lexicon.high_school,
+            Lexicon.vocational_education,
             Lexicon.some_college,
             Lexicon.bachelors_degree,
             Lexicon.masters_degree,
@@ -108,6 +109,7 @@ def get_education_choices(language_code):
     elif LANGUAGE_CODE == 'zh-hans':
         education_choices = [
             Lexicon.high_school,
+            Lexicon.vocational_education,
             Lexicon.some_college,
             Lexicon.bachelors_degree,
             Lexicon.masters_degree,
@@ -116,6 +118,7 @@ def get_education_choices(language_code):
     else:
         education_choices = [
             Lexicon.high_school,
+            Lexicon.vocational_education,
             Lexicon.some_college,
             Lexicon.bachelors_degree,
             Lexicon.masters_degree,
@@ -178,7 +181,6 @@ def get_income_choices(language_code):
     income_choices = []
     if language_code == 'de':
         income_choices = [    
-            Lexicon.income_label,
             Lexicon.income_less_than_A,
             Lexicon.income_A_to_B,
             Lexicon.income_B_to_C,
@@ -188,7 +190,6 @@ def get_income_choices(language_code):
         ]
     elif LANGUAGE_CODE == 'zh-hans':
         income_choices = [
-            Lexicon.income_label,
             Lexicon.income_less_than_A,
             Lexicon.income_A_to_B,
             Lexicon.income_B_to_C,
@@ -199,7 +200,6 @@ def get_income_choices(language_code):
         ]
     else:
         income_choices = [
-            Lexicon.income_label,
             Lexicon.income_less_than_A,
             Lexicon.income_A_to_B,
             Lexicon.income_B_to_C,
@@ -387,4 +387,4 @@ class Difficult (Page):
 #page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotionNew, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
-page_sequence = [ transition, Demographics, CCConcern, IBValues, CCEmotion, Familiar, Difficult, goodbye]
+page_sequence = [ transition, CCConcern, IBValues, CCEmotion, Familiar, Difficult, Demographics, goodbye]

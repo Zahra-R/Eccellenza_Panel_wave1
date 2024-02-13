@@ -143,9 +143,9 @@ class Lexicon:
 
     education_label = "What is your highest level of education?"
     
+    high_school =  "Junior Secondary School / Lower Secondary School"
     vocational_education = "vocational education"
-    high_school = "High School"
-    some_college = "Some College"
+    some_college = "Higher Education (Vocational)"
     bachelors_degree = "Bachelor's Degree"
     masters_degree = "Master's Degree"
     doctoral_degree = "Doctoral Degree"
