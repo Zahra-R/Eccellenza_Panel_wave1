@@ -29,6 +29,8 @@ class Lexicon:
     completely_false = "Completeley False"
     completely_true = "Completely True"
 
+    next = "next"
+
 
     #Climate Change Concern Tobler
     ccc_title = "Attitudes about Climate Change"

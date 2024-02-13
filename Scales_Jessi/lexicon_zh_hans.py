@@ -13,6 +13,8 @@ class Lexicon:
     not_at_all = "一点也不"
     very_much = "非常"
 
+    next = "下一个"
+
     #Climate Change Concern Tobler
     ccc_title = "对气候变化的态度"
     ccc_header = "您对以下说法的同意程度如何？"

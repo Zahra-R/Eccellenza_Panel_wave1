@@ -29,6 +29,8 @@ class Lexicon:
     completely_false = "komplett falsch"
     completely_true = "komplett richtig"
 
+    next = 'Weiter'
+
     #Climate Change Concern Tobler
     ccc_title = "Einstellungen zum Klimawandel"
     ccc_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
