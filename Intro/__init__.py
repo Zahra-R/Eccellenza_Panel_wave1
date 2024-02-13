@@ -122,6 +122,7 @@ class Consent(Page):
         return {
             'stringOrder': stringOrder,
             'Lexicon': player.session.introLexi
+
         }
     @staticmethod
     def is_displayed(player:Player):
@@ -135,7 +136,9 @@ class Consent_Standalone(Page):
     def vars_for_template(player: Player):
        return{
             #Lexicon': player.session.introLexi
-             'Lexicon': Lexicon
+             'Lexicon': Lexicon,
+             "u": player.participant.label
+
         } 
     @staticmethod
     def is_displayed(player:Player):
