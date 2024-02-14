@@ -6,28 +6,25 @@
 
 
 {{ block content }}
-
-<div>{{Lexicon.goodbye_text}} </div>
-
-
- <button class="btn btn-primary btn-large reps" style="margin-top:3vh;" type="button" onclick="redirectToThankYouPage()"> {{Lexicon.next}} </button>
+    <p> {{Lexicon.goodbye_text}} </p>
+    <button class="btn btn-primary btn-large reps" style="margin-top:3vh;" type="button" onclick="redirectToThankYouPage()"> {{Lexicon.next}} </button>
  {% endblock %}
 
  {% block scripts %}
- <script>
-     function redirectToThankYouPage() {
+    <script>
+        function redirectToThankYouPage() {
          // Get the participant's label value
-         var participantLabel = "{{ particpantlabel }}"; 
+            var participantLabel = "{{ particpantlabel }}"; 
  
          // Get the link from Lexicon
-         var link = "{{ Lexicon.link }}"; // This syntax may vary depending on your templating language
+            var link = "{{ Lexicon.link }}"; // This syntax may vary depending on your templating language
  
          // Construct the URL with the participant's label as a parameter
-         var url = link + "?participant_label" + participantLabel;
+            var url = link + "?participant_label=" + participantLabel;
  
          // Redirect to the constructed URL
-         window.location.href = url;
-     }
- </script>
+            window.location.href = url;
+        }
+    </script>
 
 {% endblock %}
