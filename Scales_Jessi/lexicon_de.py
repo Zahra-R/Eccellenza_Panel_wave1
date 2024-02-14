@@ -170,7 +170,7 @@ class Lexicon:
     Transition_text = "Danke für Ihre bisherige Teilnahme an unserer Studie! <br> Sie haben hiermit die Entscheidungsaufgabe abgeschlossen. Im Folgenden biten wir Sie einige Fragen zu Ihren Einstellungen und Wahrnehmungen beantworten. "
     
     # goodbye page 
-    goodbye_text = "Vielen Dank für die Teilnahme an unserer Studie! <br> Sie sind nun am Ende der Studie angelangt und werden nun automatisch weitergeleitet um Ihre Aufwandsentschädigung zu erhalten."
+    goodbye_text = "Vielen Dank für die Teilnahme an unserer Studie! <br> Sie sind nun am Ende der Studie angelangt und werden weitergeleitet wenn sie auf weiter klicken um Ihre Aufwandsentschädigung zu erhalten."
     link = 'https://www.innofact-umfrage.de/sample_only/ub3/de/danke_f.php'
 
      ## for pre-test Jessi only, Ninas items

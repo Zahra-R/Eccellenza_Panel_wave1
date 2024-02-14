@@ -170,7 +170,7 @@ class Lexicon:
     Transition_text = "Thank you for your participation so far! <br> You have now completed the policy task and will continue to answer some questions about your attitudes and perceptions. "
     
     # goodbye page 
-    goodbye_text = "Thank you for your participation in our study! <br> You are now at the end of the study and will be redirected for compensation."
+    goodbye_text = "Thank you for your participation in our study! <br> You are now at the end of the study and will be redirected for compensation when clicking on next."
     link = 'https://www.innofact-umfrage.de/sample_only/ub3/us/danke_f.php'
 
 
