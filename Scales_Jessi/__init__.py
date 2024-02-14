@@ -365,9 +365,7 @@ class transition (Page):
 
 class goodbye (Page): 
     form_model = 'player'
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=Lexicon, **which_language)
+   
     @staticmethod
     def vars_for_template(player: Player):
        return{
@@ -376,6 +374,9 @@ class goodbye (Page):
              'particpantlabel':player.participant.label
 
         } 
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=Lexicon, **which_language)
     
 class Familiar (Page): 
     form_model = 'player'
