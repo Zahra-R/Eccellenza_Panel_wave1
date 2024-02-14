@@ -367,6 +367,14 @@ class goodbye (Page):
     form_model = 'player'
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
+    @staticmethod
+    def vars_for_template(player: Player):
+       return{
+            #Lexicon': player.session.introLexi
+             'u': player.participant.label,
+             'particpantlabel':player.participant.label
+
+        } 
     
 class Familiar (Page): 
     form_model = 'player'
