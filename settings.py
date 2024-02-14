@@ -70,7 +70,7 @@ SESSION_CONFIGS = [
      ),
         dict(
          name='Pretest_Jessi_de',
-         app_sequence= ['Scales_Jessi', 'Intro', 'Jessi_Instructions', 'Jessi_carbonTax' ],
+         app_sequence= [ 'Intro', 'Jessi_Instructions', 'Jessi_carbonTax', 'Scales_Jessi' ],
          consent_form = "standalone",
          language = "de",
          num_demo_participants=10,
