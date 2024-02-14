@@ -8,12 +8,13 @@
 
 {{ block content }}
 
-<div style="text-align: center; font-size: 32px;">
-    {{Lexicon.goodbye_text}}
- </div>
+<div>{{Lexicon.goodbye_text}} </div>
 
 
  <button class="btn btn-primary btn-large reps" style="margin-top:3vh;" type="button" onclick="redirectToThankYouPage()"> {{Lexicon.next}} </button>
+ {% endblock %}
+
+ {% block scripts %}
  <script>
      function redirectToThankYouPage() {
          // Get the participant's label value
