@@ -365,6 +365,7 @@ class transition (Page):
 
 class goodbye (Page): 
     form_model = 'player'
+    @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=Lexicon, **which_language)
     @staticmethod
