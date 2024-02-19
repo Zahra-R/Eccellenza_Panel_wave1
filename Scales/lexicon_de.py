@@ -49,11 +49,11 @@ class Lexicon:
 
     ##belief in solutions
 
-    beliefSolutions1Label = "Transforming to a sustainable and climate-friendly society would reduce our national standards of living." 
-    beliefSolutions2Label = " Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible."
-    beliefSolutions3Label = "I think High-income countries have a greater responsibilty to reduce greenhouse gas emissions than low and middle-income countries." 
-    beliefSolutions4Label = "Industry has a greater responsibilty to reduce greenhouse gas emissions than individuals."
-    beliefSolutions5Label = " I would rather prepare to live with climate change than to fight climate change."
+    beliefSolutions1Label = "Der Wandel zu einer nachhaltigen und klimafreundlichen Gesellschaft würde unsere nationalen Lebensstandards verringern." 
+    beliefSolutions2Label = "Nachhaltige Technologien und Lösungen sind in den Kinderschuhen und ein Ausstieg aus fossilen Brensstoffen is nocht nicht umsetzbar."
+    beliefSolutions3Label = "Ich glaube, dass einkommensstarke Länder eine grössere Verantwortung haben Triebhausgasemissionen zu verringern als einkommensschwache Länder und Länder mit mittlerem Einkommen." 
+    beliefSolutions4Label = "Die Industrie muss Treibhausgasemissionen reduzieren, nicht Individuen."
+    beliefSolutions5Label = "Ich würde mich lieber dafür vorbereiten mit dem Klimawandel zu leben, als den Klimawandel zu bekämpfen."
 
 
 
