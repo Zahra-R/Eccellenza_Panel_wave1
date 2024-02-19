@@ -85,139 +85,7 @@ def make_likert4():
             widget=widgets.RadioSelect,
         )
 
-#region Choices for demographics
-# Nina: added gender german at beginning
-def education_choices(player):
-    Lexicon = player.session.scalesLexi
-    language_code =  player.session.config['language']
-    education_choices = []
-    if language_code == 'de':
-        education_choices = [    
-            Lexicon.no_formal,
-            Lexicon.obligatory,
-            Lexicon.high_school,
-            Lexicon.degree,
-            Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education,
-        ]
 
-    elif language_code == 'zh_hans':
-        education_choices = [ 
-            Lexicon.no_formal,
-            Lexicon.obligatory,
-            Lexicon.high_school,
-            Lexicon.degree,
-            Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education,
-            ]
-   
-    else:
-        education_choices = [
-            Lexicon.no_formal,
-            Lexicon.obligatory,
-            Lexicon.high_school,
-            Lexicon.degree,
-            Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education,
-        ]
-    return education_choices
-
-def get_party_choices(player):
-    party_choices = []
-    Lexicon = player.session.scalesLexi
-    language_code =  player.session.config['language']
-    if language_code == 'de':
-        party_choices = [    
-            Lexicon.cdcsu,
-            Lexicon.spd,
-            Lexicon.gruene,
-            Lexicon.fdp,
-            Lexicon.linke,
-            Lexicon.afd,
-            Lexicon.other_party
-        ]
-    elif language_code == 'zh_hans':
-        party_choices = [
-            # Add choices for Chinese language if needed
-        ]
-    else:
-        party_choices = [
-            Lexicon.republicans, 
-            Lexicon.democrats, 
-            Lexicon.independent_party, 
-            Lexicon.other_party
-        ]
-    return party_choices
-
-def gender_choices(player):
-    gender_choices = []
-    Lexicon = player.session.scalesLexi
-    language_code = player.session.config['language']
-    if language_code == 'de':
-        gender_choices = [
-            ["female", Lexicon.female],
-            ["male", Lexicon.male],
-            ["diverse", Lexicon.diverse], 
-            ["other", Lexicon.other]
-        ]
-    elif language_code == 'zh_hans':
-        gender_choices = [
-            ["female", Lexicon.female],
-            ["male", Lexicon.male],
-            ["other", Lexicon.other]
-        ]
-    else:
-        gender_choices = [
-            ["female", Lexicon.female],
-            ["male", Lexicon.male],
-            ["diverse", Lexicon.diverse], 
-            ["other", Lexicon.other]
-        ]
-    return gender_choices
-
-def income_choices(player):
-    income_choices = []
-    Lexicon = player.session.scalesLexi
-    language_code = player.session.config['language']
-    if language_code == 'de':
-        income_choices = [    
-            Lexicon.income_label,
-            Lexicon.income_less_than_A,
-            Lexicon.income_A_to_B,
-            Lexicon.income_B_to_C,
-            Lexicon.income_C_to_D,
-            Lexicon.income_more_than_D,
-            Lexicon.prefer_not_to_say
-        ]
-    elif language_code == 'zh_hans':
-        income_choices = [
-            Lexicon.income_label,
-            Lexicon.income_less_than_A,
-            Lexicon.income_A_to_B,
-            Lexicon.income_B_to_C,
-            Lexicon.income_C_to_D,
-            Lexicon.income_D_to_E,
-            Lexicon.income_more_than_E,
-            Lexicon.prefer_not_to_say
-        ]
-    else:
-        income_choices = [
-            Lexicon.income_label,
-            Lexicon.income_less_than_A,
-            Lexicon.income_A_to_B,
-            Lexicon.income_B_to_C,
-            Lexicon.income_C_to_D,
-            Lexicon.income_more_than_D,
-            Lexicon.prefer_not_to_say
-        ]
-    return income_choices
-
-
-def residential_area_choices(player): # ready and checked
-    Lexicon = player.session.scalesLexi
-    return  [["metropolitan", Lexicon.metropolitan_area], ["suburb", Lexicon.suburban], ["rural", Lexicon.rural]]
-
-#endregion
 
 #region Knowledge Choices
 def cknow1_choices(player):
@@ -407,10 +275,8 @@ class Player(BasePlayer):
 
 
     ### Demographics
-    age = models.IntegerField(min=18,max = 99)
-    income = models.StringField()
-    education = models.StringField()
-    gender = models.StringField()
+    ageYear = models.IntegerField(min=1900,max = 2008)  # change in different waves
+    
     residential_area = models.StringField()
     zip_code = models.StringField(blank=True)
     #party_affiliation = models.StringField(choices=get_party_choices(LANGUAGE_CODE, Lexicon) )
@@ -573,9 +439,9 @@ class PITrust(Page):
         form_field_labels = [Lexicon.pit1Label, Lexicon.pit2Label]
     )
         
-class Demographics(Page):
+class DemographicsEnd(Page):
     form_model = 'player'
-    form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code']
+    form_fields = ['ageYear', 'residential_area', 'zip_code']
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -586,8 +452,8 @@ class Demographics(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code'],
-        form_field_labels = [Lexicon.age_label, Lexicon.gender_label , Lexicon.income_label, Lexicon.education_label, Lexicon.residential_area_label, Lexicon.zip_code_label]
+        form_fields = ['ageYear',  'residential_area', 'zip_code'],
+        form_field_labels = [Lexicon.ageYear_label, Lexicon.residential_area_label, Lexicon.zip_code_label]
     )
 
 class transition (Page): 

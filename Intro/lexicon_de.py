@@ -52,3 +52,39 @@ class Lexicon:
     data_consent1 = 'Die Nutzung der Daten für wissenschaftliche Zwecke und/oder die Publikation der Ergebnisse dieser Studie in wissenschaftlichen Zeitschriften oder Büchern jeweils unter der Voraussetzung, dass die Daten anonymisiert werden und keine Rückschlüsse auf meine Identität gezogen werden können.'
     data_consent2 = 'Die Nutzung der Daten für Lehrzwecke (Kurse und Vorträge für Studierende und Berufstätige, die jeweils zu einem vertraulichen Umgang verpflichtet sind).'
     
+### Demographics
+    demographics_title = "Persönliche Daten"
+    demographics_header = "Bitte geben Sie die folgenden Informationen über sich ein."
+
+    age_label = "Wie alt sind Sie?"
+    ageYear_label = "In welchem Jahr wurden sie geboren?"
+    gender_label = "Welchem Geschlecht fühlen Sie sich zugehörig?"
+    female = "Weiblich"
+    male = "Männlich"
+    diverse = "Divers"
+    other = "Andere"
+
+    income_label = "Was ist Ihr jährliches Einkommen?"
+    income_less_than_A = "Weniger als 25.000 €"
+    income_A_to_B = "25.000 € - 50.000 €"
+    income_B_to_C = "50.001 € - 75.000 €"
+    income_C_to_D = "75.001 € - 100.000 €"
+    income_more_than_D = "Mehr als 100.000 €"
+    prefer_not_to_say = "Keine Angabe"
+
+    education_label = "Was ist Ihr höchster Bildungsabschluss?"
+    #no_formal = "Keine formale Bildung"
+    #elementary_school = "Grundschule"
+    #secondary_school = "Hauptschulabschluss"
+    #higher_secondary_school = "Mittlere Reife"
+    #vocational_training = "Berufsausbildung"
+    #high_school = "Abitur"
+   # college_degree = "Hochschulabschluss - Bachelor"
+  #  master_degree = "Hochschulabschluss - Master"
+ #  doctoral_degree = "Promotion"
+    no_formal = "keine formelle Bildung"
+    obligatory = "obligatorische Schule"
+    high_school = "Sekundarstufe: Abitur / Berufsbildung / Allgemeinbildung "
+    degree = "höhere Berufsbildung: Hochschulabschluss / Bachelor / Master"
+    doctoral_degree = "Promotion (PhD) oder höher"
+    prefer_not_to_say_education = "Keine Angabe"

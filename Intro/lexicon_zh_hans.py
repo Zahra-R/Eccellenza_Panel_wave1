@@ -59,3 +59,40 @@ class Lexicon:
     consent_p10 = "如果您想参与，则需要选中下面的框并点击下一步。<b>如果您不想参加，只需关闭此窗口即可。</b> </p> <p>根据上述信息，我确认我希望参加这项研究，并授权："
     data_consent1 = "将数据用于科学目的，并在科学期刊或书籍上发表研究结果，条件是数据是匿名的，并且不会披露有关我身份的任何信息。" 
     data_consent2 = "将数据用于教学目的（为学生和专业人士提供的课程和讲座，须遵守专业保密规定）。"
+
+
+    ### Demographics
+    demographics_title = "个人数据" 
+    demographics_header = "请输入以下有关您自己的信息。"
+
+    age_label = "你今年多大？"
+
+    ageYear_label = "In which year were you born?"
+    gender_label = "您的性别是什么？" 
+    female = "女性"
+    male = "男性"
+    other = "其他"
+
+    income_label = "你的年收入是多少？"
+    income_less_than_A = "3万元人民币以下"
+    income_A_to_B = "30,000 - 60,000元人民币"
+    income_B_to_C = "60,001 - 120,000元人民币"
+    income_C_to_D = "120,001 - 300,000元人民币"
+    income_D_to_E = "300,001 - 500,000元人民币"
+    income_more_than_E = "超过50万元人民币"
+    prefer_not_to_say = "不愿意说"
+
+    education_label = "你的最高学历是什么？"
+    high_school = "初中"
+    vocational_education = "职业教育"
+    some_college = "高等教育（职业）"
+    bachelors_degree =  "学士学位"
+    masters_degree = "硕士学位"
+    doctoral_degree = "博士学位"
+    
+    no_formal = "keine formelle Bildung"
+    obligatory = "obligatorische Schule"
+    high_school = "Sekundarstufe: Abitur / Berufsbildung / Allgemein "
+    degree = "höhere Berufsbildung: Hochschulabschluss / Bachelor / Master"
+    doctoral_degree = "Promotion (PhD) oder höher"
+    prefer_not_to_say_education = "Keine Angabe"

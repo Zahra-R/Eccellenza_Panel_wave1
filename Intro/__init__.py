@@ -47,15 +47,8 @@ class Group(BaseGroup):
     pass
 
 
-class Player(BasePlayer):
-    ### Climate Change Concern Scale by Tobler et al. 2012
-    dataScience = models.BooleanField(initial=False)
-    dataTeach = models.BooleanField(initial=False)
-    mobileDevice= models.BooleanField(initial=False, blank=True)
-
-
 def creating_session(subsession:Subsession):
-    """ 
+    
     if subsession.session.config['language'] == 'de':
         from .lexicon_de import Lexicon
         subsession.session.myLangCode = "_de"
@@ -66,12 +59,160 @@ def creating_session(subsession:Subsession):
         from .lexicon_en import Lexicon
         subsession.session.myLangCode = "_en"
     subsession.session.introLexi = Lexicon 
-    """
+
     import itertools
     order_tasks = itertools.cycle([1,2,3])
     for player in subsession.get_players():
         if subsession.round_number == 1: 
             player.participant.order_tasks = next(order_tasks)
+    
+
+        #region Choices for demographics
+# Nina: added gender german at beginning
+def education_choices(player):
+    Lexicon = player.session.introLexi
+    language_code =  player.session.config['language']
+    education_choices = []
+    if language_code == 'de':
+        education_choices = [    
+            Lexicon.no_formal,
+            Lexicon.obligatory,
+            Lexicon.high_school,
+            Lexicon.degree,
+            Lexicon.doctoral_degree,
+            Lexicon.prefer_not_to_say_education,
+        ]
+
+    elif language_code == 'zh_hans':
+        education_choices = [ 
+            Lexicon.no_formal,
+            Lexicon.obligatory,
+            Lexicon.high_school,
+            Lexicon.degree,
+            Lexicon.doctoral_degree,
+            Lexicon.prefer_not_to_say_education,
+            ]
+   
+    else:
+        education_choices = [
+            Lexicon.no_formal,
+            Lexicon.obligatory,
+            Lexicon.high_school,
+            Lexicon.degree,
+            Lexicon.doctoral_degree,
+            Lexicon.prefer_not_to_say_education,
+        ]
+    return education_choices
+
+def get_party_choices(player):
+    party_choices = []
+    Lexicon = player.session.introLexi
+    language_code =  player.session.config['language']
+    if language_code == 'de':
+        party_choices = [    
+            Lexicon.cdcsu,
+            Lexicon.spd,
+            Lexicon.gruene,
+            Lexicon.fdp,
+            Lexicon.linke,
+            Lexicon.afd,
+            Lexicon.other_party
+        ]
+    elif language_code == 'zh_hans':
+        party_choices = [
+            # Add choices for Chinese language if needed
+        ]
+    else:
+        party_choices = [
+            Lexicon.republicans, 
+            Lexicon.democrats, 
+            Lexicon.independent_party, 
+            Lexicon.other_party
+        ]
+    return party_choices
+
+def gender_choices(player):
+    gender_choices = []
+    Lexicon = player.session.introLexi
+    language_code = player.session.config['language']
+    if language_code == 'de':
+        gender_choices = [
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["diverse", Lexicon.diverse], 
+            ["other", Lexicon.other]
+        ]
+    elif language_code == 'zh_hans':
+        gender_choices = [
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["other", Lexicon.other]
+        ]
+    else:
+        gender_choices = [
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["diverse", Lexicon.diverse], 
+            ["other", Lexicon.other]
+        ]
+    return gender_choices
+
+def income_choices(player):
+    income_choices = []
+    Lexicon = player.session.introLexi
+    language_code = player.session.config['language']
+    if language_code == 'de':
+        income_choices = [    
+            Lexicon.income_label,
+            Lexicon.income_less_than_A,
+            Lexicon.income_A_to_B,
+            Lexicon.income_B_to_C,
+            Lexicon.income_C_to_D,
+            Lexicon.income_more_than_D,
+            Lexicon.prefer_not_to_say
+        ]
+    elif language_code == 'zh_hans':
+        income_choices = [
+            Lexicon.income_label,
+            Lexicon.income_less_than_A,
+            Lexicon.income_A_to_B,
+            Lexicon.income_B_to_C,
+            Lexicon.income_C_to_D,
+            Lexicon.income_D_to_E,
+            Lexicon.income_more_than_E,
+            Lexicon.prefer_not_to_say
+        ]
+    else:
+        income_choices = [
+            Lexicon.income_label,
+            Lexicon.income_less_than_A,
+            Lexicon.income_A_to_B,
+            Lexicon.income_B_to_C,
+            Lexicon.income_C_to_D,
+            Lexicon.income_more_than_D,
+            Lexicon.prefer_not_to_say
+        ]
+    return income_choices
+
+
+#endregion
+
+
+class Player(BasePlayer):
+    ### Climate Change Concern Scale by Tobler et al. 2012
+    dataScience = models.BooleanField(initial=False)
+    dataTeach = models.BooleanField(initial=False)
+    mobileDevice= models.BooleanField(initial=False, blank=True)
+
+
+    ### Demographics
+    age = models.IntegerField(min=18,max = 99)
+    income = models.StringField()
+    education = models.StringField()
+    gender = models.StringField()
+    #party_affiliation = models.StringField(choices=get_party_choices(LANGUAGE_CODE, Lexicon) )
+
+
    
    
 class Consent(Page):
@@ -140,7 +281,25 @@ class Consent_Standalone(Page):
     @staticmethod
     def is_displayed(player:Player):
         return (player.session.config['consent_form'] =="standalone")
+    
+class Demographics(Page):
+    form_model = 'player'
+    form_fields = ['age', 'gender', 'income', 'education']
+
+    @staticmethod
+    def vars_for_template(player: Player):
+        return{
+            'Lexicon': player.session.introLexi
+        } 
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.introLexi
+        return dict(
+        form_fields = ['age', 'gender', 'income', 'education'],
+        form_field_labels = [Lexicon.age_label, Lexicon.gender_label , Lexicon.income_label, Lexicon.education_label]
+    )
 
 
 
-page_sequence = [Consent, Consent_Standalone]
+
+page_sequence = [Consent, Consent_Standalone, Demographics]

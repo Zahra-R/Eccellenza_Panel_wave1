@@ -53,3 +53,29 @@ class Lexicon:
     data_consent1 = 'The use of the data for scientific purposes, and the publication of the results of the study in scientific journals or books, given that the data will be anonymous and that no information about my identity will be disclosed.'
     data_consent2 = 'The use of the data for teaching purposes (courses and lectures for students and professionals subject to professional confidentiality).'
     
+### Demographics
+    demographics_title = "Personal data"
+    demographics_header = "Please enter the following information about yourself."
+
+    age_label = "How old are you?"
+    gender_label = "What gender do you identify as?"
+    female = "Female"
+    male = "Male"
+    diverse = "Diverse"
+    other = "Other"
+
+    income_label = "What is your yearly income?"
+    income_less_than_A = "Less than $25,000"
+    income_A_to_B = "$25,000 - $50,000"
+    income_B_to_C = "$50,001 - $75,000"
+    income_C_to_D = "$75,001 - $100,000"
+    income_more_than_D = "More than $100,000"
+    prefer_not_to_say = "Prefer not to say"
+
+    education_label = "What is your highest level of education?"
+    no_formal = "No formal education"
+    obligatory = "Compulsory education"
+    high_school = "Secondary education /High School / Vocational training"
+    degree = "Tertiary education: Bachelor's Degree / Master's Degree"
+    doctoral_degree = "Doctoral Degree or higher"
+    prefer_not_to_say_education = "Prefer not to say"

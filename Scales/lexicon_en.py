@@ -265,29 +265,8 @@ class Lexicon:
     ### Demographics
     demographics_title = "Personal data"
     demographics_header = "Please enter the following information about yourself."
-
-    age_label = "How old are you?"
-    gender_label = "What gender do you identify as?"
-    female = "Female"
-    male = "Male"
-    diverse = "Diverse"
-    other = "Other"
-
-    income_label = "What is your yearly income?"
-    income_less_than_A = "Less than $25,000"
-    income_A_to_B = "$25,000 - $50,000"
-    income_B_to_C = "$50,001 - $75,000"
-    income_C_to_D = "$75,001 - $100,000"
-    income_more_than_D = "More than $100,000"
-    prefer_not_to_say = "Prefer not to say"
-
-    education_label = "What is your highest level of education?"
-    no_formal = "No formal education"
-    obligatory = "Compulsory education"
-    high_school = "Secondary education /High School / Vocational training"
-    degree = "Tertiary education: Bachelor's Degree / Master's Degree"
-    doctoral_degree = "Doctoral Degree or higher"
-    prefer_not_to_say_education = "Prefer not to say"
+    
+    ageYear_label = "In which year were you born?"
 
     residential_area_label = "What describes your residential area best?"
     metropolitan_area = "Metropolitan Area"
