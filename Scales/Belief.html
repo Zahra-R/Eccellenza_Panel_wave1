@@ -9,7 +9,7 @@
 
 {% block content %}
 
-<p> {{ Lexicon.belief_header}}</p>
+<p> {{ Lexicon.beliefCC_intro}}</p>
 
 <table class="radiotable">
     <tr>
@@ -27,7 +27,7 @@
     </tr>
 
     {% for field in form %}
-        {% if field.name == 'belief1' or field.name == 'belief2' or field.name == 'belief3' %}
+        {% if field.name == 'belief1Happening' %}
         {{formfield_errors field.name}}
 
         <tr>
@@ -43,6 +43,75 @@
 
 <br>
 <br>
+<p> {{ Lexicon.belief_header}}</p>
+
+<table class="radiotable">
+    <tr>
+        <th></th>
+        <th class="radio-column"> {{ Lexicon.completely_agree }}</th>
+        <th class="radio-column"> </th class="radio-column">
+        <th class="radio-column"> </th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"> {{ Lexicon.completely_disagree }} </th>
+        <th class="radio-column"> {{ Lexicon.do_not_believe }} </th>
+    </tr>
+
+    {% for field in form %}
+        {% if field.name == 'beliefHuman1' or field.name == 'beliefHuman2' or field.name == 'beliefHuman3' %}
+        {{formfield_errors field.name}}
+
+        <tr>
+            <th style="font-weight:normal;" id={{field.id}} name={{field.name}}>  </th>
+            {{ for choice in field }}
+            <td>{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+        {% endif %}
+
+    {{ endfor }}
+</table>
+
+<br>
+<br>
+
+<p> {{ Lexicon.belief_header}}</p>
+
+<table class="radiotable">
+    <tr>
+        <th></th>
+        <th class="radio-column"> {{ Lexicon.completely_agree }}</th>
+        <th class="radio-column"> </th class="radio-column">
+        <th class="radio-column"> </th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"> {{ Lexicon.completely_disagree }} </th>
+        <th class="radio-column"> {{ Lexicon.do_not_believe }} </th>
+    </tr>
+
+    {% for field in form %}
+        {% if field.name == 'beliefConseqences1' or field.name == 'beliefConseqences2' or field.name == 'beliefConseqences3' %}
+        {{formfield_errors field.name}}
+
+        <tr>
+            <th style="font-weight:normal;" id={{field.id}} name={{field.name}}>  </th>
+            {{ for choice in field }}
+            <td>{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+        {% endif %}
+
+    {{ endfor }}
+</table>
+
 {{ formfield 'beliefConsensus' label=Lexicon.beliefConsensLabel}} 
 
 <br>

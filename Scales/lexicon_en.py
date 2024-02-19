@@ -13,6 +13,8 @@ class Lexicon:
     
     completely_agree = "completely agree"
     completely_disagree = "completely disagree"
+
+    do_not_believe = "I do not believe that climate change is happening"
     
     dont_know = "Don't know"
     opposed_to_values = "opposed to my values"
@@ -26,38 +28,32 @@ class Lexicon:
     completely_false = "Completeley False"
     completely_true = "Completely True"
 
-
-    ## New 3 cause items from Valkengoed
-    ## to be inserted here
-    # causes
-#     Human activities are a major cause of climate change.
-# 2. Climate change is mostly caused by human activity.
-# 3. The main causes of climate change are human activities.
-    # consequences final call whether to include still to be made
-
-# Overall, climate change will bring more negative than positive consequences to the world.
-# 2. Climate change will bring about serious negative consequences.
-# 3. The consequences of climate change will be very serious.
     
-    # I think climate change is one of the greatest global risks. 
-    # There are much less downsides to climate action than to the consequences of inaction and delay. 
-    # A climate-friendly transformation would have many positive side effects, besides adressing the risks of climate change. 
+    ## belief in climate change 
+    beliefCC_intro = "Climate change refers to the idea that the world’s average temperature has been increasing over the past 150 years, will increase more in the future, and that the world’s climate will change as a result. What do you think: Do you think climate change is happening?"
+    belief1HappeningLabel = "I believe that climate change is real"
 
+    ### belief in (human) causes taken from  Valkengoed
+    beliefHuman_title = "What do you believe?"
+    beliefHuman_header = "How much do you agree with the following statements?"
+    beliefHuman1Label = "Human activities are <b> not </b> a major cause of climate change." # reversed (originally not)
+    beliefHuman2Label = "Climate change is mostly caused by human activity."
+    beliefHuman3Label = "The main causes of climate change are human activities." 
 
+    beliefConseqences1Label = "Overall, climate change will bring more negative than positive consequences to the world."
+    beliefConseqences2Label = "Climate change will bring about serious negative consequences."
+    beliefConseqences3Label = "The consequences of climate change will <b> not </b> be very serious." # reversed (originally not)
 
-    ##3 concern items as emotions. 
-    ## suggestion: worry, concerned, apprehensive (alternatives: upset or distressed)
-    ## german: besorgt, bekümmert, beunruhigt.
+    beliefConsensLabel = "Which percentage of climate scientists agree that climate change is real and caused by human activity?"
 
     ##belief in solutions
-    # It is possible to meet energy demands with renewable and sustainable energy alone. 
-    # Transforming to a sustainable and climate-friendly society would reduce our national standards of living. 
-    # Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible.
 
-    # I think High-Income countries have a greater responsibilty to reduce greenhouse gas emissions than Low and middle-income countries. 
-    # I would rather prepare to live with climate change than fight climate change. 
-    # Industry has to change for the climate, not individuals. 
-    
+    beliefSolutions1Label = "Der Wandel zu einer nachhaltigen und klimafreundlichen Gesellschaft würde unsere nationalen Lebensstandards verringern." 
+    beliefSolutions2Label = "Nachhaltige Technologien und Lösungen sind in den Kinderschuhen und ein Ausstieg aus fossilen Brensstoffen is nocht nicht umsetzbar."
+    beliefSolutions3Label = "Ich glaube, dass einkommensstarke Länder eine grössere Verantwortung haben Triebhausgasemissionen zu verringern als einkommensschwache Länder und Länder mit mittlerem Einkommen." 
+    beliefSolutions4Label = "Die Industrie muss Treibhausgasemissionen reduzieren, nicht Individuen."
+    beliefSolutions5Label = "Ich würde mich lieber dafür vorbereiten mit dem Klimawandel zu leben, als den Klimawandel zu bekämpfen."
+
 
 
     #Climate Change Concern Tobler
@@ -98,16 +94,6 @@ class Lexicon:
     emoConcern1Label = "worried"
     emoConcern2Label = "concerned"
     emoConcern3Label = "upset"
-
-    ### beliefs taken from  Valkengoed
-    belief_title = "What do you believe?"
-    belief_header = "How much do you agree with the following statements?"
-    belief1Label = "Human activities are a major cause of climate change."
-    belief2Label = "Climate change is mostly caused by human activity."
-    belief3Label = "The main causes of climate change are human activities."
-
-    beliefConsensLabel = "Which percentage of climate scientists agree that climate change is real and caused by human activity?"
-
 
 
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  

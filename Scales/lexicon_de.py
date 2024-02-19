@@ -13,6 +13,8 @@ class Lexicon:
     
     completely_agree = "stimme absolut zu"
     completely_disagree = "stimme überhaupt nicht zu"
+    do_not_believe = "I do not believe that climate change is happening"
+
     dont_know = "Weiss nicht"
     opposed_to_values = "meinen Werten entgegengesetzt"
     strongly_liberal = "stark liberal"
@@ -24,6 +26,36 @@ class Lexicon:
     full_trust = "absolutes Vertrauen"
     completely_false = "komplett falsch"
     completely_true = "komplett richtig"
+
+    
+    ## belief in climate change 
+    beliefCC_intro = "Climate change refers to the idea that the world’s average temperature has been increasing over the past 150 years, will increase more in the future, and that the world’s climate will change as a result. What do you think: Do you think climate change is happening?"
+    belief1Happening = "I believe that climate change is real"
+
+    ### belief in (human) causes taken from  Valkengoed
+  
+    beliefHuman_title = "Was glauben Sie?"
+    beliefHuman_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
+    beliefHuman1Label = "Menschliche Aktivitäten sind <b> keine </b> Hauptursache des Klimawandels." # reversed (originally not)
+    beliefHuman2Label = "Der Klimawandel wird überwiegend durch menschliche Aktivität verursacht."
+    beliefHuman3Label = "Die Hauptursachen des Klimawandels sind menschliche Verhalten."
+
+    beliefConsensLabel = "Wie viel Prozent der Klimawissenschaftler sind sich einig, dass der Klimawandel echt, und menschenverursacht ist?"
+
+    beliefConseqences1Label = "Insgesamt wird der Klimawandel mehr negative als positive Folgen für die Welt haben."
+    beliefConseqences2Label = "Der Klimawandel wird ernste negative Folgen mit sich ziehen."
+    beliefConseqences3Label = "Die Folgen des Klimawandels werden <b> nicht </b> sehr ernst sein." # reversed (originally not)
+
+
+    ##belief in solutions
+
+    beliefSolutions1Label = "Transforming to a sustainable and climate-friendly society would reduce our national standards of living." 
+    beliefSolutions2Label = " Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible."
+    beliefSolutions3Label = "I think High-income countries have a greater responsibilty to reduce greenhouse gas emissions than low and middle-income countries." 
+    beliefSolutions4Label = "Industry has a greater responsibilty to reduce greenhouse gas emissions than individuals."
+    beliefSolutions5Label = " I would rather prepare to live with climate change than to fight climate change."
+
+
 
     #Climate Change Concern Tobler
     ccc_title = "Einstellungen zum Klimawandel"
@@ -62,15 +94,6 @@ class Lexicon:
     emoConcern2Label = "sorgenvoll"
     emoConcern3Label = "beunruhigt"
 
-
-     ### beliefs taken from  Valkengoed
-    belief_title = "Was glauben Sie?"
-    belief_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    belief1Label = "Menschliche Aktivitäten sind eine Hauptursache des Klimawandels."
-    belief2Label = "Der Klimawandel wird überwiegend durch menschliche Aktivität verursacht."
-    belief3Label = "Die Hauptursachen des Klimawandels sind menschliche Verhalten."
-
-    beliefConsensLabel = "Wie viel Prozent der Klimawissenschaftler sind sich einig, dass der Klimawandel echt, und menschenverursacht ist?"
 
 
 

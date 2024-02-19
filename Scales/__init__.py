@@ -54,6 +54,11 @@ def make_likert10():
             choices=[1,2,3,4,5,6,7,8,9,10],
             widget=widgets.RadioSelect,
         )
+def make_likert11():
+        return models.IntegerField(
+            choices=[1,2,3,4,5,6,7,8,9,10, 22],
+            widget=widgets.RadioSelect,
+        )
 def make_likert9():
         return models.IntegerField(
             choices=[-1,0,1,2,3,4,5,6,7],
@@ -360,9 +365,15 @@ class Player(BasePlayer):
     po2 = make_likert10()
 
     ### Belief
-    belief1 = make_likert10()
-    belief2 = make_likert10()
-    belief3 = make_likert10()
+    belief1Happening= make_likert10()
+
+    beliefHuman1 = make_likert11()
+    beliefHuman2 = make_likert11()
+    beliefHuman3 = make_likert11()
+
+    beliefConseqences1 = make_likert11()
+    beliefConseqences2 = make_likert11()
+    beliefConseqences3 = make_likert11()
 
     beliefConsensus = models.IntegerField(min=0,max = 100)
 
@@ -411,7 +422,8 @@ class CCConcern(Page):
 
 class Belief(Page):
     form_model = 'player'
-    form_fields= ['belief1', 'belief2', 'belief3', 'beliefConsensus']
+    form_fields= [ 'belief1Happening','beliefHuman1', 'beliefHuman2', 'beliefHuman3', 'beliefConsensus',
+                  'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
@@ -420,7 +432,8 @@ class Belief(Page):
         Lexicon = player.session.scalesLexi
         return dict(
         form_fields= ['belief1', 'belief2', 'belief3', 'beliefConsensus'],
-        form_field_labels = [Lexicon.belief1Label, Lexicon.belief2Label, Lexicon.belief3Label, Lexicon.beliefConsensLabel]
+        form_field_labels = [Lexicon.belief1HappeningLabel, Lexicon.beliefHuman1Label, Lexicon.beliefHuman2Label, Lexicon.beliefHuman3Label, Lexicon.beliefConsensLabel,
+                             Lexicon.beliefConseqences1Label, Lexicon.beliefConseqences2Label, Lexicon.beliefConseqences3Label ]
     )
 
 class CCEmotion(Page):
@@ -573,4 +586,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [BehaviorsFood, BehaviorsTransport, Belief, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
+page_sequence = [ Belief,BehaviorsFood, BehaviorsTransport, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]

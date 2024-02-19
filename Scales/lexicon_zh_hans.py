@@ -1,6 +1,26 @@
 class Lexicon:
-    
     next = "下一个"
+    instructions = "Instructions"
+    no = "No"
+    results = 'Results'
+    round_number = "Round no."
+    start = "Start"
+    stop = "Stop"
+    yes = "Yes"
+    your_decision = "Your decision"
+    not_at_all = "一点也不"
+    very_much = "非常"
+    
+    completely_agree = "completely agree"
+    completely_disagree = "completely disagree"
+
+    do_not_believe = "I do not believe that climate change is happening"
+    
+    dont_know = "Don't know"
+    
+    completely_false = "Completeley False"
+    completely_true = "Completely True"
+  
     #Scale anchors 
     strongly_liberal = "非常开明"
     somewhat_liberal = "有点开明"
@@ -11,12 +31,38 @@ class Lexicon:
     opposed_to_values = "违背我的价值观"
     not_important = "不重要"
     extremely_important = "极其重要"
-
-    not_at_all = "一点也不"
-    very_much = "非常"
-
+    
     no_trust_at_all = "Totally distrust"
     full_trust = "Totally trust"
+
+
+
+     ## belief in climate change 
+    beliefCC_intro = "Climate change refers to the idea that the world’s average temperature has been increasing over the past 150 years, will increase more in the future, and that the world’s climate will change as a result. What do you think: Do you think climate change is happening?"
+    belief1Happening = "I believe that climate change is real"
+
+    ### belief in (human) causes taken from  Valkengoed
+    beliefHuman_title = "What do you believe?"
+    beliefHuman_header = "How much do you agree with the following statements?"
+    beliefHuman1Label = "Human activities are <b> not </b> a major cause of climate change." # reversed (originally not)
+    beliefHuman2Label = "Climate change is mostly caused by human activity."
+    beliefHuman3Label = "The main causes of climate change are human activities." 
+
+    beliefConseqences1Label = "Overall, climate change will bring more negative than positive consequences to the world."
+    beliefConseqences2Label = "Climate change will bring about serious negative consequences."
+    beliefConseqences3Label = "The consequences of climate change will <b> not </b> be very serious." # reversed (originally not)
+
+    beliefConsensLabel = "Which percentage of climate scientists agree that climate change is real and caused by human activity?"
+
+    ##belief in solutions
+
+    beliefSolutions1Label = "Der Wandel zu einer nachhaltigen und klimafreundlichen Gesellschaft würde unsere nationalen Lebensstandards verringern." 
+    beliefSolutions2Label = "Nachhaltige Technologien und Lösungen sind in den Kinderschuhen und ein Ausstieg aus fossilen Brensstoffen is nocht nicht umsetzbar."
+    beliefSolutions3Label = "Ich glaube, dass einkommensstarke Länder eine grössere Verantwortung haben Triebhausgasemissionen zu verringern als einkommensschwache Länder und Länder mit mittlerem Einkommen." 
+    beliefSolutions4Label = "Die Industrie muss Treibhausgasemissionen reduzieren, nicht Individuen."
+    beliefSolutions5Label = "Ich würde mich lieber dafür vorbereiten mit dem Klimawandel zu leben, als den Klimawandel zu bekämpfen."
+
+
 
     #Climate Change Concern Tobler
     ccc_title = "对气候变化的态度"
@@ -58,18 +104,6 @@ class Lexicon:
     emoConcern2Label = "concerned"
     emoConcern3Label = "upset"
 
-     ### beliefs taken from  Valkengoed
-    belief_title = "What do you believe?"
-    belief_header = "How much do you agree with the following statements?"
-    belief1Label = "Human activities are a major cause of climate change."
-    belief2Label = "Climate change is mostly caused by human activity."
-    belief3Label = "The main causes of climate change are human activities."
-
-    beliefConsensLabel = "Which percentage of climate scientists agree that climate change is real and caused by human activity?"
-
-
-
-    
     
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
     ## TBD kevin tam
