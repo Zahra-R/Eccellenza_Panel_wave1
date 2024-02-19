@@ -1,0 +1,81 @@
+{% block styles %}
+    <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
+    <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    {{ Lexicon.belief_title }}
+{% endblock %}
+
+{% block content %}
+
+<br>
+<p> {{ Lexicon.belief_header}}</p>
+<br>
+<table class="radiotable">
+    <tr>
+        <th></th>
+        <th class="radio-column"> {{ Lexicon.completely_agree }}</th>
+        <th class="radio-column"> </th class="radio-column">
+        <th class="radio-column"> </th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"> {{ Lexicon.completely_disagree }} </th>
+    </tr>
+
+    {% for field in form %}
+        {% if field.name == 'beliefSolutions1' or field.name == 'belief2Solutions' or field.name == 'belief3Solutions'or field.name == 'belief4Solutions' or field.name == 'belief5Solutions' %}
+        {{formfield_errors field.name}}
+
+        <tr>
+            <th style="font-weight:normal;" id={{field.id}} name={{field.name}}>  </th>
+            {{ for choice in field }}
+            <td>{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+        {% endif %}
+
+    {{ endfor }}
+</table>
+
+<br>
+<br>
+
+{{ formfield 'beliefConsensus' label=Lexicon.beliefConsensLabel}} 
+
+<br>
+
+<div class="next-btn radiotable">
+    <div style="float: right; padding-top: 2vh;">
+        <button id="nextst"  style=" margin-top: 4vh;" class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
+ 
+    </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{% static 'global/js/functions.js' %}" defer></script>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        setWidthForTableColumns1();
+    });
+
+    $(document).ready(function () {
+        for (let i = 0; i < js_vars.form_fields.length; i++) {   
+            prop= js_vars.form_fields[i] + 'Label'
+            label = js_vars.form_field_labels[i]
+            id = 'id_' + js_vars.form_fields[i]
+            $('#' + id).html(label)
+        }
+
+
+    })
+
+</script>
+{% endblock %}

@@ -375,6 +375,12 @@ class Player(BasePlayer):
     beliefConseqences2 = make_likert11()
     beliefConseqences3 = make_likert11()
 
+    belief1Solutions = make_likert10()
+    belief2Solutions = make_likert10()
+    belief3Solutions = make_likert10()
+    belief4Solutions = make_likert10()
+    belief5Solutions = make_likert10()
+
     beliefConsensus = models.IntegerField(min=0,max = 100)
 
     ## behaviors
@@ -422,7 +428,7 @@ class CCConcern(Page):
 
 class Belief(Page):
     form_model = 'player'
-    form_fields= [ 'belief1Happening','beliefHuman1', 'beliefHuman2', 'beliefHuman3', 'beliefConsensus',
+    form_fields= [ 'belief1Happening','beliefHuman1', 'beliefHuman2', 'beliefHuman3',
                   'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3']
     @staticmethod
     def vars_for_template(player: Player):
@@ -431,9 +437,24 @@ class Belief(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields= ['belief1', 'belief2', 'belief3', 'beliefConsensus'],
-        form_field_labels = [Lexicon.belief1HappeningLabel, Lexicon.beliefHuman1Label, Lexicon.beliefHuman2Label, Lexicon.beliefHuman3Label, Lexicon.beliefConsensLabel,
+        form_fields= [ 'belief1Happening','beliefHuman1', 'beliefHuman2', 'beliefHuman3',
+                  'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3'],
+        form_field_labels = [Lexicon.belief1HappeningLabel, Lexicon.beliefHuman1Label, Lexicon.beliefHuman2Label, Lexicon.beliefHuman3Label, 
                              Lexicon.beliefConseqences1Label, Lexicon.beliefConseqences2Label, Lexicon.beliefConseqences3Label ]
+    )
+class Belief2 (Page):
+    form_model = 'player'
+    form_fields= [ 'belief1Solutions','belief2Solutions', 'belief3Solutions', 'belief4Solutions', 'belief5Solutions',  'beliefConsensus' ]
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields= [ 'belief1Solutions','belief2Solutions', 'belief3Solutions', 'belief4Solutions', 'belief5Solutions',  'beliefConsensus' ],
+        form_field_labels = [Lexicon.beliefSolutions1Label, Lexicon.beliefSolutions2Label, Lexicon.beliefSolutions3Label,
+                              Lexicon.beliefSolutions4Label, Lexicon.beliefSolutions5Label, Lexicon.beliefConsensLabel]
     )
 
 class CCEmotion(Page):
@@ -586,4 +607,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [ Belief,BehaviorsFood, BehaviorsTransport, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
+page_sequence = [ Belief, Belief2, BehaviorsFood, BehaviorsTransport, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
