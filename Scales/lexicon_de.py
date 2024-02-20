@@ -124,11 +124,8 @@ class Lexicon:
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
     pit_title = "Vertrauen im Bezug auf den Klimawandel"
     pit_header = "Wie sehr vertrauen Sie diesen Akteuren beim Klimawandel?"
-    pit1Label = "der deutschen Regierung"
-   # pit2Label = "deutschen Wissenschaftlern"
-    pit2Label = "ausländischen Regierungen"
-   # pit4Label = "ausländischen Wissenschaftlern"
-   # pit5Label = "Dem Zwischenstaatliche Sachverständigenrat für Klimaänderungen (Intergovernmental Panel on Climate Change, IPCC)"
+    pit1Label = "der lokalen Regierung"
+    pit2Label = "der nationalen Regierung"
 
      # Knowledge Question from Allianz Climate Literacy Report
     cck_title = 'Was wissen Sie über den Klimawandel?'
@@ -292,9 +289,14 @@ class Lexicon:
     afd = "Alternative für Deutschland (AfD)"
     other_party = "Andere"
 
-    # Transition page
-    Transition_text = "Danke für Ihre bisherige Teilnahme an unserer Studie! <br> Sie haben hiermit die Entscheidungsaufgabe abgeschlossen. Im Folgenden bitten wir Sie einige Fragen zu Ihren Einstellungen und Wahrnehmungen beantworten. "
-    
+     # transition
+    transition_title = 'Willkommen beim nächsten Block der Studie'
+    transitions_a = 'Vielen Dank für Ihre bisherigen Antworten. Wenn Sie eine kurze Pause benötigen, bevor Sie mit der Studie fortfahren, wäre jetzt ein guter Zeitpunkt. <br> Sobald Sie auf den weiter-Knopf auf dieser Seite klicken, bitten wir Sie, diesen Block in einem Rutsch auszufüllen.'
+    # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
+    transitions_b ='Dies ist Block Nummer '
+    transitions_c = ' von insgesamt 4 Blöcken. Vielen Dank, dass Sie sich die Zeit genommen haben, alle Fragen zu beantworten. Wenn Sie bereit sind, fahren Sie bitte fort.'
+   
+
     # goodbye page 
-    goodbye_text = "Vielen Dank für die Teilnahme an unserer Studie! <br> Sie sind nun am Ende der Studie angelangt und werden nun automatisch weitergeleitet um Ihre Aufwandsentschädigung zu erhalten."
+    goodbye_text = "Vielen Dank für die Teilnahme an unserer Studie! <br> Sie sind nun am Ende der Studie angelangt. Um Ihre Aufwandsentschädigung zu erhalten klicken Sie bitte auf 'Weiter'."
 

@@ -8,7 +8,7 @@ class Lexicon:
 
     transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
     # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
-    transitions_b =' This is block number'
+    transitions_b =' This is block number   '
     transitions_c = 'out of 4 blocks. Thank you again, for taking the time to answer all questions. <br> Once you are ready, please proceed.'
 
     
@@ -22,7 +22,8 @@ class Lexicon:
     
     # task_example
     example_pa = 'This is how a carbon footprint of an individual looks like in our task. <br>'
+    ##for chinese version please adapte this example:  "takes the train (e.g.from Shanghai to Beijing" or Beijing to Guangzhou)" rather than "takes the train (e.g. Boston-New York or LA-San Francisco)"
     example_pb = 'The different lifestyles of these individuals refer to: <ul> <li> <b>Dietary behavior:</b> The respective person either follows a <b>meat-based diet (omnivorous)</b> or a <b>plant-based diet (vegetarian)</b> </li> <li> <b>Recycling behavior:</b> The respective person either <b>recycles comprehensively</b> or <b>does not recycle</b> </li>  <li> <b>Regionality of food purchases:</b> The respective person either buys and consumes <b>mainly regional food </b> or <b>also imported</b> food items </li><li> <b>Electricity supply:</b> The respective person either subscribed to an electricity supply that is <b>mixed, so includes fossil and some renewable sources</b> or <b>based 100% on renewable energy sources</b> </li> <li> <b>Commuting to work:</b> The respective person either commutes a total of 20km to and from work everyday, 5 days a week for 48 weeks per year <b>by bike</b>  or <b>by bus</b> </li> <li> <b>Traveling on vacation:</b> The respective person either <b>takes two medium distance flights a year (=3-6hours)</b> or <b>or takes the train (e.g. Boston-New York or LA-San Francisco)</b> </li>'
     example_pc = ' <i>That is, in the example above, the person follow a vegetarian diet, does not recycle, eats regional and imported food,subscribed to a mixed electricity supply, commutes every weekday to work by bus, and takes the train to go on vacation.</i>  <br> '
     example_pd = 'Next, you will estimate the carbon footprint of <b>16</b> persons with different lifestyles. <br> Please look at each individual carbon footprint carefully and take some time to provide your estimation. <br> The order in which the 6 behaviors are presented will change across the 16 examples you will see.'
-    example_pic = '/static/global/images/example_en.png '
+    example_pic = '/static/global/images/example_en.png '  # no need to change the link

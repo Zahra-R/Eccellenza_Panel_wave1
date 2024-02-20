@@ -124,11 +124,8 @@ class Lexicon:
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
     pit_title = "Trust in regards to climate change"
     pit_header = "How much do you trust these actors in climate change?"
-    pit1Label = "the US government"
-  #  pit2Label = "US scientists"
-    pit2Label = "foreign governments"
-   # pit4Label = "foreign scientists"
-   # pit5Label = "the Intergovernmental Panel on Climate Change (IPCC)"
+    pit1Label = "the local government"
+    pit2Label = "the national government"
 
 
     # Knowledge Question from Allianz Climate Literacy Report
@@ -281,10 +278,16 @@ class Lexicon:
     independent_party = "Independent Party"
     other_party = "Other"
 
-    # Transition page
-    Transition_text = "Thank you for your participation so far! <br> You have now completed the policy task and will continue to answer some questions about your attitudes and perceptions. "
+    # Transition page these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
+    transition_title = 'Welcome to the next block of the study'
+    transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
+    # add counter (Zahra)
+    transitions_b =' This is block number  '
+    transitions_c = 'out of 4 blocks. Thank you again, for taking the time to answer all questions. <br> Once you are ready, please proceed.'
+
+    
     
     # goodbye page 
-    goodbye_text = "Thank you for your participation in our study! <br> You are now at the end of the study and will be redirected for compensation."
+    goodbye_text = "Thank you for your participation in our study! <br> You are now at the end of the study. To receive compensation please click on 'next'."
 
 

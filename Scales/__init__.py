@@ -31,14 +31,23 @@ class Group(BaseGroup):
     pass
 
 def creating_session(subsession:Subsession):
+    
     if subsession.session.config['language'] == 'de':
-        from .lexicon_de import Lexicon        
-
+        from .lexicon_de import Lexicon
+        subsession.session.myLangCode = "_de"
     elif subsession.session.config['language'] == 'zh_hans':
         from .lexicon_zh_hans import Lexicon
+        subsession.session.myLangCode = "_ch"
     else:
-        from .lexicon_en import Lexicon  
-    subsession.session.scalesLexi = Lexicon
+        from .lexicon_en import Lexicon
+        subsession.session.myLangCode = "_en"
+    subsession.session.scalesLexi = Lexicon 
+
+    import itertools
+    order_tasks = itertools.cycle([1,2,3])
+    for player in subsession.get_players():
+        if subsession.round_number == 1: 
+            player.participant.order_tasks = next(order_tasks)
 
 
 # custom function to automatically make likert type fields with 5 options

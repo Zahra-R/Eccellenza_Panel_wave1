@@ -19,11 +19,12 @@ class Lexicon:
     consent_bullet1 = 'Einen Satz von Online-Fragebögen auszufüllen. Möglicherweise werden Sie gebeten, zu bewerten, wie gut bestimmte Aussagen oder Persönlichkeitsmerkmale auf Sie zutreffen.'
     consent_bullet2= 'Sie werden auch gebeten, einige demografische Informationen anzugeben, darunter zum Beispiel Ihr Alter, Geschlecht und Einkommen.'
     consent_bullet3 = 'Sie werden verschiedene politische Maßnahmen lesen und darüber abstimmen.'
-    
+    consent_bullet3 = 'Sie werden 3 verschieden experimentelle Aufgaben mit mehreren Runden zu unterschiedlichen Themen bearbeiten'
+
     
     ## Achtung hier richtige dauer
     duration ='Dauer'
-    consent_p3 ='Die Teilnahme an dieser Studie erfordert etwa <b>10 Minuten</b> Ihrer Zeit.'
+    consent_p3 ='Die Teilnahme an dieser Studie erfordert etwa <b>20-25 Minuten</b> Ihrer Zeit.'
 
     ## Achtung hier richtige vergütung und währung und marktforschungsinstitut
     risks = 'Risiken und Vorteile:'
@@ -38,7 +39,8 @@ class Lexicon:
 
 
     ### achtung achtung, hier prolific
-    consent_p8 = 'Wenn Ihnen etwas an der Studie oder Ihrer Teilnahme unklar ist, wenn Sie Fragen haben oder ein forschungsbezogenes Problem melden möchten, senden Sie eine E-Mail an Jessica Helm unter: jessica.helm@unibas.ch'
+    #consent_p8 = 'Wenn Ihnen etwas an der Studie oder Ihrer Teilnahme unklar ist, wenn Sie Fragen haben oder ein forschungsbezogenes Problem melden möchten, senden Sie eine E-Mail an Jessica Helm unter: jessica.helm@unibas.ch'
+    consent_p8 = ' Wenn Ihnen etwas an der Studie oder Ihrer Teilnahme unklar ist, wenn Sie Fragen haben oder ein forschungsbezogenes Problem melden möchten, senden Sie eine E-Mail an Nina Frings at nina.frings@unibas.ch oder hinterlassen Sie einen Kommentar am Ende der Studie.'
 
     consent_p9 = 'Indem Sie auf "Weiter" klicken, erklären Sie Ihr Einverständnis zur Teilnahme an dieser Studie und geben an, dass Sie '
 
@@ -65,6 +67,7 @@ class Lexicon:
     other = "Andere"
 
     income_label = "Was ist Ihr jährliches Einkommen?"
+    # source
     income_less_than_A = "Weniger als 25.000 €"
     income_A_to_B = "25.000 € - 50.000 €"
     income_B_to_C = "50.001 € - 75.000 €"
@@ -73,16 +76,8 @@ class Lexicon:
     prefer_not_to_say = "Keine Angabe"
 
     education_label = "Was ist Ihr höchster Bildungsabschluss?"
-    #no_formal = "Keine formale Bildung"
-    #elementary_school = "Grundschule"
-    #secondary_school = "Hauptschulabschluss"
-    #higher_secondary_school = "Mittlere Reife"
-    #vocational_training = "Berufsausbildung"
-    #high_school = "Abitur"
-   # college_degree = "Hochschulabschluss - Bachelor"
-  #  master_degree = "Hochschulabschluss - Master"
- #  doctoral_degree = "Promotion"
-    no_formal = "keine formelle Bildung"
+    
+    no_formal = "keine formelle Bildung abgeschlossen"
     obligatory = "obligatorische Schule"
     high_school = "Sekundarstufe: Abitur / Berufsbildung / Allgemeinbildung "
     degree = "höhere Berufsbildung: Hochschulabschluss / Bachelor / Master"

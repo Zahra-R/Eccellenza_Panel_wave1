@@ -8,7 +8,7 @@ class Lexicon:
 
     transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
     # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
-    transitions_b =' This is block number'
+    transitions_b =' This is block number  '
     transitions_c = 'out of 4 blocks. Thank you again, for taking the time to answer all questions. <br> Once you are ready, please proceed.'
 
     
