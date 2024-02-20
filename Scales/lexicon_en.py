@@ -50,8 +50,8 @@ class Lexicon:
 
     beliefSolutions1Label = "Transforming to a sustainable and climate-friendly society would reduce our national standards of living." 
     beliefSolutions2Label = " Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible."
-    beliefSolutions3Label = "I think High-income countries have a greater responsibilty to reduce greenhouse gas emissions than low and middle-income countries." 
-    beliefSolutions4Label = "Industry has a greater responsibilty to reduce greenhouse gas emissions than individuals."
+    beliefSolutions3Label = "I think High-income countries have a greater responsibility to reduce greenhouse gas emissions than low and middle-income countries." 
+    beliefSolutions4Label = "Industry has a greater responsibility to reduce greenhouse gas emissions than individuals."
     beliefSolutions5Label = " I would rather prepare to live with climate change than to fight climate change."
 
 
