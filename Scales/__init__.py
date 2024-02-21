@@ -43,11 +43,6 @@ def creating_session(subsession:Subsession):
         subsession.session.myLangCode = "_en"
     subsession.session.scalesLexi = Lexicon 
 
-    import itertools
-    order_tasks = itertools.cycle([1,2,3])
-    for player in subsession.get_players():
-        if subsession.round_number == 1: 
-            player.participant.order_tasks = next(order_tasks)
 
 
 # custom function to automatically make likert type fields with 5 options
@@ -290,6 +285,8 @@ class Player(BasePlayer):
     zip_code = models.StringField(blank=True)
     #party_affiliation = models.StringField(choices=get_party_choices(LANGUAGE_CODE, Lexicon) )
 
+    comment = models.StringField (blank=True)
+
 
 class CCConcern(Page):
     form_model = 'player'
@@ -467,9 +464,17 @@ class DemographicsEnd(Page):
 
 class transition (Page): 
     form_model = 'player'
+    form_fields = ['comment']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields = ['comment' ],
+        form_field_labels = [Lexicon.comment_label]
+    )
 
 class goodbye (Page): 
     form_model = 'player'
@@ -482,4 +487,4 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [ Belief, Belief2, BehaviorsFood, BehaviorsTransport, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
+page_sequence = [ Belief, Belief2, BehaviorsFood, BehaviorsTransport, DemographicsEnd, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]

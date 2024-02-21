@@ -298,5 +298,6 @@ class Lexicon:
    
 
     # goodbye page 
+    comment_label = 'Wenn Sie Fragen oder Vorschläge für die Studie haben, können Sie das hier angeben:'
     goodbye_text = "Vielen Dank für die Teilnahme an unserer Studie! <br> Sie sind nun am Ende der Studie angelangt. Um Ihre Aufwandsentschädigung zu erhalten klicken Sie bitte auf 'Weiter'."
 

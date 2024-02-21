@@ -68,11 +68,11 @@ class Lexicon:
 
     income_label = "Was ist Ihr jährliches Einkommen?"
     # source
-    income_less_than_A = "Weniger als 25.000 €"
-    income_A_to_B = "25.000 € - 50.000 €"
-    income_B_to_C = "50.001 € - 75.000 €"
-    income_C_to_D = "75.001 € - 100.000 €"
-    income_more_than_D = "Mehr als 100.000 €"
+    income_quintile1 = "Weniger als 25.000 €"
+    income_quintile2 = "25.000 € - 50.000 €"
+    income_quintile3 = "50.001 € - 75.000 €"
+    income_quintile4 = "75.001 € - 100.000 €"
+    income_quintile5 = "Mehr als 100.000 €"
     prefer_not_to_say = "Keine Angabe"
 
     education_label = "Was ist Ihr höchster Bildungsabschluss?"

@@ -163,33 +163,29 @@ def income_choices(player):
     language_code = player.session.config['language']
     if language_code == 'de':
         income_choices = [    
-            Lexicon.income_label,
-            Lexicon.income_less_than_A,
-            Lexicon.income_A_to_B,
-            Lexicon.income_B_to_C,
-            Lexicon.income_C_to_D,
-            Lexicon.income_more_than_D,
+            Lexicon.income_quintile1,
+            Lexicon.income_quintile2,
+            Lexicon.income_quintile3,
+            Lexicon.income_quintile4,
+            Lexicon.income_quintile5,
             Lexicon.prefer_not_to_say
         ]
     elif language_code == 'zh_hans':
         income_choices = [
-            Lexicon.income_label,
-            Lexicon.income_less_than_A,
-            Lexicon.income_A_to_B,
-            Lexicon.income_B_to_C,
-            Lexicon.income_C_to_D,
-            Lexicon.income_D_to_E,
-            Lexicon.income_more_than_E,
+            Lexicon.income_quintile1,
+            Lexicon.income_quintile2,
+            Lexicon.income_quintile3,
+            Lexicon.income_quintile4,
+            Lexicon.income_quintile5,
             Lexicon.prefer_not_to_say
         ]
     else:
         income_choices = [
-            Lexicon.income_label,
-            Lexicon.income_less_than_A,
-            Lexicon.income_A_to_B,
-            Lexicon.income_B_to_C,
-            Lexicon.income_C_to_D,
-            Lexicon.income_more_than_D,
+            Lexicon.income_quintile1,
+            Lexicon.income_quintile2,
+            Lexicon.income_quintile3,
+            Lexicon.income_quintile4,
+            Lexicon.income_quintile5,
             Lexicon.prefer_not_to_say
         ]
     return income_choices

@@ -76,11 +76,12 @@ class Lexicon:
     other = "其他"
 
     income_label = "你的年收入是多少？"
-    income_less_than_A = "3万元人民币以下"
-    income_A_to_B = "30,000 - 60,000元人民币"
-    income_B_to_C = "60,001 - 120,000元人民币"
-    income_C_to_D = "120,001 - 300,000元人民币"
-    income_D_to_E = "300,001 - 500,000元人民币"
+    # income categories TBD
+    income_quintile1 = "3万元人民币以下"
+    income_quintile2 = "30,000 - 60,000元人民币"
+    income_quintile3 = "60,001 - 120,000元人民币"
+    income_quintile4 = "120,001 - 300,000元人民币"
+    income_quintile5 = "300,001 - 500,000元人民币"
     income_more_than_E = "超过50万元人民币"
     prefer_not_to_say = "不愿意说"
 

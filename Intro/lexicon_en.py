@@ -64,12 +64,14 @@ class Lexicon:
     diverse = "Diverse"
     other = "Other"
 
+
     income_label = "What is your yearly income?"
-    income_less_than_A = "Less than $25,000"
-    income_A_to_B = "$25,000 - $50,000"
-    income_B_to_C = "$50,001 - $75,000"
-    income_C_to_D = "$75,001 - $100,000"
-    income_more_than_D = "More than $100,000"
+    # may need to be adpated i havent checked income quintiles for US yet
+    income_quintile1 = "Less than $25,000"
+    income_quintile2 = "$25,000 - $50,000"
+    income_quintile3 = "$50,001 - $75,000"
+    income_quintile4 = "$75,001 - $100,000"
+    income_quintile5 = "More than $100,000"
     prefer_not_to_say = "Prefer not to say"
 
     education_label = "What is your highest level of education?"
