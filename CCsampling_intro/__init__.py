@@ -79,8 +79,16 @@ class beforeTask(Page):
     form_fields = ['range_ccconcern']
     def vars_for_template(player: Player):
         return dict(Lexicon = player.session.samplingIntroLexi)
+    
+class transition (Page): 
+    form_model = 'player'
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.samplingIntroLexi)
+   
 
 page_sequence = [
+    transition,
     Introduction,
     beforeTask
 ]
