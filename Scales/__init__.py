@@ -457,10 +457,24 @@ class DemographicsEnd(Page):
 
 class transition (Page): 
     form_model = 'player'
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    
+
+class goodbye (Page): 
+    form_model = 'player'
     form_fields = ['comment']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
+    def vars_for_template(player: Player):
+       return{
+            #Lexicon': player.session.introLexi
+             'u': player.participant.label,
+             'participantlabel':player.participant.label
+
+        } 
     @staticmethod
     def js_vars(player):
         Lexicon = player.session.scalesLexi
@@ -468,11 +482,6 @@ class transition (Page):
         form_fields = ['comment' ],
         form_field_labels = [Lexicon.comment_label]
     )
-
-class goodbye (Page): 
-    form_model = 'player'
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
 
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 

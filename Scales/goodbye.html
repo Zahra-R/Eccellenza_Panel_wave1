@@ -11,15 +11,27 @@
 <br>
 {{ formfields }}
 
-<div style="text-align: center; font-size: 32px;">
-    {{Lexicon.goodbye_text}}
- </div>
+    <p> {{ Lexicon.goodbye_text }} </p>
+    <br>
 
- <div class="next-btn radiotable">  
-    <div style="float: right; padding-top: 2vh;">
-         {% next_button %}
-        
-    </div>
-</div> 
+    <button class="btn btn-primary btn-large reps" style="margin-top:3vh;" type="button" onclick="redirectToThankYouPage()"> {{Lexicon.next}} </button>
+ {% endblock %}
+
+ {% block scripts %}
+    <script>
+        function redirectToThankYouPage() {
+         // Get the participant's label value
+            var participantLabel = "{{ participant.label }}"; 
+ 
+         // Get the link from Lexicon
+            var link = "{{ Lexicon.link }}"; // This syntax may vary depending on your templating language
+ 
+         // Construct the URL with the participant's label as a parameter
+            var url = link + "?participant_label=" + participantLabel;
+ 
+         // Redirect to the constructed URL
+            window.location.href = url;
+        }
+    </script>
 
 {% endblock %}
