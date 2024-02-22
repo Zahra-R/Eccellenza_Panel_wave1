@@ -288,14 +288,7 @@ class Player(BasePlayer):
     comment = models.StringField (blank=True)
 
 
-class CCConcern(Page):
-    form_model = 'player'
-    form_fields= ['ccc1', 'ccc2', 'ccc3', 'ccc4',  'ccc10', 'ccc11', 'ccc12', 'ccc13', 'ccc14', 'ccc15', 'ccc16'  ]
-    print(form_fields[0])
-    @staticmethod
-    def vars_for_template(player: Player):
-        #player.formfields.ccc1.label="test"
-        return dict(Lexicon=player.session.scalesLexi)
+
     
 
 class Belief(Page):
@@ -487,4 +480,9 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [ Belief, Belief2, BehaviorsFood, BehaviorsTransport, DemographicsEnd, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
+page_sequence = [ transition,
+                 Belief, Belief2, BehaviorsFood, BehaviorsTransport, 
+                 DemographicsEnd, 
+                 CCEmotion, PolOrientation, PITrust, CCKnowledge, 
+                 WVValues, IBValues, 
+                 goodbye]

@@ -56,22 +56,6 @@ class Lexicon:
     beliefSolutions5Label = "Ich würde mich lieber dafür vorbereiten mit dem Klimawandel zu leben, als den Klimawandel zu bekämpfen."
 
 
-
-    #Climate Change Concern Tobler
-    ccc_title = "Einstellungen zum Klimawandel"
-    ccc_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    ccc1Label = "Wir müssen das empfindliche Klimagleichgewicht schützen."
-    ccc2Label = "Der Klimaschutz ist wichtig für unsere Zukunft."
-    ccc3Label = "Ich mache mir Sorgen über den Zustand des Klimas."
-    ccc4Label = "Der Klimawandel hat ernste Folgen für die Menschheit und die Natur."
-    ccc10Label = "Der Klimawandel und seine Folgen werden in den Medien übertrieben."
-    ccc11Label = "Der Klimawandel ist ein betrügerisches Geschäft."
-    ccc12Label = "Solange Metereologen nicht einmal richtig das Wetter vorhersagen können, kann das Klima auch nicht zuverlässig vorhergesagt werden."
-    ccc13Label = "Es gibt wichtigere Probleme als den Klimaschutz."
-    ccc14Label = "Ich fühle mich nicht von dem Klimawandel bedroht."
-    ccc15Label = "Die Folgen des Klimawandels sind unvorhersehbar, deswegen ist mein klimafreundliches Verhalten vergeblich."
-    ccc16Label = "Klimaschutz behindert unnötigerweise das Wirtschaftswachstum."
-
     #Climate Change Emotion Knauf/Truelove
     cce_title = "Reaktionen auf den Klimawandel"
     cce_header = "Wenn ich an den Klimawandel denke, fühle ich mich..."
@@ -93,8 +77,6 @@ class Lexicon:
     emoConcern1Label = "besorgt"
     emoConcern2Label = "sorgenvoll"
     emoConcern3Label = "beunruhigt"
-
-
 
 
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
@@ -290,7 +272,9 @@ class Lexicon:
     other_party = "Andere"
 
      # transition
-    transition_title = 'Willkommen beim nächsten Block der Studie'
+    transition_title = 'Willkommen beim letzten Block der Studie'
+
+
     transitions_a = 'Vielen Dank für Ihre bisherigen Antworten. Wenn Sie eine kurze Pause benötigen, bevor Sie mit der Studie fortfahren, wäre jetzt ein guter Zeitpunkt. <br> Sobald Sie auf den weiter-Knopf auf dieser Seite klicken, bitten wir Sie, diesen Block in einem Rutsch auszufüllen.'
     # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
     transitions_b ='Dies ist Block Nummer '

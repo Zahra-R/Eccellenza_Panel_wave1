@@ -55,23 +55,6 @@ class Lexicon:
     beliefSolutions5Label = " I would rather prepare to live with climate change than to fight climate change."
 
 
-
-    #Climate Change Concern Tobler
-    ccc_title = "Attitudes about Climate Change"
-    ccc_header = "How much do you agree with the following statements?"
-    ccc1Label = "We must protect the climate’s delicate equilibrium."
-    ccc2Label = "Climate protection is important for our future."
-    ccc3Label = "I worry about the climate’s state."
-    ccc4Label = "Climate change has severe consequences for humans and nature."
-    ccc10Label = "Climate change and its consequences are being exaggerated in the media."
-    ccc11Label = "Climate change is a racket."
-    ccc12Label = "As long as meteorologists are not even able to accurately forecast weather, climate cannot be reliably predicted either."
-    ccc13Label = "There are larger problems than climate protection."
-    ccc14Label = "I do not feel threatened by climate change."
-    ccc15Label = "The impacts of climate change are unpredictable; thus, my climate-friendly behavior is futile."
-    ccc16Label = "Climate protection needlessly impedes economic growth."
-
-
     #Climate Change Emotion Knauf/Truelove
     cce_title = "Attitudes about Climate Change"
     cce_header = "When I think of Climate Change I feel..."
@@ -278,8 +261,10 @@ class Lexicon:
     independent_party = "Independent Party"
     other_party = "Other"
 
-    # Transition page these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
-    transition_title = 'Welcome to the next block of the study'
+    # Transition page
+    transition_title = 'Welcome to the last block of the study'
+    
+    # these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
     transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
     # add counter (Zahra)
     transitions_b =' This is block number  '

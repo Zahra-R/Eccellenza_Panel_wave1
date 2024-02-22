@@ -2,12 +2,9 @@ class Lexicon:
     next = "下一个"
     instructions = "Instructions"
     no = "No"
-    results = 'Results'
     round_number = "Round no."
-    start = "Start"
-    stop = "Stop"
+
     yes = "Yes"
-    your_decision = "Your decision"
     not_at_all = "一点也不"
     very_much = "非常"
     
@@ -18,8 +15,6 @@ class Lexicon:
     
     dont_know = "Don't know"
     
-    completely_false = "Completeley False"
-    completely_true = "Completely True"
   
     #Scale anchors 
     strongly_liberal = "非常开明"
@@ -63,25 +58,6 @@ class Lexicon:
     beliefSolutions5Label = " I would rather prepare to live with climate change than to fight climate change."
 
 
-
-
-    #Climate Change Concern Tobler
-    ccc_title = "对气候变化的态度"
-    ccc_header = "您对以下说法的同意程度如何？"
-    ccc1Label = "我们必须保护气候的微妙平衡。"
-    ccc2Label = "气候保护对我们的未来很重要。"
-    ccc3Label = "我担心气候状况。"
-    ccc4Label = "气候变化对人类和自然造成严重后果。"
-    ccc10Label = "媒体夸大了气候变化及其后果。"
-    ccc11Label = "气候变化是一场闹剧。"
-    ccc12Label = "只要气象学家无法准确预测天气，气候也无法可靠预测。"
-    ccc13Label = "还有比气候保护更大的问题。"
-    ccc14Label = "我没有感受到气候变化的威胁。"
-    ccc15Label = "气候变化的影响是不可预测的；因此，我对气候有益的行为是徒劳的。"
-    ccc16Label = "气候保护不必要地阻碍了经济增长。"
-
-
-        # new emotions
     #Climate Change Emotion
 
     cce_title = "Attitudes about Climate Change"
