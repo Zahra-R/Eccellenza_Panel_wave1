@@ -440,7 +440,7 @@ class PITrust(Page):
         
 class DemographicsEnd(Page):
     form_model = 'player'
-    form_fields = ['ageYear', 'residential_area', 'zip_code']
+    form_fields = ['ageYear', 'residential_area', 'zip_code' ]
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -451,8 +451,8 @@ class DemographicsEnd(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields = ['ageYear',  'residential_area', 'zip_code'],
-        form_field_labels = [Lexicon.ageYear_label, Lexicon.residential_area_label, Lexicon.zip_code_label]
+        form_fields = ['ageYear',  'residential_area', 'zip_code' ],
+        form_field_labels = [Lexicon.ageYear_label, Lexicon.residential_area_label, Lexicon.zip_code_label ]
     )
 
 class transition (Page): 
@@ -489,9 +489,9 @@ class goodbye (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [ transition,
+page_sequence = [ transition, 
                  Belief, Belief2, BehaviorsFood, BehaviorsTransport, 
-                 DemographicsEnd, 
+                  
                  CCEmotion, PolOrientation, PITrust, CCKnowledge, 
-                 WVValues, IBValues, 
-                 goodbye]
+                 WVValues, IBValues,
+                DemographicsEnd,  goodbye]

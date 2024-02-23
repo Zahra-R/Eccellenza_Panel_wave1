@@ -3,19 +3,25 @@
     <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
 {% endblock %}
 
-{{ block title }} 
-{{ endblock }}
 
-{{ block content }}
-<p> {{ Lexicon.comment_label }}</p> 
+
+{% block content %} 
+
+<form method="post">
+   {% for field in form %}
+       {{formfield_errors field.name}}
+       <div>
+           <label  id={{field.id}} name={{field.name}}> </label>
+          {{field}}
+       </div>
+   {% endfor %}
+</form>
+
+<p> {{ Lexicon.goodbye_text }} </p>
 <br>
-{{ formfields }}
 
-    <p> {{ Lexicon.goodbye_text }} </p>
-    <br>
-
-    <button class="btn btn-primary btn-large reps" style="margin-top:3vh;" type="button" onclick="redirectToThankYouPage()"> {{Lexicon.next}} </button>
- {% endblock %}
+<button class="btn btn-primary btn-large reps" style="margin-top:3vh;" type="button" onclick="redirectToThankYouPage()"> {{Lexicon.next}} </button>
+{% endblock %}
 
  {% block scripts %}
     <script>

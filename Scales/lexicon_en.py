@@ -277,8 +277,8 @@ class Lexicon:
     
     
     # goodbye page 
-    comment = 'If you have any comments or suggestions regarding the study, please indicate this here:'
-    goodbye_text = "Thank you for your participation in our study! <br> You are now at the end of the study. To receive compensation please click on 'next'."
+    comment_label = 'If you have any comments or suggestions regarding the study, please indicate this here:'
+    goodbye_text = 'Thank you for your participation in our study! <br> You are now at the end of the study. To receive compensation please click on next .'
 
     # adapt link
     link = 'https://www.innofact-umfrage.de/sample_only/ub3/us/danke_f.php'
