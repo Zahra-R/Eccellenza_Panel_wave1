@@ -32,5 +32,7 @@ class Lexicon:
     instr_continue = "You will now be presented with <b>12 hypothetical policy proposals</b> one after another. <br> For each of them you can vote with <b>Yes</b> or <b>No</b>, whether or not you would accept the policy proposal. <br> Please look at each policy proposal carefully and take some time to make your vote. <br> The order in which the 4 features are presented will change across the 12 examples."
 
 
+    
+    example_CT = '/static/global/images/task_designCT_en.png'
     next = "Next"
     

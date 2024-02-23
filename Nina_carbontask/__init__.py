@@ -2,6 +2,8 @@ import random
 import json
 
 from otree.api import *
+from settings import LANGUAGE_CODE
+
 
 class C(BaseConstants):
     NAME_IN_URL = 'task'
@@ -35,14 +37,18 @@ class Subsession(BaseSubsession):
     pass
 
 def creating_session(subsession:Subsession):
+    
     if subsession.session.config['language'] == 'de':
-        from .lexicon_de import Lexicon       
+        from .lexicon_de import Lexicon
+        subsession.session.myLangCode = "_de"
     elif subsession.session.config['language'] == 'zh_hans':
         from .lexicon_zh_hans import Lexicon
+        subsession.session.myLangCode = "_ch"
     else:
-        from .lexicon_en import Lexicon  
-    subsession.session.carbonTaskLexi = Lexicon
-    subsession.session.myLangCode = subsession.session.config['language']
+        from .lexicon_en import Lexicon
+        subsession.session.myLangCode = "_en"
+    subsession.session.carbonTaskLexi = Lexicon 
+    #subsession.session.myLangCode = subsession.session.config['language']
     if subsession.round_number == 1:
         for p in subsession.get_players():
             round_numbers = list(range(0, C.NUM_ROUNDS))

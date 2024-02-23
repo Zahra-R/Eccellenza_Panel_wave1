@@ -40,52 +40,62 @@
 </style>
 
 <p>
-    {{Lexicon.Instructions_rating}}
+    {{ Lexicon.Instructions_rating }}
+
 </p>
 
-
-
 <table class="radiotable">
-    <tr> <th></th>  <th    class="radio-column"> {{Lexicon.very_negative}} </th>  <th class="radio-column" > 2  </th> <th class="radio-column"> 3 </th> <th class="radio-column"  > 4  </th> <th class="radio-column"> 5 </th> <th class="radio-column"> 6 </th>  <th class="radio-column"> {{Lexicon.very_positive}} </th>    </tr>
-
-
-    
-    {{if player.Association1 != ""}}
-        <tr>
-            <th style="font-weight:normal;">{{ player.Association1}}</th>
-            {{ for choice in form.AssociationRating1 }}
-                <td>{{ choice }}</td>
-            {{ endfor }}
-        </tr>
-    {{endif}}
-
-    {{if player.Association2 != ""}}
     <tr>
-        <th style="font-weight:normal;">{{ player.Association2}}</th>
-        {{ for choice in form.AssociationRating2 }}
-            <td>{{ choice }}</td>
-        {{ endfor }}
+        <th></th>
+        <th class="radio-column">{{ Lexicon.very_negative }}</th>
+        <th class="radio-column">2</th>
+        <th class="radio-column">3</th>
+        <th class="radio-column">4</th>
+        <th class="radio-column">5</th>
+        <th class="radio-column">6</th>
+        <th class="radio-column">{{ Lexicon.very_positive }}</th>
     </tr>
-    {{endif}}
 
-    {{if player.Association3 != ""}}
+    {% if player.Association1 %}
+    <tr>
+        <th style="font-weight:normal;">{{ player.Association1 }}</th>
+        {% for choice in form.AssociationRating1 %}
+            <td>{{ choice }}</td>
+        {% endfor %}
+    </tr>
+    {% endif %}
+
+    {% if player.Association2 %}
+    <tr>
+        <th style="font-weight:normal;">{{ player.Association2 }}</th>
+        {% for choice in form.AssociationRating2 %}
+            <td>{{ choice }}</td>
+        {% endfor %}
+    </tr>
+    {% endif %}
+
+    {% if player.Association3 %}
     <tr>
         <th style="font-weight:normal;">{{ player.Association3 }}</th>
-        {{ for choice in form.AssociationRating3 }}
+        {% for choice in form.AssociationRating3 %}
             <td>{{ choice }}</td>
-        {{ endfor }}
+        {% endfor %}
     </tr>
-    {{endif}}
+    {% endif %}
 
-    {{if player.Association4 != ""}}
+    {% if player.Association4 %}
     <tr>
         <th style="font-weight:normal;">{{ player.Association4 }}</th>
-        {{ for choice in form.AssociationRating4 }}
+        {% for choice in form.AssociationRating4 %}
             <td>{{ choice }}</td>
-        {{ endfor }}
+        {% endfor %}
     </tr>
-    {{endif}}
+    {% endif %}
+
 </table>
+
+
+
 
 
 <div class="next-btn radiotable">  

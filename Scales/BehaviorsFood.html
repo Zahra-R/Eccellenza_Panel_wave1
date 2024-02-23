@@ -19,6 +19,7 @@
 
 <table class="radiotable">
     <tr>
+        <th> </th>
 
         <th class="radio-column"> {{ Lexicon.food_overall_A }} </th>
         <th class="radio-column"> {{ Lexicon.food_overall_B }} </th>
@@ -35,6 +36,7 @@
         {{formfield_errors field.name}}
 
         <tr>
+            <th style="font-weight:normal;" id={{field.id}} name={{field.name}}>  </th>
             {{ for choice in field }}
             <td>{{ choice }}</td>
             {{ endfor }}

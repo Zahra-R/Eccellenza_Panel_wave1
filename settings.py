@@ -70,7 +70,7 @@ SESSION_CONFIGS = [
      ),
         dict(
          name='Pretest_Jessi_de',
-         app_sequence= [ 'Intro', 'Jessi_Instructions', 'Jessi_carbonTax', 'CCsampling_intro', 'Scales_Jessi'],
+         app_sequence= [ 'Intro', 'Jessi_Instructions', 'Jessi_carbonTax', 'CCsampling_intro'],
          consent_form = "standalone",
          #language = "de",
          num_demo_participants=10,
@@ -112,11 +112,13 @@ SESSION_FIELDS = [
     'introLexi',
     'samplingLexi',
     'samplingIntroLexi',
-    'cabonTaxLexi',
-    'taxIntroLexi',
+
+    'introNinaLexi',
     'carbonTaskLexi',
-    'taskIntroLexi',
-    'footprintLexi',
+
+    'JessiTaskLexicon',
+    'JessiIntroLexi',
+    
     'scalesLexi',
     'debriefLexi',
 

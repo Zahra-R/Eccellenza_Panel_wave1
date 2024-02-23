@@ -4,16 +4,6 @@ import json
 from otree.api import *
 from settings import LANGUAGE_CODE
 
-if LANGUAGE_CODE == 'de':
-    from .lexicon_de import Lexicon
-elif LANGUAGE_CODE == 'zh_hans':
-    from .lexicon_zh_hans import Lexicon
-else:
-    from .lexicon_en import Lexicon
-
-which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
-which_language[LANGUAGE_CODE[:2]] = True
-
 
 class C(BaseConstants):
     NAME_IN_URL = 'instructions_task'
@@ -40,6 +30,7 @@ def creating_session(subsession:Subsession):
         subsession.session.myLangCode = "_en"
     subsession.session.introNinaLexi = Lexicon 
 
+
     import itertools
     order_tasks = itertools.cycle([1,2,3])
     for player in subsession.get_players():
@@ -59,9 +50,7 @@ class transition(Page):
 
     @staticmethod
     def vars_for_template(player: Player):
-        return{
-            'Lexicon': player.session.introNinaLexi
-        } 
+        return dict(Lexicon=player.session.introNinaLexi) 
    
     
 class instructions(Page):
@@ -69,9 +58,7 @@ class instructions(Page):
 
     @staticmethod
     def vars_for_template(player: Player):
-        return{
-            'Lexicon': player.session.introNinaLexi
-        } 
+        return dict(Lexicon=player.session.introNinaLexi)
    
     
 class task_example(Page):
@@ -79,10 +66,7 @@ class task_example(Page):
 
     @staticmethod
     def vars_for_template(player: Player):
-        return{
-            'Lexicon': player.session.introNinaLexi
-        } 
-   
+        return dict(Lexicon=player.session.introNinaLexi)
         
 
 # Page sequence

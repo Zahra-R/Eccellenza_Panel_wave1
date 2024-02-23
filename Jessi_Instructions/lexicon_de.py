@@ -34,6 +34,7 @@ class Lexicon:
     instr_continue = "Ihnen werden nun nacheinander <b>12 fiktive Vorschläge für eine CO<sub>2</sub>-Steuer</b> vorgelegt. Für jeden dieser Vorschläge können Sie mit <b>Ja</b> oder <b>Nein</b> stimmen.Bitte sehen Sie sich jeden Vorschlag sorgfältig an und nehmen Sie sich etwas Zeit, um Ihre Stimme abzugeben. Die Reihenfolge der 4 Merkmale wird sich über die 12 Beispiele hinweg ändern."
 
 
+    example_CT = '/static/global/images/task_designCT_de.png'
     next = "Weiter"
 
     

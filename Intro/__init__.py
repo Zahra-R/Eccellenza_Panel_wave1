@@ -1,9 +1,13 @@
 import random
+import os
+
 
 from otree.api import *
 
 #from settings import LANGUAGE_CODE
-LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
+LANGUAGE_CODE = os.environ.get('LANGUAGE_CODE')
+
+#LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
 
 doc = """
 How to translate an app to multiple languages (e.g. English and German).
@@ -285,7 +289,9 @@ class Demographics(Page):
     @staticmethod
     def vars_for_template(player: Player):
         return{
-            'Lexicon': player.session.introLexi
+            #Lexicon': player.session.introLexi
+             'Lexicon': Lexicon
+        
         } 
     @staticmethod
     def js_vars(player):

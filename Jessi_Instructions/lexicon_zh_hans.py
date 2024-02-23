@@ -32,4 +32,5 @@ class Lexicon:
     instr_continue = "现在您将依次看到 <b>12 项假设性政策提案</b>。<br>对于每一项，您都可以投票<b>是</b>或<b>否</b> ，表示您是否支持该政策提案。<br>请仔细查看每个政策提案，并花一些时间做出决定。<br>这 4 个要素的呈现顺序将在 12 个示例中发生变化。"
 
 
+    example_CT = '/static/global/images/task_designCT_zh_hans.png'
     next = "下一个"

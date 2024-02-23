@@ -42,12 +42,15 @@
 <p> {{ Lexicon.Instr_affectiveImagery }} </p>
 <table class="radiotable">
     {{ for field in form }}
-        <tr>
-            <th style="font-weight:normal;">{{ field.label }}</th>
-            <th>{{ field }}</th>
-        </tr>
+    {{formfield_errors field.name}}
+    <tr>
+        <th style="font-weight:normal;">{{ field.label }}</th>
+        <th>  {{ field }}</th>
+    </tr>
     {{ endfor }}
+
 </table>
+
 
 <div class="next-btn radiotable">  
     <div style="float: right; padding-top: 2vh;">

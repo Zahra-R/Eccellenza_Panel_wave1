@@ -4,13 +4,13 @@
 {% endblock %}
 
 {% block title %}
-    {{ Lexicon.belief_title }}
+    {{ Lexicon.beliefHuman_title }}
 {% endblock %}
 
 {% block content %}
 
 <br>
-<p> {{ Lexicon.belief_header}}</p>
+<p> {{ Lexicon.beliefHuman_header}}</p>
 <br>
 <table class="radiotable">
     <tr>
@@ -28,7 +28,7 @@
     </tr>
 
     {% for field in form %}
-        {% if field.name == 'beliefSolutions1' or field.name == 'belief2Solutions' or field.name == 'belief3Solutions'or field.name == 'belief4Solutions' or field.name == 'belief5Solutions' %}
+        {% if field.name == 'belief1Solutions' or field.name == 'belief2Solutions' or field.name == 'belief3Solutions' or field.name == 'belief4Solutions' or field.name == 'belief5Solutions' %}
         {{formfield_errors field.name}}
 
         <tr>
