@@ -472,7 +472,8 @@ class goodbye (Page):
        return{
             #Lexicon': player.session.introLexi
              'u': player.participant.label,
-             'participantlabel':player.participant.label
+             'participantlabel':player.participant.label,
+              'Lexicon': player.session.scalesLexi
 
         } 
     @staticmethod
