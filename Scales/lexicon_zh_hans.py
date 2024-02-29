@@ -1,6 +1,6 @@
 class Lexicon:
     next = "下一个"
-    instructions = "Instructions"
+    instructions = "指示"
     no = "No"
     round_number = "Round no."
 
@@ -8,12 +8,12 @@ class Lexicon:
     not_at_all = "一点也不"
     very_much = "非常"
     
-    completely_agree = "completely agree"
-    completely_disagree = "completely disagree"
+    completely_agree = "完全同意"
+    completely_disagree = "完全不同意"
 
-    do_not_believe = "I do not believe that climate change is happening"
+    do_not_believe =  "我不相信气候变化正在发生"
     
-    dont_know = "Don't know"
+    dont_know = "不知道"
     
   
     #Scale anchors 
@@ -27,72 +27,72 @@ class Lexicon:
     not_important = "不重要"
     extremely_important = "极其重要"
     
-    no_trust_at_all = "Totally distrust"
-    full_trust = "Totally trust"
+    no_trust_at_all = "完全不信任"
+    full_trust = "完全信任"
 
 
 
      ## belief in climate change 
-    beliefCC_intro = "Climate change refers to the idea that the world’s average temperature has been increasing over the past 150 years, will increase more in the future, and that the world’s climate will change as a result. What do you think: Do you think climate change is happening?"
-    belief1HappeningLabel = "I believe that climate change is real"
+    beliefCC_intro = "气候变化是指世界平均气温在过去150年里一直在上升, 未来还会上升更多，从而导致世界气候发生变化。您怎么？您认为气候变化正在 发生吗？"
+    belief1HappeningLabel = "我相信气候变化是真实存在的"
 
     ### belief in (human) causes taken from  Valkengoed
-    beliefHuman_title = "What do you believe?"
-    beliefHuman_header = "How much do you agree with the following statements?"
-    beliefHuman1Label = "Human activities are <b> not </b> a major cause of climate change." # reversed (originally not)
-    beliefHuman2Label = "Climate change is mostly caused by human activity."
-    beliefHuman3Label = "The main causes of climate change are human activities." 
+    beliefHuman_title = "你相信什么？"
+    beliefHuman_header = "您对以下说法的同意程度如何？"
+    beliefHuman1Label = "人类活动<b>不是</b>气候变化的主要原因。" # reversed (originally not)
+    beliefHuman2Label = "气候变化主要是由人类活动引起的。"
+    beliefHuman3Label = "气候变化的主要原因是人类活动。"
 
-    beliefConseqences1Label = "Overall, climate change will bring more negative than positive consequences to the world."
-    beliefConseqences2Label = "Climate change will bring about serious negative consequences."
-    beliefConseqences3Label = "The consequences of climate change will <b> not </b> be very serious." # reversed (originally not)
+    beliefConseqences1Label = "总体而言，气候变化给世界带来的负面影响多于正面影响。"
+    beliefConseqences2Label = "气候变化将带来严重的负面后果。"
+    beliefConseqences3Label = "气候变化的后果<b>不会</b>非常严重。"# reversed (originally not)
 
-    beliefConsensLabel = "Which percentage of climate scientists agree that climate change is real and caused by human activity?"
-
+    beliefConsensLabel = "有多少比例的气候科学家同意气候变化是真实存在的并且是由人类活动引起的？"
     ##belief in solutions
 
-    beliefSolutions1Label = "Transforming to a sustainable and climate-friendly society would reduce our national standards of living." 
-    beliefSolutions2Label = " Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible."
-    beliefSolutions3Label = "I think High-income countries have a greater responsibilty to reduce greenhouse gas emissions than low and middle-income countries." 
-    beliefSolutions4Label = "Industry has a greater responsibilty to reduce greenhouse gas emissions than individuals."
-    beliefSolutions5Label = " I would rather prepare to live with climate change than to fight climate change."
+    beliefSolutions1Label = "向可持续发展和气候友好型社会转型将会降低我们国家的生活水平。"
+    beliefSolutions2Label = "可持续技术和解决方案还处于起步阶段，逐步淘汰化石燃料尚不可行。"
+    beliefSolutions3Label = "我认为高收入国家比中低收入国家有更大的责任减少温室气体排放。"
+    beliefSolutions4Label = "在减少温室气体排放方面，工业界比个人负有更大的责任。"
+    beliefSolutions5Label = "我宁愿准备适应气候变化，也不愿意与气候变化作斗争。"
 
 
     #Climate Change Emotion
 
-    cce_title = "Attitudes about Climate Change"
-    cce_header = "When I think of Climate Change I feel..."
-    emoAng1Label = "angry"
-    emoAng2Label = "mad"
-    emoAng3Label = "irritated"
-    emoFear1Label = "fearful"
-    emoFear2Label = "afraid"
-    emoFear3Label = "scared"
-    emoSad1Label = "sad"
-    emoSad2Label = "sorrowful"
-    emoSad3Label = "unhappy"
-    emoHope1Label = "hopeful"
-    emoHope2Label = "optimistic"
-    emoHope3Label = "upbeat"
-    emoGuilt1Label = "guilty"
-    emoGuilt2Label = "regretful"
-    emoGuilt3Label = "remorseful"
-    emoConcern1Label = "worried"
-    emoConcern2Label = "concerned"
-    emoConcern3Label = "upset"
+    cce_title = "对气候变化的态度"
+    cce_header = "当我想到气候变化时，我感觉……"
+    emoAng1Label = "气愤"
+    emoAng2Label = "愤恨"
+    emoAng3Label = "愤怒"
+    emoFear1Label = "可怕"
+    emoFear2Label = "害怕"
+    emoFear3Label = "恐惧"
+    emoSad1Label = "伤心"
+    emoSad2Label = "悲伤"
+    emoSad3Label = "不开心"
+    emoHope1Label = "充满希望"
+    emoHope2Label = "乐观"
+    emoHope3Label = "信心满满"
+    emoGuilt1Label = "有罪的"
+    emoGuilt2Label = "遗憾"
+    emoGuilt3Label = "悔恨"
+    emoConcern1Label = "担心"
+    emoConcern2Label = "忧虑"
+    emoConcern3Label = "沮丧"
 
     
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
     ## TBD kevin tam
-    wvv_title = "How do you see the world?"
-    wvv_header = "How much do you agree with the following statements?"
-    wvv1Label = "Our society would be better off if the distribution of wealth was more equal."
-    wvv2Label = "A lot of problems in our society come from the decline in the traditional family, where the man works and the woman stays home."
-    wvv3Label = "Discrimination against minorities is still a very serious problem in our country."
-    wvv4Label = "The government interferes far too much in our everyday lives."
-    wvv5Label = "I feel that people who are successful in business have a right to enjoy their wealth as they see fit."
-    wvv6Label = "Too many people expect society to do things for them that they should be doing for themselves."
+    wvv_title = "你如何看待这个世界？"
+    wvv_header = "您对以下说法的同意程度如何？"
+    wvv1Label = "如果财富分配更加平等，我们的社会将会变得更好。"
+    wvv2Label = "我们社会的很多问题都源于传统家庭的衰落，即男人工作、女人呆在家里。"
+    wvv3Label ="对少数族裔的歧视在我们国家仍然是一个非常严重的问题。"
+    wvv4Label = "政府对我们的日常生活干预太多了。"
+    wvv5Label = "我觉得商业上成功的人有权享受他们认为合适的财富。"
+    wvv6Label = "太多人期望社会为他们做一些他们应该为自己做的事情。"
 
+    
    # Importance of biospheric values van der Linden, 2015   
     ibv_title = "环境问题的指导原则"
     ibv_header = "以下价值作为你生活的指导原则对你来说有多重要？"
@@ -108,140 +108,132 @@ class Lexicon:
     po2Label = "On economic issues I am..."
 
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
-    pit_title = "Trust in regards to climate change"
-    pit_header = "How much do you trust these actors in climate change?"
-    pit1Label = "the local government"
-    pit2Label = "the national government" # or central government
+    pit_title = "对气候变化的信任"
+    pit_header = "在气候变化问题上，你对这些行动者有多信任？"
+    pit1Label = "当地政府"
+    pit2Label =  "国家政府 (中央政府)"
   # 
 
     # Knowledge Question from Allianz Climate Literacy Report
-    cck_title = 'What do you know about climate change?'
-    cck_header = 'Please answer all these questions to the best of your knowledge, without looking up any information. You may choose the "I do not know" option if you are unsure or do not know'
-    know_dontknow = "I don't know."
+    cck_title = "你对气候变化了解多少？"
+    cck_header = '请尽您所知回答所有这些问题，而无需查找任何信息。如果您不确定或不知道，您可以选择"我不知道"选项 '
+    know_dontknow = "我不知道。"
 
-    know_1qu = "What is the COP?" ## This is maybe too easy given that the whole study is about CC???
-    know_1a = "UN initiative for distributing funds to reduce the impact of climate change on poverty."
-    know_1b = "An annual formal meeting to discuss climate change and establish mitigation actions."
-    know_1c = "An EU initiative against organized and war crimes." 
-    
-    know_2qu = "What does Net-Zero mean?"
-    know_2a = "Monetary strategy of increasing interest rate to fight inflation."
-    know_2b = "No greenhouse gas emission by a specific date, typically 2050."
-    know_2c = "Carbon emission neutrality, stabilization of greenhouse gas concentrations in the atmosphere."
-    
-    know_3qu = "The Intergovernmental Panel on Climate Change (IPCC) plays an important role in global climate policy. Which one?"
-    know_3a = "Providing objective scientific information relevant to understanding climate change."
-    know_3b = "Deciding on global climate policies, particularly setting the global carbon price."
-    know_3c = "Host of the UN climate justice court which arbitrates climate disputes between states."
-    
-    know_4qu = "What is the carbon market?"
-    know_4a = "The supply channel of the EU backed gas-buying cartel that aims to supply affordable natural gas to EU countries struggling to get supply because of the war in Ukraine."
-    know_4b = "A trading system through which emitters may buy or sell units of greenhouse-gas emission allowances to meet national restrictions on total emissions."
-    know_4c = "An online marketplace where you can buy recycled carbon fiber and carbon black."
-    
+    know_1qu = "什么是COP ?" 
+    know_1a = "联合国倡议分配资金以减少气候变化对贫困的影响。"
+    know_1b ="年度正式会议讨论气候变化并制定缓解行动。"
+    know_1c = "欧盟针对有组织犯罪开展跨国合作的倡议。"
 
-    ## I suggest a modification of tis question:
-    #Rising temperatures pose no existential threat. Even if the rise exceeds 3°C, humans and nature can adapt. Do you agree with this statement?"
-    know_5qu = "How long does CO2 stay in the atmosphere?"
-    know_5a = "10 years"
-    know_5b = "up to 1000 years"
-    know_5c = "more than 5000 years"
+    know_2qu = "净零是什么意思？"
+    know_2a = "通过加息来对抗通胀的货币策略。"
+    know_2b ="在特定日期（通常是 2050 年）之前不会排放温室气体。"
+    know_2c ="碳排放的中和，大气中温室气体浓度的稳定。"
 
-    
-    ## I suggest a modification of this question
-    know_6qu = "Which of the following options describes the greenhouse gas effect"
-    # old was Climate change cannot be stopped. Average temperatures will continue to increase in the near future. The only thing we can possible do is to limit the increase to 1.5°C."
-    know_6a = "Deforestation and plastic pollution cause a collapse of many ecosystems. The increasing loss of biodiversity and the loss of flora and fauna in the wild is called the greenhouse gas effect."
-    know_6b = "Greenhouse gasses cause air pollution. They lead to more fine particulars and more fine dust which in turn decreases the ventilation. Without the circulation of fresh air, the earth gets increasingly warmer. "
-    know_6c = "Excess greenhouse gases accumulate in the atmosphere. Because of their molecular structure, the infrared radiation from the earth is reflected and is re-radiated to the earth. This way, heat is trapped."
-    
-    
+    know_3qu = "政府间气候变化专门委员会 (IPCC) 在全球气候政策中发挥着重要作用。是哪一个？"
+    know_3a = "提供与了解气候变化相关的客观科学信息。"
+    know_3b = "决定全球气候政策，特别是设定全球碳价格。"
+    know_3c = "联合国气候司法法庭的东道主，负责仲裁国家之间的气候争端。"
 
-    know_8qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" # this will be 2029 (Stand 2023)
-    know_8a = "less than 1 year"
-    know_8b = "1-2 years"
-    know_8c = "2-4 years"
-    know_8d = "More than 4 years"
-    
+    know_4qu = "什么是碳市场？"
+    know_4a = "欧盟支持的天然气购买卡特尔供应渠道，旨在向因乌克兰战争而难以获得供应的欧盟国家提供负担得起的天然气。"
+    know_4b = "排放者可以通过一个交易系统购买或出售温室气体排放配额单位，以满足国家对总排放量的限制。"
+    know_4c = "一个在线市场，您可以在其中购买再生的碳纤维和炭黑。"
 
-    know_9qu = "Which country/region causes the highest absolute CO2-emissions per year?"
-    know_9a = "China"
-    know_9b = "USA"
-    know_9c = "EU"
-    know_9d = "India"
+    know_5qu = "二氧化碳在大气中停留多长时间？"
+    know_5a ="10年"
+    know_5b ="长达1000年"
+    know_5c ="5000多年"
 
-    know_10qu = "Which of the four countries/regions causes the highest per-capita CO2-emissions per year?"
-    know_10a = "China"
-    know_10b = "USA"
-    know_10c = "EU"
-    know_10d = "India"
+    know_6qu = "以下哪一选项描述了温室气体效应"
+
+    know_6a = "森林砍伐和塑料污染导致许多生态系统崩溃。生物多样性和野生动植物群的日益丧失被称为温室气体效应。"
+    know_6b = "温室气体造成空气污染。它们会产生更多的细小颗粒和更多的细尘，从而减少换气。如果没有新鲜空气的循环，地球就会变得越来越温暖。"
+    know_6c = "过量的温室气体在大气中积聚。由于其分子结构，来自地球的红外辐射被反射并重新辐射到地球。这样，热量就被困住了。"
+
+    know_8qu = "按照目前的速度，多少年后我们会耗尽二氧化碳预算才能将气温上升限制在 1.5 摄氏度以内？"
+    know_8a = "不到1年"
+    know_8b = "1-2年"
+    know_8c = "2-4年"
+    know_8d = "4年多"
+
+    know_9qu = "哪个国家/地区每年的二氧化碳绝对排放量最高？"
+    know_9a = "中国"
+    know_9b="美国"
+    know_9c ="欧洲联盟"
+    know_9d = "印度"
+
+    know_10qu = "这四个国家/地区中哪一个每年的人均二氧化碳排放量最高？"
+    know_10a = "中国"
+    know_10b ="美国"
+    know_10c ="欧洲联盟"
+    know_10d = "印度"
 
     
     ### Behaviors ###
-    behaviors_title = ' Behavior '
-    intro_a = ' In this next part, we are collecting information about some of your actual behavior. <br>Please answer as accurately as possible. Thank you in advance!'
-    regional_label = ' What percentage of your food is regional (from within your country or region, not imported) ? '
-    regional_less_than = 'Less than a quarter'
-    regional_quarter= 'About a quarter' 
-    regional_half = 'About half' 
-    regional_3_quarter = 'About three quarters'
-    regional_more_than = 'the largest part is regional'
+    behaviors_title = '行为'
+    intro_a = '在下一部分中，我们将收集有关您的一些实际行为的信息。 <br>请尽可能准确地回答。 先感谢您！'
+    regional_label = '您的食品中有多少比例是区域性的（来自您所在国家或地区，而非进口）？'
+    regional_less_than = '不到四分之一'
+    regional_quarter= '大约四分之一'
+    regional_half = '大约一半'
+    regional_3_quarter = '大约四分之三'
+    regional_more_than = '最大的部分是区域性的'
 
-    electricity_label = 'This question is about your electricity supply. What does your electricity supply look like?'
-    electricity_D = 'I have green electricity entirely '
-    electricity_C = 'I partly have green electricity (mixed)' 
-    electricity_B = ' I have a conventional (fossil) supply'
-    electricity_A = 'I don,t know'
+    electricity_label = '这个问题是关于你们的电力供应的。你们的电力供应情况如何？'
+    electricity_D = '我完全拥有绿色电力'
+    electricity_C = '我有部分绿色电力（混合）'
+    electricity_B = ' 我有传统（化石）供应'
+    electricity_A = '我不知道'
 
-    food_overall_text = ' In the last month, how many times did you eat the following food items...'
-    food_overall_label1 = 'Beef'
-    food_overall_label2 = 'Lamb or mutton'
-    food_overall_label3 = 'Pork'
-    food_overall_label4 = 'Poultry (e.g. chicken)'
-    food_overall_label5 = 'Fish'
-    food_overall_label6 = 'Dairy products (e.g milk or cheese)'
+    food_overall_text = ' 在过去的一个月里，您吃了多少次下列食物......'
+    food_overall_label1 = '牛肉'
+    food_overall_label2 = '羔羊肉或羊肉'
+    food_overall_label3 = '猪肉'
+    food_overall_label4 = '家禽（例如鸡肉）'
+    food_overall_label5 = '鱼'
+    food_overall_label6 = '乳制品（例如牛奶或奶酪）'
 
-    food_overall_A = 'Never'
-    food_overall_B = 'Once a month'
-    food_overall_C= '2-3 times per month'
-    food_overall_D = 'Once a week'
-    food_overall_E = '2-3 times per week'
-    food_overall_F = '4-6 times per week'
-    food_overall_G = 'Once a day'
-    food_overall_H = '2 or more times per day'
+    food_overall_A = '绝不'
+    food_overall_B = '每月一次'
+    food_overall_C= '每月 2-3 次'
+    food_overall_D = '一个星期一次'
+    food_overall_E = '每周 2-3 次'
+    food_overall_F = '每周 4-6 次'
+    food_overall_G = '一天一次'
+    food_overall_H = '每天 2 次或以上'
 
 
 
-    commute_pt_label = 'How many kilometers do you <b> commute weekly in public transport </b> (train, bus, etc.)or an e-bike? Please calculate all private journeys including the work commute, but not business travels.'
-    commute_pt_never = 'I never use public transport'
-    commute_pt_less_than_A = '1 - 39 miles'
-    commute_pt_A_to_B= '40 - 50 miles'
-    commute_pt_B_to_C = '50 -149 miles'
-    commute_pt_C_to_D = '150 - 224 miles'
-    commute_pt_D_to_E = '225 - 370 miles'
-    commute_pt_more_than_E = 'more than 370 miles'
+    commute_pt_label = '您<b>每周乘坐公共交通工具</b>（火车、公共汽车等）或电动自行车通勤多少公里？ 请计算所有私人旅程，包括工作通勤，但不包括商务旅行。'
+    commute_pt_never = '我从不使用公共交通工具'
+    commute_pt_less_than_A = '1 - 60 公里'
+    commute_pt_A_to_B= '60 - 80 公里'
+    commute_pt_B_to_C = '80 -239 公里'
+    commute_pt_C_to_D = '240 - 359 公里'
+    commute_pt_D_to_E = '360 - 600 公里'
+    commute_pt_more_than_E = '超过 600 公里'
 
-    commute_car_label = 'How many kilometers do you <b> annually drive in a car </b> or on a motorcycle (outside of work times, both driving and as a passenger)?'
-    commute_car_never = 'I never use a car or motorcycle'
-    commute_car_less_than_A = '1 - 1,244 miles'
-    commute_car_A_to_B= '1,245 - 4,659 miles'
-    commute_car_B_to_C = '4,660 - 7,769 miles'
-    commute_car_C_to_D = '7,770 - 18,640 miles'
-    commute_car_more_than_D = 'more than 18,640 miles'
+    commute_car_label = '您<b>每年驾驶汽车</b>或摩托车（工作时间之外，无论是驾驶还是作为乘客）行驶多少公里？'
+    commute_car_never = '我从不使用汽车或摩托车'
+    commute_car_less_than_A = '1 - 2,000 公里'
+    commute_car_A_to_B= '2,000 - 7,499 公里'
+    commute_car_B_to_C = '7,500 - 12,499 公里'
+    commute_car_C_to_D = '12,500 - 30,000 公里'
+    commute_car_more_than_D = '超过  30,000 公里'
 
-    commute_car_type_label = 'Which kind of fuel does your car operate on?'
-    commute_car_type_none = 'I do not have a car'
-    commute_car_type_E = 'Gasoline/Diesel/Hybrid'
-    commute_car_type_D = 'Natural gas'
-    commute_car_type_C = 'Biogas'
-    commute_car_type_B = 'Electric (conventional energy) '
-    commute_car_type_A = 'Electric (green energy)'
+    commute_car_type_label = '您的汽车使用哪种燃料？'
+    commute_car_type_none = '我没有车'
+    commute_car_type_E = '汽油/柴油/混合动力'
+    commute_car_type_D = '天然气'
+    commute_car_type_C = '沼气'
+    commute_car_type_B = '电力（常规能源）'
+    commute_car_type_A = '电力（绿色能源）'
 
-    flying_short_label = 'How many <b>short-distance flights (<3 hours)</b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from San Francisco to Los Angeles and back this counts as 2 flights. </i> '
+    flying_short_label = '过去两年您平均乘坐了多少次<b>短途航班（<3 小时）</b>？<i> i：一个往返航班算作两个航班。 因此，如果您从上海飞往北京并返回，则算作 2 趟航班。</i>'
     # for chinese version example:  from Shanghai to Beijing and back
-    flying_mid_label ='How many <b>mid-distance flights (3-6 hours) </b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from New York to San Francisco and back this counts as 2 flights. </i> '
+    flying_mid_label ='过去两年您平均乘坐了多少次<b>中程航班（3-6 小时）</b>？<i> i：一个往返航班算作两个航班。 因此，如果您从广州飞往北京并返回，则算作 2 趟航班。</i>'
     #for chinese version example:  from Guangzhou to Beijing and back
-    flying_long_label = 'How many <b>long-distance flights (>6 hours) </b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from Miami to London and back this counts as 2 flights. </i> '
+    flying_long_label = '过去两年您平均乘坐了多少次<b>长途航班（>6 小时）</b>？<i> i：一个往返航班算作两个航班。因此，如果您从北京飞往雅克拉达（印度尼西亚）并返回，则算作 2 趟航班。</i>'
     # for  chinese version example: from Beijing to Jakarta (Indonesia) and back
 
  
@@ -250,7 +242,7 @@ class Lexicon:
     demographics_title = "个人数据" 
     demographics_header = "请输入以下有关您自己的信息。"
 
-    ageYear_label = "In which year were you born?"
+    ageYear_label = "你是哪一年出生的？"
 
 
     residential_area_label = "什么最能描述您的居住区？"
@@ -269,17 +261,19 @@ class Lexicon:
 
 
     # Transition page these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
-    transition_title = 'Welcome to the next block of the study'
-    transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
-    # add counter (Zahra)
-    transitions_b =' This is block number  '
-    transitions_c = 'out of 4 blocks. Thank you again, for taking the time to answer all questions. <br> Once you are ready, please proceed.'
+    transition_title = "欢迎来到研究的最后一个部分"
+  
+    transitions_a = '非常感谢您迄今为止的回答。如果您在继续学习之前需要短暂休息，那么现在是个好时机。 <br> 单击此页面上的下一个按钮后，我们要求您一次性完成此块'
+    # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
+    transitions_b = '这是区块号 '
+    transitions_c = '共 4 个区块。 再次感谢您花时间回答所有问题。 <br>一旦你准备好了，请继续。'
 
     
     
+    
     # goodbye page 
-    comment_label = 'If you have any comments or suggestions regarding the study, please indicate this here:'
-    goodbye_text = 'Thank you for your participation in our study! <br> You are now at the end of the study. To receive compensation please click on next.'
+    comment_label = '如果您对本研究有任何意见或建议，请在此注明：'
+    goodbye_text = '感谢您参与我们的研究！ <br> 您现在处于研究结束阶段。如需获得补偿，请点击下一步。'
   
     # adapt link
     link = 'https://www.innofact-umfrage.de/sample_only/ub3/cn/danke_f.php'
