@@ -1,29 +1,29 @@
 class Lexicon:
-    next = "Next"
-    small = "small (1)"
-    large = "large (10)"
+    next = "下一个"
+    small = "小 (1)"
+    large = "大 (10)"
 
     # transition
-    transition_title = 'Welcome to the next block of the study'
+    transition_title = '欢迎来到研究的下一个部分'
 
-    transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
+    transitions_a = '非常感谢您迄今为止的回答。如果您在继续学习之前需要短暂休息，那么现在是个好时机。 <br> 单击此页面上的下一个按钮后，我们要求您一次性完成此块'
     # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
-    transitions_b =' This is block number   '
-    transitions_c = 'out of 4 blocks. Thank you again, for taking the time to answer all questions. <br> Once you are ready, please proceed.'
+    transitions_b = '这是区块号 '
+    transitions_c = '共 4 个区块。 再次感谢您花时间回答所有问题。 <br>一旦你准备好了，请继续。'
 
     
 
     # instructions
-    instructions_title = "Instructions on the next task"
-    instructions_pa = "In the following we will ask you to <b>judge the climate friendliness of different carbon footprints</b>.  <br> This means we ask you to give your best estimation of <b>the size of the personal carbon footprint of a series of people with different lifestyles.</b>  The presented persons will differ with respect to <b>their diets, commuting and travel behavior as well as their electricity supply and recycling behavior</b>. <br> "
-    instructions_pb = "A personal carbon footprint refers to the total amount of greenhouse gases (including CO2 and methane) that are emitted into the atmosphere as a result of an individual,s behavior. <br> The carbon footprint thus includes emissions from driving, flying, using electricity, cooling or heating your home, purchasing goods and other sources. <br> It is measured in CO2 equivalents, so that other greenhouse gases additional to CO2 (e.g., methane) are also included. <br> <br> In other words, <b>a personal carbon footprint reflects an individual,s total impact on the climate system</b>. "
-    instructions_pc = "Please note that the individual carbon footprints you will assess are <b>simplified</b>, based on only 6 behaviors, so they do not account for a person,s entire carbon footprint.  <br>     You will be asked to make this judgment on a <b>scale from 1 (low carbon footprint) to 10 (large carbon footprint).</b>   <br> This means you do not have to estimate any numbers. Based on the 6 behaviors, a small carbon footprint (for a person in the United States) would equal about 1 ton of CO2 per year and a large carbon footprint about 5.5 tons of CO2. <br> "
-    instructions_pd = "Next you will see how the task will look like.<br> Then we ask you to <b>estimate the carbon footprints of 16 persons with different lifestyles </b> ."
+    instructions_title = '关于下一步任务的指示'
+    instructions_pa =  "接下来我们将要求您<b>判断不同碳足迹的气候友好性</b>。<br>这意味着我们要求您对<b>一系列具有不同生活方式的人的个人碳足迹的大小做出最佳估计。</b>所呈现的人在<b>他们的饮食、通勤和旅行行为以及电力供应和回收行为方面会有所不同</b>。<br>"
+    instructions_pb =   "个人碳足迹是指因个人行为而排放到大气中的温室气体（包括二氧化碳和甲烷）总量。<br>因此，碳足迹包括驾驶、飞行、使用电力、家庭制冷或供暖、购买商品和其他来源。<br>它以 CO2 当量衡量，因此除 CO2 之外的其他温室气体（例如甲烷）也包括在内。<br> <br>换句话说，<b>个人碳足迹反映了个人对气候系统的总体影响</b> 。"
+    instructions_pc =   "请注意，您将评估的个人碳足迹是<b>简化的</b>，仅基于 6种行为，因此它们不会考虑一个人的整个碳足迹。<br>您将被要求从1（低碳足迹）到10（大碳足迹）这个范围做出此判断。</b><br>这意味着您不必估计任何数字。根据6种行为，小碳足迹（对于中华人民共和国的一个人来说）每年大约相当于1吨二氧化碳，而较大的碳足迹大约相当于5.5吨二氧化碳。<br> "
+    instructions_pd =  "接下来您将看到任务会是怎样。<br>然后我们要求您<b>估算 16 名不同生活方式的人的碳足迹</b>。"
     
     # task_example
-    example_pa = 'This is how a carbon footprint of an individual looks like in our task. <br>'
+    example_pa = '这就是我们任务中个人碳足迹的样子。<br>'
     ##for chinese version please adapte this example:  "takes the train (e.g.from Shanghai to Beijing" or Beijing to Guangzhou)" rather than "takes the train (e.g. Boston-New York or LA-San Francisco)"
-    example_pb = 'The different lifestyles of these individuals refer to: <ul> <li> <b>Dietary behavior:</b> The respective person either follows a <b>meat-based diet (omnivorous)</b> or a <b>plant-based diet (vegetarian)</b> </li> <li> <b>Recycling behavior:</b> The respective person either <b>recycles comprehensively</b> or <b>does not recycle</b> </li>  <li> <b>Regionality of food purchases:</b> The respective person either buys and consumes <b>mainly regional food </b> or <b>also imported</b> food items </li><li> <b>Electricity supply:</b> The respective person either subscribed to an electricity supply that is <b>mixed, so includes fossil and some renewable sources</b> or <b>based 100% on renewable energy sources</b> </li> <li> <b>Commuting to work:</b> The respective person either commutes a total of 20km to and from work everyday, 5 days a week for 48 weeks per year <b>by bike</b>  or <b>by bus</b> </li> <li> <b>Traveling on vacation:</b> The respective person either <b>takes two medium distance flights a year (=3-6hours)</b> or <b>or takes the train (e.g. Boston-New York or LA-San Francisco)</b> </li>'
-    example_pc = ' <i>That is, in the example above, the person follow a vegetarian diet, does not recycle, eats regional and imported food,subscribed to a mixed electricity supply, commutes every weekday to work by bus, and takes the train to go on vacation.</i>  <br> '
-    example_pd = 'Next, you will estimate the carbon footprint of <b>16</b> persons with different lifestyles. <br> Please look at each individual carbon footprint carefully and take some time to provide your estimation. <br> The order in which the 6 behaviors are presented will change across the 16 examples you will see.'
-    example_pic = '/static/global/images/example_en.png '  # no need to change the link
+    example_pb = '这些人的不同生活方式是指：<ul> <li> <b>饮食行为：</b>相关人要么遵循<b>以肉为主的饮食（杂食性）</b>，要么<b>植物性饮食（素食）</b> </li> <li> <b>回收行为：</b>相关人<b>全面回收</b>或<b>不回收< /b> </li> <li> <b>食品购买的地区性：</b>相关人购买和消费<b>主要是地区食品</b>或<b>也进口</b>食品项目</li><li> <b>电力供应：</b>相关人要么订购<b>混合电力供应，因此包括化石能源和一些可再生能源</b>或<b>基于 100% 使用可再生能源</b> </li> <li> <b>通勤：</b> 相关人每周 5 天，每天上下班总计 20 公里，每年持续 48 周 <b>骑自行车</b>或<b>乘坐公共汽车</b> </li> <li> <b>度假旅行：</b>相关人<b>每年乘坐两次中等距离 的飞行（=3-6小时）</b>或<b>或乘坐火车（例如上海-北京或北京-广州）</b> </li>'
+    example_pc = '<i>也就是说，在上面的例子中，这个人遵循素食、不回收、吃当地和进口食品、订购混合电力供应、每个工作日乘公共汽车上班、乘火车去度假。</i> <br> '
+    example_pd = '接下来，您将估算<b>16</b>位不同生活方式的人的碳足迹。<br>请仔细查看每个碳足迹，并花一些时间提供您的估计。 <br>在您将看到的16个示例中，6种行为的呈现顺序将发生变化。'
+    example_pic = '/static/global/images/example_zh_hans.png '  # no need to change the link

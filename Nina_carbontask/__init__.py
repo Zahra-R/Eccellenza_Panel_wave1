@@ -60,7 +60,7 @@ def get_behavior_types(player):
         if player.session.config['language'] == 'de':
             return ["Ernährung", "Elektrizität", "Recycling", "Lebensmittel", "Arbeitsweg", "Urlaub"]
         elif player.session.config['language'] == 'zh_hans':
-            return []
+            return ["饮食" , "电力", "回收", "食物", "通勤", "假期"]
         else:
             return ["Diet", "Electricity", "Recycling", "Food", "Commute", "Vacation"]
 

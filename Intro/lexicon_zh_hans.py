@@ -33,7 +33,7 @@ class Lexicon:
     
     consent_bullet1 = "报告一些人口统计信息，例如您的年龄、性别、收入。"
     consent_bullet2 = "完成一组调查问卷。 您将被询问对不同主题的态度和观点。"
-    consent_bullet3 = 'You will complete 3 different experimental tasks with multiple rounds on different topics'
+    consent_bullet3 = '您将完成 3 项不同的实验任务，并针对不同主题进行多轮实验 '
 
     ## Achtung hier richtige dauer
     duration = "时长："
@@ -51,8 +51,7 @@ class Lexicon:
     
     ### achtung achtung, hier kontaktdaten
     #consent_p8 = "如果您对本研究或您的参与有任何不清楚的地方，如果您有疑问或希望报告与研究相关的问题，您可以联系 Jessica Helm，邮箱为 jessica.helm@unibas.ch"
-    consent_p8 = ' If there is anything about the study or your participation that is unclear to you, if you have questions or wish to report a research-related problem, you may contact: Nina Frings at nina.frings@unibas.ch or leave a comment at the end of the survey'
-
+    consent_p8 = '如果您对本研究或您的参与有任何不清楚的地方，如果您有疑问或希望报告与研究相关的问题，您可以通过“电子邮件”联系 Nina Frings 或在调查末尾留下评论'
     
     consent_p9 = "通过继续这项研究，您表示同意参与这项研究，并表明您"
     
@@ -88,9 +87,9 @@ class Lexicon:
     education_label = "你的最高学历是什么？"
     
     # these do not have to be exact translations, just need to match the meaning in terms of what the education system is like
-    no_formal = "keine formelle Bildung"
-    obligatory = "obligatorische Schule"
-    high_school = "Sekundarstufe: Abitur / Berufsbildung / Allgemein "  # "高等教育（职业）"
-    degree = "höhere Berufsbildung: Hochschulabschluss / Bachelor / Master" # "学士学位" "硕士学位"
-    doctoral_degree = "Promotion (PhD) oder höher"  #"博士学位"
-    prefer_not_to_say_education = "Keine Angabe"
+    no_formal = "没有完成正规教育"
+    obligatory = "义务教育"
+    high_school = "中学教育/高中/职业培训"
+    degree = "高等教育：学士/硕士学位"
+    doctoral_degree = "博士及以上学历"  
+    prefer_not_to_say_education = "不愿意说"

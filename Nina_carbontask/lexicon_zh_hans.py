@@ -1,13 +1,13 @@
 class Lexicon:
-    next = "Next"
-    small = "small (1)"
-    large = "large (10)"
+    next = "下一个"
+    small = "小 (1)"
+    large = "大 (10)"
 
 
   
     # task_page
      
-    title = 'Please rate these carbon footprints'
-    BEHAVIORTYPES =  '["Diet", "Electricity", "Recycling", "Food", "Commute", "Vacation"]'
-    instruction_task ='<b> Think about a person with the lifestyle below. How large do you think the carbon footprint of this person is? </b>'
-    task_info = 'Please note that a small footprint refers to a person that has a lifestyle that is accompanied by little greenhouse gas emissions (for a person in China) and a large footprint to a person that has a lifestyle that is accompanied by a lot of greenhouse gas emissions. <br> Please make your rating from 1– small carbon footprint to 10– large carbon footprint based on the 6 behaviors presented'
+    title = '请评价这些碳足迹'
+    BEHAVIORTYPES = '[“饮食”、“电力”、“回收”、“食物”、“通勤”、“假期”]'
+    instruction_task = '<b>想象一个具有以下生活方式的人。您认为这个人的碳足迹有多大？</b>'
+    task_info = '请注意，小足迹是指一个人的生活方式伴随着很少的温室气体排放（对于一个中国人而言），即为 "小足迹"、），而大足迹是指一个人的生活方式伴随着大量的温室气体排放。<br> 请根据所呈现的 6 种行为，从 1 (小碳足迹) 到10 (大碳足迹) 进行评分。'
