@@ -67,6 +67,13 @@ class Player(BasePlayer):
 
 
 # PAGES
+class transition(Page):
+    form_model = 'player'
+
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.JessiIntroLexi) 
+    
 class instructions_intro(Page):
     form_model = 'player'
     @staticmethod

@@ -16,10 +16,12 @@ class Lexicon:
     ccconcern_question = "How concerned are you about climate change?"
 
     # Transition page these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
-    transition_title = 'Welcome to the next block of the study'
-    transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
-    # add counter (Zahra)
-    transitions_b =' This is block number  '
-    transitions_c = 'out of 4 blocks. Thank you again, for taking the time to answer all questions. <br> Once you are ready, please proceed.'
+     # transition
+    transition_title = '欢迎来到研究的下一个部分'
+
+    transitions_a = '非常感谢您迄今为止的回答。如果您在继续学习之前需要短暂休息，那么现在是个好时机。 <br> 单击此页面上的下一个按钮后，我们要求您一次性完成此块'
+    # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
+    transitions_b = '这是区块号 '
+    transitions_c = '共 4 个区块。 再次感谢您花时间回答所有问题。 <br>一旦你准备好了，请继续。'
 
     

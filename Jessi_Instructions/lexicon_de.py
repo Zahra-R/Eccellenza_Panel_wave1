@@ -7,6 +7,13 @@ class Lexicon:
     Association3 = "3. Assoziation"
     Association4 = "4. Assoziation"
 
+    # transition
+    transition_title = 'Willkommen beim nächsten Block der Studie'
+    transitions_a = 'Vielen Dank für Ihre bisherigen Antworten. Wenn Sie eine kurze Pause benötigen, bevor Sie mit der Studie fortfahren, wäre jetzt ein guter Zeitpunkt. <br> Sobald Sie auf den weiter-Knopf auf dieser Seite klicken, bitten wir Sie, diesen Block in einem Rutsch auszufüllen.'
+    # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
+    transitions_b ='Dies ist Block Nummer '
+    transitions_c = ' von insgesamt 4 Blöcken. Vielen Dank, dass Sie sich die Zeit genommen haben, alle Fragen zu beantworten. Wenn Sie bereit sind, fahren Sie bitte fort.'
+   
     #Affective Imagery Rating
     Title_rating = "Ihre Assoziationen zur CO<sub>2</sub>-Steuer"
     Instructions_rating = "Nachfolgend sehen Sie die von Ihnen genannten Wörter und Gedanken in Bezug auf die CO<sub>2</sub>-Steuer. Bitte geben Sie an, wie positiv oder negativ Sie diese Assoziationen in Bezug auf die CO<sub>2</sub>-Steuer befinden."
