@@ -59,23 +59,6 @@ class Lexicon:
     # Industry has to change for the climate, not individuals. 
     
 
-
-    #Climate Change Concern Tobler
-    ccc_title = "Attitudes about Climate Change"
-    ccc_header = "How much do you agree with the following statements?"
-    ccc1Label = "We must protect the climate’s delicate equilibrium."
-    ccc2Label = "Climate protection is important for our future."
-    ccc3Label = "I worry about the climate’s state."
-    ccc4Label = "Climate change has severe consequences for humans and nature."
-    ccc10Label = "Climate change and its consequences are being exaggerated in the media."
-    ccc11Label = "Climate change is a racket."
-    ccc12Label = "As long as meteorologists are not even able to accurately forecast weather, climate cannot be reliably predicted either."
-    ccc13Label = "There are larger problems than climate protection."
-    ccc14Label = "I do not feel threatened by climate change."
-    ccc15Label = "The impacts of climate change are unpredictable; thus, my climate-friendly behavior is futile."
-    ccc16Label = "Climate protection needlessly impedes economic growth."
-
-
     #Climate Change Emotion Knauf/Truelove
     cce_title = "Attitudes about Climate Change"
     cce_header = "When I think of Climate Change I feel..."
