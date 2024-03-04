@@ -95,8 +95,8 @@ input.larger {
     width: 3vw;
     height: 3vw;
   
-    max-width: 65px;
-    max-height: 65px;
+    max-width: 55px;
+    max-height: 55px;
   
     min-width: 5px;
     min-height: 5px;
@@ -111,12 +111,16 @@ input[type='range']::-webkit-slider-thumb {
     border-radius: 50%;
   }
 
-table.radiotable th, table.radiotable td{
-    padding: 5px;
-    text-align: center; /* Center-align the content */
-    max-width: 105px;
-}
-
+  table.radiotable th,
+  table.radiotable td {
+      padding: 7px;
+      text-align: center; /* Center-align the content */
+      max-width: 85px;
+      word-wrap: break-word; /* Allow text to wrap onto the next line */
+      white-space: normal; /* Allow text to wrap onto the next line */
+      overflow-wrap: break-word; /* For wider browser support */
+  }
+  
 
 
 
@@ -126,8 +130,7 @@ table.radiotable th:first-child{
 }
 table.radiotable td:first-child {
     text-align: left;
-    min-width: 14px; 
-    max-width: 25px; 
+    min-width: 8px; 
 }
 
 

@@ -61,6 +61,14 @@ SESSION_CONFIGS = [
 
          num_demo_participants=10,
      ),
+      dict(
+         name='german_Panel_scales_pure',
+  #      app_sequence=['survey','task'],
+         app_sequence=['Scales'],
+         language = "de",
+
+         num_demo_participants=10,
+     ),
         dict(
          name='NinasPart_de',
          #app_sequence=[ 'Nina_survey', 'Nina_carbontask', 'Nina_footprint_calculator', 'Nina_questionnaire'],
