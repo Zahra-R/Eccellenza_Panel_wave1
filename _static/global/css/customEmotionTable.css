@@ -11,8 +11,8 @@ input.larger {
   width: 3vw;
   height: 3vw;
 
-  max-width: 15px;
-  max-height: 15px;
+  max-width: 25px;
+  max-height: 25px;
 
   min-width: 5px;
   min-height: 5px;
@@ -30,19 +30,24 @@ input[type='range']::-webkit-slider-thumb {
     border-radius: 50%;
   }
 
-table.radiotable th, table.radiotable td {
+
+table.radiotable th, table.radiotable td{
   padding: 5px;
-  text-align: center; /* Center-align the entire table */
-  max-width: none; /* No max-width for the entire table */
-  width: 30px;
+  text-align: center; /* Center-align the content */
+  max-width: 85px;
 }
+
 
 /* Left-align the first column */
-table.radiotable th:first-child,
+table.radiotable th:first-child{
+  text-align: left;
+}
 table.radiotable td:first-child {
   text-align: left;
-
+  min-width: 10px; 
+  max-width: 25px; 
 }
+
 
 
 /* Alternating row colors every three rows */

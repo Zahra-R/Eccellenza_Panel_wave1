@@ -54,10 +54,10 @@ SESSION_CONFIGS = [
          num_demo_participants=10,
      ),
     dict(
-         name='first_draft_Panel_scales_pure',
+         name='chinese_Panel_scales_pure',
   #      app_sequence=['survey','task'],
          app_sequence=['Scales'],
-         language = "de",
+         language = "zh_hans",
 
          num_demo_participants=10,
      ),

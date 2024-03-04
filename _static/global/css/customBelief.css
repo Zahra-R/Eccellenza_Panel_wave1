@@ -85,26 +85,22 @@
 
 .att-box{
     border-style: dashed;
-    padding: 0px 15px 5px 15px;
+    padding: 10px 10px 10px 10px;
     /* background-color: lightpink; */
     border-width: medium ;
     margin-top: 30px;
 }
 
-
 input.larger {
-  width: 3vw;
-  height: 3vw;
-
-  max-width: 200px;
-  max-height: 15px;
-
-  min-width: 1px;
-  min-height: 5px;
-}
-
-
-
+    width: 3vw;
+    height: 3vw;
+  
+    max-width: 65px;
+    max-height: 65px;
+  
+    min-width: 5px;
+    min-height: 5px;
+  }
 
 input[type='range']::-webkit-slider-thumb {
     width: 15px;
@@ -115,33 +111,25 @@ input[type='range']::-webkit-slider-thumb {
     border-radius: 50%;
   }
 
-table.radiotable th,
-table.radiotable td {
-  padding: 5px;
-  text-align: center; /* Center-align the entire table */
-  max-width: none; /* No max-width for the entire table */
-  width: 100px;
+table.radiotable th, table.radiotable td{
+    padding: 5px;
+    text-align: center; /* Center-align the content */
+    max-width: 105px;
 }
 
 
 
-/* Make the first column wider */
-table.radiotable td:first-child {
-    width: 100px;
-    /* Adjust the width as per your requirement */
-}
-
-/* Make all other columns very narrow */
-table.radiotable td:first-child + td {
-    width: 1px;
-    /* Adjust the width as per your requirement */
-}
 
 /* Left-align the first column */
-table.radiotable th:first-child,
-table.radiotable td:first-child {
+table.radiotable th:first-child{
     text-align: left;
 }
+table.radiotable td:first-child {
+    text-align: left;
+    min-width: 14px; 
+    max-width: 25px; 
+}
+
 
 /* Alternating row colors */
 table.radiotable tr:nth-child(even) {
