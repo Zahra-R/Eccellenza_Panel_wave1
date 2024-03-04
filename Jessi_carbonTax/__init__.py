@@ -47,6 +47,13 @@ def creating_session(subsession:Subsession):
         from .lexicon_en import Lexicon
         subsession.session.myLangCode = "_en"
     subsession.session.JessiTaskLexicon = Lexicon 
+    
+    if subsession.round_number == 1:
+        for p in subsession.get_players():
+            round_numbers = list(range(0, C.NUM_ROUNDS))
+            random.shuffle(round_numbers)
+            p.participant.task_rounds_J = round_numbers
+                
 class Group(BaseGroup):
     pass
 
@@ -70,13 +77,7 @@ class Player(BasePlayer):
 
 # FUNCTIONS
 # for random order of tasks
-def creating_session(subsession: Subsession):
-    if subsession.round_number == 1:
-        for p in subsession.get_players():
-            round_numbers = list(range(0, C.NUM_ROUNDS))
-            random.shuffle(round_numbers)
-            p.participant.task_rounds_J = round_numbers
-                
+
 # for this all to work, need to add 'task_rounds' as PARTICIPANT_FIELDS in settings.py!!
 # PAGES
 
@@ -107,14 +108,9 @@ class task_page00(Page):
             "current_policy_table": current_policy_table_shuffled,
             "random_attribute_order": random_attribute_order,
             'Attributes' : attributes ,
+            'Lexicon': player.session.JessiTaskLexicon
         }
    
-    @staticmethod
-    def vars_for_template(player: Player):
-        return{
-            'Lexicon': player.session.JessiTaskLexicon
-        } 
-    
     @staticmethod
     def js_vars(player):
         Lexicon = player.session.JessiTaskLexicon
@@ -127,6 +123,9 @@ class inter_trial(Page):
     form_model = 'player'
     form_fields = ['filler_ITI']
     timeout_seconds = 0.4
+
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.JessiTaskLexicon)
      
     @staticmethod
     def vars_for_template(player: Player):

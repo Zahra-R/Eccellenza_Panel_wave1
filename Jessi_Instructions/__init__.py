@@ -131,6 +131,7 @@ class slider(Page):
 
 # Page sequence
 page_sequence = [ 
+    transition,
     affectiveImagery,
     ratingAffectiveImagery,
     instructions_intro,

@@ -26,17 +26,17 @@ SESSION_CONFIGS = [
          num_demo_participants=10,
      ),
      dict(
-         name='Order_Nina_Jessi_Zahra',
+         name='Order_Nina_Jessi_Zahra_zh',
   #      app_sequence=['survey','task'],
          app_sequence=[ 'Nina_instructions', 'Nina_carbontask',  'Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling'],
-         language = "de",
+         language = "zh_hans",
          num_demo_participants=10,
      ),
       dict(
-         name='Order_Jessi_Zahra_Nina',
+         name='Order_Jessi_Zahra_Nina_zh',
   #      app_sequence=['survey','task'],
          app_sequence=['Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling', 'Nina_instructions', 'Nina_carbontask' ],
-         language = "de",
+         language = "zh_hans",
          num_demo_participants=10,
      ),
       dict(
