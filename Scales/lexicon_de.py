@@ -13,9 +13,9 @@ class Lexicon:
     
     completely_agree = "stimme absolut zu"
     completely_disagree = "stimme überhaupt nicht zu"
-    do_not_believe = "I do not believe that climate change is happening"
+    do_not_believe = "Ich glaube nicht daran, dass der Klimawandel stattfindet"
 
-    dont_know = "Weiss nicht"
+    dont_know = "Weiß nicht"
     opposed_to_values = "meinen Werten entgegengesetzt"
     not_important = "nicht wichtig"
     not_at_all_important = "überhaupt nicht wichtig"
@@ -33,8 +33,8 @@ class Lexicon:
 
     
     ## belief in climate change 
-    beliefCC_intro = "Climate change refers to the idea that the world’s average temperature has been increasing over the past 150 years, will increase more in the future, and that the world’s climate will change as a result. What do you think: Do you think climate change is happening?"
-    belief1HappeningLabel = "I believe that climate change is real"
+    beliefCC_intro = "Klimawandel bezeichnet die Idee, dass die durchschnittliche Temperatur der Welt seit den letzten 150 Jahren am steigen ist, zukünftig noch mehr steigen wird, und dass sich infolgedessen das Weltklima verändern wird. Was denken Sie? Glauben Sie, dass es den Klimawandel gibt?"
+    belief1HappeningLabel = "Ich glaub, dass der Klimawandel echt ist."
 
     ### belief in (human) causes taken from  Valkengoed
   
