@@ -22,7 +22,7 @@ SESSION_CONFIGS = [
   #      app_sequence=['survey','task'],
          app_sequence=['Intro'],
          consent_form="redirect",
-         language = "de",
+         language = "zh_hans",
          num_demo_participants=10,
      ),
      dict(
