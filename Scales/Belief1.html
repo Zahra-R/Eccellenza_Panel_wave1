@@ -15,9 +15,9 @@
 
 <table class="radiotable">
     <tr>
-        <th></th>
-        <th class="radio-column"> {{ Lexicon.do_not_believe }} </th>
-        <th class="radio-column"> {{ Lexicon.completely_disagree  }}</th>
+        <th style="width:23%;"></th>
+        <th class="radio-column" style=" overflow-wrap: break-word;  word-wrap: break-word; text-overflow: ellipsis;" > {{ Lexicon.do_not_believe }} </th>
+        <th class="radio-column" style="word-wrap:break-word; text-overflow: ellipsis;" > {{ Lexicon.completely_disagree  }}</th>
         <th class="radio-column"> </th class="radio-column">
         <th class="radio-column"> </th>
         <th class="radio-column"></th>
@@ -26,7 +26,7 @@
         <th class="radio-column"></th>
         <th class="radio-column"></th>
         <th class="radio-column"></th>
-        <th class="radio-column"> {{ Lexicon.completely_agree }} </th>
+        <th class="radio-column" style=" overflow-wrap: break-word;  word-wrap: break-word; text-overflow: ellipsis;"> {{ Lexicon.completely_agree }} </th>
     </tr>
 
     {% for field in form %}
@@ -34,9 +34,9 @@
         {{formfield_errors field.name}}
 
         <tr>
-            <th style="font-weight:normal;"  width="10%;" word-wrap="break-word;" id={{field.id}} name={{field.name}}>  </th>
+            <th style="font-weight:normal;"  style="word-wrap:break-word;" id={{field.id}} name={{field.name}}>  </th>
             {{ for choice in field }}
-            <td  style="word-wrap:break-word"   > {{ choice }} </td>
+            <td   style="width:7%;" > {{ choice }} </td>
             {{ endfor }}
         </tr>
         {% endif %}
