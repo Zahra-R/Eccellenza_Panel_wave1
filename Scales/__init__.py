@@ -533,7 +533,7 @@ class goodbye (Page):
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
 page_sequence = [ transition, 
-                 Belief, Belief1,  Belief2, BehaviorsFood, BehaviorsTransport, 
+                 Belief, Belief1,  Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
                   
                  CCEmotion, PolOrientation, PITrust, CCKnowledge, 
                  WVValues, IBValues,
