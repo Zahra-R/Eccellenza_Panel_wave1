@@ -302,7 +302,7 @@ class Belief(Page):
         Lexicon = player.session.scalesLexi
         return dict(
         form_fields= [ 'belief1Happening' , 'beliefConsensus'  ],
-        form_field_labels = [Lexicon.beliefHuman1Label , Lexicon.beliefConsensLabel ]
+        form_field_labels = [Lexicon.belief1HappeningLabel , Lexicon.beliefConsensLabel ]
     )
 
 class Belief1(Page):
@@ -371,7 +371,7 @@ class CCKnowledge(Page):
     
 class BehaviorsFood(Page):
     form_model = 'player'
-    form_fields= ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5', 'footprint_regional', 'footprint_electricity']
+    form_fields= ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
@@ -379,12 +379,25 @@ class BehaviorsFood(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields=  ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5', 'footprint_regional', 'footprint_electricity'], 
-        form_field_labels = [Lexicon.food_overall_label1, Lexicon.food_overall_label2, Lexicon.food_overall_label3, Lexicon.food_overall_label4, Lexicon.food_overall_label5 , Lexicon.regional_label, Lexicon.electricity_label ]
+        form_fields=  ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5' ], 
+        form_field_labels = [Lexicon.food_overall_label1, Lexicon.food_overall_label2, Lexicon.food_overall_label3, Lexicon.food_overall_label4, Lexicon.food_overall_label5  ]
+    )
+class BehaviorsFood2(Page):
+    form_model = 'player'
+    form_fields= [ 'footprint_regional', 'footprint_electricity']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields=  [ 'footprint_regional', 'footprint_electricity'], 
+        form_field_labels = [ Lexicon.regional_label, Lexicon.electricity_label ]
     )
 class BehaviorsTransport(Page):
     form_model = 'player'
-    form_fields= ['footprint_commute_car', 'footprint_commute_car_type', 'footprint_commute_pt', 'footprint_flying_short', 'footprint_flying_mid', 'footprint_flying_long']
+    form_fields= ['footprint_commute_car', 'footprint_commute_car_type', 'footprint_commute_pt']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
@@ -392,8 +405,22 @@ class BehaviorsTransport(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields=  ['footprint_commute_car', 'footprint_commute_car_type', 'footprint_commute_pt', 'footprint_flying_short', 'footprint_flying_mid', 'footprint_flying_long'], 
-        form_field_labels = [Lexicon.commute_car_label, Lexicon.commute_car_type_label, Lexicon.commute_pt_label, Lexicon.flying_short_label, Lexicon.flying_mid_label, Lexicon.flying_short_label ]
+        form_fields=  ['footprint_commute_car', 'footprint_commute_car_type', 'footprint_commute_pt' ], 
+        form_field_labels = [Lexicon.commute_car_label, Lexicon.commute_car_type_label, Lexicon.commute_pt_label ]
+    )
+
+class BehaviorsFlying(Page):
+    form_model = 'player'
+    form_fields= [ 'footprint_flying_short', 'footprint_flying_mid', 'footprint_flying_long']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields=  [ 'footprint_flying_short', 'footprint_flying_mid', 'footprint_flying_long'], 
+        form_field_labels = [  Lexicon.flying_short_label, Lexicon.flying_mid_label, Lexicon.flying_long_label ]
     )
 
 class WVValues(Page):
