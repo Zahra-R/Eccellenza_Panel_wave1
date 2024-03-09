@@ -11,7 +11,7 @@
 
 <p> {{ Lexicon.cce_header }}</p>
 
-<table class="radiotable">
+<table class="radiotable"  >
     <tr>
         <th></th>
         <th class="radio-column"> {{ Lexicon.not_at_all }}</th>
@@ -31,7 +31,7 @@
     {{ for field in form }}
     {{formfield_errors field.name}}
     <tr>
-        <th style="font-weight:normal;" id={{field.id}} name={{field.name}}>  </th>
+        <th style="font-weight:normal;" width="20%"  id={{field.id}} name={{field.name}}>  </th>
         {{ for choice in field }}
         <td>{{ choice }}</td>
         {{ endfor }}
@@ -53,7 +53,6 @@
 <script>
 
     document.addEventListener("DOMContentLoaded", function () {
-        setWidthForTableColumns1();
     });
 
     $(document).ready(function () {

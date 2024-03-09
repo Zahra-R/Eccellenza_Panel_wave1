@@ -9,8 +9,6 @@
 
 {% block content %}
 
-<p> {{ Lexicon.beliefCC_intro}}</p>
-
 
 <br>
 <p> {{ Lexicon.beliefHuman_header}}</p>
@@ -36,9 +34,9 @@
         {{formfield_errors field.name}}
 
         <tr>
-            <th style="font-weight:normal;" id={{field.id}} name={{field.name}}>  </th>
+            <th style="font-weight:normal;"  width="10%;" word-wrap="break-word;" id={{field.id}} name={{field.name}}>  </th>
             {{ for choice in field }}
-            <td>{{ choice }}</td>
+            <td  style="word-wrap:break-word"   > {{ choice }} </td>
             {{ endfor }}
         </tr>
         {% endif %}
@@ -67,7 +65,6 @@
 <script>
 
     document.addEventListener("DOMContentLoaded", function () {
-        setWidthForTableColumns1();
     });
 
     $(document).ready(function () {

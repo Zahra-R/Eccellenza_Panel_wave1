@@ -13,7 +13,7 @@ class Lexicon:
     
     completely_agree = "stimme absolut zu"
     completely_disagree = "stimme überhaupt nicht zu"
-    do_not_believe = "Ich glaube nicht daran, dass der Klimawandel stattfindet"
+    do_not_believe = "Ich glaube nicht, dass der Klimawandel stattfindet"
 
     dont_know = "Weiß nicht"
     opposed_to_values = "meinen Werten entgegengesetzt"

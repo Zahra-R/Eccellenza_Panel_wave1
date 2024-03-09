@@ -14,8 +14,8 @@ input.larger {
   max-width: 25px;
   max-height: 25px;
 
-  min-width: 5px;
-  min-height: 5px;
+  min-width: 3px;
+  min-height: 3px;
 }
 
 
@@ -34,7 +34,7 @@ input[type='range']::-webkit-slider-thumb {
 table.radiotable th, table.radiotable td{
   padding: 5px;
   text-align: center; /* Center-align the content */
-  max-width: 85px;
+  width: 100%;
 }
 
 
@@ -44,8 +44,7 @@ table.radiotable th:first-child{
 }
 table.radiotable td:first-child {
   text-align: left;
-  min-width: 10px; 
-  max-width: 25px; 
+
 }
 
 
