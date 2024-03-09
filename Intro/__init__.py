@@ -79,32 +79,29 @@ def education_choices(player):
     education_choices = []
     if language_code == 'de':
         education_choices = [    
-            Lexicon.no_formal,
-            Lexicon.obligatory,
-            Lexicon.high_school,
-            Lexicon.degree,
-            Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education,
+            ["noFormalEducation", Lexicon.no_formal],
+            ["obligatory", Lexicon.obligatory],
+            ["high_school", Lexicon.high_school],
+            ["degree", Lexicon.degree],
+            ["doctoral_degree", Lexicon.doctoral_degree]
         ]
 
     elif language_code == 'zh_hans':
-        education_choices = [ 
-            Lexicon.no_formal,
-            Lexicon.obligatory,
-            Lexicon.high_school,
-            Lexicon.degree,
-            Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education,
-            ]
+        education_choices = [    
+            ["noFormalEducation", Lexicon.no_formal],
+            ["obligatory", Lexicon.obligatory],
+            ["high_school", Lexicon.high_school],
+            ["degree", Lexicon.degree],
+            ["doctoral_degree", Lexicon.doctoral_degree]
+        ]
    
     else:
-        education_choices = [
-            Lexicon.no_formal,
-            Lexicon.obligatory,
-            Lexicon.high_school,
-            Lexicon.degree,
-            Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education,
+        education_choices = [    
+            ["noFormalEducation", Lexicon.no_formal],
+            ["obligatory", Lexicon.obligatory],
+            ["high_school", Lexicon.high_school],
+            ["degree", Lexicon.degree],
+            ["doctoral_degree", Lexicon.doctoral_degree]
         ]
     return education_choices
 
@@ -167,30 +164,30 @@ def income_choices(player):
     language_code = player.session.config['language']
     if language_code == 'de':
         income_choices = [    
-            Lexicon.income_quintile1,
-            Lexicon.income_quintile2,
-            Lexicon.income_quintile3,
-            Lexicon.income_quintile4,
-            Lexicon.income_quintile5,
-            Lexicon.prefer_not_to_say
+            ["quintile1", Lexicon.income_quintile1],
+            ["quintile2", Lexicon.income_quintile2],
+            ["quintile3", Lexicon.income_quintile3],
+            ["quintile4", Lexicon.income_quintile4],
+            ["quintile5", Lexicon.income_quintile5],
+            ["NoAnswer", Lexicon.prefer_not_to_say],
         ]
     elif language_code == 'zh_hans':
-        income_choices = [
-            Lexicon.income_quintile1,
-            Lexicon.income_quintile2,
-            Lexicon.income_quintile3,
-            Lexicon.income_quintile4,
-            Lexicon.income_quintile5,
-            Lexicon.prefer_not_to_say
+        income_choices = [    
+            ["quintile1", Lexicon.income_quintile1],
+            ["quintile2", Lexicon.income_quintile2],
+            ["quintile3", Lexicon.income_quintile3],
+            ["quintile4", Lexicon.income_quintile4],
+            ["quintile5", Lexicon.income_quintile5],
+            ["NoAnswer", Lexicon.prefer_not_to_say],
         ]
     else:
-        income_choices = [
-            Lexicon.income_quintile1,
-            Lexicon.income_quintile2,
-            Lexicon.income_quintile3,
-            Lexicon.income_quintile4,
-            Lexicon.income_quintile5,
-            Lexicon.prefer_not_to_say
+        income_choices = [    
+            ["quintile1", Lexicon.income_quintile1],
+            ["quintile2", Lexicon.income_quintile2],
+            ["quintile3", Lexicon.income_quintile3],
+            ["quintile4", Lexicon.income_quintile4],
+            ["quintile5", Lexicon.income_quintile5],
+            ["NoAnswer", Lexicon.prefer_not_to_say],
         ]
     return income_choices
 

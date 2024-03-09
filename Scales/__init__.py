@@ -177,6 +177,29 @@ def cknow10_choices(player):
     ['dk',  Lexicon.dont_know],
 ]
 
+## residential area
+def residential_area_choices(player):
+    residential_area_choices = []
+    Lexicon = player.session.introLexi
+    language_code = player.session.config['language']
+    if language_code == 'de':
+        residential_area_choices = [
+            ["metropolitan", Lexicon.metropolitan_area],
+            ["suburban", Lexicon.suburban],
+            ["rural", Lexicon.rural]
+        ]
+    elif language_code == 'zh_hans':
+        residential_area_choices = [
+        ]
+    else:
+        residential_area_choices = [
+            ["metropolitan", Lexicon.metropolitan_area],
+            ["suburban", Lexicon.suburban],
+            ["rural", Lexicon.rural]
+        ]
+    return residential_area_choices
+
+
 #endregion
 
 class Player(BasePlayer):
