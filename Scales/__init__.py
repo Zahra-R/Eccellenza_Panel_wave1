@@ -180,7 +180,7 @@ def cknow10_choices(player):
 ## residential area
 def residential_area_choices(player):
     residential_area_choices = []
-    Lexicon = player.session.introLexi
+    Lexicon = player.session.scalesLexi
     language_code = player.session.config['language']
     if language_code == 'de':
         residential_area_choices = [

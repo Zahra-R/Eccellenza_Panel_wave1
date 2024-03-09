@@ -6,6 +6,8 @@
 
 
 {% block content %} 
+<br>
+<label>{{ Lexicon.comment_label }}</label>
 
 <form method="post">
    {% for field in form %}
@@ -17,6 +19,9 @@
    {% endfor %}
 </form>
 
+<br>
+<br>
+<br>
 <p> {{ Lexicon.goodbye_text }} </p>
 <br>
 
