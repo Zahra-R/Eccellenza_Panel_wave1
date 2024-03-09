@@ -9,9 +9,12 @@
 
 {% block content %}
 
+<p> {{ Lexicon.beliefCC_intro}}</p>
+
+
 <br>
 <p> {{ Lexicon.beliefHuman_header}}</p>
-<br>
+
 <table class="radiotable">
     <tr>
         <th></th>
@@ -25,10 +28,11 @@
         <th class="radio-column"></th>
         <th class="radio-column"></th>
         <th class="radio-column"> {{ Lexicon.completely_disagree }} </th>
+        <th class="radio-column"> {{ Lexicon.do_not_believe }} </th>
     </tr>
 
     {% for field in form %}
-        {% if field.name == 'belief1Solutions' or field.name == 'belief2Solutions' or field.name == 'belief3Solutions' or field.name == 'belief4Solutions' or field.name == 'belief5Solutions' %}
+        {% if field.name == 'beliefHuman1' or field.name == 'beliefHuman2' or field.name == 'beliefHuman3' or field.name == 'beliefConseqences1' or field.name == 'beliefConseqences2' or field.name == 'beliefConseqences3'  %}
         {{formfield_errors field.name}}
 
         <tr>
@@ -43,7 +47,10 @@
 </table>
 
 <br>
+<br>
 
+
+<br>
 
 <div class="next-btn radiotable">
     <div style="float: right; padding-top: 2vh;">
