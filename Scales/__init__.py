@@ -316,7 +316,7 @@ class Belief1(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields= [ 'belief1Happening','beliefHuman1', 'beliefHuman2', 'beliefHuman3',
+        form_fields= [ 'beliefHuman1','beliefHuman2', 'beliefHuman3',
                   'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3'],
         form_field_labels = [ Lexicon.beliefHuman1Label, Lexicon.beliefHuman2Label, Lexicon.beliefHuman3Label, 
                              Lexicon.beliefConseqences1Label, Lexicon.beliefConseqences2Label, Lexicon.beliefConseqences3Label ]
