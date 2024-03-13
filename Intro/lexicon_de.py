@@ -66,13 +66,13 @@ class Lexicon:
     diverse = "Divers"
     other = "Andere"
 
-    income_label = "Was ist Ihr jährliches Einkommen?"
+    income_label = "Was ist das jährliche Nettoeinkommen (d.h. nach Abgaben/Steuern) ihres Haushaltes?"
     # source
-    income_quintile1 = "Weniger als 25.000 €"
-    income_quintile2 = "25.000 € - 50.000 €"
-    income_quintile3 = "50.001 € - 75.000 €"
-    income_quintile4 = "75.001 € - 100.000 €"
-    income_quintile5 = "Mehr als 100.000 €"
+    income_quintile1 = "Weniger als 16.515 €"
+    income_quintile2 = "16.515 € - 22.519 €"
+    income_quintile3 = "22.520 € - 28.349 €"
+    income_quintile4 = "28.350 € - 37.000 €"
+    income_quintile5 = "Mehr als 37.000 €"
     prefer_not_to_say = "Keine Angabe"
 
     education_label = "Was ist Ihr höchster Bildungsabschluss?"

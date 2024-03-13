@@ -65,13 +65,13 @@ class Lexicon:
     other = "Other"
 
 
-    income_label = "What is your yearly income?"
-    # may need to be adpated i havent checked income quintiles for US yet
-    income_quintile1 = "Less than $25,000"
-    income_quintile2 = "$25,000 - $50,000"
-    income_quintile3 = "$50,001 - $75,000"
-    income_quintile4 = "$75,001 - $100,000"
-    income_quintile5 = "More than $100,000"
+    income_label = "What is the yearly gross income of your household?"
+    # https://www.census.gov/content/dam/Census/library/publications/2022/demo/p60-276.pdf # data is from 2021 gross aggregate household income 
+    income_quintile1 = "Less than $28,000"
+    income_quintile2 = "$28,000 - $55,000"
+    income_quintile3 = "$55,001 - $89,750"
+    income_quintile4 = "$89,751 - $149,130"
+    income_quintile5 = "More than $149,130"
     prefer_not_to_say = "Prefer not to say"
 
     education_label = "What is your highest level of education?"
