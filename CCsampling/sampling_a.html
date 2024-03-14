@@ -13,28 +13,14 @@
     <p style="text-align: left; font-size: 0.9rem;">
         {{Lexicon.round}} {{round_number}} {{Lexicon.out_of}} {{C.NUM_ROUNDS}}
     </p>
-    <!-- <div id="choice">
-        <table class="table" id="choicetable">
-            <tbody>
-                <tr style="border-color: white;">
-                    <td style="text-align: center;"><button type="button" id="abtn" value="i"
-                            onclick="statement.showRoundText(boxname = this.id, infoType = this.value)"
-                            class="choiceButton" disabled> <span> {{Lexicon.box_a}} </span> </button></td>
-                    <td style="text-align: center;"><button type="button" id="bbtn" value="m"
-                            onclick="statement.showRoundText(boxname =this.id, infoType = this.value)"
-                            class="  choiceButton" disabled> <span> {{Lexicon.box_b}} </span> </button></td>
-                </tr>
-            </tbody>
-        </table>
-    </div> -->
-
+ 
     <div id="choice">
         <div class="myrow" id="choicetable">
             <div class="mycolumn" style="text-align: center;"><button type="button" id="abtn" value="i"
                     onclick="statement.showRoundText(boxname = this.id, infoType = this.value)" class="choiceButton"
                     disabled> <span> {{Lexicon.box_a}} </span> </button></div>
             <div class="mycolumn" style="text-align: center;"><button type="button" id="bbtn" value="m"
-                    onclick="statement.showRoundText(boxname =this.id, infoType = this.value)" class="  choiceButton"
+                    onclick="statement.showRoundText(boxname =this.id, infoType = this.value)" class="choiceButton"
                     disabled> <span> {{Lexicon.box_b}} </span> </button></div>
     
         </div>
@@ -51,7 +37,7 @@
                     <td class="rangelabel" style="width:20%"> {{Lexicon.not_at_all}} </td>
                     <td style="width:60%">
                         <input style="width:100%" type="range" min="-100" max="100" value="0" step="1"
-                            class="slider untouched" id="range_agree" name="range_agree">
+                            class="slider untouched" id="attention_agree" name="attention_agree">
                     </td>
                     <td class="rangelabel" style="width:20%"> {{Lexicon.very_much}} </td>
                 </tr>
@@ -65,7 +51,7 @@
                     <td class="rangelabel" style="width:20%"> {{Lexicon.not_at_all}} </td>
                     <td style="width:60%">
                         <input style="width:100%" type="range" min="-100" max="100" value="0" step="1"
-                            class="slider untouched" id="range_ccconcern" name="range_ccconcern">
+                            class="slider untouched" id="attention_ccconcern" name="attention_ccconcern">
                     </td>
                     <td class="rangelabel" style="width:20%"> {{Lexicon.very_much}} </td>
                 </tr>
@@ -77,18 +63,14 @@
     <button class="btn" style="display:block; margin-left:auto; margin-right:auto;" type="button" id="nextst"
         onclick="nextRound(triggernext)" disabled>{{Lexicon.next}}</button>
 
-    <input type="hidden" name="boxChoice" id="boxChoice" />
+    <input type="hidden" name="attention_boxChoice" id="attention_boxChoice" />
     <button type="hidden" style="display:none;" name="mynextbtn" id="mynextbtn"> </button>
-    <input type="hidden" name="statementText" id="statementText" />
-    <input type="hidden" name="statementID" id="statementID" />
 
 </body>
 
-{{ formfield_errors 'boxChoice' }}
-{{ formfield_errors 'statementText' }}
-{{ formfield_errors 'statementID' }}
-{{ formfield_errors 'range_agree' }}
-{{ formfield_errors 'range_ccconcern' }}
+{{ formfield_errors 'attention_boxChoice' }}
+{{ formfield_errors 'attention_agree' }}
+{{ formfield_errors 'attention_ccconcern' }}
 
 
 {% endblock %}
@@ -105,7 +87,6 @@
 <script>
     var statement
     var reverse = "{{reverseBoxes}}"
-    var tellingLabel = "{{tellingBoxNames}}"
     var countSliderChange = 0
 
 
@@ -120,22 +101,6 @@
     }
 
 
-    function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
-
     function onSliderChange(event) {
         if ($(event.target).hasClass('untouched')) {
             $(event.target).removeClass('untouched')
@@ -148,28 +113,17 @@
 
     $(document).ready(function () {
         //// danger remove next line
-        document.getElementById("nextst").disabled = false;
+        setTimeout(function () { enablebtn() }, 100);
 
         var boxALabel, boxBLabel;
 
         if (reverse == "True") {
             $('#abtn')[0].value = "m";
             $('#bbtn')[0].value = "i";
+        } 
 
-            boxALabel = "{{ Lexicon.box_a_anti_climate_action }}";
-            boxBLabel = "{{ Lexicon.box_b_pro_climate_action }}";
-        } else {
-            boxALabel = "<span>   {{ Lexicon.box_a_pro_climate_action }}  </span> ";
-            boxBLabel = "<span>   {{ Lexicon.box_b_anti_climate_action }}  </span>  ";
-        }
-
-        if (tellingLabel == "True") {
-            $('#abtn span').html(boxALabel);
-            $('#bbtn span').html(boxBLabel);
-        }
-
-        $('#range_agree').on('input', onSliderChange)
-        $('#range_ccconcern').on('input', onSliderChange)
+        $('#attention_agree').on('input', onSliderChange)
+        $('#attention_ccconcern').on('input', onSliderChange)
 
 
 
@@ -179,23 +133,15 @@
 
     statement = {
 
-
         showRoundText(boxname, infoType) {
-            //if($('#abtn').html().length < 40 && $('#abtn').html().length < 40 ){
-            document.cookie = "boxname=" + boxname  // + ";path=/" + round_number;
-            document.cookie = "infoType=" + infoType //+ ";path=/" + round_number;
             if (infoType == "i") {
-                roundText = String("{{InfoText}}")
-                roundTextID = "{{randomInfo}}"
-                forminputs.boxChoice.value = "i"
+                forminputs.attention_boxChoice.value = "i"
 
             }
             if (infoType == "m") {
-                roundText = String("{{MisinfoText}}")
-                roundTextID = "{{randomMisinfo}}"
-                forminputs.boxChoice.value = "m"
+                forminputs.attention_boxChoice.value = "m"
             }
-            //$('#show_statement').html(roundText)
+            roundText = String("{{Lexicon.attentionText}}")
             $('#' + boxname).append("<br><br>" + roundText)
             $('#' + boxname).addClass('transform-active-frame')
             if (boxname == 'abtn') {
@@ -209,46 +155,18 @@
             $('#caption1').html("")
             $('#caption2').html("Plase read the statement and answer the questions.")
 
-            // save to db
-            forminputs.statementText.value = roundText
-            forminputs.statementID.value = roundTextID
             document.getElementById("bbtn").disabled = true;
             document.getElementById("abtn").disabled = true;
-            //setTimeout(function () { document.getElementById("nextst").disabled = false;}, 3000);
         }
     }
 
-    function checkForChoice() {
-        console.log("checkingcookies checkfchoice")
-
-        if (getCookie("boxname") != '') {
-            console.log("at least that workds")
-            console.log(getCookie("boxname"))
-            statement.showRoundText(boxname = getCookie('boxname'), infoType = getCookie('infoType'))
-
-        }
-        else {
-            setTimeout(function () { enablebtn() }, 100);
-        }
-    }
-
+    
 
     function nextRound(callback) {
-        document.cookie = 'infoType=; expires=Thu, 01 Jan 1970 00:00:00 UTC'
-        document.cookie = 'boxname=; expires=Thu, 01 Jan 1970 00:00:00 UTC'
         callback()
     }
 
 
-
-    window.onload = function () {
-        checkForChoice()
-        //setTimeout(function () { enablebtn() }, 100);
-        // check if user has been on this page before (e.g. the page is reloaded)
-        // if so, then display the message from the box the user has previously selected with the help of cookies
-
-
-    }
 
 
 </script>

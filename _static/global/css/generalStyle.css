@@ -8,9 +8,12 @@
 .otree-body{
     max-width: 950px;
     font-size: 1.1rem;
-    text-align: justify;
     margin-left:auto;
     margin-right:auto;
+}
+
+.otree-body > p {
+  text-align: justify
 }
 
 
@@ -59,6 +62,17 @@
     padding-top: 0px;
 }
 }
+
+
+input[type='range']::-webkit-slider-thumb {
+  width: 30px;
+  -webkit-appearance: none;
+  height: 30px;
+  cursor: pointer;
+  background: bisque; 
+  border-radius: 50%;
+}
+
 
 
 

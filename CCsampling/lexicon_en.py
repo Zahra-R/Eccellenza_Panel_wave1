@@ -12,8 +12,8 @@ class Lexicon:
     next_statement_which_box = "From which box do you want to read the next statement?"
     round = "Round"
     box = "Box"
-    box_a = "Box A"
-    box_b = "Box B"
+    box_a = "Box&nbsp;A"
+    box_b = "Box&nbsp;B"
     out_of = "out of"
     statement_agreement = " How much do you agree with this statement?"
     ccconcern_question = "How concerned are you about climate change?"
@@ -31,5 +31,9 @@ class Lexicon:
     box_rating_would_follow_B = 'Would you follow Box <span style="font-size: larger;"> B</span> if it were its own social media channel?'
     box_rating_polOrientation_A = 'What do you think is the political orientation of Box <span style="font-size: larger;"> A</span>? '
     box_rating_polOrientation_B = 'What do you think is the political orientation of Box <span style="font-size: larger;"> B</span>? '
+
+    conclude_title = "Please take some time to read through this page."
+
+    attentionText = "To demonstrate that you are reading the text presented in these boxes attentively, please move both range sliders all the way to the left (i.e. towards not at all)."
 
     

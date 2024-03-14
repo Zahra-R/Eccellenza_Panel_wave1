@@ -42,7 +42,7 @@ SESSION_CONFIGS = [
       dict(
          name='Order_Zahra_Nina_Jessi_de',
   #      app_sequence=['survey','task'],
-         app_sequence=['CCsampling_intro', 'CCsampling','Scales'],
+         app_sequence=['CCsampling_intro', 'CCsampling','Scales', 'CCsampling_Debrief'],
          language = "de",
          num_demo_participants=10,
      ),

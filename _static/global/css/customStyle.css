@@ -21,17 +21,8 @@ input.larger {
 
 
 
-input[type='range']::-webkit-slider-thumb {
-    width: 30px;
-    -webkit-appearance: none;
-    height: 30px;
-    cursor: pointer;
-    background: bisque; 
-    border-radius: 50%;
-  }
-
-table.radiotable th, table.radiotable td {
-  padding: 12px;
+table.radiotable th, table.radiotable td, table.radiotable2 th, table.radiotable2 td {
+  padding: 2%;
   text-align: center; /* Center-align the entire table */
   max-width: none; /* No max-width for the entire table */
 }
@@ -42,8 +33,31 @@ table.radiotable td:first-child {
   text-align: left;
 }
 
+table.radiotable2 th:first-child,
+table.radiotable2 td:first-child {
+  text-align: center;
+}
+
 /* Alternating row colors */
 table.radiotable tr:nth-child(even) {
   background-color: #c0e3e0;
 }
 
+table.radiotable2 {
+  border-collapse: separate;
+}
+
+/* 
+table.radiotable2 tr:nth-child(4n+2), table.radiotable2 tr:nth-child(4n+1) {
+  background-color: #c0e3e0;
+} */
+
+table.radiotable2 tr:nth-child(odd) {
+  background-color: #c0e3e0;
+}
+
+.radiotablebutton {
+  border-color: white;
+  border-style: none none solid none;
+  border-width: 30px;
+}

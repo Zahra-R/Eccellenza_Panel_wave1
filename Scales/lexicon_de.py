@@ -11,8 +11,8 @@ class Lexicon:
     not_at_all = "gar nicht"
     very_much = "sehr stark"
     
-    completely_agree = "stimme absolut zu"
-    completely_disagree = "stimme überhaupt nicht zu"
+    completely_agree = "stimme äußerst zu"
+    completely_disagree = "stimme gar nicht zu"
     do_not_believe = "Ich glaube nicht, dass der Klimawandel stattfindet"
 
     dont_know = "Weiß nicht"

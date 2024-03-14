@@ -2,19 +2,92 @@
 .otree-body{
   max-width: 950px;
   font-size: 1.1rem;
-  text-align: justify;
   margin-left:auto;
   margin-right:auto;
 }
 
+.otree-body > p {
+text-align: justify
+}
+
+#choicetable{
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-spacing: 2vw 20px;
+}
+
+  /* Create two equal columns that floats next to each other */
+  .mycolumn {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .myrow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+@media only screen and (max-width: 600px) {
+
+  .mycolumn:has(> .transform-passive), .mycolumn:has(> .transform-active) {
+    width:100%;
+  }
+ 
+  .choiceButton {
+    padding: 30px 10px;
+    border-radius: 10px;
+  }
+
+  #bbtn.transform-passive {
+    margin-top: -30px;
+    transform: scale(0.4);
+  }
+
+  #abtn.transform-passive {
+    transform: scale(0.4);
+  }
+
+  .mycolumn:has(>  #abtn.transform-passive) {
+    height:80px;
+    padding:0;
+  }
+
+  .mycolumn:has(>  #bbtn.transform-passive) {
+    height:0px;
+    padding:0;
+  }
+
+ 
+}
+
+@media only screen and (min-width: 601px) {
+ 
+  .choiceButton {
+    padding: 3vw;
+    border-radius: 10px;
+  }
+  .mycolumn:has(> .transform-passive) {
+    width:25%
+  }
+
+  .mycolumn:has(> .transform-active) {
+    width:70%
+  }
+
+
+}
+
+
 .choiceButton {
-    min-height: 11vh;
-    /* max-height: 140pt; */ 
-    padding: 10pt;
-    border-radius: 15pt;
-    width: 30vw;
+    /* width: 30vw;
     min-width: 225pt;
-    max-width: 300pt;
+    max-width: 300pt; */
     text-decoration: none;
     color: #fff;
     background-color: #26a69a;
@@ -68,15 +141,14 @@
 
 .transform-active {
     background-color: #45CEE0;
-    width: 500px;
+    width: 450px;
   }
 
 .transform-active-frame {
     height: auto;
     max-width: 400px;
-    max-width: 60vw;
+    max-width: 75vw;
     padding: 1vw;
-    max-height: 80vh;
     min-height: 200px;
 }
 
@@ -110,10 +182,6 @@
 #caption1, #_otree-title {
     padding-top: 0pt;
 }
-
-
-
-
 
 
 .slidecontainer {
@@ -326,3 +394,5 @@ input[type=range] {
   .untouched::-moz-range-thumb{
     background: #666C75 !important; 
   } 
+
+

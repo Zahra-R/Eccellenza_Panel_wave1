@@ -35,7 +35,7 @@ class Lexicon:
     
     ## belief in climate change 
     beliefCC_intro = "Climate change refers to the idea that the world’s average temperature has been increasing over the past 150 years, will increase more in the future, and that the world’s climate will change as a result. What do you think: Do you think climate change is happening?"
-    belief1HappeningLabel = "I believe that climate change is real"
+    belief1HappeningLabel = "I believe that climate change is real."
 
     ### belief in (human) causes taken from  Valkengoed
     beliefHuman_title = "What do you believe?"
@@ -52,11 +52,11 @@ class Lexicon:
 
     ##belief in solutions
 
-    beliefSolutions1Label = "Transforming to a sustainable and climate-friendly society would reduce our national standards of living." 
-    beliefSolutions2Label = " Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible."
-    beliefSolutions3Label = "I think High-income countries have a greater responsibility to reduce greenhouse gas emissions than low and middle-income countries." 
-    beliefSolutions4Label = "Industry has a greater responsibility to reduce greenhouse gas emissions than individuals."
-    beliefSolutions5Label = " I would rather prepare to live with climate change than to fight climate change."
+    beliefSolutions1Label = "Transforming to a sustainable and climate-friendly society would reduce our national standards of living."  # reversed
+    beliefSolutions2Label = " Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible." # reversed
+    beliefSolutions3Label = "I think High-income countries have a greater responsibility to reduce greenhouse gas emissions than low and middle-income countries." #responsibility national
+    beliefSolutions4Label = "Industry has a greater responsibility to reduce greenhouse gas emissions than individuals."  #responsibility systemic
+    beliefSolutions5Label = " I would rather prepare to live with climate change than to fight climate change." # adaptation
 
 
     #Climate Change Emotion Knauf/Truelove

@@ -527,28 +527,6 @@ class transition (Page):
         return dict(Lexicon=player.session.scalesLexi)
     
 
-class goodbye (Page): 
-    form_model = 'player'
-    form_fields = ['comment']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
-    def vars_for_template(player: Player):
-       return{
-            #Lexicon': player.session.introLexi
-             'u': player.participant.label,
-             'participantlabel':player.participant.label,
-              'Lexicon': player.session.scalesLexi
-
-        } 
-    @staticmethod
-    def js_vars(player):
-        Lexicon = player.session.scalesLexi
-        return dict(
-        form_fields = ['comment' ],
-        form_field_labels = [Lexicon.comment_label]
-    )
-
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
 #page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
@@ -560,4 +538,4 @@ page_sequence = [ transition,
                   
                  CCEmotion, PolOrientation, PITrust, CCKnowledge, 
                  WVValues, IBValues,
-                DemographicsEnd,  goodbye]
+                DemographicsEnd]

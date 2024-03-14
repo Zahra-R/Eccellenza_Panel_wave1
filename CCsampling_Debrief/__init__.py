@@ -1,4 +1,4 @@
-from random import random, seed, choice as random_choice, randint
+import random
 from otree.api import *
 import numpy as np
 import json
@@ -69,17 +69,6 @@ def creating_session(subsession:Subsession):
         from .lexicon_en import Lexicon  
     subsession.session.debriefLexi = Lexicon
     subsession.session.myLangCode = subsession.session.config['language'] 
-
-    import itertools
-    reverse_display = itertools.cycle([True, False])
-    for player in subsession.get_players():
-        if subsession.round_number == 1: 
-            player.participant.randomInfoArray = random.sample(range(1,147),C.NUM_ROUNDS)
-            player.participant.randomMisinfoArray = random.sample(range(1,79),C.NUM_ROUNDS)
-            player.participant.reverseBoxes = next(reverse_display)
-            player.participant.seenMisinfo = []
-            player.participant.seenMislInfo = []
-
 
 
         
@@ -153,8 +142,34 @@ class Feedback(Page):
 
 
 
+class goodbye (Page): 
+    form_model = 'player'
+    form_fields = ['comment']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    def vars_for_template(player: Player):
+       return{
+            #Lexicon': player.session.introLexi
+             'u': player.participant.label,
+             'participantlabel':player.participant.label,
+              'Lexicon': player.session.scalesLexi
+
+        } 
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields = ['comment' ],
+        form_field_labels = [Lexicon.comment_label]
+    )
+
+
+
+
 
 page_sequence = [
     Feedback,
-    Debrief
+    Debrief, 
+    goodbye
 ]
