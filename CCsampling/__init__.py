@@ -61,7 +61,6 @@ class Player(BasePlayer):
     InfohasDebrief = models.BooleanField()
    
     reverseBoxes = models.BooleanField()
-    tellingBoxLabels = models.BooleanField()
 
 
     attention_agree = models.IntegerField( min=-100, max=100)
@@ -113,7 +112,6 @@ def allocateBoxNames(player: Player):
 
 def saveParticipantVarsToPlayer(player: Player): 
     player.reverseBoxes = player.participant.reverseBoxes
-    player.tellingBoxLabels = player.participant.telling_box_label
 
 
 # ---------------------------------------------------------------
@@ -149,7 +147,6 @@ class sampling(Page):
             'reverseBoxes': player.participant.reverseBoxes,
             'MisinfoText': MisinfoText,
             'InfoText': InfoText, 
-            'tellingBoxNames': player.participant.telling_box_label,
             'Lexicon': player.session.samplingLexi
         } 
     @staticmethod

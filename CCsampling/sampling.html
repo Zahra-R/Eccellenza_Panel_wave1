@@ -105,7 +105,6 @@
 <script>
     var statement
     var reverse = "{{reverseBoxes}}"
-    var tellingLabel = "{{tellingBoxNames}}"
     var countSliderChange = 0
 
 
@@ -155,27 +154,10 @@
         if (reverse == "True") {
             $('#abtn')[0].value = "m";
             $('#bbtn')[0].value = "i";
-
-            boxALabel = "{{ Lexicon.box_a_anti_climate_action }}";
-            boxBLabel = "{{ Lexicon.box_b_pro_climate_action }}";
-        } else {
-            boxALabel = "<span>   {{ Lexicon.box_a_pro_climate_action }}  </span> ";
-            boxBLabel = "<span>   {{ Lexicon.box_b_anti_climate_action }}  </span>  ";
-        }
-
-        if (tellingLabel == "True") {
-            $('#abtn span').html(boxALabel);
-            $('#bbtn span').html(boxBLabel);
-        }
-
+        } 
         $('#range_agree').on('input', onSliderChange)
         $('#range_ccconcern').on('input', onSliderChange)
-
-
-
     });
-
-
 
     statement = {
 

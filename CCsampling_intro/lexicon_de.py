@@ -8,7 +8,7 @@ class Lexicon:
     instructionCondition_telling_box_label_true = "Auf den nächsten Seiten finden Sie zwei Boxen. Jede Box enthält eine Anzahl von <b>Aussagen zum Klimawandel.</b> <b>Eine Box enthält Aussagen mit Argumenten gegen sofortige Maßnahmen zum Klimawandel. Die andere Box enthält Aussagen, die für dringende Maßnahmen zum Klimaschutz argumentieren.</b>"
     instructionCondition_telling_box_label_false = "Auf den nächsten Seiten finden Sie zwei Boxen. Jede Box enthält eine Anzahl von <b>Aussagen zum Klimawandel,</b> die von verschiedenen Quellen stammen."
     instructionUnconditional1 = "Wenn Sie auf eine der Boxen klicken, wird eine Aussage zufällig aus dieser Box gezogen. Ihre Aufgabe besteht darin, die Aussage zu lesen und zu bewerten, was Sie von der Aussage halten. Das wiederholen Sie für <i>"
-    instructionUnconditional2 = "Runden</i>. In jeder Runde können Sie entscheiden, aus welcher Box Sie die nächste Aussage lesen möchten.</p><p>Wir wissen, dass der Klimawandel ein komplexes Thema ist und es viele unterschiedliche Informationen dazu gibt. Wir interessieren uns dafür, wie Sie sich in dieser Informationslandschaft bewegen.. Bitte nehmen Sie sich die Zeit, jede Aussage sorgfältig zu lesen und geben Sie Ihre ehrliche Meinung ab."
+    instructionUnconditional2 = "Runden</i>. In jeder Runde können Sie entscheiden, aus welcher Box Sie die nächste Aussage lesen möchten.</p><p>Wir wissen, dass der Klimawandel ein komplexes Thema ist und es viele unterschiedliche Informationen dazu gibt. Wir interessieren uns dafür, wie Sie sich in dieser Informationslandschaft bewegen. Bitte nehmen Sie sich die Zeit, jede Aussage sorgfältig zu lesen und geben Sie Ihre ehrliche Meinung ab."
     
 
     # beforeTask

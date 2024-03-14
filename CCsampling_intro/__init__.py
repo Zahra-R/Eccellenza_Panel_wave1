@@ -43,11 +43,6 @@ def creating_session(subsession:Subsession):
         from .lexicon_en import Lexicon  
     subsession.session.samplingIntroLexi = Lexicon
 
-    import itertools
-    box_labels = itertools.cycle([True, True, False, False])
-    for player in subsession.get_players():
-        if subsession.round_number == 1: 
-            player.participant.telling_box_label = next(box_labels)
 
 
 def make_likert_n(n):
