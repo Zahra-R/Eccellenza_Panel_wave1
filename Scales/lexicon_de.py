@@ -149,24 +149,24 @@ class Lexicon:
     know_6c = "Überschüssige Treibhausgase sammeln sich in der Atmosphäre. Aufgrund ihrer molekularen Struktur, wird die infrarot Strahlung der Erde reflektiert und zur Erde zurückgestrahlt. Auf diese Weise wird Hitze eingeschlossen."
     
 
-    know_8qu = "Wenn wir in dem jetzigen Tempo weitermachen, nach wie vielen Jahren werden wir unser CO2 Budget verbraucht haben, um den Temperaturanstieg auf 1,5 °C zu begrenzen?" # is Sep 2026 
-    know_8a = "Weniger als 1 Jahr"
-    know_8b = "1-2 Jahre"
-    know_8c = "2-4 Jahre"
-    know_8d = "Mehr als 4 Jahre"
+    know_7qu = "Wenn wir in dem jetzigen Tempo weitermachen, nach wie vielen Jahren werden wir unser CO2 Budget verbraucht haben, um den Temperaturanstieg auf 1,5 °C zu begrenzen?" # is Sep 2026 
+    know_7a = "Weniger als 1 Jahr"
+    know_7b = "1-2 Jahre"
+    know_7c = "2-4 Jahre"
+    know_7d = "Mehr als 4 Jahre"
     
 
-    know_9qu = "Welches Land oder Region verursacht absolut gesehen die höchsten CO2-Emissionen pro Jahr?"
+    know_8qu = "Welches Land oder Region verursacht absolut gesehen die höchsten CO2-Emissionen pro Jahr?"
+    know_8a = "China"
+    know_8b = "USA"
+    know_8c = "EU"
+    know_8d = "Indien"
+
+    know_9qu = "Welches der 4 Länder/Regionen verursacht die höchsten pro Kopf CO2 Emissionen pro Jahr?"
     know_9a = "China"
     know_9b = "USA"
     know_9c = "EU"
     know_9d = "Indien"
-
-    know_10qu = "Welches der 4 Länder/Regionen verursacht die höchsten pro Kopf CO2 Emissionen pro Jahr?"
-    know_10a = "China"
-    know_10b = "USA"
-    know_10c = "EU"
-    know_10d = "Indien"
 
     #### behaviors
     behaviors_title = ' Verhalten '
@@ -279,7 +279,7 @@ class Lexicon:
     transition_title = 'Willkommen beim letzten Block der Studie'
 
 
-    transitions_a = 'Vielen Dank für Ihre bisherigen Antworten. Wenn Sie eine kurze Pause benötigen, bevor Sie mit der Studie fortfahren, wäre jetzt ein guter Zeitpunkt. <br> Sobald Sie auf den weiter-Knopf auf dieser Seite klicken, bitten wir Sie, diesen Block in einem Rutsch auszufüllen.'
+    transitions_a = 'Vielen Dank für Ihre bisherigen Antworten. Wenn Sie eine kurze Pause benötigen, bevor Sie mit der Studie fortfahren, wäre jetzt ein guter Zeitpunkt.</p> <p> Sobald Sie auf den weiter-Knopf auf dieser Seite klicken, bitten wir Sie, diesen Block ohne Unterbrechung zu bearbeiten. '
     # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
     transitions_b ='Dies ist Block Nummer '
     transitions_c = ' von insgesamt 4 Blöcken. Vielen Dank, dass Sie sich die Zeit genommen haben, alle Fragen zu beantworten. Wenn Sie bereit sind, fahren Sie bitte fort.'

@@ -1,9 +1,68 @@
-.att-box{
-    border-style: dashed;
-    padding: 0px 20px 5px 20px;
-    /* background-color: lightpink; */
-    border-width: medium ;
-    margin-top: 40px;
+.otree-body {
+  max-width: 950px;
+  font-size: 1.1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.otree-body>p {
+  text-align: justify
+}
+
+
+.accchoice .form-check-input {
+  margin-top: 10px;
+  width: 1.3em !important;
+  height: 1.3em !important;
+}
+
+.accchoice .form-check-input:checked {
+  background-color: #A5D7D2 !important;
+  border-color: #46505A;
+}
+
+
+@media only screen and (min-width: 701px) {
+  .otree-body {
+    padding: 30pt;
+  }
+
+  .accordion .form-check-input {
+    width: 2em !important;
+    height: 2em !important;
+  }
+
+  .accpanel {
+    padding: 0 18px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .accordion .form-check-input {
+    width: 1.1em !important;
+    height: 1.1em !important;
+  }
+  .accpanel {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1155px) {
+  .otree-body {
+    padding-left: 0pt !important;
+  }
+}
+
+
+
+
+
+.att-box {
+  border-style: dashed;
+  padding: 0px 20px 5px 20px;
+  /* background-color: lightpink; */
+  border-width: medium;
+  margin-top: 40px;
 }
 
 
@@ -21,10 +80,15 @@ input.larger {
 
 
 
-table.radiotable th, table.radiotable td, table.radiotable2 th, table.radiotable2 td {
+table.radiotable th,
+table.radiotable td,
+table.radiotable2 th,
+table.radiotable2 td {
   padding: 2%;
-  text-align: center; /* Center-align the entire table */
-  max-width: none; /* No max-width for the entire table */
+  text-align: center;
+  /* Center-align the entire table */
+  max-width: none;
+  /* No max-width for the entire table */
 }
 
 /* Left-align the first column */
@@ -60,4 +124,46 @@ table.radiotable2 tr:nth-child(odd) {
   border-color: white;
   border-style: none none solid none;
   border-width: 30px;
+}
+
+
+
+/*collapsible tables */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accactive,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accactive:after {
+  content: "\2212";
+}
+
+.accpanel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-out;
+  -webkit-transition: max-height 0.6s ease-out;
 }

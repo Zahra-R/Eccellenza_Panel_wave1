@@ -146,34 +146,34 @@ def cknow6_choices(player):
     ['dk',  Lexicon.dont_know],
 ]
 
+def cknow7_choices(player):
+    Lexicon = player.session.scalesLexi
+    return [
+    ['a_false', Lexicon.know_7a],
+    ['b_false',  Lexicon.know_7b],
+    ['c_true', Lexicon.know_7c],
+    ['d_false', Lexicon.know_7d],
+
+    ['dk',  Lexicon.dont_know],
+]
+
 def cknow8_choices(player):
     Lexicon = player.session.scalesLexi
     return [
-    ['a_false', Lexicon.know_8a],
+    ['a_true', Lexicon.know_8a],
     ['b_false',  Lexicon.know_8b],
-    ['c_true', Lexicon.know_8c],
-    ['d_false', Lexicon.know_8d],
-
+    ['c_false', Lexicon.know_8c],
+    ['d_false',  Lexicon.know_8d],
     ['dk',  Lexicon.dont_know],
 ]
 
 def cknow9_choices(player):
     Lexicon = player.session.scalesLexi
     return [
-    ['a_true', Lexicon.know_9a],
-    ['b_false',  Lexicon.know_9b],
+    ['a_false', Lexicon.know_9a],
+    ['b_true',  Lexicon.know_9b],
     ['c_false', Lexicon.know_9c],
     ['d_false',  Lexicon.know_9d],
-    ['dk',  Lexicon.dont_know],
-]
-
-def cknow10_choices(player):
-    Lexicon = player.session.scalesLexi
-    return [
-    ['a_false', Lexicon.know_10a],
-    ['b_true',  Lexicon.know_10b],
-    ['c_false', Lexicon.know_10c],
-    ['d_false',  Lexicon.know_10d],
     ['dk',  Lexicon.dont_know],
 ]
 
@@ -232,9 +232,9 @@ class Player(BasePlayer):
     cknow4 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)  
     cknow5 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)     
     cknow6 = models.StringField(choices=["a_false", "b_false", "c_true", "dk"], widget=widgets.RadioSelect,) 
-    cknow8 = models.StringField(choices=["a_false", "b_false", "c_true","d_false", "dk"], widget=widgets.RadioSelect,)     
-    cknow9 = models.StringField(choices=["a_true", "b_false", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)     
-    cknow10 = models.StringField(choices=["a_false", "b_true", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)
+    cknow7 = models.StringField(choices=["a_false", "b_false", "c_true","d_false", "dk"], widget=widgets.RadioSelect,)     
+    cknow8 = models.StringField(choices=["a_true", "b_false", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)     
+    cknow9 = models.StringField(choices=["a_false", "b_true", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)
 
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
     hie1 = make_likert10()
@@ -328,22 +328,22 @@ class Belief(Page):
         form_field_labels = [Lexicon.belief1HappeningLabel , Lexicon.beliefConsensLabel ]
     )
 
-class Belief1(Page):
-    form_model = 'player'
-    form_fields= [ 'beliefHuman1', 'beliefHuman2', 'beliefHuman3',
-                  'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
-    @staticmethod
-    def js_vars(player):
-        Lexicon = player.session.scalesLexi
-        return dict(
-        form_fields= [ 'beliefHuman1','beliefHuman2', 'beliefHuman3',
-                  'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3'],
-        form_field_labels = [ Lexicon.beliefHuman1Label, Lexicon.beliefHuman2Label, Lexicon.beliefHuman3Label, 
-                             Lexicon.beliefConseqences1Label, Lexicon.beliefConseqences2Label, Lexicon.beliefConseqences3Label ]
-    )
+# class Belief1(Page):
+#     form_model = 'player'
+#     form_fields= [ 'beliefHuman1', 'beliefHuman2', 'beliefHuman3',
+#                   'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3']
+#     @staticmethod
+#     def vars_for_template(player: Player):
+#         return dict(Lexicon=player.session.scalesLexi)
+#     @staticmethod
+#     def js_vars(player):
+#         Lexicon = player.session.scalesLexi
+#         return dict(
+#         form_fields= [ 'beliefHuman1','beliefHuman2', 'beliefHuman3',
+#                   'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3'],
+#         form_field_labels = [ Lexicon.beliefHuman1Label, Lexicon.beliefHuman2Label, Lexicon.beliefHuman3Label, 
+#                              Lexicon.beliefConseqences1Label, Lexicon.beliefConseqences2Label, Lexicon.beliefConseqences3Label ]
+#     )
 
 class Belief2 (Page):
     form_model = 'player'
@@ -380,7 +380,7 @@ class CCEmotion(Page):
     
 class CCKnowledge(Page):
     form_model = 'player'
-    form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow8','cknow9', 'cknow10']
+    form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow7','cknow8', 'cknow9']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
@@ -388,8 +388,8 @@ class CCKnowledge(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow8','cknow9', 'cknow10'],
-        form_field_labels = [Lexicon.know_1qu, Lexicon.know_2qu, Lexicon.know_3qu, Lexicon.know_4qu, Lexicon.know_5qu, Lexicon.know_6qu,  Lexicon.know_8qu, Lexicon.know_9qu, Lexicon.know_10qu]
+        form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow7','cknow8', 'cknow9'],
+        form_field_labels = [Lexicon.know_1qu, Lexicon.know_2qu, Lexicon.know_3qu, Lexicon.know_4qu, Lexicon.know_5qu, Lexicon.know_6qu,  Lexicon.know_7qu, Lexicon.know_7qu, Lexicon.know_8qu]
     )
     
 class BehaviorsFood(Page):
@@ -534,8 +534,8 @@ class transition (Page):
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
 page_sequence = [ transition, 
-                 Belief, Belief1,  Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
+                 CCKnowledge, Belief, Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
                   
-                 CCEmotion, PolOrientation, PITrust, CCKnowledge, 
+                 CCEmotion, PolOrientation, PITrust, 
                  WVValues, IBValues,
                 DemographicsEnd]

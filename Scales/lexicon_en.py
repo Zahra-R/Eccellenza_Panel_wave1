@@ -157,24 +157,24 @@ class Lexicon:
     know_6c = "Excess greenhouse gases accumulate in the atmosphere. Because of their molecular structure, the infrared radiation from the earth is reflected and is re-radiated to the earth. This way, heat is trapped."
     
     
-    know_8qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" # this will be September 2026 (Stand 2023)
-    know_8a = "less than 1 year"
-    know_8b = "1-2 years"
-    know_8c = "2-4 years"
-    know_8d = "More than 4 years"
+    know_7qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" # this will be September 2026 (Stand 2023)
+    know_7a = "less than 1 year"
+    know_7b = "1-2 years"
+    know_7c = "2-4 years"
+    know_7d = "More than 4 years"
     
 
-    know_9qu = "Which country/region causes the highest absolute CO2-emissions per year?"
+    know_8qu = "Which country/region causes the highest absolute CO2-emissions per year?"
+    know_8a = "China"
+    know_8b = "USA"
+    know_8c = "EU"
+    know_8d = "India"
+
+    know_9qu = "Which of the four countries/regions causes the highest per-capita CO2-emissions per year?"
     know_9a = "China"
     know_9b = "USA"
     know_9c = "EU"
     know_9d = "India"
-
-    know_10qu = "Which of the four countries/regions causes the highest per-capita CO2-emissions per year?"
-    know_10a = "China"
-    know_10b = "USA"
-    know_10c = "EU"
-    know_10d = "India"
     
     ### Behaviors ###
     behaviors_title = ' Behavior '

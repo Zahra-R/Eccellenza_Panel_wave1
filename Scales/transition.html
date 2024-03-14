@@ -5,21 +5,21 @@
 {{ block title }} {{Lexicon.transition_title}} {{ endblock }}
 {{ block content }}
 
-<body>
+<body style="max-width:800px;margin-left:auto; margin-right:auto;">
 
-{{ Lexicon.transitions_a }}
-<br>
-<br> 
+    <p> {{ Lexicon.transitions_a }}</p>
 
-{{ Lexicon.transitions_b }} {{ Lexicon.transitions_c }}
-<br>    
+
+{{ Lexicon.transitions_b }} {{ Lexicon.transitions_c }} 
+
+<div >
+    <button id="nextst" style=" margin-top: 4vh; float:right;" disabled class="otree-btn-next btn btn-primary"> {{Lexicon.next}}</button>
+
+</div>
 
 </body>
 
-<div >
-    <button id="nextst" style=" margin-top: 4vh;" disabled class="otree-btn-next btn btn-primary">Next</button>
 
-</div>
 {% endblock %}
 
 
