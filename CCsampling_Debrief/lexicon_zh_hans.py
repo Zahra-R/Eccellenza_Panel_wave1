@@ -16,9 +16,10 @@ class Lexicon:
 
         
     # goodbye page 
-    goodbye_header = 'Thank you!'
-    goodbye_text = 'Thank you for your participation in our study! <br> You are now at the end of the study. To receive compensation please click on next .'
-    finish = "Click here to finish"
+    goodbye_header = 'Thank you very much!'
+    goodbye_text = 'Thank you for your participation in our study. <p> You are now at the end of the study. To confirm participation and return to the market research instutite, please click on the button below <p>.'
 
     # adapt link
     link = 'https://www.innofact-umfrage.de/sample_only/ub3/us/danke_f.php'
+    finish = "Click here to finish"
+

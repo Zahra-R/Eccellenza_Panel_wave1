@@ -275,11 +275,4 @@ class Lexicon:
     transitions_c = 'out of 4 blocks. Thank you again, for taking the time to answer all questions. <br> Once you are ready, please proceed.'
 
     
-    
-    # goodbye page 
-    comment_label = 'If you have any comments or suggestions regarding the study, please indicate this here:'
-    goodbye_text = 'Thank you for your participation in our study! <br> You are now at the end of the study. To receive compensation please click on next .'
-
-    # adapt link
-    link = 'https://www.innofact-umfrage.de/sample_only/ub3/us/danke_f.php'
 

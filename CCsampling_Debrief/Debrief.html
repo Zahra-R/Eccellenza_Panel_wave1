@@ -14,11 +14,12 @@
 
 <div >
 <p> {{Lexicon.debrief1}} 
-{{if player.participant.reverseBoxes == False}} A{{else}} B{{endif}}
+{{if player.participant.reverseBoxes == True}} A{{else}} B{{endif}}
 {{Lexicon.debrief2}}
-{{if player.participant.reverseBoxes == False}} B {{else}} A{{endif}}
+{{if player.participant.reverseBoxes == True}} B {{else}} A{{endif}}
 {{Lexicon.debrief3}}
 </p>
+
 
 {{Lexicon.debrief_link1}}
 {{Lexicon.debrief_link2}}
@@ -31,12 +32,14 @@
 </div>
 
 
-<div class="next-btn">  
-    <div style="float: right; padding-top: 5vh;">
-         {% next_button %} 
-    </div>
-</div> 
 
+
+<div class="next-btn">
+    <div style="float: right; padding-top: 2vh;">
+        <button id="nextst"  style=" margin-top: 4vh;" class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
+ 
+    </div>
+</div>
 
 
 <input type="hidden" name="click_consequences" id="click_consequences" value="False" />

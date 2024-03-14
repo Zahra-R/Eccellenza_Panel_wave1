@@ -4,28 +4,21 @@
 {% endblock %}
 
 
+{% block title %}
+{{ Lexicon.goodbye_header }}
+{% endblock %}
+
 
 {% block content %} 
-<br>
-<label>{{ Lexicon.comment_label }}</label>
 
-<form method="post">
-   {% for field in form %}
-       {{formfield_errors field.name}}
-       <div>
-           <label  id={{field.id}} name={{field.name}}> </label>
-          {{field}}
-       </div>
-   {% endfor %}
-</form>
-
-<br>
-<br>
-<br>
 <p> {{ Lexicon.goodbye_text }} </p>
-<br>
 
-<button class="btn btn-primary btn-large reps" style="margin-top:3vh;" type="button" onclick="redirectToThankYouPage()"> {{Lexicon.next}} </button>
+<p>
+
+ 
+<button class="btn btn-primary btn-large reps" style="margin-top:3vh;" type="button" onclick="redirectToThankYouPage()"> {{Lexicon.finish}} </button>
+</p>
+
 {% endblock %}
 
  {% block scripts %}

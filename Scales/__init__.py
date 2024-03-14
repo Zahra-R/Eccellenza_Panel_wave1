@@ -45,8 +45,7 @@ def creating_session(subsession:Subsession):
 
 
 
-# custom function to automatically make likert type fields with 5 options
-# custom function to automatically make 4 option fields
+#region many very redundant functions 
 def make_likert7():
     return models.IntegerField(
         choices=[1,2,3,4,5,6,7],
@@ -88,6 +87,7 @@ def make_likert4():
             choices=[1,2,3,4],
             widget=widgets.RadioSelect,
         )
+#endregion
 
 
 

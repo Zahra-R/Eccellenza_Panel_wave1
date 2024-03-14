@@ -51,6 +51,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    generalFeedback = models.StringField(max_length=3000, blank=True)
     click_debunk = models.BooleanField()
     click_mechanism = models.BooleanField()
     click_ipcc = models.BooleanField()
@@ -104,8 +105,6 @@ class Debrief(Page):
         else:
             misinfofile = open('CCsampling/ClimateMisinfo_en.json')
             infofile = open('CCsampling/ClimateInfo_en.json')
-        misinfofile = open('CCsampling/ClimateMisinfo.json')
-        infofile = open('CCsampling/ClimateInfo.json')
         misinfo = json.load(misinfofile)['CCMisinfo']
         info = json.load(infofile)['CCInfo']
         seenMstatements = []
@@ -138,31 +137,27 @@ class Debrief(Page):
 
 class Feedback(Page):
     form_model = 'player'
-    form_fields = ["faithful", "use_data", "generalFeedback"]
+    form_fields = ["generalFeedback"]
+    @staticmethod
+    def vars_for_template(player: Player):
+        print("this should be the lixicon")
+        return dict(Lexicon=player.session.debriefLexi)
 
 
 
 class goodbye (Page): 
     form_model = 'player'
-    form_fields = ['comment']
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
+        return dict(Lexicon=player.session.debriefLexi)
     def vars_for_template(player: Player):
        return{
             #Lexicon': player.session.introLexi
-             'u': player.participant.label,
-             'participantlabel':player.participant.label,
-              'Lexicon': player.session.scalesLexi
+            'u': player.participant.label,
+            'participantlabel':player.participant.label,
+            'Lexicon': player.session.debriefLexi
 
         } 
-    @staticmethod
-    def js_vars(player):
-        Lexicon = player.session.scalesLexi
-        return dict(
-        form_fields = ['comment' ],
-        form_field_labels = [Lexicon.comment_label]
-    )
 
 
 
