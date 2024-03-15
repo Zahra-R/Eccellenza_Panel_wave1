@@ -85,7 +85,8 @@ def creating_session(subsession:Subsession):
     for player in subsession.get_players():
         if subsession.round_number == 1: 
             player.participant.randomInfoArray = random.sample(range(1,147),C.NUM_ROUNDS)
-            player.participant.randomMisinfoArray = random.sample(range(1,79),C.NUM_ROUNDS)
+            ### Important note! This used to be 79, but we removed two tweets because of too strong context effects from the misinfo database 
+            player.participant.randomMisinfoArray = random.sample(range(1,77),C.NUM_ROUNDS)
             player.participant.reverseBoxes = next(reverse_display)
             player.participant.seenMisinfo = []
             player.participant.seenMislInfo = []

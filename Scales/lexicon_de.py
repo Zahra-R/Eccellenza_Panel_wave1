@@ -144,9 +144,9 @@ class Lexicon:
     know_5c = "mehr als 5000 Jahre"
 
     know_6qu = "Welche der folgenden Optionen beschreibt am besten den Treibhausgaseffekt?"
-    know_6a = "Waldrodung und Plastikverschmutzung verursachen den Zusammenbruch von vielen Ökosystemen. Der zunehmende Verlust von Biodiversität und der Verlust von Flora und Fauna in der Wildniss wird Treibhausgaseffekt genannt."
+    know_6a = "Waldrodung und Plastikverschmutzung verursachen den Zusammenbruch von vielen Ökosystemen. Der zunehmende Verlust von Biodiversität und der Verlust von Flora und Fauna in der Wildnis wird Treibhausgaseffekt genannt."
     know_6b = "Treibhausgase verursachen Luftverschmutzung. Sie führen zu mehr feinen Teilchen und feinerem Staub welcher wiederum die Ventilation verringert. Ohne die Zirkulation von frischer Luft, wird die Erde so immer wärmer. "
-    know_6c = "Überschüssige Treibhausgase sammeln sich in der Atmosphäre. Aufgrund ihrer molekularen Struktur, wird die infrarot Strahlung der Erde reflektiert und zur Erde zurückgestrahlt. Auf diese Weise wird Hitze eingeschlossen."
+    know_6c = "Überschüssige Treibhausgase sammeln sich in der Atmosphäre. Aufgrund ihrer molekularen Struktur, wird die Infrarot-Strahlung der Erde reflektiert und zur Erde zurückgestrahlt. Auf diese Weise wird Hitze eingeschlossen."
     
 
     know_7qu = "Wenn wir in dem jetzigen Tempo weitermachen, nach wie vielen Jahren werden wir unser CO2 Budget verbraucht haben, um den Temperaturanstieg auf 1,5 °C zu begrenzen?" # is Sep 2026 
