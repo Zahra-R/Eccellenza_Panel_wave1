@@ -256,8 +256,7 @@ class Player(BasePlayer):
     pit2 = make_likert10()
 
     ## political orientation
-    po1 = make_likert10()
-    po2 = make_likert10()
+    polOrientation = make_likert10()
 
     ### Belief
     belief1Happening= make_likert10()
@@ -447,18 +446,27 @@ class BehaviorsFlying(Page):
     )
 
 class WVValues(Page):
+    @staticmethod
+    def get_form_fields(player):
+        if player.session.config['language'] == "zh_hans":
+            return ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3']
+        else:
+            return ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3', "polOrientation"]
     form_model = 'player'
-    form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
     @staticmethod
     def js_vars(player):
         Lexicon = player.session.scalesLexi
-        return dict(
-        form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3'],
-        form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label]
-    )
+        if  player.session.config['language'] == "zh_hans":
+            return dict(
+            form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3'],
+            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label])
+        else:
+            return dict(
+            form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3', "polOrientation"],
+            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label, Lexicon.polOrientationLabel])
 
 class IBValues(Page):
     form_model = 'player'
@@ -473,22 +481,7 @@ class IBValues(Page):
         form_fields= ['ibv1', 'ibv2', 'ibv3', 'ibv4'],
         form_field_labels = [Lexicon.ibv1Label, Lexicon.ibv2Label , Lexicon.ibv3Label, Lexicon.ibv4Label]
     )
-    
-class PolOrientation(Page):
-    form_model = 'player'
-    form_fields= ['po1', 'po2']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
-    @staticmethod
-    def js_vars(player):
-        Lexicon = player.session.scalesLexi
-        return dict(
-        form_fields= ['po1', 'po2'],
-        form_field_labels = [Lexicon.po1Label, Lexicon.po2Label ]
-    )
-    
-    
+        
 class PITrust(Page):
     form_model = 'player'
     form_fields= ['pit1', 'pit2']
@@ -529,13 +522,12 @@ class transition (Page):
 
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
-#page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
+#page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PITrust, CCKnowledge ,Demographics]
 # copy pf page_sequence with original order of scales 
-# page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
+# page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
 page_sequence = [ transition, 
-                 CCKnowledge, Belief, Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
+                 WVValues, CCKnowledge, Belief, Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
                   
-                 CCEmotion, PolOrientation, PITrust, 
-                 WVValues, IBValues,
+                 CCEmotion, PITrust, IBValues,
                 DemographicsEnd]

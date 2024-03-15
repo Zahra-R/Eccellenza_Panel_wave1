@@ -21,11 +21,11 @@ class Lexicon:
     not_at_all_important = "überhaupt nicht wichtig"
     extremely_important = "extrem wichtig"
     
-    strongly_liberal = "stark liberal"
+    strongly_liberal = "links/ sehr liberal"
     somewhat_liberal = "eher liberal"
     moderate = "moderat"
     somewhat_conservative = "eher konservativ"
-    strongly_conservative = "stark konservativ"
+    strongly_conservative = "rechts/ sehr konservativ"
     no_trust_at_all = "absolutes Misstrauen"
     full_trust = "absolutes Vertrauen"
     completely_false = "komplett falsch"
@@ -102,10 +102,7 @@ class Lexicon:
     ibv4Label = "Einheit mit der Natur (sich in die Natür einfügen)"
 
     # Political Orientation Pennycook et al 2020
-    po_title = "Politische Ausrichtung"
-    po_header = "Was ist Ihre allgemeine Haltung zu politischen Themen?"
-    po1Label = "Bei sozialen Themen bin ich..."
-    po2Label = "Bei wirtschaftlichen Themen bin ich..."
+    polOrientationLabel = "Wo sehen Sie sich im politischen Spektrum?"
 
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
     pit_title = "Vertrauen im Bezug auf den Klimawandel"

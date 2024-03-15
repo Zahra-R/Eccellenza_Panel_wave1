@@ -83,7 +83,9 @@ input.larger {
 table.radiotable th,
 table.radiotable td,
 table.radiotable2 th,
-table.radiotable2 td {
+table.radiotable2 td,
+table.radiotable3 th,
+table.radiotable3 td {
   padding: 2%;
   text-align: center;
   /* Center-align the entire table */
@@ -98,7 +100,9 @@ table.radiotable td:first-child {
 }
 
 table.radiotable2 th:first-child,
-table.radiotable2 td:first-child {
+table.radiotable2 td:first-child,
+table.radiotable3 th:first-child,
+table.radiotable3 td:first-child  {
   text-align: center;
 }
 
@@ -118,6 +122,16 @@ table.radiotable2 tr:nth-child(4n+2), table.radiotable2 tr:nth-child(4n+1) {
 
 table.radiotable2 tr:nth-child(odd) {
   background-color: #c0e3e0;
+}
+
+
+table.radiotable3 tr:nth-child(6n+1),table.radiotable3 tr:nth-child(6n+2), table.radiotable3 tr:nth-child(6n+3) {
+  background-color: #d0dddc;
+}
+
+
+table.radiotable3 tr:nth-child(6n+4),table.radiotable3 tr:nth-child(6n+5), table.radiotable3 tr:nth-child(6n+6) {
+  background-color: #e0f6f4;
 }
 
 .radiotablebutton {
