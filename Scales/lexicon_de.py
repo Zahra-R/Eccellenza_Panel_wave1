@@ -21,11 +21,11 @@ class Lexicon:
     not_at_all_important = "überhaupt nicht wichtig"
     extremely_important = "extrem wichtig"
     
-    strongly_liberal = "links/ sehr liberal"
+    strongly_liberal = "links/<br> sehr liberal"
     somewhat_liberal = "eher liberal"
     moderate = "moderat"
     somewhat_conservative = "eher konservativ"
-    strongly_conservative = "rechts/ sehr konservativ"
+    strongly_conservative = "rechts/<br> sehr konservativ"
     no_trust_at_all = "absolutes Misstrauen"
     full_trust = "absolutes Vertrauen"
     completely_false = "komplett falsch"
