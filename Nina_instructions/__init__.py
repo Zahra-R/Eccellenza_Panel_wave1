@@ -37,20 +37,31 @@ def creating_session(subsession:Subsession):
         if subsession.round_number == 1: 
             player.participant.order_tasks = next(order_tasks)
 
+
+
 class Player(BasePlayer):
-    pass
+    block_order = models.IntegerField()
+    already_counted = models.BooleanField(initial=False)
    
 
 # FUNCTIONS
 
 # for this all to work, need to add 'task_rounds' as PARTICIPANT_FIELDS in settings.py!!
 # PAGES
-class transition(Page):
-    form_model = 'player'
 
+class transition (Page): 
+    form_model = 'player'
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.introNinaLexi) 
+        if player.already_counted == False:
+            try: 
+                player.participant.task_counter
+            except:   
+                player.participant.task_counter = 0
+            player.participant.task_counter += 1 
+            player.block_order = player.participant.task_counter
+            player.already_counted = True
+        return dict(Lexicon=player.session.introNinaLexi, blocknumber = player.block_order)
    
     
 class instructions(Page):

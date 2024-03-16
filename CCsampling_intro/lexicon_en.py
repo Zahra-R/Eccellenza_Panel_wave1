@@ -17,12 +17,14 @@ class Lexicon:
 
     # Transition page 
     #these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
-    transition_title = 'Welcome to the next block of the study'
-    transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
-    # add counter (Zahra)
-    transitions_b =' This is block number  '
-    transitions_c = 'out of 4 blocks. Thank you again, for taking the time to answer all questions. <br> Once you are ready, please proceed.'
-
+    
+    transitions_first_1 = 'Welcome to the study'
+    transitions_first_2= 'This study consists of four parts. You are about to begin the first part. Please try to complete this part in one go without any breaks. We appreciate your time for participating in this study. Click "next" when you are ready.'
+    transition_title = 'Welcome to the next part of the study'
+    transitions_second_1 =  'You have completed'
+    transitions_second_2 = 'out of for parts of this study. Part'
+    transitions_second_3 = 'is about to begin.  If you need a short break before continuing with the study, now would be a good time. '
+    transitions_second_4 = 'Please try to complete the next part in one go without any breaks. We appreciate your time for participating in this study. <p> Once you are ready, please click "next".'
 
     ## Climate Change Belief
 

@@ -108,6 +108,7 @@ PARTICIPANT_FIELDS = [
     ## Overall Structure
     'order_tasks',
     'pLangCode',
+    'task_counter',
 
      #CC SAMPLING FIELDS
     'randomInfoArray',

@@ -16,13 +16,15 @@ class Lexicon:
     ccconcern_instruction = "Bitte bewegen Sie den Schieberegler."
     ccconcern_question = " Wie besorgt sind Sie über den Klimawandel?"
 
-     # transition
-    transition_title = 'Willkommen beim nächsten Block der Studie'
-    transitions_a = 'Vielen Dank für Ihre bisherigen Antworten. Wenn Sie eine kurze Pause benötigen, bevor Sie mit der Studie fortfahren, wäre jetzt ein guter Zeitpunkt. <p> Sobald Sie auf den weiter-Knopf auf dieser Seite klicken, bitten wir Sie, diesen Block ohne Unterbrechung zu bearbeiten. </p>'
-    # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
-    transitions_b ='Dies ist Block Nummer '
-    transitions_c = ' von insgesamt 4 Blöcken. Vielen Dank, dass Sie sich die Zeit genommen haben, alle Fragen zu beantworten. Wenn Sie bereit sind, fahren Sie bitte fort.'
-
+    # transition
+    transitions_first_1 = 'Willkommen zu der Studie'
+    transitions_first_2= 'Diese Studie besteht aus vier Teilen. Der erste Teil beginnt gleich. Bitte versuchen Sie, den Teil ohne Unterbrechung zu bearbeiten. Herzlichen Dank für Ihre Zeit.'
+    transition_title = 'Willkommen zum nächsten Teil der Studie. '
+    transitions_second_1 =  'Sie haben jetzt '
+    transitions_second_2 = 'von insgesamt 4 Teilen abgeschlossen. Teil'
+    transitions_second_3 = 'wird gleich beginnen. Wenn Sie eine Pause benötigen, wäre jetzt eine gute Zeit dafür.'
+    transitions_second_4 = 'Sobald Sie mit dem nächsten Teil beginnen, bitten wir Sie, diesen möglichst ohne Unterbrechung zu bearbeiten. Vielen Dank für Ihre Zeit. Wenn Sie bereit sind, klicken Sie auf "Weiter".'
+    
     ## Climate Change belief
     
     beliefCC_intro = "Klimawandel bezeichnet die Idee, dass die durchschnittliche Temperatur der Welt seit den letzten 150 Jahren am steigen ist, zukünftig noch mehr steigen wird, und dass sich infolgedessen das Weltklima verändern wird. Was denken Sie? Glauben Sie, dass es den Klimawandel gibt?"

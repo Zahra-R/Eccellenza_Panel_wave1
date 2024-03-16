@@ -44,7 +44,6 @@ def creating_session(subsession:Subsession):
     subsession.session.scalesLexi = Lexicon 
 
 
-
 #region many very redundant functions 
 def make_likert7():
     return models.IntegerField(
@@ -302,12 +301,11 @@ class Player(BasePlayer):
 
     ### Demographics
     ageYear = models.IntegerField(min=1900,max = 2008)  # change in different waves
-    
     residential_area = models.StringField()
     zip_code = models.StringField(blank=True)
+    block_order = models.IntegerField()
     #party_affiliation = models.StringField(choices=get_party_choices(LANGUAGE_CODE, Lexicon) )
 
-    comment = models.StringField (blank=True)
 
 
 
@@ -517,6 +515,13 @@ class transition (Page):
     form_model = 'player'
     @staticmethod
     def vars_for_template(player: Player):
+        try: 
+            player.participant.task_counter
+            print("none is true")
+        except:   
+            player.participant.task_counter = 0
+        player.participant.task_counter += 1 
+        player.block_order = player.participant.task_counter
         return dict(Lexicon=player.session.scalesLexi)
     
 

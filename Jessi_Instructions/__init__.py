@@ -17,7 +17,7 @@ class C(BaseConstants):
     NAME_IN_URL = 'instructions_carbonTaxtask'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
-    
+
 
 class Subsession(BaseSubsession):
     pass
@@ -64,15 +64,25 @@ class Player(BasePlayer):
     AssociationRating4 = make_field_associationRating('Here should be the association')
     
     range_party = models.IntegerField( min=-100, max=100)
+    block_order = models.IntegerField()
+    already_counted = models.BooleanField(initial=False)
 
 
 # PAGES
-class transition(Page):
+class transition (Page): 
     form_model = 'player'
-
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.JessiIntroLexi) 
+        if player.already_counted == False:
+            try: 
+                player.participant.task_counter
+            except:   
+                player.participant.task_counter = 0
+            player.participant.task_counter += 1 
+            player.block_order = player.participant.task_counter
+            player.already_counted = True
+        return dict(Lexicon=player.session.JessiIntroLexi, blocknumber = player.block_order)
+    
     
 class instructions_intro(Page):
     form_model = 'player'

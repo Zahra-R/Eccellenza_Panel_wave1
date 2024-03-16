@@ -68,6 +68,8 @@ class Player(BasePlayer):
     beliefConseqences2 = make_likert_n(7)
     beliefConseqences3 = make_likert_n(7)
     beliefConseqences4 = make_likert_n(7)
+    block_order = models.IntegerField()
+    already_counted = models.BooleanField(initial=False)
    
 
 # ---------------------------------------------------------------
@@ -102,7 +104,16 @@ class transition (Page):
     form_model = 'player'
     @staticmethod
     def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.samplingIntroLexi)
+        if player.already_counted == False:
+            try: 
+                player.participant.task_counter
+            except:   
+                player.participant.task_counter = 0
+            player.participant.task_counter += 1 
+            player.block_order = player.participant.task_counter
+            player.already_counted = True
+        return dict(Lexicon=player.session.samplingIntroLexi, blocknumber = player.block_order)
+    
    
 
 page_sequence = [

@@ -69,6 +69,7 @@ def creating_session(subsession:Subsession):
     for player in subsession.get_players():
         if subsession.round_number == 1: 
             player.participant.order_tasks = next(order_tasks)
+            player.participant.task_counter = 0
     
 
         #region Choices for demographics
