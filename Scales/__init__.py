@@ -460,11 +460,13 @@ class WVValues(Page):
         if  player.session.config['language'] == "zh_hans":
             return dict(
             form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3'],
-            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label])
+            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label],
+            langcode= "zh_hans")
         else:
             return dict(
             form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3', "polOrientation"],
-            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label, Lexicon.polOrientationLabel])
+            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label, Lexicon.polOrientationLabel],
+            lang_code="west")
 
 class IBValues(Page):
     form_model = 'player'

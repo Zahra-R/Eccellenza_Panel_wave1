@@ -270,8 +270,8 @@ class Lexicon:
     # these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
     transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
     # add counter (Zahra)
-    transitions_b =' This is block number  '
-    transitions_c = 'out of 4 blocks. Thank you again, for taking the time to answer all questions. <br> Once you are ready, please proceed.'
+    transitions_b =' This is the last  '
+    transitions_c = 'out of 4 blocks. Thank you for taking the time to complete everything so far. <br> Once you are ready, please click "next".'
 
     
 

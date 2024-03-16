@@ -107,7 +107,13 @@
 
 var acc = document.getElementsByClassName("accordion");
         var maxid= 6
-        var idarray = ['id_hie1', 'id_hie2', 'id_hie3', 'id_ind1', 'id_ind2', 'id_ind3', 'pol_orientation']
+        if (js_vars.langcode == "zh_hans" ){
+            var idarray = ['id_hie1', 'id_hie2', 'id_hie3', 'id_ind1', 'id_ind2', 'id_ind3']
+        }
+        else {
+            var idarray = ['id_hie1', 'id_hie2', 'id_hie3', 'id_ind1', 'id_ind2', 'id_ind3', 'id_polOrientation']
+        }
+       
 
         function mark_answered(element){
             myid = element[0].dataset.parent
