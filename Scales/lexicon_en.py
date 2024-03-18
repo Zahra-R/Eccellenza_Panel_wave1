@@ -13,51 +13,50 @@ class Lexicon:
     
     completely_agree = "completely agree"
     completely_disagree = "completely disagree"
+
+    do_not_believe = "I do not believe that climate change is happening"
     
     dont_know = "Don't know"
     opposed_to_values = "opposed to my values"
-    strongly_liberal = "Strongly Liberal"
+    not_important = "not <br> important"
+    not_at_all_important = "not at all important"
+    extremely_important = "extremely <br>  important"
+
+   
     somewhat_liberal = "Somewhat Liberal"
     moderate = "Moderate"
     somewhat_conservative = "Somewhat Conservative"
-    strongly_conservative = "Strongly Conservative"
     no_trust_at_all = "Totally distrust"
     full_trust = "Totally trust"
     completely_false = "Completeley False"
     completely_true = "Completely True"
 
-
-    ## New 3 cause items from Valkengoed
-    ## to be inserted here
-    # causes
-#     Human activities are a major cause of climate change.
-# 2. Climate change is mostly caused by human activity.
-# 3. The main causes of climate change are human activities.
-    # consequences final call whether to include still to be made
-
-# Overall, climate change will bring more negative than positive consequences to the world.
-# 2. Climate change will bring about serious negative consequences.
-# 3. The consequences of climate change will be very serious.
     
-    # I think climate change is one of the greatest global risks. 
-    # There are much less downsides to climate action than to the consequences of inaction and delay. 
-    # A climate-friendly transformation would have many positive side effects, besides adressing the risks of climate change. 
+    ## belief in climate change 
+    beliefCC_intro = "Climate change refers to the idea that the world’s average temperature has been increasing over the past 150 years, will increase more in the future, and that the world’s climate will change as a result. What do you think: Do you think climate change is happening?"
+    belief1HappeningLabel = "I believe that climate change is real."
 
+    ### belief in (human) causes taken from  Valkengoed
+    beliefHuman_title = "What do you believe?"
+    beliefHuman_header = "How much do you agree with the following statements?"
+    beliefHuman1Label = "Human activities are <b> not </b> a major cause of climate change." # reversed (originally not)
+    beliefHuman2Label = "Climate change is entirely caused by human activities."
+    beliefHuman3Label = "The main causes of climate change are human activities." 
 
+    beliefConseqences1Label = "Climate change currently is the greatest threat to humankind."
+    beliefConseqences2Label = "Climate change will bring about serious negative consequences."
+    beliefConseqences3Label = "The consequences of climate change will <b> not </b> be very serious." # reversed (originally not)
 
-    ##3 concern items as emotions. 
-    ## suggestion: worry, concerned, apprehensive (alternatives: upset or distressed)
-    ## german: besorgt, bekümmert, beunruhigt.
+    beliefConsensLabel = "Which percentage of climate scientists agree that climate change is real and caused by human activity?"
 
     ##belief in solutions
-    # It is possible to meet energy demands with renewable and sustainable energy alone. 
-    # Transforming to a sustainable and climate-friendly society would reduce our national standards of living. 
-    # Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible.
 
-    # I think High-Income countries have a greater responsibilty to reduce greenhouse gas emissions than Low and middle-income countries. 
-    # I would rather prepare to live with climate change than fight climate change. 
-    # Industry has to change for the climate, not individuals. 
-    
+    beliefSolutions1Label = "Transforming to a sustainable and climate-friendly society would reduce our national standards of living."  # reversed
+    beliefSolutions2Label = " Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible." # reversed
+    beliefSolutions3Label = "I think High-income countries have a greater responsibility to reduce greenhouse gas emissions than low and middle-income countries." #responsibility national
+    beliefSolutions4Label = "Industry has a greater responsibility to reduce greenhouse gas emissions than individuals."  #responsibility systemic
+    beliefSolutions5Label = " I would rather prepare to live with climate change than to fight climate change." # adaptation
+
 
     #Climate Change Emotion Knauf/Truelove
     cce_title = "Attitudes about Climate Change"
@@ -82,16 +81,6 @@ class Lexicon:
     emoConcern2Label = "concerned"
     emoConcern3Label = "upset"
 
-    ### beliefs taken from  Valkengoed
-    belief_title = "What do you believe?"
-    belief_header = "How much do you agree with the following statements?"
-    belief1Label = "Human activities are a major cause of climate change."
-    belief2Label = "Climate change is mostly caused by human activity."
-    belief3Label = "The main causes of climate change are human activities."
-
-    beliefConsensLabel = "Which percentage of climate scientists agree that climate change is real and caused by human activity?"
-
-
 
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
     ## TBD kevin tam
@@ -113,19 +102,16 @@ class Lexicon:
     ibv4Label = "Unity with Nature (fitting into nature)"
 
     # Political Orientation Pennycook et al 2020
-    po_title = "Political Orientation"
-    po_header = "What's your general stance in political issues?"
-    po1Label = "On social issues I am..."
-    po2Label = "On economic issues I am..."
+    polOrientationLabel = "How do you see your general stance in political issues?."
+    strongly_liberal = "strongly liberal/left-wing"
+    strongly_conservative = "strongly conservative/right-wing"
+
 
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
     pit_title = "Trust in regards to climate change"
     pit_header = "How much do you trust these actors in climate change?"
-    pit1Label = "the US government"
-  #  pit2Label = "US scientists"
-    pit2Label = "foreign governments"
-   # pit4Label = "foreign scientists"
-   # pit5Label = "the Intergovernmental Panel on Climate Change (IPCC)"
+    pit1Label = "the local government"
+    pit2Label = "the national government"
 
 
     # Knowledge Question from Allianz Climate Literacy Report
@@ -170,24 +156,24 @@ class Lexicon:
     know_6c = "Excess greenhouse gases accumulate in the atmosphere. Because of their molecular structure, the infrared radiation from the earth is reflected and is re-radiated to the earth. This way, heat is trapped."
     
     
-    know_8qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" # this will be September 2026 (Stand 2023)
-    know_8a = "less than 1 year"
-    know_8b = "1-2 years"
-    know_8c = "2-4 years"
-    know_8d = "More than 4 years"
+    know_7qu = "At current rates, after how many years we will have burnt our CO2-budget to limit the temperature rise to 1.5C?" # this will be September 2026 (Stand 2023)
+    know_7a = "less than 1 year"
+    know_7b = "1-2 years"
+    know_7c = "2-4 years"
+    know_7d = "More than 4 years"
     
 
-    know_9qu = "Which country/region causes the highest absolute CO2-emissions per year?"
+    know_8qu = "Which country/region causes the highest absolute CO2-emissions per year?"
+    know_8a = "China"
+    know_8b = "USA"
+    know_8c = "EU"
+    know_8d = "India"
+
+    know_9qu = "Which country/region causes the highest per-capita CO2-emissions per year?"
     know_9a = "China"
     know_9b = "USA"
     know_9c = "EU"
     know_9d = "India"
-
-    know_10qu = "Which of the four countries/regions causes the highest per-capita CO2-emissions per year?"
-    know_10a = "China"
-    know_10b = "USA"
-    know_10c = "EU"
-    know_10d = "India"
     
     ### Behaviors ###
     behaviors_title = ' Behavior '
@@ -262,29 +248,8 @@ class Lexicon:
     ### Demographics
     demographics_title = "Personal data"
     demographics_header = "Please enter the following information about yourself."
-
-    age_label = "How old are you?"
-    gender_label = "What gender do you identify as?"
-    female = "Female"
-    male = "Male"
-    diverse = "Diverse"
-    other = "Other"
-
-    income_label = "What is your yearly income?"
-    income_less_than_A = "Less than $25,000"
-    income_A_to_B = "$25,000 - $50,000"
-    income_B_to_C = "$50,001 - $75,000"
-    income_C_to_D = "$75,001 - $100,000"
-    income_more_than_D = "More than $100,000"
-    prefer_not_to_say = "Prefer not to say"
-
-    education_label = "What is your highest level of education?"
-    no_formal = "No formal education"
-    obligatory = "Compulsory education"
-    high_school = "Secondary education /High School / Vocational training"
-    degree = "Tertiary education: Bachelor's Degree / Master's Degree"
-    doctoral_degree = "Doctoral Degree or higher"
-    prefer_not_to_say_education = "Prefer not to say"
+    
+    ageYear_label = "In which year were you born?"
 
     residential_area_label = "What describes your residential area best?"
     metropolitan_area = "Metropolitan Area"
@@ -300,9 +265,13 @@ class Lexicon:
     other_party = "Other"
 
     # Transition page
-    Transition_text = "Thank you for your participation so far! <br> You have now completed the policy task and will continue to answer some questions about your attitudes and perceptions. "
+    transition_title = 'Welcome to the last block of the study'
     
-    # goodbye page 
-    goodbye_text = "Thank you for your participation in our study! <br> You are now at the end of the study and will be redirected for compensation."
+    # these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
+    transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
+    # add counter (Zahra)
+    transitions_b =' This is the last  '
+    transitions_c = 'out of 4 blocks. Thank you for taking the time to complete everything so far. <br> Once you are ready, please click "next".'
 
+    
 

@@ -12,29 +12,28 @@
 {% block content %}
 <br>
 {{ Lexicon.intro_a}}
+<br>
+<br>
 
-<p> {{ Lexicon.food_overall_text }}</p>
+<br>
 
+<label>{{ Lexicon.regional_label }}</label>
+<br>
 <table class="radiotable">
     <tr>
-        <th> </th>
 
-        <th class="radio-column"> {{ Lexicon.food_overall_A }} </th>
-        <th class="radio-column"> {{ Lexicon.food_overall_B }} </th>
-        <th class="radio-column">{{ Lexicon.food_overall_C }} </th>
-        <th class="radio-column"> {{ Lexicon.food_overall_D }} </th>
-        <th class="radio-column"> {{ Lexicon.food_overall_E }} </th>
-        <th class="radio-column"> {{ Lexicon.food_overall_F }} </th>
-        <th class="radio-column">{{ Lexicon.food_overall_G }} </th>
-        <th class="radio-column"> {{ Lexicon.food_overall_H }} </th>
+        <th class="radio-column"> {{ Lexicon.regional_less_than }} </th>
+        <th class="radio-column"> {{ Lexicon.regional_quarter }} </th>
+        <th class="radio-column">{{ Lexicon.regional_half }} </th>
+        <th class="radio-column"> {{ Lexicon.regional_3_quarter }} </th>
+        <th class="radio-column"> {{ Lexicon.regional_more_than }} </th>
     </tr>
 
     {% for field in form %}
-        {% if field.name == 'footprint_food_overall1' or field.name == 'footprint_food_overall2' or field.name == 'footprint_food_overall3' or field.name == 'footprint_food_overall4' or field.name == 'footprint_food_overall5'    %}
+        {% if field.name == 'footprint_regional'    %}
         {{formfield_errors field.name}}
 
         <tr>
-            <th style="font-weight:normal;" width="15%;"  id={{field.id}} name={{field.name}}>  </th>
             {{ for choice in field }}
             <td>{{ choice }}</td>
             {{ endfor }}
@@ -44,7 +43,30 @@
 {{ endfor }}
 </table>
 <br>
+<label>{{ Lexicon.electricity_label }}</label>
+<br>
+<table class="radiotable">
+    <tr>
 
+        <th class="radio-column"> {{ Lexicon.electricity_D }} </th>
+        <th class="radio-column"> {{ Lexicon.electricity_C }} </th>
+        <th class="radio-column">{{ Lexicon.electricity_B }} </th>
+        <th class="radio-column"> {{ Lexicon.electricity_A }} </th>
+    </tr>
+
+    {% for field in form %}
+        {% if field.name == 'footprint_electricity'    %}
+        {{formfield_errors field.name}}
+
+        <tr>
+            {{ for choice in field }}
+            <td>{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+    {% endif %}
+
+{{ endfor }}
+</table>
 <br>
 
 
@@ -63,6 +85,7 @@
 <script>
 
     document.addEventListener("DOMContentLoaded", function () {
+        setWidthForTableColumns1();
     });
 
     $(document).ready(function () {

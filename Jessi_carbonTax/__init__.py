@@ -2,25 +2,18 @@ import random
 import json
 from os import environ
 from otree.api import *
-LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
+from settings import LANGUAGE_CODE
+
+#LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
 #from settings import LANGUAGE_CODE
 
 
 author = 'Zahra Rahmani'
 
 
-if LANGUAGE_CODE == 'de':
-    from .lexicon_de import Lexicon
-elif LANGUAGE_CODE == 'zh-hans':
-    from .lexicon_zh_hans import Lexicon
-else:
-    LANGUAGE_CODE = "en"
-    from .lexicon_en import Lexicon
-
 # this is the dict you should pass to each page in vars_for_template,
 # enabling you to do if-statements like {{ if de }} Nein {{ else }} No {{ endif }}
-which_language = {'en': False, 'de': False, 'zh_hans': False}  # noqa
-which_language[LANGUAGE_CODE[:2]] = True
+
 
 
 
@@ -28,32 +21,50 @@ class C(BaseConstants):
     NAME_IN_URL = 'carbon_taxtask'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 12
-    if LANGUAGE_CODE == 'de':
-        POLICY_COMBINATIONS_TABLE = open('Jessi_carbonTax/Policy_Combinations_Table_de.json')
-    elif LANGUAGE_CODE == 'zh-hans':
-        POLICY_COMBINATIONS_TABLE = open('Jessi_carbonTax/Policy_Combinations_Table_zh_hans.json')
-    else:
-        POLICY_COMBINATIONS_TABLE = open('Jessi_carbonTax/Policy_Combinations_Table_en.json')
-    PolicyTable = json.load(POLICY_COMBINATIONS_TABLE)['PolicyTable']
 
-    def get_attributes():
-        if LANGUAGE_CODE == 'de':
-            return ["Sektor", "Preis", "Einnahmenverwendung", "Inkrafttreten"]
-        elif LANGUAGE_CODE == 'zh-hans':
-            return["行业", "价格", "收入机制", "实施时间"]
-        else:
-            return ["Sector", "Price", "Revenue mechanism", "Implementation timing"]
 
-    Attributes = get_attributes()
+    POLICY_COMBINATIONS_TABLE_de = open('Jessi_carbonTax/Policy_Combinations_Table_de.json')
+    POLICY_COMBINATIONS_TABLE_us =  open('Jessi_carbonTax/Policy_Combinations_Table_en.json')
+    POLICY_COMBINATIONS_TABLE_zhans =  open('Jessi_carbonTax/Policy_Combinations_Table_zh_hans.json')
+    PolicyTable = json.load(POLICY_COMBINATIONS_TABLE_de)['PolicyTable']
+    PolicyTable = json.load(POLICY_COMBINATIONS_TABLE_zhans)['PolicyTable']
+    PolicyTable = json.load(POLICY_COMBINATIONS_TABLE_us)['PolicyTable']
+
 
 
 class Subsession(BaseSubsession):
     pass
 
-
+def creating_session(subsession:Subsession):
+    
+    if subsession.session.config['language'] == 'de':
+        from .lexicon_de import Lexicon
+        subsession.session.myLangCode = "_de"
+    elif subsession.session.config['language'] == 'zh_hans':
+        from .lexicon_zh_hans import Lexicon
+        subsession.session.myLangCode = "_ch"
+    else:
+        from .lexicon_en import Lexicon
+        subsession.session.myLangCode = "_en"
+    subsession.session.JessiTaskLexicon = Lexicon 
+    
+    if subsession.round_number == 1:
+        for p in subsession.get_players():
+            round_numbers = list(range(0, C.NUM_ROUNDS))
+            random.shuffle(round_numbers)
+            p.participant.task_rounds_J = round_numbers
+                
 class Group(BaseGroup):
     pass
 
+
+def get_attributes(player):
+        if player.session.config['language'] == 'de':
+            return ["Sektor", "Preis", "Einnahmenverwendung", "Inkrafttreten"]
+        elif player.session.config['language'] == 'zh_hans':
+            return ["行业", "价格", "收入机制", "实施时间"]
+        else:
+            return ["Sector", "Price", "Revenue mechanism", "Implementation timing"]
 
 #()
 
@@ -66,13 +77,7 @@ class Player(BasePlayer):
 
 # FUNCTIONS
 # for random order of tasks
-def creating_session(subsession: Subsession):
-    if subsession.round_number == 1:
-        for p in subsession.get_players():
-            round_numbers = list(range(0, C.NUM_ROUNDS))
-            random.shuffle(round_numbers)
-            p.participant.task_rounds_J = round_numbers
-                
+
 # for this all to work, need to add 'task_rounds' as PARTICIPANT_FIELDS in settings.py!!
 # PAGES
 
@@ -93,7 +98,7 @@ class task_page00(Page):
         random_attribute_order = list(range(0,4))
         random.shuffle(random_attribute_order)
         current_policy_table_shuffled = []
-        attributes = C.Attributes
+        attributes = get_attributes(player)
         order_attributes = []
         for i in random_attribute_order:
             current_policy_table_shuffled.append(my_vignette_table[i])
@@ -102,23 +107,37 @@ class task_page00(Page):
         return {
             "current_policy_table": current_policy_table_shuffled,
             "random_attribute_order": random_attribute_order,
-            'Lexicon': Lexicon,
-            'which_language': which_language,
-            'LANGUAGE_CODE': LANGUAGE_CODE,
-            'Attributes' : C.Attributes
+            'Attributes' : attributes ,
+            'Lexicon': player.session.JessiTaskLexicon
         }
+   
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.JessiTaskLexicon
+        return dict(
+        form_fields = ['accept'] ,
+        form_field_labels = [Lexicon.would_accept ]
+    )
 
 class inter_trial(Page):
     form_model = 'player'
     form_fields = ['filler_ITI']
     timeout_seconds = 0.4
+
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.JessiTaskLexicon)
+     
     @staticmethod
     def vars_for_template(player: Player):
-        return {
-            'Lexicon': Lexicon,
-            'which_language': which_language,
-        }
-
+        return{
+            'Lexicon': player.session.JessiTaskLexicon
+        } 
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.JessiTaskLexicon
+        return dict(
+        form_fields = ['filler_ITI'] 
+    )
 
 
 # Page sequence
@@ -126,3 +145,4 @@ page_sequence = [
     task_page00,
     inter_trial
     ]
+

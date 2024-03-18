@@ -43,24 +43,34 @@ def creating_session(subsession:Subsession):
         from .lexicon_en import Lexicon  
     subsession.session.samplingIntroLexi = Lexicon
 
-    import itertools
-    box_labels = itertools.cycle([True, True, False, False])
-    for player in subsession.get_players():
-        if subsession.round_number == 1: 
-            player.participant.telling_box_label = next(box_labels)
+
+
+def make_likert_n(n):
+    nchoices = list(range(1, n+1))
+    return models.IntegerField(
+        choices=nchoices,
+        widget=widgets.RadioSelect,
+)
 
 
 
 #PLAYER FUNCTION 
 class Player(BasePlayer):
     range_ccconcern = models.IntegerField( min=-100, max=100)
+    ### Belief
+    belief1Happening= make_likert_n(6)
+
+    beliefHuman1 = make_likert_n(10)
+    beliefHuman2 = make_likert_n(10)
+    beliefHuman3 = make_likert_n(10)
+
+    beliefConseqences1 = make_likert_n(10)
+    beliefConseqences2 = make_likert_n(10)
+    beliefConseqences3 = make_likert_n(10)
+    beliefConseqences4 = make_likert_n(10)
+    block_order = models.IntegerField()
+    already_counted = models.BooleanField(initial=False)
    
-
-
-
-        
-
-
 
 # ---------------------------------------------------------------
 # ------------------- PAGES--------------------------------------
@@ -76,11 +86,38 @@ class Introduction(Page):
 
 class beforeTask(Page):
     form_model='player'
-    form_fields = ['range_ccconcern']
+    form_fields = ['range_ccconcern', 'beliefHuman1', 'beliefHuman2', 'beliefHuman3',
+                  'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3']
     def vars_for_template(player: Player):
         return dict(Lexicon = player.session.samplingIntroLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.samplingIntroLexi
+        return dict(
+        form_fields= [ 'beliefHuman1','beliefHuman2', 'beliefHuman3',
+                  'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3'],
+        form_field_labels = [ Lexicon.beliefHuman1Label, Lexicon.beliefHuman2Label, Lexicon.beliefHuman3Label, 
+                             Lexicon.beliefConseqences1Label, Lexicon.beliefConseqences2Label, Lexicon.beliefConseqences3Label ]
+    )
+    
+class transition (Page): 
+    form_model = 'player'
+    @staticmethod
+    def vars_for_template(player: Player):
+        if player.already_counted == False:
+            try: 
+                player.participant.task_counter
+            except:   
+                player.participant.task_counter = 0
+            player.participant.task_counter += 1 
+            player.block_order = player.participant.task_counter
+            player.already_counted = True
+        return dict(Lexicon=player.session.samplingIntroLexi,blocknumber = player.block_order, blockaccomplished = player.block_order -1)
+    
+   
 
 page_sequence = [
+    transition,
     Introduction,
     beforeTask
 ]

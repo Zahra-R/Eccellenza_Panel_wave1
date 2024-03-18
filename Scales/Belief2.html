@@ -1,16 +1,15 @@
-
 {% block styles %}
     <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
     <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
 {% endblock %}
 
 {% block title %}
-    {{ Lexicon.ibv_title }}
+    {{ Lexicon.beliefHuman_title }}
 {% endblock %}
 
 {% block content %}
-<p> {{ Lexicon.ibv_header }}</p>
 
+<p> {{ Lexicon.beliefHuman_header}}</p>
 
 
 
@@ -19,7 +18,7 @@
     <button class="accordion" id={{field.id}} name={{field.name}}>Section 1</button>
     <div class="accpanel">
         <table style="width:90%; margin-left: auto; margin-right: auto;">
-            <tr style="padding: 5px;"> <td style="text-align: left; padding:0"> {{ Lexicon.opposed_to_values }} </td>  <td colspan="4">  {{ Lexicon.not_important }} </td> <td colspan="4" style="text-align: right;"> {{ Lexicon.extremely_important }} </td> </tr>
+            <tr style="padding: 5px;"> <td colspan="3" style="text-align: left; padding:0"> {{Lexicon.not_at_all}} </td>  <td colspan="4"> </td>  <td colspan="3" style="text-align: right;"> {{Lexicon.very_much}} </td> </tr>
 
             <tr >
                 {{ for choice in field }}            
@@ -29,49 +28,55 @@
         </table>
     </div>
 {{ endfor }}
+<!-- 
 
-<!-- <table class="radiotable">
+<table class="radiotable">
     <tr>
         <th></th>
-        <th class="radio-column"> {{ Lexicon.opposed_to_values }}</th>
-        <th class="radio-column"> {{ Lexicon.not_important }} </th class="radio-column">
+        <th class="radio-column"> {{ Lexicon.not_at_all }}</th>
+        <th class="radio-column"> </th class="radio-column">
         <th class="radio-column"> </th>
-        <th class="radio-column"> </th>
-        <th class="radio-column"> </th>
-        <th class="radio-column"> </th>
-        <th class="radio-column"> </th>
-        <th></th>
-        <th class="radio-column"> {{ Lexicon.extremely_important }} </th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"></th>
+        <th class="radio-column"> {{ Lexicon.very_much }} </th>
     </tr>
 
+    {% for field in form %}
+        {% if field.name == 'belief1Solutions' or field.name == 'belief2Solutions' or field.name == 'belief3Solutions' or field.name == 'belief4Solutions' or field.name == 'belief5Solutions' %}
+        {{formfield_errors field.name}}
 
+        <tr>
+            <th style="font-weight:normal;"  width="25%;" word-wrap="break-word;" id={{field.id}} name={{field.name}}>  </th>
+            {{ for choice in field }}
+            <td  style="word-wrap:break-word"   > {{ choice }} </td>
+            {{ endfor }}
+        </tr>
+        {% endif %}
 
-    {{ for field in form }}
-    {{formfield_errors field.name}}
-    <tr>
-        <th style="font-weight:normal;" id={{field.id}} name={{field.name}}> </th>
-        {{ for choice in field }}
-        <td>{{ choice }}</td>
-        {{ endfor }}
-    </tr>
     {{ endfor }}
-</table> -->
+</table>
+ -->
 
 
 <div class="next-btn radiotable">
     <div style="float: right; padding-top: 2vh;">
-        <button id="nextst" style=" margin-top: 4vh;" class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
-
+        <button id="nextst"  style=" margin-top: 4vh;" class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
+ 
     </div>
 </div>
 {% endblock %}
 
 
 {% block scripts %}
+
 <script>
     var acc = document.getElementsByClassName("accordion");
     var maxid= 6
-    var idarray = ['id_ibv1', 'id_ibv2', 'id_ibv3', 'id_ibv4']
+    var idarray = ['id_belief1Solutions', 'id_belief2Solutions', 'id_belief3Solutions', 'id_belief4Solutions', 'id_belief5Solutions']
 
     function mark_answered(element){
             nameQuestion = element.children()[0].name
@@ -133,7 +138,7 @@
         $(document).ready(function () {
 
             render_questions()
-            open_individual_question("id_ibv1", false)
+            open_individual_question("id_belief1Solutions", false)
         for (let i = 0; i < js_vars.form_fields.length; i++) {   
             prop= js_vars.form_fields[i] + 'Label'
             label = js_vars.form_field_labels[i]

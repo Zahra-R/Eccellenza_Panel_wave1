@@ -15,17 +15,17 @@ class Lexicon:
    
     #Consent Text
      #Consent Text
-    consent_p1 ='Thank you for your interest in taking part in this study. <br> This study will be supervised by MSc Jessica Helm and Prof. Ulf J.J. Hahnel, Faculty of Psychology, University of Basel, Switzerland.'
+    consent_p1 ='Thank you for your interest in taking part in this study. <br> This study will be supervised by MSc Jessica Helm, MSc Nina Frings, Msc Zahra Rahmani, and Prof. Ulf J.J. Hahnel, Faculty of Psychology, University of Basel, Switzerland.'
     consent_p2 = ' If you agree to participate in this study, you will be asked to do the following:'
 
     consent_bullet1 = 'Report some demographic information, including for example your age, gender and income.'
     consent_bullet2= 'Complete a set of questionnaires. You will be asked about your attitudes and perspectives on different topics.'
-    consent_bullet3 = 'You will read several policies and vote on them.'
+    consent_bullet3 = 'You will complete 3 different experimental tasks with multiple rounds on different topics'
     
     
     ## Achtung hier richtige dauer
     duration ='Duration: '
-    consent_p3 =' Participation in this study will require approximately <b>10 minutes</b> of your time.'
+    consent_p3 =' Participation in this study will require approximately <b>20-25 minutes</b> of your time.'
 
     ## Achtung hier richtige vergütung und währung und marktforschungsinstitut
     risks = 'Risks and Benefits: '
@@ -40,7 +40,7 @@ class Lexicon:
 
 
     ### achtung achtung, hier prolific
-    consent_p8 = ' If there is anything about the study or your participation that is unclear to you, if you have questions or wish to report a research-related problem, you may contact: Jessica Helm at jessica.helm@unibas.ch '
+    consent_p8 = ' If there is anything about the study or your participation that is unclear to you, if you have questions or wish to report a research-related problem, you may contact: Nina Frings at nina.frings@unibas.ch or leave a comment at the end of the survey'
 
     consent_p9 = 'By continuing with the study you express your consent to participate in this study and indicate that you'
 
@@ -53,3 +53,31 @@ class Lexicon:
     data_consent1 = 'The use of the data for scientific purposes, and the publication of the results of the study in scientific journals or books, given that the data will be anonymous and that no information about my identity will be disclosed.'
     data_consent2 = 'The use of the data for teaching purposes (courses and lectures for students and professionals subject to professional confidentiality).'
     
+### Demographics
+    demographics_title = "Personal data"
+    demographics_header = "Please enter the following information about yourself."
+
+    age_label = "How old are you?"
+    gender_label = "What gender do you identify as?"
+    female = "Female"
+    male = "Male"
+    diverse = "Diverse"
+    other = "Other"
+
+
+    income_label = "What is the yearly gross income of your household?"
+    # https://www.census.gov/content/dam/Census/library/publications/2022/demo/p60-276.pdf # data is from 2021 gross aggregate household income 
+    income_quintile1 = "Less than $28,000"
+    income_quintile2 = "$28,000 - $55,000"
+    income_quintile3 = "$55,001 - $89,750"
+    income_quintile4 = "$89,751 - $149,130"
+    income_quintile5 = "More than $149,130"
+    prefer_not_to_say = "Prefer not to say"
+
+    education_label = "What is your highest level of education?"
+    no_formal = "No formal education completed"
+    obligatory = "Compulsory education"
+    high_school = "Secondary education /High School / Vocational training"
+    degree = "Tertiary education: Bachelor's Degree / Master's Degree"
+    doctoral_degree = "Doctoral Degree or higher"
+    prefer_not_to_say_education = "Prefer not to say"

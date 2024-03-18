@@ -5,32 +5,77 @@
   <!-- Compiled and minified CSS -->
    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">  -->
   <link href="{{ static 'global/css/SamplingPilotgeneral.css'}}" rel="stylesheet">
+  <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
 <body>
     <h2 id="caption1">{{Lexicon.ccconcern_title}}</h2>
-    <h4 id="caption2">{{Lexicon.ccconcern_instruction}}</h4>
+  
 
 <div id="choice">
    
-    <div class="slidecontainer" style="margin-top:10vh;">
+    <p style="margin-top:30px" id="caption2">{{Lexicon.ccconcern_instruction}}</p>
+    <div class="slidecontainer" style="margin-top:30px;">
+       
     <p> {{Lexicon.ccconcern_question}}</p> 
-        <table style="width:100%">
+        <table style="width:100%; max-width:600px; margin-left: auto; margin-right: auto;">
             <tr>
-                <td class="rangelabel" style="width:20%"> {{Lexicon.not_at_all}} </td>
-                <td style="width:60%">
+                <td class="rangelabel" style="text-align:left; padding-bottom:0;"> {{Lexicon.not_at_all}} </td>
+                <td class="rangelabel" style="text-align:right; padding-bottom:0;"> {{Lexicon.very_much}} </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-top:0;" >
                     <input style="width:100%" type="range" min="-100" max="100" value="0" step="1" class="slider untouched"
                         id="range_ccconcern" name="range_ccconcern" >
                 </td>
-                <td class="rangelabel" style="width:20%"> {{Lexicon.very_much}}  </td>
             </tr>
         </table>
     </div>
 </div>
 
+<div style="padding-top:2vh; text-align: center; padding-left:1vw;">
 
-    <button style="display:block; margin-left:auto; margin-right:auto;" class="btn" id="nextst"  disabled>Next</button>
+    <p> {{Lexicon.beliefHuman_header}}</p>
+    <table  class="radiotable2" style="table-layout: fixed; width: 100%;">
+        <tbody>
+            <tr style="background-color: white;"> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td></tr>
+        {% for field in form %}
+            {% if field.name == 'beliefHuman1' or field.name == 'beliefHuman2' or field.name == 'beliefHuman3' or field.name
+            == 'beliefConseqences1' or field.name == 'beliefConseqences2' or field.name == 'beliefConseqences3' %}
+            {{formfield_errors field.name}}
+            
+            <tr>  
+                <td colspan="10">
+                    <label for={{field.id}} id={{field.id}} name={{field.name}}> </label>
+                </td>
+            </tr>
+            <tr> 
+                <th class="radio-column"  colspan="2" style="text-align: left;">  {{ Lexicon.not_at_all }}</th> 
+                    <th class="radio-column"> </th> 
+                    <th class="radio-column"> </th> 
+                    <th class="radio-column"> </th> 
+                    <th class="radio-column"> </th> 
+                    <th class="radio-column"> </th> 
+                    <th class="radio-column"> </th> 
+                    <th  colspan="2" style="text-align: right;"  class="radio-column"> {{ Lexicon.very_much }} </th> 
+            </tr>
+            <tr style="margin-bottom:400px;">
+                {{ for choice in field }}
+                <td class="radiotablebutton"> {{ choice }} </td>
+                {{ endfor }}
+            </tr>
+
+            {{endif}}
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+
+    <button style="display:block; margin-left:auto; margin-right:1vw;" class="btn" id="nextst"  disabled>{{Lexicon.next}}</button>
 
 </body>
 
@@ -62,10 +107,17 @@ function onSliderChange(event) {
 }
 
 $(document).ready(function () {
+    for (let i = 0; i < js_vars.form_fields.length; i++) {   
+            prop= js_vars.form_fields[i] + 'Label'
+            label = js_vars.form_field_labels[i]
+            id = 'id_' + js_vars.form_fields[i]
+            $('#' + id).html(label)
+        }
     
     $('#range_ccconcern').on('input', onSliderChange )
    
 })
+
 
 
 

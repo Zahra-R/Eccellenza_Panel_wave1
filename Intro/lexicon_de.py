@@ -19,11 +19,12 @@ class Lexicon:
     consent_bullet1 = 'Einen Satz von Online-Fragebögen auszufüllen. Möglicherweise werden Sie gebeten, zu bewerten, wie gut bestimmte Aussagen oder Persönlichkeitsmerkmale auf Sie zutreffen.'
     consent_bullet2= 'Sie werden auch gebeten, einige demografische Informationen anzugeben, darunter zum Beispiel Ihr Alter, Geschlecht und Einkommen.'
     consent_bullet3 = 'Sie werden verschiedene politische Maßnahmen lesen und darüber abstimmen.'
-    
+    consent_bullet3 = 'Sie werden 3 verschieden experimentelle Aufgaben mit mehreren Runden zu unterschiedlichen Themen bearbeiten'
+
     
     ## Achtung hier richtige dauer
     duration ='Dauer'
-    consent_p3 ='Die Teilnahme an dieser Studie erfordert etwa <b>10 Minuten</b> Ihrer Zeit.'
+    consent_p3 ='Die Teilnahme an dieser Studie erfordert etwa <b>20-25 Minuten</b> Ihrer Zeit.'
 
     ## Achtung hier richtige vergütung und währung und marktforschungsinstitut
     risks = 'Risiken und Vorteile:'
@@ -38,7 +39,8 @@ class Lexicon:
 
 
     ### achtung achtung, hier prolific
-    consent_p8 = 'Wenn Ihnen etwas an der Studie oder Ihrer Teilnahme unklar ist, wenn Sie Fragen haben oder ein forschungsbezogenes Problem melden möchten, senden Sie eine E-Mail an Jessica Helm unter: jessica.helm@unibas.ch'
+    #consent_p8 = 'Wenn Ihnen etwas an der Studie oder Ihrer Teilnahme unklar ist, wenn Sie Fragen haben oder ein forschungsbezogenes Problem melden möchten, senden Sie eine E-Mail an Jessica Helm unter: jessica.helm@unibas.ch'
+    consent_p8 = ' Wenn Ihnen etwas an der Studie oder Ihrer Teilnahme unklar ist, wenn Sie Fragen haben oder ein forschungsbezogenes Problem melden möchten, senden Sie eine E-Mail an Nina Frings at nina.frings@unibas.ch oder hinterlassen Sie einen Kommentar am Ende der Studie.'
 
     consent_p9 = 'Indem Sie auf "Weiter" klicken, erklären Sie Ihr Einverständnis zur Teilnahme an dieser Studie und geben an, dass Sie '
 
@@ -52,3 +54,32 @@ class Lexicon:
     data_consent1 = 'Die Nutzung der Daten für wissenschaftliche Zwecke und/oder die Publikation der Ergebnisse dieser Studie in wissenschaftlichen Zeitschriften oder Büchern jeweils unter der Voraussetzung, dass die Daten anonymisiert werden und keine Rückschlüsse auf meine Identität gezogen werden können.'
     data_consent2 = 'Die Nutzung der Daten für Lehrzwecke (Kurse und Vorträge für Studierende und Berufstätige, die jeweils zu einem vertraulichen Umgang verpflichtet sind).'
     
+### Demographics
+    demographics_title = "Persönliche Daten"
+    demographics_header = "Bitte geben Sie die folgenden Informationen über sich ein."
+
+    age_label = "Wie alt sind Sie?"
+    ageYear_label = "In welchem Jahr wurden sie geboren?"
+    gender_label = "Welchem Geschlecht fühlen Sie sich zugehörig?"
+    female = "Weiblich"
+    male = "Männlich"
+    diverse = "Divers"
+    other = "Andere"
+
+    income_label = "Was ist das jährliche Nettoeinkommen (d.h. nach Abgaben/Steuern) ihres Haushaltes?"
+    # source
+    income_quintile1 = "Weniger als 16.515 €"
+    income_quintile2 = "16.515 € - 22.519 €"
+    income_quintile3 = "22.520 € - 28.349 €"
+    income_quintile4 = "28.350 € - 37.000 €"
+    income_quintile5 = "Mehr als 37.000 €"
+    prefer_not_to_say = "Keine Angabe"
+
+    education_label = "Was ist Ihr höchster Bildungsabschluss?"
+    
+    no_formal = "keine formelle Bildung abgeschlossen"
+    obligatory = "obligatorische Schule"
+    high_school = "Sekundarstufe: Abitur / Berufsbildung / Allgemeinbildung "
+    degree = "höhere Berufsbildung: Hochschulabschluss / Bachelor / Master"
+    doctoral_degree = "Promotion (PhD) oder höher"
+    prefer_not_to_say_education = "Keine Angabe"

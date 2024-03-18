@@ -6,6 +6,16 @@ class Lexicon:
     Association3 = "3. 关联"
     Association4 = "4. 关联"
 
+    
+     # transition
+    transition_title = '欢迎来到研究的下一个部分'
+
+    transitions_a = '非常感谢您迄今为止的回答。如果您在继续学习之前需要短暂休息，那么现在是个好时机。 <br> 单击此页面上的下一个按钮后，我们要求您一次性完成此块'
+    # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
+    transitions_b = '这是区块号 '
+    transitions_c = '共 4 个区块。 再次感谢您花时间回答所有问题。 <br>一旦你准备好了，请继续。'
+
+    
     # Affective Imagery Rating
     Title_rating = "您关于碳税的关联"
     Instructions_rating = "您可以在下面找到您提到的与'碳税'一词相关的词语和想法。请指出这些关联对于碳税的积极或消极影响。"
@@ -32,4 +42,5 @@ class Lexicon:
     instr_continue = "现在您将依次看到 <b>12 项假设性政策提案</b>。<br>对于每一项，您都可以投票<b>是</b>或<b>否</b> ，表示您是否支持该政策提案。<br>请仔细查看每个政策提案，并花一些时间做出决定。<br>这 4 个要素的呈现顺序将在 12 个示例中发生变化。"
 
 
+    example_CT = '/static/global/images/task_designCT_zh_hans.png'
     next = "下一个"

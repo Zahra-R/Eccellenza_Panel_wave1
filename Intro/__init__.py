@@ -1,9 +1,13 @@
 import random
+import os
+
 
 from otree.api import *
 from os import environ
 #from settings import LANGUAGE_CODE
-LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
+LANGUAGE_CODE = os.environ.get('LANGUAGE_CODE')
+
+#LANGUAGE_CODE = environ.get('LANGUAGE_CODE')
 
 doc = """
 How to translate an app to multiple languages (e.g. English and German).
@@ -47,15 +51,8 @@ class Group(BaseGroup):
     pass
 
 
-class Player(BasePlayer):
-    ### Climate Change Concern Scale by Tobler et al. 2012
-    dataScience = models.BooleanField(initial=False)
-    dataTeach = models.BooleanField(initial=False)
-    mobileDevice= models.BooleanField(initial=False, blank=True)
-
-
 def creating_session(subsession:Subsession):
-    """ 
+    
     if subsession.session.config['language'] == 'de':
         from .lexicon_de import Lexicon
         subsession.session.myLangCode = "_de"
@@ -66,12 +63,154 @@ def creating_session(subsession:Subsession):
         from .lexicon_en import Lexicon
         subsession.session.myLangCode = "_en"
     subsession.session.introLexi = Lexicon 
-    """
+
     import itertools
     order_tasks = itertools.cycle([1,2,3])
     for player in subsession.get_players():
         if subsession.round_number == 1: 
             player.participant.order_tasks = next(order_tasks)
+            player.participant.task_counter = 0
+    
+
+        #region Choices for demographics
+# Nina: added gender german at beginning
+def education_choices(player):
+    Lexicon = player.session.introLexi
+    language_code =  player.session.config['language']
+    education_choices = []
+    if language_code == 'de':
+        education_choices = [    
+            ["noFormalEducation", Lexicon.no_formal],
+            ["obligatory", Lexicon.obligatory],
+            ["high_school", Lexicon.high_school],
+            ["degree", Lexicon.degree],
+            ["doctoral_degree", Lexicon.doctoral_degree]
+        ]
+
+    elif language_code == 'zh_hans':
+        education_choices = [    
+            ["noFormalEducation", Lexicon.no_formal],
+            ["obligatory", Lexicon.obligatory],
+            ["high_school", Lexicon.high_school],
+            ["degree", Lexicon.degree],
+            ["doctoral_degree", Lexicon.doctoral_degree]
+        ]
+   
+    else:
+        education_choices = [    
+            ["noFormalEducation", Lexicon.no_formal],
+            ["obligatory", Lexicon.obligatory],
+            ["high_school", Lexicon.high_school],
+            ["degree", Lexicon.degree],
+            ["doctoral_degree", Lexicon.doctoral_degree]
+        ]
+    return education_choices
+
+def get_party_choices(player):
+    party_choices = []
+    Lexicon = player.session.introLexi
+    language_code =  player.session.config['language']
+    if language_code == 'de':
+        party_choices = [    
+            Lexicon.cdcsu,
+            Lexicon.spd,
+            Lexicon.gruene,
+            Lexicon.fdp,
+            Lexicon.linke,
+            Lexicon.afd,
+            Lexicon.other_party
+        ]
+    elif language_code == 'zh_hans':
+        party_choices = [
+            # Add choices for Chinese language if needed
+        ]
+    else:
+        party_choices = [
+            Lexicon.republicans, 
+            Lexicon.democrats, 
+            Lexicon.independent_party, 
+            Lexicon.other_party
+        ]
+    return party_choices
+
+def gender_choices(player):
+    gender_choices = []
+    Lexicon = player.session.introLexi
+    language_code = player.session.config['language']
+    if language_code == 'de':
+        gender_choices = [
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["diverse", Lexicon.diverse], 
+            ["other", Lexicon.other]
+        ]
+    elif language_code == 'zh_hans':
+        gender_choices = [
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["other", Lexicon.other]
+        ]
+    else:
+        gender_choices = [
+            ["female", Lexicon.female],
+            ["male", Lexicon.male],
+            ["diverse", Lexicon.diverse], 
+            ["other", Lexicon.other]
+        ]
+    return gender_choices
+
+def income_choices(player):
+    income_choices = []
+    Lexicon = player.session.introLexi
+    language_code = player.session.config['language']
+    if language_code == 'de':
+        income_choices = [    
+            ["quintile1", Lexicon.income_quintile1],
+            ["quintile2", Lexicon.income_quintile2],
+            ["quintile3", Lexicon.income_quintile3],
+            ["quintile4", Lexicon.income_quintile4],
+            ["quintile5", Lexicon.income_quintile5],
+            ["NoAnswer", Lexicon.prefer_not_to_say],
+        ]
+    elif language_code == 'zh_hans':
+        income_choices = [    
+            ["quintile1", Lexicon.income_quintile1],
+            ["quintile2", Lexicon.income_quintile2],
+            ["quintile3", Lexicon.income_quintile3],
+            ["quintile4", Lexicon.income_quintile4],
+            ["quintile5", Lexicon.income_quintile5],
+            ["NoAnswer", Lexicon.prefer_not_to_say],
+        ]
+    else:
+        income_choices = [    
+            ["quintile1", Lexicon.income_quintile1],
+            ["quintile2", Lexicon.income_quintile2],
+            ["quintile3", Lexicon.income_quintile3],
+            ["quintile4", Lexicon.income_quintile4],
+            ["quintile5", Lexicon.income_quintile5],
+            ["NoAnswer", Lexicon.prefer_not_to_say],
+        ]
+    return income_choices
+
+
+#endregion
+
+
+class Player(BasePlayer):
+    ### Climate Change Concern Scale by Tobler et al. 2012
+    dataScience = models.BooleanField(initial=False)
+    dataTeach = models.BooleanField(initial=False)
+    mobileDevice= models.BooleanField(initial=False, blank=True)
+
+
+    ### Demographics
+    age = models.IntegerField(min=18,max = 99)
+    income = models.StringField()
+    education = models.StringField()
+    gender = models.StringField()
+    #party_affiliation = models.StringField(choices=get_party_choices(LANGUAGE_CODE, Lexicon) )
+
+
    
    
 class Consent(Page):
@@ -144,7 +283,27 @@ class Consent_Standalone(Page):
     @staticmethod
     def is_displayed(player:Player):
         return (player.session.config['consent_form'] =="standalone")
+    
+class Demographics(Page):
+    form_model = 'player'
+    form_fields = ['age', 'gender', 'income', 'education']
+
+    @staticmethod
+    def vars_for_template(player: Player):
+        return{
+            #Lexicon': player.session.introLexi
+             'Lexicon': Lexicon
+        
+        } 
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.introLexi
+        return dict(
+        form_fields = ['age', 'gender', 'income', 'education'],
+        form_field_labels = [Lexicon.age_label, Lexicon.gender_label , Lexicon.income_label, Lexicon.education_label]
+    )
 
 
 
-page_sequence = [Consent, Consent_Standalone]
+
+page_sequence = [Consent, Consent_Standalone, Demographics]

@@ -33,15 +33,16 @@ class Lexicon:
     
     consent_bullet1 = "报告一些人口统计信息，例如您的年龄、性别、收入。"
     consent_bullet2 = "完成一组调查问卷。 您将被询问对不同主题的态度和观点。"
-    consent_bullet3 = "你将阅读几项政策并对其进行投票。"
+    consent_bullet3 = '您将完成 3 项不同的实验任务，并针对不同主题进行多轮实验 '
+
     ## Achtung hier richtige dauer
     duration = "时长："
-    consent_p3 = "参与这项研究大约需要您<b>10 分钟</b>的时间。"
+    consent_p3 = "参与这项研究大约需要您<b>20-25 分钟</b>的时间。"
     
     ## Achtung hier  marktforschungsinstitut
     risks = "风险和收益："
     consent_p4 = "除了日常生活中的风险之外，您参与这项研究没有任何已知的风险。 市场研究机构将奖励您参与这项研究。 您的参与可能有助于更好地理解行为和环境心理学中的开放研究问题。"
-    
+
     privacy = "数据保护和匿名："
     consent_p5 = "我们将通过为每个参与者分配 ID 来严格维护数据记录的机密性，以便数据永远不会与个人身份直接关联。 任何人，包括这项研究的研究人员，都无法透露您的身份。 这些数据将以匿名形式在开放科学平台上提供。 在发布数据之前，所有可能用于透露您身份的敏感信息（包括您的匿名参与者代码）都将从数据集中删除。 我们，即该项目的研究人员，也永远不会知道任何参与者的身份。"
     consent_p6 = "<b>参与本研究是自愿的。 您可以拒绝参加或随时退出，而不会受到处罚。</b>"
@@ -49,7 +50,8 @@ class Lexicon:
     consent_p7 = "只有完成研究，一直到结束，您才会因参与而得到酬金。"
     
     ### achtung achtung, hier kontaktdaten
-    consent_p8 = "如果您对本研究或您的参与有任何不清楚的地方，如果您有疑问或希望报告与研究相关的问题，您可以联系 Jessica Helm，邮箱为 jessica.helm@unibas.ch"
+    #consent_p8 = "如果您对本研究或您的参与有任何不清楚的地方，如果您有疑问或希望报告与研究相关的问题，您可以联系 Jessica Helm，邮箱为 jessica.helm@unibas.ch"
+    consent_p8 = '如果您对本研究或您的参与有任何不清楚的地方，如果您有疑问或希望报告与研究相关的问题，您可以通过“电子邮件”联系 Nina Frings 或在调查末尾留下评论'
     
     consent_p9 = "通过继续这项研究，您表示同意参与这项研究，并表明您"
     
@@ -59,3 +61,35 @@ class Lexicon:
     consent_p10 = "如果您想参与，则需要选中下面的框并点击下一步。<b>如果您不想参加，只需关闭此窗口即可。</b> </p> <p>根据上述信息，我确认我希望参加这项研究，并授权："
     data_consent1 = "将数据用于科学目的，并在科学期刊或书籍上发表研究结果，条件是数据是匿名的，并且不会披露有关我身份的任何信息。" 
     data_consent2 = "将数据用于教学目的（为学生和专业人士提供的课程和讲座，须遵守专业保密规定）。"
+
+
+    ### Demographics
+    demographics_title = "个人数据" 
+    demographics_header = "请输入以下有关您自己的信息。"
+
+    age_label = "你今年多大？"
+
+    gender_label = "您的性别是什么？" 
+    female = "女性"
+    male = "男性"
+    other = "其他"
+
+    income_label = "你的年收入是多少？"
+    # income categories TBD
+    income_quintile1 = "3万元人民币以下"
+    income_quintile2 = "30,000 - 60,000元人民币"
+    income_quintile3 = "60,001 - 120,000元人民币"
+    income_quintile4 = "120,001 - 300,000元人民币"
+    income_quintile5 = "300,001 - 500,000元人民币"
+    income_more_than_E = "超过50万元人民币"
+    prefer_not_to_say = "不愿意说"
+
+    education_label = "你的最高学历是什么？"
+    
+    # these do not have to be exact translations, just need to match the meaning in terms of what the education system is like
+    no_formal = "没有完成正规教育"
+    obligatory = "义务教育"
+    high_school = "中学教育/高中/职业培训"
+    degree = "高等教育：学士/硕士学位"
+    doctoral_degree = "博士及以上学历"  
+    prefer_not_to_say_education = "不愿意说"

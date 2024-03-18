@@ -31,18 +31,20 @@ class Group(BaseGroup):
     pass
 
 def creating_session(subsession:Subsession):
+    
     if subsession.session.config['language'] == 'de':
-        from .lexicon_de import Lexicon        
-
+        from .lexicon_de import Lexicon
+        subsession.session.myLangCode = "_de"
     elif subsession.session.config['language'] == 'zh_hans':
         from .lexicon_zh_hans import Lexicon
+        subsession.session.myLangCode = "_ch"
     else:
-        from .lexicon_en import Lexicon  
-    subsession.session.scalesLexi = Lexicon
+        from .lexicon_en import Lexicon
+        subsession.session.myLangCode = "_en"
+    subsession.session.scalesLexi = Lexicon 
 
 
-# custom function to automatically make likert type fields with 5 options
-# custom function to automatically make 4 option fields
+#region many very redundant functions 
 def make_likert7():
     return models.IntegerField(
         choices=[1,2,3,4,5,6,7],
@@ -52,6 +54,11 @@ def make_likert7():
 def make_likert10():
         return models.IntegerField(
             choices=[1,2,3,4,5,6,7,8,9,10],
+            widget=widgets.RadioSelect,
+        )
+def make_likert11():
+        return models.IntegerField(
+            choices=[1,2,3,4,5,6,7,8,9,10, 22],
             widget=widgets.RadioSelect,
         )
 def make_likert9():
@@ -79,140 +86,9 @@ def make_likert4():
             choices=[1,2,3,4],
             widget=widgets.RadioSelect,
         )
-
-#region Choices for demographics
-# Nina: added gender german at beginning
-def education_choices(player):
-    Lexicon = player.session.scalesLexi
-    language_code =  player.session.config['language']
-    education_choices = []
-    if language_code == 'de':
-        education_choices = [    
-            Lexicon.no_formal,
-            Lexicon.obligatory,
-            Lexicon.high_school,
-            Lexicon.degree,
-            Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education,
-        ]
-
-    elif LANGUAGE_CODE == 'zh-hans':
-        education_choices = [ 
-            Lexicon.no_formal,
-            Lexicon.obligatory,
-            Lexicon.high_school,
-            Lexicon.degree,
-            Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education,
-            ]
-   
-    else:
-        education_choices = [
-            Lexicon.no_formal,
-            Lexicon.obligatory,
-            Lexicon.high_school,
-            Lexicon.degree,
-            Lexicon.doctoral_degree,
-            Lexicon.prefer_not_to_say_education,
-        ]
-    return education_choices
-
-def get_party_choices(player):
-    party_choices = []
-    Lexicon = player.session.scalesLexi
-    language_code =  player.session.config['language']
-    if language_code == 'de':
-        party_choices = [    
-            Lexicon.cdcsu,
-            Lexicon.spd,
-            Lexicon.gruene,
-            Lexicon.fdp,
-            Lexicon.linke,
-            Lexicon.afd,
-            Lexicon.other_party
-        ]
-    elif LANGUAGE_CODE == 'zh-hans':
-        party_choices = [
-            # Add choices for Chinese language if needed
-        ]
-    else:
-        party_choices = [
-            Lexicon.republicans, 
-            Lexicon.democrats, 
-            Lexicon.independent_party, 
-            Lexicon.other_party
-        ]
-    return party_choices
-
-def gender_choices(player):
-    gender_choices = []
-    Lexicon = player.session.scalesLexi
-    language_code = player.session.config['language']
-    if language_code == 'de':
-        gender_choices = [
-            ["female", Lexicon.female],
-            ["male", Lexicon.male],
-            ["diverse", Lexicon.diverse], 
-            ["other", Lexicon.other]
-        ]
-    elif LANGUAGE_CODE == 'zh-hans':
-        gender_choices = [
-            ["female", Lexicon.female],
-            ["male", Lexicon.male],
-            ["other", Lexicon.other]
-        ]
-    else:
-        gender_choices = [
-            ["female", Lexicon.female],
-            ["male", Lexicon.male],
-            ["diverse", Lexicon.diverse], 
-            ["other", Lexicon.other]
-        ]
-    return gender_choices
-
-def income_choices(player):
-    income_choices = []
-    Lexicon = player.session.scalesLexi
-    language_code = player.session.config['language']
-    if language_code == 'de':
-        income_choices = [    
-            Lexicon.income_label,
-            Lexicon.income_less_than_A,
-            Lexicon.income_A_to_B,
-            Lexicon.income_B_to_C,
-            Lexicon.income_C_to_D,
-            Lexicon.income_more_than_D,
-            Lexicon.prefer_not_to_say
-        ]
-    elif LANGUAGE_CODE == 'zh-hans':
-        income_choices = [
-            Lexicon.income_label,
-            Lexicon.income_less_than_A,
-            Lexicon.income_A_to_B,
-            Lexicon.income_B_to_C,
-            Lexicon.income_C_to_D,
-            Lexicon.income_D_to_E,
-            Lexicon.income_more_than_E,
-            Lexicon.prefer_not_to_say
-        ]
-    else:
-        income_choices = [
-            Lexicon.income_label,
-            Lexicon.income_less_than_A,
-            Lexicon.income_A_to_B,
-            Lexicon.income_B_to_C,
-            Lexicon.income_C_to_D,
-            Lexicon.income_more_than_D,
-            Lexicon.prefer_not_to_say
-        ]
-    return income_choices
-
-
-def residential_area_choices(player): # ready and checked
-    Lexicon = player.session.scalesLexi
-    return  [["metropolitan", Lexicon.metropolitan_area], ["suburb", Lexicon.suburban], ["rural", Lexicon.rural]]
-
 #endregion
+
+
 
 #region Knowledge Choices
 def cknow1_choices(player):
@@ -269,36 +145,59 @@ def cknow6_choices(player):
     ['dk',  Lexicon.dont_know],
 ]
 
+def cknow7_choices(player):
+    Lexicon = player.session.scalesLexi
+    return [
+    ['a_false', Lexicon.know_7a],
+    ['b_false',  Lexicon.know_7b],
+    ['c_true', Lexicon.know_7c],
+    ['d_false', Lexicon.know_7d],
+
+    ['dk',  Lexicon.dont_know],
+]
+
 def cknow8_choices(player):
     Lexicon = player.session.scalesLexi
     return [
-    ['a_false', Lexicon.know_8a],
+    ['a_true', Lexicon.know_8a],
     ['b_false',  Lexicon.know_8b],
-    ['c_true', Lexicon.know_8c],
-    ['d_false', Lexicon.know_8d],
-
+    ['c_false', Lexicon.know_8c],
+    ['d_false',  Lexicon.know_8d],
     ['dk',  Lexicon.dont_know],
 ]
 
 def cknow9_choices(player):
     Lexicon = player.session.scalesLexi
     return [
-    ['a_true', Lexicon.know_9a],
-    ['b_false',  Lexicon.know_9b],
+    ['a_false', Lexicon.know_9a],
+    ['b_true',  Lexicon.know_9b],
     ['c_false', Lexicon.know_9c],
     ['d_false',  Lexicon.know_9d],
     ['dk',  Lexicon.dont_know],
 ]
 
-def cknow10_choices(player):
+## residential area
+def residential_area_choices(player):
+    residential_area_choices = []
     Lexicon = player.session.scalesLexi
-    return [
-    ['a_false', Lexicon.know_10a],
-    ['b_true',  Lexicon.know_10b],
-    ['c_false', Lexicon.know_10c],
-    ['d_false',  Lexicon.know_10d],
-    ['dk',  Lexicon.dont_know],
-]
+    language_code = player.session.config['language']
+    if language_code == 'de':
+        residential_area_choices = [
+            ["metropolitan", Lexicon.metropolitan_area],
+            ["suburban", Lexicon.suburban],
+            ["rural", Lexicon.rural]
+        ]
+    elif language_code == 'zh_hans':
+        residential_area_choices = [
+        ]
+    else:
+        residential_area_choices = [
+            ["metropolitan", Lexicon.metropolitan_area],
+            ["suburban", Lexicon.suburban],
+            ["rural", Lexicon.rural]
+        ]
+    return residential_area_choices
+
 
 #endregion
 
@@ -332,9 +231,9 @@ class Player(BasePlayer):
     cknow4 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)  
     cknow5 = models.StringField(choices=["a_false", "b_true", "c_false", "dk"], widget=widgets.RadioSelect,)     
     cknow6 = models.StringField(choices=["a_false", "b_false", "c_true", "dk"], widget=widgets.RadioSelect,) 
-    cknow8 = models.StringField(choices=["a_false", "b_false", "c_true","d_false", "dk"], widget=widgets.RadioSelect,)     
-    cknow9 = models.StringField(choices=["a_true", "b_false", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)     
-    cknow10 = models.StringField(choices=["a_false", "b_true", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)
+    cknow7 = models.StringField(choices=["a_false", "b_false", "c_true","d_false", "dk"], widget=widgets.RadioSelect,)     
+    cknow8 = models.StringField(choices=["a_true", "b_false", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)     
+    cknow9 = models.StringField(choices=["a_false", "b_true", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)
 
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
     hie1 = make_likert10()
@@ -356,13 +255,24 @@ class Player(BasePlayer):
     pit2 = make_likert10()
 
     ## political orientation
-    po1 = make_likert10()
-    po2 = make_likert10()
+    polOrientation = make_likert10()
 
     ### Belief
-    belief1 = make_likert10()
-    belief2 = make_likert10()
-    belief3 = make_likert10()
+    belief1Happening= make_likert10()
+
+    beliefHuman1 = make_likert11()
+    beliefHuman2 = make_likert11()
+    beliefHuman3 = make_likert11()
+
+    beliefConseqences1 = make_likert11()
+    beliefConseqences2 = make_likert11()
+    beliefConseqences3 = make_likert11()
+
+    belief1Solutions = make_likert10()
+    belief2Solutions = make_likert10()
+    belief3Solutions = make_likert10()
+    belief4Solutions = make_likert10()
+    belief5Solutions = make_likert10()
 
     beliefConsensus = models.IntegerField(min=0,max = 100)
 
@@ -390,28 +300,20 @@ class Player(BasePlayer):
 
 
     ### Demographics
-    age = models.IntegerField(min=18,max = 99)
-    income = models.StringField()
-    education = models.StringField()
-    gender = models.StringField()
+    ageYear = models.IntegerField(min=1900,max = 2008)  # change in different waves
     residential_area = models.StringField()
     zip_code = models.StringField(blank=True)
+    block_order = models.IntegerField()
     #party_affiliation = models.StringField(choices=get_party_choices(LANGUAGE_CODE, Lexicon) )
 
 
-class CCConcern(Page):
-    form_model = 'player'
-    form_fields= ['ccc1', 'ccc2', 'ccc3', 'ccc4',  'ccc10', 'ccc11', 'ccc12', 'ccc13', 'ccc14', 'ccc15', 'ccc16'  ]
-    print(form_fields[0])
-    @staticmethod
-    def vars_for_template(player: Player):
-        #player.formfields.ccc1.label="test"
-        return dict(Lexicon=player.session.scalesLexi)
+
+
     
 
 class Belief(Page):
     form_model = 'player'
-    form_fields= ['belief1', 'belief2', 'belief3', 'beliefConsensus']
+    form_fields= [ 'belief1Happening' , 'beliefConsensus' ]
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
@@ -419,8 +321,40 @@ class Belief(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields= ['belief1', 'belief2', 'belief3', 'beliefConsensus'],
-        form_field_labels = [Lexicon.belief1Label, Lexicon.belief2Label, Lexicon.belief3Label, Lexicon.beliefConsensLabel]
+        form_fields= [ 'belief1Happening' , 'beliefConsensus'  ],
+        form_field_labels = [Lexicon.belief1HappeningLabel , Lexicon.beliefConsensLabel ]
+    )
+
+# class Belief1(Page):
+#     form_model = 'player'
+#     form_fields= [ 'beliefHuman1', 'beliefHuman2', 'beliefHuman3',
+#                   'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3']
+#     @staticmethod
+#     def vars_for_template(player: Player):
+#         return dict(Lexicon=player.session.scalesLexi)
+#     @staticmethod
+#     def js_vars(player):
+#         Lexicon = player.session.scalesLexi
+#         return dict(
+#         form_fields= [ 'beliefHuman1','beliefHuman2', 'beliefHuman3',
+#                   'beliefConseqences1', 'beliefConseqences2', 'beliefConseqences3'],
+#         form_field_labels = [ Lexicon.beliefHuman1Label, Lexicon.beliefHuman2Label, Lexicon.beliefHuman3Label, 
+#                              Lexicon.beliefConseqences1Label, Lexicon.beliefConseqences2Label, Lexicon.beliefConseqences3Label ]
+#     )
+
+class Belief2 (Page):
+    form_model = 'player'
+    form_fields= [ 'belief1Solutions','belief2Solutions', 'belief3Solutions', 'belief4Solutions', 'belief5Solutions']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields= [ 'belief1Solutions','belief2Solutions', 'belief3Solutions', 'belief4Solutions', 'belief5Solutions' ],
+        form_field_labels = [Lexicon.beliefSolutions1Label, Lexicon.beliefSolutions2Label, Lexicon.beliefSolutions3Label,
+                              Lexicon.beliefSolutions4Label, Lexicon.beliefSolutions5Label ]
     )
 
 class CCEmotion(Page):
@@ -443,7 +377,7 @@ class CCEmotion(Page):
     
 class CCKnowledge(Page):
     form_model = 'player'
-    form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow8','cknow9', 'cknow10']
+    form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow7','cknow8', 'cknow9']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
@@ -451,13 +385,13 @@ class CCKnowledge(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow8','cknow9', 'cknow10'],
-        form_field_labels = [Lexicon.know_1qu, Lexicon.know_2qu, Lexicon.know_3qu, Lexicon.know_4qu, Lexicon.know_5qu, Lexicon.know_6qu,  Lexicon.know_8qu, Lexicon.know_9qu, Lexicon.know_10qu]
+        form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow7','cknow8', 'cknow9'],
+        form_field_labels = [Lexicon.know_1qu, Lexicon.know_2qu, Lexicon.know_3qu, Lexicon.know_4qu, Lexicon.know_5qu, Lexicon.know_6qu,  Lexicon.know_7qu, Lexicon.know_8qu, Lexicon.know_9qu]
     )
     
 class BehaviorsFood(Page):
     form_model = 'player'
-    form_fields= ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5', 'footprint_regional', 'footprint_electricity']
+    form_fields= ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
@@ -465,12 +399,25 @@ class BehaviorsFood(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields=  ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5', 'footprint_regional', 'footprint_electricity'], 
-        form_field_labels = [Lexicon.food_overall_label1, Lexicon.food_overall_label2, Lexicon.food_overall_label3, Lexicon.food_overall_label4, Lexicon.food_overall_label5 , Lexicon.regional_label, Lexicon.electricity_label ]
+        form_fields=  ['footprint_food_overall1', 'footprint_food_overall2', 'footprint_food_overall3', 'footprint_food_overall4', 'footprint_food_overall5' ], 
+        form_field_labels = [Lexicon.food_overall_label1, Lexicon.food_overall_label2, Lexicon.food_overall_label3, Lexicon.food_overall_label4, Lexicon.food_overall_label5  ]
+    )
+class BehaviorsFood2(Page):
+    form_model = 'player'
+    form_fields= [ 'footprint_regional', 'footprint_electricity']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields=  [ 'footprint_regional', 'footprint_electricity'], 
+        form_field_labels = [ Lexicon.regional_label, Lexicon.electricity_label ]
     )
 class BehaviorsTransport(Page):
     form_model = 'player'
-    form_fields= ['footprint_commute_car', 'footprint_commute_car_type', 'footprint_commute_pt', 'footprint_flying_short', 'footprint_flying_mid', 'footprint_flying_long']
+    form_fields= ['footprint_commute_car', 'footprint_commute_car_type', 'footprint_commute_pt']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
@@ -478,23 +425,48 @@ class BehaviorsTransport(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields=  ['footprint_commute_car', 'footprint_commute_car_type', 'footprint_commute_pt', 'footprint_flying_short', 'footprint_flying_mid', 'footprint_flying_long'], 
-        form_field_labels = [Lexicon.commute_car_label, Lexicon.commute_car_type_label, Lexicon.commute_pt_label, Lexicon.flying_short_label, Lexicon.flying_mid_label, Lexicon.flying_short_label ]
+        form_fields=  ['footprint_commute_car', 'footprint_commute_car_type', 'footprint_commute_pt' ], 
+        form_field_labels = [Lexicon.commute_car_label, Lexicon.commute_car_type_label, Lexicon.commute_pt_label ]
+    )
+
+class BehaviorsFlying(Page):
+    form_model = 'player'
+    form_fields= [ 'footprint_flying_short', 'footprint_flying_mid', 'footprint_flying_long']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields=  [ 'footprint_flying_short', 'footprint_flying_mid', 'footprint_flying_long'], 
+        form_field_labels = [  Lexicon.flying_short_label, Lexicon.flying_mid_label, Lexicon.flying_long_label ]
     )
 
 class WVValues(Page):
+    @staticmethod
+    def get_form_fields(player):
+        if player.session.config['language'] == "zh_hans":
+            return ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3']
+        else:
+            return ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3', "polOrientation"]
     form_model = 'player'
-    form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3']
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.scalesLexi)
     @staticmethod
     def js_vars(player):
         Lexicon = player.session.scalesLexi
-        return dict(
-        form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3'],
-        form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label]
-    )
+        if  player.session.config['language'] == "zh_hans":
+            return dict(
+            form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3'],
+            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label],
+            langcode= "zh_hans")
+        else:
+            return dict(
+            form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3', "polOrientation"],
+            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label, Lexicon.polOrientationLabel],
+            lang_code="west")
 
 class IBValues(Page):
     form_model = 'player'
@@ -509,22 +481,7 @@ class IBValues(Page):
         form_fields= ['ibv1', 'ibv2', 'ibv3', 'ibv4'],
         form_field_labels = [Lexicon.ibv1Label, Lexicon.ibv2Label , Lexicon.ibv3Label, Lexicon.ibv4Label]
     )
-    
-class PolOrientation(Page):
-    form_model = 'player'
-    form_fields= ['po1', 'po2']
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
-    @staticmethod
-    def js_vars(player):
-        Lexicon = player.session.scalesLexi
-        return dict(
-        form_fields= ['po1', 'po2'],
-        form_field_labels = [Lexicon.po1Label, Lexicon.po2Label ]
-    )
-    
-    
+        
 class PITrust(Page):
     form_model = 'player'
     form_fields= ['pit1', 'pit2']
@@ -539,9 +496,9 @@ class PITrust(Page):
         form_field_labels = [Lexicon.pit1Label, Lexicon.pit2Label]
     )
         
-class Demographics(Page):
+class DemographicsEnd(Page):
     form_model = 'player'
-    form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code']
+    form_fields = ['ageYear', 'residential_area', 'zip_code' ]
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -552,25 +509,32 @@ class Demographics(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields = ['age', 'gender', 'income', 'education', 'residential_area', 'zip_code'],
-        form_field_labels = [Lexicon.age_label, Lexicon.gender_label , Lexicon.income_label, Lexicon.education_label, Lexicon.residential_area_label, Lexicon.zip_code_label]
+        form_fields = ['ageYear',  'residential_area', 'zip_code' ],
+        form_field_labels = [Lexicon.ageYear_label, Lexicon.residential_area_label, Lexicon.zip_code_label ]
     )
 
 class transition (Page): 
     form_model = 'player'
     @staticmethod
     def vars_for_template(player: Player):
+        try: 
+            player.participant.task_counter
+            print("none is true")
+        except:   
+            player.participant.task_counter = 0
+        player.participant.task_counter += 1 
+        player.block_order = player.participant.task_counter
         return dict(Lexicon=player.session.scalesLexi)
-
-class goodbye (Page): 
-    form_model = 'player'
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
+    
 
 
 # for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
-#page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PolOrientation, PITrust, CCKnowledge ,Demographics]
+#page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PITrust, CCKnowledge ,Demographics]
 # copy pf page_sequence with original order of scales 
-# page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PolOrientation, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
+# page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [BehaviorsFood, BehaviorsTransport, Belief, Demographics, CCEmotion, PolOrientation, PITrust, CCKnowledge, WVValues, IBValues]
+page_sequence = [ transition, 
+                 WVValues, CCKnowledge, Belief, Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
+                  
+                 CCEmotion, PITrust, IBValues,
+                DemographicsEnd]

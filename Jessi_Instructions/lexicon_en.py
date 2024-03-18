@@ -6,6 +6,18 @@ class Lexicon:
     Association3 = "3. Association"
     Association4 = "4. Association"
 
+   # Transition page 
+    #these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
+    
+    transitions_first_1 = 'Welcome to the study'
+    transitions_first_2= 'This study consists of four parts. You are about to begin the first part. Please try to complete this part in one go without any breaks. We appreciate your time for participating in this study. Click "next" when you are ready.'
+    transition_title = 'Welcome to the next part of the study'
+    transitions_second_1 =  'You have completed'
+    transitions_second_2 = 'out of for parts of this study. Part'
+    transitions_second_3 = 'is about to begin.  If you need a short break before continuing with the study, now would be a good time. '
+    transitions_second_4 = 'Please try to complete the next part in one go without any breaks. We appreciate your time for participating in this study. <p> Once you are ready, please click "next".'
+
+    
     # Affective Imagery Rating
     Title_rating = "Your associations regarding a Carbon Tax"
     Instructions_rating = "Below you can find the words and thoughts you have mentioned in connection with the term 'carbon tax'. Please indicate how positive or negative these associations are in relation to the term 'carbon tax'."
@@ -32,5 +44,7 @@ class Lexicon:
     instr_continue = "You will now be presented with <b>12 hypothetical policy proposals</b> one after another. <br> For each of them you can vote with <b>Yes</b> or <b>No</b>, whether or not you would accept the policy proposal. <br> Please look at each policy proposal carefully and take some time to make your vote. <br> The order in which the 4 features are presented will change across the 12 examples."
 
 
+    
+    example_CT = '/static/global/images/task_designCT_en.png'
     next = "Next"
     

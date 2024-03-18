@@ -14,3 +14,30 @@ class Lexicon:
     ccconcern_title = "Your attitude on climate change"
     ccconcern_instruction = "Please move the slider to reflect your attitude."
     ccconcern_question = "How concerned are you about climate change?"
+
+
+    # Transition page 
+    #these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
+    
+    transitions_first_1 = 'Welcome to the study'
+    transitions_first_2= 'This study consists of four parts. You are about to begin the first part. Please try to complete this part in one go without any breaks. We appreciate your time for participating in this study. Click "next" when you are ready.'
+    transition_title = 'Welcome to the next part of the study'
+    transitions_second_1 =  'You have completed'
+    transitions_second_2 = 'out of for parts of this study. Part'
+    transitions_second_3 = 'is about to begin.  If you need a short break before continuing with the study, now would be a good time. '
+    transitions_second_4 = 'Please try to complete the next part in one go without any breaks. We appreciate your time for participating in this study. <p> Once you are ready, please click "next".'
+
+     ## Climate Change Belief
+    ### belief in (human) causes taken from  Valkengoed
+    beliefHuman_header = "How much do you agree with the following statements?"
+    beliefHuman1Label = "Human activities are <b> not </b> a major cause of climate change." # reversed (originally not)
+    beliefHuman2Label = "Climate change is entirely caused by human activities."
+    beliefHuman3Label = "The main causes of climate change are human activities." 
+
+    beliefConseqences1Label = "Climate change currently is the greatest threat to humankind."
+    beliefConseqences2Label = "Climate change will bring about serious negative consequences."
+    beliefConseqences3Label = "The consequences of climate change will <b> not </b> be very serious." # reversed (originally not)
+    beliefConseqences4Label = "Climate Change is one of the greatest risks of our time."
+    
+
+    

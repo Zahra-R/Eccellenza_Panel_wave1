@@ -14,14 +14,15 @@ class Lexicon:
     feeback_label="Do you have any comments or feedback on the study? Thanks for sharing. (optional)"
     feeback_title = "Your feedback on the study"
 
-    inaccurate = "Inaccurate Statement"
-    accurate = "Response in Line with Scientific Evidence "
+    inaccurate = "不准确的说法"
+    accurate = "符合科学证据的回应"
 
         
     # goodbye page 
-    goodbye_header = 'Thank you!'
-    goodbye_text = 'Thank you for your participation in our study! <br> You are now at the end of the study. To receive compensation please click on next .'
-    finish = "Click here to finish"
+    goodbye_header = 'Thank you very much!'
+    goodbye_text = 'Thank you for your participation in our study. <p> You are now at the end of the study. To confirm participation and return to the market research instutite, please click on the button below <p>.'
 
     # adapt link
     link = 'https://www.innofact-umfrage.de/sample_only/ub3/us/danke_f.php'
+    finish = "Click here to finish"
+

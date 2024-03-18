@@ -11,11 +11,11 @@ input.larger {
   width: 3vw;
   height: 3vw;
 
-  max-width: 15px;
-  max-height: 15px;
+  max-width: 25px;
+  max-height: 25px;
 
-  min-width: 5px;
-  min-height: 5px;
+  min-width: 3px;
+  min-height: 3px;
 }
 
 
@@ -30,19 +30,22 @@ input[type='range']::-webkit-slider-thumb {
     border-radius: 50%;
   }
 
-table.radiotable th, table.radiotable td {
-  padding: 5px;
-  text-align: center; /* Center-align the entire table */
-  max-width: none; /* No max-width for the entire table */
-  width: 30px;
+
+table.radiotable th, table.radiotable td{
+  padding: 10px 0;
+  text-align: center; /* Center-align the content */
 }
 
+
 /* Left-align the first column */
-table.radiotable th:first-child,
+table.radiotable th:first-child{
+  text-align: left;
+}
 table.radiotable td:first-child {
   text-align: left;
 
 }
+
 
 
 /* Alternating row colors every three rows */

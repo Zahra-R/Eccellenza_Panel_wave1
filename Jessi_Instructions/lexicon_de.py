@@ -7,6 +7,15 @@ class Lexicon:
     Association3 = "3. Assoziation"
     Association4 = "4. Assoziation"
 
+    # transition
+    transitions_first_1 = 'Willkommen zu der Studie'
+    transitions_first_2= 'Diese Studie besteht aus vier Teilen. Der erste Teil beginnt gleich. Bitte versuchen Sie, den Teil ohne Unterbrechung zu bearbeiten. Herzlichen Dank für Ihre Zeit.'
+    transition_title = 'Willkommen zum nächsten Teil der Studie. '
+    transitions_second_1 =  'Sie haben jetzt '
+    transitions_second_2 = 'von insgesamt 4 Teilen abgeschlossen. Teil'
+    transitions_second_3 = 'wird gleich beginnen. Wenn Sie eine Pause benötigen, wäre jetzt eine gute Zeit dafür.'
+    transitions_second_4 = 'Sobald Sie mit dem nächsten Teil beginnen, bitten wir Sie, diesen möglichst ohne Unterbrechung zu bearbeiten. Vielen Dank für Ihre Zeit. Wenn Sie bereit sind, klicken Sie auf "Weiter".'
+    
     #Affective Imagery Rating
     Title_rating = "Ihre Assoziationen zur CO<sub>2</sub>-Steuer"
     Instructions_rating = "Nachfolgend sehen Sie die von Ihnen genannten Wörter und Gedanken in Bezug auf die CO<sub>2</sub>-Steuer. Bitte geben Sie an, wie positiv oder negativ Sie diese Assoziationen in Bezug auf die CO<sub>2</sub>-Steuer befinden."
@@ -34,6 +43,7 @@ class Lexicon:
     instr_continue = "Ihnen werden nun nacheinander <b>12 fiktive Vorschläge für eine CO<sub>2</sub>-Steuer</b> vorgelegt. Für jeden dieser Vorschläge können Sie mit <b>Ja</b> oder <b>Nein</b> stimmen.Bitte sehen Sie sich jeden Vorschlag sorgfältig an und nehmen Sie sich etwas Zeit, um Ihre Stimme abzugeben. Die Reihenfolge der 4 Merkmale wird sich über die 12 Beispiele hinweg ändern."
 
 
+    example_CT = '/static/global/images/task_designCT_de.png'
     next = "Weiter"
 
     

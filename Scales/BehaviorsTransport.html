@@ -1,7 +1,6 @@
 
 {% block styles %}
     <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
-
     <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
 {% endblock %}
 
@@ -101,12 +100,6 @@
 
 
 <br>
-<br>
-{{ formfield 'footprint_flying_short' label=Lexicon.flying_short_label}} 
-{{ formfield 'footprint_flying_mid' label=Lexicon.flying_mid_label}} 
-{{ formfield 'footprint_flying_long' label=Lexicon.flying_long_label}} 
-
-<br>
 
 <div class="next-btn radiotable">
     <div style="float: right; padding-top: 2vh;">
@@ -118,11 +111,10 @@
 
 
 {% block scripts %}
-<script src="{% static 'global/js/functions.js' %}" defer></script>
+
 <script>
 
     document.addEventListener("DOMContentLoaded", function () {
-        setWidthForTableColumns1();
     });
 
     $(document).ready(function () {

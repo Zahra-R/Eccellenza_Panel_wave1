@@ -11,34 +11,54 @@ class Lexicon:
     not_at_all = "gar nicht"
     very_much = "sehr stark"
     
-    completely_agree = "stimme absolut zu"
-    completely_disagree = "stimme überhaupt nicht zu"
-    dont_know = "Weiss nicht"
-    opposed_to_values = "meinen Werten entgegengesetzt"
-    strongly_liberal = "stark liberal"
+    completely_agree = "stimme äußerst zu"
+    completely_disagree = "stimme gar nicht zu"
+    do_not_believe = "Ich glaube nicht, dass der Klimawandel stattfindet"
+
+    dont_know = "Weiß nicht"
+    opposed_to_values = "entgegen meinen Werten "
+    not_important = "nicht <br> wichtig"
+    not_at_all_important = "überhaupt nicht wichtig"
+    extremely_important = "extrem <br> wichtig"
+    
+    strongly_liberal = "links/<br> sehr liberal"
     somewhat_liberal = "eher liberal"
     moderate = "moderat"
     somewhat_conservative = "eher konservativ"
-    strongly_conservative = "stark konservativ"
+    strongly_conservative = "rechts/<br> sehr konservativ"
     no_trust_at_all = "absolutes Misstrauen"
     full_trust = "absolutes Vertrauen"
     completely_false = "komplett falsch"
     completely_true = "komplett richtig"
 
-    #Climate Change Concern Tobler
-    ccc_title = "Einstellungen zum Klimawandel"
-    ccc_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    ccc1Label = "Wir müssen das empfindliche Klimagleichgewicht schützen."
-    ccc2Label = "Der Klimaschutz ist wichtig für unsere Zukunft."
-    ccc3Label = "Ich mache mir Sorgen über den Zustand des Klimas."
-    ccc4Label = "Der Klimawandel hat ernste Folgen für die Menschheit und die Natur."
-    ccc10Label = "Der Klimawandel und seine Folgen werden in den Medien übertrieben."
-    ccc11Label = "Der Klimawandel ist ein betrügerisches Geschäft."
-    ccc12Label = "Solange Metereologen nicht einmal richtig das Wetter vorhersagen können, kann das Klima auch nicht zuverlässig vorhergesagt werden."
-    ccc13Label = "Es gibt wichtigere Probleme als den Klimaschutz."
-    ccc14Label = "Ich fühle mich nicht von dem Klimawandel bedroht."
-    ccc15Label = "Die Folgen des Klimawandels sind unvorhersehbar, deswegen ist mein klimafreundliches Verhalten vergeblich."
-    ccc16Label = "Klimaschutz behindert unnötigerweise das Wirtschaftswachstum."
+    
+    ## belief in climate change 
+    beliefCC_intro = "Der Klimawandel bezeichnet den globalen Anstieg der Temperaturen, der in den letzten 150 Jahren beobachtet wurde und sich nach Prognosen auch in Zukunft fortsetzen wird."
+    belief1HappeningLabel = "Wie sehr stimmen Sie der folgenden Aussage zu? 'Der Klimawandel ist real.'"
+
+    ### belief in (human) causes taken from  Valkengoed
+  
+    beliefHuman_title = "Was glauben Sie?"
+    beliefHuman_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
+    beliefHuman1Label = "Menschliche Aktivitäten sind <b> keine </b> Hauptursache des Klimawandels." # reversed (originally not)
+    beliefHuman2Label = "Der Klimawandel wird ausschließlich durch menschliche Aktivitäten verursacht."
+    beliefHuman3Label = "Die Hauptursachen des Klimawandels sind menschliche Verhalten."
+
+    beliefConsensLabel = "Wie viel Prozent der Klimawissenschaftler sind sich einig, dass der Klimawandel echt und durch Menschen verursacht ist?"
+
+    beliefConseqences1Label = "Der Klimawandel ist gegenwärtig die größte Bedrohung für die Menschheit."
+    beliefConseqences2Label = "Der Klimawandel wird ernste negative Folgen mit sich ziehen."
+    beliefConseqences3Label = "Die Folgen des Klimawandels werden <b> nicht </b> sehr ernst sein." # reversed (originally not)
+
+
+    ##belief in solutions
+
+    beliefSolutions1Label = "Der Wandel zu einer nachhaltigen und klimafreundlichen Gesellschaft würde unsere nationalen Lebensstandards verringern." 
+    beliefSolutions2Label = "Nachhaltige Technologien und Lösungen sind in den Kinderschuhen und ein Ausstieg aus fossilen Brensstoffen ist noch nicht umsetzbar."
+    beliefSolutions3Label = "Ich denke, dass einkommensstarke Länder eine größere Verantwortung haben, ihren Ausstoß von Treibhausgasen zu verringern als Länder mit niedrigen und mittleren Einkommen." 
+    beliefSolutions4Label = "Die Industrie muss Treibhausgasemissionen reduzieren, nicht Individuen."
+    beliefSolutions5Label = "Ich würde mich lieber darauf vorbereiten mit dem Klimawandel zu leben, als den Klimawandel zu bekämpfen."
+
 
     #Climate Change Emotion Knauf/Truelove
     cce_title = "Reaktionen auf den Klimawandel"
@@ -63,17 +83,6 @@ class Lexicon:
     emoConcern3Label = "beunruhigt"
 
 
-     ### beliefs taken from  Valkengoed
-    belief_title = "Was glauben Sie?"
-    belief_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    belief1Label = "Menschliche Aktivitäten sind eine Hauptursache des Klimawandels."
-    belief2Label = "Der Klimawandel wird überwiegend durch menschliche Aktivität verursacht."
-    belief3Label = "Die Hauptursachen des Klimawandels sind menschliche Verhalten."
-
-    beliefConsensLabel = "Wie viel Prozent der Klimawissenschaftler sind sich einig, dass der Klimawandel echt, und menschenverursacht ist?"
-
-
-
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
     wvv_title = "Wie sehen Sie die Welt?"
     wvv_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
@@ -90,22 +99,16 @@ class Lexicon:
     ibv1Label = "Respektieren der Erde (Harmonie mit anderen Arten)"
     ibv2Label = "Schützen der Umwelt (die Natur erhalten)"
     ibv3Label = "Verhindern von Umweltverschmutzung (natürliche Ressourcen schützen)"
-    ibv4Label = "Einheit mit der Natur (sich in die Natür einfügen)"
+    ibv4Label = "Einheit mit der Natur (sich in die Natur einfügen)"
 
     # Political Orientation Pennycook et al 2020
-    po_title = "Politische Ausrichtung"
-    po_header = "Was ist Ihre allgemeine Haltung zu politischen Themen?"
-    po1Label = "Bei sozialen Themen bin ich..."
-    po2Label = "Bei wirtschaftlichen Themen bin ich..."
+    polOrientationLabel = "Wo sehen Sie sich im politischen Spektrum?"
 
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
     pit_title = "Vertrauen im Bezug auf den Klimawandel"
     pit_header = "Wie sehr vertrauen Sie diesen Akteuren beim Klimawandel?"
-    pit1Label = "der deutschen Regierung"
-   # pit2Label = "deutschen Wissenschaftlern"
-    pit2Label = "ausländischen Regierungen"
-   # pit4Label = "ausländischen Wissenschaftlern"
-   # pit5Label = "Dem Zwischenstaatliche Sachverständigenrat für Klimaänderungen (Intergovernmental Panel on Climate Change, IPCC)"
+    pit1Label = "der lokalen Regierung"
+    pit2Label = "der nationalen Regierung"
 
      # Knowledge Question from Allianz Climate Literacy Report
     cck_title = 'Was wissen Sie über den Klimawandel?'
@@ -138,29 +141,29 @@ class Lexicon:
     know_5c = "mehr als 5000 Jahre"
 
     know_6qu = "Welche der folgenden Optionen beschreibt am besten den Treibhausgaseffekt?"
-    know_6a = "Waldrodung und Plastikverschmutzung verursachen den Zusammenbruch von vielen Ökosystemen. Der zunehmende Verlust von Biodiversität und der Verlust von Flora und Fauna in der Wildniss wird Treibhausgaseffekt genannt."
+    know_6a = "Waldrodung und Plastikverschmutzung verursachen den Zusammenbruch von vielen Ökosystemen. Der zunehmende Verlust von Biodiversität und der Verlust von Flora und Fauna in der Wildnis wird Treibhausgaseffekt genannt."
     know_6b = "Treibhausgase verursachen Luftverschmutzung. Sie führen zu mehr feinen Teilchen und feinerem Staub welcher wiederum die Ventilation verringert. Ohne die Zirkulation von frischer Luft, wird die Erde so immer wärmer. "
-    know_6c = "Überschüssige Treibhausgase sammeln sich in der Atmosphäre. Aufgrund ihrer molekularen Struktur, wird die infrarot Strahlung der Erde reflektiert und zur Erde zurückgestrahlt. Auf diese Weise wird Hitze eingeschlossen."
+    know_6c = "Überschüssige Treibhausgase sammeln sich in der Atmosphäre. Aufgrund ihrer molekularen Struktur, wird die Infrarot-Strahlung der Erde reflektiert und zur Erde zurückgestrahlt. Auf diese Weise wird Hitze eingeschlossen."
     
 
-    know_8qu = "Wenn wir in dem jetzigen Tempo weitermachen, nach wie vielen Jahren werden wir unser CO2 Budget verbraucht haben, um den Temperaturanstieg auf 1,5 °C zu begrenzen?" # is Sep 2026 
-    know_8a = "Weniger als 1 Jahr"
-    know_8b = "1-2 Jahre"
-    know_8c = "2-4 Jahre"
-    know_8d = "Mehr als 4 Jahre"
+    know_7qu = "Wenn wir in dem jetzigen Tempo weitermachen, nach wie vielen Jahren werden wir unser CO2 Budget verbraucht haben, um den Temperaturanstieg auf 1,5 °C zu begrenzen?" # is Sep 2026 
+    know_7a = "Weniger als 1 Jahr"
+    know_7b = "1-2 Jahre"
+    know_7c = "2-4 Jahre"
+    know_7d = "Mehr als 4 Jahre"
     
 
-    know_9qu = "Welches Land oder Region verursacht absolut gesehen die höchsten CO2-Emissionen pro Jahr?"
+    know_8qu = "Welches Land oder Region verursacht absolut gesehen die höchsten CO2-Emissionen pro Jahr?"
+    know_8a = "China"
+    know_8b = "USA"
+    know_8c = "EU"
+    know_8d = "Indien"
+
+    know_9qu = "Welches Land oder Region verursacht pro Kopf die höchsten CO2 Emissionen pro Jahr?"
     know_9a = "China"
     know_9b = "USA"
     know_9c = "EU"
     know_9d = "Indien"
-
-    know_10qu = "Welches der 4 Länder/Regionen verursacht die höchsten pro Kopf CO2 Emissionen pro Jahr?"
-    know_10a = "China"
-    know_10b = "USA"
-    know_10c = "EU"
-    know_10d = "Indien"
 
     #### behaviors
     behaviors_title = ' Verhalten '
@@ -251,37 +254,7 @@ class Lexicon:
     demographics_title = "Persönliche Daten"
     demographics_header = "Bitte geben Sie die folgenden Informationen über sich ein."
 
-    age_label = "Wie alt sind Sie?"
-    gender_label = "Welchem Geschlecht fühlen Sie sich zugehörig?"
-    female = "Weiblich"
-    male = "Männlich"
-    diverse = "Divers"
-    other = "Andere"
-
-    income_label = "Was ist Ihr jährliches Einkommen?"
-    income_less_than_A = "Weniger als 25.000 €"
-    income_A_to_B = "25.000 € - 50.000 €"
-    income_B_to_C = "50.001 € - 75.000 €"
-    income_C_to_D = "75.001 € - 100.000 €"
-    income_more_than_D = "Mehr als 100.000 €"
-    prefer_not_to_say = "Keine Angabe"
-
-    education_label = "Was ist Ihr höchster Bildungsabschluss?"
-    #no_formal = "Keine formale Bildung"
-    #elementary_school = "Grundschule"
-    #secondary_school = "Hauptschulabschluss"
-    #higher_secondary_school = "Mittlere Reife"
-    #vocational_training = "Berufsausbildung"
-    #high_school = "Abitur"
-   # college_degree = "Hochschulabschluss - Bachelor"
-  #  master_degree = "Hochschulabschluss - Master"
- #  doctoral_degree = "Promotion"
-    no_formal = "keine formelle Bildung"
-    obligatory = "obligatorische Schule"
-    high_school = "Sekundarstufe: Abitur / Berufsbildung / Allgemeinbildung "
-    degree = "höhere Berufsbildung: Hochschulabschluss / Bachelor / Master"
-    doctoral_degree = "Promotion (PhD) oder höher"
-    prefer_not_to_say_education = "Keine Angabe"
+    ageYear_label = "In welchem Jahr wurden sie geboren?"
 
     residential_area_label = "Was beschreibt Ihre Wohngegend am besten?"
     metropolitan_area = "Metropole/Großstadt"
@@ -299,9 +272,16 @@ class Lexicon:
     afd = "Alternative für Deutschland (AfD)"
     other_party = "Andere"
 
-    # Transition page
-    Transition_text = "Danke für Ihre bisherige Teilnahme an unserer Studie! <br> Sie haben hiermit die Entscheidungsaufgabe abgeschlossen. Im Folgenden biten wir Sie einige Fragen zu Ihren Einstellungen und Wahrnehmungen beantworten. "
-    
-    # goodbye page 
-    goodbye_text = "Vielen Dank für die Teilnahme an unserer Studie! <br> Sie sind nun am Ende der Studie angelangt und werden nun automatisch weitergeleitet um Ihre Aufwandsentschädigung zu erhalten."
+     # transition
+    transition_title = 'Willkommen beim letzten Block der Studie'
 
+
+    transitions_a = 'Vielen Dank für Ihre bisherigen Antworten. Wenn Sie eine kurze Pause benötigen, bevor Sie mit der Studie fortfahren, wäre jetzt ein guter Zeitpunkt.</p> <p> Sobald Sie auf den weiter-Knopf auf dieser Seite klicken, bitten wir Sie, diesen Block ohne Unterbrechung zu bearbeiten. '
+    # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
+    transitions_b ='Dies ist der letzte Teil'
+    transitions_c = ' von insgesamt 4 Teilen. Vielen Dank, dass Sie sich die Zeit genommen haben, bis hier hin alles zu bearbeiten. Wenn Sie bereit sind, klicken Sie auf "Weiter".'
+   
+
+
+
+  

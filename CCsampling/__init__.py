@@ -3,14 +3,12 @@ import random
 from otree.api import *
 import numpy as np
 import json
-from settings import LANGUAGE_CODE
 
 
 author = 'Zahra Rahmani'
 doc = """
 Sampling Paradigma
 """
-
 
 # this is the dict you should pass to each page in vars_for_template,
 # enabling you to do if-statements like {{ if de }} Nein {{ else }} No {{ endif }}
@@ -63,13 +61,11 @@ class Player(BasePlayer):
     InfohasDebrief = models.BooleanField()
    
     reverseBoxes = models.BooleanField()
-    tellingBoxLabels = models.BooleanField()
 
-    click_debunk = models.BooleanField()
-    click_mechanism = models.BooleanField()
-    click_ipcc = models.BooleanField()
-    click_consequences = models.BooleanField()
-   
+
+    attention_agree = models.IntegerField( min=-100, max=100)
+    attention_ccconcern = models.IntegerField( min=-100, max=100)
+    attention_boxChoice = models.StringField(choices= ['i', 'm'])
 
 
 def creating_session(subsession:Subsession):
@@ -89,7 +85,8 @@ def creating_session(subsession:Subsession):
     for player in subsession.get_players():
         if subsession.round_number == 1: 
             player.participant.randomInfoArray = random.sample(range(1,147),C.NUM_ROUNDS)
-            player.participant.randomMisinfoArray = random.sample(range(1,79),C.NUM_ROUNDS)
+            ### Important note! This used to be 79, but we removed two tweets because of too strong context effects from the misinfo database 
+            player.participant.randomMisinfoArray = random.sample(range(1,77),C.NUM_ROUNDS)
             player.participant.reverseBoxes = next(reverse_display)
             player.participant.seenMisinfo = []
             player.participant.seenMislInfo = []
@@ -116,7 +113,6 @@ def allocateBoxNames(player: Player):
 
 def saveParticipantVarsToPlayer(player: Player): 
     player.reverseBoxes = player.participant.reverseBoxes
-    player.tellingBoxLabels = player.participant.telling_box_label
 
 
 # ---------------------------------------------------------------
@@ -135,6 +131,10 @@ class sampling(Page):
         elif player.session.config['language'] == "en":
             misinfofile = C.misinfofile_en
             infofile = C.infofile_en
+        print("--------------------------------------------------------------------------------------------------------------------------------------------------------are we talking?")
+        print(round_number-1)
+        print(player.participant.randomMisinfoArray)
+        print(misinfofile[player.participant.randomMisinfoArray[round_number-1]])
         MisinfoText = misinfofile[player.participant.randomMisinfoArray[round_number-1]]['finalStatement']
         InfoText = infofile[player.participant.randomInfoArray[round_number-1]]['finalStatement']
         player.InfohasDebrief = True if "correctedStatement" in  infofile[player.participant.randomInfoArray[round_number-1]] else False
@@ -148,7 +148,6 @@ class sampling(Page):
             'reverseBoxes': player.participant.reverseBoxes,
             'MisinfoText': MisinfoText,
             'InfoText': InfoText, 
-            'tellingBoxNames': player.participant.telling_box_label,
             'Lexicon': player.session.samplingLexi
         } 
     @staticmethod
@@ -158,6 +157,23 @@ class sampling(Page):
         else:
             if(player.InfohasDebrief == True ):
                player.participant.seenMislInfo.append(player.participant.randomInfoArray[player.round_number-1]) 
+
+
+class sampling_a(Page):
+    form_model = 'player'
+    form_fields = ['attention_boxChoice', 'attention_ccconcern', 'attention_agree']
+    @staticmethod
+    def vars_for_template(player: Player):
+        round_number = player.round_number
+        return {
+            'round_number': round_number,
+            'reverseBoxes': player.participant.reverseBoxes,
+            'Lexicon': player.session.samplingLexi
+        } 
+    @staticmethod
+    def is_displayed(player: Player):
+        return (player.round_number == 3)
+   
 
 
 class boxrating(Page):
@@ -176,7 +192,7 @@ class boxrating(Page):
         }
     @staticmethod
     def is_displayed(player: Player):
-        return (player.round_number % 500 == 0)
+        return (player.round_number % 5 == 0)
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
         print('in before next page function', player.boxlikingInfo, player.boxlikingMisinfo, player.boxrecommendationInfo, player.boxrecommendationMisinfo )
@@ -185,55 +201,8 @@ class boxrating(Page):
             saveParticipantVarsToPlayer(player)
 
 
-class Conclude(Page):
-    form_model = 'player'
-    form_fields = ['click_consequences', 'click_debunk', 'click_ipcc', 'click_mechanism']
-    @staticmethod
-    def vars_for_template(player: Player):
-        import string
-        seenM = player.participant.seenMisinfo
-        seenMlI = player.participant.seenMislInfo
-        
-        if LANGUAGE_CODE == 'de':
-            misinfofile = open('CCsampling/ClimateMisinfo_de.json')
-            infofile = open('CCsampling/ClimateInfo_de.json')
-        else:
-            misinfofile = open('CCsampling/ClimateMisinfo_en.json')
-            infofile = open('CCsampling/ClimateInfo_en.json')
-        misinfo = json.load(misinfofile)['CCMisinfo']
-        info = json.load(infofile)['CCInfo']
 
-        seenMstatements = []
-        seenMcorrections = []
-        for x in seenM:
-            #string.replace(old, new, count)
-            statementstring = misinfo[x]['finalStatement']
-            statementstring =statementstring.replace("'", "´")
-            seenMstatements.append(statementstring)
-            correctedstring = misinfo[x]['correctedStatement']
-            correctedstring = correctedstring.replace("'", "´")
-            seenMcorrections.append(correctedstring)
-        for x in seenMlI: 
-            statementstring = info[x]['finalStatement']
-            statementstring =statementstring.replace("'", "´")
-            seenMstatements.append(statementstring)
-            correctedstring = info[x]['correctedStatement']
-            if correctedstring is not None:
-                correctedstring = correctedstring.replace("'", "´")
-            seenMcorrections.append(correctedstring)
-            
-        return {
-            'seenM': seenM,
-            'seenMlI': seenMlI,
-            'seenMstatements': seenMstatements,
-            'seenMcorrections': seenMcorrections,
-            'Lexicon': player.session.samplingLexi
-        }
-    @staticmethod
-    def is_displayed(player: Player):
-        return (player.round_number  == C.NUM_ROUNDS)
-    
 
 page_sequence = [
-    sampling, boxrating, Conclude
+    sampling, sampling_a, boxrating
 ]

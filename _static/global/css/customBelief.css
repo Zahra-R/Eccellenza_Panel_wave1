@@ -8,12 +8,9 @@
 .otree-body{
     max-width: 950px;
     font-size: 1.1rem;
+    text-align: justify;
     margin-left:auto;
     margin-right:auto;
-}
-
-.otree-body > p {
-  text-align: justify
 }
 
 
@@ -64,17 +61,6 @@
 }
 
 
-input[type='range']::-webkit-slider-thumb {
-  width: 30px;
-  -webkit-appearance: none;
-  height: 30px;
-  cursor: pointer;
-  background: bisque; 
-  border-radius: 50%;
-}
-
-
-
 
 .rotate {
   transform: rotate(60deg) translate(9px,-13px);
@@ -97,20 +83,61 @@ input[type='range']::-webkit-slider-thumb {
 
 }
 
-.radio-column{
-  width:5%;
-  min-width:43px;
-  max-width:80px;
-  text-align: center;
+.att-box{
+    border-style: dashed;
+    padding: 10px 10px 10px 10px;
+    /* background-color: lightpink; */
+    border-width: medium ;
+    margin-top: 30px;
 }
 
-
-h2{
-  text-align: left;
-}
-
-
-th, td {
-    padding: 1vh;
+input.larger {
+    width: 3vw;
+    height: 3vw;
+  
+    max-width: 55px;
+    max-height: 55px;
+  
+    min-width: 5px;
+    min-height: 5px;
   }
+
+input[type='range']::-webkit-slider-thumb {
+    width: 15px;
+    -webkit-appearance: none;
+    height: 20px;
+    cursor: pointer;
+    background: bisque; 
+    border-radius: 50%;
+  }
+
+  table.radiotable th,
+  table.radiotable td {
+      padding: 7px;
+      text-align: center; /* Center-align the content */
+      max-width: 85px;
+      word-wrap: break-word; /* Allow text to wrap onto the next line */
+      white-space: normal; /* Allow text to wrap onto the next line */
+      overflow-wrap: break-word; /* For wider browser support */
+      word-wrap: break-word;
+  }
+  
+
+
+
+/* Left-align the first column */
+table.radiotable th:first-child{
+    text-align: left;
+}
+table.radiotable td:first-child {
+    text-align: left;
+    min-width: 8px; 
+}
+
+
+/* Alternating row colors */
+table.radiotable tr:nth-child(even) {
+    background-color: #c0e3e0;
+}
+
 

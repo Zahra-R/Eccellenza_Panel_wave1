@@ -22,42 +22,58 @@ SESSION_CONFIGS = [
   #      app_sequence=['survey','task'],
          app_sequence=['Intro'],
          consent_form="redirect",
-         language = "de",
+         language = "zh_hans",
          num_demo_participants=10,
      ),
      dict(
-         name='Order_Nina_Jessi_Zahra',
+         name='Order_Nina_Jessi_Zahra_zh',
   #      app_sequence=['survey','task'],
          app_sequence=[ 'Nina_instructions', 'Nina_carbontask',  'Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling'],
-         language = "de",
+         language = "zh_hans",
          num_demo_participants=10,
      ),
       dict(
-         name='Order_Jessi_Zahra_Nina',
+         name='Order_Jessi_Zahra_Nina_zh',
   #      app_sequence=['survey','task'],
          app_sequence=['Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling', 'Nina_instructions', 'Nina_carbontask' ],
-         language = "de",
+         language = "zh_hans",
          num_demo_participants=10,
      ),
       dict(
          name='Order_Zahra_Nina_Jessi_de',
   #      app_sequence=['survey','task'],
-         app_sequence=['CCsampling_intro', 'CCsampling','Scales'],
+         app_sequence=[ 'CCsampling_intro', 'CCsampling','Nina_instructions', 'Nina_carbontask',  'Jessi_Instructions',  'Jessi_carbonTax', 'Scales','CCsampling_Debrief'],
          language = "de",
          num_demo_participants=10,
      ),
      dict(
          name='Order_Zahra_Nina_Jessi_en',
   #      app_sequence=['survey','task'],
-         app_sequence=['CCsampling_intro', 'CCsampling','Scales'],
+         app_sequence=[ 'CCsampling_intro', 'CCsampling','Nina_instructions', 'Nina_carbontask',  'Jessi_Instructions',  'Jessi_carbonTax', 'Scales','CCsampling_Debrief'],
          language = "en",
          num_demo_participants=10,
      ),
     dict(
-         name='first_draft_Panel_scales_pure',
+         name='chinese_Panel_scales_pure',
+  #      app_sequence=['survey','task'],
+         app_sequence=['Scales'],
+         language = "zh_hans",
+
+         num_demo_participants=10,
+     ),
+      dict(
+         name='german_Panel_scales_pure',
   #      app_sequence=['survey','task'],
          app_sequence=['Scales'],
          language = "de",
+
+         num_demo_participants=10,
+     ),
+     dict(
+         name='english_Panel_scales_pure',
+  #      app_sequence=['survey','task'],
+         app_sequence=['Scales'],
+         language = "en",
 
          num_demo_participants=10,
      ),
@@ -70,7 +86,7 @@ SESSION_CONFIGS = [
      ),
         dict(
          name='Pretest_Jessi_de',
-         app_sequence= [ 'Intro', 'Jessi_Instructions', 'Jessi_carbonTax', 'Scales_Jessi' ],
+         app_sequence= [ 'Intro', 'Jessi_Instructions', 'Jessi_carbonTax', 'CCsampling_intro'],
          consent_form = "standalone",
          language = "de",
          num_demo_participants=10,
@@ -92,6 +108,7 @@ PARTICIPANT_FIELDS = [
     ## Overall Structure
     'order_tasks',
     'pLangCode',
+    'task_counter',
 
      #CC SAMPLING FIELDS
     'randomInfoArray',
@@ -99,7 +116,7 @@ PARTICIPANT_FIELDS = [
     'reverseBoxes',
     'seenMisinfo',
     'seenMislInfo',
-    'telling_box_label',
+     #'telling_box_label',
 
     ## carbon footprint task
     'task_rounds',
@@ -112,11 +129,13 @@ SESSION_FIELDS = [
     'introLexi',
     'samplingLexi',
     'samplingIntroLexi',
-    'cabonTaxLexi',
-    'taxIntroLexi',
+
+    'introNinaLexi',
     'carbonTaskLexi',
-    'taskIntroLexi',
-    'footprintLexi',
+
+    'JessiTaskLexicon',
+    'JessiIntroLexi',
+    
     'scalesLexi',
     'debriefLexi',
 
