@@ -81,6 +81,9 @@ input.larger {
 
 
 
+td{
+  padding: 15px 0;
+}
 
 table.radiotable2 th:first-child,
 table.radiotable2 td:first-child,

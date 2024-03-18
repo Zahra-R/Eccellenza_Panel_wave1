@@ -81,7 +81,7 @@ class transition (Page):
             player.participant.task_counter += 1 
             player.block_order = player.participant.task_counter
             player.already_counted = True
-        return dict(Lexicon=player.session.JessiIntroLexi, blocknumber = player.block_order)
+        return dict(Lexicon=player.session.JessiIntroLexi, blocknumber = player.block_order, blockaccomplished = player.block_order -1)
     
     
 class instructions_intro(Page):

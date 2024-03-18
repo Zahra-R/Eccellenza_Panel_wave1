@@ -279,7 +279,7 @@ class Lexicon:
     transitions_a = 'Vielen Dank für Ihre bisherigen Antworten. Wenn Sie eine kurze Pause benötigen, bevor Sie mit der Studie fortfahren, wäre jetzt ein guter Zeitpunkt.</p> <p> Sobald Sie auf den weiter-Knopf auf dieser Seite klicken, bitten wir Sie, diesen Block ohne Unterbrechung zu bearbeiten. '
     # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
     transitions_b ='Dies ist der letzte Teil'
-    transitions_c = ' von insgesamt 4 Teilen. Vielen Dank, dass Sie sich die Zeit genommen haben, bis hier hin alles zu bearbeiten. Wenn Sie bereit sind, klicken Sie auf "weiter".'
+    transitions_c = ' von insgesamt 4 Teilen. Vielen Dank, dass Sie sich die Zeit genommen haben, bis hier hin alles zu bearbeiten. Wenn Sie bereit sind, klicken Sie auf "Weiter".'
    
 
 

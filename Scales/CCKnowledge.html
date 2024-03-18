@@ -36,7 +36,7 @@
     {{ for choice in field }}
          
             <div class= "row">
-                <div class="column accchoice" style="width: inherit;" data-parent={{field.id}} onclick="mark_answered($(this).parent().parent())">{{ choice }}</div>
+                <div class="column accchoice" style="width: inherit;" data-parent={{field.id}} onclick="mark_answered( `{{field.name}}` )">{{ choice }}</div>
                 <div class="column answer" style="width: inherit; max-width:80%"> {{choice.label}}</div>
             </div>
          
@@ -60,12 +60,12 @@
         var acc = document.getElementsByClassName("accordion");
         var maxid= 9
 
-        function mark_answered(element){
-            nameQuestion = element.children()[0].name
+        function mark_answered(nameQuestion){
             if(! document.forms.form[nameQuestion].value==''){
-                element.addClass("answered")
-                myid = element.children()[0].children[0].dataset.parent
-                mynumber = parseInt(myid.slice(-1))
+                myelement = document.getElementById("id_"+nameQuestion)
+                myelement.classList.add("answered")
+                myid = "id_" + nameQuestion
+                mynumber = parseInt(nameQuestion.slice(-1))
                 if (mynumber < 9) {
                     setTimeout(function () {close_individual_question(myid) }, 300);
                     nextnumber = mynumber +1
