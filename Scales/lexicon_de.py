@@ -159,7 +159,7 @@ class Lexicon:
     know_8c = "EU"
     know_8d = "Indien"
 
-    know_9qu = "Welches der 4 Länder/Regionen verursacht die höchsten pro Kopf CO2 Emissionen pro Jahr?"
+    know_9qu = "Welches Land oder Region verursacht die höchsten pro Kopf CO2 Emissionen pro Jahr?"
     know_9a = "China"
     know_9b = "USA"
     know_9c = "EU"

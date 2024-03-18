@@ -386,7 +386,7 @@ class CCKnowledge(Page):
         Lexicon = player.session.scalesLexi
         return dict(
         form_fields= ['cknow1', 'cknow2', 'cknow3', 'cknow4', 'cknow5', 'cknow6','cknow7','cknow8', 'cknow9'],
-        form_field_labels = [Lexicon.know_1qu, Lexicon.know_2qu, Lexicon.know_3qu, Lexicon.know_4qu, Lexicon.know_5qu, Lexicon.know_6qu,  Lexicon.know_7qu, Lexicon.know_7qu, Lexicon.know_8qu]
+        form_field_labels = [Lexicon.know_1qu, Lexicon.know_2qu, Lexicon.know_3qu, Lexicon.know_4qu, Lexicon.know_5qu, Lexicon.know_6qu,  Lexicon.know_7qu, Lexicon.know_8qu, Lexicon.know_9qu]
     )
     
 class BehaviorsFood(Page):

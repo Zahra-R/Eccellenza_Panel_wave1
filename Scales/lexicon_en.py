@@ -169,7 +169,7 @@ class Lexicon:
     know_8c = "EU"
     know_8d = "India"
 
-    know_9qu = "Which of the four countries/regions causes the highest per-capita CO2-emissions per year?"
+    know_9qu = "Which country/region causes the highest per-capita CO2-emissions per year?"
     know_9a = "China"
     know_9b = "USA"
     know_9c = "EU"
