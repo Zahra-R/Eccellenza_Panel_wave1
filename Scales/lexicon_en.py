@@ -40,10 +40,10 @@ class Lexicon:
     beliefHuman_title = "What do you believe?"
     beliefHuman_header = "How much do you agree with the following statements?"
     beliefHuman1Label = "Human activities are <b> not </b> a major cause of climate change." # reversed (originally not)
-    beliefHuman2Label = "Climate change is mostly caused by human activity."
+    beliefHuman2Label = "Climate change is entirely caused by human activities."
     beliefHuman3Label = "The main causes of climate change are human activities." 
 
-    beliefConseqences1Label = "Overall, climate change will bring more negative than positive consequences to the world."
+    beliefConseqences1Label = "Climate change currently is the greatest threat to humankind."
     beliefConseqences2Label = "Climate change will bring about serious negative consequences."
     beliefConseqences3Label = "The consequences of climate change will <b> not </b> be very serious." # reversed (originally not)
 

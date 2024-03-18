@@ -27,21 +27,13 @@ class Lexicon:
     transitions_second_4 = 'Please try to complete the next part in one go without any breaks. We appreciate your time for participating in this study. <p> Once you are ready, please click "next".'
 
     ## Climate Change Belief
-
-      ## belief in climate change 
-    beliefCC_intro = "Climate change refers global rise in temperatures that has been observed over the past 150 years and is predicted to continue in the future."
-    belief1HappeningLabel = "How much do you agree with the following statement? <br> 'Climate change is really happening.'"
-    do_not_believe = "I do not believe that climate change is happening"
-    completely_agree = "completely agree"
-    completely_disagree = "completely disagree"
     ### belief in (human) causes taken from  Valkengoed
-    beliefHuman_title = "What do you believe?"
     beliefHuman_header = "How much do you agree with the following statements?"
     beliefHuman1Label = "Human activities are <b> not </b> a major cause of climate change." # reversed (originally not)
-    beliefHuman2Label = "Climate change is mostly caused by human activity."
+    beliefHuman2Label = "Climate change is entirely caused by human activities."
     beliefHuman3Label = "The main causes of climate change are human activities." 
 
-    beliefConseqences1Label = "Overall, climate change will bring more negative than positive consequences to the world."
+    beliefConseqences1Label = "Climate change currently is the greatest threat to humankind."
     beliefConseqences2Label = "Climate change will bring about serious negative consequences."
     beliefConseqences3Label = "The consequences of climate change will <b> not </b> be very serious." # reversed (originally not)
     beliefConseqences4Label = "Climate Change is one of the greatest risks of our time."

@@ -40,10 +40,10 @@ class Lexicon:
     beliefHuman_title = "你相信什么？"
     beliefHuman_header = "您对以下说法的同意程度如何？"
     beliefHuman1Label = "人类活动<b>不是</b>气候变化的主要原因。" # reversed (originally not)
-    beliefHuman2Label = "气候变化主要是由人类活动引起的。"
+    beliefHuman2Label = "气候变化完全是人类活动造成的。"
     beliefHuman3Label = "气候变化的主要原因是人类活动。"
 
-    beliefConseqences1Label = "总体而言，气候变化给世界带来的负面影响多于正面影响。"
+    beliefConseqences1Label = "当前，气候变化是人类面临的最大威胁。"
     beliefConseqences2Label = "气候变化将带来严重的负面后果。"
     beliefConseqences3Label = "气候变化的后果<b>不会</b>非常严重。"# reversed (originally not)
 
