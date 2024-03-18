@@ -419,6 +419,9 @@ class Player(BasePlayer):
 
     ### Demographics
     ageYear = models.IntegerField(min=1900,max = 2008)  # change in different waves
+    
+    householdsize = models.IntegerField(min=1,max = 20) 
+
     residential_area = models.StringField()
     zip_code = models.StringField(blank=True)
     block_order = models.IntegerField()
@@ -617,7 +620,7 @@ class PITrust(Page):
         
 class DemographicsEnd(Page):
     form_model = 'player'
-    form_fields = ['ageYear', 'residential_area', 'zip_code', 'states' ]
+    form_fields = ['ageYear', 'householdsize', 'residential_area', 'zip_code', 'states' ]
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -628,8 +631,8 @@ class DemographicsEnd(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields = ['ageYear',  'residential_area', 'zip_code', 'states' ],
-        form_field_labels = [Lexicon.ageYear_label, Lexicon.residential_area_label, Lexicon.zip_code_label , Lexicon.states_label]
+        form_fields = ['ageYear', 'householdsize',  'residential_area', 'zip_code', 'states' ],
+        form_field_labels = [Lexicon.ageYear_label, Lexicon.householdsize_label, Lexicon.residential_area_label, Lexicon.zip_code_label , Lexicon.states_label]
     )
 
 class transition (Page): 

@@ -273,6 +273,9 @@ class Lexicon:
     transitions_b =' This is the last  '
     transitions_c = 'out of 4 blocks. Thank you for taking the time to complete everything so far. <br> Once you are ready, please click "next".'
 
+
+    householdsize_label = 'How many people live in your household?'
+
     
     states_label = 'Please indicate in which state you live'
     BW = 'Baden-Württemberg'

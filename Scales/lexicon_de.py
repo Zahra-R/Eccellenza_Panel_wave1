@@ -281,6 +281,9 @@ class Lexicon:
     transitions_b ='Dies ist der letzte Teil'
     transitions_c = ' von insgesamt 4 Teilen. Vielen Dank, dass Sie sich die Zeit genommen haben, bis hier hin alles zu bearbeiten. Wenn Sie bereit sind, klicken Sie auf "Weiter".'
 
+
+    householdsize_label = 'Wie viele Personen leben in Ihrem Haushalt?'
+
     states_label = 'Bitte geben Sie an, in welchem Bundesland Sie leben:'
     BW = 'Baden-Württemberg'
     Bayern = "Bayern"

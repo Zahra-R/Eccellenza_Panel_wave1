@@ -278,6 +278,10 @@ class Lexicon:
     # adapt link
     link = 'https://www.innofact-umfrage.de/sample_only/ub3/cn/danke_f.php'
 
+
+    householdsize_label = '你家里有多少人住？'
+
+
     
     states_label = '请指出你住在哪个省份。'
     BW = 'Baden-Württemberg'

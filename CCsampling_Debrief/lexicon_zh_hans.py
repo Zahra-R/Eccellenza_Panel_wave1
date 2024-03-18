@@ -26,3 +26,10 @@ class Lexicon:
     link = 'https://www.innofact-umfrage.de/sample_only/ub3/us/danke_f.php'
     finish = "Click here to finish"
 
+    # goodbye page 
+    comment_label = '如果您对本研究有任何意见或建议，请在此注明：'
+    goodbye_text = '感谢您参与我们的研究！ <br> 您现在处于研究结束阶段。如需获得补偿，请点击下一步。'
+  
+    # adapt link
+    link = 'https://www.innofact-umfrage.de/sample_only/ub3/cn/danke_f.php'
+
