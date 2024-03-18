@@ -14,6 +14,9 @@ class Lexicon:
     feeback_label="Do you have any comments or feedback on the study? Thanks for sharing. (optional)"
     feeback_title = "Your feedback on the study"
 
+    inaccurate = "不准确的说法"
+    accurate = "符合科学证据的回应"
+
         
     # goodbye page 
     goodbye_header = 'Thank you very much!'

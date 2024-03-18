@@ -101,8 +101,8 @@ $(document).ready(function() {
     setTimeout(function () {
         $('#debriefTable').DataTable({
             "columns": [
-                { "data": "Misleading", title:"Inaccurate Statement", width:"45%"},
-                { "data": "Corrected" , title:"Response in Line with Scientific Evidence", width:"55%"},
+                { "data": "Misleading", title:"{{Lexicon.inaccurate}}", width:"45%"},
+                { "data": "Corrected" , title:"{{Lexicon.accurate}}", width:"55%"},
 
             ], 
             "lengthMenu": [ [2, 5, 10, -1], [2, 5, 10, "All"] ],

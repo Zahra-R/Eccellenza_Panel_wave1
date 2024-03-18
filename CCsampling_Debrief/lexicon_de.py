@@ -19,6 +19,9 @@ class Lexicon:
     debrief_link3 = '<p><a id="consequences" href="https://unric.org/de/klimawandel/" target="_blank" rel="noopener noreferrer">Hier erfahren Sie mehr über den Klimawandel und seine Folgen.  </a> </p>'
     debrief_link4 = '<p><a id="ipcc" href="https://www.de-ipcc.de/307.php" target="_blank" rel="noopener noreferrer">Hier finden Sie die deutsche Übersetzung des neuesten Berichts des Weltklimarates. </a> </p>'
 
+
+    inaccurate = "Ungenaue Aussage"
+    accurate = "Antwort aus wissenschaftlicher Sicht "
     feeback_label = "Haben Sie Rückmeldungen oder Kommentare zu der Studie? Vielen Dank, dass Sie Ihre Eindrücke teilen. (freiwillig)"
     feeback_title = "Ihre Rückmeldung"
 
