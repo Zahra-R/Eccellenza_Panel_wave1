@@ -18,9 +18,9 @@ class Lexicon:
     
     dont_know = "Don't know"
     opposed_to_values = "opposed to my values"
-    not_important = "not important"
+    not_important = "not <br> important"
     not_at_all_important = "not at all important"
-    extremely_important = "extremely important"
+    extremely_important = "extremely <br>  important"
 
    
     somewhat_liberal = "Somewhat Liberal"

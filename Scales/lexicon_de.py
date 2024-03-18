@@ -16,10 +16,10 @@ class Lexicon:
     do_not_believe = "Ich glaube nicht, dass der Klimawandel stattfindet"
 
     dont_know = "Weiß nicht"
-    opposed_to_values = "meinen Werten entgegengesetzt"
-    not_important = "nicht wichtig"
+    opposed_to_values = "entgegen meinen Werten "
+    not_important = "nicht <br> wichtig"
     not_at_all_important = "überhaupt nicht wichtig"
-    extremely_important = "extrem wichtig"
+    extremely_important = "extrem <br> wichtig"
     
     strongly_liberal = "links/<br> sehr liberal"
     somewhat_liberal = "eher liberal"
@@ -99,7 +99,7 @@ class Lexicon:
     ibv1Label = "Respektieren der Erde (Harmonie mit anderen Arten)"
     ibv2Label = "Schützen der Umwelt (die Natur erhalten)"
     ibv3Label = "Verhindern von Umweltverschmutzung (natürliche Ressourcen schützen)"
-    ibv4Label = "Einheit mit der Natur (sich in die Natür einfügen)"
+    ibv4Label = "Einheit mit der Natur (sich in die Natur einfügen)"
 
     # Political Orientation Pennycook et al 2020
     polOrientationLabel = "Wo sehen Sie sich im politischen Spektrum?"

@@ -25,7 +25,7 @@ class Lexicon:
 
     opposed_to_values = "违背我的价值观"
     not_important = "不重要"
-    extremely_important = "极其重要"
+    extremely_important = "极其 <br> 重要"
     
     no_trust_at_all = "完全不信任"
     full_trust = "完全信任"
