@@ -25,11 +25,10 @@ class C(BaseConstants):
 
     POLICY_COMBINATIONS_TABLE_de = open('Jessi_carbonTax/Policy_Combinations_Table_de.json')
     POLICY_COMBINATIONS_TABLE_us =  open('Jessi_carbonTax/Policy_Combinations_Table_en.json')
-    POLICY_COMBINATIONS_TABLE_zhans =  open('Jessi_carbonTax/Policy_Combinations_Table_zh_hans.json')
-    PolicyTable = json.load(POLICY_COMBINATIONS_TABLE_de)['PolicyTable']
-    PolicyTable = json.load(POLICY_COMBINATIONS_TABLE_zhans)['PolicyTable']
-    PolicyTable = json.load(POLICY_COMBINATIONS_TABLE_us)['PolicyTable']
-
+    POLICY_COMBINATIONS_TABLE_zh_hans =  open('Jessi_carbonTax/Policy_Combinations_Table_zh_hans.json')
+    PolicyTable_de = json.load(POLICY_COMBINATIONS_TABLE_de)['PolicyTable']
+    PolicyTable_zh_hans = json.load(POLICY_COMBINATIONS_TABLE_zh_hans)['PolicyTable']
+    PolicyTable_us = json.load(POLICY_COMBINATIONS_TABLE_us)['PolicyTable']
 
 
 class Subsession(BaseSubsession):
@@ -91,8 +90,12 @@ class task_page00(Page):
         # this determines which vignette
         task_in_round = player.participant.task_rounds_J[player.round_number - 2]
         player.vignetteNumber = task_in_round
-        my_vignette_table = C.PolicyTable[task_in_round]
-        
+        if player.session.config['language'] == "de":
+            my_vignette_table = C.PolicyTable_de[task_in_round]
+        elif player.session.config['language'] == 'zh_hans':
+            my_vignette_table = C.PolicyTable_zh_hans[task_in_round]
+        else :
+            my_vignette_table =  C.PolicyTable_us[task_in_round]        
         
         # this determines which order within vignette
         random_attribute_order = list(range(0,4))
