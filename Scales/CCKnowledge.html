@@ -61,14 +61,17 @@
         var maxid= 9
 
         function mark_answered(element){
-            element.addClass("answered")
-            myid = element.children()[0].children[0].dataset.parent
-            mynumber = parseInt(myid.slice(-1))
-            if (mynumber < 9) {
-                setTimeout(function () {close_individual_question(myid) }, 300);
-                nextnumber = mynumber +1
-                mynextid = "id_cknow" + nextnumber
-                setTimeout(function () {open_individual_question(mynextid, true) }, 600);
+            nameQuestion = element.children()[0].name
+            if(! document.forms.form[nameQuestion].value==''){
+                element.addClass("answered")
+                myid = element.children()[0].children[0].dataset.parent
+                mynumber = parseInt(myid.slice(-1))
+                if (mynumber < 9) {
+                    setTimeout(function () {close_individual_question(myid) }, 300);
+                    nextnumber = mynumber +1
+                    mynextid = "id_cknow" + nextnumber
+                    setTimeout(function () {open_individual_question(mynextid, true) }, 600);
+                }
             }
             
         }
@@ -111,13 +114,7 @@
 
         }
 
-          
-
-
-        document.addEventListener("DOMContentLoaded", function() {
-            setWidthForTableColumns1();
-        });
-
+        
 
         $(document).ready(function () {
 

@@ -33,8 +33,8 @@ class Lexicon:
 
     
     ## belief in climate change 
-    beliefCC_intro = "Klimawandel bezeichnet die Idee, dass die durchschnittliche Temperatur der Welt seit den letzten 150 Jahren am steigen ist, zukünftig noch mehr steigen wird, und dass sich infolgedessen das Weltklima verändern wird. Was denken Sie? Glauben Sie, dass es den Klimawandel gibt?"
-    belief1HappeningLabel = "Ich glaub, dass der Klimawandel echt ist."
+    beliefCC_intro = "Der Klimawandel bezeichnet den globalen Anstieg der Temperaturen, der in den letzten 150 Jahren beobachtet wurde und sich nach Prognosen auch in Zukunft fortsetzen wird."
+    belief1HappeningLabel = "Wie sehr stimmen Sie der folgenden Aussage zu? 'Der Klimawandel ist real.'"
 
     ### belief in (human) causes taken from  Valkengoed
   
@@ -44,7 +44,7 @@ class Lexicon:
     beliefHuman2Label = "Der Klimawandel wird überwiegend durch menschliche Aktivität verursacht."
     beliefHuman3Label = "Die Hauptursachen des Klimawandels sind menschliche Verhalten."
 
-    beliefConsensLabel = "Wie viel Prozent der Klimawissenschaftler sind sich einig, dass der Klimawandel echt, und menschenverursacht ist?"
+    beliefConsensLabel = "Wie viel Prozent der Klimawissenschaftler sind sich einig, dass der Klimawandel echt und durch Menschen verursacht ist?"
 
     beliefConseqences1Label = "Insgesamt wird der Klimawandel mehr negative als positive Folgen für die Welt haben."
     beliefConseqences2Label = "Der Klimawandel wird ernste negative Folgen mit sich ziehen."
@@ -54,10 +54,10 @@ class Lexicon:
     ##belief in solutions
 
     beliefSolutions1Label = "Der Wandel zu einer nachhaltigen und klimafreundlichen Gesellschaft würde unsere nationalen Lebensstandards verringern." 
-    beliefSolutions2Label = "Nachhaltige Technologien und Lösungen sind in den Kinderschuhen und ein Ausstieg aus fossilen Brensstoffen is nocht nicht umsetzbar."
-    beliefSolutions3Label = "Ich glaube, dass einkommensstarke Länder eine grössere Verantwortung haben Triebhausgasemissionen zu verringern als einkommensschwache Länder und Länder mit mittlerem Einkommen." 
+    beliefSolutions2Label = "Nachhaltige Technologien und Lösungen sind in den Kinderschuhen und ein Ausstieg aus fossilen Brensstoffen ist noch nicht umsetzbar."
+    beliefSolutions3Label = "Ich denke, dass einkommensstarke Länder eine größere Verantwortung haben, ihren Ausstoß von Treibhausgasen zu verringern als Länder mit niedrigen und mittleren Einkommen." 
     beliefSolutions4Label = "Die Industrie muss Treibhausgasemissionen reduzieren, nicht Individuen."
-    beliefSolutions5Label = "Ich würde mich lieber dafür vorbereiten mit dem Klimawandel zu leben, als den Klimawandel zu bekämpfen."
+    beliefSolutions5Label = "Ich würde mich lieber darauf vorbereiten mit dem Klimawandel zu leben, als den Klimawandel zu bekämpfen."
 
 
     #Climate Change Emotion Knauf/Truelove
@@ -159,7 +159,7 @@ class Lexicon:
     know_8c = "EU"
     know_8d = "Indien"
 
-    know_9qu = "Welches Land oder Region verursacht die höchsten pro Kopf CO2 Emissionen pro Jahr?"
+    know_9qu = "Welches Land oder Region verursacht pro Kopf die höchsten CO2 Emissionen pro Jahr?"
     know_9a = "China"
     know_9b = "USA"
     know_9c = "EU"

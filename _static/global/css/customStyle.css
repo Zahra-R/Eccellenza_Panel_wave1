@@ -80,24 +80,7 @@ input.larger {
 
 
 
-table.radiotable th,
-table.radiotable td,
-table.radiotable2 th,
-table.radiotable2 td,
-table.radiotable3 th,
-table.radiotable3 td {
-  padding: 2%;
-  text-align: center;
-  /* Center-align the entire table */
-  max-width: none;
-  /* No max-width for the entire table */
-}
 
-/* Left-align the first column */
-table.radiotable th:first-child,
-table.radiotable td:first-child {
-  text-align: left;
-}
 
 table.radiotable2 th:first-child,
 table.radiotable2 td:first-child,

@@ -33,7 +33,7 @@ class Lexicon:
 
 
      ## belief in climate change 
-    beliefCC_intro = "气候变化是指世界平均气温在过去150年里一直在上升, 未来还会上升更多，从而导致世界气候发生变化。您怎么？您认为气候变化正在 发生吗？"
+    beliefCC_intro = "气候变化是指世界平均气温在过去150年里一直在上升, 未来还会上升更多，从而导致世界气候发生变化。" #您怎么？您认为气候变化正在 发生吗？"
     belief1HappeningLabel = "我相信气候变化是真实存在的"
 
     ### belief in (human) causes taken from  Valkengoed

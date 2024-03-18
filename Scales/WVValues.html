@@ -116,16 +116,19 @@ var acc = document.getElementsByClassName("accordion");
        
 
         function mark_answered(element){
-            myid = element[0].dataset.parent
-            $('#' + myid).addClass("answered")
-            
-            
-            const findMyId = (element) => element == myid;
-            const myIndex = idarray.findIndex(findMyId)
-            if (myIndex < idarray.length) {
-                setTimeout(function () {close_individual_question(myid) }, 300);
-                mynextid = idarray[myIndex+1]
-                setTimeout(function () {open_individual_question(mynextid, false) }, 600);
+            nameQuestion = element.children()[0].name
+            if(! document.forms.form[nameQuestion].value==''){
+                myid = element[0].dataset.parent
+                $('#' + myid).addClass("answered")
+                
+                
+                const findMyId = (element) => element == myid;
+                const myIndex = idarray.findIndex(findMyId)
+                if (myIndex + 1 < idarray.length) {
+                    setTimeout(function () {close_individual_question(myid) }, 300);
+                    mynextid = idarray[myIndex+1]
+                    setTimeout(function () {open_individual_question(mynextid, false) }, 600);
+                }
             }
             
         }

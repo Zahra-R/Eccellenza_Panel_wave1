@@ -11,34 +11,26 @@
 
 <p> {{ Lexicon.beliefCC_intro}}</p>
 
-<table class="radiotable">
-    <tr>
-        <th></th>
-        <th class="radio-column"> {{ Lexicon.completely_disagree }}</th>
-        <th class="radio-column"> </th class="radio-column">
-        <th class="radio-column"> </th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"> {{ Lexicon.completely_agree }} </th>
-    </tr>
-
-    {% for field in form %}
-        {% if field.name == 'belief1Happening' %}
-        {{formfield_errors field.name}}
+<table class="radiotable" style="width:100%; margin-left: auto; margin-right:auto; table-layout: fixed;" >
+    <tbody>
+        <tr></tr>
+        <tr> <th colspan="10" style="font-weight:normal;" id="id_belief1Happening" name="belief1Happening"> {{ Lexicon.belief1HappeningLabel }} </th> </tr>
+        <tr>
+        
+            <td class="radio-column" colspan="3" style="text-align: left;"> {{ Lexicon.completely_disagree }}</td>
+            <td class="radio-column"></td>
+            <td class="radio-column"></td>
+            <td class="radio-column"></td>
+            <td class="radio-column"></td>
+            <td class="radio-column" colspan="3" style="text-align: right;"> {{ Lexicon.completely_agree }} </td>
+        </tr>
 
         <tr>
-            <th style="font-weight:normal;" id={{field.id}} name={{field.name}}>  </th>
-            {{ for choice in field }}
-            <td>{{ choice }}</td>
+            {{ for choice in form.belief1Happening }}
+            <td style="text-align: center;">{{ choice }}</td>
             {{ endfor }}
         </tr>
-        {% endif %}
-
-    {{ endfor }}
+    </tbody>
 </table>
 
 <br>
@@ -63,19 +55,7 @@
 
 <script>
 
-    document.addEventListener("DOMContentLoaded", function () {
-    });
-
-    $(document).ready(function () {
-        for (let i = 0; i < js_vars.form_fields.length; i++) {   
-            prop= js_vars.form_fields[i] + 'Label'
-            label = js_vars.form_field_labels[i]
-            id = 'id_' + js_vars.form_fields[i]
-            $('#' + id).html(label)
-        }
-
-
-    })
+   
 
 </script>
 {% endblock %}

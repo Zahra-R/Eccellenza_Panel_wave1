@@ -29,8 +29,8 @@ class Lexicon:
     ## Climate Change Belief
 
       ## belief in climate change 
-    beliefCC_intro = "Climate change refers to the idea that the world’s average temperature has been increasing over the past 150 years, will increase more in the future, and that the world’s climate will change as a result. What do you think: Do you think climate change is happening?"
-    belief1HappeningLabel = "I believe that climate change is real."
+    beliefCC_intro = "Climate change refers global rise in temperatures that has been observed over the past 150 years and is predicted to continue in the future."
+    belief1HappeningLabel = "How much do you agree with the following statement? <br> 'Climate change is really happening.'"
     do_not_believe = "I do not believe that climate change is happening"
     completely_agree = "completely agree"
     completely_disagree = "completely disagree"
