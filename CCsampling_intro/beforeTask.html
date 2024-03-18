@@ -19,13 +19,13 @@
     <div class="slidecontainer" style="margin-top:30px;">
        
     <p> {{Lexicon.ccconcern_question}}</p> 
-        <table style="width:100%; max-width:700px; margin-left: auto; margin-right: auto;">
+        <table style="width:100%; max-width:600px; margin-left: auto; margin-right: auto;">
             <tr>
-                <td class="rangelabel" style="text-align:left"> {{Lexicon.not_at_all}} </td>
-                <td class="rangelabel" style="text-align:right;"> {{Lexicon.very_much}} </td>
+                <td class="rangelabel" style="text-align:left; padding-bottom:0;"> {{Lexicon.not_at_all}} </td>
+                <td class="rangelabel" style="text-align:right; padding-bottom:0;"> {{Lexicon.very_much}} </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td colspan="2" style="padding-top:0;" >
                     <input style="width:100%" type="range" min="-100" max="100" value="0" step="1" class="slider untouched"
                         id="range_ccconcern" name="range_ccconcern" >
                 </td>
@@ -37,31 +37,40 @@
 <div style="padding-top:2vh; text-align: center; padding-left:1vw;">
 
     <p> {{Lexicon.beliefHuman_header}}</p>
-    <table  class="radiotable2" style="text-align: center; margin-left: auto; margin-right:auto">
+    <table  class="radiotable2" style="table-layout: fixed; width: 100%;">
+        <tbody>
+            <tr style="background-color: white;"> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td></tr>
         {% for field in form %}
-        {% if field.name == 'beliefHuman1' or field.name == 'beliefHuman2' or field.name == 'beliefHuman3' or field.name
-        == 'beliefConseqences1' or field.name == 'beliefConseqences2' or field.name == 'beliefConseqences3' %}
-        {{formfield_errors field.name}}
+            {% if field.name == 'beliefHuman1' or field.name == 'beliefHuman2' or field.name == 'beliefHuman3' or field.name
+            == 'beliefConseqences1' or field.name == 'beliefConseqences2' or field.name == 'beliefConseqences3' %}
+            {{formfield_errors field.name}}
+            
+            <tr>  
+                <td colspan="10">
+                    <label for={{field.id}} id={{field.id}} name={{field.name}}> </label>
+                </td>
+            </tr>
+            <tr> 
+                <th class="radio-column"  colspan="2" style="text-align: left;">  {{ Lexicon.not_at_all }}</th> 
+                    <th class="radio-column"> </th> 
+                    <th class="radio-column"> </th> 
+                    <th class="radio-column"> </th> 
+                    <th class="radio-column"> </th> 
+                    <th class="radio-column"> </th> 
+                    <th class="radio-column"> </th> 
+                    <th  colspan="2" style="text-align: right;"  class="radio-column"> {{ Lexicon.very_much }} </th> 
+            </tr>
+            <tr style="margin-bottom:400px;">
+                {{ for choice in field }}
+                <td class="radiotablebutton"> {{ choice }} </td>
+                {{ endfor }}
+            </tr>
 
-        <tr>
-            <td colspan="9">
-                <label for={{field.id}} id={{field.id}} name={{field.name}}> </label>
-            </td>
-        </tr>
-        <tr style="margin-bottom:400px;">
-            <td class="radiotablebutton"> {{Lexicon.not_at_all}} &nbsp;</td>
-            {{ for choice in field }}
-            <td class="radiotablebutton"> {{ choice }} </td>
-            {{ endfor }}
-            <td class="radiotablebutton"> &nbsp; {{Lexicon.very_much}} </td>
-        </tr>
-
-        {{endif}}
+            {{endif}}
         {% endfor %}
-        
+        </tbody>
     </table>
 </div>
-
 
 
 

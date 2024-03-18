@@ -98,7 +98,7 @@ table.radiotable tr:nth-child(even) {
 }
 
 table.radiotable2 {
-  border-collapse: separate;
+  border-collapse: collapse;
 }
 
 /* 
@@ -106,8 +106,8 @@ table.radiotable2 tr:nth-child(4n+2), table.radiotable2 tr:nth-child(4n+1) {
   background-color: #c0e3e0;
 } */
 
-table.radiotable2 tr:nth-child(odd) {
-  background-color: #c0e3e0;
+table.radiotable2 tr:nth-child(3n+1), table.radiotable2 tr:nth-child(3n+2), table.radiotable2 tr:nth-child(3n+3)   {
+  background-color: #e0f6f4;
 }
 
 

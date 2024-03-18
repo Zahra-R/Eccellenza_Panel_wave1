@@ -17,7 +17,7 @@ Sampling Paradigma
 class C(BaseConstants):
     NAME_IN_URL = 'SAMPLING'
     PLAYERS_PER_GROUP = None
-    NUM_ROUNDS = 3
+    NUM_ROUNDS = 10
     ### German Tweets
     misinfo_path_de = "CCsampling/ClimateMisinfo_de.json"
     with open(misinfo_path_de, 'r') as j:

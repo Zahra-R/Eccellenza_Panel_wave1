@@ -60,14 +60,14 @@ class Player(BasePlayer):
     ### Belief
     belief1Happening= make_likert_n(6)
 
-    beliefHuman1 = make_likert_n(7)
-    beliefHuman2 = make_likert_n(7)
-    beliefHuman3 = make_likert_n(7)
+    beliefHuman1 = make_likert_n(10)
+    beliefHuman2 = make_likert_n(10)
+    beliefHuman3 = make_likert_n(10)
 
-    beliefConseqences1 = make_likert_n(7)
-    beliefConseqences2 = make_likert_n(7)
-    beliefConseqences3 = make_likert_n(7)
-    beliefConseqences4 = make_likert_n(7)
+    beliefConseqences1 = make_likert_n(10)
+    beliefConseqences2 = make_likert_n(10)
+    beliefConseqences3 = make_likert_n(10)
+    beliefConseqences4 = make_likert_n(10)
     block_order = models.IntegerField()
     already_counted = models.BooleanField(initial=False)
    
