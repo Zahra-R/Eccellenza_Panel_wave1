@@ -19,13 +19,13 @@ class Lexicon:
     # Transition page 
     #these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
     
-    transitions_first_1 = 'Welcome to the study'
-    transitions_first_2= 'This study consists of four parts. You are about to begin the first part. Please try to complete this part in one go without any breaks. We appreciate your time for participating in this study. Click "next" when you are ready.'
-    transition_title = 'Welcome to the next part of the study'
-    transitions_second_1 =  'You have completed'
-    transitions_second_2 = 'out of for parts of this study. Part'
-    transitions_second_3 = 'is about to begin.  If you need a short break before continuing with the study, now would be a good time. '
-    transitions_second_4 = 'Please try to complete the next part in one go without any breaks. We appreciate your time for participating in this study. <p> Once you are ready, please click "next".'
+    transitions_first_1 = '欢迎参加本研究'
+    transitions_first_2= '本学习包括四个部分。您即将开始第一部分。请尽量一次性完成这一部分，不要间断。感谢您抽出时间参与本研究。准备好后，请单击 "下一个"。'
+    transition_title = '欢迎来到研究的下一个部分'
+    transitions_second_1 =  '您已完成本研究四个部分中的 '
+    transitions_second_2 = '部分。第 '
+    transitions_second_3 = '部分即将开始。 如果您在继续学习之前需要短暂休息，现在是个好时机。 '
+    transitions_second_4 = '请尽量一次性完成下一部分，不要中断。感谢您抽出时间参与本研究。 准备就绪后，请点击 "下一个"。'
 
      ## Climate Change Belief
     ### belief in (human) causes taken from  Valkengoed

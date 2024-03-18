@@ -4,12 +4,20 @@ class Lexicon:
     large = "大 (10)"
 
     # transition
-    transition_title = '欢迎来到研究的下一个部分'
+    #transition_title = '欢迎来到研究的下一个部分'
 
-    transitions_a = '非常感谢您迄今为止的回答。如果您在继续学习之前需要短暂休息，那么现在是个好时机。 <br> 单击此页面上的下一个按钮后，我们要求您一次性完成此块'
+    #transitions_a = '非常感谢您迄今为止的回答。如果您在继续学习之前需要短暂休息，那么现在是个好时机。 <br> 单击此页面上的下一个按钮后，我们要求您一次性完成此块'
     # we will need to add a counter and then display that variable in the page, not sure how to integrate it in the lexicon 
-    transitions_b = '这是区块号 '
-    transitions_c = '共 4 个区块。 再次感谢您花时间回答所有问题。 <br>一旦你准备好了，请继续。'
+    #transitions_b = '这是区块号 '
+    #transitions_c = '共 4 个区块。 再次感谢您花时间回答所有问题。 <br>一旦你准备好了，请继续。'
+
+    transitions_first_1 = '欢迎参加本研究'
+    transitions_first_2= '本学习包括四个部分。您即将开始第一部分。请尽量一次性完成这一部分，不要间断。感谢您抽出时间参与本研究。准备好后，请单击 "下一个"。'
+    transition_title = '欢迎来到研究的下一个部分'
+    transitions_second_1 =  '您已完成本研究四个部分中的 '
+    transitions_second_2 = '部分。第 '
+    transitions_second_3 = '部分即将开始。 如果您在继续学习之前需要短暂休息，现在是个好时机。 '
+    transitions_second_4 = '请尽量一次性完成下一部分，不要中断。感谢您抽出时间参与本研究。 准备就绪后，请点击 "下一个"。'
 
     
 
