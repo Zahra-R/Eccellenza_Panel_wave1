@@ -42,14 +42,14 @@ SESSION_CONFIGS = [
       dict(
          name='Order_Zahra_Nina_Jessi_de',
   #      app_sequence=['survey','task'],
-         app_sequence=['Scales', 'CCsampling','CCsampling_Debrief'],
+         app_sequence=[ 'CCsampling_intro', 'CCsampling','Nina_instructions', 'Nina_carbontask',  'Jessi_Instructions',  'Jessi_carbonTax', 'Scales','CCsampling_Debrief'],
          language = "de",
          num_demo_participants=10,
      ),
      dict(
          name='Order_Zahra_Nina_Jessi_en',
   #      app_sequence=['survey','task'],
-         app_sequence=['CCsampling_intro', 'CCsampling','Scales'],
+         app_sequence=[ 'CCsampling_intro', 'CCsampling','Nina_instructions', 'Nina_carbontask',  'Jessi_Instructions',  'Jessi_carbonTax', 'Scales','CCsampling_Debrief'],
          language = "en",
          num_demo_participants=10,
      ),
