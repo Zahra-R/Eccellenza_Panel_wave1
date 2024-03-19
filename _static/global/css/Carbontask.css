@@ -30,17 +30,19 @@ input[type='range']::-webkit-slider-thumb {
   border-radius: 50%;
 }
 
-table.radiotable th, table.radiotable td {
-padding: 12px;
+table.radiotable th, 
+table.radiotable tr, 
+table.radiotable td {
 text-align: center; /* Center-align the entire table */
-max-width: 70%; /* No max-width for the entire table */
+max-width: 20%; /* No max-width for the entire table */
+width: 10%;
 }
 
 /* Left-align the first column */
 table.radiotable th:first-child,
 table.radiotable td:first-child {
 text-align: left;
-max-width: 70%;
+max-width: 10%;
 }
 
 /* Alternating row colors */
