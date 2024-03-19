@@ -44,5 +44,11 @@ table.radiotable tr:nth-child(even) {
 background-color: #c0e3e0;
 }
 
-
+@media only screen and (min-width: 701px) {
+  table.radiotable th, 
+  table.radiotable tr, 
+  table.radiotable td {
+    width: 110%;
+  }
+}
 

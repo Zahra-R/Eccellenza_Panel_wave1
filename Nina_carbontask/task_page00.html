@@ -66,6 +66,8 @@
         border: none;
         border-top: none;
     }
+
+
    
 
     /* .image {
@@ -87,8 +89,8 @@
 <br>
 <meta charset="UTF-8">
 
-<div style="width:100%; "> 
-    <table class="radiotable"  style="max-width: 95%; table-layout: fixed;" >
+<div style=" max-width:110%; "> 
+    <table class="radiotable"  style="max-width:80%; table-layout: fixed;" >
         <tr>  <th  class="radiotable-column"  >  {{ Lexicon.small }}</th>  
             <th class="radiotable-column" > 2  </th> 
             <th class="radiotable-column" >  3 </th> 
@@ -102,9 +104,9 @@
         </tr>
     <meta charset="UTF-8">
         {{ for field in form }}
-            <tr>
+            <tr  >
                 {{ for choice in field }}
-                <th >{{ choice }} </th> 
+                <th > {{ choice }} </th> 
                
                 {{ endfor }}
             </tr>
