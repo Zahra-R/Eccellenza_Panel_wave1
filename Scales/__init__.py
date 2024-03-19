@@ -723,7 +723,7 @@ class transition (Page):
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
 page_sequence = [
-                  transition, 
+                  transition, CCEmotion,
                  WVValues, CCKnowledge, Belief, Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
                  CCEmotion, PITrust, IBValues , DemographicsEnd,
                  ]

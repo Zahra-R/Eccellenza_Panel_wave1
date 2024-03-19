@@ -43,5 +43,3 @@ class Lexicon:
     beliefConseqences1Label = "Der Klimawandel ist gegenwärtig die größte Bedrohung für die Menschheit."
     beliefConseqences2Label = "Der Klimawandel wird ernste negative Folgen bringen."
     beliefConseqences3Label = "Die Folgen des Klimawandels werden <b> nicht </b> sehr gravierend sein." # reversed (originally not)
-
-    attentionText = "To demonstrate that you are reading the text presented in these boxes attentively, please move both range sliders all the way to the left (i.e. towards not at all)."

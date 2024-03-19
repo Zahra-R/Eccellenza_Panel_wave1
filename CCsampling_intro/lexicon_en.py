@@ -27,7 +27,11 @@ class Lexicon:
     transitions_second_4 = 'Please try to complete the next part in one go without any breaks. We appreciate your time for participating in this study. When you are ready to proceed, please click "Next".'
 
     ## Climate Change Belief
+    beliefCC_intro = "Klimawandel bezeichnet die Idee, dass die durchschnittliche Temperatur der Welt seit den letzten 150 Jahren am steigen ist, zukünftig noch mehr steigen wird, und dass sich infolgedessen das Weltklima verändern wird. Was denken Sie? Glauben Sie, dass es den Klimawandel gibt?"
+
     ### belief in (human) causes taken from  Valkengoed
+    completely_agree = "stimme äußerst zu"
+    completely_disagree = "stimme gar nicht zu"
     beliefHuman_header = "How much do you agree with the following statements?"
     beliefHuman1Label = "Human activities are <b> not </b> a major cause of climate change." # reversed (originally not)
     beliefHuman2Label = "Climate change is entirely caused by human activities."
