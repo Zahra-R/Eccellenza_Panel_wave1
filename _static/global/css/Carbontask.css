@@ -34,15 +34,15 @@ table.radiotable th,
 table.radiotable tr, 
 table.radiotable td {
 text-align: center; /* Center-align the entire table */
-max-width: 20%; /* No max-width for the entire table */
-width: 10%;
+max-width: 40%; /* No max-width for the entire table */
+width: 40%;
 }
 
 /* Left-align the first column */
 table.radiotable th:first-child,
 table.radiotable td:first-child {
 text-align: left;
-max-width: 10%;
+max-width: 20%;
 }
 
 /* Alternating row colors */
