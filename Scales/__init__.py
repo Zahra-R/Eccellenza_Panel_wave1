@@ -198,6 +198,124 @@ def residential_area_choices(player):
         ]
     return residential_area_choices
 
+# def states / provinces
+def states_choices(player):
+    Lexicon = player.session.scalesLexi
+    language_code =  player.session.config['language']
+    states_choices = []
+    if language_code == 'de':
+        states_choices = [    
+            Lexicon.BW,
+            Lexicon.Bayern,
+            Lexicon.Berlin,
+            Lexicon.Brandenburg,
+            Lexicon.Bremen,
+            Lexicon.Hamburg,
+            Lexicon.Hessen,
+            Lexicon.MV,
+            Lexicon.Niedersachsen,
+            Lexicon.NRW,
+            Lexicon.RP,
+            Lexicon.Saarland,
+            Lexicon.Sachsen,
+            Lexicon.SA,
+            Lexicon.SH,
+            Lexicon.Thüringen
+        ]
+
+    elif language_code == 'zh_hans':
+        states_choices = [    
+            Lexicon.Anhui,
+            Lexicon.Peking,
+            Lexicon.Chongqing,
+            Lexicon.Fujian,
+            Lexicon.Guangdong,
+            Lexicon.Guangxi,
+            Lexicon.Gansu,
+            Lexicon.Guizhou,
+            Lexicon.Henan,
+            Lexicon.Hebei,
+            Lexicon.Hunan,
+            Lexicon.Hubei,
+            Lexicon.Hainan,
+            Lexicon.Heilongjiang,
+            Lexicon.Jilin,
+            Lexicon.Jiangsu,
+            Lexicon.Jiangxi,
+            Lexicon.Liaoning,
+            Lexicon.InnereMongolei,
+            Lexicon.Ningxia,
+            Lexicon.Qinghai,
+            Lexicon.Sichuan,
+            Lexicon.Shandong,
+            Lexicon.Shanxi,
+            Lexicon.Shannxi,
+            Lexicon.Schanghai,
+            Lexicon.Tianjin,
+            Lexicon.Xinjiang,
+            Lexicon.Tibet,
+            Lexicon.Yunnan,
+            Lexicon.Zhejiang,
+            Lexicon.Hongkong,
+            Lexicon.Taiwan,
+            Lexicon.Macao 
+        ]
+   
+    else: 
+        states_choices = [             
+            Lexicon.Alabama,
+            Lexicon.Alaska,
+            Lexicon.Arizona,
+            Lexicon.Arkansas,
+            Lexicon.California,
+            Lexicon.Colorado,
+            Lexicon.Connecticut,
+            Lexicon.Delaware, 
+            Lexicon.Florida,
+            Lexicon.Georgia,
+            Lexicon.Hawaii,
+            Lexicon.Idaho,
+            Lexicon.Illinois,
+            Lexicon.Indiana,
+            Lexicon.Iowa,
+            Lexicon.Kansas,
+            Lexicon.Kentucky,
+            Lexicon.Louisiana,
+            Lexicon.Maine,
+            Lexicon.Maryland,
+            Lexicon.Massachusetts,
+            Lexicon.Michigan,
+            Lexicon.Minnesota,
+            Lexicon.Mississippi,
+            Lexicon.Missouri,
+            Lexicon.Montana,
+            Lexicon.Nebraska,
+            Lexicon.Nevada,
+            Lexicon.NewHampshire,
+            Lexicon.NewJersey,
+            Lexicon.NewMexico,
+            Lexicon.NewYork,
+            Lexicon.NorthCarolina,
+            Lexicon.NorthDakota,
+            Lexicon.Ohio,
+            Lexicon.Oklahoma,
+            Lexicon.Oregon,
+            Lexicon.Pennsylvania,
+            Lexicon.RhodeIsland,
+            Lexicon.SouthCarolina,
+            Lexicon.SouthDakota,
+            Lexicon.Tennessee,
+            Lexicon.Texas,
+            Lexicon.Utah,
+            Lexicon.Vermont,
+            Lexicon.Virginia,
+            Lexicon.Washington,
+            Lexicon.WestVirginia,
+            Lexicon.Wisconsin,
+            Lexicon.Wyoming
+            
+        ]
+    return states_choices
 
 #endregion
 
@@ -301,10 +419,14 @@ class Player(BasePlayer):
 
     ### Demographics
     ageYear = models.IntegerField(min=1900,max = 2008)  # change in different waves
+    
+    householdsize = models.IntegerField(min=1,max = 20) 
+
     residential_area = models.StringField()
     zip_code = models.StringField(blank=True)
     block_order = models.IntegerField()
     #party_affiliation = models.StringField(choices=get_party_choices(LANGUAGE_CODE, Lexicon) )
+    states = models.StringField()
 
 
 
@@ -498,7 +620,7 @@ class PITrust(Page):
         
 class DemographicsEnd(Page):
     form_model = 'player'
-    form_fields = ['ageYear', 'residential_area', 'zip_code' ]
+    form_fields = ['ageYear', 'householdsize', 'residential_area', 'zip_code', 'states' ]
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -509,8 +631,8 @@ class DemographicsEnd(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields = ['ageYear',  'residential_area', 'zip_code' ],
-        form_field_labels = [Lexicon.ageYear_label, Lexicon.residential_area_label, Lexicon.zip_code_label ]
+        form_fields = ['ageYear', 'householdsize',  'residential_area', 'zip_code', 'states' ],
+        form_field_labels = [Lexicon.ageYear_label, Lexicon.householdsize_label, Lexicon.residential_area_label, Lexicon.zip_code_label , Lexicon.states_label]
     )
 
 class transition (Page): 
@@ -533,8 +655,9 @@ class transition (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [ transition, 
+page_sequence = [
+                  transition, 
                  WVValues, CCKnowledge, Belief, Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
                   
-                 CCEmotion, PITrust, IBValues,
-                DemographicsEnd]
+                 CCEmotion, PITrust, IBValues , DemographicsEnd
+                 ]
