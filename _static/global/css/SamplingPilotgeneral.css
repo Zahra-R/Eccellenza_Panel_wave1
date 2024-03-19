@@ -209,6 +209,7 @@ text-align: justify
     border-color: #26a69a;
     color: white;
     box-shadow: 1pt 1pt 4pt 1pt slategray;
+    margin-bottom: 10px;
 }
 
 #nextst:hover:enabled, .otree-btn-next:hover {
