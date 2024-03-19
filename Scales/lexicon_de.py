@@ -300,7 +300,7 @@ class Lexicon:
     Sachsen = "Sachsen"
     SA = "Sachsen-Anhalt"
     SH = "Schleswig-Holstein"
-    Thüringen = "Thüringen"
+    Thueringen = "Thüringen"
    
     Alabama = "Alabama"
     Alaska=    "Alaska"
