@@ -27,8 +27,6 @@ class Lexicon:
     
     ## Climate Change belief
     
-    beliefCC_intro = "Klimawandel bezeichnet die Idee, dass die durchschnittliche Temperatur der Welt seit den letzten 150 Jahren am steigen ist, zukünftig noch mehr steigen wird, und dass sich infolgedessen das Weltklima verändern wird. Was denken Sie? Glauben Sie, dass es den Klimawandel gibt?"
-
     ### belief in (human) causes taken from  Valkengoed
     
     
