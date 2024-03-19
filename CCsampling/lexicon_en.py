@@ -17,7 +17,7 @@ class Lexicon:
     out_of = "out of"
     statement_agreement = " How much do you agree with this statement?"
     ccconcern_question = "How concerned are you about climate change?"
-    sampling_instruction = "Plase read the statement and answer the questions."
+    sampling_instruction = "Please read the statement and answer the questions."
     box_a_anti_climate_action = "BOX A: Anti&nbsp;Climate Action"
     box_a_pro_climate_action = "BOX A: Pro&nbsp;Climate Action"
     box_b_anti_climate_action = "BOX B: Anti&nbsp;Climate Action"

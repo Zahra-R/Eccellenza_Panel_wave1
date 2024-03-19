@@ -194,7 +194,7 @@
             $('#rate_statement').css("display", "revert")
             setTimeout(function () { $('#rate_statement').addClass('transform-slidervisible') }, 2000);
             $('#caption1').html("")
-            $('#caption2').html("Plase read the statement and answer the questions.")
+            $('#caption2').html("{{Lexicon.sampling_instruction}}")
 
             // save to db
             forminputs.statementText.value = roundText
