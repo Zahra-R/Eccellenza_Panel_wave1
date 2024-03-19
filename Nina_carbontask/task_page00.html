@@ -14,17 +14,17 @@
 <style>
 
 /* Adjust the max-width as needed */
-@media only screen and (min-width: 768px) {
-    .radiotable {
-        width: 80%;
+    @media only screen and (min-width: 701px) {
+        .radiotable {
+            width: 60%;
+        }
     }
-}
 
-@media only screen and (max-width: 767px) {
-    .radiotable {
-        width: 100%;
+    @media only screen and (max-width: 700px) {
+        .radiotable {
+            width: 110%;
+        }
     }
-}
     /* Adjust spacing between sentences */
     .sentence {
         margin: 0;
@@ -72,8 +72,7 @@
 
 
     .radiotable, tr, th{
-        width: 80%;
-        max-width:80%;
+
         border: none;
         text-align: left;
         border: none;
@@ -104,8 +103,8 @@
 <br>
 <meta charset="UTF-8">
 
-<div style=" max-width:110%; "> 
-    <table class="radiotable"  style="max-width:50%; table-layout: fixed;  overflow-x: auto;" >
+<div > 
+    <table class="radiotable"  style=" table-layout: fixed;  max-width:80%;    overflow-x: auto;" >
         <tr>  <th  class="radiotable-column"  >  {{ Lexicon.small }}</th>  
             <th class="radiotable-column" > 2  </th> 
             <th class="radiotable-column" >  3 </th> 

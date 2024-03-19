@@ -52,3 +52,14 @@ background-color: #c0e3e0;
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .radiotable {
+      width: 60%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .radiotable {
+      width: 100%;
+  }
+}
