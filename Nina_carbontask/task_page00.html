@@ -95,13 +95,13 @@
 <br>
 <br>
 <meta charset="UTF-8">
-<table class="radiotable" >
+<table class="radiotable" style="max-width:50%" >
     <tr>  <th    class="radio-column">  {{ Lexicon.small }}</th>  <th class="radio-column" > 2  </th> <th class="radio-column"> 3 </th> <th class="radio-column"  > 4  </th> <th class="radio-column"> 5 </th>  <th class="radio-column"> 6 </th>  <th class="radio-column"  > 7  </th> <th class="radio-column"> 8 </th>  <th class="radio-column"> 9 </th> <th    class="radio-column"> {{ Lexicon.large }}</th>  </tr>
     <meta charset="UTF-8">
     {{ for field in form }}
         <tr>
             {{ for choice in field }}
-                <th>{{ choice }}</th>
+                <th  >{{ choice }}</th>
             {{ endfor }}
         </tr>
     {{ endfor }}
@@ -116,7 +116,7 @@
 </div>
 
 <div >
-    <button id="nextst" style=" margin-top: 4vh;" disabled class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
+    <button id="nextst" style="float: right; margin-top: 2vh;" disabled class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
  
 </div>
 {% endblock %}
