@@ -34,8 +34,8 @@ table.radiotable th,
 table.radiotable tr, 
 table.radiotable td {
 text-align: center; /* Center-align the entire table */
-max-width: 40%; /* No max-width for the entire table */
-width: 40%;
+max-width: 70%; /* No max-width for the entire table */
+width: 70%;
 }
 
 /* Left-align the first column */
