@@ -97,7 +97,7 @@ def cknow1_choices(player):
     ['a_false', Lexicon.know_1a],
     ['b_true',  Lexicon.know_1b],
     ['c_false', Lexicon.know_1c],
-    ['dk',  Lexicon.dont_know],
+    ['dk',  Lexicon.dont_know]
 ]
 
 def cknow2_choices(player):
@@ -106,7 +106,7 @@ def cknow2_choices(player):
     ['a_false', Lexicon.know_2a],
     ['b_false',  Lexicon.know_2b],
     ['c_true', Lexicon.know_2c],
-    ['dk',  Lexicon.dont_know],
+    ['dk',  Lexicon.dont_know]
 ]
 
 def cknow3_choices(player):
@@ -115,7 +115,7 @@ def cknow3_choices(player):
     ['a_true', Lexicon.know_3a],
     ['b_false',  Lexicon.know_3b],
     ['c_false', Lexicon.know_3c],
-    ['dk',  Lexicon.dont_know],
+    ['dk',  Lexicon.dont_know]
 ]
 
 def cknow4_choices(player):
@@ -124,7 +124,7 @@ def cknow4_choices(player):
     ['a_false', Lexicon.know_4a],
     ['b_true',  Lexicon.know_4b],
     ['c_false', Lexicon.know_4c],
-    ['dk',  Lexicon.dont_know],
+    ['dk',  Lexicon.dont_know]
 ]
 
 def cknow5_choices(player):
@@ -133,7 +133,7 @@ def cknow5_choices(player):
     ['a_false', Lexicon.know_5a],
     ['b_true',  Lexicon.know_5b],
     ['c_false', Lexicon.know_5c],
-    ['dk',  Lexicon.dont_know],
+    ['dk',  Lexicon.dont_know]
 ]
 
 def cknow6_choices(player):
@@ -142,7 +142,7 @@ def cknow6_choices(player):
     ['a_false', Lexicon.know_6a],
     ['b_false',  Lexicon.know_6b],
     ['c_true', Lexicon.know_6c],
-    ['dk',  Lexicon.dont_know],
+    ['dk',  Lexicon.dont_know]
 ]
 
 def cknow7_choices(player):
@@ -153,7 +153,7 @@ def cknow7_choices(player):
     ['c_true', Lexicon.know_7c],
     ['d_false', Lexicon.know_7d],
 
-    ['dk',  Lexicon.dont_know],
+    ['dk',  Lexicon.dont_know]
 ]
 
 def cknow8_choices(player):
@@ -163,7 +163,7 @@ def cknow8_choices(player):
     ['b_false',  Lexicon.know_8b],
     ['c_false', Lexicon.know_8c],
     ['d_false',  Lexicon.know_8d],
-    ['dk',  Lexicon.dont_know],
+    ['dk',  Lexicon.dont_know]
 ]
 
 def cknow9_choices(player):
