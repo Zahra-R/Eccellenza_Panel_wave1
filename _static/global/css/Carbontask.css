@@ -30,22 +30,36 @@ input[type='range']::-webkit-slider-thumb {
   border-radius: 50%;
 }
 
-table.radiotable th, table.radiotable td {
-padding: 12px;
-text-align: center; /* Center-align the entire table */
-max-width: none; /* No max-width for the entire table */
+table.radiotable th, 
+table.radiotable tr, 
+table.radiotable td {
+text-align: left; /* Center-align the entire table */
+max-width: 96%; /* No max-width for the entire table */
+width: 96%;
 }
 
-/* Left-align the first column */
-table.radiotable th:first-child,
-table.radiotable td:first-child {
-text-align: left;
-}
 
 /* Alternating row colors */
 table.radiotable tr:nth-child(even) {
 background-color: #c0e3e0;
 }
 
+@media only screen and (min-width: 701px) {
+  table.radiotable th, 
+  table.radiotable tr, 
+  table.radiotable td {
+    width: 110%;
+  }
+}
 
+@media only screen and (min-width: 768px) {
+  .radiotable {
+      width: 60%;
+  }
+}
 
+@media only screen and (max-width: 767px) {
+  .radiotable {
+      width: 100%;
+  }
+}
