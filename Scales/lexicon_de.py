@@ -21,11 +21,7 @@ class Lexicon:
     not_at_all_important = "überhaupt nicht wichtig"
     extremely_important = "extrem <br> wichtig"
     
-    strongly_liberal = "links/<br> sehr liberal"
-    somewhat_liberal = "eher liberal"
-    moderate = "moderat"
-    somewhat_conservative = "eher konservativ"
-    strongly_conservative = "rechts/<br> sehr konservativ"
+    
     no_trust_at_all = "absolutes Misstrauen"
     full_trust = "absolutes Vertrauen"
     completely_false = "komplett falsch"
@@ -83,15 +79,7 @@ class Lexicon:
     emoConcern3Label = "beunruhigt"
 
 
-    # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
-    wvv_title = "Wie sehen Sie die Welt?"
-    wvv_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    hie1Label = "Unsere Gesellschaft wäre besser dran, wenn der Reichtum gleichmäßiger verteilt wäre."
-    hie2Label = "Viele Probleme in unserer Gesellschaft resultieren aus dem Verschwinden des traditionellen Familienbildes, in der der Mann arbeitet und die Frau zu Hause bleibt."
-    hie3Label = "Diskriminierung von Minderheiten ist in unserem Land immer noch ein sehr ernstes Problem."
-    ind1Label = "Die Regierung mischt sich viel zu sehr in unseren Alltag ein."
-    ind2Label = "Ich finde, dass erfolgreiche Geschäftsleute das Recht haben, ihren Reichtum so auszukosten, wie sie es für richtig halten."
-    ind3Label = "Zu viele Menschen erwarten, dass die Gesellschaft Dinge für sie tut, die sie selbst tun sollten."
+   
 
     # Importance of biospheric values van der Linden, 2015
     ibv_title = "Wichtige Prinzipien in Umweltfragen"
@@ -101,8 +89,7 @@ class Lexicon:
     ibv3Label = "Verhindern von Umweltverschmutzung (natürliche Ressourcen schützen)"
     ibv4Label = "Einheit mit der Natur (sich in die Natur einfügen)"
 
-    # Political Orientation Pennycook et al 2020
-    polOrientationLabel = "Wo sehen Sie sich im politischen Spektrum?"
+
 
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
     pit_title = "Vertrauen im Bezug auf den Klimawandel"

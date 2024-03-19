@@ -15,7 +15,7 @@ SESSION_CONFIGS = [
          app_sequence=['Intro'],
          consent_form="redirect",
          language = "en",
-         num_demo_participants=10,
+         num_demo_participants=30,
      ),
       dict(
          name='Intro_Redirection_ch',
@@ -23,6 +23,27 @@ SESSION_CONFIGS = [
          app_sequence=['Intro'],
          consent_form="redirect",
          language = "zh_hans",
+         num_demo_participants=10,
+     ),
+     dict(
+         name='NinaFirsttestscreenouts',
+  #      app_sequence=['survey','task'],
+         app_sequence=[ 'Nina_instructions', 'Jessi_Instructions', 'CCsampling_intro', 'CCsampling'],
+         language = "de",
+         num_demo_participants=10,
+     ),
+      dict(
+         name='JessiFirsttestscreenouts',
+  #      app_sequence=['survey','task'],
+         app_sequence=[ 'Jessi_Instructions',  'CCsampling_intro',  'Nina_instructions',],
+         language = "de",
+         num_demo_participants=10,
+     ),
+      dict(
+         name='ZahraFirsttestscreenouts',
+  #      app_sequence=['survey','task'],
+         app_sequence=['CCsampling_intro',  'Nina_instructions', 'Jessi_Instructions'],
+         language = "de",
          num_demo_participants=10,
      ),
      dict(
@@ -127,6 +148,8 @@ PARTICIPANT_FIELDS = [
     ]
 SESSION_FIELDS = [
     'introLexi',
+    'firstBlockLexi',
+    
     'samplingLexi',
     'samplingIntroLexi',
 

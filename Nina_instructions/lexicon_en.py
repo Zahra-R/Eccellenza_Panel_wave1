@@ -7,7 +7,7 @@ class Lexicon:
     #these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
     
     transitions_first_1 = 'Welcome to the study'
-    transitions_first_2= 'This study consists of four parts. You are about to begin the first part. Please try to complete this part in one go without any breaks. We appreciate your time for participating in this study. Click "next" when you are ready.'
+    transitions_first_2= 'Great, you fulfill all criteria to participate in this study. This study consists of four parts. Please make sure you have enough time to complete this study with attention and without distractions. </p> <p> You are about to begin with the first part. Please try to complete this part in one go without any breaks. We appreciate your time and interest in participating in this study. Click "Next" when you are ready.'
     transition_title = 'Welcome to the next part of the study'
     transitions_second_1 =  'You have completed'
     transitions_second_2 = 'out of four parts of this study. Part'
@@ -28,5 +28,20 @@ class Lexicon:
     example_pc = ' <i>That is, in the example above, the person follow a vegetarian diet, does not recycle, eats regional and imported food,subscribed to a mixed electricity supply, commutes every weekday to work by bus, and takes the train to go on vacation.</i>  <br> '
     example_pd = 'Next, you will estimate the carbon footprint of <b>16</b> persons with different lifestyles. <br> Please look at each individual carbon footprint carefully and take some time to provide your estimation. <br> The order in which the 6 behaviors are presented will change across the 16 examples you will see.'
     example_pic = '/static/global/images/example_en.png '
+
+    ## attention check study is about what screenout
+    interlude_title = "Eine Zwischenfrage"
+    interlude_header = "In dieser Studie gibt es ein übergeordnetes Thema. Haben Sie aufgepasst und können sagen, worum es in dieser Studie geht? Bitte seien Sie sorgfältig und wählen die richtige Antwort aus."
+    aboutWhatLabel = "Worum geht es in dieser Studie?"
+
+    about_a = "Städtetourismus"
+    about_b = "Klimawandel"
+    about_c = "Waschmaschinen"
+    about_d = "Vorliebe für scharfes Essen"
+
+
+    ## screenouts 
+    screenout_title = "Participation not possible."
+    screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."
 
    

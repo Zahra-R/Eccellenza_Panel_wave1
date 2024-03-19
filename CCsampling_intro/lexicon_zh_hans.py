@@ -39,6 +39,20 @@ class Lexicon:
     beliefConseqences2Label = "气候变化将带来严重的负面后果。"
     beliefConseqences3Label = "气候变化的后果<b>不会</b>非常严重。"# reversed (originally not)
     beliefConseqences4Label = "Climate Change is one of the greatest risks of our time."
+
+    ## attention check study is about what screenout
+    interlude_title = "Brief Interruption"
+    interlude_header = "This study has one superordinate topic. Have you paid attention and do you know what this study is about? Please choose the correct answer carefully."
+    about_a = "City Tourism"
+    about_b = "Climate Change"
+    about_c = "Washing Machines"
+    about_d = "Preference for spicy food"
+
+    
+    ## screenouts 
+    screenout_title = "Participation not possible."
+    screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."
+
     
 
     

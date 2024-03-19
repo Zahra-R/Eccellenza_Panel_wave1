@@ -37,3 +37,18 @@ class Lexicon:
     example_pc = '<i>也就是说，在上面的例子中，这个人遵循素食、不回收、吃当地和进口食品、订购混合电力供应、每个工作日乘公共汽车上班、乘火车去度假。</i> <br> '
     example_pd = '接下来，您将估算<b>16</b>位不同生活方式的人的碳足迹。<br>请仔细查看每个碳足迹，并花一些时间提供您的估计。 <br>在您将看到的16个示例中，6种行为的呈现顺序将发生变化。'
     example_pic = '/static/global/images/example_zh_hans.png '  # no need to change the link
+
+      ## attention check study is about what screenout
+    interlude_title = "Eine Zwischenfrage"
+    interlude_header = "In dieser Studie gibt es ein übergeordnetes Thema. Haben Sie aufgepasst und können sagen, worum es in dieser Studie geht? Bitte seien Sie sorgfältig und wählen die richtige Antwort aus."
+    aboutWhatLabel = "Worum geht es in dieser Studie?"
+
+    about_a = "Städtetourismus"
+    about_b = "Klimawandel"
+    about_c = "Waschmaschinen"
+    about_d = "Vorliebe für scharfes Essen"
+
+    
+    ## screenouts 
+    screenout_title = "Participation not possible."
+    screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."

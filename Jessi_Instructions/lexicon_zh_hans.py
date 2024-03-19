@@ -52,3 +52,19 @@ class Lexicon:
 
     example_CT = '/static/global/images/task_designCT_zh_hans.png'
     next = "下一个"
+
+
+    ## attention check study is about what screenout
+    interlude_title = "Eine Zwischenfrage"
+    interlude_header = "In dieser Studie gibt es ein übergeordnetes Thema. Haben Sie aufgepasst und können sagen, worum es in dieser Studie geht? Bitte seien Sie sorgfältig und wählen die richtige Antwort aus."
+    aboutWhatLabel = "Worum geht es in dieser Studie?"
+
+    about_a = "Städtetourismus"
+    about_b = "Klimawandel"
+    about_c = "Waschmaschinen"
+    about_d = "Vorliebe für scharfes Essen"
+
+    
+    ## screenouts 
+    screenout_title = "Participation not possible."
+    screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."

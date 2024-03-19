@@ -31,17 +31,25 @@ def creating_session(subsession:Subsession):
     subsession.session.introNinaLexi = Lexicon 
 
 
-    import itertools
-    order_tasks = itertools.cycle([1,2,3])
-    for player in subsession.get_players():
-        if subsession.round_number == 1: 
-            player.participant.order_tasks = next(order_tasks)
+
+
+def aboutWhat_choices(player): 
+    Lexicon = player.session.samplingIntroLexi 
+    return [
+    ['tourism_false', Lexicon.about_a],
+    ['true',  Lexicon.about_b],
+    ['washingMachine_false', Lexicon.about_c],
+    ['spicy_false',  Lexicon.about_d]
+]
 
 
 
 class Player(BasePlayer):
     block_order = models.IntegerField()
     already_counted = models.BooleanField(initial=False)
+
+    aboutWhat = models.StringField(widget=widgets.RadioSelect)
+    screenoutAboutWhat = models.BooleanField(initial= False)
    
 
 # FUNCTIONS
@@ -78,9 +86,41 @@ class task_example(Page):
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.introNinaLexi)
+    
+class interlude (Page): 
+    form_model = 'player'
+    form_fields = ['aboutWhat']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.introNinaLexi)
+    @staticmethod
+    def before_next_page(player: Player, timeout_happened):
+        if(player.aboutWhat != "true" ):
+               player.screenoutAboutWhat = True
+    @staticmethod
+    def is_displayed(player: Player):
+        return (player.participant.task_counter == 1)
+    
+
+
+class Screenout(Page):
+    form_model = 'player'
+    @staticmethod
+    def vars_for_template(player: Player):
+        return{
+             'Lexicon': player.session.introNinaLexi
+        } 
+    @staticmethod
+    def is_displayed(player: Player):
+        return (player.screenoutAboutWhat)
+   
+    
+   
         
 
 # Page sequence
 page_sequence = [ transition,
                   instructions, 
-                  task_example]
+                  task_example, 
+                  interlude, 
+                  Screenout]

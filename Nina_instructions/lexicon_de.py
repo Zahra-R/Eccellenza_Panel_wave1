@@ -3,7 +3,7 @@ class Lexicon:
 
     # transition
     transitions_first_1 = 'Willkommen zu der Studie'
-    transitions_first_2= 'Diese Studie besteht aus vier Teilen. Der erste Teil beginnt gleich. Bitte versuchen Sie, den Teil ohne Unterbrechung zu bearbeiten. Herzlichen Dank für Ihre Zeit.'
+    transitions_first_2= 'Sehr schön! Sie erfüllen alle Kriterien, um an dieser Studie teilzunehmen. Diese Studie besteht aus vier Teilen. Bitte stellen Sie sicher, dass Sie ausreichend Zeit haben, um die Studie konzentriert zu bearbeiten.</p> <p>Der erste Teil beginnt gleich. Bitte versuchen Sie, diesen Teil ohne Unterbrechung zu bearbeiten. Herzlichen Dank für Ihre Zeit und Ihr Interesse an der Studie.'
     transition_title = 'Willkommen zum nächsten Teil der Studie. '
     transitions_second_1 =  'Sie haben jetzt '
     transitions_second_2 = 'von insgesamt 4 Teilen abgeschlossen. Teil'
@@ -25,5 +25,21 @@ class Lexicon:
     example_pc = ' <i>Das heißt, im obigen Beispiel ernährt sich die Person vegetarisch, recycelt nicht, isst regionale und importierte Lebensmittel, hat einen gemischten Stromvertrag abgeschlossen, pendelt jeden Wochentag mit dem Bus zur Arbeit und fährt mit dem Zug in den Urlaub.</i>  <br> '
     example_pd = 'Als Nächstes werden Sie den CO2-Fußabdruck von <b>16</b> Personen mit unterschiedlichen Lebensstilen einschätzen. <br> Bitte betrachten Sie jeden einzelnen CO2-Fußabdruck genau und nehmen Sie sich etwas Zeit, um Ihre Schätzung abzugeben. <br> Die Reihenfolge, in der die 6 Verhaltensweisen dargestellt werden, wird sich innerhalb der 16 gezeigten Beispielen, ändern.'
     example_pic = '/static/global/images/example_de.png '
+
+    ## attention check study is about what screenout
+    interlude_title = "Eine Zwischenfrage"
+    interlude_header = "In dieser Studie gibt es ein übergeordnetes Thema. Haben Sie aufgepasst und können sagen, worum es in dieser Studie geht? Bitte seien Sie sorgfältig und wählen die richtige Antwort aus."
+    aboutWhatLabel = "Worum geht es in dieser Studie?"
+
+    about_a = "Städtetourismus"
+    about_b = "Klimawandel"
+    about_c = "Waschmaschinen"
+    about_d = "Vorliebe für scharfes Essen"
+
+    
+    ## screenouts 
+    screenout_title = "Teilnahme nicht möglich."
+    screenout_sentence = "Leider deuteten Ihre Eingaben darauf hin, dass Sie nicht aufmerksam gelesen haben. Daher können Sie nicht an der Studie teilnehmen."
+
 
 

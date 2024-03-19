@@ -3,7 +3,6 @@ import os
 
 
 from otree.api import *
-from settings import LANGUAGE_CODE
 
 #from settings import LANGUAGE_CODE
 #LANGUAGE_CODE = os.environ.get('LANGUAGE_CODE')
@@ -38,6 +37,17 @@ def creating_session(subsession:Subsession):
 class Group(BaseGroup):
     pass
 
+
+def aboutWhat_choices(player): 
+    Lexicon = player.session.JessiIntroLexi 
+    return [
+    ['tourism_false', Lexicon.about_a],
+    ['true',  Lexicon.about_b],
+    ['washingMachine_false', Lexicon.about_c],
+    ['spicy_false',  Lexicon.about_d]
+]
+
+
 class Player(BasePlayer):
     # FUNCTIONS
     def make_field_association(label):
@@ -66,6 +76,9 @@ class Player(BasePlayer):
     range_party = models.IntegerField( min=-100, max=100)
     block_order = models.IntegerField()
     already_counted = models.BooleanField(initial=False)
+
+    aboutWhat = models.StringField(widget=widgets.RadioSelect)
+    screenoutAboutWhat = models.BooleanField(initial= False)
 
 
 # PAGES
@@ -138,6 +151,35 @@ class slider(Page):
     form_model = 'player'
     form_fields = ['range_party']
 
+class interlude (Page): 
+    form_model = 'player'
+    form_fields = ['aboutWhat']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.JessiIntroLexi)
+    @staticmethod
+    def before_next_page(player: Player, timeout_happened):
+        if(player.aboutWhat != "true" ):
+               player.screenoutAboutWhat = True
+    @staticmethod
+    def is_displayed(player: Player):
+        return (player.participant.task_counter == 1)
+    
+
+class Screenout(Page):
+    form_model = 'player'
+    @staticmethod
+    def vars_for_template(player: Player):
+        return{
+             'Lexicon': player.session.JessiIntroLexi
+        } 
+    @staticmethod
+    def is_displayed(player: Player):
+        return (player.screenoutAboutWhat)
+   
+    
+   
+
 
 # Page sequence
 page_sequence = [ 
@@ -145,5 +187,7 @@ page_sequence = [
     affectiveImagery,
     ratingAffectiveImagery,
     instructions_intro,
-    task_example
+    task_example, 
+    interlude, 
+    Screenout
 ]

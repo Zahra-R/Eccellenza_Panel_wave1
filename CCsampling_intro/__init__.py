@@ -52,6 +52,14 @@ def make_likert_n(n):
         widget=widgets.RadioSelect,
 )
 
+def aboutWhat_choices(player): 
+    Lexicon = player.session.samplingIntroLexi 
+    return [
+    ['tourism_false', Lexicon.about_a],
+    ['true',  Lexicon.about_b],
+    ['washingMachine_false', Lexicon.about_c],
+    ['spicy_false',  Lexicon.about_d]
+]
 
 
 #PLAYER FUNCTION 
@@ -70,6 +78,9 @@ class Player(BasePlayer):
     beliefConseqences4 = make_likert_n(10)
     block_order = models.IntegerField()
     already_counted = models.BooleanField(initial=False)
+
+    aboutWhat = models.StringField(widget=widgets.RadioSelect)
+    screenoutAboutWhat = models.BooleanField(initial= False)
    
 
 # ---------------------------------------------------------------
@@ -113,11 +124,43 @@ class transition (Page):
             player.block_order = player.participant.task_counter
             player.already_counted = True
         return dict(Lexicon=player.session.samplingIntroLexi,blocknumber = player.block_order, blockaccomplished = player.block_order -1)
+
+
+class interlude (Page): 
+    form_model = 'player'
+    form_fields = ['aboutWhat']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.samplingIntroLexi)
+    @staticmethod
+    def before_next_page(player: Player, timeout_happened):
+        if(player.aboutWhat != "true" ):
+               player.screenoutAboutWhat = True
+    @staticmethod
+    def is_displayed(player: Player):
+        return (player.participant.task_counter == 1)
+   
+    
+
+
+class Screenout(Page):
+    form_model = 'player'
+    @staticmethod
+    def vars_for_template(player: Player):
+        return{
+             'Lexicon': player.session.samplingIntroLexi
+        } 
+    @staticmethod
+    def is_displayed(player: Player):
+        return (player.screenoutAboutWhat == True)
+   
     
    
 
 page_sequence = [
     transition,
     Introduction,
-    beforeTask
+    beforeTask, 
+    interlude, 
+    Screenout
 ]

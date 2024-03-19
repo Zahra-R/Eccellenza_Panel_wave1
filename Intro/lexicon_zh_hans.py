@@ -62,34 +62,3 @@ class Lexicon:
     data_consent1 = "将数据用于科学目的，并在科学期刊或书籍上发表研究结果，条件是数据是匿名的，并且不会披露有关我身份的任何信息。" 
     data_consent2 = "将数据用于教学目的（为学生和专业人士提供的课程和讲座，须遵守专业保密规定）。"
 
-
-    ### Demographics
-    demographics_title = "个人数据" 
-    demographics_header = "请输入以下有关您自己的信息。"
-
-    age_label = "你今年多大？"
-
-    gender_label = "您的性别是什么？" 
-    female = "女性"
-    male = "男性"
-    other = "其他"
-
-    income_label = "你的年收入是多少？"
-    # income categories TBD
-    income_quintile1 = "3万元人民币以下"
-    income_quintile2 = "30,000 - 60,000元人民币"
-    income_quintile3 = "60,001 - 120,000元人民币"
-    income_quintile4 = "120,001 - 300,000元人民币"
-    income_quintile5 = "300,001 - 500,000元人民币"
-    income_more_than_E = "超过50万元人民币"
-    prefer_not_to_say = "不愿意说"
-
-    education_label = "你的最高学历是什么？"
-    
-    # these do not have to be exact translations, just need to match the meaning in terms of what the education system is like
-    no_formal = "没有完成正规教育"
-    obligatory = "义务教育"
-    high_school = "中学教育/高中/职业培训"
-    degree = "高等教育：学士/硕士学位"
-    doctoral_degree = "博士及以上学历"  
-    prefer_not_to_say_education = "不愿意说"

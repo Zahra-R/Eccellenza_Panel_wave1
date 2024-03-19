@@ -82,16 +82,8 @@ class Lexicon:
     emoConcern3Label = "upset"
 
 
-    # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
-    ## TBD kevin tam
-    wvv_title = "How do you see the world?"
-    wvv_header = "How much do you agree with the following statements?"
-    hie1Label = "Our society would be better off if the distribution of wealth was more equal."
-    hie2Label = "A lot of problems in our society come from the decline in the traditional family, where the man works and the woman stays home."
-    hie3Label = "Discrimination against minorities is still a very serious problem in our country."
-    ind1Label = "The government interferes far too much in our everyday lives."
-    ind2Label = "I feel that people who are successful in business have a right to enjoy their wealth as they see fit."
-    ind3Label = "Too many people expect society to do things for them that they should be doing for themselves."
+  
+
 
    # Importance of biospheric values van der Linden, 2015   
     ibv_title = "Guiding principles in enviromental issues"
@@ -101,11 +93,7 @@ class Lexicon:
     ibv3Label = "Preventing Pollution (protecting natural resources)"
     ibv4Label = "Unity with Nature (fitting into nature)"
 
-    # Political Orientation Pennycook et al 2020
-    polOrientationLabel = "What is your general stance in political issues?"
-    strongly_liberal = "strongly liberal/left-wing"
-    strongly_conservative = "strongly conservative/right-wing"
-
+  
 
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
     pit_title = "Trust with regards to climate change"

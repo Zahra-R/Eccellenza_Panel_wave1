@@ -1,7 +1,6 @@
 import random
 
 from otree.api import *
-from settings import LANGUAGE_CODE
 
 
 doc = """
@@ -420,14 +419,7 @@ class Player(BasePlayer):
     cknow8 = models.StringField(choices=["a_true", "b_false", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)     
     cknow9 = models.StringField(choices=["a_false", "b_true", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)
 
-    # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
-    hie1 = make_likert10()
-    hie2 = make_likert10()
-    hie3 = make_likert10()
-    ind1 = make_likert10()
-    ind2 = make_likert10()
-    ind3 = make_likert10()
-
+    
     ### IB Values
     ibv1 = make_likert9()
     ibv2 = make_likert9()
@@ -439,8 +431,7 @@ class Player(BasePlayer):
     pit1 = make_likert10()
     pit2 = make_likert10()
 
-    ## political orientation
-    polOrientation = make_likert10()
+   
 
     ### Belief
     belief1Happening= make_likert10()
@@ -485,7 +476,6 @@ class Player(BasePlayer):
 
 
     ### Demographics
-    ageYear = models.IntegerField(min=1900,max = 2008)  # change in different waves
     
     householdsize = models.IntegerField(min=1,max = 20) 
 
@@ -632,30 +622,6 @@ class BehaviorsFlying(Page):
         form_field_labels = [  Lexicon.flying_short_label, Lexicon.flying_mid_label, Lexicon.flying_long_label ]
     )
 
-class WVValues(Page):
-    @staticmethod
-    def get_form_fields(player):
-        if player.session.config['language'] == "zh_hans":
-            return ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3']
-        else:
-            return ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3', "polOrientation"]
-    form_model = 'player'
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
-    @staticmethod
-    def js_vars(player):
-        Lexicon = player.session.scalesLexi
-        if  player.session.config['language'] == "zh_hans":
-            return dict(
-            form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3'],
-            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label],
-            langcode= "zh_hans")
-        else:
-            return dict(
-            form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3', "polOrientation"],
-            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label, Lexicon.polOrientationLabel],
-            lang_code="west")
 
 class IBValues(Page):
     form_model = 'player'
@@ -717,13 +683,8 @@ class transition (Page):
     
 
 
-# for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
-#page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PITrust, CCKnowledge ,Demographics]
-# copy pf page_sequence with original order of scales 
-# page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
-#page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
 page_sequence = [
-                  transition, CCEmotion,
-                 WVValues, CCKnowledge, Belief, Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
-                 CCEmotion, PITrust, IBValues , DemographicsEnd,
+                transition, Belief, Belief2, CCKnowledge, CCEmotion,
+                 BehaviorsFood, BehaviorsTransport, BehaviorsFlying, 
+                 PITrust, IBValues , DemographicsEnd,
                  ]
