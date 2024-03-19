@@ -40,5 +40,5 @@ class Lexicon:
     beliefConseqences1Label = "Climate change currently is the greatest threat to humankind."
     beliefConseqences2Label = "Climate change will bring about serious negative consequences."
     beliefConseqences3Label = "The consequences of climate change will <b> not </b> be very serious." # reversed (originally not)
-    beliefConseqences4Label = "Climate Change is one of the greatest risks of our time."
+
     
