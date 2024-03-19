@@ -3,9 +3,24 @@
 {% endblock %}
 
 
+
+
 {{ block title }} {{Lexicon.instructions_title}} {{ endblock }}
 {{ block content }}
 
+<style>
+    @media only screen and (min-width: 701px) {
+            .image {
+                width: 100%;
+            }
+        }
+    
+        @media only screen and (max-width: 700px) {
+            .radiotable {
+                width: 60%;
+            }
+        }
+    </style>
 
 {{ Lexicon.example_pb}}
 <br>
@@ -13,7 +28,7 @@
 <p>
 {{ Lexicon.example_pa}}
     
-    <div style="text-align: left;   "><img src={{Lexicon.example_pic}}  style="height:80% ; width:65%" /></div>
+    <div class="image" style="text-align: left;   "><img src={{Lexicon.example_pic}}  style=" max-width:100%;    overflow-x: auto;" /></div>
 
 
 <br>
