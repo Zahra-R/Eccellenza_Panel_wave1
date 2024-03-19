@@ -52,10 +52,10 @@ class Lexicon:
     ##belief in solutions
 
     beliefSolutions1Label = "Transforming to a sustainable and climate-friendly society would reduce our national standards of living."  # reversed
-    beliefSolutions2Label = " Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible." # reversed
-    beliefSolutions3Label = "I think High-income countries have a greater responsibility to reduce greenhouse gas emissions than low and middle-income countries." #responsibility national
+    beliefSolutions2Label = "Sustainable technologies and solutions are in their infancy, and a phase-out of fossil fuels is not yet feasible." # reversed
+    beliefSolutions3Label = "I think high-income countries have a greater responsibility to reduce greenhouse gas emissions than low and middle-income countries." #responsibility national
     beliefSolutions4Label = "Industry has a greater responsibility to reduce greenhouse gas emissions than individuals."  #responsibility systemic
-    beliefSolutions5Label = " I would rather prepare to live with climate change than to fight climate change." # adaptation
+    beliefSolutions5Label = "I would rather prepare to live with climate change than fight climate change." # adaptation
 
 
     #Climate Change Emotion Knauf/Truelove
@@ -102,13 +102,13 @@ class Lexicon:
     ibv4Label = "Unity with Nature (fitting into nature)"
 
     # Political Orientation Pennycook et al 2020
-    polOrientationLabel = "How do you see your general stance in political issues?."
+    polOrientationLabel = "What is your general stance in political issues?"
     strongly_liberal = "strongly liberal/left-wing"
     strongly_conservative = "strongly conservative/right-wing"
 
 
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
-    pit_title = "Trust in regards to climate change"
+    pit_title = "Trust with regards to climate change"
     pit_header = "How much do you trust these actors in climate change?"
     pit1Label = "the local government"
     pit2Label = "the national government"
@@ -177,7 +177,7 @@ class Lexicon:
     
     ### Behaviors ###
     behaviors_title = ' Behavior '
-    intro_a = ' In this next part, we are collecting information about some of your actual behavior. <br>Please answer as accurately as possible. Thank you in advance!'
+    intro_a = 'In this section we ask about your habits and actual behavior. Please answer as accurately as possible. Thank you very much!'
     regional_label = ' What percentage of your food is regional (from within your country or region, not imported) ? '
     regional_less_than = 'Less than a quarter'
     regional_quarter= 'About a quarter' 
@@ -268,10 +268,10 @@ class Lexicon:
     transition_title = 'Welcome to the last block of the study'
     
     # these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
-    transitions_a = 'Thank you very much for your answers so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
+    transitions_a = 'Thank you very much for your responses so far. If you need a short break before continuing with the study, now would be a good time. <br> Once you click on the next button on this page, we ask you to please complete this block in one go.'
     # add counter (Zahra)
     transitions_b =' This is the last  '
-    transitions_c = 'out of 4 blocks. Thank you for taking the time to complete everything so far. <br> Once you are ready, please click "next".'
+    transitions_c = 'out of 4 blocks. Thank you for taking the time to complete everything so far. <br> When you are ready to proceed, please click "Next".'
 
 
     householdsize_label = 'How many people live in your household?'

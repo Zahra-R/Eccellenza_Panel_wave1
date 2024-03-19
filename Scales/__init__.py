@@ -175,7 +175,74 @@ def cknow9_choices(player):
     ['d_false',  Lexicon.know_9d],
     ['dk',  Lexicon.dont_know],
 ]
+#endregion
 
+
+def food_frequencies(player):
+    Lexicon = player.session.scalesLexi
+    return [
+        ['never', Lexicon.food_overall_A],
+        ['oncePerMonth',  Lexicon.food_overall_B],
+        ['2-3PerMonth', Lexicon.food_overall_C],
+        ['oncePerWeek',  Lexicon.food_overall_D],
+        ['2-3PerWeek',  Lexicon.food_overall_E],
+        ['4-6PerWeek', Lexicon.food_overall_F],
+        ['oncePerDay',  Lexicon.food_overall_G],
+        ['MultiplePerDay',  Lexicon.food_overall_H]
+]
+
+def footprint_food_overall1_choices(player):
+    return(food_frequencies(player))
+
+def footprint_food_overall2_choices(player):
+    return(food_frequencies(player))
+
+def footprint_food_overall3_choices(player):
+    return(food_frequencies(player))
+
+def footprint_food_overall4_choices(player):
+    return(food_frequencies(player))
+
+def footprint_food_overall5_choices(player):
+    return(food_frequencies(player))
+
+
+def footprint_commute_car_choices(player):
+    Lexicon = player.session.scalesLexi
+    return [
+        ['never', Lexicon.commute_car_never],
+        ['lessA',  Lexicon.commute_car_less_than_A],
+        ['AtoB', Lexicon.commute_car_A_to_B],
+        ['BtoC',  Lexicon.commute_car_B_to_C],
+        ['CtoD',  Lexicon.commute_car_C_to_D],
+        ['most', Lexicon.commute_car_more_than_D]
+]
+
+
+def footprint_commute_car_type_choices(player):
+    Lexicon = player.session.scalesLexi
+    return [
+        ['none', Lexicon.commute_car_type_none],
+        ['Electric_green', Lexicon.commute_car_type_A],
+        ['Eletric_conv', Lexicon.commute_car_type_B],
+        ['Biogas', Lexicon.commute_car_type_C],
+        ['NaturalGas', Lexicon.commute_car_type_D],
+        ['Diesel', Lexicon.commute_car_type_E]
+]
+
+def footprint_commute_pt_choices(player):
+    Lexicon = player.session.scalesLexi
+    return [
+        ['lessA', Lexicon.commute_pt_less_than_A],
+        ['AtoB', Lexicon.commute_pt_A_to_B],
+        ['BtoC', Lexicon.commute_pt_B_to_C],
+        ['CtoD', Lexicon.commute_pt_C_to_D],
+        ['DtoE', Lexicon.commute_pt_D_to_E],
+        ['most', Lexicon.commute_pt_more_than_E]
+]
+     
+
+#region demographics
 ## residential area
 def residential_area_choices(player):
     residential_area_choices = []
@@ -397,19 +464,19 @@ class Player(BasePlayer):
     ## behaviors
 
 
-    footprint_food_overall1 =  make_likert8()
-    footprint_food_overall2 =  make_likert8()
-    footprint_food_overall3 =  make_likert8()
-    footprint_food_overall4 =  make_likert8()
-    footprint_food_overall5 =  make_likert8()
+    footprint_food_overall1 =  models.StringField(widget=widgets.RadioSelect )
+    footprint_food_overall2 =  models.StringField(widget=widgets.RadioSelect )
+    footprint_food_overall3 =  models.StringField(widget=widgets.RadioSelect )
+    footprint_food_overall4 =  models.StringField(widget=widgets.RadioSelect )
+    footprint_food_overall5 =  models.StringField(widget=widgets.RadioSelect )
     # further behavior items
     footprint_flying_short = models.IntegerField(min=0, max= 300 )
     footprint_flying_mid = models.IntegerField(min=0, max= 300)
     footprint_flying_long = models.IntegerField(min=0, max= 300)
 
-    footprint_commute_car =  make_likert6()
-    footprint_commute_car_type=  make_likert6()
-    footprint_commute_pt =  make_likert6()
+    footprint_commute_car =  models.StringField(widget=widgets.RadioSelect )
+    footprint_commute_car_type=  models.StringField(widget=widgets.RadioSelect )
+    footprint_commute_pt =  models.StringField(widget=widgets.RadioSelect )
 
     footprint_regional =  make_likert5()
     footprint_electricity =  make_likert4()
@@ -655,9 +722,8 @@ class transition (Page):
 # copy pf page_sequence with original order of scales 
 # page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
 #page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [DemographicsEnd,
+page_sequence = [
                   transition, 
                  WVValues, CCKnowledge, Belief, Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
-                  
-                 CCEmotion, PITrust, IBValues 
+                 CCEmotion, PITrust, IBValues , DemographicsEnd,
                  ]

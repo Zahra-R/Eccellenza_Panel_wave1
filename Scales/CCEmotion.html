@@ -1,6 +1,6 @@
 {% block styles %}
 <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
-<link href="{{ static 'global/css/customEmotionTable.css'}}" rel="stylesheet">
+<link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
 {% endblock %}
 
 {% block title %}
@@ -11,33 +11,33 @@
 
 <p> {{ Lexicon.cce_header }}</p>
 
-<table class="radiotable"  >
-    <tr>
-        <th></th>
-        <th class="radio-column"> {{ Lexicon.not_at_all }}</th>
-        <th class="radio-column"> </th class="radio-column">
-        <th class="radio-column"> </th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"></th>
-        <th class="radio-column"> {{ Lexicon.very_much }} </th>
-    </tr>
 
 
+<table class="radiotable3" style="table-layout: fixed; width: 100%;">
+    <tbody>
+        {{ for field in form }}
+                <tr style="background-color: white;"> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td></tr>
 
-    {{ for field in form }}
-    {{formfield_errors field.name}}
-    <tr>
-        <th style="font-weight:normal;" width="10%"  id={{field.id}} name={{field.name}}>  </th>
-        {{ for choice in field }}
-        <td>{{ choice }}</td>
+            <tr> 
+                <th class="radio-column"  colspan="2" style="text-align: left; font-weight: normal;">  {{ Lexicon.not_at_all }}</th> 
+                    <th class="radio-column"> </th> 
+                    <th style=" text-align: center;"  colspan="4" id={{field.id}} name={{field.name}}>  </th>
+                    <th class="radio-column"> </th> 
+                    <th  colspan="2" style="text-align: right; font-weight: normal;"  class="radio-column"> {{ Lexicon.very_much }} </th> 
+            </tr>
+
+            <tr>
+                {{ for choice in field }}
+                    <td>{{ choice }}</td>
+                {{ endfor }}
+            </tr>
         {{ endfor }}
-    </tr>
-    {{ endfor }}
+            </tbody>
 </table>
+
+
+
+
 
 
 <div class="next-btn radiotable">

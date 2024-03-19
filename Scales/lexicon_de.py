@@ -167,7 +167,7 @@ class Lexicon:
 
     #### behaviors
     behaviors_title = ' Verhalten '
-    intro_a = 'In diesem nächsten Abschnitt sammeln wir Informationen zu einigen Ihrer tatsächlichen Verhaltensweisen. <br>Bitte antworten Sie so genau wie möglich. Vielen Dank im Voraus!'
+    intro_a = 'In diesem Abschnitt befragen wir Sie zu Ihren Verhaltensweisen. Bitte antworten Sie so genau wie möglich. Vielen Dank!'
     
     regional_label = 'Welcher Prozentsatz Ihrer Lebensmittel stammt aus der Region (aus Ihrem Land oder Ihrer Region, nicht importiert)?'
     regional_less_than = 'Weniger als ein Viertel'

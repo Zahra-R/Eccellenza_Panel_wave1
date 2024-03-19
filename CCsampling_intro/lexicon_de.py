@@ -28,15 +28,13 @@ class Lexicon:
     ## Climate Change belief
     
     beliefCC_intro = "Klimawandel bezeichnet die Idee, dass die durchschnittliche Temperatur der Welt seit den letzten 150 Jahren am steigen ist, zukünftig noch mehr steigen wird, und dass sich infolgedessen das Weltklima verändern wird. Was denken Sie? Glauben Sie, dass es den Klimawandel gibt?"
-    belief1HappeningLabel = "Ich glaube, dass es der Klimawandel real ist."
 
     ### belief in (human) causes taken from  Valkengoed
-    do_not_believe = "Ich glaube nicht, dass der Klimawandel stattfindet"
+    
     
     completely_agree = "stimme äußerst zu"
     completely_disagree = "stimme gar nicht zu"
-  
-    beliefHuman_title = "Was glauben Sie?"
+
     beliefHuman_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
     beliefHuman1Label = "Menschliche Aktivitäten sind <b> nicht </b> die Hauptursache des Klimawandels." # reversed (originally not)
     beliefHuman2Label = "Der Klimawandel wird ausschließlich durch menschliche Aktivitäten verursacht."
@@ -45,6 +43,5 @@ class Lexicon:
     beliefConseqences1Label = "Der Klimawandel ist gegenwärtig die größte Bedrohung für die Menschheit."
     beliefConseqences2Label = "Der Klimawandel wird ernste negative Folgen bringen."
     beliefConseqences3Label = "Die Folgen des Klimawandels werden <b> nicht </b> sehr gravierend sein." # reversed (originally not)
-    beliefConseqences4Label = "Der Klimawandel ist eine der größten Gefahren der Gegenwart."
 
     attentionText = "To demonstrate that you are reading the text presented in these boxes attentively, please move both range sliders all the way to the left (i.e. towards not at all)."

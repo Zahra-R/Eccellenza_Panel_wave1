@@ -15,7 +15,7 @@ class Lexicon:
     transitions_second_1 =  'You have completed'
     transitions_second_2 = 'out of four parts of this study. Part'
     transitions_second_3 = 'is about to begin.  If you need a short break before continuing with the study, now would be a good time. '
-    transitions_second_4 = 'Please try to complete the next part in one go without any breaks. We appreciate your time for participating in this study. Once you are ready, please click "next".'
+    transitions_second_4 = 'Please try to complete the next part in one go without any breaks. We appreciate your time for participating in this study. When you are ready to proceed, please click "Next".'
 
     
     # Affective Imagery Rating
