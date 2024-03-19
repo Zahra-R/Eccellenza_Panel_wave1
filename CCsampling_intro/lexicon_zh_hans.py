@@ -1,19 +1,19 @@
 class Lexicon:
-    next = "next"
-    not_at_all = "not at all"
-    very_much = "very much"
+    next = "下一步"
+    not_at_all = "完全没有"
+    very_much = "非常多"
 
     # Introduction
-    studyInformation = "Information about this study"
-    instructionCondition_telling_box_label_true = "On the next pages, you will find two boxes. Each box contains a number of <b>statements about climate change.</b><b>One box contains statements with arguments against immediate climate action. The other box contains statements arguing in favor of urgent climate action.</b>"
-    instructionCondition_telling_box_label_false = "On the next pages, you will find two boxes. Each box contains a number of <b>statements about climate change </b> coming from different sources."
+    studyInformation = "有关本研究的信息"
+    instructionCondition_telling_box_label_true = "在接下来的几页中，你会发现两个文本框。每个文本框都包含了一些<b>关于气候变化的陈述。</b><b>一个文本框包含了反对立即采取气候行动的陈述。另一个文本框则包含了支持紧急气候行动的陈述。</b>"
+    instructionCondition_telling_box_label_false = "在接下来的几页中，你会发现两个文本框。每个文本框都包含了一些来自不同来源的<b>关于气候变化的陈述</b>。"
     instructionUnconditional1 = "When you click on one of the boxes, one statement will be randomly drawn from that box. Your task will be to read the statement and rate what you think about the statement. You will repeat this for <i>"
-    instructionUnconditional2 = "rounds</i>. In each round, you can decide from which box you want to read the next statement.</p><p> We know that climate change is a  complicated topic and there is a lot of different information about it out there. We are interested how you deal with the information environment and we are curious to see how you search for information. Please take your time to read each statement carefully and give your honest opinion. "
+    instructionUnconditional2 = "轮次</i>。在每一轮中，你可以决定你想从哪一个文本框中阅读下一条陈述。</p><p>我们知道气候变化是一个复杂的话题，有很多不同的信息。我们对你如何处理信息环境非常感兴趣，也很好奇你是如何搜索信息的。请你花点时间仔细阅读每一条陈述并给出你诚恳的意见。"
 
     #beforeTask
-    ccconcern_title = "Your attitude on climate change"
-    ccconcern_instruction = "Please move the slider to reflect your attitude."
-    ccconcern_question = "How concerned are you about climate change?"
+    ccconcern_title = "你对气候变化的态度"
+    ccconcern_instruction = "请移动滑动条来反映你的态度。"
+    ccconcern_question = "你对气候变化有多担心？"
 
 
     # Transition page 
@@ -29,14 +29,15 @@ class Lexicon:
 
      ## Climate Change Belief
     ### belief in (human) causes taken from  Valkengoed
-    beliefHuman_header = "How much do you agree with the following statements?"
-    beliefHuman1Label = "Human activities are <b> not </b> a major cause of climate change." # reversed (originally not)
-    beliefHuman2Label = "Climate change is entirely caused by human activities."
-    beliefHuman3Label = "The main causes of climate change are human activities." 
+    beliefHuman_title = "你相信什么？"
+    beliefHuman_header = "您对以下说法的同意程度如何？"
+    beliefHuman1Label = "人类活动<b>不是</b>气候变化的主要原因。" # reversed (originally not)
+    beliefHuman2Label = "气候变化完全是人类活动造成的。"
+    beliefHuman3Label = "气候变化的主要原因是人类活动。"
 
-    beliefConseqences1Label = "Climate change currently is the greatest threat to humankind."
-    beliefConseqences2Label = "Climate change will bring about serious negative consequences."
-    beliefConseqences3Label = "The consequences of climate change will <b> not </b> be very serious." # reversed (originally not)
+    beliefConseqences1Label = "当前，气候变化是人类面临的最大威胁。"
+    beliefConseqences2Label = "气候变化将带来严重的负面后果。"
+    beliefConseqences3Label = "气候变化的后果<b>不会</b>非常严重。"# reversed (originally not)
     beliefConseqences4Label = "Climate Change is one of the greatest risks of our time."
     
 
