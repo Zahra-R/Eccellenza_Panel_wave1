@@ -32,6 +32,9 @@ class Lexicon:
     box_rating_polOrientation_A = 'Was glauben Sie, welche politische Ausrichtung hat Box <span style="font-size: larger;">A</span>?'
     box_rating_polOrientation_B = 'Was glauben Sie, welche politische Ausrichtung hat Box <span style="font-size: larger;">B</span>?'
 
+    box_rating_impact_A = 'Wie sehr haben die Aussagen aus Box <span style="font-size: larger;"> A</span> Ihre Meinung beeinflusst? '
+    box_rating_impact_B = 'Wie sehr haben die Aussagen aus Box <span style="font-size: larger;"> B</span> Ihre Meinung beeinflusst? '
+
     conclude_title = "Bitte nehmen Sie sich Zeit, um diese Seite zu lesen."
 
     attentionText = "Um zu zeigen, dass Sie die Aussagen aufmerksam lesen, bitten wir Sie, beide Schieberegler ganz nach links zu schieben. Das heisst beide Schieberegler sollten an dem Pol 'gar nicht' sein."

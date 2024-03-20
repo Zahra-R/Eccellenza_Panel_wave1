@@ -31,8 +31,8 @@ class Lexicon:
     box_rating_would_follow_B = 'Would you follow Box <span style="font-size: larger;"> B</span> if it were its own social media channel?'
     box_rating_polOrientation_A = 'What do you think is the political orientation of Box <span style="font-size: larger;"> A</span>? '
     box_rating_polOrientation_B = 'What do you think is the political orientation of Box <span style="font-size: larger;"> B</span>? '
-    box_rating_impact_A = 'How much did the statements from Box <span style="font-size: larger;"> A</span> change your beliefs? '
-    box_rating_impact_B = 'How much did the statements from Box <span style="font-size: larger;"> B</span> change your beliefs? '
+    box_rating_impact_A = 'How much did the statements from Box <span style="font-size: larger;"> A</span> change your opinion? '
+    box_rating_impact_B = 'How much did the statements from Box <span style="font-size: larger;"> B</span> change your opinion? '
 
     conclude_title = "Please take some time to read through this page."
 

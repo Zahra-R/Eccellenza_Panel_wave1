@@ -245,7 +245,7 @@ class Demographics2(Page):
     def before_next_page(player: Player, timeout_happened):
         discrepancy = (player.yearOfBirth + player.age) - 2024
         player.discrepancy = discrepancy
-        if(abs(discrepancy) > 3 ):
+        if(abs(discrepancy) > 2 ):
                player.screenoutBirthyear = True
 
     
