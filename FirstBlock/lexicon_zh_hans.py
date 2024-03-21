@@ -33,6 +33,7 @@ class Lexicon:
     demographics_header = "请输入以下有关您自己的信息。"
 
     age_label = "你今年多大？"
+    ageYear_label = "你是哪一年出生的？"
 
     gender_label = "您的性别是什么？" 
     female = "女性"
@@ -79,3 +80,8 @@ class Lexicon:
 
     
     yoB_explainer ="Unfortunately, there are oftentimes fake participations or insincere participants. To verify you complete this study sincerely, please enter your year of birth."
+
+    ## screenouts 
+    screenout_title = "Participation not possible."
+    screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."
+

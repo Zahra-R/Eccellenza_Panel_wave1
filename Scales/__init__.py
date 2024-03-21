@@ -703,10 +703,9 @@ class transition (Page):
     
 
 
-page_sequence = [policyScales,
-
-                transition, Belief, Belief2, CCKnowledge, CCEmotion,
+page_sequence = [ transition, Belief, Belief2, CCKnowledge, CCEmotion,
                  BehaviorsFood, BehaviorsTransport, BehaviorsFlying, 
                  PITrust, IBValues ,
+                 policyScales,
                  DemographicsEnd
                  ]

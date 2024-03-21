@@ -83,30 +83,29 @@ def education_choices(player):
         ]
     return education_choices
 
-def get_party_choices(player):
+def party_choices(player):
     party_choices = []
     Lexicon = player.session.firstBlockLexi
     language_code =  player.session.config['language']
     if language_code == 'de':
         party_choices = [    
-            Lexicon.cdcsu,
-            Lexicon.spd,
-            Lexicon.gruene,
-            Lexicon.fdp,
-            Lexicon.linke,
-            Lexicon.afd,
-            Lexicon.other_party
+            ["cdcsu", Lexicon.cdcsu],
+            ["spd", Lexicon.spd],
+            ["gruene", Lexicon.gruene],
+            ["fdp", Lexicon.fdp],
+            ["linke", Lexicon.linke],
+            ["afd", Lexicon.afd],
+            ["other_party", Lexicon.other_party]
         ]
-    elif language_code == 'zh_hans':
+    elif language_code == 'en':
         party_choices = [
-            # Add choices for Chinese language if needed
+            ["republicans", Lexicon.republicans], 
+            ["democrats", Lexicon.democrats], 
+            ["independent_party", Lexicon.independent_party], 
+            ["other_party", Lexicon.other_party]
         ]
     else:
         party_choices = [
-            Lexicon.republicans, 
-            Lexicon.democrats, 
-            Lexicon.independent_party, 
-            Lexicon.other_party
         ]
     return party_choices
 
@@ -185,10 +184,11 @@ class Player(BasePlayer):
     ### Demographics
     age = models.IntegerField(min=18,max = 99)
     education = models.StringField()
+    party = models.StringField()
 
     
     yearOfBirth = models.IntegerField(min=1900,max = 2008)  # change in different waves
-    #party_affiliation = models.StringField(choices=get_party_choices(LANGUAGE_CODE, Lexicon) )
+    
 
     # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
     hie1 = make_likert10()
@@ -207,22 +207,29 @@ class Player(BasePlayer):
 
   
 class Demographics(Page):
+    @staticmethod
+    def get_form_fields(player):
+        if player.session.config['language'] == "zh_hans":
+            return ['age',  'education']
+        else:
+            return ['age',  'education', 'party']
     form_model = 'player'
-    form_fields = ['age',  'education']
-
     @staticmethod
     def vars_for_template(player: Player):
-        return{
-            'Lexicon': player.session.firstBlockLexi
-        
-        } 
+        return dict(Lexicon=player.session.firstBlockLexi)
     @staticmethod
     def js_vars(player):
         Lexicon = player.session.firstBlockLexi
-        return dict(
-        form_fields = ['age',  'education'],
-        form_field_labels = [Lexicon.age_label, Lexicon.education_label]
-    )
+        if  player.session.config['language'] == "zh_hans":
+            return dict(
+            form_fields= ['age',  'education'],
+            form_field_labels = [Lexicon.age_label,Lexicon.education_label ],
+            langcode= "zh_hans")
+        else:
+            return dict(
+            form_fields= ['age',  'education', 'party'],
+            form_field_labels = [Lexicon.age_label,Lexicon.education_label ,Lexicon.party_affiliation_label ],
+            langcode="west")
 
 
 class Demographics2(Page):

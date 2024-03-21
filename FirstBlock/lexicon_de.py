@@ -43,6 +43,16 @@ class Lexicon:
     doctoral_degree = "Promotion (PhD) oder höher"
     prefer_not_to_say_education = "Keine Angabe"
 
+
+    party_affiliation_label = "Welcher Partei würden Sie am ehesten Ihre Stimme geben?"
+    cdcsu = "CDU/CSU"
+    spd = "SPD"
+    gruene = "Bündnis 90/Die Grünen"
+    fdp = "FDP"
+    linke = "Die Linke"
+    afd = "Alternative für Deutschland (AfD)"
+    other_party = "Andere"
+
     
     ## screenouts 
     screenout_title = "Teilnahme nicht möglich."

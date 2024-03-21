@@ -29,7 +29,7 @@ SESSION_CONFIGS = [
          name='NinaFirsttestscreenouts',
   #      app_sequence=['survey','task'],
          app_sequence=[ 'FirstBlock', 'Nina_instructions', 'Jessi_Instructions', 'CCsampling_intro', 'CCsampling'],
-         language = "de",
+         language = "zh_hans",
          num_demo_participants=10,
      ),
       dict(

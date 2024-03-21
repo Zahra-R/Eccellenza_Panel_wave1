@@ -42,6 +42,12 @@ class Lexicon:
     doctoral_degree = "Doctoral Degree or higher"
     prefer_not_to_say_education = "Prefer not to say"
 
+    party_affiliation_label = "Which party would you be most likely to vote for?"
+    republicans = "Republicans"
+    democrats = "Democrats"
+    independent_party = "Independent Party"
+    other_party = "Other"
+
 
     ## screenouts 
     screenout_title = "Participation not possible."
