@@ -43,6 +43,8 @@ class Lexicon:
     ## attention check study is about what screenout
     interlude_title = "Brief Interruption"
     interlude_header = "This study has one superordinate topic. Have you paid attention and do you know what this study is about? Please choose the correct answer carefully."
+    aboutWhatLabel = "What is this study about?"
+
     about_a = "City Tourism"
     about_b = "Climate Change"
     about_c = "Washing Machines"

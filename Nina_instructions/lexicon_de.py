@@ -26,6 +26,13 @@ class Lexicon:
     example_pd = 'Als Nächstes werden Sie den CO<sub>2</sub> -Fußabdruck von <b>16</b> Personen mit unterschiedlichen Lebensstilen einschätzen. <br> Bitte betrachten Sie jeden einzelnen CO<sub>2</sub> -Fußabdruck genau und nehmen Sie sich etwas Zeit, um Ihre Schätzung abzugeben. <br> Die Reihenfolge, in der die 6 Verhaltensweisen dargestellt werden, wird sich innerhalb der 16 gezeigten Beispielen, ändern.'
     example_pic = '/static/global/images/example_de.png '
 
+    ## comprehension
+    comprehension_title = ' Da Sie soeben eine Menge Informationen gelesen haben, möchten wir sicherstellen, dass Sie einen wichtigen Aspekt verstanden haben: Bitte geben Sie an, wie viel kg CO<sub>2</sub> mit jedem Anstieg um eine Einheit auf der Skala verbunden sind: '
+    
+    comprehension_a= ' 200 kg CO<sub>2</sub> pro Anstieg um 1 auf der Skala'
+    comprehension_b= ' 500 kg CO<sub>2</sub> pro Anstieg um 1 auf der Skala'
+    comprehension_c = ' 900 kg CO<sub>2</sub> pro Anstieg um 1 auf der Skala'
+
     ## attention check study is about what screenout
     interlude_title = "Eine Zwischenfrage"
     interlude_header = "In dieser Studie gibt es ein übergeordnetes Thema. Haben Sie aufgepasst und können sagen, worum es in dieser Studie geht? Bitte seien Sie sorgfältig und wählen die richtige Antwort aus."

@@ -29,6 +29,13 @@ class Lexicon:
     example_pd = 'Next, you will estimate the carbon footprint of <b>16</b> persons with different lifestyles. <br> Please look at each individual carbon footprint carefully and take some time to provide your estimation. <br> The order in which the 6 behaviors are presented will change across the 16 examples you will see.'
     example_pic = '/static/global/images/example_en.png '
 
+    ## comprehension
+    comprehension_title = 'Since you have just read a lot of information, we would like to ensure that you have understood one key aspect: Please indicate how many kg CO<sub>2</sub> are associated with each increase of one unit on the scale:'
+    
+    comprehension_a= 'each increase of 1 on the scale corresponds to 200 kg CO<sub>2</sub>  '
+    comprehension_b= 'each increase of 1 on the scale corresponds to 500 kg CO<sub>2</sub>  '
+    comprehension_c = 'each increase of 1 on the scale corresponds to 900 kg CO<sub>2</sub>  '
+
     ## attention check study is about what screenout
     interlude_title = "Eine Zwischenfrage"
     interlude_header = "In dieser Studie gibt es ein übergeordnetes Thema. Haben Sie aufgepasst und können sagen, worum es in dieser Studie geht? Bitte seien Sie sorgfältig und wählen die richtige Antwort aus."

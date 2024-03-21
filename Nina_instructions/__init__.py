@@ -10,6 +10,7 @@ class C(BaseConstants):
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
 
+
 class Subsession(BaseSubsession):
     pass
 
@@ -31,10 +32,34 @@ def creating_session(subsession:Subsession):
     subsession.session.introNinaLexi = Lexicon 
 
 
+def comprehensionQ_choices(player):
+    comprehensionQ_choices = []
+    Lexicon = player.session.introNinaLexi
+    language_code = player.session.config['language']
+    if language_code == 'de':
+        comprehensionQ_choices = [
+            ['200g_false', Lexicon.comprehension_a],
+            ['true',  Lexicon.comprehension_b],
+            ['900g_false', Lexicon.comprehension_c]
+        ]
+    elif language_code == 'zh_hans':
+        comprehensionQ_choices = [
+            ['200g_false', Lexicon.comprehension_a],
+            ['true',  Lexicon.comprehension_b],
+            ['900g_false', Lexicon.comprehension_c]
+        ]
+    else:
+        comprehensionQ_choices = [
+            ['200g_false', Lexicon.comprehension_a],
+            ['true',  Lexicon.comprehension_b],
+            ['900g_false', Lexicon.comprehension_c]
+        ]
+        
+    return comprehensionQ_choices
 
 
 def aboutWhat_choices(player): 
-    Lexicon = player.session.samplingIntroLexi 
+    Lexicon = player.session.introNinaLexi 
     return [
     ['tourism_false', Lexicon.about_a],
     ['true',  Lexicon.about_b],
@@ -50,6 +75,7 @@ class Player(BasePlayer):
 
     aboutWhat = models.StringField(widget=widgets.RadioSelect)
     screenoutAboutWhat = models.BooleanField(initial= False)
+    comprehensionQ = models.StringField()
    
 
 # FUNCTIONS
@@ -78,6 +104,28 @@ class instructions(Page):
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.introNinaLexi)
+    
+    
+class comprehension(Page):
+    form_model = 'player'
+    form_fields = 'comprehensionQ'
+
+    @staticmethod
+    def vars_for_template(player: Player):
+        return{
+            'Lexicon': player.session.introNinaLexi
+        
+        } 
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.introNinaLexi
+        return dict(
+        form_fields = ['comprehensionQ'],
+        form_field_labels = [Lexicon.comprehension_title]
+
+    )
+
+   
    
     
 class task_example(Page):
@@ -121,6 +169,9 @@ class Screenout(Page):
 # Page sequence
 page_sequence = [ transition,
                   instructions, 
-                  task_example, 
+                
+            #     comprehension,
                   interlude, 
-                  Screenout]
+                  Screenout,
+                  task_example
+                  ]

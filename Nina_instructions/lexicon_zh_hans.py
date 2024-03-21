@@ -38,16 +38,22 @@ class Lexicon:
     example_pd = '接下来，您将估算<b>16</b>位不同生活方式的人的碳足迹。<br>请仔细查看每个碳足迹，并花一些时间提供您的估计。 <br>在您将看到的16个示例中，6种行为的呈现顺序将发生变化。'
     example_pic = '/static/global/images/example_zh_hans.png '  # no need to change the link
 
-      ## attention check study is about what screenout
-    interlude_title = "Eine Zwischenfrage"
-    interlude_header = "In dieser Studie gibt es ein übergeordnetes Thema. Haben Sie aufgepasst und können sagen, worum es in dieser Studie geht? Bitte seien Sie sorgfältig und wählen die richtige Antwort aus."
-    aboutWhatLabel = "Worum geht es in dieser Studie?"
+     ## comprehension
+    comprehension_title = 'Since you have just read a lot of information, we would like to ensure that you have understood one key aspect: Please indicate how many kg CO<sub>2</sub> are associated with each increase of one unit on the scale:'
+    
+    comprehension_a= '刻度每增加 1 相当于 200 千克二氧化碳'
+    comprehension_b= '刻度上每增加 1 相当于 500 千克二氧化碳'
+    comprehension_c = '刻度上每增加 1 相当于 900 千克二氧化碳 '
 
-    about_a = "Städtetourismus"
-    about_b = "Klimawandel"
-    about_c = "Waschmaschinen"
-    about_d = "Vorliebe für scharfes Essen"
+     ## attention check study is about what screenout
+    interlude_title = "Brief Interruption"
+    interlude_header = "This study has one superordinate topic. Have you paid attention and do you know what this study is about? Please choose the correct answer carefully."
+    aboutWhatLabel = "What is this study about?"
 
+    about_a = "City Tourism"
+    about_b = "Climate Change"
+    about_c = "Washing Machines"
+    about_d = "Preference for spicy food"
     
     ## screenouts 
     screenout_title = "Participation not possible."
