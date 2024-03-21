@@ -84,38 +84,38 @@ class Consent(Page):
         if(player.session.config['language']=="en"):   
             if(player.participant.order_tasks == 1):
                 #insert session link for Order_Nina_Jessi_Zahra
-                stringOrder = "http://localhost:8080/join/dopifagi?participant_label=" + player.participant.label + player.session.myLangCode
+                stringOrder = "http://localhost:8080/join/dopifagi?participant_label=" + player.participant.label 
             elif(player.participant.order_tasks == 2):
                 #insert session link for Order_Jessi_Zahra_Nina
-                stringOrder = "http://localhost:8080/join/mosozanu?participant_label=" + player.participant.label +  player.session.myLangCode
+                stringOrder = "http://localhost:8080/join/mosozanu?participant_label=" + player.participant.label 
             else:
                 #insert session link for Order_Zahra_Nina_Jessi
-                stringOrder = "http://localhost:8080/join/gusibezi?participant_label=" + player.participant.label + player.session.myLangCode
+                stringOrder = "http://localhost:8080/join/gusibezi?participant_label=" + player.participant.label
 
         #insert session links for German
         if(player.session.config['language']=="de"):   
             if(player.participant.order_tasks == 1):
                 #insert session link for Order_Nina_Jessi_Zahra
-                stringOrder = "http://localhost:8088/join/venegoza?participant_label=" + player.participant.label + player.session.myLangCode
+                stringOrder = "http://localhost:8088/join/venegoza?participant_label=" + player.participant.label
             elif(player.participant.order_tasks == 2):
                 #insert session link for Order_Jessi_Zahra_Nina
-                stringOrder = "http://localhost:8088/join/venegoza?participant_label=" + player.participant.label +  player.session.myLangCode
+                stringOrder = "http://localhost:8088/join/venegoza?participant_label=" + player.participant.label
             else:
                 #insert session link for Order_Zahra_Nina_Jessi
-                stringOrder = "http://localhost:8088/join/venegoza?participant_label=" + player.participant.label + player.session.myLangCode
+                stringOrder = "http://localhost:8088/join/venegoza?participant_label=" + player.participant.label
 
         
          #insert session links for Chinese
         if(player.session.config['language']=="zh_hans"):   
             if(player.participant.order_tasks == 1):
                 #insert session link for Order_Nina_Jessi_Zahra
-                stringOrder = "http://localhost:8888/join/mirutebu?participant_label=" + player.participant.label + player.session.myLangCode
+                stringOrder = "http://localhost:8888/join/mirutebu?participant_label=" + player.participant.label
             elif(player.participant.order_tasks == 2):
                 #insert session link for Order_Jessi_Zahra_Nina
-                stringOrder = "http://localhost:8888/join/mapedugo?participant_label=" + player.participant.label +  player.session.myLangCode
+                stringOrder = "http://localhost:8888/join/mapedugo?participant_label=" + player.participant.label
             else:
                 #insert session link for Order_Zahra_Nina_Jessi
-                stringOrder = "http://localhost:8888/join/didubahe?participant_label=" + player.participant.label + player.session.myLangCode
+                stringOrder = "http://localhost:8888/join/didubahe?participant_label=" + player.participant.labels
 
         return {
             'stringOrder': stringOrder,

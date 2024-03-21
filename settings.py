@@ -28,7 +28,7 @@ SESSION_CONFIGS = [
      dict(
          name='NinaFirsttestscreenouts',
   #      app_sequence=['survey','task'],
-         app_sequence=[ 'Nina_instructions', 'Jessi_Instructions', 'CCsampling_intro', 'CCsampling'],
+         app_sequence=[ 'FirstBlock', 'Nina_instructions', 'Jessi_Instructions', 'CCsampling_intro', 'CCsampling'],
          language = "de",
          num_demo_participants=10,
      ),

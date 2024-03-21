@@ -4,7 +4,8 @@
 
 {% block styles %}
 <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
-<meta http-equiv="refresh" content="2; url=https://LINKFORSCREENOUT"> 
+{{if player.session.langcode = "en"}}
+<meta http-equiv="refresh" content="2; url=https://www.google.com/screenout?participant_id={{player.participant.label}}"> 
 {% endblock %}
 
 {% block content %}
