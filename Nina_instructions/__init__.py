@@ -33,29 +33,12 @@ def creating_session(subsession:Subsession):
 
 
 def comprehensionQ_choices(player):
-    comprehensionQ_choices = []
-    Lexicon = player.session.introNinaLexi
-    language_code = player.session.config['language']
-    if language_code == 'de':
-        comprehensionQ_choices = [
-            ['200g_false', Lexicon.comprehension_a],
-            ['true',  Lexicon.comprehension_b],
-            ['900g_false', Lexicon.comprehension_c]
-        ]
-    elif language_code == 'zh_hans':
-        comprehensionQ_choices = [
-            ['200g_false', Lexicon.comprehension_a],
-            ['true',  Lexicon.comprehension_b],
-            ['900g_false', Lexicon.comprehension_c]
-        ]
-    else:
-        comprehensionQ_choices = [
-            ['200g_false', Lexicon.comprehension_a],
-            ['true',  Lexicon.comprehension_b],
-            ['900g_false', Lexicon.comprehension_c]
-        ]
-        
-    return comprehensionQ_choices
+    Lexicon = player.session.introNinaLexi 
+    return [
+    ['200g_false', Lexicon.comprehension_a],
+    ['true',  Lexicon.comprehension_b],
+    ['900g_false', Lexicon.comprehension_c]
+]    
 
 
 def aboutWhat_choices(player): 
@@ -75,7 +58,7 @@ class Player(BasePlayer):
 
     aboutWhat = models.StringField(widget=widgets.RadioSelect)
     screenoutAboutWhat = models.BooleanField(initial= False)
-    comprehensionQ = models.StringField()
+    comprehensionQ = models.StringField( widget=widgets.RadioSelect)
    
 
 # FUNCTIONS
@@ -108,7 +91,7 @@ class instructions(Page):
     
 class comprehension(Page):
     form_model = 'player'
-    form_fields = 'comprehensionQ'
+    form_fields = ['comprehensionQ']
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -124,7 +107,7 @@ class comprehension(Page):
         form_field_labels = [Lexicon.comprehension_title]
 
     )
-
+ 
    
    
     
@@ -169,8 +152,7 @@ class Screenout(Page):
 # Page sequence
 page_sequence = [ transition,
                   instructions, 
-                
-            #     comprehension,
+                  comprehension,
                   interlude, 
                   Screenout,
                   task_example

@@ -43,7 +43,7 @@ class Lexicon:
     
     comprehension_a= '刻度每增加 1 相当于 200 千克二氧化碳'
     comprehension_b= '刻度上每增加 1 相当于 500 千克二氧化碳'
-    comprehension_c = '刻度上每增加 1 相当于 900 千克二氧化碳 '
+    comprehension_c='刻度上每增加 1 相当于 900 千克二氧化碳 '
 
      ## attention check study is about what screenout
     interlude_title = "Brief Interruption"
