@@ -214,6 +214,23 @@ class Lexicon:
     flying_long_label = '过去两年您平均乘坐了多少次<b>长途航班（>6 小时）</b>？<i> i：一个往返航班算作两个航班。因此，如果您从北京飞往雅克拉达（印度尼西亚）并返回，则算作 2 趟航班。</i>'
     # for  chinese version example: from Beijing to Jakarta (Indonesia) and back
 
+    ### policies scales translations here
+    policies_title = ' Some additional questions on Policies '
+
+    policy1Label =	'Increase or introduce of taxes on fuel for vehicles (i.e. diesel and gasoline)'
+    policy2Label =	'Increase or introduce taxes on air travel.'
+    policy3Label =	'Increase or introduce taxes on fossil fuels as energy source (i.e. gas, oil, and coal)'
+    policy4Label =	'Increase or introduce taxes on red meat (e.g., beef, lamb, veal).'
+    policy5Label =	'Increase or introduce taxes on non-recyclables'
+    policy6Label =	'Increase or introduce taxes on food products imported via plane'
+	
+    strongly_opoose =	'strongly oppse'
+    strongly_support =	'strongly support'
+	
+    intro_policies1 ='In the following, we will ask for your views on different public policies. Please answer them as truthfully as possible. <br> '
+    intro_policies2 ='Many countries have introduced new policies to reduce the risk of climate change. This includes policies that require or create incentives for reductions in greenhouse gas emissions across domains and actors. <br>'
+
+
  
     
     ### Demographics

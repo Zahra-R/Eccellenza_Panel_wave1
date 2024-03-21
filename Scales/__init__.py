@@ -472,7 +472,13 @@ class Player(BasePlayer):
     footprint_regional =  make_likert5()
     footprint_electricity =  make_likert4()
 
-
+    ## policy scales
+    policy_commute = make_likert10()
+    policy_flying = make_likert10()
+    policy_electricity = make_likert10()
+    policy_diet = make_likert10()
+    policy_recycling = make_likert10()
+    policy_regional = make_likert10()
 
 
     ### Demographics
@@ -651,6 +657,20 @@ class PITrust(Page):
         form_field_labels = [Lexicon.pit1Label, Lexicon.pit2Label]
     )
         
+class policyScales(Page):
+    form_model = 'player'
+    form_fields= ['policy_commute', 'policy_flying', 'policy_electricity', 'policy_diet', 'policy_recycling', 'policy_regional' ]
+    @staticmethod
+
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields = ['policy_commute', 'policy_flying', 'policy_electricity', 'policy_diet', 'policy_recycling', 'policy_regional' ],
+        form_field_labels = [Lexicon.policy1Label, Lexicon.policy2Label, Lexicon.policy3Label, Lexicon.policy4Label, Lexicon.policy5Label, Lexicon.policy6Label  ]
+    )
+
 class DemographicsEnd(Page):
     form_model = 'player'
     form_fields = ['ageYear', 'householdsize', 'residential_area', 'zip_code', 'states' ]
@@ -683,8 +703,10 @@ class transition (Page):
     
 
 
-page_sequence = [
+page_sequence = [policyScales,
+
                 transition, Belief, Belief2, CCKnowledge, CCEmotion,
                  BehaviorsFood, BehaviorsTransport, BehaviorsFlying, 
-                 PITrust, IBValues , DemographicsEnd,
+                 PITrust, IBValues ,
+                 DemographicsEnd
                  ]
