@@ -1,6 +1,6 @@
 class Lexicon:
     #Affective Imagery
-    Title_affectiveImagery = "Assoziationen gegenüber einer CO<sub>2</sub>-Steuer"
+    Title_affectiveImagery = "Assoziationen gegenüber dem Begriff CO<sub>2</sub>-Steuer"
     Instr_affectiveImagery = "Bevor wir mit unserer Aufgabe beginnen, möchten wir Sie bitten, mindestens ein Wort oder einen Gedanken aufzuschreiben, der Ihnen in den Sinn kommt, wenn Sie an den Begriff 'CO<sub>2</sub>-Steuer' denken."
     Association1 = "1. Assoziation"
     Association2 = "2. Assoziation"
@@ -18,7 +18,7 @@ class Lexicon:
     
     #Affective Imagery Rating
     Title_rating = "Ihre Assoziationen zur CO<sub>2</sub>-Steuer"
-    Instructions_rating = "Nachfolgend sehen Sie die von Ihnen genannten Wörter und Gedanken in Bezug auf die CO<sub>2</sub>-Steuer. Bitte geben Sie an, wie positiv oder negativ Sie diese Assoziationen in Bezug auf die CO<sub>2</sub>-Steuer befinden."
+    Instructions_rating = "Nachfolgend sehen Sie die von Ihnen genannten Wörter und Gedanken in Bezug auf den Begriff 'CO<sub>2</sub>-Steuer'. Bitte geben Sie an, wie positiv oder negativ Sie diese Assoziationen in Bezug auf den Begriff 'CO<sub>2</sub>-Steuer' befinden."
     very_negative = "Sehr negativ (1)"
     very_positive = "Sehr positiv (7)"
 

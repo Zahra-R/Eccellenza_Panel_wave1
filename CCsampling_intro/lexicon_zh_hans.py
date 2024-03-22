@@ -38,7 +38,6 @@ class Lexicon:
     beliefConseqences1Label = "当前，气候变化是人类面临的最大威胁。"
     beliefConseqences2Label = "气候变化将带来严重的负面后果。"
     beliefConseqences3Label = "气候变化的后果<b>不会</b>非常严重。"# reversed (originally not)
-    beliefConseqences4Label = "Climate Change is one of the greatest risks of our time."
     
 
     

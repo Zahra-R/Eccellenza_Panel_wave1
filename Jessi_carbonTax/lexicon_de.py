@@ -11,7 +11,7 @@ class Lexicon:
    helpText = "Für eine Zusammenfassung der Eigenschaften, klicken Sie bitte "
    helpButton = "Hilfe"
    helpSector = "Sektor"
-   helpSectorText = "Der Sektor der besteuert werden würde: <b>Allgemein auf alle Emissionsn</b>, <b>Fleisch- und Milchprodukte</b> oder <b>Energieerzeugung</b>"
+   helpSectorText = "Der Sektor der besteuert werden würde: <b>Allgemein auf alle Emissionen</b>, <b>Fleisch- und Milchprodukte</b> oder <b>Energieerzeugung</b>"
    helpTiming = "Inkrafttreten"
    helpTimingText = "Beginn der Besteuerung: <b>in 1 Jahr</b> oder in <b>7 Jahren</b>"
    helpPrice = "Preis"
