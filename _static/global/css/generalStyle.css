@@ -114,3 +114,26 @@ th, td {
     padding: 1vh;
   }
 
+#nextst, .otree-btn-next{
+    background-color: #26a69a;
+    text-transform: uppercase;
+    border-radius: 0%;
+    border-color: #26a69a;
+    color: white;
+    box-shadow: 1pt 1pt 4pt 1pt slategray;
+    margin-bottom: 10px;
+}
+
+#nextst:hover:enabled, .otree-btn-next:hover {
+    letter-spacing: 1pt;
+    box-shadow: 1pt 1pt 4pt 2pt slategray;
+    background-color: #26a69a;
+    border-color: #26a69a;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #2bbbad;
+    border-color: #2bbbad;
+}
+
