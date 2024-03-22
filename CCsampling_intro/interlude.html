@@ -1,0 +1,64 @@
+{% block title %}
+{{Lexicon.interlude_title}}
+{% endblock %}
+
+{% block styles %}
+<style>
+
+.form-check-input:checked {
+    background-color: #A5D7D2 !important; 
+    border-color: #46505A;
+} 
+
+
+#nextst, .otree-btn-next{
+    background-color: #26a69a;
+    text-transform: uppercase;
+    border-radius: 0%;
+    border-color: #26a69a;
+    color: white;
+    box-shadow: 1pt 1pt 4pt 1pt slategray;
+    margin-bottom: 10px;
+}
+
+#nextst:hover:enabled, .otree-btn-next:hover {
+    letter-spacing: 1pt;
+    box-shadow: 1pt 1pt 4pt 2pt slategray;
+    background-color: #26a69a;
+    border-color: #26a69a;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+
+  <p> {{Lexicon.interlude_header}} </p> 
+  <div style="margin-left:auto; margin-right: auto; font-size: x-large;">
+    {{formfield 'aboutWhat' label=Lexicon.aboutWhatLabel}}
+  </div>
+
+
+  
+
+
+
+<div class="next-btn">
+  <div style="float: right; padding-top: 2vh; margin-bottom: 20px;">
+      <button id="nextst"  style=" margin-top: 4vh;" class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
+
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+   
+</script>
+
+{% endblock %}

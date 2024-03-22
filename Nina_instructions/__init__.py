@@ -10,6 +10,7 @@ class C(BaseConstants):
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
 
+
 class Subsession(BaseSubsession):
     pass
 
@@ -31,17 +32,33 @@ def creating_session(subsession:Subsession):
     subsession.session.introNinaLexi = Lexicon 
 
 
-    import itertools
-    order_tasks = itertools.cycle([1,2,3])
-    for player in subsession.get_players():
-        if subsession.round_number == 1: 
-            player.participant.order_tasks = next(order_tasks)
+def comprehensionQ_choices(player):
+    Lexicon = player.session.introNinaLexi 
+    return [
+    ['200g_false', Lexicon.comprehension_a],
+    ['true',  Lexicon.comprehension_b],
+    ['900g_false', Lexicon.comprehension_c]
+]    
+
+
+def aboutWhat_choices(player): 
+    Lexicon = player.session.introNinaLexi 
+    return [
+    ['tourism_false', Lexicon.about_a],
+    ['true',  Lexicon.about_b],
+    ['washingMachine_false', Lexicon.about_c],
+    ['spicy_false',  Lexicon.about_d]
+]
 
 
 
 class Player(BasePlayer):
     block_order = models.IntegerField()
     already_counted = models.BooleanField(initial=False)
+
+    aboutWhat = models.StringField(widget=widgets.RadioSelect)
+    screenoutAboutWhat = models.BooleanField(initial= False)
+    comprehensionQ = models.StringField( widget=widgets.RadioSelect)
    
 
 # FUNCTIONS
@@ -70,6 +87,28 @@ class instructions(Page):
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.introNinaLexi)
+    
+    
+class comprehension(Page):
+    form_model = 'player'
+    form_fields = ['comprehensionQ']
+
+    @staticmethod
+    def vars_for_template(player: Player):
+        return{
+            'Lexicon': player.session.introNinaLexi
+        
+        } 
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.introNinaLexi
+        return dict(
+        form_fields = ['comprehensionQ'],
+        form_field_labels = [Lexicon.comprehension_title]
+
+    )
+ 
+   
    
     
 class task_example(Page):
@@ -78,9 +117,43 @@ class task_example(Page):
     @staticmethod
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.introNinaLexi)
+    
+class interlude (Page): 
+    form_model = 'player'
+    form_fields = ['aboutWhat']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.introNinaLexi)
+    @staticmethod
+    def before_next_page(player: Player, timeout_happened):
+        if(player.aboutWhat != "true" ):
+               player.screenoutAboutWhat = True
+    @staticmethod
+    def is_displayed(player: Player):
+        return (player.participant.task_counter == 1)
+    
+
+
+class Screenout(Page):
+    form_model = 'player'
+    @staticmethod
+    def vars_for_template(player: Player):
+        return{
+             'Lexicon': player.session.introNinaLexi
+        } 
+    @staticmethod
+    def is_displayed(player: Player):
+        return (player.screenoutAboutWhat)
+   
+    
+   
         
 
 # Page sequence
 page_sequence = [ transition,
                   instructions, 
-                  task_example]
+                  comprehension,
+                  interlude, 
+                  Screenout,
+                  task_example
+                  ]

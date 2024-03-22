@@ -82,16 +82,8 @@ class Lexicon:
     emoConcern3Label = "upset"
 
 
-    # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
-    ## TBD kevin tam
-    wvv_title = "How do you see the world?"
-    wvv_header = "How much do you agree with the following statements?"
-    hie1Label = "Our society would be better off if the distribution of wealth was more equal."
-    hie2Label = "A lot of problems in our society come from the decline in the traditional family, where the man works and the woman stays home."
-    hie3Label = "Discrimination against minorities is still a very serious problem in our country."
-    ind1Label = "The government interferes far too much in our everyday lives."
-    ind2Label = "I feel that people who are successful in business have a right to enjoy their wealth as they see fit."
-    ind3Label = "Too many people expect society to do things for them that they should be doing for themselves."
+  
+
 
    # Importance of biospheric values van der Linden, 2015   
     ibv_title = "Guiding principles in enviromental issues"
@@ -101,11 +93,7 @@ class Lexicon:
     ibv3Label = "Preventing Pollution (protecting natural resources)"
     ibv4Label = "Unity with Nature (fitting into nature)"
 
-    # Political Orientation Pennycook et al 2020
-    polOrientationLabel = "What is your general stance in political issues?"
-    strongly_liberal = "strongly liberal/left-wing"
-    strongly_conservative = "strongly conservative/right-wing"
-
+  
 
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
     pit_title = "Trust with regards to climate change"
@@ -242,9 +230,23 @@ class Lexicon:
     flying_long_label = 'How many <b>long-distance flights (>6 hours) </b> did you take on average in the past two years? <i> i: one round-trip flight counts as two flights. So if you flew from Miami to London and back this counts as 2 flights. </i> '
     # for  chinese version example: from Beijing to Jakarta (Indonesia) and back
 
+
+    ### policies scales
+    policies_title = ' Some additional questions on Policies '
+    policy1Label =	'Increase or introduce of taxes on fuel for vehicles (i.e. diesel and gasoline)'
+    policy2Label =	'Increase or introduce taxes on air travel.'
+    policy3Label =	'Increase or introduce taxes on fossil fuels as energy source (i.e. gas, oil, and coal)'
+    policy4Label =	'Increase or introduce taxes on red meat (e.g., beef, lamb, veal).'
+    policy5Label =	'Increase or introduce taxes on non-recyclables'
+    policy6Label =	'Increase or introduce taxes on food products imported via plane'
+	
+    strongly_opoose =	'strongly oppse'
+    strongly_support =	'strongly support'
+	
+    intro_policies1 ='In the following, we will ask for your views on different public policies. Please answer them as truthfully as possible. <br> '
+    intro_policies2 ='Many countries have introduced new policies to reduce the risk of climate change. This includes policies that require or create incentives for reductions in greenhouse gas emissions across domains and actors. <br>'
+
  
-
-
     ### Demographics
     demographics_title = "Personal data"
     demographics_header = "Please enter the following information about yourself."

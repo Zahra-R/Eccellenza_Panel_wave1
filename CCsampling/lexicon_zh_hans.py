@@ -31,5 +31,8 @@ class Lexicon:
     box_rating_would_follow_B = '如果是它自己的社交媒体频道，你会关注<span style="font-size: larger;"> B</span>吗？'
     box_rating_polOrientation_A = '你认为文本框<span style="font-size: larger;"> A</span>的政治取向是什么？'
     box_rating_polOrientation_B = '你认为文本框<span style="font-size: larger;"> B</span>的政治取向是什么？'
+    box_rating_impact_A = 'How much did the statements from Box <span style="font-size: larger;"> A</span> change your opinion? '
+    box_rating_impact_B = 'How much did the statements from Box <span style="font-size: larger;"> B</span> change your opinion? '
+
 
     attentionText = "To demonstrate that you are reading the text presented in these boxes attentively, please move both range sliders all the way to the left (i.e. towards not at all)."

@@ -18,7 +18,7 @@ class Lexicon:
 
     # transition
     transitions_first_1 = 'Willkommen zu der Studie'
-    transitions_first_2= 'Diese Studie besteht aus vier Teilen. Der erste Teil beginnt gleich. Bitte versuchen Sie, den Teil ohne Unterbrechung zu bearbeiten. Herzlichen Dank für Ihre Zeit.'
+    transitions_first_2= 'Sehr schön! Sie erfüllen alle Kriterien, um an dieser Studie teilzunehmen. Diese Studie besteht aus vier Teilen. Bitte stellen Sie sicher, dass Sie ausreichend Zeit haben, um die Studie konzentriert zu bearbeiten.</p> <p>Der erste Teil beginnt gleich. Bitte versuchen Sie, diesen Teil ohne Unterbrechung zu bearbeiten. Herzlichen Dank für Ihre Zeit und Ihr Interesse an der Studie.'
     transition_title = 'Willkommen zum nächsten Teil der Studie. '
     transitions_second_1 =  'Sie haben jetzt '
     transitions_second_2 = 'von insgesamt 4 Teilen abgeschlossen. Teil'
@@ -27,8 +27,6 @@ class Lexicon:
     
     ## Climate Change belief
     
-    beliefCC_intro = "Klimawandel bezeichnet die Idee, dass die durchschnittliche Temperatur der Welt seit den letzten 150 Jahren am steigen ist, zukünftig noch mehr steigen wird, und dass sich infolgedessen das Weltklima verändern wird. Was denken Sie? Glauben Sie, dass es den Klimawandel gibt?"
-
     ### belief in (human) causes taken from  Valkengoed
     
     
@@ -43,3 +41,19 @@ class Lexicon:
     beliefConseqences1Label = "Der Klimawandel ist gegenwärtig die größte Bedrohung für die Menschheit."
     beliefConseqences2Label = "Der Klimawandel wird ernste negative Folgen bringen."
     beliefConseqences3Label = "Die Folgen des Klimawandels werden <b> nicht </b> sehr gravierend sein." # reversed (originally not)
+
+    ## attention check study is about what screenout
+    interlude_title = "Eine Zwischenfrage"
+    interlude_header = "In dieser Studie gibt es ein übergeordnetes Thema. Haben Sie aufgepasst und können sagen, worum es in dieser Studie geht? Bitte seien Sie sorgfältig und wählen die richtige Antwort aus."
+    aboutWhatLabel = "Worum geht es in dieser Studie?"
+
+    about_a = "Städtetourismus"
+    about_b = "Klimawandel"
+    about_c = "Waschmaschinen"
+    about_d = "Vorliebe für scharfes Essen"
+
+    
+    ## screenouts 
+    screenout_title = "Teilnahme nicht möglich."
+    screenout_sentence = "Leider deuteten Ihre Eingaben darauf hin, dass Sie nicht aufmerksam gelesen haben. Daher können Sie nicht an der Studie teilnehmen."
+

@@ -1,7 +1,6 @@
 import random
 
 from otree.api import *
-from settings import LANGUAGE_CODE
 
 
 doc = """
@@ -420,14 +419,7 @@ class Player(BasePlayer):
     cknow8 = models.StringField(choices=["a_true", "b_false", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)     
     cknow9 = models.StringField(choices=["a_false", "b_true", "c_false", "d_false", "dk"], widget=widgets.RadioSelect,)
 
-    # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
-    hie1 = make_likert10()
-    hie2 = make_likert10()
-    hie3 = make_likert10()
-    ind1 = make_likert10()
-    ind2 = make_likert10()
-    ind3 = make_likert10()
-
+    
     ### IB Values
     ibv1 = make_likert9()
     ibv2 = make_likert9()
@@ -439,8 +431,7 @@ class Player(BasePlayer):
     pit1 = make_likert10()
     pit2 = make_likert10()
 
-    ## political orientation
-    polOrientation = make_likert10()
+   
 
     ### Belief
     belief1Happening= make_likert10()
@@ -481,11 +472,16 @@ class Player(BasePlayer):
     footprint_regional =  make_likert5()
     footprint_electricity =  make_likert4()
 
-
+    ## policy scales
+    policy_commute = make_likert10()
+    policy_flying = make_likert10()
+    policy_electricity = make_likert10()
+    policy_diet = make_likert10()
+    policy_recycling = make_likert10()
+    policy_regional = make_likert10()
 
 
     ### Demographics
-    ageYear = models.IntegerField(min=1900,max = 2008)  # change in different waves
     
     householdsize = models.IntegerField(min=1,max = 20) 
 
@@ -632,30 +628,6 @@ class BehaviorsFlying(Page):
         form_field_labels = [  Lexicon.flying_short_label, Lexicon.flying_mid_label, Lexicon.flying_long_label ]
     )
 
-class WVValues(Page):
-    @staticmethod
-    def get_form_fields(player):
-        if player.session.config['language'] == "zh_hans":
-            return ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3']
-        else:
-            return ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3', "polOrientation"]
-    form_model = 'player'
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.scalesLexi)
-    @staticmethod
-    def js_vars(player):
-        Lexicon = player.session.scalesLexi
-        if  player.session.config['language'] == "zh_hans":
-            return dict(
-            form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3'],
-            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label],
-            langcode= "zh_hans")
-        else:
-            return dict(
-            form_fields= ['hie1', 'hie2', 'hie3', 'ind1', 'ind2', 'ind3', "polOrientation"],
-            form_field_labels = [Lexicon.hie1Label, Lexicon.hie2Label , Lexicon.hie3Label, Lexicon.ind1Label,Lexicon.ind2Label, Lexicon.ind3Label, Lexicon.polOrientationLabel],
-            lang_code="west")
 
 class IBValues(Page):
     form_model = 'player'
@@ -685,6 +657,20 @@ class PITrust(Page):
         form_field_labels = [Lexicon.pit1Label, Lexicon.pit2Label]
     )
         
+class policyScales(Page):
+    form_model = 'player'
+    form_fields= ['policy_commute', 'policy_flying', 'policy_electricity', 'policy_diet', 'policy_recycling', 'policy_regional' ]
+    @staticmethod
+
+    def vars_for_template(player: Player):
+        return dict(Lexicon=player.session.scalesLexi)
+    def js_vars(player):
+        Lexicon = player.session.scalesLexi
+        return dict(
+        form_fields = ['policy_commute', 'policy_flying', 'policy_electricity', 'policy_diet', 'policy_recycling', 'policy_regional' ],
+        form_field_labels = [Lexicon.policy1Label, Lexicon.policy2Label, Lexicon.policy3Label, Lexicon.policy4Label, Lexicon.policy5Label, Lexicon.policy6Label  ]
+    )
+
 class DemographicsEnd(Page):
     form_model = 'player'
     form_fields = ['ageYear', 'householdsize', 'residential_area', 'zip_code', 'states' ]
@@ -717,13 +703,9 @@ class transition (Page):
     
 
 
-# for easier visual adjustments, all scales with long anchors are moved to the beginning of the app. for the original order of scales, see copy below. 
-#page_sequence = [IBValues, CCConcern, WVValues, CCConcern, CCEmotionNew, PEfficacy, PITrust, CCKnowledge ,Demographics]
-# copy pf page_sequence with original order of scales 
-# page_sequence = [CCConcern, CCEmotion, GWNorms, CCKnowledge, CSTrust, PEfficacy, WVValues, IBValues, PITrust, OVTrust, CRTask, EffCompletion, Demographics]
-#page_sequence = [transition, CCConcern, IBValues, CCEmotion, Demographics, goodbye]
-page_sequence = [
-                  transition, CCEmotion,
-                 WVValues, CCKnowledge, Belief, Belief2, BehaviorsFood, BehaviorsTransport, BehaviorsFlying,
-                 CCEmotion, PITrust, IBValues , DemographicsEnd,
+page_sequence = [ transition, Belief, Belief2, CCKnowledge, CCEmotion,
+                 BehaviorsFood, BehaviorsTransport, BehaviorsFlying, 
+                 PITrust, IBValues ,
+                 policyScales,
+                 DemographicsEnd
                  ]

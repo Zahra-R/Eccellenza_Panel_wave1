@@ -116,7 +116,6 @@
     }
 
     $(document).ready(function () {
-        //// danger remove next line
         setTimeout(function () { enablebtn() }, 100);
 
         var boxALabel, boxBLabel;
@@ -157,7 +156,7 @@
             $('#rate_statement').css("display", "revert")
             setTimeout(function () { $('#rate_statement').addClass('transform-slidervisible') }, 2000);
             $('#caption1').html("")
-            $('#caption2').html("Plase read the statement and answer the questions.")
+            $('#caption2').html("{{Lexicon.sampling_instruction}}")
 
             document.getElementById("bbtn").disabled = true;
             document.getElementById("abtn").disabled = true;

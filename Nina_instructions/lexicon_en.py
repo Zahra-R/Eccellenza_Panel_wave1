@@ -7,7 +7,7 @@ class Lexicon:
     #these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
     
     transitions_first_1 = 'Welcome to the study'
-    transitions_first_2= 'This study consists of four parts. You are about to begin the first part. Please try to complete this part in one go without any breaks. We appreciate your time for participating in this study. Click "next" when you are ready.'
+    transitions_first_2= 'Great, you fulfill all criteria to participate in this study. This study consists of four parts. Please make sure you have enough time to complete this study with attention and without distractions. </p> <p> You are about to begin with the first part. Please try to complete this part in one go without any breaks. We appreciate your time and interest in participating in this study. Click "Next" when you are ready.'
     transition_title = 'Welcome to the next part of the study'
     transitions_second_1 =  'You have completed'
     transitions_second_2 = 'out of four parts of this study. Part'
@@ -18,8 +18,8 @@ class Lexicon:
     # instructions
     instructions_title = "Instructions on the next task"
     instructions_pa = "In the following we will ask you to <b>judge the climate friendliness of different carbon footprints</b>.  <br> This means we ask you to give your best estimation of <b>the size of the personal carbon footprint of a series of people with different lifestyles.</b>  The presented persons will differ with respect to <b>their diets, commuting and travel behavior as well as their electricity supply and recycling behavior</b>. <br> "
-    instructions_pb = "A personal carbon footprint refers to the total amount of greenhouse gases (including CO2 and methane) that are emitted into the atmosphere as a result of an individual,s behavior. <br> The carbon footprint thus includes emissions from driving, flying, using electricity, cooling or heating your home, purchasing goods and other sources. <br> It is measured in CO2 equivalents, so that other greenhouse gases additional to CO2 (e.g., methane) are also included. <br> <br> In other words, <b>a personal carbon footprint reflects an individual,s total impact on the climate system</b>. "
-    instructions_pc = "Please note that the individual carbon footprints you will assess are <b>simplified</b>, based on only 6 behaviors, so they do not account for a person,s entire carbon footprint.  <br>     You will be asked to make this judgment on a <b>scale from 1 (low carbon footprint) to 10 (large carbon footprint).</b>   <br> This means you do not have to estimate any numbers. Based on the 6 behaviors, a small carbon footprint (for a person in the United States) would equal about 0.7 ton of CO2 per year and a large carbon footprint about 5.3 tons of CO2. <br> On the scale of 1 to 10, each increase of 1 (e.g., from 2 to 3 or from 7 to 8) corresponds to an increase of about 500 kg of carbon dioxide. <br>  "
+    instructions_pb = "A personal carbon footprint refers to the total amount of greenhouse gases (including CO<sub>2</sub>  and methane) that are emitted into the atmosphere as a result of an individual,s behavior. <br> The carbon footprint thus includes emissions from driving, flying, using electricity, cooling or heating your home, purchasing goods and other sources. <br> It is measured in CO<sub>2</sub>  equivalents, so that other greenhouse gases additional to CO<sub>2</sub>  (e.g., methane) are also included. <br> <br> In other words, <b>a personal carbon footprint reflects an individual,s total impact on the climate system</b>. "
+    instructions_pc = "Please note that the individual carbon footprints you will assess are <b>simplified</b>, based on only 6 behaviors, so they do not account for a person,s entire carbon footprint.  <br>     You will be asked to make this judgment on a <b>scale from 1 (low carbon footprint) to 10 (large carbon footprint).</b>   <br> This means you do not have to estimate any numbers. Based on the 6 behaviors, a small carbon footprint (for a person in the United States) would equal about 0.7 ton of CO<sub>2</sub>  per year and a large carbon footprint about 5.3 tons of CO<sub>2</sub> . <br> On the scale of 1 to 10, each increase of 1 (e.g., from 2 to 3 or from 7 to 8) corresponds to an increase of about 500 kg of CO<sub>2</sub> . <br>  "
     instructions_pd = "Next you will see how the task will look like.<br> Then we ask you to <b>estimate the carbon footprints of 16 persons with different lifestyles </b> ."
     
     # task_example
@@ -28,5 +28,27 @@ class Lexicon:
     example_pc = ' <i>That is, in the example above, the person follow a vegetarian diet, does not recycle, eats regional and imported food,subscribed to a mixed electricity supply, commutes every weekday to work by bus, and takes the train to go on vacation.</i>  <br> '
     example_pd = 'Next, you will estimate the carbon footprint of <b>16</b> persons with different lifestyles. <br> Please look at each individual carbon footprint carefully and take some time to provide your estimation. <br> The order in which the 6 behaviors are presented will change across the 16 examples you will see.'
     example_pic = '/static/global/images/example_en.png '
+
+    ## comprehension
+    comprehension_title = 'Since you have just read a lot of information, we would like to ensure that you have understood one key aspect: Please indicate how many kg CO<sub>2</sub> are associated with each increase of one unit on the scale:'
+    
+    comprehension_a= 'each increase of 1 on the scale corresponds to 200 kg CO<sub>2</sub>  '
+    comprehension_b= 'each increase of 1 on the scale corresponds to 500 kg CO<sub>2</sub>  '
+    comprehension_c = 'each increase of 1 on the scale corresponds to 900 kg CO<sub>2</sub>  '
+
+    ## attention check study is about what screenout
+    interlude_title = "Eine Zwischenfrage"
+    interlude_header = "In dieser Studie gibt es ein übergeordnetes Thema. Haben Sie aufgepasst und können sagen, worum es in dieser Studie geht? Bitte seien Sie sorgfältig und wählen die richtige Antwort aus."
+    aboutWhatLabel = "Worum geht es in dieser Studie?"
+
+    about_a = "Städtetourismus"
+    about_b = "Klimawandel"
+    about_c = "Waschmaschinen"
+    about_d = "Vorliebe für scharfes Essen"
+
+
+    ## screenouts 
+    screenout_title = "Participation not possible."
+    screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."
 
    

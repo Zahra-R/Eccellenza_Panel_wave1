@@ -24,7 +24,7 @@ class Lexicon:
     # instructions
     instructions_title = '关于下一步任务的指示'
     instructions_pa =  "接下来我们将要求您<b>判断不同碳足迹的气候友好性</b>。<br>这意味着我们要求您对<b>一系列具有不同生活方式的人的个人碳足迹的大小做出最佳估计。</b>所呈现的人在<b>他们的饮食、通勤和旅行行为以及电力供应和回收行为方面会有所不同</b>。<br>"
-    instructions_pb =   "个人碳足迹是指因个人行为而排放到大气中的温室气体（包括二氧化碳和甲烷）总量。<br>因此，碳足迹包括驾驶、飞行、使用电力、家庭制冷或供暖、购买商品和其他来源。<br>它以 CO2 当量衡量，因此除 CO2 之外的其他温室气体（例如甲烷）也包括在内。<br> <br>换句话说，<b>个人碳足迹反映了个人对气候系统的总体影响</b> 。"
+    instructions_pb =   "个人碳足迹是指因个人行为而排放到大气中的温室气体（包括二氧化碳和甲烷）总量。<br>因此，碳足迹包括驾驶、飞行、使用电力、家庭制冷或供暖、购买商品和其他来源。<br>它以 CO<sub>2</sub>  当量衡量，因此除 CO<sub>2</sub>  之外的其他温室气体（例如甲烷）也包括在内。<br> <br>换句话说，<b>个人碳足迹反映了个人对气候系统的总体影响</b> 。"
     instructions_pc =   "请注意，您将评估的个人碳足迹是<b>简化的</b>，仅基于 6种行为，因此它们不会考虑一个人的整个碳足迹。<br>您将被要求从1（低碳足迹）到10（大碳足迹）这个范围做出此判断。</b><br>这意味着您不必估计任何数字。根据6种行为，小碳足迹（对于中华人民共和国的一个人来说）每年大约相当于0.7吨二氧化碳，而较大的碳足迹大约相当于5.3吨二氧化碳。<br> 在 1 到 10 的范围内，每增加 1（如从 2 到 3 或从 7 到 8）就相当于增加约 500 千克二氧化碳 。 <br>"
     instructions_pd =  "接下来您将看到任务会是怎样。<br>然后我们要求您<b>估算 16 名不同生活方式的人的碳足迹</b>。"
     
@@ -37,3 +37,24 @@ class Lexicon:
     example_pc = '<i>也就是说，在上面的例子中，这个人遵循素食、不回收、吃当地和进口食品、订购混合电力供应、每个工作日乘公共汽车上班、乘火车去度假。</i> <br> '
     example_pd = '接下来，您将估算<b>16</b>位不同生活方式的人的碳足迹。<br>请仔细查看每个碳足迹，并花一些时间提供您的估计。 <br>在您将看到的16个示例中，6种行为的呈现顺序将发生变化。'
     example_pic = '/static/global/images/example_zh_hans.png '  # no need to change the link
+
+     ## comprehension
+    comprehension_title = 'Since you have just read a lot of information, we would like to ensure that you have understood one key aspect: Please indicate how many kg CO<sub>2</sub> are associated with each increase of one unit on the scale:'
+    
+    comprehension_a= '刻度每增加 1 相当于 200 千克二氧化碳'
+    comprehension_b= '刻度上每增加 1 相当于 500 千克二氧化碳'
+    comprehension_c='刻度上每增加 1 相当于 900 千克二氧化碳 '
+
+     ## attention check study is about what screenout
+    interlude_title = "Brief Interruption"
+    interlude_header = "This study has one superordinate topic. Have you paid attention and do you know what this study is about? Please choose the correct answer carefully."
+    aboutWhatLabel = "What is this study about?"
+
+    about_a = "City Tourism"
+    about_b = "Climate Change"
+    about_c = "Washing Machines"
+    about_d = "Preference for spicy food"
+    
+    ## screenouts 
+    screenout_title = "Participation not possible."
+    screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."

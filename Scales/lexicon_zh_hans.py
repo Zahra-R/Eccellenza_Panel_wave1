@@ -17,11 +17,6 @@ class Lexicon:
     
   
     #Scale anchors 
-    strongly_liberal = "非常开明"
-    somewhat_liberal = "有点开明"
-    moderate = "不偏不倚"
-    somewhat_conservative = "有点保守"
-    strongly_conservative = "非常保守"
 
     opposed_to_values = "违背我的价值观"
     not_important = "不重要"
@@ -80,18 +75,7 @@ class Lexicon:
     emoConcern2Label = "忧虑"
     emoConcern3Label = "沮丧"
 
-    
-    # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism  
-    ## TBD kevin tam
-    wvv_title = "你如何看待这个世界？"
-    wvv_header = "您对以下说法的同意程度如何？"
-    hie1Label = "如果财富分配更加平等，我们的社会将会变得更好。"
-    hie2Label = "我们社会的很多问题都源于传统家庭的衰落，即男人工作、女人呆在家里。"
-    hie3Label ="对少数族裔的歧视在我们国家仍然是一个非常严重的问题。"
-    ind1Label = "政府对我们的日常生活干预太多了。"
-    ind2Label = "我觉得商业上成功的人有权享受他们认为合适的财富。"
-    ind3Label = "太多人期望社会为他们做一些他们应该为自己做的事情。"
-
+   
     
    # Importance of biospheric values van der Linden, 2015   
     ibv_title = "环境问题的指导原则"
@@ -100,12 +84,6 @@ class Lexicon:
     ibv2Label = "保护环境（保全自然"
     ibv3Label = "防止污染（保护自然资源"
     ibv4Label = "与自然合一（融入自然"
-
-    # Political Orientation Pennycook et al 2020
-    po_title = "Political Orientation"
-    po_header = "What's your general stance in political issues?"
-    po1Label = "On social issues I am..."
-    po2Label = "On economic issues I am..."
 
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
     pit_title = "对气候变化的信任"
@@ -235,6 +213,23 @@ class Lexicon:
     #for chinese version example:  from Guangzhou to Beijing and back
     flying_long_label = '过去两年您平均乘坐了多少次<b>长途航班（>6 小时）</b>？<i> i：一个往返航班算作两个航班。因此，如果您从北京飞往雅克拉达（印度尼西亚）并返回，则算作 2 趟航班。</i>'
     # for  chinese version example: from Beijing to Jakarta (Indonesia) and back
+
+    ### policies scales translations here
+    policies_title = ' Some additional questions on Policies '
+
+    policy1Label =	'Increase or introduce of taxes on fuel for vehicles (i.e. diesel and gasoline)'
+    policy2Label =	'Increase or introduce taxes on air travel.'
+    policy3Label =	'Increase or introduce taxes on fossil fuels as energy source (i.e. gas, oil, and coal)'
+    policy4Label =	'Increase or introduce taxes on red meat (e.g., beef, lamb, veal).'
+    policy5Label =	'Increase or introduce taxes on non-recyclables'
+    policy6Label =	'Increase or introduce taxes on food products imported via plane'
+	
+    strongly_opoose =	'strongly oppse'
+    strongly_support =	'strongly support'
+	
+    intro_policies1 ='In the following, we will ask for your views on different public policies. Please answer them as truthfully as possible. <br> '
+    intro_policies2 ='Many countries have introduced new policies to reduce the risk of climate change. This includes policies that require or create incentives for reductions in greenhouse gas emissions across domains and actors. <br>'
+
 
  
     

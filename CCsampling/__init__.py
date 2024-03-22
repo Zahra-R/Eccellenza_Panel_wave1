@@ -17,7 +17,7 @@ Sampling Paradigma
 class C(BaseConstants):
     NAME_IN_URL = 'SAMPLING'
     PLAYERS_PER_GROUP = None
-    NUM_ROUNDS = 10
+    NUM_ROUNDS = 15
     ### German Tweets
     misinfo_path_de = "CCsampling/ClimateMisinfo_de.json"
     with open(misinfo_path_de, 'r') as j:
@@ -58,6 +58,8 @@ class Player(BasePlayer):
     boxrecommendationMisinfo = models.IntegerField(choices=[1,2,3,4,5,6,7,8,9],label='Would you follow Box B if it were its own social media channel?',widget = widgets.RadioSelect )
     boxpoliticsMisinfo = models.IntegerField(choices=[1,2,3,4,5,6,7,8,9], widget = widgets.RadioSelect)
     boxpoliticsInfo = models.IntegerField(choices=[1,2,3,4,5,6,7,8,9], widget = widgets.RadioSelect )
+    boxImpactInfo = models.IntegerField(choices=[1,2,3,4,5,6,7,8,9], widget = widgets.RadioSelect)
+    boxImpactMisinfo = models.IntegerField(choices=[1,2,3,4,5,6,7,8,9], widget = widgets.RadioSelect )
     InfohasDebrief = models.BooleanField()
    
     reverseBoxes = models.BooleanField()
@@ -109,7 +111,27 @@ def allocateBoxNames(player: Player):
         player.boxlikingMisinfo = likingA
         player.boxrecommendationInfo = recomB
         player.boxrecommendationMisinfo = recomA
-    print('in make choice again')
+
+def allocateBoxNames_full(player: Player):
+    reversed = player.participant.reverseBoxes
+    if reversed == True:
+        likingA = player.boxlikingInfo
+        likingB = player.boxlikingMisinfo
+        recomA = player.boxrecommendationInfo
+        recomB = player.boxrecommendationMisinfo
+        politicsA = player.boxpoliticsInfo
+        politicsB = player.boxpoliticsMisinfo
+        impactA = player.boxImpactInfo
+        impactB = player.boxImpactMisinfo
+
+        player.boxlikingInfo = likingB
+        player.boxlikingMisinfo = likingA
+        player.boxrecommendationInfo = recomB
+        player.boxrecommendationMisinfo = recomA
+        player.boxImpactInfo = impactB
+        player.boxImpactMisinfo = impactA
+        player.boxpoliticsMisinfo = politicsA
+        player.boxpoliticsInfo = politicsB
 
 def saveParticipantVarsToPlayer(player: Player): 
     player.reverseBoxes = player.participant.reverseBoxes
@@ -172,7 +194,7 @@ class sampling_a(Page):
         } 
     @staticmethod
     def is_displayed(player: Player):
-        return (player.round_number == 3)
+        return (player.round_number == 7)
    
 
 
@@ -181,7 +203,7 @@ class boxrating(Page):
     @staticmethod
     def get_form_fields(player):
         if player.round_number == C.NUM_ROUNDS:
-            return ['boxlikingInfo', 'boxrecommendationInfo', 'boxlikingMisinfo', 'boxrecommendationMisinfo', 'boxpoliticsInfo', 'boxpoliticsMisinfo' ]
+            return ['boxlikingInfo', 'boxrecommendationInfo', 'boxlikingMisinfo', 'boxrecommendationMisinfo', 'boxpoliticsInfo', 'boxpoliticsMisinfo', 'boxImpactInfo', 'boxImpactMisinfo' ]
         else:
             return ['boxlikingInfo', 'boxrecommendationInfo', 'boxlikingMisinfo', 'boxrecommendationMisinfo' ]
     @staticmethod
@@ -195,10 +217,11 @@ class boxrating(Page):
         return (player.round_number % 5 == 0)
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
-        print('in before next page function', player.boxlikingInfo, player.boxlikingMisinfo, player.boxrecommendationInfo, player.boxrecommendationMisinfo )
-        allocateBoxNames(player)
         if (player.round_number % C.NUM_ROUNDS == 0):
+            allocateBoxNames_full(player)
             saveParticipantVarsToPlayer(player)
+        else:
+            allocateBoxNames(player)
 
 
 

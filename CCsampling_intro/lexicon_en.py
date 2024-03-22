@@ -19,7 +19,7 @@ class Lexicon:
     #these are the exact same 4 things as in the lexicon 'Nina instructions' => we will copy the translations here
     
     transitions_first_1 = 'Welcome to the study'
-    transitions_first_2= 'This study consists of four parts. You are about to begin the first part. Please try to complete this part in one go without any breaks. We appreciate your time for participating in this study. Click "next" when you are ready.'
+    transitions_first_2= 'Great, you fulfill all criteria to participate in this study. This study consists of four parts. Please make sure you have enough time to complete this study with attention and without distractions. </p> <p> You are about to begin with the first part. Please try to complete this part in one go without any breaks. We appreciate your time and interest in participating in this study. Click "Next" when you are ready.'
     transition_title = 'Welcome to the next part of the study'
     transitions_second_1 =  'You have completed'
     transitions_second_2 = 'out of four parts of this study. Part'
@@ -27,8 +27,7 @@ class Lexicon:
     transitions_second_4 = 'Please try to complete the next part in one go without any breaks. We appreciate your time for participating in this study. When you are ready to proceed, please click "Next".'
 
     ## Climate Change Belief
-    beliefCC_intro = "Klimawandel bezeichnet die Idee, dass die durchschnittliche Temperatur der Welt seit den letzten 150 Jahren am steigen ist, zukünftig noch mehr steigen wird, und dass sich infolgedessen das Weltklima verändern wird. Was denken Sie? Glauben Sie, dass es den Klimawandel gibt?"
-
+   
     ### belief in (human) causes taken from  Valkengoed
     completely_agree = "stimme äußerst zu"
     completely_disagree = "stimme gar nicht zu"
@@ -40,5 +39,21 @@ class Lexicon:
     beliefConseqences1Label = "Climate change currently is the greatest threat to humankind."
     beliefConseqences2Label = "Climate change will bring about serious negative consequences."
     beliefConseqences3Label = "The consequences of climate change will <b> not </b> be very serious." # reversed (originally not)
+
+
+    ## attention check study is about what screenout
+    interlude_title = "Brief Interruption"
+    interlude_header = "This study has one superordinate topic. Have you paid attention and do you know what this study is about? Please choose the correct answer carefully."
+    aboutWhatLabel = "What is this study about?"
+    about_a = "City Tourism"
+    about_b = "Climate Change"
+    about_c = "Washing Machines"
+    about_d = "Preference for spicy food"
+
+    
+    ## screenouts 
+    screenout_title = "Participation not possible."
+    screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."
+
 
     

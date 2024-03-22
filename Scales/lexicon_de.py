@@ -21,11 +21,7 @@ class Lexicon:
     not_at_all_important = "überhaupt nicht wichtig"
     extremely_important = "extrem <br> wichtig"
     
-    strongly_liberal = "links/<br> sehr liberal"
-    somewhat_liberal = "eher liberal"
-    moderate = "moderat"
-    somewhat_conservative = "eher konservativ"
-    strongly_conservative = "rechts/<br> sehr konservativ"
+    
     no_trust_at_all = "absolutes Misstrauen"
     full_trust = "absolutes Vertrauen"
     completely_false = "komplett falsch"
@@ -83,15 +79,7 @@ class Lexicon:
     emoConcern3Label = "beunruhigt"
 
 
-    # Worldviews and values - Hierarchy-Egalitarianism & Individualism-Communitarianism
-    wvv_title = "Wie sehen Sie die Welt?"
-    wvv_header = "Wie sehr stimmen Sie den folgenden Aussagen zu?"
-    hie1Label = "Unsere Gesellschaft wäre besser dran, wenn der Reichtum gleichmäßiger verteilt wäre."
-    hie2Label = "Viele Probleme in unserer Gesellschaft resultieren aus dem Verschwinden des traditionellen Familienbildes, in der der Mann arbeitet und die Frau zu Hause bleibt."
-    hie3Label = "Diskriminierung von Minderheiten ist in unserem Land immer noch ein sehr ernstes Problem."
-    ind1Label = "Die Regierung mischt sich viel zu sehr in unseren Alltag ein."
-    ind2Label = "Ich finde, dass erfolgreiche Geschäftsleute das Recht haben, ihren Reichtum so auszukosten, wie sie es für richtig halten."
-    ind3Label = "Zu viele Menschen erwarten, dass die Gesellschaft Dinge für sie tut, die sie selbst tun sollten."
+   
 
     # Importance of biospheric values van der Linden, 2015
     ibv_title = "Wichtige Prinzipien in Umweltfragen"
@@ -101,8 +89,7 @@ class Lexicon:
     ibv3Label = "Verhindern von Umweltverschmutzung (natürliche Ressourcen schützen)"
     ibv4Label = "Einheit mit der Natur (sich in die Natur einfügen)"
 
-    # Political Orientation Pennycook et al 2020
-    polOrientationLabel = "Wo sehen Sie sich im politischen Spektrum?"
+
 
     # Trust  in institutions in terms of cc Based on (Pan et al., 2023)
     pit_title = "Vertrauen im Bezug auf den Klimawandel"
@@ -246,6 +233,23 @@ class Lexicon:
     flying_short_label = 'Wie viele <b>Kurzstreckenflüge (<3 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge. Wenn Sie also von Frankfurt nach London und zurück geflogen sind, zählt das als 2 Flüge. </i> '
     flying_mid_label ='Wie viele <b>Mittelstreckenflüge (3-6 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge. Wenn Sie also von Frankfurt nach Antalya und zurück geflogen sind, zählt das als 2 Flüge. </i> '
     flying_long_label = 'Wie viele <b>Langstreckenflüge  (>6 Stunden)</b> haben Sie in den letzten zwei Jahren im Durchschnitt genommen? <i> i: Ein Hin- und Rückflug zählt als zwei Flüge.  Wenn Sie also von München nach New York und zurück geflogen sind, zählt das als 2 Flüge. </i> '
+
+    ### policies scales nohc auf deutsch Nina!
+    policies_title = ' Some additional questions on Policies '
+
+    policy1Label =	'Increase or introduce of taxes on fuel for vehicles (i.e. diesel and gasoline)'
+    policy2Label =	'Increase or introduce taxes on air travel.'
+    policy3Label =	'Increase or introduce taxes on fossil fuels as energy source (i.e. gas, oil, and coal)'
+    policy4Label =	'Increase or introduce taxes on red meat (e.g., beef, lamb, veal).'
+    policy5Label =	'Increase or introduce taxes on non-recyclables'
+    policy6Label =	'Increase or introduce taxes on food products imported via plane'
+	
+    strongly_opoose =	'strongly oppse'
+    strongly_support =	'strongly support'
+	
+    intro_policies1 ='In the following, we will ask for your views on different public policies. Please answer them as truthfully as possible. <br> '
+    intro_policies2 ='Many countries have introduced new policies to reduce the risk of climate change. This includes policies that require or create incentives for reductions in greenhouse gas emissions across domains and actors. <br>'
+
 
 
 

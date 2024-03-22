@@ -12,6 +12,21 @@
 
 
 <style>
+
+/* Adjust the max-width as needed */
+    @media only screen and (min-width: 701px) {
+        .radiotable {
+            width: 60%;
+            padding: 20px 20px; 
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        .radiotable {
+            width: 100%;
+            padding: 30px 40px; 
+        }
+    }
     /* Adjust spacing between sentences */
     .sentence {
         margin: 0;
@@ -37,14 +52,14 @@
         line-height: 0.2;
         size: 10
     }
-    td {
-        padding:10px;
-    }
+   
 
     table, th, tr{
         border: 1px solid;
         border-left: none;
         border-right: none;
+        padding: 30px 30px 20px 20px; 
+
     }
 
 
@@ -56,25 +71,19 @@
         width: 100px;
     }
 
-   
-    .radio-column{
-        width:10%;
-        min-width:43px;
-        max-width:53px;
-        text-align: left;
-        border-bottom: none;
-        border-top: none;
-        border: none;
-    }
+
 
     .radiotable, tr, th{
-        width:10%;
+
         border: none;
         text-align: left;
         border: none;
         border-top: none;
-        border: none;
     }
+
+    
+
+
    
 
     /* .image {
@@ -95,18 +104,31 @@
 <br>
 <br>
 <meta charset="UTF-8">
-<table class="radiotable" >
-    <tr>  <th    class="radio-column">  {{ Lexicon.small }}</th>  <th class="radio-column" > 2  </th> <th class="radio-column"> 3 </th> <th class="radio-column"  > 4  </th> <th class="radio-column"> 5 </th>  <th class="radio-column"> 6 </th>  <th class="radio-column"  > 7  </th> <th class="radio-column"> 8 </th>  <th class="radio-column"> 9 </th> <th    class="radio-column"> {{ Lexicon.large }}</th>  </tr>
-    <meta charset="UTF-8">
-    {{ for field in form }}
-        <tr>
-            {{ for choice in field }}
-                <th>{{ choice }}</th>
-            {{ endfor }}
-        </tr>
-    {{ endfor }}
-</table>
 
+<div > 
+    <table class="radiotable"  style=" table-layout: fixed;  max-width:130%;    overflow-x: auto;" >
+        <tr>  <th  class="radiotable-column"  >  {{ Lexicon.small }}</th>  
+            <th class="radiotable-column" > 2  </th> 
+            <th class="radiotable-column" >  3 </th> 
+            <th class="radiotable-column" > 4  </th> 
+            <th class="radiotable-column" > 5 </th>  
+            <th class="radiotable-column" > 6 </th>  
+            <th class="radiotable-column"  > 7  </th> 
+            <th class="radiotable-column" > 8 </th>  
+            <th class="radiotable-column" > 9 </th> 
+            <th  class="radiotable-column"  > {{ Lexicon.large }}</th>  
+        </tr>
+    <meta charset="UTF-8">
+        {{ for field in form }}
+            <tr  >
+                {{ for choice in field }}
+                <th style=" background-color: #c0e3e0;" > {{ choice }} </th> 
+               
+                {{ endfor }}
+            </tr>
+        {{ endfor }}
+    </table>
+</div>
 
 <br>
 <div class=".info">
@@ -116,7 +138,7 @@
 </div>
 
 <div >
-    <button id="nextst" style=" margin-top: 4vh;" disabled class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
+    <button id="nextst" style="float: right; margin-top: 2vh;" disabled class="otree-btn-next btn btn-primary">{{Lexicon.next}}</button>
  
 </div>
 {% endblock %}

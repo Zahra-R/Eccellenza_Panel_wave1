@@ -17,7 +17,7 @@ class Lexicon:
     out_of = "out of"
     statement_agreement = " How much do you agree with this statement?"
     ccconcern_question = "How concerned are you about climate change?"
-    sampling_instruction = "Plase read the statement and answer the questions."
+    sampling_instruction = "Please read the statement and answer the questions."
     box_a_anti_climate_action = "BOX A: Anti&nbsp;Climate Action"
     box_a_pro_climate_action = "BOX A: Pro&nbsp;Climate Action"
     box_b_anti_climate_action = "BOX B: Anti&nbsp;Climate Action"
@@ -31,8 +31,8 @@ class Lexicon:
     box_rating_would_follow_B = 'Would you follow Box <span style="font-size: larger;"> B</span> if it were its own social media channel?'
     box_rating_polOrientation_A = 'What do you think is the political orientation of Box <span style="font-size: larger;"> A</span>? '
     box_rating_polOrientation_B = 'What do you think is the political orientation of Box <span style="font-size: larger;"> B</span>? '
-    box_rating_impact_A = 'How much did the statements from Box <span style="font-size: larger;"> A</span> change your beliefs? '
-    box_rating_impact_B = 'How much did the statements from Box <span style="font-size: larger;"> B</span> change your beliefs? '
+    box_rating_impact_A = 'How much did the statements from Box <span style="font-size: larger;"> A</span> change your opinion? '
+    box_rating_impact_B = 'How much did the statements from Box <span style="font-size: larger;"> B</span> change your opinion? '
 
     conclude_title = "Please take some time to read through this page."
 
