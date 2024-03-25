@@ -171,6 +171,7 @@ class PriorKnowledge(Page):
 class comp_Question (Page):
     form_model = 'player'
     form_fields = ['compQuestion']
+    form_fields = ['compQuestion']
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -222,12 +223,12 @@ class Screenout(Page):
 
 # Page sequence
 page_sequence = [ 
-    comp_Question,
     transition,
     affectiveImagery,
     ratingAffectiveImagery,
     instructions_intro,
-    task_example, 
     interlude, 
-    Screenout
+    Screenout,
+    task_example,
+    comp_Question
 ]
