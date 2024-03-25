@@ -13,7 +13,7 @@ class Lexicon:
     next = 'Weiter'
 
     #Consent Text
-    consent_p1 ='Vielen Dank für Ihr Interesse, an dieser Studie teilzunehmen. <br> Diese Studie wird unter der Leitung von Prof. Ulf J.J. Hahnel, Fakultät für Psychologie, Universität Basel, Schweiz, und Jessica Helm, Fakultät für Psychologie, Universität Basel, durchgeführt.'
+    consent_p1 ='Vielen Dank für Ihr Interesse, an dieser Studie teilzunehmen. <br> Diese Studie wird unter der Leitung von MSc Jessica Helm, MSc Nina Frings, Msc Zahra Rahmani, und  Prof. Ulf J.J. Hahnel, Fakultät für Psychologie, Universität Basel, Schweiz, durchgeführt.'
     consent_p2 = 'Wenn Sie an dieser Studie teilnehmen möchten, werden Sie gebeten, Folgendes zu tun:'
 
     consent_bullet1 = 'Einen Satz von Online-Fragebögen auszufüllen. Möglicherweise werden Sie gebeten, zu bewerten, wie gut bestimmte Aussagen oder Persönlichkeitsmerkmale auf Sie zutreffen.'
