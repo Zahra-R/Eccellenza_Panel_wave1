@@ -34,17 +34,8 @@ def creating_session(subsession:Subsession):
         subsession.session.myLangCode = "_en"
     subsession.session.JessiIntroLexi = Lexicon 
 
-def compQuestion_answers(player):
-    Lexicon = player.session.JessiIntroLexi 
-    return [
-    ['false_fixed', Lexicon.comp_answerA],
-    ['false_voluntary',  Lexicon.comp_answerB],
-    ['correct', Lexicon.comp_answerCorrect]
-] 
-
 class Group(BaseGroup):
     pass
-
 
 def aboutWhat_choices(player): 
     Lexicon = player.session.JessiIntroLexi 
@@ -55,6 +46,13 @@ def aboutWhat_choices(player):
     ['spicy_false',  Lexicon.about_d]
 ]
 
+def compQuestion_choices(player):
+    Lexicon = player.session.JessiIntroLexi 
+    return [
+    ['false_fixed', Lexicon.comp_answerA],
+    ['false_voluntary',  Lexicon.comp_answerB],
+    ['correct', Lexicon.comp_answerCorrect]
+] 
 
 class Player(BasePlayer):
     # FUNCTIONS
@@ -85,7 +83,7 @@ class Player(BasePlayer):
     aboutWhat = models.StringField()
     screenoutAboutWhat = models.BooleanField(initial= False)
 
-    comprehension_check = models.StringField(widget=widgets.RadioSelect)
+    comp_Question = models.StringField(widget=widgets.RadioSelect)
 
 
 # PAGES
@@ -155,7 +153,8 @@ class ratingAffectiveImagery (Page):
 
 class comp_Question (Page):
     form_model = 'player'
-    form_fields = ['comprehension_check']
+    form_fields = ['comp_Question']
+
     @staticmethod
     def vars_for_template(player: Player):
         return{
@@ -165,9 +164,9 @@ class comp_Question (Page):
     def js_vars(player):
         Lexicon = player.session.JessiIntroLexi
         return dict(
-        form_fields = ['comprehension_check'],
+        form_fields = ['comp_Question'],
         form_field_labels = [Lexicon.comp_Question]
-        )
+    )
 
 
 class slider(Page):
