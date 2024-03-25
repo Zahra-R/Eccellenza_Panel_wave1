@@ -125,7 +125,7 @@ class task_page00(Page):
 class inter_trial(Page):
     form_model = 'player'
     form_fields = ['filler_ITI']
-    timeout_seconds = 0.4
+    timeout_seconds = 0.2
 
     def vars_for_template(player: Player):
         return dict(Lexicon=player.session.JessiTaskLexicon)

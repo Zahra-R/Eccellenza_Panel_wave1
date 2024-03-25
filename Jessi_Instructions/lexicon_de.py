@@ -1,7 +1,7 @@
 class Lexicon:
     #Affective Imagery
     Title_affectiveImagery = "Assoziationen gegenüber dem Begriff CO<sub>2</sub>-Steuer"
-    Instr_affectiveImagery = "Bevor wir mit unserer Aufgabe beginnen, möchten wir Sie bitten, mindestens ein Wort oder einen Gedanken aufzuschreiben, der Ihnen in den Sinn kommt, wenn Sie an den Begriff 'CO<sub>2</sub>-Steuer' denken."
+    Instr_affectiveImagery = "Bevor wir mit unserer Aufgabe beginnen, möchten wir Sie bitten, drei Wörter oder Gedanken aufzuschreiben, der Ihnen in den Sinn kommen, wenn Sie an den Begriff 'CO<sub>2</sub>-Steuer' denken."
     Association1 = "1. Assoziation"
     Association2 = "2. Assoziation"
     Association3 = "3. Assoziation"
@@ -62,4 +62,9 @@ class Lexicon:
     screenout_title = "Teilnahme nicht möglich."
     screenout_sentence = "Leider deuteten Ihre Eingaben darauf hin, dass Sie nicht aufmerksam gelesen haben. Daher können Sie nicht an der Studie teilnehmen."
 
-    
+    # comprehension check 
+    comp_Title = "Implementation of a carbon tax?"
+    comp_Question = "In what way would the CO2 tax be implemented?"
+    comp_answerA = "It would be a fixed price that every citizen has to pay every year "
+    comp_answerB = "Each citizen pays a voluntary amount each month to compensate for their emissions"
+    comp_answerCorrect = "A certain amount of tax would be levied on each product/service based on the emissions emitted by the product/service "

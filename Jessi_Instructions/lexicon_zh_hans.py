@@ -32,7 +32,7 @@ class Lexicon:
 
     # Instructions on Task 
     Title_Instructions = "关于你的任务的说明"
-    Text_Instructions = "<p>二氧化碳 (CO<sub>2</sub>) 等温室气体是全球气候变化的主要来源。<br> </p> <p> 解决这一问题的一种方法是使用‘碳税’。 <br> 碳税是对各种产品的生产和消费以及各种活动所产生的二氧化碳 (CO<sub>2</sub>) 排放征收的费用。这包括但不限于化石燃料、 肉类和奶制品等农产品以及工业流程。它的目标是让人们和企业减少排放。<br>碳税通常是因为某种活动或产品而排放的每吨二氧化碳的固定价格 。<br></p><p>除了减少排放之外，碳税征收的资金还可用于几种目的，例如，应对社会不公正或进一步减少排放。<br><p> 政府设计碳税政策的可能性有多种。因此，想象一下，中国的中央政府宣布开征碳税。<br> 这种碳税可能有不同的要素。这些要素及其示例将在下一页向您解释。<br> <br> 然后，我们请您在 12 个假设的公众投票中投票，表示您是否支持引入碳税。<br></p>"
+    Text_Instructions = "<p> 二氧化碳 (CO<sub>2</sub>) 等温室气体是全球气候变化的主要来源。<br> </p> <p> 解决这一问题的一种方法是使用‘碳税’。 <br> 碳税是对各种产品的生产和消费以及各种活动所产生的二氧化碳 (CO<sub>2</sub>) 排放征收的费用。这包括但不限于化石燃料、 肉类和奶制品等农产品以及工业流程。它的目标是让人们和企业减少排放。<br>碳税通常是因为某种活动或产品而排放的每吨二氧化碳的固定价格 。<br></p><p>除了减少排放之外，碳税征收的资金还可用于几种目的，例如，应对社会不公正或进一步减少排放。<br><p> 政府设计碳税政策的可能性有多种。因此，想象一下，中国的中央政府宣布开征碳税。<br> 这种碳税可能有不同的要素。这些要素及其示例将在下一页向您解释。<br> <br> 然后，我们请您在 12 个假设的公众投票中投票，表示您是否支持引入碳税。<br></p>"
 
     # Task Example 
     Title_taskExample = "任务说明 - 任务示例"
@@ -68,3 +68,10 @@ class Lexicon:
     ## screenouts 
     screenout_title = "Participation not possible."
     screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."
+
+    # comprehension check 
+    comp_Title = "Implementation of a carbon tax?"
+    comp_Question = "In what way would the CO2 tax be implemented?"
+    comp_answerA = "It would be a fixed price that every citizen has to pay every year "
+    comp_answerB = "Each citizen pays a voluntary amount each month to compensate for their emissions"
+    comp_answerCorrect = "A certain amount of tax would be levied on each product/service based on the emissions emitted by the product/service "

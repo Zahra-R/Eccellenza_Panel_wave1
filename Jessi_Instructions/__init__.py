@@ -34,6 +34,14 @@ def creating_session(subsession:Subsession):
         subsession.session.myLangCode = "_en"
     subsession.session.JessiIntroLexi = Lexicon 
 
+def compQuestion_answers(player):
+    Lexicon = player.session.JessiIntroLexi 
+    return [
+    ['false_fixed', Lexicon.comp_answerA],
+    ['false_voluntary',  Lexicon.comp_answerB],
+    ['correct', Lexicon.comp_answerCorrect]
+] 
+
 class Group(BaseGroup):
     pass
 
@@ -51,27 +59,24 @@ def aboutWhat_choices(player):
 class Player(BasePlayer):
     # FUNCTIONS
     def make_field_association(label):
-        return models.StringField( blank=True )
+        return models.StringField()
     
     #Affective Imagery text fields
-    Association1 = models.StringField(  )
-    Association2 = models.StringField( blank=True )
-    Association3 = models.StringField(blank=True )
-    Association4 = models.StringField( blank=True )
+    Association1 = models.StringField()
+    Association2 = models.StringField()
+    Association3 = models.StringField()
 
     def make_field_associationRating(label):
         return models.IntegerField(
         choices = [['1', 'Very negative (1)'],['2', '2'] , ['3', '3'], ['4', '4'] ,
                  ['5', '5'], ['6', '6'] , ['7', 'Very positive (7)']],
         label=label,
-        widget=widgets.RadioSelectHorizontal, 
-        blank = True
+        widget=widgets.RadioSelectHorizontal
     )
     #Affective Imagery Rating fields
     AssociationRating1 = make_field_associationRating('Here should be the association')
     AssociationRating2 = make_field_associationRating('Here should be the association')
     AssociationRating3 = make_field_associationRating('Here should be the association')
-    AssociationRating4 = make_field_associationRating('Here should be the association')
     
     range_party = models.IntegerField( min=-100, max=100)
     block_order = models.IntegerField()
@@ -79,6 +84,8 @@ class Player(BasePlayer):
 
     aboutWhat = models.StringField(widget=widgets.RadioSelect)
     screenoutAboutWhat = models.BooleanField(initial= False)
+
+    comprehension_check = models.StringField(widget=widgets.RadioSelect)
 
 
 # PAGES
@@ -115,7 +122,7 @@ class task_example(Page):
 
 class affectiveImagery(Page):
     form_model = 'player'
-    form_fields = ['Association1', 'Association2', 'Association3', 'Association4']
+    form_fields = ['Association1', 'Association2', 'Association3']
     @staticmethod
     def vars_for_template(player: Player):
         return{
@@ -125,13 +132,13 @@ class affectiveImagery(Page):
     def js_vars(player):
         Lexicon = player.session.JessiIntroLexi
         return dict(
-        form_fields = ['Association1', 'Association2', 'Association3', 'Association4'] ,
-        form_field_labels = [Lexicon.Association1, Lexicon.Association2, Lexicon.Association3, Lexicon.Association4 ]
+        form_fields = ['Association1', 'Association2', 'Association3'] ,
+        form_field_labels = [Lexicon.Association1, Lexicon.Association2, Lexicon.Association3 ]
     )
 
 class ratingAffectiveImagery (Page):
     form_model = 'player'
-    form_fields = ['AssociationRating1', 'AssociationRating2', 'AssociationRating3', 'AssociationRating4']
+    form_fields = ['AssociationRating1', 'AssociationRating2', 'AssociationRating3']
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -142,9 +149,25 @@ class ratingAffectiveImagery (Page):
     def js_vars(player):
         Lexicon = player.session.JessiIntroLexi
         return dict(
-        form_fields = ['AssociationRating1', 'AssociationRating2', 'AssociationRating3', 'AssociationRating4'] ,
+        form_fields = ['AssociationRating1', 'AssociationRating2', 'AssociationRating3'] ,
         form_field_labels = [Lexicon.Instructions_rating ]
     )
+
+class comp_Question (Page):
+    form_model = 'player'
+    form_fields = ['comprehension_check']
+    @staticmethod
+    def vars_for_template(player: Player):
+        return{
+            'Lexicon': player.session.JessiIntroLexi
+        } 
+    @staticmethod
+    def js_vars(player):
+        Lexicon = player.session.JessiIntroLexi
+        return dict(
+        form_fields = ['comprehension_check'],
+        form_field_labels = [Lexicon.comp_Question]
+        )
 
 
 class slider(Page):
@@ -183,6 +206,7 @@ class Screenout(Page):
 
 # Page sequence
 page_sequence = [ 
+    comp_Question,
     transition,
     affectiveImagery,
     ratingAffectiveImagery,

@@ -1,6 +1,6 @@
 {% block styles %}
-    <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
-    <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
+<link href="{{ static 'global/css/SamplingPilotgeneral.css'}}" rel="stylesheet">
+<link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
 {% endblock %}
 
 {{ block title }} {{Lexicon.Title_rating}} {{ endblock }}
@@ -82,22 +82,7 @@
         {% endfor %}
     </tr>
     {% endif %}
-
-    {% if player.Association4 %}
-    <tr>
-        <th style="font-weight:normal;">{{ player.Association4 }}</th>
-        {% for choice in form.AssociationRating4 %}
-            <td>{{ choice }}</td>
-        {% endfor %}
-    </tr>
-    {% endif %}
-
 </table>
-
-
-
-
-
 
 
 
@@ -113,4 +98,3 @@
 {{ formfield_errors 'AssociationRating1' }}
 {{ formfield_errors 'AssociationRating2' }}
 {{ formfield_errors 'AssociationRating3' }}
-{{ formfield_errors 'AssociationRating4' }}

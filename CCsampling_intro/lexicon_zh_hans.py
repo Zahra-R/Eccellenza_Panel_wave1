@@ -7,7 +7,7 @@ class Lexicon:
     studyInformation = "有关本研究的信息"
     instructionCondition_telling_box_label_true = "在接下来的几页中，你会发现两个文本框。每个文本框都包含了一些<b>关于气候变化的陈述。</b><b>一个文本框包含了反对立即采取气候行动的陈述。另一个文本框则包含了支持紧急气候行动的陈述。</b>"
     instructionCondition_telling_box_label_false = "在接下来的几页中，你会发现两个文本框。每个文本框都包含了一些来自不同来源的<b>关于气候变化的陈述</b>。"
-    instructionUnconditional1 = "When you click on one of the boxes, one statement will be randomly drawn from that box. Your task will be to read the statement and rate what you think about the statement. You will repeat this for <i>"
+    instructionUnconditional1 = "当你单击其中一个文本框时，将从该文本框中随机抽取一条陈述。你的任务是阅读该陈述并就你对该陈述的看法进行评分。你将重复此操作<i>"
     instructionUnconditional2 = "轮次</i>。在每一轮中，你可以决定你想从哪一个文本框中阅读下一条陈述。</p><p>我们知道气候变化是一个复杂的话题，有很多不同的信息。我们对你如何处理信息环境非常感兴趣，也很好奇你是如何搜索信息的。请你花点时间仔细阅读每一条陈述并给出你诚恳的意见。"
 
     #beforeTask

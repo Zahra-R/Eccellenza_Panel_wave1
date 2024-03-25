@@ -1,6 +1,6 @@
 class Lexicon:
     Title_affectiveImagery = "Associations towards a Carbon Tax"
-    Instr_affectiveImagery = "Before we start with our task, we would like to ask you to write down at least one word or thought that comes to your mind when you think of the term 'Carbon Tax'."
+    Instr_affectiveImagery = "Before we start with our task, we would like to ask you to write down three words or thoughts that come to your mind when you think of the term 'Carbon Tax'."
     Association1 = "1. Association"
     Association2 = "2. Association"
     Association3 = "3. Association"
@@ -63,5 +63,12 @@ class Lexicon:
     ## screenouts 
     screenout_title = "Participation not possible."
     screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."
+
+    # comprehension check 
+    comp_Title = "Implementation of a carbon tax?"
+    comp_Question = "In what way would the CO2 tax be implemented?"
+    comp_answerA = "It would be a fixed price that every citizen has to pay every year "
+    comp_answerB = "Each citizen pays a voluntary amount each month to compensate for their emissions"
+    comp_answerCorrect = "A certain amount of tax would be levied on each product/service based on the emissions emitted by the product/service "
 
     

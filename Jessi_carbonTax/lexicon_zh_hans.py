@@ -2,7 +2,7 @@ class Lexicon:
     next = "下一个"
     #Policy task
     title_taskPage = "碳税政策汇编"
-    instr_taskPage = "政府提出以下碳税政策："
+    instr_taskPage = "政府提出了以下碳税政策方案:"
     accept_yes = "是的"
     accept_no = "不"
     would_accept = "你会支持这个政策主张吗？"

@@ -1,6 +1,6 @@
 {% block styles %}
-    <link href="{{ static 'global/css/generalStyle.css'}}" rel="stylesheet">
-    <link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
+<link href="{{ static 'global/css/SamplingPilotgeneral.css'}}" rel="stylesheet">
+<link href="{{ static 'global/css/customStyle.css'}}" rel="stylesheet">
 {% endblock %}
 
 {{ block title }} {{Lexicon.Title_Instructions}} {{ endblock }}
@@ -28,7 +28,7 @@
 
 
     window.onload = function () {
-        setTimeout(function () { enablebtn() }, 500);
+        setTimeout(function () { enablebtn() }, 5000);
     }
 </script>
 {% endblock %}
