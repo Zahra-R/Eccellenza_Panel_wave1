@@ -66,9 +66,14 @@ class Lexicon:
 
     # comprehension check 
     comp_Title = "Implementation of a carbon tax?"
-    comp_Question = "In what way would the CO2 tax be implemented?"
+    compQuestion = "In what way would the CO2 tax be implemented?"
     comp_answerA = "It would be a fixed price that every citizen has to pay every year "
     comp_answerB = "Each citizen pays a voluntary amount each month to compensate for their emissions"
     comp_answerCorrect = "A certain amount of tax would be levied on each product/service based on the emissions emitted by the product/service "
+
+    # Prior Knowledge CT 
+    HeardCTbefore = "Have you ever heard of the term 'carbon tax' before?"
+    yes = "Yes, I have heard of it before"
+    no = "No, I have never of this term"
 
     
