@@ -233,11 +233,12 @@ class Lexicon:
 
     ### policies scales
     policies_title = ' Some additional questions on Policies '
-    policy1Label =	'Increase or introduce of taxes on fuel for vehicles (i.e. diesel and gasoline)'
+
+    policy1Label =	'Increase or introduce taxes on fuel for vehicles (i.e. diesel and gasoline)'
     policy2Label =	'Increase or introduce taxes on air travel.'
     policy3Label =	'Increase or introduce taxes on fossil fuels as energy source (i.e. gas, oil, and coal)'
     policy4Label =	'Increase or introduce taxes on red meat (e.g., beef, lamb, veal).'
-    policy5Label =	'Increase or introduce taxes on non-recyclables'
+    policy5Label =	'Increase or introduce taxes on non-recyclable materials'
     policy6Label =	'Increase or introduce taxes on food products imported via plane'
 	
     strongly_opoose =	'strongly oppse'
