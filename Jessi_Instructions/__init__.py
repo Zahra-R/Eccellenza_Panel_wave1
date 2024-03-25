@@ -82,7 +82,7 @@ class Player(BasePlayer):
     block_order = models.IntegerField()
     already_counted = models.BooleanField(initial=False)
 
-    aboutWhat = models.StringField(widget=widgets.RadioSelect)
+    aboutWhat = models.StringField()
     screenoutAboutWhat = models.BooleanField(initial= False)
 
     comprehension_check = models.StringField(widget=widgets.RadioSelect)
