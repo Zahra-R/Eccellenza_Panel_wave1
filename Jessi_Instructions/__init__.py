@@ -205,12 +205,12 @@ class Screenout(Page):
 
 # Page sequence
 page_sequence = [ 
-    comp_Question,
     transition,
     affectiveImagery,
     ratingAffectiveImagery,
     instructions_intro,
-    task_example, 
     interlude, 
-    Screenout
+    Screenout,
+    task_example,
+    comp_Question
 ]
