@@ -83,7 +83,7 @@ class Player(BasePlayer):
     aboutWhat = models.StringField()
     screenoutAboutWhat = models.BooleanField(initial= False)
 
-    comp_Question = models.StringField(widget=widgets.RadioSelect)
+    compQuestion = models.StringField()
 
 
 # PAGES
@@ -153,7 +153,7 @@ class ratingAffectiveImagery (Page):
 
 class comp_Question (Page):
     form_model = 'player'
-    form_fields = ['comp_Question']
+    form_fields = ['compQuestion']
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -164,7 +164,7 @@ class comp_Question (Page):
     def js_vars(player):
         Lexicon = player.session.JessiIntroLexi
         return dict(
-        form_fields = ['comp_Question'],
+        form_fields = ['compQuestion'],
         form_field_labels = [Lexicon.comp_Question]
     )
 
