@@ -83,7 +83,7 @@ class Player(BasePlayer):
     aboutWhat = models.StringField()
     screenoutAboutWhat = models.BooleanField(initial= False)
 
-    compQuestion = models.StringField(widget=widgets.RadioSelect)
+    compQuestion = models.StringField()
     HeardCT = models.StringField(widget=widgets.RadioSelect)
 
 
