@@ -67,13 +67,7 @@ SESSION_CONFIGS = [
          language = "zh_hans",
          num_demo_participants=10,
      ),
-      dict(
-         name='Order_Jessi_Zahra_Nina_zh',
-  #      app_sequence=['survey','task'],
-         app_sequence=['FirstBlock', 'Jessi_Instructions',  'Jessi_carbonTax','CCsampling_intro', 'CCsampling', 'Nina_instructions', 'Nina_carbontask', 'Scales','CCsampling_Debrief' ],
-         language = "zh_hans",
-         num_demo_participants=10,
-     ),
+      
       dict(
          name='Order_Zahra_Nina_Jessi_de',
   #      app_sequence=['survey','task'],
