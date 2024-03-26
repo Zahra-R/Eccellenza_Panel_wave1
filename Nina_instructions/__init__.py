@@ -152,8 +152,8 @@ class Screenout(Page):
 # Page sequence
 page_sequence = [ transition,
                   instructions, 
-                  comprehension,
                   interlude, 
                   Screenout,
-                  task_example
+                  task_example,
+                  comprehension
                   ]
