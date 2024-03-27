@@ -16,7 +16,7 @@ Debrief for Sampling
 #     return stats.truncnorm((lower - mean) / std, (upper - mean) / std, loc=mean, scale=std).rvs()
 
 class C(BaseConstants):
-    NAME_IN_URL = 'Debrief'
+    NAME_IN_URL = 'Goodbye'
     PLAYERS_PER_GROUP = None
     ROUNDS_PER_CONDITION = 1
     NUM_ROUNDS = 1
