@@ -90,16 +90,16 @@ class Consent(Page):
                 stringOrder = "http://psbc.otree.psychologie.unibas.ch/join/sajemide?participant_label=" + player.participant.label 
             else:
                 #insert session link for Order_Zahra_Nina_Jessi
-                stringOrder = "http://psbc.otree.psychologie.unibas.ch/join/mahejimo?participant_label=" + player.participant.label
+                stringOrder = "http://psbc.otree.psychologie.unibas.ch/join/tarufefo?participant_label=" + player.participant.label
 
         #insert session links for German
         if(player.session.config['language']=="de"):   
             if(player.participant.order_tasks == 1):
                 #insert session link for Order_Nina_Jessi_Zahra
-                stringOrder = "http://psbc.otree.psychologie.unibas.ch/join/nedoguli?participant_label=" + player.participant.label
+                stringOrder = "http://psbc.otree.psychologie.unibas.ch/join/rokalosa?participant_label=" + player.participant.label
             elif(player.participant.order_tasks == 2):
                 #insert session link for Order_Jessi_Zahra_Nina
-                stringOrder = "http://psbc.otree.psychologie.unibas.ch/join/kekogofa?participant_label=" + player.participant.label
+                stringOrder = "http://psbc.otree.psychologie.unibas.ch/join/vevimipe?participant_label=" + player.participant.label
             else:
                 #insert session link for Order_Zahra_Nina_Jessi
                 stringOrder = "http://psbc.otree.psychologie.unibas.ch/join/zonotetu?participant_label=" + player.participant.label
