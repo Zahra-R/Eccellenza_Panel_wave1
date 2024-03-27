@@ -129,14 +129,14 @@ SESSION_CONFIGS = [
      dict(
          name='english_test_end',
   #      app_sequence=['survey','task'],
-         app_sequence=['CCsampling', 'Scales', 'CCsampling_Debrief'],
+         app_sequence=['Intro','CCsampling', 'CCsampling_Debrief'],
          language = "en",
 
          num_demo_participants=10,
      ),
         dict(
          name='Pretest_Jessi_de',
-         app_sequence= [ 'Intro', 'Jessi_Instructions', 'Jessi_carbonTax', 'CCsampling_intro'],
+         app_sequence= [ 'Intro', 'FirstBlock', 'Jessi_Instructions', 'Jessi_carbonTax', 'CCsampling_intro'],
          consent_form = "standalone",
          language = "de",
          num_demo_participants=10,
