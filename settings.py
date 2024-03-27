@@ -131,6 +131,7 @@ SESSION_CONFIGS = [
   #      app_sequence=['survey','task'],
          app_sequence=['Intro','CCsampling', 'CCsampling_Debrief'],
          language = "en",
+         consent_form="redirect",
 
          num_demo_participants=10,
      ),
