@@ -155,26 +155,9 @@ class Feedback(Page):
 
 
 
-class goodbye (Page): 
-    form_model = 'player'
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.debriefLexi)
-    def vars_for_template(player: Player):
-       return{
-            #Lexicon': player.session.introLexi
-            'u': player.participant.label,
-            'participantlabel':player.participant.label,
-            'Lexicon': player.session.debriefLexi
-
-        } 
-
-
-
 
 
 page_sequence = [
     Feedback,
-    Debrief, 
-    goodbye
+    Debrief
 ]
