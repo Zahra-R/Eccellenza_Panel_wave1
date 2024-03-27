@@ -113,7 +113,7 @@ SESSION_CONFIGS = [
     dict(
          name='chinese_Panel_scales_pure',
   #      app_sequence=['survey','task'],
-         app_sequence=['Scales'],
+         app_sequence=['Scales', 'CCsampling_Debrief'],
          language = "zh_hans",
 
          num_demo_participants=10,
@@ -121,7 +121,7 @@ SESSION_CONFIGS = [
       dict(
          name='german_Panel_scales_pure',
   #      app_sequence=['survey','task'],
-         app_sequence=['Scales'],
+         app_sequence=['Scales', 'CCsampling_Debrief'],
          language = "de",
 
          num_demo_participants=10,
@@ -129,7 +129,7 @@ SESSION_CONFIGS = [
      dict(
          name='english_Panel_scales_pure',
   #      app_sequence=['survey','task'],
-         app_sequence=['Scales'],
+         app_sequence=['Scales', 'CCsampling_Debrief'],
          language = "en",
 
          num_demo_participants=10,
