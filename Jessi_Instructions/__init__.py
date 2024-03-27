@@ -83,8 +83,8 @@ class Player(BasePlayer):
     aboutWhat = models.StringField()
     screenoutAboutWhat = models.BooleanField(initial= False)
 
-    compQuestion = models.StringField(widget=widgets.RadioSelect)
-    HeardCT = models.StringField(widget=widgets.RadioSelect)
+    compQuestion = models.StringField()
+    HeardCT = models.StringField()
 
 
 # PAGES
@@ -222,13 +222,13 @@ class Screenout(Page):
 
 
 # Page sequence
-page_sequence = [ 
+page_sequence = [
+    comp_Question, 
     transition,
     affectiveImagery,
     ratingAffectiveImagery,
     instructions_intro,
     interlude, 
     Screenout,
-    task_example,
-    comp_Question
+    task_example
 ]
