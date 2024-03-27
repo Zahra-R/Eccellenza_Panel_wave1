@@ -32,19 +32,19 @@ class Lexicon:
     ## comprehension
     comprehension_title = 'Since you have just read a lot of information, we would like to ensure that you have understood one key aspect: Please indicate how many kg CO<sub>2</sub> are associated with each increase of one unit on the scale:'
     
-    comprehension_a= 'each increase of 1 on the scale corresponds to 200 kg CO<sub>2</sub>  '
-    comprehension_b= 'each increase of 1 on the scale corresponds to 500 kg CO<sub>2</sub>  '
-    comprehension_c = 'each increase of 1 on the scale corresponds to 900 kg CO<sub>2</sub>  '
+    comprehension_a= 'each increase of 1 on the scale corresponds to 200 kg CO2  '
+    comprehension_b= 'each increase of 1 on the scale corresponds to 500 kg CO2  '
+    comprehension_c = 'each increase of 1 on the scale corresponds to 900 kg CO2  '
 
     ## attention check study is about what screenout
-    interlude_title = "Eine Zwischenfrage"
-    interlude_header = "In dieser Studie gibt es ein übergeordnetes Thema. Haben Sie aufgepasst und können sagen, worum es in dieser Studie geht? Bitte seien Sie sorgfältig und wählen die richtige Antwort aus."
-    aboutWhatLabel = "Worum geht es in dieser Studie?"
+    interlude_title = "Brief Interruption"
+    interlude_header = "This study has one superordinate topic. Have you paid attention and do you know what this study is about? Please choose the correct answer carefully."
+    aboutWhatLabel = "What is this study about?"
 
-    about_a = "Städtetourismus"
-    about_b = "Klimawandel"
-    about_c = "Waschmaschinen"
-    about_d = "Vorliebe für scharfes Essen"
+    about_a = "City Tourism"
+    about_b = "Climate Change"
+    about_c = "Washing Machines"
+    about_d = "Preference for spicy food"
 
 
     ## screenouts 

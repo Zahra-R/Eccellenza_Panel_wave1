@@ -92,6 +92,13 @@
     } */
 </style>
 
+<p style="text-align: left; font-size: 0.9rem;">
+    {{Lexicon.round}} {{round_number}} {{Lexicon.round_zh}} {{Lexicon.out_of}} 
+    <br>
+    <br>
+</p>
+
+
 <div class=".question" > 
     <p>
         {{ Lexicon.instruction_task }}
@@ -123,7 +130,7 @@
         {{ for field in form }}
             <tr  >
                 {{ for choice in field }}
-                <th style=" background-color: #c0e3e0;" > {{ choice }} </th> 
+                <th style="  background:#2a9e92;" > {{ choice }} </th> 
                
                 {{ endfor }}
             </tr>

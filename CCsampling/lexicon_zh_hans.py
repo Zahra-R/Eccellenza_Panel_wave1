@@ -10,11 +10,13 @@ class Lexicon:
     # Sampling
     please_choose_box = "请选择一个文本框"
     next_statement_which_box = "你想从哪个文本框中阅读下一条陈述？"
-    round = "轮次"
+    round= '这是第 '
+    round_zh = '轮'
+    out_of = '共15轮'
     box = "文本框"
     box_a = "文本框A"
     box_b = "文本框B"
-    out_of = "out of"
+
     statement_agreement = "你在多大程度上同意这条陈述？"
     ccconcern_question = "你对气候变化有多担心？"
     sampling_instruction = "请阅读陈述并回答问题。"

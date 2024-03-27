@@ -29,9 +29,9 @@ class Lexicon:
     ## comprehension
     comprehension_title = ' Da Sie soeben eine Menge Informationen gelesen haben, möchten wir sicherstellen, dass Sie einen wichtigen Aspekt verstanden haben: Bitte geben Sie an, wie viel kg CO<sub>2</sub> mit jedem Anstieg um eine Einheit auf der Skala verbunden sind: '
     
-    comprehension_a= ' 200 kg CO<sub>2</sub> pro Anstieg um 1 auf der Skala'
-    comprehension_b= ' 500 kg CO<sub>2</sub> pro Anstieg um 1 auf der Skala'
-    comprehension_c = ' 900 kg CO<sub>2</sub> pro Anstieg um 1 auf der Skala'
+    comprehension_a= ' 200 kg CO2 pro Anstieg um 1 auf der Skala'
+    comprehension_b= ' 500 kg CO2 pro Anstieg um 1 auf der Skala'
+    comprehension_c = ' 900 kg CO2 pro Anstieg um 1 auf der Skala'
 
     ## attention check study is about what screenout
     interlude_title = "Eine Zwischenfrage"

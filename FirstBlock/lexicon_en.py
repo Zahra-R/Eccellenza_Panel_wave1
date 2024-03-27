@@ -18,6 +18,8 @@ class Lexicon:
     demographics_header = "Please enter the following information about yourself."
 
     age_label = "How old are you?"
+    ageYear_label = "In which year were you born?"
+
     gender_label = "What gender do you identify as?"
     female = "Female"
     male = "Male"

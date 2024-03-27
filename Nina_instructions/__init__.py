@@ -58,7 +58,7 @@ class Player(BasePlayer):
 
     aboutWhat = models.StringField()
     screenoutAboutWhat = models.BooleanField(initial= False)
-    comprehensionQ = models.StringField( widget=widgets.RadioSelect)
+    comprehensionQ = models.StringField()
    
 
 # FUNCTIONS
@@ -152,8 +152,8 @@ class Screenout(Page):
 # Page sequence
 page_sequence = [ transition,
                   instructions, 
-                  comprehension,
                   interlude, 
                   Screenout,
-                  task_example
+                  task_example,
+                  comprehension
                   ]

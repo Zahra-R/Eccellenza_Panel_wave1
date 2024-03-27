@@ -673,7 +673,7 @@ class policyScales(Page):
 
 class DemographicsEnd(Page):
     form_model = 'player'
-    form_fields = ['ageYear', 'householdsize', 'residential_area', 'zip_code', 'states' ]
+    form_fields = [ 'householdsize', 'residential_area', 'zip_code', 'states' ]
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -684,8 +684,8 @@ class DemographicsEnd(Page):
     def js_vars(player):
         Lexicon = player.session.scalesLexi
         return dict(
-        form_fields = ['ageYear', 'householdsize',  'residential_area', 'zip_code', 'states' ],
-        form_field_labels = [Lexicon.ageYear_label, Lexicon.householdsize_label, Lexicon.residential_area_label, Lexicon.zip_code_label , Lexicon.states_label]
+        form_fields = [ 'householdsize',  'residential_area', 'zip_code', 'states' ],
+        form_field_labels = [ Lexicon.householdsize_label, Lexicon.residential_area_label, Lexicon.zip_code_label , Lexicon.states_label]
     )
 
 class transition (Page): 
@@ -704,7 +704,7 @@ class transition (Page):
 
 
 page_sequence = [ transition, Belief, Belief2, CCKnowledge, CCEmotion,
-                 BehaviorsFood, BehaviorsTransport, BehaviorsFlying, 
+                 BehaviorsFood, BehaviorsFood2, BehaviorsTransport, BehaviorsFlying, 
                  PITrust, IBValues ,
                  policyScales,
                  DemographicsEnd

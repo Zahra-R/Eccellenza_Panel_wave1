@@ -11,7 +11,8 @@ class Lexicon:
     please_choose_box = "Bitte wählen Sie eine Box aus."
     next_statement_which_box = "Aus welcher Box möchten Sie die nächste Aussage lesen?"
     round = "Runde"
-    out_of = "von"
+    round_zh = ' '
+    out_of = "von 15"
     box = "Box"
     box_a = " Box&nbsp;A"
     box_b = "Box&nbsp;B"

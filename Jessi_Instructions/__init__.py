@@ -218,8 +218,6 @@ class Screenout(Page):
         return (player.screenoutAboutWhat)
    
     
-   
-
 
 # Page sequence
 page_sequence = [
