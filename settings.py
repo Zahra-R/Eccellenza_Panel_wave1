@@ -129,7 +129,7 @@ SESSION_CONFIGS = [
      dict(
          name='english_test_end',
   #      app_sequence=['survey','task'],
-         app_sequence=['CCsampling', 'CCsampling_Debrief'],
+         app_sequence=['CCsampling', 'Scales', 'CCsampling_Debrief'],
          language = "en",
 
          num_demo_participants=10,
