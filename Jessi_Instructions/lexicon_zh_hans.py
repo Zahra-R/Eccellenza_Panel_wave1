@@ -75,3 +75,12 @@ class Lexicon:
     comp_answerA = "It would be a fixed price that every citizen has to pay every year "
     comp_answerB = "Each citizen pays a voluntary amount each month to compensate for their emissions"
     comp_answerCorrect = "A certain amount of tax would be levied on each product/service based on the emissions emitted by the product/service "
+
+    # Prior Knowledge CT 
+    HeardCTbefore = "Have you ever heard of the term 'carbon tax' before?"
+    yes = "Yes, I have heard of it before"
+    no = "No, I have never of this term"
+
+    # Explanation CT
+    short_CT = "A carbon tax is a tax levied on the carbon emissions from producing goods and services intended to reduce carbon emissions."
+    CT_title = "Carbon Tax:"

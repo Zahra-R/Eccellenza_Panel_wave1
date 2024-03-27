@@ -54,6 +54,13 @@ def compQuestion_choices(player):
     ['correct', Lexicon.comp_answerCorrect]
 ] 
 
+def HeardCT_choices(player):
+    Lexicon = player.session.JessiIntroLexi 
+    return [
+    ['Yes', Lexicon.yes],
+    ['No',  Lexicon.no]
+] 
+
 class Player(BasePlayer):
     # FUNCTIONS
     def make_field_association(label):
@@ -171,7 +178,6 @@ class PriorKnowledge(Page):
 class comp_Question (Page):
     form_model = 'player'
     form_fields = ['compQuestion']
-    form_fields = ['compQuestion']
 
     @staticmethod
     def vars_for_template(player: Player):
@@ -185,6 +191,16 @@ class comp_Question (Page):
         form_fields = ['compQuestion'],
         form_field_labels = [Lexicon.compQuestion]
     )
+    @staticmethod
+    def before_next_page(player: Player, timeout_happened):
+        if(player.compQuestion != "correct" ):
+               player.task_example_required = True
+
+    def next_page(self):
+        if self.player.task_example_required:
+            return task_example
+        else:
+            return super().next_page()
 
 
 class slider(Page):
@@ -216,17 +232,27 @@ class Screenout(Page):
     @staticmethod
     def is_displayed(player: Player):
         return (player.screenoutAboutWhat)
+    
+class WhatIsCT(Page):
+    form_model = 'player'
+    @staticmethod
+    def vars_for_template(player: Player):
+        return{
+             'Lexicon': player.session.JessiIntroLexi
+        } 
    
     
 
 # Page sequence
-page_sequence = [
-    comp_Question, 
+page_sequence = [ 
     transition,
+    PriorKnowledge,
+    WhatIsCT,
     affectiveImagery,
     ratingAffectiveImagery,
     instructions_intro,
     interlude, 
     Screenout,
-    task_example
+    task_example,
+    comp_Question
 ]

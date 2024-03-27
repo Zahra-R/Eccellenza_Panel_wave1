@@ -26,11 +26,11 @@ class Lexicon:
 
     # Instructions on Task 
     Title_Instructions = "Instructions on your task"
-    Text_Instructions = "<p>Greenhouse gases such as carbon dioxide (CO<sub>2</sub>) are the main source of global climate change. <br> </p> <p> One way to tackle this is with a 'carbon tax.' <br> A carbon tax is a fee on the carbon dioxide (CO<sub>2</sub>) emissions that come with the production and consumption of various products and activities. This may include, but is not limited to, fossil fuels, agricultural products like meat and dairy, and industrial processes. It has the goal to make people and businesses reduce their emissions. <br> The tax is usually a fixed price per ton of CO<sub>2</sub> that is emitted for a certain activity or product. <br></p><p> In addition to cutting emissions, the money collected by the carbon tax can be used for several purposes, for instance, to address social injustice or further reduce emissions. <br><p> The government has various possibilities to design policies for a carbon tax. Imagine, therefore, that the U.S. Federal Government announces a public vote about the introduction of a carbon tax. <br> This carbon tax could vary in different features. These features as well as an example will be explained to you on the next page. <br> <br> Following that, we ask you to vote in 12 hypothetical public votes for or against the introduction of a carbon tax. <br></p>"
+    Text_Instructions = "<p>Greenhouse gases such as carbon dioxide (CO<sub>2</sub>) are the main source of global climate change. <br> </p> <p> One way to tackle this is with a 'carbon tax.' <br> A carbon tax is a fee on the carbon dioxide (CO<sub>2</sub>) emissions that come with the production and consumption of various products and activities. This may include, but is not limited to, fossil fuels, agricultural products like meat and dairy, and industrial processes. It has the goal to make people and businesses reduce their emissions. <br> The tax is usually a fixed price per ton of CO<sub>2</sub> that is emitted for a certain activity or product. <br></p><p> In addition to cutting emissions, the money collected by the carbon tax can be used for several purposes, for instance, to address social injustice or further reduce emissions. <br><p> Governments can implement carbon tax policies in various ways. Imagine, the Chinese Federal Government is exploring whether or not a carbon tax should be implemented and asks the public about their opinion on the matter. No official decision has been made yet. <br> This carbon tax could vary in different features. These features as well as an example will be explained to you on the next page. <br> <br> We would then like to hear your opinion on 12 hypothetical proposals for a carbon tax, whether you would support their introduction or not. Please note, that there has not yet been made an official decision by your government whether or not a carbon tax will be implemented. <br></p>"
 
     # Task Example 
     Title_taskExample = "Instructions on your task - task example"
-    example_taskExample = "This is how a hypothetical carbon tax vote looks like in our task."
+    example_taskExample = "This is how a hypothetical carbon tax proposal looks like in our task."
     intro_attributes = "These policies can vary in the following features: "
     attributes_sector = "<b>Carbon pricing sector</b> <br> The tax could be imposed <b>in general on all emissions/ton of CO<sub>2</sub></b> caused by services, production processes and energy generation. Alternatively, the tax could be imposed only on emissions for <b>meat and dairy/ton of CO<sub>2</sub></b>, or on emissions caused by <b>energy generation/ton of CO<sub>2</sub></b>. The latter would include, for example, electricity, petrol or heating oil."
     attributes_price = "<b>Price per ton of CO<sub>2</sub> emissions</b> <br> Depending on the price per ton of CO<sub>2</sub> emissions, different outcomes in terms of national carbon neutrality can be achieved. Carbon-neutral means, that no more CO<sub>2</sub> emissions are released into the atmosphere than can be taken out again. With a price of <b>$60 per ton of CO<sub>2</sub></b> carbon neutrality could be achieved past mid-century, around 2060. With respect to price increases, this would lead, for instance, to a price increase for 1lbs of pork of 0,19$ (Meat & Dairy), a price increase of 0,06$ for 1kWh of electricity from coal (Energy generation), and a price increase of 0,66$ for an average T-shirt (General on all emissions). <br> With a price of <b>$120 per ton of CO<sub>2</sub></b> carbon neutrality could be achieved by mid-century, around 2050. With a price of $120 per ton of CO2 carbon neutrality could be achieved by mid-century, around 2050. This would lead, for instance, to a price increase for 1lbs of pork of 0,38$ (Meat & Dairy), a price increase of 0,12$ for 1kWh of electricity from coal (Energy generation), and a price increase of 1,32$ more for an average T-shirt (General on all emissions)."
@@ -65,9 +65,8 @@ class Lexicon:
     screenout_sentence = "Sorry, your previous results indicated that you did not pay enough attention. You therefore cannot participate in this study."
 
     # comprehension check 
-    comp_Title = "Implementation of a carbon tax?"
-    compQuestion = "In what way would the CO2 tax be implemented?"
-    comp_answerA = "It would be a fixed price that every citizen has to pay every year "
+    compQuestion = "As you have just read a lot of information, we want to make sure that you have understood one important aspect: In what way would the CO<sub>2</sub> tax be implemented?"
+    comp_answerA = "It would be a fixed price that every citizen has to pay every year"
     comp_answerB = "Each citizen pays a voluntary amount each month to compensate for their emissions"
     comp_answerCorrect = "A certain amount of tax would be levied on each product/service based on the emissions emitted by the product/service "
 
@@ -76,4 +75,6 @@ class Lexicon:
     yes = "Yes, I have heard of it before"
     no = "No, I have never of this term"
 
-    
+    # Explanation CT
+    short_CT = "A carbon tax is a tax levied on the carbon emissions from producing goods and services intended to reduce carbon emissions."
+    CT_title = "Carbon Tax:"
