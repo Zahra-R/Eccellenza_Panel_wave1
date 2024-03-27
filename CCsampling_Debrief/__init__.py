@@ -100,8 +100,8 @@ class Debrief(Page):
             misinfofile = open('CCsampling/ClimateMisinfo_de.json')
             infofile = open('CCsampling/ClimateInfo_de.json')
         elif player.session.config['language'] == "zh_hans":
-            misinfofile = open('CCsampling/ClimateMisinfo_en.json')
-            infofile = open('CCsampling/ClimateInfo_en.json')
+            misinfofile = open('CCsampling/ClimateMisinfo_zh_hans.json')
+            infofile = open('CCsampling/ClimateInfo_zh_hans.json')
         else:
             misinfofile = open('CCsampling/ClimateMisinfo_en.json')
             infofile = open('CCsampling/ClimateInfo_en.json')
