@@ -165,7 +165,6 @@ class goodbye (Page):
 
 page_sequence = [
     Feedback,
-    goodbye,
     Debrief, 
     goodbye
 ]

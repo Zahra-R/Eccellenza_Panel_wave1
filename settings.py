@@ -127,9 +127,9 @@ SESSION_CONFIGS = [
          num_demo_participants=10,
      ),
      dict(
-         name='english_Panel_scales_pure',
+         name='english_test_end',
   #      app_sequence=['survey','task'],
-         app_sequence=['Scales', 'CCsampling_Debrief'],
+         app_sequence=['CCsampling', 'CCsampling_Debrief'],
          language = "en",
 
          num_demo_participants=10,
