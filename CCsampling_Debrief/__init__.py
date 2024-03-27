@@ -35,11 +35,21 @@ class C(BaseConstants):
     with open(info_path_en, 'r') as j:
         infofile_en = json.loads(j.read())
 
+    ### chinese Tweets
+    misinfo_path_zh_hans = "CCsampling/ClimateMisinfo_zh_hans.json"
+    with open(misinfo_path_zh_hans, 'r') as j:
+        misinfofile_zh_hans = json.loads(j.read())    
+    info_path_zh_hans = "CCsampling/ClimateInfo_zh_hans.json"
+    with open(info_path_zh_hans, 'r') as j:
+        infofile_zh_hans = json.loads(j.read())
+
     ## all tweets
     infofile_de= infofile_de['CCInfo']
     misinfofile_de= misinfofile_de['CCMisinfo']
     infofile_en= infofile_en['CCInfo']
     misinfofile_en= misinfofile_en['CCMisinfo']
+    infofile_zh_hans= infofile_zh_hans['CCInfo']
+    misinfofile_zh_hans= misinfofile_zh_hans['CCMisinfo']
 
 class Subsession(BaseSubsession):
     pass
@@ -145,26 +155,9 @@ class Feedback(Page):
 
 
 
-class goodbye (Page): 
-    form_model = 'player'
-    @staticmethod
-    def vars_for_template(player: Player):
-        return dict(Lexicon=player.session.debriefLexi)
-    def vars_for_template(player: Player):
-       return{
-            #Lexicon': player.session.introLexi
-            'u': player.participant.label,
-            'participantlabel':player.participant.label,
-            'Lexicon': player.session.debriefLexi
-
-        } 
-
-
-
 
 
 page_sequence = [
     Feedback,
-    Debrief, 
-    goodbye
+    Debrief
 ]
