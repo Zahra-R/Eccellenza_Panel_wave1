@@ -11,10 +11,11 @@ class Lexicon:
     please_choose_box = "Please choose a box"
     next_statement_which_box = "From which box do you want to read the next statement?"
     round = "Round"
+    round_zh = ' '
+    out_of = "out of 15"
     box = "Box"
     box_a = "Box&nbsp;A"
     box_b = "Box&nbsp;B"
-    out_of = "out of"
     statement_agreement = " How much do you agree with this statement?"
     ccconcern_question = "How concerned are you about climate change?"
     sampling_instruction = "Please read the statement and answer the questions."

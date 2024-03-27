@@ -92,6 +92,7 @@ class task_page00(Page):
     form_fields = ['rating0']
     @staticmethod
     def vars_for_template(player: Player):
+        round_number = player.round_number
         # this determines which vignette
         task_in_round = player.participant.task_rounds[player.round_number - 2]
         player.vignetteNumber = task_in_round
@@ -119,7 +120,8 @@ class task_page00(Page):
             "current_footprint_table_images": current_footprint_table_images_shuffled,
             "random_behavior_order": random_behavior_order,
             'Lexicon': player.session.carbonTaskLexi,
-            'behaviorTYPES' : behavior_types
+            'behaviorTYPES' : behavior_types,
+            'round_number': round_number
         }
     
 
