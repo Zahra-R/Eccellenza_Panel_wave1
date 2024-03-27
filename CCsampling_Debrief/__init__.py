@@ -28,18 +28,28 @@ class C(BaseConstants):
     with open(info_path_de, 'r') as j:
         infofile_de = json.loads(j.read())
     ### English Tweets
-    misinfo_path_en = "CCsampling/ClimateMisinfo_en.json"
-    with open(misinfo_path_en, 'r') as j:
+    misinfo_path_zh_hans = "CCsampling/ClimateMisinfo_en.json"
+    with open(misinfo_path_zh_hans, 'r') as j:
         misinfofile_en = json.loads(j.read())    
     info_path_en = "CCsampling/ClimateInfo_en.json"
     with open(info_path_en, 'r') as j:
         infofile_en = json.loads(j.read())
+
+    ### chinese Tweets
+    misinfo_path_zh_hans = "CCsampling/ClimateMisinfo_zh_hans.json"
+    with open(misinfo_path_zh_hans, 'r') as j:
+        misinfofile_zh_hans = json.loads(j.read())    
+    info_path_zh_hans = "CCsampling/ClimateInfo_zh_hans.json"
+    with open(info_path_zh_hans, 'r') as j:
+        infofile_zh_hans = json.loads(j.read())
 
     ## all tweets
     infofile_de= infofile_de['CCInfo']
     misinfofile_de= misinfofile_de['CCMisinfo']
     infofile_en= infofile_en['CCInfo']
     misinfofile_en= misinfofile_en['CCMisinfo']
+    infofile_zh_hans= infofile_zh_hans['CCInfo']
+    misinfofile_zh_hans= misinfofile_zh_hans['CCMisinfo']
 
 class Subsession(BaseSubsession):
     pass
